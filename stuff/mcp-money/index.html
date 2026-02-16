@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mcp-money — Pablo Fernandez</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../stuff.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../../now/">now</a>
+      <a href="../../writing/">writing</a>
+      <a href="../../feed/">feed</a>
+      <a href="../../podcasts/">podcasts</a>
+      <a href="../../stuff/" class="active">stuff</a>
+    </div>
+  </nav>
+
+  <main class="stuff-detail-main">
+    <header class="stuff-detail-header">
+      <h1>mcp-money</h1>
+      <div class="stuff-detail-meta">
+        <a href="https://github.com/pablof7z/mcp-money">github</a>
+      </div>
+    </header>
+
+    <div class="stuff-tabs">
+      <nav class="stuff-tab-nav">
+        <button class="stuff-tab-btn active" data-tab="description">Description</button>
+        <button class="stuff-tab-btn" data-tab="notes">Notes</button>
+      </nav>
+
+      <div class="stuff-tab-content">
+        <div id="description" class="stuff-tab-panel active">
+          <div class="stuff-description">
+            <p><strong>MCP Server for agent payments.</strong> Give AI agents NIP-60 wallets and let them transact.</p>
+
+            <p>mcp-money exposes Cashu wallet functionality through the Model Context Protocol. Agents running in Claude, Goose, or any MCP-compatible environment can check balances, send payments, and receive nutzaps.</p>
+
+            <h2>capabilities</h2>
+            <ul>
+              <li>NIP-60 wallet access via MCP</li>
+              <li>Send and receive nutzaps</li>
+              <li>Balance checking across mints</li>
+              <li>Transaction history</li>
+              <li>Multi-mint support</li>
+            </ul>
+
+            <h2>use cases</h2>
+            <ul>
+              <li>Agents paying for DVM compute</li>
+              <li>Autonomous tipping based on value received</li>
+              <li>Agent-to-agent payments for delegated work</li>
+              <li>Bounty payouts</li>
+            </ul>
+
+            <p>Demo: Agent nutzapping jack 10 sats autonomously.</p>
+
+            <p>This is the economic layer that makes TENEX agents useful beyond just completing tasks—they can participate in nostr's value-for-value economy.</p>
+          </div>
+        </div>
+
+        <div id="notes" class="stuff-tab-panel">
+          <div id="notes-content" class="stuff-notes" data-hashtag="mcpmoney">
+            <p class="stuff-notes-loading">Loading notes...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><a href="../">← back to stuff</a></p>
+    </footer>
+  </main>
+
+  <script src="../stuff.js"></script>
+</body>
+</html>

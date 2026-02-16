@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honeypot — Pablo Fernandez</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../stuff.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../../now/">now</a>
+      <a href="../../writing/">writing</a>
+      <a href="../../feed/">feed</a>
+      <a href="../../podcasts/">podcasts</a>
+      <a href="../../stuff/" class="active">stuff</a>
+    </div>
+  </nav>
+
+  <main class="stuff-detail-main">
+    <header class="stuff-detail-header">
+      <h1>Honeypot</h1>
+      <div class="stuff-detail-meta">
+        <span class="stuff-status">testflight</span>
+      </div>
+    </header>
+
+    <div class="stuff-tabs">
+      <nav class="stuff-tab-nav">
+        <button class="stuff-tab-btn active" data-tab="description">Description</button>
+        <button class="stuff-tab-btn" data-tab="notes">Notes</button>
+      </nav>
+
+      <div class="stuff-tab-content">
+        <div id="description" class="stuff-tab-panel active">
+          <div class="stuff-description">
+            <p><strong>NIP-60 wallet for subscription management.</strong> Like Apple's Subscriptions app, but for nostr.</p>
+
+            <p>Honeypot manages recurring payments using NIP-88 subscriptions. Track what you're supporting, cancel or adjust, all from one interface.</p>
+
+            <h2>features</h2>
+            <ul>
+              <li>View all active subscriptions</li>
+              <li>Manage recurring payments</li>
+              <li>Cancel with one tap</li>
+              <li>Payment history</li>
+            </ul>
+
+            <p>Based on ideas from Highlighter. Currently in TestFlight.</p>
+          </div>
+        </div>
+
+        <div id="notes" class="stuff-tab-panel">
+          <div id="notes-content" class="stuff-notes" data-hashtag="honeypot">
+            <p class="stuff-notes-loading">Loading notes...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><a href="../">← back to stuff</a></p>
+    </footer>
+  </main>
+
+  <script src="../stuff.js"></script>
+</body>
+</html>

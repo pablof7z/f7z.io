@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DVM — Pablo Fernandez</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../stuff.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../../now/">now</a>
+      <a href="../../writing/">writing</a>
+      <a href="../../feed/">feed</a>
+      <a href="../../podcasts/">podcasts</a>
+      <a href="../../stuff/" class="active">stuff</a>
+    </div>
+  </nav>
+
+  <main class="stuff-detail-main">
+    <header class="stuff-detail-header">
+      <h1>Data Vending Machine</h1>
+      <div class="stuff-detail-meta">
+        <a href="https://github.com/pablof7z/nostr-data-vending-machine">github</a>
+      </div>
+    </header>
+
+    <div class="stuff-tabs">
+      <nav class="stuff-tab-nav">
+        <button class="stuff-tab-btn active" data-tab="description">Description</button>
+        <button class="stuff-tab-btn" data-tab="notes">Notes</button>
+      </nav>
+
+      <div class="stuff-tab-content">
+        <div id="description" class="stuff-tab-panel active">
+          <div class="stuff-description">
+            <p><strong>Reference implementation of NIP-90 Data Vending Machines.</strong></p>
+
+            <p>DVMs are compute marketplaces on nostr. Clients request work (translations, AI inference, image generation), DVMs bid on jobs, and payments flow via Lightning or ecash.</p>
+
+            <h2>how it works</h2>
+            <ul>
+              <li>Client publishes job request (kind 5xxx)</li>
+              <li>DVMs respond with quotes</li>
+              <li>Client pays and receives result</li>
+              <li>All coordination happens on nostr relays</li>
+            </ul>
+
+            <p>This reference implementation demonstrates the full DVM lifecycle and can be extended for any compute workload.</p>
+          </div>
+        </div>
+
+        <div id="notes" class="stuff-tab-panel">
+          <div id="notes-content" class="stuff-notes" data-hashtag="dvm">
+            <p class="stuff-notes-loading">Loading notes...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><a href="../">← back to stuff</a></p>
+    </footer>
+  </main>
+
+  <script src="../stuff.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nsecBunker — Pablo Fernandez</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../stuff.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../../now/">now</a>
+      <a href="../../writing/">writing</a>
+      <a href="../../feed/">feed</a>
+      <a href="../../podcasts/">podcasts</a>
+      <a href="../../stuff/" class="active">stuff</a>
+    </div>
+  </nav>
+
+  <main class="stuff-detail-main">
+    <header class="stuff-detail-header">
+      <h1>nsecBunker</h1>
+      <div class="stuff-detail-meta">
+        <a href="https://github.com/pablof7z/nsecbunker">github</a>
+      </div>
+    </header>
+
+    <div class="stuff-tabs">
+      <nav class="stuff-tab-nav">
+        <button class="stuff-tab-btn active" data-tab="description">Description</button>
+        <button class="stuff-tab-btn" data-tab="notes">Notes</button>
+      </nav>
+
+      <div class="stuff-tab-content">
+        <div id="description" class="stuff-tab-panel active">
+          <div class="stuff-description">
+            <p><strong>Remote key signing and delegation.</strong> Your keys stay on hardware you control while apps get scoped permissions.</p>
+
+            <p>nsecBunker implements NIP-46 to provide OAuth-like flows for nostr. Instead of giving your nsec to every application, you run a bunker on trusted hardware and grant revocable, scoped access to clients.</p>
+
+            <h2>features</h2>
+            <ul>
+              <li>Granular permission control per application</li>
+              <li>OAuth-like authorization flow</li>
+              <li>Team key sharing for organizations</li>
+              <li>LNbits integration for billing</li>
+              <li>Audit logging of all signing requests</li>
+              <li>Multi-key management</li>
+            </ul>
+
+            <h2>use cases</h2>
+            <ul>
+              <li>Run on a Raspberry Pi at home, sign from anywhere</li>
+              <li>Shared team accounts with individual permissions</li>
+              <li>Bot accounts with restricted capabilities</li>
+              <li>Revoke access without changing your key</li>
+            </ul>
+
+            <p>The bunker model is the only sane way to use nostr keys across multiple clients without trusting every app with your identity.</p>
+          </div>
+        </div>
+
+        <div id="notes" class="stuff-tab-panel">
+          <div id="notes-content" class="stuff-notes" data-hashtag="nsecbunker">
+            <p class="stuff-notes-loading">Loading notes...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><a href="../">← back to stuff</a></p>
+    </footer>
+  </main>
+
+  <script src="../stuff.js"></script>
+</body>
+</html>
