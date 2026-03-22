@@ -1,4 +1,6 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
@@ -13,7 +15,7 @@
   "rewrites": [
     {
       "source": "/.well-known/nostr.json",
-      "destination": "/api/nip05"
+      "destination": "/well-known-nostr.json"
     },
     {
       "source": "/ai-sdk/context-management/:path*",
