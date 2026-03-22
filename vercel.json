@@ -15,7 +15,7 @@
   "rewrites": [
     {
       "source": "/.well-known/nostr.json",
-      "destination": "/well-known-nostr.json"
+      "destination": "/api/nip05"
     },
     {
       "source": "/ai-sdk/context-management/:path*",
