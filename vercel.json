@@ -14,6 +14,10 @@
   ],
   "rewrites": [
     {
+      "source": "/.well-known/nostr.json",
+      "destination": "/api/nip05"
+    },
+    {
       "source": "/ai-sdk/context-management/:path*",
       "destination": "https://context-management-webapp.vercel.app/:path*"
     }
