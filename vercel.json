@@ -7,8 +7,12 @@
   ],
   "headers": [
     {
-      "source": "/.well-known/:path*",
+      "source": "/.well-known/nostr.json",
       "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=3600"
