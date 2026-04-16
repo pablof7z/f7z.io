@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Pablo Fernandez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="writing.css">
+</head>
+<body class="writing-page">
+  <nav class="site-nav">
+    <a href="../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../now/">now</a>
+      <a href="../writing/" class="active">writing</a>
+      <a href="../feed/">feed</a>
+      <a href="../podcasts/">podcasts</a>
+      <a href="../stuff/">stuff</a>
+      <a href="../journal/">journal</a>
+    </div>
+  </nav>
+
+  <main class="writing-main">
+    <header>
+      <h1>Writing</h1>
+      <p class="tagline">Long-form thoughts on sovereign technology.</p>
+    </header>
+
+    <section class="article-list" id="article-list">
+      <p class="loading">loading articles...</p>
+    </section>
+
+    <footer>
+      <p><a href="../">← back</a></p>
+    </footer>
+  </main>
+
+  <script type="module">
+    import NDK from 'https://esm.sh/@nostr-dev-kit/ndk@2.12.0';
+
+    // Configuration
+    const RELAYS = ['wss://relay.nostr.band', 'wss://relay.damus.io', 'wss://nos.lol', 'wss://relay.primal.net'];
+    const PABLO_PUBKEY = 'fa984bd7dbb282f07e16e7ae87b26a2a7b9b90b7246a44771f0cf5ae58018f52';
+
+    // Initialize NDK
+    async function initNDK() {
+      const ndk = new NDK({
+        explicitRelayUrls: RELAYS
+      });
+      await ndk.connect();
+      return ndk;
+    }
+
+    // Extract plain text excerpt from content (strip markdown)
+    function extractExcerpt(content, maxLength = 150) {
+      // Remove markdown headers
+      let text = content.replace(/^#{1,6}\s+.*$/gm, '');
+      // Remove bold/italic
+      text = text.replace(/\*{1,2}([^*]+)\*{1,2}/g, '$1');
+      // Remove links, keep text
+      text = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+      // Remove images
+      text = text.replace(/!\[[^\]]*\]\([^)]+\)/g, '');
+      // Remove code blocks
+      text = text.replace(/```[\s\S]*?```/g, '');
+      text = text.replace(/`([^`]+)`/g, '$1');
+      // Normalize whitespace
+      text = text.replace(/\s+/g, ' ').trim();
+
+      if (text.length > maxLength) {
+        // Cut at word boundary
+        text = text.slice(0, maxLength);
+        const lastSpace = text.lastIndexOf(' ');
+        if (lastSpace > maxLength - 30) {
+          text = text.slice(0, lastSpace);
+        }
+        text += '...';
+      }
+
+      return text;
+    }
+
+    // Format date as YYYY-MM-DD
+    function formatDate(timestamp) {
+      const date = new Date(timestamp * 1000);
+      return date.toISOString().split('T')[0];
+    }
+
+    // Render article preview
+    function renderArticle(event) {
+      const title = event.tagValue('title') || 'Untitled';
+      const publishedAt = parseInt(event.tagValue('published_at')) || event.created_at;
+      const d = event.tagValue('d');
+      if (!d) return ''; // Skip articles without d-tag
+      const excerpt = extractExcerpt(event.content);
+
+      // Build article URL using ?a= format
+      const articleUrl = `../article.html?a=30023:${event.pubkey}:${d}`;
+
+      return `
+        <article class="article-preview">
+          <time>${formatDate(publishedAt)}</time>
+          <h2><a href="${articleUrl}">${escapeHtml(title)}</a></h2>
+          <p class="excerpt">${escapeHtml(excerpt)}</p>
+        </article>
+      `;
+    }
+
+    // Escape HTML
+    function escapeHtml(text) {
+      return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // Main initialization
+    async function init() {
+      const listEl = document.getElementById('article-list');
+
+      try {
+        const ndk = await initNDK();
+
+        // Fetch kind 30023 articles from Pablo's pubkey
+        const filter = {
+          kinds: [30023],
+          authors: [PABLO_PUBKEY]
+        };
+
+        const events = await ndk.fetchEvents(filter);
+        const articles = Array.from(events);
+
+        if (articles.length === 0) {
+          listEl.innerHTML = '<p class="loading">no articles yet</p>';
+          return;
+        }
+
+        // Sort by published_at or created_at descending (newest first)
+        articles.sort((a, b) => {
+          const aTime = parseInt(a.tagValue('published_at')) || a.created_at;
+          const bTime = parseInt(b.tagValue('published_at')) || b.created_at;
+          return bTime - aTime;
+        });
+
+        // Render all articles
+        listEl.innerHTML = articles.map(renderArticle).join('');
+
+      } catch (e) {
+        console.error('Error loading articles:', e);
+        listEl.innerHTML = `<p class="loading" style="color: #a66;">failed to load articles: ${e.message}</p>`;
+      }
+    }
+
+    // Start
+    init();
+  </script>
+</body>
+</html>

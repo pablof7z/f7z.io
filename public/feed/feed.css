@@ -1,0 +1,32 @@
+/* Feed page styles */
+
+.feed-list {
+  margin-top: 2rem;
+}
+
+.feed-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.feed-item:last-of-type {
+  border-bottom: none;
+}
+
+.feed-item time {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--fg-dim);
+  margin-bottom: 0.5rem;
+  text-transform: lowercase;
+}
+
+.feed-item p {
+  line-height: 1.7;
+  color: var(--fg);
+}
+
+.feed-item a {
+  color: var(--fg-bright);
+}

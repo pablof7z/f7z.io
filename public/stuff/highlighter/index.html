@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highlighter — Pablo Fernandez</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../stuff.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../../now/">now</a>
+      <a href="../../writing/">writing</a>
+      <a href="../../feed/">feed</a>
+      <a href="../../podcasts/">podcasts</a>
+      <a href="../../stuff/" class="active">stuff</a>
+    </div>
+  </nav>
+
+  <main class="stuff-detail-main">
+    <header class="stuff-detail-header">
+      <h1>Highlighter</h1>
+      <div class="stuff-detail-meta">
+        <a href="https://highlighter.com">highlighter.com</a>
+        <span>·</span>
+        <a href="https://github.com/pablof7z/highlighter">github</a>
+      </div>
+    </header>
+
+    <div class="stuff-tabs">
+      <nav class="stuff-tab-nav">
+        <button class="stuff-tab-btn active" data-tab="description">Description</button>
+        <button class="stuff-tab-btn" data-tab="notes">Notes</button>
+      </nav>
+
+      <div class="stuff-tab-content">
+        <div id="description" class="stuff-tab-panel active">
+          <div class="stuff-description">
+            <p><strong>Creator economy platform for nostr.</strong> Read, highlight, share. Long-form content with social annotations and subscriptions.</p>
+
+            <p>Highlighter implements NIP-84 highlights—the ability to select and share meaningful excerpts from articles, podcasts, and videos. It turns passive reading into active curation.</p>
+
+            <h2>features</h2>
+            <ul>
+              <li>NIP-84 highlight creation and discovery</li>
+              <li>Zap splits for content creators</li>
+              <li>NIP-88 recurring subscriptions</li>
+              <li>DVM (Data Vending Machine) integration</li>
+              <li>NIP-29 groups for communities</li>
+              <li>Curation-based earnings</li>
+            </ul>
+
+            <h2>creator tools</h2>
+            <ul>
+              <li>Subscriber management</li>
+              <li>Revenue analytics</li>
+              <li>Tiered access levels</li>
+              <li>Community spaces</li>
+            </ul>
+
+            <p>"Highlighter was like six major product pivots ago. I still plan on releasing Honeypot wallet based on this idea."</p>
+          </div>
+        </div>
+
+        <div id="notes" class="stuff-tab-panel">
+          <div id="notes-content" class="stuff-notes" data-hashtag="highlighter">
+            <p class="stuff-notes-loading">Loading notes...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><a href="../">← back to stuff</a></p>
+    </footer>
+  </main>
+
+  <script src="../stuff.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NDK — Pablo Fernandez</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../stuff.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../../now/">now</a>
+      <a href="../../writing/">writing</a>
+      <a href="../../feed/">feed</a>
+      <a href="../../podcasts/">podcasts</a>
+      <a href="../../stuff/" class="active">stuff</a>
+    </div>
+  </nav>
+
+  <main class="stuff-detail-main">
+    <header class="stuff-detail-header">
+      <h1>NDK</h1>
+      <div class="stuff-detail-meta">
+        <a href="https://ndk.fyi">ndk.fyi</a>
+        <span>·</span>
+        <a href="https://github.com/nostr-dev-kit/ndk">github</a>
+      </div>
+    </header>
+
+    <div class="stuff-tabs">
+      <nav class="stuff-tab-nav">
+        <button class="stuff-tab-btn active" data-tab="description">Description</button>
+        <button class="stuff-tab-btn" data-tab="notes">Notes</button>
+      </nav>
+
+      <div class="stuff-tab-content">
+        <div id="description" class="stuff-tab-panel active">
+          <div class="stuff-description">
+            <p><strong>Nostr Development Kit</strong> — the foundation for most modern nostr clients.</p>
+
+            <p>NDK is a comprehensive toolkit that handles all the complexity of building on nostr: relay management, caching, signing, subscription handling, and event verification. It lets developers focus on building features instead of reinventing protocol plumbing.</p>
+
+            <h2>packages</h2>
+            <ul>
+              <li><strong>ndk-core</strong> — Core functionality, relay pools, event handling</li>
+              <li><strong>ndk-svelte</strong> — Svelte 5 bindings with reactive stores</li>
+              <li><strong>ndk-react</strong> — React hooks for nostr</li>
+              <li><strong>ndk-mobile</strong> — React Native/Expo for iOS and Android</li>
+              <li><strong>ndk-wallet</strong> — NIP-60 wallet support</li>
+              <li><strong>ndk-cache-dexie</strong> — IndexedDB caching</li>
+              <li><strong>ndk-cache-redis</strong> — Redis caching for servers</li>
+              <li><strong>ndk-cli</strong> — Command-line interface</li>
+              <li><strong>NDKSwift</strong> — Swift port for iOS/macOS</li>
+            </ul>
+
+            <h2>features</h2>
+            <ul>
+              <li>Outbox model (NIP-65) for decentralized relay discovery</li>
+              <li>Subscription queueing for efficient relay usage</li>
+              <li>Automatic signature verification</li>
+              <li>Blossom media support</li>
+              <li>NIP-46 remote signing</li>
+              <li>Event threading and replies</li>
+              <li>Negentropy sync support</li>
+            </ul>
+
+            <p>Used by Olas, Highlighter, Coracle, Primal, and dozens of other nostr clients.</p>
+          </div>
+        </div>
+
+        <div id="notes" class="stuff-tab-panel">
+          <div id="notes-content" class="stuff-notes" data-hashtag="ndk">
+            <p class="stuff-notes-loading">Loading notes...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><a href="../">← back to stuff</a></p>
+    </footer>
+  </main>
+
+  <script src="../stuff.js"></script>
+</body>
+</html>

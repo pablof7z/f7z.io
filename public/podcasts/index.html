@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcasts — Pablo Fernandez</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../now/">now</a>
+      <a href="../writing/">writing</a>
+      <a href="../feed/">feed</a>
+      <a href="../podcasts/" class="active">podcasts</a>
+      <a href="../stuff/">stuff</a>
+      <a href="../journal/">journal</a>
+    </div>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Podcasts</h1>
+      <p class="tagline">Conversations about sovereign technology, AI agents, and the future of the internet.</p>
+    </header>
+
+    <section class="podcast-list">
+
+      <article class="podcast-entry">
+        <time>ongoing</time>
+        <h2>No Solutions</h2>
+        <p class="podcast-meta">Co-hosted with Gigi</p>
+        <p>No solutions; only trade-offs. A podcast about the hard problems in sovereign technology. We explore the tensions between convenience and freedom, centralization and coordination, building for users and building for sovereignty.</p>
+      </article>
+
+      <article class="podcast-entry">
+        <time>2026-02</time>
+        <h2>TECH014: Is AGI Here? — Clawdbot & Local AI Agent Swarms</h2>
+        <p class="podcast-meta">Guest on Preston Pysh's Infinite Tech with Trey Sellers</p>
+        <p>Deep dive into agentic AI, human replica agents, and building systems where users maintain sovereignty. Topics include agent hierarchies, persistent memory, economic agency via Bitcoin, and why specialization beats generalization.</p>
+        <p class="podcast-link"><a href="https://podcasts.apple.com/us/podcast/tech014-is-agi-here-clawdbot-local-ai-agent-swarms/id928933489?i=1000747947835">Listen on Apple Podcasts</a></p>
+      </article>
+
+    </section>
+
+    <footer>
+      <p><a href="../">← back</a></p>
+    </footer>
+  </main>
+
+  <style>
+    .podcast-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .podcast-entry {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .podcast-entry:last-child {
+      border-bottom: none;
+    }
+
+    .podcast-entry time {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--fg-dim);
+      margin-bottom: 0.5rem;
+    }
+
+    .podcast-entry h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--fg-bright);
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 0.3rem;
+    }
+
+    .podcast-meta {
+      font-size: 0.8rem;
+      color: var(--fg-dim);
+      font-style: italic;
+      margin-bottom: 0.8rem;
+    }
+
+    .podcast-entry p {
+      font-size: 0.9rem;
+    }
+
+    .podcast-link {
+      margin-top: 0.8rem;
+    }
+
+    .podcast-link a {
+      font-size: 0.8rem;
+      color: var(--fg-dim);
+    }
+
+    .podcast-link a:hover {
+      color: var(--fg-bright);
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading... — Pablo Fernandez</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional article-specific styles */
+    .loading, .error {
+      color: var(--fg-dim);
+      font-size: 0.85rem;
+    }
+    .error {
+      color: #a66;
+    }
+    .reply-form {
+      margin-top: 0.8rem;
+      display: none;
+    }
+    .reply-form.active {
+      display: block;
+    }
+    .reply-form textarea {
+      width: 100%;
+      background: #111;
+      border: 1px solid #222;
+      color: var(--fg);
+      font-family: inherit;
+      font-size: 0.8rem;
+      padding: 0.6rem;
+      resize: vertical;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+    .reply-form textarea::placeholder {
+      color: var(--fg-dim);
+    }
+    .reply-form textarea:focus {
+      outline: none;
+      border-color: #333;
+    }
+    .reply-form-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .reply-form button {
+      background: none;
+      border: 1px solid #333;
+      color: var(--fg-dim);
+      font-family: inherit;
+      font-size: 0.7rem;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+    }
+    .reply-form button:hover {
+      border-color: var(--fg-dim);
+      color: var(--fg-bright);
+    }
+    .reply-form button.cancel {
+      border-color: #222;
+    }
+    .comment-submit:disabled,
+    .reply-form button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .login-prompt {
+      color: var(--fg-dim);
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+    .login-prompt a {
+      color: var(--fg-bright);
+      cursor: pointer;
+    }
+    .new-comment-indicator {
+      color: var(--fg-dim);
+      font-size: 0.75rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .new-comment-indicator.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="now/">now</a>
+      <a href="writing/" class="active">writing</a>
+      <a href="feed/">feed</a>
+      <a href="podcasts/">podcasts</a>
+      <a href="stuff/">stuff</a>
+      <a href="journal/">journal</a>
+    </div>
+  </nav>
+
+  <main>
+    <article class="article" id="article">
+      <div class="loading">loading...</div>
+    </article>
+
+    <section class="comments" id="comments-section" style="display: none;">
+      <h2>comments</h2>
+      <div class="new-comment-indicator" id="new-comment-indicator">new comment added</div>
+      <div class="comment-thread" id="comment-thread"></div>
+
+      <div class="comment-form" id="comment-form">
+        <textarea class="comment-input" id="comment-input" placeholder="add a comment..." rows="3"></textarea>
+        <button class="comment-submit" id="comment-submit">post</button>
+      </div>
+      <div class="login-prompt" id="login-prompt" style="display: none;">
+        <a id="login-link">connect with nostr</a> to comment
+      </div>
+    </section>
+
+    <footer>
+      <p><a href="https://github.com/pablof7z">github</a></p>
+    </footer>
+  </main>
+
+  <script type="module">
+    import NDK, { NDKNip07Signer, NDKEvent, NDKSubscriptionCacheUsage, nip19 } from 'https://esm.sh/@nostr-dev-kit/ndk@2.12.0';
+    import { nip19 as nostrNip19 } from 'https://esm.sh/nostr-tools@2.10.4';
+
+    // Configuration
+    const RELAYS = ['wss://relay.nostr.band', 'wss://relay.damus.io', 'wss://nos.lol', 'wss://relay.primal.net'];
+    const MAX_VISIBLE_DEPTH = 3;
+
+    // State
+    let ndk = null;
+    let signer = null;
+    let currentArticle = null;
+    let comments = new Map(); // eventId -> comment data
+    let userPubkey = null;
+    let profiles = new Map(); // pubkey -> profile data
+
+    // Initialize NDK
+    async function initNDK() {
+      ndk = new NDK({
+        explicitRelayUrls: RELAYS
+      });
+      await ndk.connect();
+      return ndk;
+    }
+
+    // Try to get signer (NIP-07)
+    async function tryGetSigner() {
+      if (typeof window.nostr !== 'undefined') {
+        try {
+          signer = new NDKNip07Signer();
+          ndk.signer = signer;
+          const user = await signer.user();
+          userPubkey = user.pubkey;
+          return true;
+        } catch (e) {
+          console.log('Signer available but not authorized');
+          return false;
+        }
+      }
+      return false;
+    }
+
+    // Parse article identifier from URL
+    function getArticleIdentifier() {
+      const params = new URLSearchParams(window.location.search);
+
+      // Support ?naddr=... format
+      const naddr = params.get('naddr');
+      if (naddr) {
+        return { type: 'naddr', value: naddr };
+      }
+
+      // Support ?a=30023:pubkey:slug format
+      const a = params.get('a');
+      if (a) {
+        const parts = a.split(':');
+        if (parts.length >= 3) {
+          return { type: 'a', kind: parseInt(parts[0]), pubkey: parts[1], identifier: parts.slice(2).join(':') };
+        }
+      }
+
+      // Support ?pubkey=...&slug=... format
+      const pubkey = params.get('pubkey');
+      const slug = params.get('slug') || params.get('d');
+      if (pubkey && slug) {
+        return { type: 'a', kind: 30023, pubkey, identifier: slug };
+      }
+
+      return null;
+    }
+
+    // Decode naddr
+    function decodeNaddr(naddr) {
+      // Remove naddr1 prefix and decode bech32
+      // For simplicity, we'll use a basic approach - in production use a proper bech32 library
+      // This is a simplified version; real implementation would use proper NIP-19 decoding
+      try {
+        // Use NDK's built-in decoding if available
+        const decoded = ndk.getUser({ naddr });
+        return decoded;
+      } catch (e) {
+        console.error('Failed to decode naddr:', e);
+        return null;
+      }
+    }
+
+    // Fetch article
+    async function fetchArticle(identifier) {
+      let filter;
+
+      if (identifier.type === 'naddr') {
+        // Decode naddr using nostr-tools nip19
+        try {
+          const decoded = nostrNip19.decode(identifier.value);
+          if (decoded.type === 'naddr') {
+            const { pubkey, identifier: d, kind } = decoded.data;
+            filter = {
+              kinds: [kind || 30023],
+              authors: [pubkey],
+              '#d': [d]
+            };
+          } else {
+            console.error('Unexpected decoded type:', decoded.type);
+            return null;
+          }
+        } catch (e) {
+          console.error('Failed to decode naddr:', e);
+          return null;
+        }
+      } else if (identifier.type === 'a') {
+        filter = {
+          kinds: [identifier.kind || 30023],
+          authors: [identifier.pubkey],
+          '#d': [identifier.identifier]
+        };
+      }
+
+      const events = await ndk.fetchEvents(filter);
+      const eventsArray = Array.from(events);
+      return eventsArray.length > 0 ? eventsArray[0] : null;
+    }
+
+    // Calculate reading time
+    function calculateReadingTime(content) {
+      const wordsPerMinute = 200;
+      const words = content.trim().split(/\s+/).length;
+      const minutes = Math.ceil(words / wordsPerMinute);
+      return `${minutes} min read`;
+    }
+
+    // Format timestamp
+    function formatTimestamp(timestamp) {
+      const now = Date.now() / 1000;
+      const diff = now - timestamp;
+
+      if (diff < 60) return 'just now';
+      if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+      if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+      if (diff < 604800) return `${Math.floor(diff / 86400)}d ago`;
+
+      const date = new Date(timestamp * 1000);
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+
+    // Get display name for pubkey (nip05 or truncated npub)
+    function getDisplayName(pubkey) {
+      const profile = profiles.get(pubkey);
+      if (profile?.nip05) {
+        // Show just the name part if it's _@domain
+        const nip05 = profile.nip05;
+        if (nip05.startsWith('_@')) {
+          return nip05.slice(2);
+        }
+        return nip05;
+      }
+      if (profile?.name) {
+        return profile.name.length > 20 ? profile.name.slice(0, 17) + '...' : profile.name;
+      }
+      try {
+        const npub = nostrNip19.npubEncode(pubkey);
+        return `${npub.slice(0, 8)}...${npub.slice(-4)}`;
+      } catch (e) {
+        return `${pubkey.slice(0, 8)}...${pubkey.slice(-4)}`;
+      }
+    }
+
+    // Fetch profiles for comment authors
+    async function fetchProfiles(pubkeys) {
+      const unknown = pubkeys.filter(p => !profiles.has(p));
+      if (unknown.length === 0) return;
+
+      const events = await ndk.fetchEvents({
+        kinds: [0],
+        authors: unknown
+      });
+
+      for (const event of events) {
+        try {
+          const profile = JSON.parse(event.content);
+          profiles.set(event.pubkey, profile);
+        } catch (e) {
+          console.error('Failed to parse profile:', e);
+        }
+      }
+    }
+
+    // Simple markdown-like rendering (minimal)
+    function renderContent(content) {
+      // Basic escaping
+      let html = content
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+
+      // Paragraphs
+      html = html.split(/\n\n+/).map(p => `<p>${p.trim()}</p>`).join('');
+
+      // Headers
+      html = html.replace(/<p>## (.+?)<\/p>/g, '</div><h2>$1</h2><div class="article-body">');
+      html = html.replace(/<p># (.+?)<\/p>/g, '</div><h2>$1</h2><div class="article-body">');
+
+      // Bold
+      html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+      // Italic
+      html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+      // Links
+      html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+
+      // Clean up empty paragraphs
+      html = html.replace(/<p>\s*<\/p>/g, '');
+
+      return html;
+    }
+
+    // Render article
+    function renderArticle(event) {
+      const articleEl = document.getElementById('article');
+
+      const title = event.tagValue('title') || 'Untitled';
+      const publishedAt = event.tagValue('published_at') || event.created_at;
+      const content = event.content;
+
+      const date = new Date(publishedAt * 1000);
+      const dateStr = date.toISOString().split('T')[0];
+      const readingTime = calculateReadingTime(content);
+
+      document.title = `${title} — Pablo Fernandez`;
+
+      articleEl.innerHTML = `
+        <header class="article-header">
+          <h1>${title}</h1>
+          <div class="article-meta">
+            <time>${dateStr}</time>
+            <span class="separator">·</span>
+            <span class="reading-time">${readingTime}</span>
+          </div>
+        </header>
+        <div class="article-body">
+          ${renderContent(content)}
+        </div>
+      `;
+    }
+
+    // Get article reference tag for NIP-22 comments
+    function getArticleATag(event) {
+      const d = event.tagValue('d') || '';
+      return `30023:${event.pubkey}:${d}`;
+    }
+
+    // Build comment tree
+    function buildCommentTree() {
+      const rootComments = [];
+      const commentsByParent = new Map();
+
+      for (const [id, comment] of comments) {
+        const parentId = comment.parentId;
+
+        if (!parentId || parentId === currentArticle.id) {
+          // Root comment (references article directly)
+          rootComments.push(comment);
+        } else {
+          // Reply to another comment
+          if (!commentsByParent.has(parentId)) {
+            commentsByParent.set(parentId, []);
+          }
+          commentsByParent.get(parentId).push(comment);
+        }
+      }
+
+      // Sort by timestamp (newest first for root, oldest first for replies)
+      rootComments.sort((a, b) => b.createdAt - a.createdAt);
+
+      // Attach replies to comments
+      function attachReplies(comment, depth = 0) {
+        const replies = commentsByParent.get(comment.id) || [];
+        replies.sort((a, b) => a.createdAt - b.createdAt);
+        comment.replies = replies.map(r => attachReplies(r, depth + 1));
+        comment.depth = depth;
+        return comment;
+      }
+
+      return rootComments.map(c => attachReplies(c));
+    }
+
+    // Render single comment
+    function renderComment(comment, depth = 0) {
+      const visualDepth = Math.min(depth, MAX_VISIBLE_DEPTH - 1);
+      const author = getDisplayName(comment.pubkey);
+      const time = formatTimestamp(comment.createdAt);
+
+      let repliesHtml = '';
+      if (comment.replies && comment.replies.length > 0) {
+        const repliesContent = comment.replies.map(r => renderComment(r, depth + 1)).join('');
+        repliesHtml = `<div class="comment-replies">${repliesContent}</div>`;
+      }
+
+      return `
+        <div class="comment" data-id="${comment.id}" data-depth="${depth}">
+          <div class="comment-header">
+            <span class="comment-author">${author}</span>
+            <span class="separator">·</span>
+            <time class="comment-time">${time}</time>
+          </div>
+          <div class="comment-body">
+            <p>${comment.content.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>
+          </div>
+          <button class="comment-reply-btn" data-reply-to="${comment.id}">reply</button>
+          <div class="reply-form" id="reply-form-${comment.id}">
+            <textarea placeholder="write a reply..." rows="2"></textarea>
+            <div class="reply-form-actions">
+              <button class="submit-reply" data-reply-to="${comment.id}">post</button>
+              <button class="cancel cancel-reply" data-reply-to="${comment.id}">cancel</button>
+            </div>
+          </div>
+          ${repliesHtml}
+        </div>
+      `;
+    }
+
+    // Render all comments
+    async function renderComments() {
+      const threadEl = document.getElementById('comment-thread');
+      const tree = buildCommentTree();
+
+      // Fetch profiles for all comment authors
+      const pubkeys = Array.from(comments.values()).map(c => c.pubkey);
+      await fetchProfiles(pubkeys);
+
+      if (tree.length === 0) {
+        threadEl.innerHTML = '<p class="loading">no comments yet</p>';
+      } else {
+        threadEl.innerHTML = tree.map(c => renderComment(c)).join('');
+      }
+
+      // Attach reply button handlers
+      document.querySelectorAll('.comment-reply-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const replyTo = btn.dataset.replyTo;
+          toggleReplyForm(replyTo);
+        });
+      });
+
+      document.querySelectorAll('.cancel-reply').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const replyTo = btn.dataset.replyTo;
+          toggleReplyForm(replyTo, false);
+        });
+      });
+
+      document.querySelectorAll('.submit-reply').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const replyTo = btn.dataset.replyTo;
+          const form = document.getElementById(`reply-form-${replyTo}`);
+          const textarea = form.querySelector('textarea');
+          const content = textarea.value.trim();
+
+          if (content) {
+            btn.disabled = true;
+            await postComment(content, replyTo);
+            textarea.value = '';
+            toggleReplyForm(replyTo, false);
+            btn.disabled = false;
+          }
+        });
+      });
+    }
+
+    // Toggle reply form visibility
+    function toggleReplyForm(commentId, show = true) {
+      // Hide all other reply forms
+      document.querySelectorAll('.reply-form.active').forEach(form => {
+        form.classList.remove('active');
+      });
+
+      if (show) {
+        const form = document.getElementById(`reply-form-${commentId}`);
+        if (form) {
+          form.classList.add('active');
+          form.querySelector('textarea').focus();
+        }
+      }
+    }
+
+    // Subscribe to comments
+    function subscribeToComments(articleEvent) {
+      const aTag = getArticleATag(articleEvent);
+
+      // NIP-22 comment filter
+      // Comments reference the article via 'a' tag or 'e' tag
+      const filter = {
+        kinds: [1111],
+        '#A': [aTag]
+      };
+
+      const sub = ndk.subscribe(filter, {
+        closeOnEose: false,
+        cacheUsage: NDKSubscriptionCacheUsage.PARALLEL
+      });
+
+      sub.on('event', (event) => {
+        if (!comments.has(event.id)) {
+          // Parse comment data
+          const parentTag = event.tags.find(t => t[0] === 'e' && t[3] === 'reply');
+          const parentId = parentTag ? parentTag[1] : null;
+
+          comments.set(event.id, {
+            id: event.id,
+            pubkey: event.pubkey,
+            content: event.content,
+            createdAt: event.created_at,
+            parentId: parentId,
+            replies: []
+          });
+
+          renderComments();
+
+          // Show new comment indicator briefly
+          const indicator = document.getElementById('new-comment-indicator');
+          indicator.classList.add('visible');
+          setTimeout(() => indicator.classList.remove('visible'), 2000);
+        }
+      });
+
+      // Also fetch comments that reference the article event ID directly
+      const filter2 = {
+        kinds: [1111],
+        '#E': [articleEvent.id]
+      };
+
+      const sub2 = ndk.subscribe(filter2, {
+        closeOnEose: false,
+        cacheUsage: NDKSubscriptionCacheUsage.PARALLEL
+      });
+
+      sub2.on('event', (event) => {
+        if (!comments.has(event.id)) {
+          const parentTag = event.tags.find(t => t[0] === 'e' && t[3] === 'reply');
+          const parentId = parentTag ? parentTag[1] : null;
+
+          comments.set(event.id, {
+            id: event.id,
+            pubkey: event.pubkey,
+            content: event.content,
+            createdAt: event.created_at,
+            parentId: parentId,
+            replies: []
+          });
+
+          renderComments();
+        }
+      });
+    }
+
+    // Post a comment
+    async function postComment(content, replyToId = null) {
+      if (!signer) {
+        const authorized = await tryGetSigner();
+        if (!authorized) {
+          alert('Please connect a Nostr signer to comment');
+          return;
+        }
+      }
+
+      const event = new NDKEvent(ndk);
+      event.kind = 1111;
+      event.content = content;
+
+      const aTag = getArticleATag(currentArticle);
+      const dTag = currentArticle.tagValue('d') || '';
+
+      // NIP-22 tags
+      // Root reference to the article
+      event.tags = [
+        ['A', aTag, '', 'root'],
+        ['E', currentArticle.id, '', 'root'],
+        ['K', '30023'],
+        ['p', currentArticle.pubkey]
+      ];
+
+      // If replying to another comment, add reply reference
+      if (replyToId && comments.has(replyToId)) {
+        const parentComment = comments.get(replyToId);
+        event.tags.push(['e', replyToId, '', 'reply']);
+        event.tags.push(['p', parentComment.pubkey]);
+      }
+
+      try {
+        await event.publish();
+        console.log('Comment published:', event.id);
+      } catch (e) {
+        console.error('Failed to publish comment:', e);
+        alert('Failed to post comment. Please try again.');
+      }
+    }
+
+    // Setup UI handlers
+    function setupUI() {
+      const commentForm = document.getElementById('comment-form');
+      const commentInput = document.getElementById('comment-input');
+      const commentSubmit = document.getElementById('comment-submit');
+      const loginPrompt = document.getElementById('login-prompt');
+      const loginLink = document.getElementById('login-link');
+
+      // Check for signer
+      if (typeof window.nostr !== 'undefined') {
+        commentForm.style.display = 'block';
+        loginPrompt.style.display = 'none';
+      } else {
+        commentForm.style.display = 'none';
+        loginPrompt.style.display = 'block';
+      }
+
+      // Login link handler
+      loginLink.addEventListener('click', async () => {
+        if (typeof window.nostr !== 'undefined') {
+          const authorized = await tryGetSigner();
+          if (authorized) {
+            commentForm.style.display = 'block';
+            loginPrompt.style.display = 'none';
+          }
+        } else {
+          alert('No Nostr signer found. Please install a NIP-07 extension like nos2x or Alby.');
+        }
+      });
+
+      // Submit comment handler
+      commentSubmit.addEventListener('click', async () => {
+        const content = commentInput.value.trim();
+        if (content) {
+          commentSubmit.disabled = true;
+          await postComment(content);
+          commentInput.value = '';
+          commentSubmit.disabled = false;
+        }
+      });
+
+      // Enter key to submit (with shift for newline)
+      commentInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          commentSubmit.click();
+        }
+      });
+    }
+
+    // Main initialization
+    async function init() {
+      const articleEl = document.getElementById('article');
+      const commentsSection = document.getElementById('comments-section');
+
+      // Get article identifier from URL
+      const identifier = getArticleIdentifier();
+      if (!identifier) {
+        articleEl.innerHTML = '<div class="error">no article specified. use ?a=30023:pubkey:slug or ?naddr=...</div>';
+        return;
+      }
+
+      try {
+        // Initialize NDK
+        await initNDK();
+
+        // Try to get signer (don't fail if not available)
+        await tryGetSigner();
+
+        // Fetch article
+        const article = await fetchArticle(identifier);
+        if (!article) {
+          articleEl.innerHTML = '<div class="error">article not found</div>';
+          return;
+        }
+
+        currentArticle = article;
+
+        // Render article
+        renderArticle(article);
+
+        // Show comments section with loading state
+        commentsSection.style.display = 'block';
+        document.getElementById('comment-thread').innerHTML = '<p class="loading">loading comments...</p>';
+
+        // Setup UI handlers
+        setupUI();
+
+        // Subscribe to comments (real-time)
+        // Comments will render as they arrive
+        subscribeToComments(article);
+
+        // After a short delay, if no comments, show empty state
+        setTimeout(() => {
+          if (comments.size === 0) {
+            document.getElementById('comment-thread').innerHTML = '<p class="loading">no comments yet</p>';
+          }
+        }, 3000);
+
+      } catch (e) {
+        console.error('Error loading article:', e);
+        articleEl.innerHTML = `<div class="error">failed to load article: ${e.message}</div>`;
+      }
+    }
+
+    // Start
+    init();
+  </script>
+</body>
+</html>

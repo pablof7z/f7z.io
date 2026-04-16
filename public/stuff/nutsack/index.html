@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutsack — Pablo Fernandez</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../stuff.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../../now/">now</a>
+      <a href="../../writing/">writing</a>
+      <a href="../../feed/">feed</a>
+      <a href="../../podcasts/">podcasts</a>
+      <a href="../../stuff/" class="active">stuff</a>
+    </div>
+  </nav>
+
+  <main class="stuff-detail-main">
+    <header class="stuff-detail-header">
+      <h1>Nutsack</h1>
+      <div class="stuff-detail-meta">
+        <a href="https://nutsack.me">nutsack.me</a>
+        <span>·</span>
+        <a href="https://github.com/pablof7z/nutsack">github</a>
+      </div>
+    </header>
+
+    <div class="stuff-tabs">
+      <nav class="stuff-tab-nav">
+        <button class="stuff-tab-btn active" data-tab="description">Description</button>
+        <button class="stuff-tab-btn" data-tab="notes">Notes</button>
+      </nav>
+
+      <div class="stuff-tab-content">
+        <div id="description" class="stuff-tab-panel active">
+          <div class="stuff-description">
+            <p><strong>NIP-60/61 Cashu wallet.</strong> A wallet that lives in nostr.</p>
+
+            <p>Nutsack implements NIP-60 (Cashu wallets on nostr) and NIP-61 (Nutzaps). Your ecash tokens are stored encrypted on relays, making them portable across any client that supports the standard.</p>
+
+            <h2>features</h2>
+            <ul>
+              <li>Cashu ecash integration</li>
+              <li>P2PK token transfers (Nutzaps)</li>
+              <li>Cross-client wallet portability</li>
+              <li>PWA support for mobile</li>
+              <li>Multi-mint management</li>
+              <li>Transaction history on relays</li>
+            </ul>
+
+            <h2>how it works</h2>
+            <ul>
+              <li>Tokens stored as NIP-60 events (encrypted)</li>
+              <li>Nutzaps use P2PK locks for recipient-only redemption</li>
+              <li>Any NIP-60 compatible client can access your wallet</li>
+              <li>No central server holds your money</li>
+            </ul>
+
+            <p>"Don't load too much money; this is highly experimental!"</p>
+          </div>
+        </div>
+
+        <div id="notes" class="stuff-tab-panel">
+          <div id="notes-content" class="stuff-notes" data-hashtag="nutsack">
+            <p class="stuff-notes-loading">Loading notes...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><a href="../">← back to stuff</a></p>
+    </footer>
+  </main>
+
+  <script src="../stuff.js"></script>
+</body>
+</html>

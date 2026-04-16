@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed — Pablo Fernandez</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="feed.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../" class="nav-name">f7z</a>
+    <div class="nav-links">
+      <a href="../now/">now</a>
+      <a href="../writing/">writing</a>
+      <a href="../feed/" class="active">feed</a>
+      <a href="../podcasts/">podcasts</a>
+      <a href="../stuff/">stuff</a>
+      <a href="../journal/">journal</a>
+    </div>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Feed</h1>
+      <p class="tagline">Recent posts from nostr.</p>
+    </header>
+
+    <section class="feed-list" id="feed-list">
+      <p class="loading">loading posts...</p>
+    </section>
+
+    <footer>
+      <p><a href="../">← back</a></p>
+    </footer>
+  </main>
+
+  <script type="module">
+    import NDK from 'https://esm.sh/@nostr-dev-kit/ndk@2.12.0';
+
+    // Configuration
+    const RELAYS = ['wss://relay.nostr.band', 'wss://relay.damus.io', 'wss://nos.lol', 'wss://relay.primal.net'];
+    const PABLO_PUBKEY = 'fa984bd7dbb282f07e16e7ae87b26a2a7b9b90b7246a44771f0cf5ae58018f52';
+    const MAX_POSTS = 20;
+
+    // Initialize NDK
+    async function initNDK() {
+      const ndk = new NDK({
+        explicitRelayUrls: RELAYS
+      });
+      await ndk.connect();
+      return ndk;
+    }
+
+    // Check if an event is a root post (not a reply)
+    function isRootPost(event) {
+      // Check for 'e' tags - replies have an 'e' tag with marker 'reply' or 'root'
+      // A root post should have NO 'e' tags at all (no references to other events)
+      const eTags = event.tags.filter(t => t[0] === 'e');
+      return eTags.length === 0;
+    }
+
+    // Format relative time
+    function formatRelativeTime(timestamp) {
+      const now = Date.now() / 1000;
+      const diff = now - timestamp;
+
+      if (diff < 60) return 'just now';
+      if (diff < 3600) {
+        const mins = Math.floor(diff / 60);
+        return `${mins}m ago`;
+      }
+      if (diff < 86400) {
+        const hours = Math.floor(diff / 3600);
+        return `${hours}h ago`;
+      }
+      if (diff < 604800) {
+        const days = Math.floor(diff / 86400);
+        return `${days}d ago`;
+      }
+      if (diff < 2592000) {
+        const weeks = Math.floor(diff / 604800);
+        return `${weeks}w ago`;
+      }
+
+      const date = new Date(timestamp * 1000);
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    }
+
+    // Escape HTML
+    function escapeHtml(text) {
+      return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // Format content with basic link detection
+    function formatContent(content) {
+      let html = escapeHtml(content);
+
+      // Convert image URLs to img tags
+      html = html.replace(
+        /(https?:\/\/[^\s<]+\.(?:jpg|jpeg|png|gif|webp|svg))/gi,
+        '<img src="$1" alt="" style="max-width:100%;height:auto;margin:0.5rem 0;border-radius:4px;" />'
+      );
+
+      // Convert URLs to links
+      html = html.replace(
+        /(https?:\/\/[^\s<]+)/g,
+        '<a href="$1" target="_blank" rel="noopener">$1</a>'
+      );
+
+      // Convert newlines to breaks
+      html = html.replace(/\n/g, '<br>');
+
+      return html;
+    }
+
+    // Render feed item
+    function renderPost(event) {
+      const time = formatRelativeTime(event.created_at);
+      const content = formatContent(event.content);
+
+      return `
+        <article class="feed-item">
+          <time>${time}</time>
+          <p>${content}</p>
+        </article>
+      `;
+    }
+
+    // Main initialization
+    async function init() {
+      const listEl = document.getElementById('feed-list');
+
+      try {
+        const ndk = await initNDK();
+
+        // Fetch kind 1 notes from Pablo's pubkey
+        // Fetch more than we need since we'll filter out replies
+        const filter = {
+          kinds: [1],
+          authors: [PABLO_PUBKEY],
+          limit: MAX_POSTS * 3
+        };
+
+        const events = await ndk.fetchEvents(filter);
+        let posts = Array.from(events);
+
+        // Filter to root posts only (no replies)
+        posts = posts.filter(isRootPost);
+
+        if (posts.length === 0) {
+          listEl.innerHTML = '<p class="loading">no posts yet</p>';
+          return;
+        }
+
+        // Sort by created_at descending (newest first)
+        posts.sort((a, b) => b.created_at - a.created_at);
+
+        // Limit to MAX_POSTS
+        posts = posts.slice(0, MAX_POSTS);
+
+        // Render all posts
+        listEl.innerHTML = posts.map(renderPost).join('');
+
+      } catch (e) {
+        console.error('Error loading feed:', e);
+        listEl.innerHTML = `<p class="loading" style="color: #a66;">failed to load feed: ${e.message}</p>`;
+      }
+    }
+
+    // Start
+    init();
+  </script>
+</body>
+</html>

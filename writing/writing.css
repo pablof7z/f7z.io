@@ -1,0 +1,143 @@
+/* Writing page — Substack-style typography */
+
+.writing-page main {
+  max-width: 680px;
+}
+
+.article-list {
+  margin-top: 2rem;
+}
+
+.article-preview {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.article-preview:last-of-type {
+  border-bottom: none;
+}
+
+.article-preview time {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--fg-dim);
+  margin-bottom: 0.5rem;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+}
+
+.article-preview h2 {
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--fg-bright);
+  text-transform: none;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.article-preview h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-preview h2 a:hover {
+  color: #fff;
+}
+
+.article-preview .excerpt {
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--fg);
+}
+
+/* Full article view (for individual post pages) */
+.article-full {
+  font-family: 'Spectral', Georgia, serif;
+}
+
+.article-full h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--fg-bright);
+}
+
+.article-full .meta {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: var(--fg-dim);
+  margin-bottom: 3rem;
+}
+
+.article-full .content {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.article-full .content p {
+  margin-bottom: 1.5rem;
+}
+
+.article-full .content h2 {
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--fg-bright);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-full .content h3 {
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--fg-bright);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-full .content blockquote {
+  border-left: 2px solid var(--fg-dim);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--fg);
+}
+
+.article-full .content ul,
+.article-full .content ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.article-full .content li {
+  margin-bottom: 0.5rem;
+}
+
+.article-full .content code {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-size: 0.9em;
+  background: #151515;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+.article-full .content pre {
+  background: #151515;
+  padding: 1.5rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.article-full .content pre code {
+  background: none;
+  padding: 0;
+}
