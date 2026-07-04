@@ -681,6 +681,15 @@
   </template>
 </button>
 <button class="entry" type="button">
+  <span class="entry-date">2026-04-16</span>
+  <span class="entry-title">Wikifreedia ships SSR social-preview verification</span>
+  <span class="entry-sub">Share links need to render correctly for Twitter/Discord/Slack's scrapers, not just browsers.</span>
+  <template>
+    <p>Wikifreedia adds SSR preview verification assets, checking that shared article links render correctly for social scrapers.</p>
+    <p class="why">why: the share previews shipped three weeks earlier are worthless if the bots that generate link cards see a blank shell instead of the article.</p>
+  </template>
+</button>
+<button class="entry" type="button">
   <span class="entry-date">2026-04-06</span>
   <span class="entry-title">TENEX Reports tab shipped in TUI + iOS</span>
   <span class="entry-sub">Agent-published plans and HTML report bundles as first-class documents you can chat from.</span>
@@ -699,6 +708,15 @@
   </template>
 </button>
 <button class="entry" type="button">
+  <span class="entry-date">2026-04-05</span>
+  <span class="entry-title">Wikifreedia: better article previews, route hydration</span>
+  <span class="entry-sub">Small polish pass, the same day Cascade finished its own rewrite.</span>
+  <template>
+    <p>Wikifreedia improves article previews and route hydration.</p>
+    <p class="why">why: the kind of unglamorous fix-up work that has to happen between the big feature days.</p>
+  </template>
+</button>
+<button class="entry" type="button">
   <span class="entry-date">2026-04-01</span>
   <span class="entry-title">Stood up tenex-analytics-web</span>
   <span class="entry-sub">A token/context-editing analytics dashboard for TENEX conversations.</span>
@@ -714,12 +732,39 @@
 <h3 class="month-heading">March</h3>
 <div class="entries">
 <button class="entry" type="button">
+  <span class="entry-date">2026-03-31</span>
+  <span class="entry-title">Wikifreedia's version comparison goes AI-powered</span>
+  <span class="entry-sub">Ollama Cloud generates agreement/disagreement/merged sections in djot between competing versions.</span>
+  <template>
+    <p>Wikifreedia's version comparison goes AI-powered: Ollama Cloud chat API support for event comparisons, with the comparison prompt updated to generate djot format output with explicit agreement, disagreement, and merged sections.</p>
+    <p class="why">why: the whole epistemology is truth at the edges, not by consensus &mdash; so the comparison tool's job isn't to resolve which version is right, it's to show you precisely where and how they disagree.</p>
+  </template>
+</button>
+<button class="entry" type="button">
   <span class="entry-date">2026-03-26</span>
   <span class="entry-title">Shipped blossom-skill, blossom-cli, and an agent skills repo</span>
   <span class="entry-sub">Teaching agents to handle nostr media natively &mdash; everything a human client can do.</span>
   <template>
     <p>Shipped blossom-skill, blossom-cli, and an agent skills repo &mdash; teaching agents to handle nostr media natively.</p>
     <p class="why">why: if agents are first-class citizens they need to be able to do everything a human client can do, including moving files around.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-03-26</span>
+  <span class="entry-title">Wikifreedia: Fund page, article highlights, comparison flows, NIP-37 drafts</span>
+  <span class="entry-sub">Patronage via Bitcoin (Geyser). Competing versions of an article, shown side by side.</span>
+  <template>
+    <p>A big single day for Wikifreedia: a Fund page for a patronage system (hero, donor, and contributor sections, Bitcoin donation via Geyser), article highlights and comparison flows, share previews and explore views, NIP-37 wiki draft support, and a landing page refresh built around explore.</p>
+    <p class="why">why: there is no single source of truth here by design &mdash; multiple versions of an article coexist, so the product needs a real way to fund itself that isn't ads or a subscription wall, and a real way to show competing versions side by side instead of picking a winner.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-03-24</span>
+  <span class="entry-title">Wikifreedia: backend event comparison API, landing redesign kicks off</span>
+  <span class="entry-sub">Component-based architecture, ahead of the Fund page and comparison flows two days later.</span>
+  <template>
+    <p>Wikifreedia adds a backend event comparison API and redesigns the landing page around a component-based architecture.</p>
+    <p class="why">why: the comparison feature and the Fund page that ship two days later both needed this groundwork first.</p>
   </template>
 </button>
 <button class="entry" type="button">
@@ -751,12 +796,48 @@
   </template>
 </button>
 <button class="entry" type="button">
+  <span class="entry-date">2026-03-13</span>
+  <span class="entry-title">Wikifreedia article-view layout pass</span>
+  <span class="entry-sub">Full-width sidebars, stable content width, the stars-and-grid background scoped to the landing page only.</span>
+  <template>
+    <p>Wikifreedia article-view layout pass: full-width sidebars replacing a fixed 200&ndash;220px column, a stable max-width on the article body so it doesn't resize between tabs, a stripped-down Alternative Versions sidebar, and the landing page's stars/grid background scoped so it stops bleeding into the article view.</p>
+    <p class="why">why: the comparison feature only works if reading two competing versions back to back is actually comfortable &mdash; layout thrash between tabs undermines the whole point.</p>
+  </template>
+</button>
+<button class="entry" type="button">
   <span class="entry-date">2026-03-12</span>
   <span class="entry-title">Shipped a pile of AI SDK middleware, relaunched f7z.io</span>
   <span class="entry-sub">Everyone's building agents; almost nobody's building the boring plumbing. Someone has to.</span>
   <template>
     <p>Shipped a pile of AI SDK middleware &mdash; context-window management, fs tools, system reminders, message sanitizer &mdash; plus relaunched f7z.io.</p>
     <p class="why">why: everyone's building agents; almost nobody's building the boring plumbing that makes them not fall over. Someone has to.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-03-12</span>
+  <span class="entry-title">Fixed Wikifreedia's login modal escaping a backdrop-blur containing block</span>
+  <span class="entry-sub">backdrop-blur on the header was quietly breaking position:fixed for everything inside it.</span>
+  <template>
+    <p>Fixed Wikifreedia's login modal rendering pinned to the top of the page instead of centered: the header's backdrop-blur-2xl was creating a new CSS containing block, so the modal's position:fixed was resolving against the header instead of the viewport. Fixed with a portal action that moves the modal's DOM node to document.body on mount.</p>
+    <p class="why">why: a one-line CSS property quietly broke positioning for every fixed-position child of the header &mdash; the kind of bug that's obvious once you know backdrop-filter creates a containing block, and invisible until then.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-03-11</span>
+  <span class="entry-title">Removed the Wikipedia fallback from Wikifreedia's topic pages</span>
+  <span class="entry-sub">No more falling back to the thing it's trying to replace.</span>
+  <template>
+    <p>Removed the Wikipedia fallback from Wikifreedia's topic pages.</p>
+    <p class="why">why: showing Wikipedia's content when an article didn't exist yet was a crutch &mdash; the entire premise is that Wikifreedia doesn't need a centralized backstop.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-03-10</span>
+  <span class="entry-title">Wikifreedia's biggest rebuild day: Djot-first, Svelte 5, Tailwind v4</span>
+  <span class="entry-sub">New NDK compat layer, wa-sqlite, a full interface revamp &mdash; all in one day, a week before the public announcement.</span>
+  <template>
+    <p>Wikifreedia's biggest single day of the rebuild: Djot-first publishing implemented, a full interface revamp, migration to Svelte 5 runes and shadcn-ui components, Tailwind CSS v4, and a new NDK compat layer pulling in blossom, sync, and wallet packages plus a wa-sqlite worker bundle.</p>
+    <p class="why">why: this is the actual work behind the "make wikifreedia contentious again" djot pivot announced publicly on the 16th &mdash; the rebuild happened here, quietly, a week earlier.</p>
   </template>
 </button>
 </div>
