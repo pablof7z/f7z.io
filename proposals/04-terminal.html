@@ -1,0 +1,392 @@
+<!--
+  CONCEPT: The homepage is a terminal. It auto-types `whoami`, prints a two-line
+  answer, then hands control to the visitor via a real input AND tappable command
+  buttons (ls projects / cat now.txt / cat story.txt / contact / help) — no autobiography wall.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>f7z.io — pablof7z</title>
+<meta name="description" content="pablof7z — building freedom tech. A terminal, not a bio.">
+<style>
+  :root{
+    --bg:#0b0d0d;
+    --panel:#101313;
+    --fg:#dfe6e0;
+    --muted:#7a8580;
+    --accent:#7ee787;
+    --err:#ff8080;
+    --border:#232827;
+    --btn-bg:#161a19;
+    --btn-bg-hover:#1d2322;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#f3efe4;
+      --panel:#faf7ee;
+      --fg:#2a2823;
+      --muted:#8a8370;
+      --accent:#2f6f4f;
+      --err:#a8351f;
+      --border:#ddd5bf;
+      --btn-bg:#efe9d9;
+      --btn-bg-hover:#e6dfc9;
+    }
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background:var(--bg);
+    color:var(--fg);
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size:15px;
+    line-height:1.6;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 6vh 14px 28px;
+  }
+  .brand{
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:14px;
+    letter-spacing:.02em;
+  }
+  .brand a{ color:inherit; text-decoration:none; }
+  .brand a:hover{ color:var(--fg); }
+
+  .terminal{
+    width:100%;
+    max-width:720px;
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow: 0 20px 60px -30px rgba(0,0,0,.5);
+  }
+  .chrome{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 12px;
+    border-bottom:1px solid var(--border);
+    background: color-mix(in srgb, var(--panel) 92%, black 8%);
+  }
+  .dot{ width:11px; height:11px; border-radius:50%; }
+  .dot.r{ background:#ff5f56; }
+  .dot.y{ background:#ffbd2e; }
+  .dot.g{ background:#27c93f; }
+  .chrome .title{
+    flex:1;
+    text-align:center;
+    font-size:12px;
+    color:var(--muted);
+    margin-right:44px;
+  }
+
+  .body{ padding:18px 16px 16px; }
+
+  .lines{ display:flex; flex-direction:column; gap:2px; }
+  .line{ overflow-wrap:anywhere; }
+  .ps{ color:var(--accent); }
+  .muted{ color:var(--muted); }
+  .err{ color:var(--err); }
+  .desc{ color:var(--muted); }
+
+  .promptline{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:8px;
+  }
+  .promptline .ps{ flex-shrink:0; }
+  #cmdInput{
+    flex:1;
+    min-width:0;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:var(--fg);
+    font:inherit;
+    caret-color:var(--accent);
+    padding:2px 0;
+  }
+
+  .quickcmds{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:14px;
+    padding-top:12px;
+    border-top:1px dashed var(--border);
+  }
+
+  button.cmd, button.copy{
+    font:inherit;
+    font-size:13px;
+    color:var(--fg);
+    background:var(--btn-bg);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:4px 9px;
+    cursor:pointer;
+  }
+  button.copy{ font-size:11px; padding:1px 7px; margin-left:6px; color:var(--muted); }
+  button.cmd:hover, button.copy:hover{ background:var(--btn-bg-hover); color:var(--accent); }
+  button.cmd:active{ transform:translateY(1px); }
+  button.cmd:focus-visible, button.copy:focus-visible, #cmdInput:focus-visible{
+    outline:1px solid var(--accent);
+    outline-offset:2px;
+  }
+
+  a{ color:var(--accent); }
+
+  .sitenav{
+    margin-top:22px;
+    font-size:12.5px;
+    color:var(--muted);
+    display:flex;
+    gap:14px;
+  }
+  .sitenav a{ color:var(--muted); text-decoration:none; }
+  .sitenav a:hover{ color:var(--accent); }
+
+  .noscript-main{
+    max-width:640px;
+    margin:0 auto;
+    padding:8vh 4px 0;
+  }
+  .noscript-main h1{ font-size:20px; margin:0 0 12px; }
+  .noscript-main p{ margin:0 0 14px; }
+  .noscript-main nav a{ color:var(--accent); text-decoration:none; margin-right:4px; }
+
+  @media (max-width:480px){
+    body{ font-size:14px; padding-top:4vh; }
+    .body{ padding:14px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<noscript>
+  <main class="noscript-main">
+    <h1>pablof7z</h1>
+    <p>Full-time on freedom tech since falling down the nostr rabbit hole in January 2023. Wrote NDK, the dev kit behind a big chunk of the nostr ecosystem, plus a couple dozen apps, relays, and NIPs.</p>
+    <p>Now building TENEX (AI agents as first-class nostr citizens — their own keys, money, reputation) and NMP (one Rust core, shipped native to iOS, Android, and web).</p>
+    <p>Before nostr: years of Bitcoin and Lightning tooling — until a centralized exchange rugged me for 2 BTC. Not-your-keys-not-your-coins, learned the expensive way.</p>
+    <p>Thesis: identity, money, and data should belong to whoever's using them, not whoever runs the server.</p>
+    <p><a href="https://github.com/pablof7z">github.com/pablof7z</a> · nostr: _@f7z.io</p>
+    <nav>
+      <a href="/">home</a> ·
+      <a href="/stuff/">stuff</a> ·
+      <a href="/nownownow/">now</a> ·
+      <a href="/podcast/">podcast</a> ·
+      <a href="/feed/">feed</a>
+    </nav>
+  </main>
+</noscript>
+
+<div class="brand js-only" style="display:none"><a href="/">f7z.io</a></div>
+
+<div id="terminal" class="terminal js-only" style="display:none">
+  <div class="chrome">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <span class="title">visitor@f7z.io: ~</span>
+  </div>
+  <div class="body">
+    <div id="lines" class="lines"></div>
+    <div class="promptline">
+      <span class="ps">visitor@f7z.io:~$</span>
+      <input id="cmdInput" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="terminal command input" readonly>
+    </div>
+    <div class="quickcmds" aria-label="quick commands">
+      <button type="button" class="cmd" data-cmd="ls projects">ls projects</button>
+      <button type="button" class="cmd" data-cmd="cat now.txt">cat now.txt</button>
+      <button type="button" class="cmd" data-cmd="cat story.txt">cat story.txt</button>
+      <button type="button" class="cmd" data-cmd="contact">contact</button>
+      <button type="button" class="cmd" data-cmd="help">help</button>
+    </div>
+  </div>
+</div>
+
+<footer class="sitenav js-only" style="display:none">
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var linesEl = document.getElementById('lines');
+  var cmdInput = document.getElementById('cmdInput');
+  var terminal = document.getElementById('terminal');
+
+  document.querySelectorAll('.js-only').forEach(function(el){ el.style.display = ''; });
+
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function cmdBtn(cmd, label){
+    return '<button type="button" class="cmd" data-cmd="' + esc(cmd) + '">' + esc(label || cmd) + '</button>';
+  }
+
+  function appendLine(html){
+    var d = document.createElement('div');
+    d.className = 'line';
+    d.innerHTML = html;
+    linesEl.appendChild(d);
+    return d;
+  }
+
+  function row(cmd, desc){
+    return cmdBtn(cmd) + '<span class="desc"> — ' + esc(desc) + '</span>';
+  }
+
+  function projectsOut(){
+    appendLine('drwxr-xr-x  NDK/    <span class="desc">the dev kit powering a big chunk of the nostr ecosystem</span>');
+    appendLine('drwxr-xr-x  TENEX/  <span class="desc">orchestrating AI agents over nostr — own keys, own money, own reputation</span>');
+    appendLine('drwxr-xr-x  NMP/    <span class="desc">one Rust core, shipped native to iOS, Android, and web</span>');
+    appendLine('-rw-r--r--  etc.    <span class="desc">a couple dozen apps, relays, and NIPs, scattered around the ecosystem</span>');
+  }
+
+  function cdTo(path, label){
+    return function(){
+      appendLine('<span class="muted">→ ' + esc(label) + '</span>');
+      var delay = reduced ? 0 : 500;
+      setTimeout(function(){ window.location.href = path; }, delay);
+    };
+  }
+
+  var CMDS = {
+    'whoami': function(){
+      appendLine('pablof7z — full-time on freedom tech since I fell down the nostr rabbit hole, Jan 2023.');
+      appendLine('thesis: identity, money, and data belong to whoever is using them, not whoever runs the server.');
+    },
+    'help': function(){
+      appendLine(row('whoami', "who's writing this"));
+      appendLine(row('ls projects', "what I'm building"));
+      appendLine(row('cat now.txt', "what I'm doing right now"));
+      appendLine(row('cat story.txt', 'the origin story (2 BTC lesson included)'));
+      appendLine(row('cd stuff', '→ /stuff/'));
+      appendLine(row('cd now', '→ /nownownow/'));
+      appendLine(row('cd podcast', '→ /podcast/'));
+      appendLine(row('cd feed', '→ /feed/'));
+      appendLine(row('contact', 'nostr + github'));
+      appendLine(row('clear', 'clear the screen'));
+      appendLine(row('help', 'this'));
+    },
+    'ls': projectsOut,
+    'ls projects': projectsOut,
+    'ls -la': projectsOut,
+    'cat now.txt': function(){
+      appendLine("right now: building TENEX and NMP, full-time. shipping something most days.");
+      appendLine('full log ' + cmdBtn('cd now'));
+    },
+    'cat story.txt': function(){
+      appendLine('years deep in bitcoin and lightning tooling before nostr existed.');
+      appendLine('then a centralized exchange rugged me for 2 BTC. "not your keys, not your coins"');
+      appendLine('stopped being a bumper sticker and became a rule I learned the expensive way.');
+      appendLine('nostr applies the same idea to identity and data. been building on it since —');
+      appendLine('NDK, then TENEX, then NMP. same thesis, different layer of the stack each time.');
+    },
+    'contact': function(){
+      appendLine('nostr:&nbsp; _@f7z.io');
+      appendLine('npub:&nbsp;&nbsp; npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft' +
+        '<button type="button" class="copy" data-copy="npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">copy</button>');
+      appendLine('github: <a href="https://github.com/pablof7z" target="_blank" rel="noopener">github.com/pablof7z</a>');
+    },
+    'clear': function(){ linesEl.innerHTML = ''; },
+    'cd stuff': cdTo('/stuff/', '/stuff/'),
+    'cd now': cdTo('/nownownow/', '/nownownow/'),
+    'cd podcast': cdTo('/podcast/', '/podcast/'),
+    'cd feed': cdTo('/feed/', '/feed/'),
+    'cd home': cdTo('/', '/'),
+    'cd ~': cdTo('/', '/'),
+    'sudo rm -rf /': function(){
+      appendLine('<span class="err">nice try.</span> this terminal has no root — and after the next exchange rugs you, neither will your coins.');
+    },
+    'sudo make me a sandwich': function(){
+      appendLine('sudo: sandwich: command not found. some things still require self-custody.');
+    }
+  };
+
+  function dispatch(raw){
+    var cmd = (raw || '').trim();
+    if (!cmd) return;
+    appendLine('<span class="ps">visitor@f7z.io:~$</span> ' + esc(cmd));
+    var key = cmd.toLowerCase().replace(/^\$\s*/, '').replace(/\s+/g, ' ').trim();
+    var fn = CMDS[key];
+    if (fn) {
+      fn();
+    } else {
+      appendLine('<span class="err">command not found: ' + esc(cmd) + '</span> — try ' + cmdBtn('help'));
+    }
+    cmdInput.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+  }
+
+  function submitCommand(){
+    var val = cmdInput.value;
+    cmdInput.value = '';
+    dispatch(val);
+  }
+
+  cmdInput.addEventListener('keydown', function(e){
+    if (e.key === 'Enter') submitCommand();
+  });
+
+  document.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('.cmd');
+    if (b) { dispatch(b.getAttribute('data-cmd')); return; }
+    var c = e.target.closest && e.target.closest('.copy');
+    if (c) {
+      var text = c.getAttribute('data-copy');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){
+          var old = c.textContent;
+          c.textContent = 'copied';
+          setTimeout(function(){ c.textContent = old; }, 1200);
+        }).catch(function(){});
+      }
+      return;
+    }
+    if (e.target.closest && e.target.closest('.body') && !e.target.closest('a')) {
+      cmdInput.focus();
+    }
+  });
+
+  function typeIntoInput(text, cb){
+    if (reduced) { cmdInput.value = text; cb(); return; }
+    var i = 0;
+    cmdInput.value = '';
+    (function step(){
+      i++;
+      cmdInput.value = text.slice(0, i);
+      if (i < text.length) {
+        setTimeout(step, 55 + Math.random() * 55);
+      } else {
+        setTimeout(cb, 350);
+      }
+    })();
+  }
+
+  typeIntoInput('whoami', function(){
+    submitCommand();
+    cmdInput.readOnly = false;
+  });
+
+})();
+</script>
+</body>
+</html>

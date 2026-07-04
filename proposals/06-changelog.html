@@ -1,0 +1,234 @@
+<!--
+  PROPOSAL 6: Changelog-as-homepage — the bio becomes a git log. No paragraph.
+  HEAD line states the thesis; everything below is a reverse-chronological, hash-decorated commit history you scan in seconds.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pablof7z</title>
+<style>
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --muted: #555;
+    --faint: #999;
+    --line: #000;
+    --accent: #7a3e00;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111;
+      --fg: #eee;
+      --muted: #aaa;
+      --faint: #777;
+      --line: #eee;
+      --accent: #e0a955;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 40em;
+    margin: 2.5em auto;
+    padding: 0 1.2em 2em;
+  }
+
+  h1 {
+    font-weight: normal;
+    font-size: 1.5em;
+    margin: 0 0 0.15em;
+  }
+
+  .head-line {
+    font-family: "SF Mono", "Courier New", monospace;
+    font-size: 0.95em;
+    color: var(--muted);
+    margin: 0 0 1.6em;
+  }
+
+  .head-line .tag {
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  nav {
+    margin-bottom: 1.8em;
+    font-size: 0.95em;
+  }
+
+  nav a {
+    margin-right: 1em;
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  a {
+    color: var(--fg);
+  }
+  a:visited {
+    color: var(--muted);
+  }
+
+  .log {
+    margin: 0 0 2em;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .log li {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 0 0.9em;
+    align-items: baseline;
+    padding: 0.8em 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hash {
+    font-family: "SF Mono", "Courier New", monospace;
+    font-size: 0.82em;
+    color: var(--faint);
+    white-space: nowrap;
+  }
+
+  .when {
+    font-family: "SF Mono", "Courier New", monospace;
+    font-size: 0.82em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .msg {
+    min-width: 0;
+  }
+
+  .msg a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--faint);
+  }
+
+  .msg a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .log li.dim .msg {
+    color: var(--muted);
+  }
+
+  /* narrow screens: stack hash+date above message so nothing truncates */
+  @media (max-width: 30em) {
+    .log li {
+      grid-template-columns: 1fr;
+      gap: 0.2em 0;
+    }
+    .hash::after {
+      content: "  ";
+    }
+  }
+
+  footer {
+    margin-top: 2.2em;
+    padding-top: 1em;
+    border-top: 1px solid var(--line);
+    font-size: 0.92em;
+    color: var(--muted);
+  }
+
+  footer a {
+    color: var(--fg);
+  }
+
+  footer p {
+    margin: 0.4em 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>pablof7z</h1>
+<p class="head-line"><span class="tag">HEAD</span> — the substrate matters: identity, money, and data should belong to whoever's using them, not whoever runs the server.</p>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<ul class="log">
+  <li>
+    <span class="hash">9f3a1c2</span>
+    <span class="when">2026</span>
+    <span class="msg"><a href="/stuff/">HEAD: all-in on TENEX + NMP</a></span>
+  </li>
+  <li>
+    <span class="hash">4b7e0d1</span>
+    <span class="when">2026</span>
+    <span class="msg"><a href="/stuff/">NMP: one Rust core, iOS + Android + web, no rewrites</a></span>
+  </li>
+  <li>
+    <span class="hash">1a2f88e</span>
+    <span class="when">2025</span>
+    <span class="msg"><a href="/stuff/">TENEX: agents get their own keys, money, reputation</a></span>
+  </li>
+  <li class="dim">
+    <span class="hash">c6d4a90</span>
+    <span class="when">2023&ndash;25</span>
+    <span class="msg">shipped a couple dozen apps, relays, and NIPs on top of NDK</span>
+  </li>
+  <li>
+    <span class="hash">e21b3f4</span>
+    <span class="when">2023</span>
+    <span class="msg">wrote NDK; much of the nostr ecosystem now builds on it</span>
+  </li>
+  <li>
+    <span class="hash">08cf116</span>
+    <span class="when">2023-01</span>
+    <span class="msg">fell down the nostr rabbit hole; never climbed back out</span>
+  </li>
+  <li class="dim">
+    <span class="hash">5a90cde</span>
+    <span class="when">~2017&ndash;22</span>
+    <span class="msg">Bitcoin &amp; Lightning tooling, the pre-nostr years</span>
+  </li>
+  <li class="dim">
+    <span class="hash">0000000</span>
+    <span class="when">(one exchange)</span>
+    <span class="msg">rugged out of 2 BTC; counterparty risk, learned the hard way</span>
+  </li>
+</ul>
+
+<footer>
+  <p><a href="/nownownow/">full changelog &rarr; /nownownow/</a></p>
+  <p>
+    find me on nostr: <a href="nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">_@f7z.io</a>
+    &middot;
+    github: <a href="https://github.com/pablof7z">pablof7z</a>
+  </p>
+</footer>
+
+</body>
+</html>

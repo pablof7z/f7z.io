@@ -1,0 +1,154 @@
+<!--
+  PROPOSAL 10: Personal note. The anti-résumé — a short, warm note from a
+  human (3-4 sentences, signed), then three quiet links. No bio, no list of
+  projects, no history. Typography and whitespace do the whole job.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pablof7z</title>
+<style>
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --muted: #444;
+    --line: #000;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111;
+      --fg: #eee;
+      --muted: #aaa;
+      --line: #eee;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 3.5em 1.2em 2em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  main {
+    flex: 1;
+    max-width: 34em;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 2vh;
+  }
+
+  .note {
+    font-size: 1.4em;
+    line-height: 1.6;
+    max-width: 24ch;
+    margin: 0 0 1.1em;
+  }
+
+  @media (min-width: 30em) {
+    .note {
+      max-width: 30ch;
+    }
+  }
+
+  .sig {
+    font-family: "Snell Roundhand", "Brush Script MT", "Segoe Script", cursive;
+    font-size: 2em;
+    font-weight: normal;
+    color: var(--muted);
+    margin: 0.6em 0 2.2em;
+  }
+
+  .links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .links li {
+    margin-bottom: 0.7em;
+  }
+
+  .links a {
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1px;
+  }
+
+  .links a:visited {
+    color: var(--fg);
+  }
+
+  .links a:hover {
+    color: var(--muted);
+    border-bottom-color: var(--muted);
+  }
+
+  footer {
+    max-width: 34em;
+    margin: 3em auto 0;
+    width: 100%;
+    padding-top: 1em;
+    border-top: 1px solid var(--line);
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+
+  footer nav a {
+    color: var(--muted);
+    margin-right: 1em;
+  }
+
+  footer .site {
+    float: right;
+  }
+
+  footer::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
+
+<main>
+  <p class="note">
+    Hi, I&rsquo;m Pablo. I build things so your identity, your money, and
+    your data belong to you &mdash; not whoever happens to be running the
+    server that day. I wrote NDK, which quietly powers a good chunk of
+    nostr; lately it&rsquo;s been TENEX and NMP. Rather than tell you more,
+    I&rsquo;ll just point you at the work.
+  </p>
+  <p class="sig">&mdash; Pablo</p>
+
+  <ul class="links">
+    <li><a href="/stuff/">the work &rarr;</a></li>
+    <li><a href="/nownownow/">what I&rsquo;m doing now &rarr;</a></li>
+    <li><a href="nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">say hi &rarr;</a></li>
+  </ul>
+</main>
+
+<footer>
+  <nav>
+    <a href="/">home</a>
+    <a href="/stuff/">stuff</a>
+    <a href="/nownownow/">now</a>
+    <a href="/podcast/">podcast</a>
+    <a href="/feed/">feed</a>
+  </nav>
+  <span class="site">f7z.io</span>
+</footer>

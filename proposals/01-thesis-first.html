@@ -1,0 +1,209 @@
+<!--
+CONCEPT: "Thesis-first manifesto" — lead with the argument, not the person.
+The worldview ("The substrate matters.") is the first thing read; NDK/TENEX/NMP
+back it up as evidence; Pablo the person shows up last, as a byline, not a bio.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pablof7z</title>
+<style>
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --muted: #444;
+    --line: #000;
+    --line-soft: #ddd;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111;
+      --fg: #eee;
+      --muted: #aaa;
+      --line: #eee;
+      --line-soft: #333;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 38em;
+    margin: 2em auto;
+    padding: 0 1em;
+  }
+
+  a { color: var(--fg); }
+  a:visited { color: var(--muted); }
+
+  nav {
+    margin-bottom: 3em;
+    font-size: 0.95em;
+  }
+
+  nav a {
+    margin-right: 1em;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  nav a:hover { border-bottom-color: var(--fg); }
+
+  .thesis {
+    font-size: 2em;
+    line-height: 1.25;
+    font-weight: normal;
+    margin: 0 0 0.6em;
+  }
+
+  .lede {
+    font-size: 1.05em;
+    color: var(--muted);
+    margin: 0 0 2.5em;
+    max-width: 34em;
+  }
+
+  .lede strong {
+    color: var(--fg);
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .argument-label {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin: 0 0 1em;
+  }
+
+  ul.evidence {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3em;
+  }
+
+  ul.evidence li {
+    padding: 1em 0;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  ul.evidence li:last-child {
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .proj-name {
+    font-weight: bold;
+    margin-right: 0.4em;
+  }
+
+  .proj-desc {
+    color: var(--muted);
+  }
+
+  .byline {
+    font-size: 0.95em;
+    margin-bottom: 0.5em;
+  }
+
+  .byline .name {
+    font-weight: bold;
+    color: var(--fg);
+  }
+
+  details {
+    margin: 2em 0;
+    font-size: 0.95em;
+    color: var(--muted);
+  }
+
+  summary {
+    cursor: pointer;
+    color: var(--fg);
+  }
+
+  summary::marker {
+    color: var(--muted);
+  }
+
+  details p {
+    margin-top: 1em;
+  }
+
+  footer {
+    margin-top: 3em;
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<h1 class="thesis">The substrate matters.</h1>
+
+<p class="lede">
+  Identity, money, and data should belong to <strong>whoever's using them</strong>
+  — not whoever's renting them the server. Almost nothing built today works
+  that way. I've spent the last few years making the alternative real.
+</p>
+
+<p class="argument-label">I build the argument:</p>
+
+<ul class="evidence">
+  <li>
+    <span class="proj-name">NDK</span>
+    <span class="proj-desc">— the dev kit behind a big chunk of the nostr ecosystem. Your identity, portable by default.</span>
+  </li>
+  <li>
+    <span class="proj-name">TENEX</span>
+    <span class="proj-desc">— agents orchestrating agents, over nostr. Each one with its own keys, its own money, its own reputation.</span>
+  </li>
+  <li>
+    <span class="proj-name">NMP</span>
+    <span class="proj-desc">— one Rust core, shipped native to iOS, Android, and web. No lock-in in the tooling either.</span>
+  </li>
+</ul>
+
+<hr style="border:none;border-top:1px solid var(--line-soft);margin:2em 0;">
+
+<p class="byline">
+  <span class="name">pablof7z</span> &mdash;
+  <a href="nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">_@f7z.io</a>
+  &middot;
+  <a href="https://github.com/pablof7z">github</a>
+</p>
+
+<details>
+  <summary>the long version</summary>
+  <p>
+    Building freedom tech full-time since January 2023, when I fell down the
+    nostr rabbit hole and never climbed back out &mdash; before that it was
+    years of Bitcoin and Lightning tooling (and one exchange rugging me out
+    of 2 BTC, which taught me more about counterparty risk than any
+    whitepaper). Everything above is some version of the same argument,
+    built out. See <a href="/nownownow/">what I'm doing right now</a>.
+  </p>
+</details>
+
+<footer>
+  f7z.io
+</footer>
+
+</body>
+</html>

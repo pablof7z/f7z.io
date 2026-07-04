@@ -1,49 +1,107 @@
 <meta charset="utf-8">
-<title>pablof7z</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>f7z.io — pablof7z</title>
+<meta name="description" content="Pablo Fernandez (pablof7z) — freedom tech, nostr, NDK, TENEX, NMP. Identity, money, and data belong to you.">
+<meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="/style.css">
 
-<h1>pablof7z</h1>
-<p class="tagline">Magical Other Stuff Maximalist.</p>
+<header class="masthead">
+  <a class="who" href="/">f7z.io</a>
+  <nav class="mast-nav">
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+</header>
 
-<nav>
-  <a href="/">home</a>
-  <a href="/stuff/">stuff</a>
-  <a href="/nownownow/">now</a>
-  <a href="/podcast/">podcast</a>
-  <a href="/feed/">feed</a>
-</nav>
+<main class="poster">
+  <section class="fragment">
+    <div class="frag-index">01 / 04</div>
+    <h1 class="frag-word">IDENTITY.</h1>
+    <p class="frag-note">who you are shouldn't live on someone else's server.</p>
+  </section>
 
-<p>
-  I've been building freedom tech full-time since January 2023, when I fell
-  down the nostr rabbit hole and never climbed back out &mdash; before that
-  it was years of Bitcoin and Lightning tooling (and one exchange rugging me
-  out of 2 BTC, which taught me more about counterparty risk than any
-  whitepaper). I wrote NDK, the development kit behind a big chunk of the
-  nostr ecosystem, and a couple dozen apps, relays, and NIPs on top of it.
-  These days I'm obsessed with two things: TENEX, orchestrating AI agents
-  over nostr &mdash; agents as first-class citizens with their own keys,
-  their own money, their own reputation &mdash; and NMP, a Rust-core
-  architecture for shipping the same app to iOS, Android, and web without
-  writing everything three times. The through-line is simple: the substrate
-  matters. Identity, money, and data should belong to the person (or the
-  agent) using them, not to whoever runs the server. Everything I build is
-  some version of that argument.
-</p>
+  <section class="fragment">
+    <div class="frag-index">02 / 04</div>
+    <h1 class="frag-word">MONEY.</h1>
+    <p class="frag-note">value that moves without asking permission.</p>
+  </section>
 
-<hr>
+  <section class="fragment">
+    <div class="frag-index">03 / 04</div>
+    <h1 class="frag-word">DATA.</h1>
+    <p class="frag-note">signed by you, portable everywhere, owned by no platform.</p>
+  </section>
 
-<p><strong>right now:</strong> all-in on TENEX (agents orchestrating agents
-over nostr) and NMP (one Rust core, every platform), and freshly done with
-Claude and Codex both &mdash; great models, harnesses that cuck them.
-&mdash; <a href="/nownownow/">full changelog</a></p>
+  <section class="fragment accent">
+    <div class="frag-index">04 / 04</div>
+    <h1 class="frag-word">YOURS.</h1>
+    <p class="frag-note">not theirs. that's the whole thesis.</p>
+  </section>
+</main>
 
-<hr>
+<section class="quiet">
+  <p>
+    Pablo Fernandez (pablof7z). Building freedom tech full-time since January 2023,
+    after years of Bitcoin and Lightning tooling &mdash; and an exchange rug-pulling 2 BTC
+    out from under me, which is its own lesson in counterparty risk.
+  </p>
 
-<p>
-  find me on nostr: <a href="nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">_@f7z.io</a><br>
-  or github: <a href="https://github.com/pablof7z">pablof7z</a>
-</p>
+  <ul class="stack">
+    <li>
+      <span class="tag">NDK</span>
+      <span class="desc">The dev kit behind a big chunk of the nostr ecosystem &mdash; plus a couple dozen apps, relays, and NIPs. <a href="/stuff/">See the work &rarr;</a></span>
+    </li>
+    <li>
+      <span class="tag">TENEX</span>
+      <span class="desc">Orchestrating AI agents over nostr &mdash; agents as first-class citizens with their own keys, money, and reputation. <a href="/stuff/">See the work &rarr;</a></span>
+    </li>
+    <li>
+      <span class="tag">NMP</span>
+      <span class="desc">One Rust core, shipping to iOS, Android, and web. <a href="/stuff/">See the work &rarr;</a></span>
+    </li>
+  </ul>
+
+  <div class="where">
+    <a href="nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">nostr: _@f7z.io</a>
+    <a href="https://github.com/pablof7z">github.com/pablof7z</a>
+  </div>
+</section>
 
 <footer>
-  f7z.io
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+  <span class="colophon">f7z.io</span>
 </footer>
+
+<script>
+  (function(){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) return;
+
+    document.documentElement.classList.add('js-animate');
+
+    var fragments = document.querySelectorAll('.fragment');
+    if (!('IntersectionObserver' in window)) {
+      fragments.forEach(function(f){ f.classList.add('is-visible'); });
+      return;
+    }
+
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    fragments.forEach(function(f){ io.observe(f); });
+  })();
+</script>

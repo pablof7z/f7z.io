@@ -1,0 +1,194 @@
+<!--
+  PROPOSAL 3: Progressive disclosure. Glance (name + one thesis line), then a
+  three-line scan (wrote / building / and), then a native <details> for the
+  full story — each layer stands alone, no JS required.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pablof7z</title>
+<style>
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --muted: #444;
+    --line: #000;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111;
+      --fg: #eee;
+      --muted: #aaa;
+      --line: #eee;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 38em;
+    margin: 2em auto;
+    padding: 0 1em;
+  }
+
+  h1 {
+    font-weight: normal;
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+  }
+
+  .thesis {
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+
+  nav {
+    margin-bottom: 2em;
+  }
+
+  nav a {
+    margin-right: 1em;
+  }
+
+  a {
+    color: var(--fg);
+  }
+
+  a:visited {
+    color: var(--muted);
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 1.5em 0;
+  }
+
+  /* layer 2: scan lines */
+  .scan {
+    list-style: none;
+    margin: 0 0 1.5em;
+    padding: 0;
+  }
+
+  .scan li {
+    margin-bottom: 0.6em;
+  }
+
+  .scan .label {
+    color: var(--muted);
+    font-style: italic;
+    margin-right: 0.4em;
+  }
+
+  /* layer 3: the longer story, native details/summary */
+  details {
+    margin-bottom: 1.5em;
+    border: 1px solid var(--line);
+    padding: 0.9em 1.2em;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "+ ";
+  }
+
+  details[open] summary::before {
+    content: "\2212 "; /* minus sign */
+  }
+
+  details[open] summary {
+    margin-bottom: 0.8em;
+    padding-bottom: 0.6em;
+    border-bottom: 1px solid var(--line);
+  }
+
+  details p {
+    margin: 0 0 0.9em;
+  }
+
+  details p:last-child {
+    margin-bottom: 0;
+  }
+
+  footer {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid var(--line);
+    font-size: 0.9em;
+    color: var(--muted);
+  }
+</style>
+
+<h1>pablof7z</h1>
+<p class="thesis">Identity, money, and data should belong to you &mdash; not whoever runs the server.</p>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<ul class="scan">
+  <li><span class="label">wrote:</span> NDK, the dev kit behind much of nostr</li>
+  <li><span class="label">building:</span> TENEX &mdash; AI agents as first-class citizens on nostr</li>
+  <li><span class="label">and:</span> NMP &mdash; one Rust core, every platform</li>
+</ul>
+
+<details>
+  <summary>the longer story</summary>
+  <p>
+    I've been building freedom tech full-time since January 2023, when nostr
+    swallowed me whole. Before that it was years of Bitcoin and Lightning
+    tooling &mdash; and one exchange that rugged me out of 2 BTC, which taught
+    me more about counterparty risk than any whitepaper.
+  </p>
+  <p>
+    Since then I've written NDK, the development kit behind a big chunk of
+    the nostr ecosystem, plus a couple dozen apps, relays, and NIPs on top of
+    it.
+  </p>
+  <p>
+    These days it's two things: TENEX, orchestrating AI agents over nostr
+    &mdash; agents as first-class citizens with their own keys, their own
+    money, their own reputation &mdash; and NMP, one Rust core shipping the
+    same app to iOS, Android, and web instead of writing it three times.
+  </p>
+  <p>
+    The through-line is simple: the substrate matters. Identity, money, and
+    data should belong to the person &mdash; or the agent &mdash; using them,
+    not to whoever runs the server. Everything I build is some version of
+    that argument.
+  </p>
+</details>
+
+<hr>
+
+<p>
+  find me on nostr: <a href="nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">_@f7z.io</a><br>
+  or github: <a href="https://github.com/pablof7z">pablof7z</a>
+</p>
+
+<footer>
+  f7z.io
+</footer>

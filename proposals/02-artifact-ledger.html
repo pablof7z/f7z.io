@@ -1,0 +1,274 @@
+<!--
+  PROPOSAL 2: Artifact Ledger — the homepage IS the work. No bio paragraph.
+  A one-line thesis, then a dense ledger of shipped things (name / status / what it is). Identity emerges from the list, not from claims about it.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pablof7z</title>
+<style>
+  :root {
+    --bg: #fdfdfc;
+    --fg: #111;
+    --muted: #666;
+    --line: #ddd;
+    --line-strong: #111;
+    --accent: #a15c00;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e0e;
+      --fg: #eee;
+      --muted: #999;
+      --line: #2c2c2c;
+      --line-strong: #eee;
+      --accent: #e0a955;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 2.5em 1.2em 4em;
+  }
+
+  header {
+    margin-bottom: 1.6em;
+  }
+
+  h1 {
+    font-size: 1.05em;
+    font-weight: normal;
+    margin: 0 0 0.4em;
+    letter-spacing: 0.02em;
+  }
+
+  h1 .dim {
+    color: var(--muted);
+  }
+
+  .thesis {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95em;
+  }
+
+  nav {
+    margin: 1.6em 0 2em;
+    padding-bottom: 1.2em;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.9em;
+  }
+
+  nav a {
+    color: var(--fg);
+    text-decoration: none;
+    margin-right: 1.4em;
+    border-bottom: 1px solid transparent;
+  }
+
+  nav a:hover {
+    border-bottom-color: var(--fg);
+  }
+
+  nav a.current {
+    color: var(--accent);
+  }
+
+  /* ledger */
+  .ledger {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .ledger caption {
+    text-align: left;
+    font-size: 0.78em;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.8em;
+  }
+
+  .ledger thead th {
+    text-align: left;
+    font-weight: normal;
+    font-size: 0.75em;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0 0.6em 0.5em 0;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .ledger tbody td {
+    padding: 0.85em 0.6em 0.85em 0;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  .ledger tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .col-name {
+    white-space: nowrap;
+    font-weight: bold;
+    width: 1%;
+  }
+
+  .col-status {
+    white-space: nowrap;
+    width: 1%;
+    color: var(--accent);
+    font-size: 0.9em;
+  }
+
+  .col-desc {
+    color: var(--fg);
+  }
+
+  .col-desc .sub {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85em;
+    margin-top: 0.15em;
+  }
+
+  /* mobile: collapse table into stacked records */
+  @media (max-width: 600px) {
+    .ledger, .ledger tbody, .ledger tr, .ledger td {
+      display: block;
+      width: 100%;
+    }
+
+    .ledger thead {
+      display: none;
+    }
+
+    .ledger tbody tr {
+      padding: 0.9em 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .ledger tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .ledger tbody td {
+      padding: 0.1em 0;
+      border-bottom: none;
+      white-space: normal;
+      width: auto;
+    }
+
+    .col-status {
+      font-size: 0.8em;
+    }
+  }
+
+  footer {
+    margin-top: 2.5em;
+    padding-top: 1.2em;
+    border-top: 1px solid var(--line);
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+
+  footer .rug {
+    display: block;
+    margin-top: 0.6em;
+    font-style: italic;
+  }
+
+  a {
+    color: var(--fg);
+  }
+
+  a.id-link {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a.id-link:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>pablof7z <span class="dim">/ f7z.io</span></h1>
+  <p class="thesis">Identity, money, and data should belong to whoever's using them &mdash; not whoever runs the server.</p>
+</header>
+
+<nav>
+  <a href="/" class="current">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<table class="ledger">
+  <caption>shipped</caption>
+  <thead>
+    <tr>
+      <th class="col-name">name</th>
+      <th class="col-status">status</th>
+      <th class="col-desc">what it is</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="col-name">TENEX</td>
+      <td class="col-status">building &mdash; now</td>
+      <td class="col-desc">Orchestrating AI agents over nostr. Agents as first-class citizens: their own keys, their own money, their own reputation.</td>
+    </tr>
+    <tr>
+      <td class="col-name">NMP</td>
+      <td class="col-status">building &mdash; now</td>
+      <td class="col-desc">One Rust core, every surface. iOS, Android, and web from a single codebase, written once.</td>
+    </tr>
+    <tr>
+      <td class="col-name">NDK</td>
+      <td class="col-status">2023 &ndash; ongoing</td>
+      <td class="col-desc">The nostr development kit. A big chunk of the ecosystem is built on top of it.</td>
+    </tr>
+    <tr>
+      <td class="col-name">apps, relays &amp; NIPs</td>
+      <td class="col-status">2023 &ndash; ongoing</td>
+      <td class="col-desc">A couple dozen of them. Most built on NDK.</td>
+    </tr>
+    <tr>
+      <td class="col-name">Bitcoin &amp; Lightning tooling</td>
+      <td class="col-status">pre-2023</td>
+      <td class="col-desc">Years of it, before nostr existed to fall into.</td>
+    </tr>
+  </tbody>
+</table>
+
+<footer>
+  <a class="id-link" href="nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">_@f7z.io</a>
+  &middot;
+  <a class="id-link" href="https://github.com/pablof7z">github.com/pablof7z</a>
+  <span class="rug">Footnote: an exchange once rugged me for 2 BTC &mdash; free lesson in counterparty risk.</span>
+</footer>
+
+</body>
+</html>

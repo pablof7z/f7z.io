@@ -1,0 +1,163 @@
+<!--
+CONCEPT: "Q&A" — the page answers the questions a visitor is silently asking
+(who/what/why/why trust you/where) instead of monologuing at them in a bio paragraph.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pablof7z</title>
+<style>
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --muted: #444;
+    --line: #000;
+    --line-soft: #ddd;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111;
+      --fg: #eee;
+      --muted: #aaa;
+      --line: #eee;
+      --line-soft: #333;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 36em;
+    margin: 2em auto;
+    padding: 0 1em;
+  }
+
+  a { color: var(--fg); }
+  a:visited { color: var(--muted); }
+
+  h1 {
+    font-size: 1.4em;
+    font-weight: normal;
+    margin: 0 0 0.2em;
+  }
+
+  .tagline {
+    font-style: italic;
+    color: var(--muted);
+    margin: 0 0 1.5em;
+  }
+
+  nav {
+    margin-bottom: 2.5em;
+    font-size: 0.95em;
+  }
+
+  nav a {
+    margin-right: 1em;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  nav a:hover { border-bottom-color: var(--fg); }
+
+  dl {
+    margin: 0 0 2.5em;
+  }
+
+  .qa {
+    padding: 1.1em 0;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .qa:last-of-type {
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  dt {
+    color: var(--muted);
+    font-style: italic;
+    margin: 0 0 0.35em;
+  }
+
+  dt::before {
+    content: "\201C";
+  }
+
+  dt::after {
+    content: "\201D";
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  dd .proj-name {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  footer {
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<h1>pablof7z</h1>
+<p class="tagline">Magical Other Stuff Maximalist.</p>
+
+<dl>
+  <div class="qa">
+    <dt>who are you?</dt>
+    <dd>Pablo. Building freedom tech full-time since January 2023, when nostr swallowed me whole.</dd>
+  </div>
+
+  <div class="qa">
+    <dt>what do you build?</dt>
+    <dd>
+      I wrote <span class="proj-name">NDK</span>, the dev kit behind a big chunk of the nostr ecosystem, plus a couple dozen apps, relays, and NIPs on top of it. Now: <span class="proj-name">TENEX</span>, agents with their own keys, money, and reputation, orchestrating each other over nostr — and <span class="proj-name">NMP</span>, one Rust core shipping native to iOS, Android, and web.
+    </dd>
+  </div>
+
+  <div class="qa">
+    <dt>why?</dt>
+    <dd>The substrate matters. Identity, money, and data should belong to whoever's using them, not whoever's renting the server.</dd>
+  </div>
+
+  <div class="qa">
+    <dt>why should I trust you on this?</dt>
+    <dd>An exchange rugged me out of 2 BTC once. I know what it costs to hand your keys to someone else.</dd>
+  </div>
+
+  <div class="qa">
+    <dt>where do I find you?</dt>
+    <dd>
+      nostr: <a href="nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">_@f7z.io</a>
+      &middot; github: <a href="https://github.com/pablof7z">pablof7z</a>
+    </dd>
+  </div>
+</dl>
+
+<footer>
+  f7z.io
+</footer>
+
+</body>
+</html>

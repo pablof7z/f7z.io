@@ -1,0 +1,297 @@
+<!--
+  Proposal 09 — Typographic Poster. Thesis delivered as four huge poster fragments
+  (IDENTITY / MONEY / DATA / YOURS) that resolve into a quiet, monospace-annotated bio + links.
+-->
+<title>f7z.io — Pablo Fernandez</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Pablo Fernandez (pablof7z) — freedom tech, nostr, NDK, TENEX, NMP.">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root{
+    --bg:#f7f5f0;
+    --ink:#131211;
+    --muted:#131211;
+    --muted-op:0.52;
+    --accent:#c9401f;
+    --rule:rgba(19,18,17,0.14);
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,"Liberation Mono",monospace;
+    --display:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"Segoe UI",system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b0b0a;
+      --ink:#f3f1ea;
+      --muted:#f3f1ea;
+      --muted-op:0.56;
+      --accent:#ff6a3d;
+      --rule:rgba(243,241,234,0.16);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b0b0a; --ink:#f3f1ea; --muted:#f3f1ea; --muted-op:0.56;
+    --accent:#ff6a3d; --rule:rgba(243,241,234,0.16);
+  }
+  :root[data-theme="light"]{
+    --bg:#f7f5f0; --ink:#131211; --muted:#131211; --muted-op:0.52;
+    --accent:#c9401f; --rule:rgba(19,18,17,0.14);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--display);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;}
+
+  /* ---------- persistent thin header ---------- */
+  .masthead{
+    position:sticky;
+    top:0;
+    z-index:10;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.1rem clamp(1.25rem,4vw,2.5rem);
+    font-family:var(--mono);
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+  .masthead a{text-decoration:none;}
+  .masthead .who{opacity:0.85;}
+  .masthead .id{opacity:0.55;}
+
+  /* ---------- poster ---------- */
+  .poster{
+    padding:0 clamp(1.25rem,4vw,2.5rem);
+  }
+  .fragment{
+    min-height:78vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-bottom:1px solid var(--rule);
+    padding:3rem 0;
+    opacity:1;
+    transform:none;
+  }
+  .fragment:last-of-type{border-bottom:none;}
+
+  .frag-index{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    letter-spacing:0.15em;
+    opacity:0.5;
+    margin-bottom:1.1rem;
+  }
+
+  .frag-word{
+    font-weight:900;
+    line-height:0.88;
+    letter-spacing:-0.035em;
+    font-size:clamp(2.6rem, 13vw, 10.5rem);
+    margin:0;
+    white-space:nowrap;
+  }
+  .fragment.accent .frag-word{color:var(--accent);}
+
+  .frag-note{
+    font-family:var(--mono);
+    font-size:clamp(0.72rem,1.4vw,0.95rem);
+    letter-spacing:0.04em;
+    max-width:34ch;
+    margin-top:1.4rem;
+    padding-top:0.9rem;
+    border-top:1px solid var(--rule);
+    opacity:var(--muted-op);
+    line-height:1.55;
+  }
+
+  /* scroll-reveal, JS-driven, opt-in only when motion is allowed */
+  .js-animate .fragment{
+    opacity:0;
+    transform:translateY(2.5rem);
+  }
+  .js-animate .fragment.is-visible{
+    opacity:1;
+    transform:translateY(0);
+    transition:opacity 0.9s cubic-bezier(.16,.8,.24,1), transform 0.9s cubic-bezier(.16,.8,.24,1);
+  }
+
+  /* ---------- quiet section ---------- */
+  .quiet{
+    max-width:640px;
+    margin:0 auto;
+    padding:clamp(4rem,10vw,7rem) clamp(1.25rem,4vw,2.5rem) clamp(3rem,8vw,5rem);
+  }
+  .quiet p{
+    font-size:1.05rem;
+    line-height:1.7;
+    margin:0 0 2.2rem;
+  }
+  .stack{
+    display:flex;
+    flex-direction:column;
+    gap:1.1rem;
+    margin:0 0 2.4rem;
+    padding:0;
+    list-style:none;
+  }
+  .stack li{
+    display:flex;
+    gap:1rem;
+    align-items:baseline;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:1.1rem;
+  }
+  .stack .tag{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    letter-spacing:0.1em;
+    opacity:0.55;
+    flex:0 0 5.5ch;
+  }
+  .stack .desc a{
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+  }
+  .stack .desc a:hover{border-bottom-color:var(--accent);}
+  .stack .desc{font-size:0.98rem;line-height:1.6;}
+
+  .where{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem 1.4rem;
+    font-family:var(--mono);
+    font-size:0.85rem;
+    letter-spacing:0.02em;
+  }
+  .where a{text-decoration:none;border-bottom:1px solid var(--rule);}
+  .where a:hover{border-bottom-color:var(--accent);}
+
+  /* ---------- footer nav ---------- */
+  footer{
+    border-top:1px solid var(--rule);
+    padding:1.6rem clamp(1.25rem,4vw,2.5rem) 2.4rem;
+  }
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.4rem 1.5rem;
+    font-family:var(--mono);
+    font-size:0.75rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+  }
+  .nav a{text-decoration:none;opacity:0.65;}
+  .nav a:hover{opacity:1;color:var(--accent);}
+
+  @media (max-width:520px){
+    .stack li{flex-direction:column;gap:0.35rem;}
+    .stack .tag{flex:none;}
+  }
+</style>
+
+<header class="masthead">
+  <a class="who" href="/">f7z.io</a>
+  <a class="id" href="https://njump.me/npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">_@f7z.io</a>
+</header>
+
+<main class="poster">
+  <section class="fragment">
+    <div class="frag-index">01 / 04</div>
+    <h1 class="frag-word">IDENTITY.</h1>
+    <p class="frag-note">who you are shouldn't live on someone else's server.</p>
+  </section>
+
+  <section class="fragment">
+    <div class="frag-index">02 / 04</div>
+    <h1 class="frag-word">MONEY.</h1>
+    <p class="frag-note">value that moves without asking permission.</p>
+  </section>
+
+  <section class="fragment">
+    <div class="frag-index">03 / 04</div>
+    <h1 class="frag-word">DATA.</h1>
+    <p class="frag-note">signed by you, portable everywhere, owned by no platform.</p>
+  </section>
+
+  <section class="fragment accent">
+    <div class="frag-index">04 / 04</div>
+    <h1 class="frag-word">YOURS.</h1>
+    <p class="frag-note">not theirs. that's the whole thesis.</p>
+  </section>
+</main>
+
+<section class="quiet">
+  <p>
+    Pablo Fernandez (pablof7z). Building freedom tech full-time since January 2023,
+    after years of Bitcoin and Lightning tooling — and an exchange rug-pulling 2 BTC
+    out from under me, which is its own lesson in counterparty risk.
+  </p>
+
+  <ul class="stack">
+    <li>
+      <span class="tag">NDK</span>
+      <span class="desc">The dev kit behind a big chunk of the nostr ecosystem — plus a couple dozen apps, relays, and NIPs. <a href="/stuff/">See the work →</a></span>
+    </li>
+    <li>
+      <span class="tag">TENEX</span>
+      <span class="desc">Orchestrating AI agents over nostr — agents as first-class citizens with their own keys, money, and reputation. <a href="/stuff/">See the work →</a></span>
+    </li>
+    <li>
+      <span class="tag">NMP</span>
+      <span class="desc">One Rust core, shipping to iOS, Android, and web. <a href="/stuff/">See the work →</a></span>
+    </li>
+  </ul>
+
+  <div class="where">
+    <a href="https://njump.me/npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">nostr: _@f7z.io</a>
+    <a href="https://github.com/pablof7z">github.com/pablof7z</a>
+  </div>
+</section>
+
+<footer>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+</footer>
+
+<script>
+  (function(){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) return;
+
+    document.documentElement.classList.add('js-animate');
+
+    var fragments = document.querySelectorAll('.fragment');
+    if (!('IntersectionObserver' in window)) {
+      fragments.forEach(function(f){ f.classList.add('is-visible'); });
+      return;
+    }
+
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    fragments.forEach(function(f){ io.observe(f); });
+  })();
+</script>

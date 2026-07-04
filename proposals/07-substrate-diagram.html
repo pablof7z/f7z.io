@@ -1,0 +1,316 @@
+<!--
+CONCEPT: "Substrate diagram" — draw the argument instead of writing it.
+A technical, RFC-style schematic: a substrate layer (identity/money/data,
+"yours") with NDK, TENEX, NMP and the wider ecosystem built on top of it,
+set against a small crossed-out sketch of the rented-server alternative.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pablof7z</title>
+<style>
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --muted: #444;
+    --line: #000;
+    --line-soft: #ddd;
+    --hover: rgba(0,0,0,0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111;
+      --fg: #eee;
+      --muted: #aaa;
+      --line: #eee;
+      --line-soft: #333;
+      --hover: rgba(255,255,255,0.08);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 44em;
+    margin: 2em auto;
+    padding: 0 1em;
+  }
+
+  a { color: var(--fg); }
+  a:visited { color: var(--muted); }
+
+  nav {
+    margin-bottom: 2.5em;
+    font-size: 0.95em;
+  }
+
+  nav a {
+    margin-right: 1em;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  nav a:hover { border-bottom-color: var(--fg); }
+
+  header {
+    margin-bottom: 2em;
+  }
+
+  header h1 {
+    font-size: 1.4em;
+    font-weight: normal;
+    margin: 0 0 0.2em;
+  }
+
+  header p {
+    margin: 0;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  figure {
+    margin: 0 0 1.8em;
+    padding: 0;
+  }
+
+  .diagram {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+    color: var(--fg);
+  }
+
+  .diagram-mobile { display: none; }
+
+  @media (max-width: 640px) {
+    .diagram-desktop { display: none; }
+    .diagram-mobile { display: block; }
+  }
+
+  .diagram text {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    fill: currentColor;
+  }
+
+  .diagram .frame,
+  .diagram .box,
+  .diagram .conn {
+    stroke: currentColor;
+    fill: none;
+  }
+
+  .diagram .box-fill {
+    fill: currentColor;
+    fill-opacity: 0.03;
+  }
+
+  .diagram a.proj .box-fill {
+    transition: fill-opacity 0.15s ease;
+  }
+
+  .diagram a.proj:hover .box-fill {
+    fill-opacity: 0.1;
+  }
+
+  .diagram a.proj:hover .box {
+    stroke-width: 1.6;
+  }
+
+  .diagram a.proj {
+    cursor: pointer;
+  }
+
+  .diagram .title { font-weight: bold; }
+
+  .diagram .muted { fill: var(--muted); }
+
+  .diagram .alt-box {
+    stroke: var(--muted);
+    fill: none;
+    stroke-dasharray: 3 3;
+  }
+
+  .diagram .alt-strike {
+    stroke: var(--muted);
+  }
+
+  .diagram .alt-text {
+    fill: var(--muted);
+    text-decoration: line-through;
+  }
+
+  .caption {
+    max-width: 34em;
+    margin: 0 0 2em;
+  }
+
+  footer {
+    margin-top: 2.5em;
+    font-size: 0.95em;
+  }
+
+  footer .name {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<header>
+  <h1>pablof7z</h1>
+  <p>the substrate matters.</p>
+</header>
+
+<figure>
+
+<!-- desktop / wide layout -->
+<svg class="diagram diagram-desktop" viewBox="0 0 880 460" role="img"
+     aria-label="Diagram: identity, money and data form a substrate that belongs to the user. NDK, TENEX, NMP and the wider ecosystem are built on top of it. To the side, crossed out, the alternative: your identity, their database.">
+  <defs>
+    <marker id="arrow-d" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path>
+    </marker>
+  </defs>
+
+  <!-- top layer: things built on the substrate -->
+  <a class="proj" href="/stuff/" xlink:href="/stuff/">
+    <rect class="box box-fill" x="20" y="24" width="180" height="100" rx="2"></rect>
+    <text class="title" x="110" y="52" font-size="15" text-anchor="middle">NDK</text>
+    <text x="110" y="74" font-size="11" text-anchor="middle">the toolkit.</text>
+    <text x="110" y="90" font-size="11" text-anchor="middle">half of nostr</text>
+    <text x="110" y="106" font-size="11" text-anchor="middle">runs on it.</text>
+  </a>
+
+  <a class="proj" href="/stuff/" xlink:href="/stuff/">
+    <rect class="box box-fill" x="230" y="24" width="230" height="100" rx="2"></rect>
+    <text class="title" x="345" y="52" font-size="15" text-anchor="middle">TENEX</text>
+    <text x="345" y="74" font-size="11" text-anchor="middle">agents on the substrate —</text>
+    <text x="345" y="90" font-size="11" text-anchor="middle">their own keys,</text>
+    <text x="345" y="106" font-size="11" text-anchor="middle">money, reputation.</text>
+  </a>
+
+  <a class="proj" href="/stuff/" xlink:href="/stuff/">
+    <rect class="box box-fill" x="490" y="24" width="180" height="100" rx="2"></rect>
+    <text class="title" x="580" y="52" font-size="15" text-anchor="middle">NMP</text>
+    <text x="580" y="74" font-size="11" text-anchor="middle">one core.</text>
+    <text x="580" y="90" font-size="11" text-anchor="middle">iOS · Android · web,</text>
+    <text x="580" y="106" font-size="11" text-anchor="middle">same substrate.</text>
+  </a>
+
+  <a class="proj" href="/stuff/" xlink:href="/stuff/">
+    <rect class="box box-fill" x="700" y="24" width="160" height="100" rx="2"></rect>
+    <text class="title" x="780" y="52" font-size="13" text-anchor="middle">ECOSYSTEM</text>
+    <text x="780" y="74" font-size="11" text-anchor="middle">apps, relays,</text>
+    <text x="780" y="90" font-size="11" text-anchor="middle">and NIPs —</text>
+    <text x="780" y="106" font-size="11" text-anchor="middle">written along the way.</text>
+  </a>
+
+  <!-- connectors down into the substrate -->
+  <line class="conn" x1="110" y1="124" x2="110" y2="216" stroke-dasharray="4 3" marker-end="url(#arrow-d)"></line>
+  <line class="conn" x1="345" y1="124" x2="345" y2="216" stroke-dasharray="4 3" marker-end="url(#arrow-d)"></line>
+  <line class="conn" x1="580" y1="124" x2="580" y2="216" stroke-dasharray="4 3" marker-end="url(#arrow-d)"></line>
+  <line class="conn" x1="780" y1="124" x2="780" y2="216" stroke-dasharray="4 3" marker-end="url(#arrow-d)"></line>
+
+  <!-- the substrate -->
+  <rect class="box box-fill" x="20" y="220" width="840" height="140" rx="2"></rect>
+  <text class="title" x="440" y="266" font-size="19" letter-spacing="0.12em" text-anchor="middle">THE SUBSTRATE</text>
+  <text x="440" y="298" font-size="13" text-anchor="middle">identity &middot; money &middot; data</text>
+  <text class="muted" x="440" y="326" font-size="12" font-style="italic" text-anchor="middle">yours &mdash; keys, not accounts.</text>
+
+  <!-- the alternative, crossed out -->
+  <text class="muted" x="20" y="392" font-size="11">not this:</text>
+  <rect class="alt-box" x="20" y="398" width="320" height="56"></rect>
+  <line class="alt-strike" x1="20" y1="398" x2="340" y2="454"></line>
+  <text class="alt-text" x="34" y="420" font-size="11">their server:</text>
+  <text class="alt-text" x="34" y="436" font-size="11">your identity, their database.</text>
+</svg>
+
+<!-- mobile / narrow layout -->
+<svg class="diagram diagram-mobile" viewBox="0 0 320 580" role="img" aria-hidden="true">
+  <defs>
+    <marker id="arrow-m" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path>
+    </marker>
+  </defs>
+
+  <a class="proj" href="/stuff/" xlink:href="/stuff/">
+    <rect class="box box-fill" x="20" y="20" width="280" height="64" rx="2"></rect>
+    <text class="title" x="34" y="42" font-size="14">NDK</text>
+    <text x="34" y="60" font-size="11">the toolkit — half of nostr runs on it.</text>
+  </a>
+
+  <a class="proj" href="/stuff/" xlink:href="/stuff/">
+    <rect class="box box-fill" x="20" y="94" width="280" height="64" rx="2"></rect>
+    <text class="title" x="34" y="116" font-size="14">TENEX</text>
+    <text x="34" y="134" font-size="11">agents on the substrate —</text>
+    <text x="34" y="148" font-size="11">their own keys, money, reputation.</text>
+  </a>
+
+  <a class="proj" href="/stuff/" xlink:href="/stuff/">
+    <rect class="box box-fill" x="20" y="168" width="280" height="64" rx="2"></rect>
+    <text class="title" x="34" y="190" font-size="14">NMP</text>
+    <text x="34" y="208" font-size="11">one core. iOS &middot; Android &middot; web,</text>
+    <text x="34" y="222" font-size="11">same substrate.</text>
+  </a>
+
+  <a class="proj" href="/stuff/" xlink:href="/stuff/">
+    <rect class="box box-fill" x="20" y="242" width="280" height="64" rx="2"></rect>
+    <text class="title" x="34" y="264" font-size="13">ECOSYSTEM</text>
+    <text x="34" y="282" font-size="11">apps, relays, and NIPs —</text>
+    <text x="34" y="296" font-size="11">written along the way.</text>
+  </a>
+
+  <!-- shared bus feeding down into the substrate -->
+  <line class="conn" x1="300" y1="52" x2="300" y2="338" stroke-dasharray="4 3" marker-end="url(#arrow-m)"></line>
+  <circle cx="300" cy="52" r="2.5" fill="currentColor"></circle>
+  <circle cx="300" cy="126" r="2.5" fill="currentColor"></circle>
+  <circle cx="300" cy="200" r="2.5" fill="currentColor"></circle>
+  <circle cx="300" cy="274" r="2.5" fill="currentColor"></circle>
+
+  <!-- the substrate -->
+  <rect class="box box-fill" x="20" y="340" width="280" height="130" rx="2"></rect>
+  <text class="title" x="160" y="382" font-size="16" letter-spacing="0.1em" text-anchor="middle">THE SUBSTRATE</text>
+  <text x="160" y="410" font-size="12" text-anchor="middle">identity &middot; money &middot; data</text>
+  <text class="muted" x="160" y="434" font-size="11" font-style="italic" text-anchor="middle">yours &mdash; keys, not accounts.</text>
+
+  <!-- the alternative, crossed out -->
+  <text class="muted" x="20" y="502" font-size="11">not this:</text>
+  <rect class="alt-box" x="20" y="508" width="280" height="56"></rect>
+  <line class="alt-strike" x1="20" y1="508" x2="300" y2="564"></line>
+  <text class="alt-text" x="34" y="530" font-size="11">their server:</text>
+  <text class="alt-text" x="34" y="546" font-size="11">your identity, their database.</text>
+</svg>
+
+</figure>
+
+<p class="caption">
+  Identity, money and data belong to whoever's using them, not whoever runs the server — everything above is a
+  different way of building on that instead of around it.
+</p>
+
+<footer>
+  <span class="name">pablof7z</span> &mdash;
+  <a href="nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft">_@f7z.io</a>
+  &middot;
+  <a href="https://github.com/pablof7z">github</a>
+</footer>
+
+</body>
+</html>
