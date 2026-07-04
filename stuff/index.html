@@ -8,6 +8,7 @@
 <header class="masthead">
   <a class="who" href="/">f7z.io</a>
   <nav class="mast-nav">
+    <a href="/essays/">Essays</a>
     <a href="/stuff/" aria-current="page">Stuff</a>
     <a href="/nownownow/">Now</a>
     <a href="/podcast/">Podcast</a>
@@ -24,47 +25,38 @@
 <section class="featured-wrap">
 <h2 class="stuff-section-label">currently building</h2>
 <div class="stuff-featured">
-<button class="stuff-card entry featured" type="button">
+<button class="stuff-card entry featured" type="button" data-essay="/receipts/" data-essay-title="Receipts">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 3 45 24 24 45 3 24Z"/><path d="M24 3v42M3 24h42M9 9l30 30M39 9 9 39"/></svg></span>
     <span class="entry-title">Trellis</span>
   </span>
-  <span class="card-slogan">Don't-trust-verify, pointed at my own code.</span>
-  <span class="entry-sub">Side effects are the one part of software that still runs on trust. Trellis makes them provable, not hoped for.</span>
+  <span class="card-slogan">Never guess what your code did. Never gamble on what it&rsquo;ll do.</span>
+  <span class="entry-sub">The subscription an app opens and forgets &mdash; still live long after the reason for it is gone &mdash; is the leak no test catches. Trellis makes that whole class impossible, and turns every side effect into data you can question: the exact plan before it runs, the receipt for why after.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
-<p>Every useful program eventually acts on the world &mdash; opens subscriptions, watches files,
-holds sync windows. That's also where it stops being inspectable: you can dump state and diff
-it, but the subscription you opened three states ago is invisible, and when the state that
-justified it goes away, nothing notices. I kept hitting this bug class in long-lived nostr
-clients, and the conclusion I reached is that the problem isn't discipline, it's architecture:
-side effects are the one part of software we still run on trust.</p>
+<article class="essay-doc">
+  <div class="essay-doc-eyebrow">Essays &middot; on Trellis</div>
+  <h2 class="essay-doc-title">Receipts<span class="dot">.</span></h2>
+  <p class="essay-doc-dek">Structure decides what a system can&rsquo;t do. A receipt is structure aimed the other way &mdash; at what it did, and what it&rsquo;s about to.</p>
 
-<p>Trellis is my refusal to keep doing that. It's a deterministic reconciler for Rust
-application kernels: state lives in a transactional graph, I/O is forbidden inside it, and
-every transaction returns plain data &mdash; the exact resource commands implied by what
-changed, output frames, and a receipt that explains why. Nothing runs on faith, including
-Trellis itself: the full-recompute oracle ships in the production crate, so the incremental
-result can be checked against recomputing everything from scratch, at any time. It's the same
-instinct as don't-trust-verify &mdash; pointed at my own code first.</p>
+  <p>Structure makes the wrong thing impossible. I&rsquo;ve written that before and I still mean it. But <em>impossible</em> is a promise to whoever writes the code. There&rsquo;s a second person no one designs for: whoever stands in front of the thing while it runs and asks the only question that matters at three in the morning &mdash; <span class="hi">why did it just do that?</span></p>
 
-<h2>what it ships with</h2>
-<ul>
-  <li>A full-recompute oracle in the production crate, not the test crate</li>
-  <li>A documented, honest cost model &mdash; O(total-state) per transaction, deliberately</li>
-  <li>Shadow mode: run it beside your existing code before you trust it</li>
-  <li>Two browser demos &mdash; &ldquo;Leak Duel&rdquo; and &ldquo;Flight Recorder&rdquo; (git blame for side effects)</li>
-</ul>
+  <p>To them, most software is a sealed box. You can read the source and you can dump the state, but the two never touch. Logs are the usual answer, and a log is a confession written by the guilty party: it records that things happened and never why. Every diagnosis from a log is a guess you then spend an afternoon paying to confirm.</p>
 
-<p>First consumer is NMP, running Trellis in shadow-mode equivalence; tenex-edge adopted it
-next for its live surfaces. Pre-1.0: the semantics are stable, the names may not be.</p>
+  <p>The bug that made me care lives in exactly that gap. A long-lived client opens a subscription because some state justified it. The state goes away. Nothing closes the subscription, because nothing ever tied the two together &mdash; a callback fired, a handle got saved, and the handle outlived its reason. You can&rsquo;t test it away; it isn&rsquo;t in any state you can diff, it&rsquo;s in an effect you performed three states ago and can no longer see. Discipline doesn&rsquo;t reach that far down. Only structure does.</p>
 
-<p class="why">&ldquo;Don't trust it &mdash; shadow it. Deleting your bespoke code is the last
-step of adoption, not the first.&rdquo;</p>
+  <p>So the move is to make effects into data. State lives in a graph that is forbidden to touch the world. When it changes it doesn&rsquo;t act &mdash; it hands back the exact commands the change implies, and a receipt: what changed, what recomputed, which commands came out, and the path from cause to each one. The subscription that should close, closes, because the graph can see its last owner is gone. And <span class="hi">&ldquo;why is this open?&rdquo; stops being an investigation and becomes a lookup.</span></p>
 
-<p><a href="https://trellis.rs">trellis.rs</a> &middot; <a href="https://github.com/pablof7z/trellis">github</a></p>
+  <p>Then I noticed the receipt had a mirror, hiding in the one part of the design I&rsquo;d been apologizing for. Every transaction clones the graph before it runs &mdash; the honest, slightly wasteful cost of doing things atomically. Which means a transaction you never commit is a free simulation. Stage the change, run the whole machine, read the plan it <em>would</em> produce, throw the copy away. Terraform has <span class="hi">plan</span>. Kubernetes has dry-run. Application logic never had it, and here it was, already paid for.</p>
 
-<p><a href="/stuff/trellis/">full page &rarr;</a></p>
+  <p>Two directions of one property. Receipts kill guessing about the past; a dry run kills gambling about the future. An agent debugging today works like a programmer in 1975 &mdash; read the source, add a print, guess &mdash; not because it&rsquo;s dim, but because runtime behavior is as illegible to it as it is to me. Give it receipts and diagnosis becomes lookup. Give it a dry run and it never has to gamble.</p>
+
+  <p>I don&rsquo;t trust that as a slogan, so I pointed it at my own things first. tenex-edge &mdash; the fabric my agents actually live on &mdash; runs its live surfaces on this now. The leaked subscription isn&rsquo;t discouraged, it&rsquo;s gone. Status goes on the wire only when something truly changed. You can take any event it published and ask why, and read back the exact prompt that produced it. And the check that proves the engine honest ships inside the engine, not the tests.</p>
+
+  <p class="punch">Guessing is a tax the past charges; gambling is a tax the future charges. A receipt settles one, a dry run the other &mdash; and a system that issues both is one you can operate instead of trust.</p>
+
+  <p class="essay-doc-more"><a href="/receipts/">read it as a page &rarr;</a> &middot; <a href="https://trellis.rs">trellis.rs</a> &middot; <a href="https://github.com/pablof7z/trellis">github</a></p>
+</article>
   </template>
 </button>
 
@@ -1034,3 +1026,4 @@ economy in action.</p>
 </footer>
 
 <script src="/nownownow/panel.js" defer></script>
+<script src="/stuff/essay.js" defer></script>

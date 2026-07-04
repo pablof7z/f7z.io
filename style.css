@@ -10,6 +10,7 @@
   --rule: rgba(19, 18, 17, 0.14);
   --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, "Liberation Mono", monospace;
   --display: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Segoe UI", system-ui, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
   --pad-x: clamp(1.25rem, 4vw, 2.5rem);
 }
 
@@ -268,13 +269,262 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
   transition: opacity 0.9s cubic-bezier(.16, .8, .24, 1), transform 0.9s cubic-bezier(.16, .8, .24, 1);
 }
 
-/* ---------- essays ---------- */
+/* ---------- essays (editorial) ----------
+   A deliberate break from the poster system: a quiet, centered title page
+   in a serif face, a drop cap, and a dot-trail instead of the huge
+   uppercase display type used everywhere else on the site. */
 
-.page.essay { max-width: 660px; }
+.essay-head {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 10vw, 7rem) var(--pad-x) clamp(2.2rem, 6vw, 3.5rem);
+  border-bottom: 1px solid var(--rule);
+  text-align: center;
+}
+
+.essay-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 1.8rem;
+}
+
+.essay-eyebrow .essay-count { color: var(--accent); opacity: 1; }
+
+.essay-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  margin: 0;
+}
+
+.essay-title .dot { color: var(--accent); font-style: normal; }
+
+.essay-dek {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 42ch;
+  margin: 1.4rem auto 0;
+  opacity: var(--muted-op);
+  line-height: 1.6;
+}
+
+.essay-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 2.2rem 0 0;
+}
+
+.essay-dots a {
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--rule);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.essay-dots a:hover,
+.essay-dots a:focus-visible,
+.essay-dots a.is-current {
+  background: var(--accent);
+  transform: scale(1.35);
+}
+
+.page.essay {
+  max-width: 640px;
+  font-family: var(--serif);
+}
 
 .essay p {
-  font-size: 1.08rem;
-  line-height: 1.75;
+  font-size: 1.16rem;
+  line-height: 1.85;
+}
+
+.essay p:first-of-type::first-letter {
+  float: left;
+  font-style: italic;
+  font-size: 3.6em;
+  line-height: 0.82;
+  padding: 0.03em 0.09em 0 0;
+  color: var(--accent);
+}
+
+/* Punch line — a one-sentence paragraph lifted out of the flow for rhythm.
+   Large italic serif, echoing the title, with air above and below so the eye
+   lands on it. Kept off the first paragraph so the drop cap stays put. */
+.essay p.punch {
+  font-style: italic;
+  font-size: clamp(1.5rem, 3.8vw, 2.15rem);
+  line-height: 1.26;
+  letter-spacing: -0.015em;
+  max-width: 22ch;
+  margin: 2.6rem 0;
+  color: var(--ink);
+}
+
+.essay p.punch.right {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* If a punch opens the essay, it owns the entrance — no drop cap fighting it. */
+.essay p.punch:first-of-type::first-letter {
+  float: none;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+}
+
+.essay p.punch:first-of-type {
+  margin-top: 0;
+}
+
+/* Highlighted sentence — a highlighter stroke in the accent, sitting behind
+   the text so it survives line wraps. Subtle in both themes. */
+.essay .hi {
+  background: linear-gradient(
+    transparent 58%,
+    color-mix(in srgb, var(--accent) 22%, transparent) 58%
+  );
+  padding: 0 0.02em;
+}
+
+/* Nostr highlights (NIP-84) — reuses the .hi highlighter-stroke language but
+   interactive: a hairline dotted underline and pointer cursor signal it can
+   be hovered, and the stroke deepens slightly to answer that affordance. */
+.essay .n-highlight {
+  background: linear-gradient(
+    transparent 58%,
+    color-mix(in srgb, var(--accent) 26%, transparent) 58%
+  );
+  color: inherit;
+  padding: 0 0.02em;
+  cursor: pointer;
+  border-bottom: 1px dotted color-mix(in srgb, var(--accent) 55%, transparent);
+  transition: background 0.15s ease;
+}
+
+.essay .n-highlight:hover,
+.essay .n-highlight:focus-visible {
+  background: linear-gradient(
+    transparent 58%,
+    color-mix(in srgb, var(--accent) 40%, transparent) 58%
+  );
+  outline: none;
+}
+
+.n-hl-tooltip {
+  position: absolute;
+  z-index: 200;
+  transform: translate(-50%, -100%);
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  padding: 0.5rem 0.7rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+}
+
+.n-hl-tooltip.is-visible { opacity: 1; visibility: visible; }
+
+.n-hl-tip-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.n-hl-tip-avatar {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  flex-shrink: 0;
+}
+
+.n-hl-tip-time {
+  margin-top: 0.25rem;
+  opacity: 0.5;
+}
+
+.n-hl-toolbar {
+  position: absolute;
+  z-index: 200;
+  transform: translateX(-50%);
+  appearance: none;
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.n-hl-toolbar:hover { background: var(--accent); }
+.n-hl-toolbar:disabled { opacity: 0.6; cursor: default; background: var(--ink); }
+
+.n-auth {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  appearance: none;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  padding: 0.5rem 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  max-width: 12rem;
+}
+
+.n-auth span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.n-auth:hover { border-color: var(--accent); color: var(--accent); }
+
+.n-auth.is-signed-in { text-transform: none; letter-spacing: 0.02em; }
+
+.n-auth-avatar {
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  flex-shrink: 0;
+}
+
+@media (max-width: 520px) {
+  .n-auth { right: 0.8rem; bottom: 0.8rem; }
 }
 
 .essay-nav {
@@ -541,6 +791,58 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 .stuff-grid a { text-decoration: none; border-bottom: 1px solid var(--rule); }
 .stuff-grid a:hover { border-bottom-color: var(--accent); }
 
+/* ---------- /essays ---------- */
+
+.essays-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.essays-list li { border-bottom: 1px solid var(--rule); }
+.essays-list li:last-child { border-bottom: none; }
+
+.essays-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 1.4rem;
+  padding: 1.3rem 0;
+  text-decoration: none;
+}
+
+.essays-list a:hover .essay-list-name,
+.essays-list a:focus-visible .essay-list-name { color: var(--accent); }
+
+.essay-list-index {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  flex: 0 0 5ch;
+}
+
+.essay-list-body { min-width: 0; }
+
+.essay-list-name {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+  transition: color 0.15s ease;
+}
+
+.essay-list-note {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  opacity: var(--muted-op);
+  margin: 0;
+}
+
+@media (max-width: 30em) {
+  .essays-list a { flex-direction: column; gap: 0.3rem; }
+}
+
 /* ---------- /feed ---------- */
 
 .feed-list {
@@ -607,6 +909,30 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 
 .post-foot a { text-decoration: none; opacity: 0.5; border-bottom: none; }
 .post-foot a:hover { opacity: 1; color: var(--accent); }
+
+.post.is-clickable { cursor: pointer; }
+
+.post.is-clickable:hover,
+.post.is-clickable:focus-visible {
+  background: color-mix(in srgb, var(--ink) 4%, transparent);
+}
+
+.post.is-clickable:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}
+
+/* thread panel reuses .post cards for OP + replies, Twitter-style */
+.thread-panel .feed-list .post { padding: 1rem 0; }
+.thread-panel .feed-list .post:first-child { padding-top: 0; }
+
+.thread-status {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  opacity: 0.5;
+  padding: 1.2rem 0;
+}
 
 /* ---------- /podcast ---------- */
 
@@ -995,4 +1321,144 @@ footer .colophon a { text-decoration: none; }
 @media (max-width: 520px) {
   .stack li { flex-direction: column; gap: 0.35rem; }
   .stack .tag { flex: none; }
+}
+
+/* ── essay popup modal: stuff cards with data-essay (Trellis → Receipts) open ── */
+/* their <template> as a centered, essay-styled popup instead of the side sheet.  */
+.essay-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 200;
+}
+.essay-backdrop.open { opacity: 1; visibility: visible; }
+
+.essay-modal {
+  position: fixed;
+  z-index: 210;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+  width: min(44em, 94vw);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.22s ease, transform 0.24s cubic-bezier(.16, .8, .24, 1), visibility 0.22s ease;
+}
+.essay-modal.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+
+.essay-modal-doc {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: clamp(1.6rem, 4vw, 2.8rem) clamp(1.3rem, 4vw, 3rem) clamp(2rem, 5vw, 3rem);
+}
+
+.essay-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 2;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  color: inherit;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+.essay-close:hover,
+.essay-close:focus-visible { border-color: var(--accent); color: var(--accent); opacity: 1; }
+
+body.essay-open { overflow: hidden; }
+
+/* essay typography inside the modal (mirrors the /attention/ essay pages) */
+.essay-doc-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: var(--muted-op);
+  margin-bottom: 0.9rem;
+}
+.essay-doc-title {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.9rem, 1.2rem + 3vw, 2.7rem);
+  line-height: 1.02;
+  margin: 0 0 0.6rem;
+}
+.essay-doc-title .dot { color: var(--accent); }
+.essay-doc-dek {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  opacity: 0.82;
+  margin: 0 0 1.6rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--rule);
+}
+.essay-modal-doc p {
+  font-size: 1rem;
+  line-height: 1.72;
+  margin: 0 0 1.2rem;
+}
+.essay-modal-doc .hi {
+  background: linear-gradient(transparent 62%, color-mix(in srgb, var(--accent) 26%, transparent) 0);
+  padding: 0 0.04em;
+}
+.essay-modal-doc .punch {
+  font-family: var(--mono);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-top: 1.8rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+}
+.essay-doc-more {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  opacity: var(--muted-op);
+  margin-top: 1.6rem !important;
+}
+.essay-modal-doc a { border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; }
+.essay-modal-doc a:hover { border-bottom-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 46em) {
+  .essay-modal {
+    width: 100vw;
+    max-height: 92vh;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    transform: translateY(8%);
+    border-radius: 14px 14px 0 0;
+  }
+  .essay-modal.open { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .essay-modal { transition: opacity 0.2s ease, visibility 0.2s ease; transform: translate(-50%, -50%); }
+  .essay-modal.open { transform: translate(-50%, -50%); }
 }

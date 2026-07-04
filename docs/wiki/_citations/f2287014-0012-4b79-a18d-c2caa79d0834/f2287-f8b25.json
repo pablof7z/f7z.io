@@ -1,0 +1,6 @@
+{
+  "id": "f2287-f8b25",
+  "ts": "2026-07-04T13:13:05Z",
+  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
+  "text": "Assistant: **Done and verified.** Summary:\n\n- New `/essays/` index page: lists the five core essays (01 Attention → 05 Zero) plus a separate \"on trellis\" section linking to `/receipts/` — the existing essay about Trellis, which I'd initially missed since its slug doesn't mention Trellis by name.\n- Added an \"Essays\" link (first item, before Stuff) to the masthead nav across all 40 pages on the site.\n- New `.essays-list` CSS matches the site's existing hairline-divider/mono-index conventions.\n- Verified in a real browser: page renders correctly in light and dark mode, all 6 links work, nav link works site-wide (spot-checked homepage and a nested `/stuff/trellis/` page), no console errors."
+}

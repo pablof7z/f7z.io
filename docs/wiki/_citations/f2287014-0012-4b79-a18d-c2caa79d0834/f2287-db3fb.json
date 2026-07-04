@@ -1,0 +1,6 @@
+{
+  "id": "f2287-db3fb",
+  "ts": "2026-07-04T11:47:24Z",
+  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
+  "text": "User: add support to loading the /feed events' replies -- when clicking any event it should show the OP + replies -- twitter UI style [...] - Every `.post` card is now clickable (except the \"view on nostr\" link, which still navigates normally) and opens a slide-in panel — reusing the same `.detail-panel`/`.detail-backdrop` chrome already used on `/nownownow/`.\n- The panel shows the clicked post cloned as the OP, then subscribes live via NDK for `kind:1` events tagging that note's id across four public relays, rendering each as a `.post`-styled reply card (avatar, name/nip05, relative timestamp, content, its own \"view on nostr\" link) — a flat, Twitter-style conversation view. [...] - Every `.post` card is now clickable (except the \"view on nostr\" link, which still navigates normally) and opens a slide-in panel — reusing the same `.detail-panel`/`.detail-backdrop` chrome already used on `/nownownow/`. [...] - Confirmed with a real browser test: real replies loaded from actual relays, empty/loading states behave correctly, panel state doesn't leak between posts, and the nostr-link click doesn't get swallowed by the new handler."
+}

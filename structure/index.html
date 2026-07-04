@@ -1,0 +1,85 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>structure — pablof7z</title>
+<meta name="description" content="The right structure makes the wrong thing impossible. Everything else is discipline, and discipline fails.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="/style.css">
+
+<header class="masthead">
+  <a class="who" href="/">f7z.io</a>
+  <nav class="mast-nav">
+    <a href="/essays/">Essays</a>
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+</header>
+
+<header class="essay-head">
+  <div class="essay-eyebrow">Essays &middot; <span class="essay-count">03</span> of 05</div>
+  <h1 class="essay-title">Structure<span class="dot">.</span></h1>
+  <p class="essay-dek">The right structure makes the wrong thing impossible. Everything else is discipline, and discipline fails.</p>
+  <nav class="essay-dots" aria-label="Essays">
+    <a href="/attention/" aria-label="Attention (01)"></a>
+    <a href="/memory/" aria-label="Memory (02)"></a>
+    <a href="/structure/" class="is-current" aria-current="page" aria-label="Structure (03)"></a>
+    <a href="/citizens/" aria-label="Citizens (04)"></a>
+    <a href="/zero/" aria-label="Zero (05)"></a>
+  </nav>
+</header>
+
+<main class="page essay">
+
+<p>Discipline fails. Not because people are weak &mdash; because discipline is a rate, and
+rates compound. <span class="hi">A team that does the right thing 99% of the time ships
+the 1% forever.</span></p>
+
+<p>So I don't trust discipline, mine included. I trust structure. The right structure
+makes the wrong thing impossible &mdash; not discouraged, not linted, not documented in a
+style guide nobody reads. Impossible. If an app developer <em>can</em> put business logic
+in the UI shell, someone eventually will, and "someone" includes me at 2am and every AI
+agent I've ever hired. When that happens I've learned to blame the framework, not the
+developer. A framework that permits the mistake has already made it.</p>
+
+<p>This is why everything I build has one place where logic lives &mdash; a Rust core
+&mdash; and shells that are deliberately too dumb to sin. It's why a bug that requires
+the app to bend over backwards is, by definition, a bug somewhere lower. And it's why
+polling makes me irrationally angry: <span class="hi">a refresh button is an architectural
+confession.</span> The world is a stream of events, and a system that keeps asking "anything
+new?" is structured against the nature of the thing it models. Data should arrive, not be
+fetched. You don't
+fix that with guidelines; you fix it by building on a substrate where arrival is the only
+primitive.</p>
+
+<p>The same logic kills backwards compatibility, at least everywhere I'm allowed to kill
+it. Every compatibility shim is a payment on a debt you chose not to settle, made by
+everyone who touches the code after you, forever. "This is wrong, delete it, build it
+right" has to remain a legal move &mdash; the moment it isn't, wrongness becomes
+load-bearing.</p>
+
+<p>People hear all this as rigidity. It's the opposite. Structure is what buys the
+freedom: when the system makes correctness inevitable, you stop spending attention on
+vigilance and spend it on the work.</p>
+
+<p class="punch">Discipline is a tax you pay forever. Structure is a tax you pay once.</p>
+
+<nav class="essay-nav">
+  <a href="/memory/">&larr; memory</a>
+  <a href="/citizens/">next: citizens &rarr;</a>
+</nav>
+
+</main>
+
+<footer>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+  <span class="colophon">f7z.io</span>
+</footer>
+
+<script defer src="/js/highlights.js"></script>

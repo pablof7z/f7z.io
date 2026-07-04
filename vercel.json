@@ -1,4 +1,9 @@
 {
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/essays/:slug/", "destination": "/:slug/", "permanent": true },
+    { "source": "/essays/:slug", "destination": "/:slug/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/.well-known/nostr.json", "destination": "/api/nip05" }
   ],

@@ -1,0 +1,84 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>attention — pablof7z</title>
+<meta name="description" content="The scarcest resource in the universe. Tokens are buyable; your hours are not.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="/style.css">
+
+<header class="masthead">
+  <a class="who" href="/">f7z.io</a>
+  <nav class="mast-nav">
+    <a href="/essays/">Essays</a>
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+</header>
+
+<header class="essay-head">
+  <div class="essay-eyebrow">Essays &middot; <span class="essay-count">01</span> of 05</div>
+  <h1 class="essay-title">Attention<span class="dot">.</span></h1>
+  <p class="essay-dek">The scarcest resource in the universe. Tokens are buyable; your hours are not.</p>
+  <nav class="essay-dots" aria-label="Essays">
+    <a href="/attention/" class="is-current" aria-current="page" aria-label="Attention (01)"></a>
+    <a href="/memory/" aria-label="Memory (02)"></a>
+    <a href="/structure/" aria-label="Structure (03)"></a>
+    <a href="/citizens/" aria-label="Citizens (04)"></a>
+    <a href="/zero/" aria-label="Zero (05)"></a>
+  </nav>
+</header>
+
+<main class="page essay">
+
+<p>Somewhere in the last few years the scarcest input to software flipped. It used to be
+compute &mdash; you shaped programs around what the machine could afford. Then intelligence
+got cheap. You can now rent a competent mind by the token, at three in the morning, in
+whatever quantity you want. What you cannot rent, buy, or mint is another hour of your
+own life.</p>
+
+<p>I said this on a podcast once and it's still the realest thing I know about building
+with AI: <span class="hi">I can buy more tokens. I cannot buy another day of my life.</span>
+Comparing the cost of tokens with the cost of human time is not even a comparison.</p>
+
+<p>Take that seriously and it stops being a sentiment and becomes an engineering
+constraint &mdash; <em>the</em> engineering constraint. Every design decision reduces to
+one question: whose attention does this spend? A loading spinner spends yours. A refresh
+button spends yours. An agent that asks a question it already asked last month is
+spending the only resource in the whole system that doesn't come back.</p>
+
+<p>It cuts both ways. The machines have attention too &mdash; a context window is exactly
+that &mdash; and it obeys the same law. Tell a model to pay attention to everything and it
+will pay attention to nothing. The craft of working with these systems isn't giving them
+more information or more power; it's directing a finite beam. <span class="hi">Context
+quality beats context quantity</span> every time anyone bothers to measure.</p>
+
+<p>So the rule I build everything by: spend machine attention lavishly so human attention
+is never spent twice on the same thing. Tokens by the million to save one correction.
+That ratio sounds absurd until you price the correction honestly.</p>
+
+<p>Most software is still built the other way &mdash; frugal with compute, profligate with
+you. Every notification, every re-login, every "are you sure," every re-explanation to a
+fresh session: small withdrawals from the one account that takes no deposits.</p>
+
+<p class="punch">The withdrawals are optional. That's the part almost nobody builds like they believe.</p>
+
+<nav class="essay-nav">
+  <a href="/">&larr; the poster</a>
+  <a href="/memory/">next: memory &rarr;</a>
+</nav>
+
+</main>
+
+<footer>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+  <span class="colophon">f7z.io</span>
+</footer>
+
+<script defer src="/js/highlights.js"></script>

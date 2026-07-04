@@ -76,6 +76,9 @@
   }
 
   entries.forEach(function (entry) {
+    // Cards that link out to a full essay (e.g. Trellis → /receipts/) open their
+    // own popup modal via essay.js; the sidebar sheet must not also fire for them.
+    if (entry.hasAttribute("data-essay")) return;
     entry.addEventListener("click", function () {
       open(entry);
     });

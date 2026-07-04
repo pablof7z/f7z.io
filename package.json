@@ -1,0 +1,14 @@
+{
+  "name": "f7z.io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/highlights.js --bundle --minify --format=iife --platform=browser --outfile=js/highlights.js && esbuild src/feed-thread.js --bundle --minify --format=iife --platform=browser --outfile=js/feed-thread.js"
+  },
+  "dependencies": {
+    "@nostr-dev-kit/ndk": "^3.0.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}

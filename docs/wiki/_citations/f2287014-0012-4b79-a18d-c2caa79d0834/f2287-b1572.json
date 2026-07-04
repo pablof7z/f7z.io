@@ -1,0 +1,6 @@
+{
+  "id": "f2287-b1572",
+  "ts": "2026-07-04T11:47:26Z",
+  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
+  "text": "- **Writing**: NIP-07 browser-extension signing (Alby, nos2x) via `NDKNip07Signer` — no login system needed, reading needs no signer at all."
+}

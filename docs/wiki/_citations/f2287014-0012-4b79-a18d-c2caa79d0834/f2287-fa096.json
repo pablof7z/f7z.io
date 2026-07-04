@@ -1,0 +1,6 @@
+{
+  "id": "f2287-fa096",
+  "ts": "2026-07-04T11:47:25Z",
+  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
+  "text": "Main tradeoff: since there's zero build pipeline today, I'd either load NDK straight from a CDN (jsDelivr/esm.sh, simplest, but resolves deps at runtime on every visit) or prebuild a small bundle locally once (esbuild) and commit the output `.js` as a static asset (faster, pinned, but means running a build step by hand whenever the widget code changes — not on every deploy, just when I edit it). [...] User: local build step"
+}

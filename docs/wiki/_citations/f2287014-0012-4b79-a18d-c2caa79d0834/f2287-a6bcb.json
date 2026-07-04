@@ -1,0 +1,6 @@
+{
+  "id": "f2287-a6bcb",
+  "ts": "2026-07-04T12:30:56Z",
+  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
+  "text": "User: local build step [...] Summary of what's shipped on the `attention`/`memory`/`structure`/`citizens`/`zero` essay pages:\n- **Build**: `npm run build` (esbuild) bundles `src/highlights.js` + NDK into the committed static `js/highlights.js` (~355KB minified, loaded via `<script defer>`, no runtime CDN dependency)."
+}

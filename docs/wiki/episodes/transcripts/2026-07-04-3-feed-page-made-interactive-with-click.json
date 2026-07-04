@@ -1,0 +1,26 @@
+[
+  [
+    "user",
+    "I want the site to load nostr content -- we need to hook it up with NDK -- can we do that given how this site operates? like I want people to be able to write comments on articles, and to list the comments, and to embed/create highlights from articles -- can we do that"
+  ],
+  [
+    "assistant",
+    "Confirmed this fits the static site well, mapping comments to NIP-22 and highlights to NIP-84 with NIP-07 signing, and proposed either a CDN or local esbuild approach for loading NDK. Asked for preferred relay set and go-ahead."
+  ],
+  [
+    "user",
+    "local build step add capability of signing in if a nip07 is detected -- if the user is signed-in allow the user to create highlights on essays NIP-84; load highlights and mark them up in the text of the essay in a very polished way like medium does"
+  ],
+  [
+    "assistant",
+    "Built and verified the highlights feature with a local esbuild step, NIP-07 sign-in pill, NIP-84 highlight publishing, and in-place markup of existing highlights with hover tooltips. Comments not yet built."
+  ],
+  [
+    "user",
+    "add support to loading the /feed events' replies -- when clicking any event it should show the OP + replies -- twitter UI style"
+  ],
+  [
+    "assistant",
+    "Built and verified a slide-in panel on /feed that shows the clicked post as OP plus live-fetched replies via NDK, Twitter-style. Noted one simplification: it doesn't filter NIP-10 markers, so rare quote-posts could appear alongside replies."
+  ]
+]
