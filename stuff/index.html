@@ -14,148 +14,760 @@
   <a href="/feed/">feed</a>
 </nav>
 
-<ul class="stuff-grid">
-  <li><span class="proj-name">NMP</span> — one shared Rust core, thin
-    native shells for iOS/Android/web. I'm done writing every app three
-    times. <a href="https://github.com/pablof7z/nostr-multi-platform">github</a></li>
+<h2 class="stuff-section-label">currently building</h2>
+<div class="stuff-featured">
+<button class="stuff-card entry featured" type="button">
+  <span class="entry-title">NMP</span>
+  <span class="entry-sub">One Rust core, three platforms, zero rewrites.</span>
+  <template>
+<p>NMP (Nostr Multi-Platform) is the bet that ends the era of writing every app three
+times. One shared Rust core handles the hard part &mdash; protocol logic, state, business
+rules &mdash; and thin native shells on iOS, Android, and web are just dumb skins on top.</p>
 
-  <li><span class="proj-name">tenex</span> — orchestrating AI agents over
-    nostr; agents as first-class citizens with their own keys, money, and
-    reputation. The hardest thing I've ever built.
-    <a href="https://github.com/pablof7z/tenex">github</a>
-    &middot; <a href="/stuff/tenex/">details</a></li>
+<p>Following the spirit of fiatjaf's RMP: write the hard part once, in Rust, and let the
+platforms be dumb skins. Years of maintaining Olas-iOS next to Olas-Android next to
+ndk-mobile taught me the duplication tax is unpayable.</p>
 
-  <li><span class="proj-name">chirp</span> — a nostr client built on NMP
-    &mdash; proof the shared Rust core actually works.
-    <a href="https://github.com/pablof7z/chirp">github</a></li>
+<p>Proof it works, in order: <strong>podcast-rmp</strong> (the first RMP-named repo, May
+2026), <strong>olas-nmp</strong> (the Olas photo app rebuilt NMP-native, Swift + Kotlin +
+Rust), and <strong>chirp</strong> (a new nostr client built on NMP from day one).</p>
 
-  <li><span class="proj-name">olas</span> — Instagram for nostr, rebuilt
-    NMP-native across iOS + Android + Rust. Every pubkey should be able
-    to receive money, instantly. <a href="https://github.com/pablof7z/olas-nmp">github</a>
-    &middot; <a href="/stuff/olas/">details</a></li>
+<p class="why">&ldquo;If this works, it changes how I build everything.&rdquo;</p>
 
-  <li><span class="proj-name">NDK</span> — the Nostr Development Kit,
-    the library most nostr clients end up using whether they meant to
-    or not. <a href="https://github.com/nostr-dev-kit/ndk">github</a>
-    &middot; <a href="/stuff/ndk/">details</a></li>
+<p><a href="https://github.com/pablof7z/nostr-multi-platform">github</a></p>
+  </template>
+</button>
 
-  <li><span class="proj-name">nutsack / mcp-money</span> — NIP-60/61
-    wallets for humans, and MCP wallets for agents &mdash; "an important
-    milestone in the path towards skynet."
-    <a href="https://github.com/pablof7z/nutsack">github</a>
-    &middot; <a href="/stuff/nutsack/">nutsack details</a>
-    &middot; <a href="/stuff/mcp-money/">mcp-money details</a></li>
+<button class="stuff-card entry featured" type="button">
+  <span class="entry-title">tenex-edge</span>
+  <span class="entry-sub">Stop being the message bus between your own agents.</span>
+  <template>
+<p>You run Claude Code, Codex, and OpenCode on the same repo, and all day <em>you</em>
+are the wire between them: routing work, checking overlap, deciding merge order,
+re-explaining context to every new session.</p>
 
-  <li><span class="proj-name">highlighter</span> — Substack without the
-    platform risk. Annotate the web, post it to nostr, get paid in
-    sats. <a href="https://github.com/pablof7z/highlighter">github</a>
-    &middot; <a href="/stuff/highlighter/">details</a></li>
+<p>tenex-edge is an identity and awareness fabric for the agents you already run. Each
+agent gets a durable, self-owned identity, broadcasts a live one-line &ldquo;what I'm
+doing,&rdquo; and can @mention any other agent directly &mdash; across hosts and vendors,
+no copy-paste, no shared session.</p>
 
-  <li><span class="proj-name">chardin.js</span> — an old JS overlay-
-    instructions library from 2013 that somehow still has 5k stars. Not
-    my proudest work, still my most popular.
-    <a href="https://github.com/pablof7z/chardin.js">github</a>
-    &middot; <a href="/stuff/chardin/">details</a></li>
-
-  <li><span class="proj-name">Sovereign Engineering</span> — six weeks in
-    Madeira with people who actually ship, building bitcoin and nostr
-    tools on the idea that a computer should liberate you, not control
-    you. Run by six rotating captains, demo day every Friday, no talking
-    without shipping. <a href="https://sovereignengineering.io">sovereignengineering.io</a>
-    &middot; <a href="/stuff/sovereign-engineering/">details</a></li>
-
-  <li><span class="proj-name">nsecBunker</span> — remote key signing for
-    nostr; it worked so well it started centralizing key custody, so I
-    killed my own successful product rather than become the thing I'm
-    fighting against. <a href="/stuff/nsecbunker/">details</a></li>
-
-  <li><span class="proj-name">EXIT.pub</span> — "you broke up with your
-    ex; it wasn't treating you well." The last bridge you need: port
-    your entire Twitter archive into nostr, original dates and all, and
-    never look back. <a href="/stuff/exit/">details</a></li>
-
-  <li><span class="proj-name">Wikifreedia</span> — Wikipedia without the
-    editorial politburo. Truth doesn't come from consensus; embrace the
-    bias, sign your edits, let the web of trust sort it out.
-    <a href="/stuff/wikifreedia/">details</a></li>
-
-  <li><span class="proj-name">vendata.io / DVMs</span> — a compute
-    marketplace on nostr: post a job, machines bid, pay in sats. APIs
-    carry an inherent massive rug risk &mdash; don't get rugged, don't
-    rug others. <a href="/stuff/vendata/">vendata details</a>
-    &middot; <a href="/stuff/nostr-data-vending-machine/">DVM details</a></li>
-
-  <li><span class="proj-name">vibeline</span> — talk into your phone,
-    get back structured, actionable output. I once one-shotted an
-    entire working app from a voice memo without touching a key.
-    <a href="https://github.com/pablof7z/vibeline">github</a>
-    &middot; <a href="/stuff/vibeline/">details</a></li>
-
-  <li><span class="proj-name">purplepag.es</span> — a relay that does
-    one thing: profiles (the board of relay directors has since
-    approved expanding business to the broader category of "lists").
-    Boring infrastructure that half of nostr quietly depends on.
-    <a href="https://purplepag.es">purplepag.es</a>
-    &middot; <a href="/stuff/purplepages/">details</a></li>
-
-  <li class="legacy-heading">older / retired projects</li>
-
-  <li><span class="proj-name">Ambulando</span> — voice-first social
-    network for iOS; 60-second voice messages on nostr with a
-    trust-based feed. <a href="https://github.com/pablof7z/Ambulando">github</a>
-    &middot; <a href="/stuff/ambulando/">details</a></li>
-
-  <li><span class="proj-name">collab</span> — Google Docs-style
-    real-time collaborative document editing on nostr, no Google
-    required. <a href="https://github.com/pablof7z/collab">github</a>
-    &middot; <a href="/stuff/collab/">details</a></li>
-
-  <li><span class="proj-name">Honeypot</span> — a NIP-60 wallet for
-    subscription management, like Apple's Subscriptions app but for
-    nostr. Based on ideas from Highlighter.
-    <a href="/stuff/honeypot/">details</a></li>
-
-  <li><span class="proj-name">Kind0.io</span> — NIP-41 key migration
-    proof-of-concept: rotate your keys without losing your identity
-    when your nsec gets compromised. <a href="https://kind0.io">kind0.io</a>
-    &middot; <a href="/stuff/kind0/">details</a></li>
-
-  <li><span class="proj-name">nostr-chat-widget</span> — an embeddable
-    nostr-powered chat widget for any website; messages are real nostr
-    events. <a href="https://github.com/pablof7z/nostr-chat-widget">github</a>
-    &middot; <a href="/stuff/nostr-chat-widget/">details</a></li>
-
-  <li><span class="proj-name">Posta</span> — a Telegram-like iOS
-    messaging app on nostr, end-to-end encrypted, real-time.
-    <a href="https://github.com/pablof7z/Posta">github</a>
-    &middot; <a href="/stuff/posta/">details</a></li>
-
-  <li><span class="proj-name">relay29</span> — a NIP-29 relay for
-    creators; group-based communication with moderation tools.
-    <a href="https://github.com/pablof7z/relay29">github</a>
-    &middot; <a href="/stuff/relay29/">details</a></li>
-
-  <li><span class="proj-name">Shipyard</span> — a writing-focused nostr
-    client with a distraction-free editor for long-form publishing.
-    Originally called "nostr it" but everyone hated that name.
-    <a href="/stuff/shipyard/">details</a></li>
-
-  <li><span class="proj-name">walker</span> — a CLI tool for managing
-    nostr agents powered by LLMs. <a href="https://github.com/pablof7z/walker">github</a>
-    &middot; <a href="/stuff/walker/">details</a></li>
-
-  <li><span class="proj-name">zaplife.lol</span> — "I didn't choose the
-    zaplife": a real-time visualization of zaps flowing across nostr.
-    <a href="https://zaplife.lol">zaplife.lol</a>
-    &middot; <a href="/stuff/zaplife/">details</a></li>
-
-  <li><span class="proj-name">ai-sdk-provider-claude-code</span> — a
-    Vercel AI SDK adapter that lets you use Claude Code capabilities
-    through the AI SDK interface.
-    <a href="https://github.com/pablof7z/ai-sdk-provider-claude-code">github</a>
-    &middot; <a href="/stuff/ai-sdk-provider-claude-code/">details</a></li>
+<h2>what ships today</h2>
+<ul>
+  <li>Durable, self-owned cryptographic identity per (agent, machine)</li>
+  <li>Live one-line presence broadcast</li>
+  <li>Cross-host @mentions delivered as real conversational turns</li>
+  <li>Auto-detects and wires Claude Code, Codex, OpenCode, Grok</li>
 </ul>
+
+<p class="why">&ldquo;The agents aren't the bottleneck. The wire between them is &mdash;
+and the wire is you.&rdquo;</p>
+
+<p><a href="https://github.com/pablof7z/tenex-edge">github</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry featured" type="button">
+  <span class="entry-title">proactive-context</span>
+  <span class="entry-sub">Your spec already exists, scattered across chats with your coding agent.</span>
+  <template>
+<p>Every decision you've made, every correction you've issued, every time you changed
+your mind &mdash; you said it once, to your coding agent, and it scrolled away. The spec
+exists; it was just never written down in one place.</p>
+
+<p><code>pc</code> writes it down. A single local Rust binary hooks into your coding
+agents' native lifecycle &mdash; Claude Code, Codex, opencode, Hermes, TENEX. When a
+session ends, it distills what you settled into a per-project wiki: current truth on top,
+the history of how it got there preserved underneath, every claim cited to the exact
+transcript lines where it was said.</p>
+
+<p>Before each prompt, a hook finds the guides that bear on what you're about to ask and
+injects a cited briefing &mdash; the end of &ldquo;no, we use the outbox pattern, I told
+you this three weeks ago.&rdquo;</p>
+
+<p>Local-first: local embeddings, a SQLite file on disk, no account, no telemetry, no
+server.</p>
+
+<p class="why">&ldquo;A summary is lossy compression with no error term. <code>pc</code>
+treats your direction as the most precious signal in the system: kept permanently with
+verbatim receipts, never silently overwritten.&rdquo;</p>
+
+<p><a href="https://github.com/pablof7z/proactive-context">github</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry featured" type="button">
+  <span class="entry-title">Sovereign Engineering</span>
+  <span class="entry-sub">Six weeks in Madeira with people who actually ship.</span>
+  <template>
+<p>Run with Gigi. Six weeks of shipping, not talking. Sovereign Engineering brings
+together developers building the infrastructure for a freer future. Run by six rotating
+captains, demo day every Friday, no talking without shipping.</p>
+
+<h2>format</h2>
+<ul>
+  <li>6-week intensive cohort</li>
+  <li>In-person in Madeira</li>
+  <li>Focus on shipping real software</li>
+  <li>Bitcoin and nostr protocols</li>
+  <li>Peer learning with practitioners</li>
+</ul>
+
+<p>Not a bootcamp. A cohort of builders who want to work on hard problems together.</p>
+
+<p><a href="https://sovereignengineering.io">sovereignengineering.io</a></p>
+
+<p><a href="/stuff/sovereign-engineering/">full page &rarr;</a></p>
+  </template>
+</button>
+</div>
+
+<h2 class="stuff-section-label">everything else</h2>
+<div class="stuff-more">
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">tenex</span>
+  <span class="entry-sub">Orchestrating AI agents over nostr &mdash; the hardest thing I've ever built.</span>
+  <template>
+<p>TENEX is infrastructure for AI agents that need to work together without centralized
+coordination. Agents communicate over nostr, delegate tasks to specialists, maintain
+persistent memory, and transact using NIP-60 wallets.</p>
+
+<h2>capabilities</h2>
+<ul>
+  <li>Phase-based workflows with intelligent routing</li>
+  <li>Continuous learning through lessons and reports</li>
+  <li>Agent delegation with full context transfer</li>
+  <li>NIP-60 wallet for economic agency</li>
+  <li>Integration with Claude Code, Roo Code, and Goose</li>
+  <li>MCP server support for tool discovery</li>
+</ul>
+
+<h2>ecosystem</h2>
+<ul>
+  <li><strong>tenex-tools</strong> &mdash; CLI for publishing and finding agent profiles/skills</li>
+  <li><strong>tenex-web</strong> &mdash; web client for TENEX</li>
+  <li><strong>mcp-money</strong> &mdash; MCP server for agent payments</li>
+</ul>
+
+<p><em>&ldquo;Building TENEX has (I think) been the most difficult work I've done in my
+life, and one time I modified a program I didn't have the source code to by modifying the
+kernel of the Solaris it ran on.&rdquo;</em></p>
+
+<p><a href="https://tenex.chat">tenex.chat</a> &middot; <a href="https://github.com/pablof7z/tenex">github</a></p>
+
+<p><a href="/stuff/tenex/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">chirp</span>
+  <span class="entry-sub">A nostr client built on NMP &mdash; proof the shared Rust core actually works.</span>
+  <template>
+<p>chirp is the first client built NMP-native from day one, not retrofitted onto it. Every screen runs on the same Rust core that also powers olas-nmp &mdash; if chirp and Olas can share a brain, anything can.</p>
+
+<p><a href="https://github.com/pablof7z/chirp">github</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">olas</span>
+  <span class="entry-sub">Instagram for nostr, rebuilt NMP-native. Every pubkey should receive money, instantly.</span>
+  <template>
+<p>Olas brings visual content to nostr with kind:20 picture events. It's designed to
+feel familiar to Instagram users while running on sovereign infrastructure. Every pubkey
+should be able to receive money, instantly.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Kind:20 picture events with proper metadata</li>
+  <li>Video feed with sound</li>
+  <li>Swipe-to-zap gestures</li>
+  <li>Instagram-like photo filters</li>
+  <li>Multi-image posts</li>
+  <li>NWC wallet integration</li>
+  <li>Remote signer support (Amber, nsecBunker)</li>
+  <li>Nutzaps for ecash tipping</li>
+</ul>
+
+<p>Rebuilt NMP-native in 2026 &mdash; one shared Rust core across iOS, Android, and Rust,
+after years of maintaining separate codebases. Built originally with NDK and ndk-mobile.</p>
+
+<p><a href="https://olas.app">olas.app</a> &middot; <a href="https://github.com/pablof7z/olas-nmp">github</a></p>
+
+<p><a href="/stuff/olas/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">NDK</span>
+  <span class="entry-sub">The library most nostr clients end up using whether they meant to or not.</span>
+  <template>
+<p>NDK is a comprehensive toolkit that handles all the complexity of building on nostr:
+relay management, caching, signing, subscription handling, and event verification. It lets
+developers focus on building features instead of reinventing protocol plumbing.</p>
+
+<h2>packages</h2>
+<ul>
+  <li><strong>ndk-core</strong> &mdash; core functionality, relay pools, event handling</li>
+  <li><strong>ndk-svelte</strong> &mdash; Svelte 5 bindings with reactive stores</li>
+  <li><strong>ndk-react</strong> &mdash; React hooks for nostr</li>
+  <li><strong>ndk-mobile</strong> &mdash; React Native/Expo for iOS and Android</li>
+  <li><strong>ndk-wallet</strong> &mdash; NIP-60 wallet support</li>
+  <li><strong>ndk-cache-dexie</strong> &mdash; IndexedDB caching</li>
+  <li><strong>ndk-cache-redis</strong> &mdash; Redis caching for servers</li>
+  <li><strong>ndk-cli</strong> &mdash; command-line interface</li>
+  <li><strong>NDKSwift</strong> &mdash; Swift port for iOS/macOS</li>
+</ul>
+
+<h2>features</h2>
+<ul>
+  <li>Outbox model (NIP-65) for decentralized relay discovery</li>
+  <li>Subscription queueing for efficient relay usage</li>
+  <li>Automatic signature verification</li>
+  <li>Blossom media support</li>
+  <li>NIP-46 remote signing</li>
+  <li>Event threading and replies</li>
+  <li>Negentropy sync support</li>
+</ul>
+
+<p>Used by Olas, Highlighter, Coracle, Primal, and dozens of other nostr clients.</p>
+
+<p><a href="https://ndk.fyi">ndk.fyi</a> &middot; <a href="https://github.com/nostr-dev-kit/ndk">github</a></p>
+
+<p><a href="/stuff/ndk/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">nutsack</span>
+  <span class="entry-sub">NIP-60/61 wallets for humans &mdash; a wallet that lives in nostr.</span>
+  <template>
+<p>Nutsack implements NIP-60 (Cashu wallets on nostr) and NIP-61 (Nutzaps). Your ecash
+tokens are stored encrypted on relays, making them portable across any client that supports
+the standard.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Cashu ecash integration</li>
+  <li>P2PK token transfers (Nutzaps)</li>
+  <li>Cross-client wallet portability</li>
+  <li>PWA support for mobile</li>
+  <li>Multi-mint management</li>
+  <li>Transaction history on relays</li>
+</ul>
+
+<h2>how it works</h2>
+<ul>
+  <li>Tokens stored as NIP-60 events (encrypted)</li>
+  <li>Nutzaps use P2PK locks for recipient-only redemption</li>
+  <li>Any NIP-60 compatible client can access your wallet</li>
+  <li>No central server holds your money</li>
+</ul>
+
+<p><em>&ldquo;Don't load too much money; this is highly experimental!&rdquo;</em></p>
+
+<p><a href="https://nutsack.me">nutsack.me</a> &middot; <a href="https://github.com/pablof7z/nutsack">github</a></p>
+
+<p><a href="/stuff/nutsack/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">mcp-money</span>
+  <span class="entry-sub">MCP wallets for agents. “An important milestone in the path towards skynet.”</span>
+  <template>
+<p>mcp-money exposes Cashu wallet functionality through the Model Context Protocol.
+Agents running in Claude, Goose, or any MCP-compatible environment can check balances, send
+payments, and receive nutzaps.</p>
+
+<h2>capabilities</h2>
+<ul>
+  <li>NIP-60 wallet access via MCP</li>
+  <li>Send and receive nutzaps</li>
+  <li>Balance checking across mints</li>
+  <li>Transaction history</li>
+  <li>Multi-mint support</li>
+</ul>
+
+<h2>use cases</h2>
+<ul>
+  <li>Agents paying for DVM compute</li>
+  <li>Autonomous tipping based on value received</li>
+  <li>Agent-to-agent payments for delegated work</li>
+  <li>Bounty payouts</li>
+</ul>
+
+<p>This is the economic layer that makes TENEX agents useful beyond just completing tasks
+&mdash; they can participate in nostr's value-for-value economy. &ldquo;An important
+milestone in the path towards skynet.&rdquo;</p>
+
+<p><a href="https://github.com/pablof7z/mcp-money">github</a></p>
+
+<p><a href="/stuff/mcp-money/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">highlighter</span>
+  <span class="entry-sub">Substack without the platform risk. Annotate the web, get paid in sats.</span>
+  <template>
+<p>Highlighter implements NIP-84 highlights &mdash; the ability to select and share
+meaningful excerpts from articles, podcasts, and videos. It turns passive reading into
+active curation.</p>
+
+<h2>features</h2>
+<ul>
+  <li>NIP-84 highlight creation and discovery</li>
+  <li>Zap splits for content creators</li>
+  <li>NIP-88 recurring subscriptions</li>
+  <li>DVM (Data Vending Machine) integration</li>
+  <li>NIP-29 groups for communities</li>
+  <li>Curation-based earnings</li>
+</ul>
+
+<h2>creator tools</h2>
+<ul>
+  <li>Subscriber management</li>
+  <li>Revenue analytics</li>
+  <li>Tiered access levels</li>
+  <li>Community spaces</li>
+</ul>
+
+<p><em>&ldquo;Highlighter was like six major product pivots ago. I still plan on releasing
+Honeypot wallet based on this idea.&rdquo;</em></p>
+
+<p><a href="https://highlighter.com">highlighter.com</a> &middot; <a href="https://github.com/pablof7z/highlighter">github</a></p>
+
+<p><a href="/stuff/highlighter/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">chardin.js</span>
+  <span class="entry-sub">An old JS overlay-instructions library from 2013. Not my proudest work, still my most popular.</span>
+  <template>
+<p>chardin.js creates overlay instructions that point to elements on your page. Named
+after the style of annotating footage with overlay call-outs.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Simple API</li>
+  <li>Element highlighting</li>
+  <li>Customizable positioning</li>
+  <li>Works with any DOM structure</li>
+</ul>
+
+<p>A legacy project from a different era, but still used in production by many applications.</p>
+
+<p><a href="https://github.com/pablof7z/chardin.js">github</a></p>
+
+<p><a href="/stuff/chardin/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">nsecBunker</span>
+  <span class="entry-sub">It worked so well it started centralizing key custody, so I killed my own product.</span>
+  <template>
+<p>nsecBunker implements NIP-46 to provide OAuth-like flows for nostr. Instead of giving
+your nsec to every application, you run a bunker on trusted hardware and grant revocable,
+scoped access to clients.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Granular permission control per application</li>
+  <li>OAuth-like authorization flow</li>
+  <li>Team key sharing for organizations</li>
+  <li>LNbits integration for billing</li>
+  <li>Audit logging of all signing requests</li>
+  <li>Multi-key management</li>
+</ul>
+
+<p>The bunker model is the only sane way to use nostr keys across multiple clients without
+trusting every app with your identity. I stopped developing it once it started taking off in
+a way that would have been bad for nostr if it had kept scaling like that &mdash; see
+<a href="/nownownow/#y2024-11">the changelog</a> for why I killed my own successful product.</p>
+
+<p><a href="https://github.com/pablof7z/nsecbunker">github</a></p>
+
+<p><a href="/stuff/nsecbunker/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">EXIT.pub</span>
+  <span class="entry-sub">“You broke up with your ex; it wasn't treating you well.” The last bridge you need.</span>
+  <template>
+<p><em>&ldquo;You broke up with your ex; it wasn't treating you well.&rdquo;</em>
+EXIT helps people escape Twitter by porting their data to nostr. Upload your Twitter archive
+and recreate your posts, threads, and replies as nostr events, original dates and all.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Import Twitter archive</li>
+  <li>Recreate posts as kind:1 notes</li>
+  <li>Preserve thread structure</li>
+  <li>Match follows to nostr pubkeys</li>
+</ul>
+
+<p><a href="https://exit.pub">exit.pub</a></p>
+
+<p><a href="/stuff/exit/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">Wikifreedia</span>
+  <span class="entry-sub">Wikipedia without the editorial politburo. Sign your edits, let web of trust sort it out.</span>
+  <template>
+<p>Wikifreedia reimagines collaborative knowledge building on a censorship-resistant
+substrate. Articles are events, edits are signed, and reputation emerges from the web of
+trust rather than administrator hierarchies. Truth doesn't come from consensus; embrace the
+bias, sign your edits, let the web of trust sort it out.</p>
+
+<h2>features</h2>
+<ul>
+  <li>djot article format</li>
+  <li>Custom relay support</li>
+  <li>In-browser editor</li>
+  <li>Mentions and reactions</li>
+  <li>Version history through event chains</li>
+  <li>Author attribution and reputation</li>
+</ul>
+
+<h2>philosophy</h2>
+<ul>
+  <li>No central editorial board</li>
+  <li>Trust-based content ranking</li>
+  <li>Forkable knowledge bases</li>
+  <li>Censorship-resistant by design</li>
+</ul>
+
+<p><em>&ldquo;If truth by consensus is not the way, if humans are unavoidably biased, the
+best stuff would come from embracing and doubling down on the biases.&rdquo;</em></p>
+
+<p><a href="https://wikifreedia.xyz">wikifreedia.xyz</a> &middot; <a href="https://github.com/pablof7z/wikifreedia">github</a></p>
+
+<p><a href="/stuff/wikifreedia/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">vendata.io</span>
+  <span class="entry-sub">A compute marketplace on nostr: post a job, machines bid, pay in sats.</span>
+  <template>
+<p>A frontend for the DVM ecosystem. Browse available services, submit jobs, and pay
+for compute &mdash; all coordinated through nostr. APIs carry an inherent massive rug risk;
+don't get rugged, don't rug others.</p>
+
+<h2>capabilities</h2>
+<ul>
+  <li>Browse DVM providers</li>
+  <li>Submit job requests</li>
+  <li>Compare quotes</li>
+  <li>Pay via Lightning</li>
+</ul>
+
+<p><a href="https://vendata.io">vendata.io</a></p>
+
+<p><a href="/stuff/vendata/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">DVM</span>
+  <span class="entry-sub">Reference implementation of NIP-90 Data Vending Machines.</span>
+  <template>
+<p>DVMs are compute marketplaces on nostr. Clients request work (translations, AI
+inference, image generation), DVMs bid on jobs, and payments flow via Lightning or ecash.</p>
+
+<h2>how it works</h2>
+<ul>
+  <li>Client publishes job request (kind 5xxx)</li>
+  <li>DVMs respond with quotes</li>
+  <li>Client pays and receives result</li>
+  <li>All coordination happens on nostr relays</li>
+</ul>
+
+<p>This reference implementation demonstrates the full DVM lifecycle and can be extended
+for any compute workload.</p>
+
+<p><a href="https://github.com/pablof7z/nostr-data-vending-machine">github</a></p>
+
+<p><a href="/stuff/nostr-data-vending-machine/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">vibeline</span>
+  <span class="entry-sub">Talk into your phone, get back structured, actionable output.</span>
+  <template>
+<p>Record voice memos and get back structured, actionable content. Transcription,
+summarization, and extraction in one tool. I once one-shotted an entire working app from a
+voice memo without touching a key.</p>
+
+<h2>features</h2>
+<ul>
+  <li>AI transcription</li>
+  <li>Structured output extraction</li>
+  <li>Action item detection</li>
+  <li>Summary generation</li>
+</ul>
+
+<p><a href="https://github.com/pablof7z/vibeline">github</a></p>
+
+<p><a href="/stuff/vibeline/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">purplepag.es</span>
+  <span class="entry-sub">Boring infrastructure that half of nostr quietly depends on.</span>
+  <template>
+<p>A specialized relay that aggregates kind:0 profile events. Useful for discovery and
+as an inbox/outbox relay for the NIP-65 outbox model. Boring infrastructure that half of
+nostr quietly depends on.</p>
+
+<h2>stats</h2>
+<ul>
+  <li>20,000+ pubkeys use it as a relay</li>
+  <li>Running strfry software</li>
+  <li>Profile aggregation from across nostr</li>
+</ul>
+
+<p>The board of relay directors has since approved expanding business to the broader
+category of &ldquo;lists.&rdquo;</p>
+
+<p><a href="https://purplepag.es">purplepag.es</a></p>
+
+<p><a href="/stuff/purplepages/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<div class="legacy-heading">older / retired projects</div>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">Ambulando</span>
+  <span class="entry-sub">Voice-first social network for iOS. 60-second voice messages on nostr.</span>
+  <template>
+<p>Ambulando is about voice, not text. Record short audio messages, share them with your
+web of trust, discover people through their voice.</p>
+
+<h2>features</h2>
+<ul>
+  <li>60-second voice messages</li>
+  <li>Trust-based feed (WoT)</li>
+  <li>Audio-first discovery</li>
+  <li>Native iOS</li>
+</ul>
+
+<p>The name comes from Latin &ldquo;ambulando solvitur&rdquo; &mdash; it is solved by walking
+(and talking).</p>
+
+<p><a href="https://github.com/pablof7z/Ambulando">github</a></p>
+
+<p><a href="/stuff/ambulando/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">collab</span>
+  <span class="entry-sub">Google Docs-style real-time collaborative editing on nostr, no Google required.</span>
+  <template>
+<p>Google Docs-style collaboration without the Google. Documents are nostr events, edits
+propagate through relays, and presence is coordinated in real-time.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Real-time cursor presence</li>
+  <li>CRDT-based conflict resolution</li>
+  <li>Document versioning</li>
+  <li>Share via nostr identity</li>
+</ul>
+
+<p><a href="https://github.com/pablof7z/collab">github</a></p>
+
+<p><a href="/stuff/collab/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">Honeypot</span>
+  <span class="entry-sub">A NIP-60 wallet for subscription management, like Apple's Subscriptions app.</span>
+  <template>
+<p>Honeypot manages recurring payments using NIP-88 subscriptions. Track what you're
+supporting, cancel or adjust, all from one interface.</p>
+
+<h2>features</h2>
+<ul>
+  <li>View all active subscriptions</li>
+  <li>Manage recurring payments</li>
+  <li>Cancel with one tap</li>
+  <li>Payment history</li>
+</ul>
+
+<p>Based on ideas from Highlighter. Currently in TestFlight.</p>
+
+<p><a href="/stuff/honeypot/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">Kind0.io</span>
+  <span class="entry-sub">Rotate your nostr keys without losing your identity when your nsec is compromised.</span>
+  <template>
+<p>If your key gets compromised, Kind0.io lets you prove ownership of a new key. You
+whitelist your next npub ahead of time, and when needed, publish a migration event.</p>
+
+<h2>how it works</h2>
+<ul>
+  <li>Whitelist your backup npub in advance</li>
+  <li>Timestamp to Bitcoin blockchain for proof</li>
+  <li>If compromised, publish migration event</li>
+  <li>Followers can verify the transition</li>
+</ul>
+
+<p>The problem: nostr identities are keypairs, and if you lose your nsec or it gets stolen,
+you lose everything. This is a first step toward solving that.</p>
+
+<p><a href="https://kind0.io">kind0.io</a></p>
+
+<p><a href="/stuff/kind0/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">nostr-chat-widget</span>
+  <span class="entry-sub">An embeddable nostr-powered chat widget for any website.</span>
+  <template>
+<p>Drop a nostr-powered chat on any website. Messages are real nostr events, so
+participants can continue conversations in their favorite client.</p>
+
+<h2>features</h2>
+<ul>
+  <li>One-line embed</li>
+  <li>Customizable styling</li>
+  <li>Works with any nostr identity</li>
+  <li>Messages persist on relays</li>
+</ul>
+
+<p><a href="https://nostri.chat">nostri.chat</a> &middot; <a href="https://github.com/pablof7z/nostr-chat-widget">github</a></p>
+
+<p><a href="/stuff/nostr-chat-widget/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">Posta</span>
+  <span class="entry-sub">A Telegram-like iOS messaging app on nostr, end-to-end encrypted.</span>
+  <template>
+<p>Posta brings the familiar Telegram UX to nostr DMs. Fast, encrypted, native iOS.</p>
+
+<h2>features</h2>
+<ul>
+  <li>NIP-04/NIP-44 encrypted DMs</li>
+  <li>Real-time message delivery</li>
+  <li>Native iOS interface</li>
+  <li>Contact discovery via nostr</li>
+</ul>
+
+<p><a href="https://github.com/pablof7z/Posta">github</a></p>
+
+<p><a href="/stuff/posta/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">relay29</span>
+  <span class="entry-sub">A NIP-29 relay for creators; group-based communication with moderation.</span>
+  <template>
+<p>NIP-29 defines relay-based groups with moderation capabilities. relay29 is a reference
+implementation that lets creators run their own group infrastructure.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Group creation and management</li>
+  <li>Moderation tools (kick, mute, ban)</li>
+  <li>Invite-only or public groups</li>
+  <li>Thread support within groups</li>
+</ul>
+
+<p><a href="https://github.com/pablof7z/relay29">github</a></p>
+
+<p><a href="/stuff/relay29/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">Shipyard</span>
+  <span class="entry-sub">A distraction-free nostr client for long-form publishing.</span>
+  <template>
+<p>Shipyard strips away the noise and gives you a clean editor for long-form content.
+Schedule posts, manage drafts, and publish to nostr without distractions.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Distraction-free editor</li>
+  <li>Content scheduling</li>
+  <li>Draft management</li>
+  <li>Multiple identity support</li>
+</ul>
+
+<p>Originally called &ldquo;nostr it&rdquo; but everyone hated that name.</p>
+
+<p><a href="https://shipyard.pub">shipyard.pub</a></p>
+
+<p><a href="/stuff/shipyard/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">walker</span>
+  <span class="entry-sub">A CLI tool for managing nostr agents powered by LLMs.</span>
+  <template>
+<p>Walker helps you configure and run LLM-powered agents that operate over nostr.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Agent configuration</li>
+  <li>LLM provider integration</li>
+  <li>Nostr identity management</li>
+  <li>Task automation</li>
+</ul>
+
+<p><a href="https://github.com/pablof7z/walker">github</a></p>
+
+<p><a href="/stuff/walker/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">zaplife.lol</span>
+  <span class="entry-sub">“I didn't choose the zaplife.” A real-time visualization of zaps across nostr.</span>
+  <template>
+<p>A real-time visualization of zaps flowing across nostr. Watch the value-for-value
+economy in action.</p>
+
+<p><a href="https://zaplife.lol">zaplife.lol</a></p>
+
+<p><a href="/stuff/zaplife/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">ai-sdk-provider-claude-code</span>
+  <span class="entry-sub">A Vercel AI SDK adapter for Claude Code capabilities.</span>
+  <template>
+<p>An adapter that lets you use Claude Code capabilities through the Vercel AI SDK interface.</p>
+
+<p><a href="https://github.com/pablof7z/ai-sdk-provider-claude-code">github</a></p>
+
+<p><a href="/stuff/ai-sdk-provider-claude-code/">full page &rarr;</a></p>
+  </template>
+</button>
+</div>
 
 <footer>
   f7z.io
 </footer>
+
+<script src="/nownownow/panel.js" defer></script>
