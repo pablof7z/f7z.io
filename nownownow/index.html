@@ -23,6 +23,87 @@
 <h3 class="month-heading">July</h3>
 <div class="entries">
 <button class="entry" type="button">
+  <span class="entry-date">2026-07-04</span>
+  <span class="entry-title">nutsack: two-party nutzap round-trip goes green</span>
+  <span class="entry-sub">Send &rarr; auto-redeem &rarr; both balances settle. The acceptance test passes un-ignored.</span>
+  <template>
+    <p>nutsack's full two-party nutzap round-trip goes green against testnut: "send &rarr; auto-redeem &rarr; both balances settle."</p>
+    <p class="why">why: the acceptance test now passes un-ignored &mdash; two identities mint value-less ecash and nutzap each other, for real.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-03</span>
+  <span class="entry-title">Trellis 0.2.0 &mdash; the pre-1.0 release that intentionally breaks things</span>
+  <span class="entry-sub">Per-output payload typing, transaction-local audit history, proptest+fuzz in CI. Plus "Leak Duel" and "Flight Recorder" demos.</span>
+  <template>
+    <p>Trellis 0.2.0: an intentionally-breaking pre-1.0 release &mdash; per-output payload typing, structured ResourceKey segments, transaction-local audit history, proptest+fuzz in CI. Two browser demos ship alongside it: "Leak Duel" (a split-screen callbacks-vs-Trellis comparison with a chaos slider showing leaked attachments) and "Flight Recorder" ("git blame for side effects").</p>
+    <p class="why">why: Trellis is a deterministic reconciler for Rust app kernels &mdash; state changes in, effect plans and receipts out. It exists to kill the leaked-subscription/lifecycle-drift bug class in long-lived nostr clients: state lives in a transactional graph, I/O is forbidden inside it, and every change emits a resource plan, output frames, and a receipt you can replay. The adoption model is "shadow mode" &mdash; "Don't trust it &mdash; shadow it. Deleting your bespoke code is the last step of adoption, not the first." The pitch: "software your agents can debug."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-03</span>
+  <span class="entry-title">NMP cuts v1.0.0-rc.1</span>
+  <span class="entry-sub">Each NIP decomposed into its own "concept" crate on the way to a stable 1.0 core.</span>
+  <template>
+    <p>NMP cuts v1.0.0-rc.1: the first release candidate for a stable 1.0 core, after a big decomposition sweep pushing each NIP into its own "concept" crate (nmp-nip09, nmp-nip25, nmp-nip29...).</p>
+    <p class="why">why: a 1.0 core is a promise other apps build their whole architecture on &mdash; it has to be decomposed cleanly before it's frozen.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-03</span>
+  <span class="entry-title">tenex-edge puts its live surfaces under Trellis</span>
+  <span class="entry-sub">"Trellis owns decisions; the host owns observations and effects."</span>
+  <template>
+    <p>tenex-edge puts its live surfaces &mdash; relay subscriptions, kind:30315 status, the fabric snapshot &mdash; under Trellis.</p>
+    <p class="why">why: "Trellis owns decisions; the host owns observations and effects." The same reconciler discipline that's supposed to save every NMP app applies to the fabric daemon too.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-03</span>
+  <span class="entry-title">tenex-edge collapses "projects" and "channels" into one recursive node</span>
+  <span class="entry-sub">"User proposed completely removing the concept of 'projects' and making everything nested channels."</span>
+  <template>
+    <p>tenex-edge collapsed "projects" and "channels" into one recursive node.</p>
+    <p class="why">why: "User proposed completely removing the concept of 'projects' and making everything nested channels." Filed as risk:high, needs-human-policy &mdash; a structural change big enough to flag before committing to it fully.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-03</span>
+  <span class="entry-title">tenex-edge stops auto-publishing user prompts as kind:9</span>
+  <span class="entry-sub">"Nothing should do that &mdash; let's leave it as something that agents do explicitly or users do explicitly."</span>
+  <template>
+    <p>tenex-edge removed auto-publishing of user prompts as kind:9.</p>
+    <p class="why">why, a self-reversal: "I've changed my mind about the user hook auto-publishing kind:9s &mdash; nothing should do that &mdash; let's leave it as something that agents do explicitly or users do explicitly."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-03</span>
+  <span class="entry-title">trellis-marketing born &mdash; "The Ledger"</span>
+  <span class="entry-sub">"No claim without a runnable artifact." A kill switch if the content ever outruns the code.</span>
+  <template>
+    <p>trellis-marketing repo born, running "The Ledger" &mdash; an honesty-first strategy.</p>
+    <p class="why">why: standing rules &mdash; "No claim without a runnable artifact," "One category word: 'reconciler'" &mdash; and a kill switch: "The moment content outruns the code, the honesty brand &mdash; the entire strategy &mdash; is dead."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-03</span>
+  <span class="entry-title">nutsack scaffolded &mdash; a Rust successor to the old iOS Nutsack</span>
+  <span class="entry-sub">Deliberately built as an external NMP consumer. "Zero wallet logic here."</span>
+  <template>
+    <p>nutsack scaffolded: NIP-60/61 Cashu wallet, a Rust successor to the old iOS Nutsack, deliberately built as an external NMP consumer &mdash; "Zero wallet logic here."</p>
+    <p class="why">why: dogfood NMP's wallet core from outside the monorepo, the same way any third-party app would have to.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-03</span>
+  <span class="entry-title">podcast-player finishes its UniFFI-facade migration</span>
+  <span class="entry-sub">Re-pinned to NMP master tip.</span>
+  <template>
+    <p>podcast-player finishes its UniFFI-facade migration and re-pins to NMP master tip.</p>
+    <p class="why">why: staying pinned to the moving core is the tax every downstream app pays for the shared-core payoff.</p>
+  </template>
+</button>
+<button class="entry" type="button">
   <span class="entry-date">2026-07-02</span>
   <span class="entry-title">Publicly done with Claude &mdash; and shipped trellis</span>
   <span class="entry-sub">The models stopped being the bottleneck a while ago; the harnesses are.</span>
@@ -32,12 +113,75 @@
     <p class="why">That's exactly why I keep building my own.</p>
   </template>
 </button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-02</span>
+  <span class="entry-title">NMP's Trellis read-lifecycle engine lands, feed surface frozen</span>
+  <span class="entry-sub">FeedSessions renamed to Feeds ahead of 1.0.</span>
+  <template>
+    <p>NMP's Trellis-based read-lifecycle engine lands, and the app-facing feed surface is frozen ahead of 1.0 (renamed FeedSessions &rarr; Feeds).</p>
+    <p class="why">why: freezing the surface app developers actually touch is what makes a 1.0 promise real.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-02</span>
+  <span class="entry-title">nak gets kind:1111 comment threading</span>
+  <span class="entry-sub">The nostr army-knife keeps picking up new kinds.</span>
+  <template>
+    <p>nak gets kind:1111 comment threading support.</p>
+    <p class="why">why: nak is the reference CLI &mdash; it should speak every kind worth speaking.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-01</span>
+  <span class="entry-title">Trellis is born &mdash; 20 milestones in a single day</span>
+  <span class="entry-sub">Full-recompute oracle, public release artifacts, a website. All in one day.</span>
+  <template>
+    <p>Trellis is born and reaches 20 milestones (M1&ndash;M20) in a single day, including a full-recompute oracle and public release artifacts plus a website.</p>
+    <p class="why">why, from the charter: it exists to prevent the implementation from "drifting into a generic signal runtime, callback framework, query cache, async scheduler, or domain-specific application kernel."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-01</span>
+  <span class="entry-title">proactive-context publishes its site</span>
+  <span class="entry-sub">Wiki oracle mode, briefing text in the TUI.</span>
+  <template>
+    <p>proactive-context publishes its site, after shipping wiki oracle mode and briefing_text in the TUI.</p>
+    <p class="why">why: a tool worth using every day is worth a real front door too.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-07-01</span>
+  <span class="entry-title">29er goes fully reactive, hard-breaks onto UniFFI</span>
+  <span class="entry-sub">A push-based TUI, no more polling.</span>
+  <template>
+    <p>29er finishes its UniFFI facade and hard-breaks iOS onto it, then rebuilds the TUI as fully reactive and push-based.</p>
+    <p class="why">why: a chat client that polls for updates is a chat client that feels laggy &mdash; push-based is the only correct architecture for it.</p>
+  </template>
+</button>
 </div>
 </div>
 
 <div class="month-block" id="y2026-06" data-month-label="June">
 <h3 class="month-heading">June</h3>
 <div class="entries">
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-29</span>
+  <span class="entry-title">tenex-edge: every agent gets a durable identity</span>
+  <span class="entry-sub">Born-right ordinal pubkeys, each ordinal signs its own key. Deleted "session codenames."</span>
+  <template>
+    <p>tenex-edge gave every agent a first-class durable identity: born-right ordinal pubkeys, each ordinal signs its own key, "session codenames" deleted. NIP-29 membership made durable too &mdash; "it shouldn't remove it on session end." Plus agent discovery + recruitment: `tenex-edge agents` / `invite &lt;slug@backend&gt;` as "the explicit alternative to @-mentioning, which never auto-spawns."</p>
+    <p class="why">why: an agent is a pubkey with a persistent identity, not a disposable session &mdash; that's the whole NIP-AE thesis, made concrete in the fabric itself.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-28</span>
+  <span class="entry-title">Rewrote tenex-edge onto a single per-machine daemon</span>
+  <span class="entry-sub">Sole owner of state.db and the one relay connection &mdash; every CLI/session becomes a thin client.</span>
+  <template>
+    <p>Rewrote tenex-edge onto a single per-machine daemon: sole owner of state.db and the one relay connection, with every CLI/session reduced to a thin client. Plus spawn-on-mention.</p>
+    <p class="why">why: collapses the multi-writer corruption class that bit the TUI in May &mdash; one owner of the state, not five processes racing each other to write it.</p>
+  </template>
+</button>
 <button class="entry" type="button">
   <span class="entry-date">2026-06-28</span>
   <span class="entry-title">Shipped chirp, a nostr client built on NMP</span>
@@ -48,12 +192,147 @@
   </template>
 </button>
 <button class="entry" type="button">
+  <span class="entry-date">2026-06-27</span>
+  <span class="entry-title">NMP v0.8.0 + Highlighter reaches the browser via WASM</span>
+  <span class="entry-sub">Same Rust core, now running in the browser too.</span>
+  <template>
+    <p>NMP v0.8.0 (profile-resolution overhaul) shipped the same day Highlighter reached the browser via a WASM bridge &mdash; the same Rust core, now in the browser.</p>
+    <p class="why">why: one core, every platform, including the one platform you can't ship a native binary to.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-26</span>
+  <span class="entry-title">Highlighter deletes its own core</span>
+  <span class="entry-sub">SafeHighlighterCore + 26 bespoke Rust modules gone: 1380 &rarr; 173 lines.</span>
+  <template>
+    <p>Highlighter deletes its own core: SafeHighlighterCore plus 26 bespoke Rust modules gone, 1380 lines down to 173. NMP migration declared complete &mdash; it now runs entirely on the shared kernel.</p>
+    <p class="why">why: deleting your bespoke code is the last step of adoption, not the first &mdash; and here it's done: the app-specific core is just gone.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-25</span>
+  <span class="entry-title">croissant survives a memory crisis</span>
+  <span class="entry-sub">"Observed as 47GB RSS after 9 hours of operation." Ripped out the search stack, added write deadlines.</span>
+  <template>
+    <p>croissant, the fabric's NIP-29 relay, survived a memory crisis: ripped out bleve/lingua search (3GB &rarr; under 500MB), added WebSocket write deadlines.</p>
+    <p class="why">why: "Over time this causes unbounded goroutine and memory growth &mdash; observed as 47GB RSS after 9 hours of operation." The ground the whole fabric runs on has to not fall over.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-25</span>
+  <span class="entry-title">proactive-context ships `pc recall` and an essay</span>
+  <span class="entry-sub">"Don't Compress Your Mind: The Authored Layer Hiding Inside Your AI Chats."</span>
+  <template>
+    <p>proactive-context ships `pc recall`, a native Rust load-everything RAG, alongside an essay: "Don't Compress Your Mind: The Authored Layer Hiding Inside Your AI Chats."</p>
+    <p class="why">why: the wiki it distills from your conversations is only useful if you can actually pull the right piece back out.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-25</span>
+  <span class="entry-title">purplepag.es: negentropy plus a day of OOM firefighting</span>
+  <span class="entry-sub">"Fix hourly OOM: disable full LMDB scans in analytics worker." It was falling over hourly.</span>
+  <template>
+    <p>purplepag.es shipped NIP-77 negentropy support, then spent a day on "Fix hourly OOM: disable full LMDB scans in analytics worker."</p>
+    <p class="why">why: keep-the-lights-on-at-scale work, unglamorous and load-bearing &mdash; exactly why I keep maintaining it.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-23</span>
+  <span class="entry-title">29er born</span>
+  <span class="entry-sub">A NIP-29 group-chat client, rebuilt strictly on NMP doctrine, in a two-day sprint.</span>
+  <template>
+    <p>29er born: a NIP-29 group-chat client rebuilt strictly on NMP doctrine &mdash; Rust core + Ratatui TUI + iOS, a full TUI chat client shipped in a two-day sprint.</p>
+    <p class="why">why: prove the doctrine on a new client from scratch, not just on ports of existing apps.</p>
+  </template>
+</button>
+<button class="entry" type="button">
   <span class="entry-date">2026-06-19</span>
   <span class="entry-title">Shipped olas-nmp &mdash; Olas rebuilt NMP-native</span>
-  <span class="entry-sub">Swift + Kotlin + Rust: one core instead of duplicated iOS/Android codebases.</span>
+  <span class="entry-sub">Swift + Kotlin + Rust: one core instead of duplicated iOS/Android codebases. Ships with its own relay.</span>
   <template>
-    <p>Shipped olas-nmp &mdash; the Olas photo app rebuilt NMP-native, Swift + Kotlin + Rust.</p>
+    <p>Shipped olas-nmp &mdash; the Olas photo app rebuilt NMP-native, Swift + Kotlin + Rust. It ships with its own relay (olas.f7z.io), then hard-enforces NMP doctrine by ripping parsing/policy/optimistic-mutations out of the shells entirely, then runs a UX P0&ndash;P3 sweep &mdash; real follow-packs, blurhash skeletons, haptics, camera-first capture, WoT discover &mdash; built via multi-agent PERT and device-validated.</p>
     <p class="why">why: Olas was born as duplicated iOS/Android codebases; rebuilding it on one Rust core is the whole point of the NMP bet.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-18</span>
+  <span class="entry-title">podcast-player moves on-device AI into the kernel</span>
+  <span class="entry-sub">Core ML embeddings, RAG fusion, kernel voice engine, transcript-aligned AutoSnip.</span>
+  <template>
+    <p>podcast-player moves on-device AI into the kernel: Core ML MiniLM embeddings, RAG fusion (cosine KNN + BM25 via RRF), a kernel voice engine, and transcript-aligned AutoSnip.</p>
+    <p class="why">why: the kernel becomes the AI brain, not just data plumbing.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-18</span>
+  <span class="entry-title">Tenex Off: NIP-29 group chat as a first-class entity</span>
+  <span class="entry-sub">"Add a view for nip-29 chat support so I can see kind:9 chats in a project."</span>
+  <template>
+    <p>Tenex Off added NIP-29 group chat (kind:9) as a first-class entity across the Rust core, TUI, iOS, and Android.</p>
+    <p class="why">why: "add a view for nip-29 chat support so I can see kind:9 chats in a project."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-15</span>
+  <span class="entry-title">Tenex Off restructured as "an inbox of decisions"</span>
+  <span class="entry-sub">Whole UI went grayscale for the Daylight tablet.</span>
+  <template>
+    <p>Tenex Off restructured around a simple idea &mdash; "proposals only are decisions" &mdash; and its whole UI went grayscale for the Daylight tablet.</p>
+    <p class="why">why: "this needs a proper rethinking and restructuring"; grayscale because "the Daylight Computer hardware is a grayscale 'live paper' tablet."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-14</span>
+  <span class="entry-title">NMP v0.7.0 &mdash; NIP-55 Amber sign-in + Android parity</span>
+  <span class="entry-sub">Landed across podcast and Highlighter the same days &mdash; the shared-core payoff, visible in two apps at once.</span>
+  <template>
+    <p>NMP v0.7.0: NIP-55 Amber sign-in plus Android parity, landing across both podcast-player and Highlighter the same days.</p>
+    <p class="why">why: this is the shared-core payoff made visible &mdash; one feature, two apps, at the same time, for free.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-14</span>
+  <span class="entry-title">Cut Tracker gets a marketing site and TestFlight</span>
+  <span class="entry-sub">cut.f7z.io goes live.</span>
+  <template>
+    <p>Cut Tracker gets a marketing site at cut.f7z.io and a TestFlight build.</p>
+    <p class="why">why: a real product needs a real front door, even a small one.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-13</span>
+  <span class="entry-title">Tenex Off kills the "mega-feed"</span>
+  <span class="entry-sub">Adopted 3-tab device-native nav (Proposals/Projects/Activity) across iOS/Android/TUI.</span>
+  <template>
+    <p>Tenex Off killed the "mega-feed," adopting 3-tab device-native nav (Proposals/Projects/Activity) across iOS, Android, and TUI.</p>
+    <p class="why">why: the phone UX was "insanely hacky" and had to be "adapted to device-native patterns"; Opus design agents were fanned out to determine the right product shape per platform.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-12</span>
+  <span class="entry-title">NMP release cascade &mdash; v0.3.0 &rarr; v0.6.0 in ~24 hours</span>
+  <span class="entry-sub">Downstream apps forcing iteration, fast.</span>
+  <template>
+    <p>NMP release cascade: v0.3.0 &rarr; v0.6.0 in roughly 24 hours, as downstream apps forced iteration.</p>
+    <p class="why">why: when three apps depend on one core, the core has to move as fast as the neediest app.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-12</span>
+  <span class="entry-title">Highlighter formally migrates to NMP</span>
+  <span class="entry-sub">Picks up an Android target for free.</span>
+  <template>
+    <p>Highlighter formally migrates to NMP, and picks up an Android target for free in the process.</p>
+    <p class="why">why: this is the whole pitch of a shared core &mdash; a platform you didn't build for shows up anyway.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-12</span>
+  <span class="entry-title">Tenex Off: Ollama Cloud as default</span>
+  <span class="entry-sub">"It should default to ollama cloud's endpoint, but the user should be able to point to a computer in their network."</span>
+  <template>
+    <p>Tenex Off makes Ollama Cloud the default backend.</p>
+    <p class="why">why: "ollama is not running on the local device; it should default to ollama cloud's endpoint but the user should be able to point to a computer in their network."</p>
   </template>
 </button>
 <button class="entry" type="button">
@@ -63,6 +342,60 @@
   <template>
     <p>tenex-edge and tenex-off &mdash; TENEX agents living on a shared fabric, aware of each other.</p>
     <p class="why">why: agents that can see each other's work coordinate like colleagues, not like function calls.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-11</span>
+  <span class="entry-title">Wikifreedia gets an admin panel</span>
+  <span class="entry-sub">Comparison model/prompt overrides.</span>
+  <template>
+    <p>Wikifreedia gets an admin panel for comparison model/prompt overrides.</p>
+    <p class="why">why: tuning the epistemic-comparison engine needs a real control surface, not config-file edits.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-09</span>
+  <span class="entry-title">Launched "Tenex Off"</span>
+  <span class="entry-sub">"An inbox of decisions, used away from the desk, that feels calm and glanceable."</span>
+  <template>
+    <p>Launched "Tenex Off": a calm, glanceable companion app &mdash; voice notes, iOS, naddr deep-linking.</p>
+    <p class="why">why: "an inbox of decisions, used away from the desk, that feels calm and glanceable."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-08</span>
+  <span class="entry-title">Highlighter's turn: plan the NMP mobile rebuild</span>
+  <span class="entry-sub">Hundreds of "refactor: project ... in Rust" commits &mdash; the UI reduced to Rust projections.</span>
+  <template>
+    <p>Highlighter's turn: "plan NMP RMP mobile rebuild" triggers hundreds of "refactor: project ... in Rust" commits &mdash; the entire UI reduced to Rust projections.</p>
+    <p class="why">why: the pattern repeats app by app &mdash; plan the rebuild, then just execute it, because the core already proved itself elsewhere.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-08</span>
+  <span class="entry-title">pc gets `pc install` and a marathon of eval runs</span>
+  <span class="entry-sub">Multi-harness hooks, installed and iterated on hard.</span>
+  <template>
+    <p>proactive-context ships `pc install` for multi-harness hooks, then runs a marathon of eval-driven "Runs."</p>
+    <p class="why">why: a tool that hooks your coding agent has to prove it doesn't make things worse before it earns a permanent place in the loop.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-06</span>
+  <span class="entry-title">nostrord v1.5.0 &mdash; NIP-29 moderation, optimistic send</span>
+  <span class="entry-sub">Ordered-relay project keeps shipping.</span>
+  <template>
+    <p>nostrord v1.5.0: NIP-29 moderation plus optimistic send.</p>
+    <p class="why">why: moderation and a snappy send path are both table stakes for a relay people actually chat through.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-06-01</span>
+  <span class="entry-title">podcast-player goes "kernel-owned"</span>
+  <span class="entry-sub">Swift logic deleted wholesale &mdash; inbox triage, auto-download, merge policy, all moved to Rust.</span>
+  <template>
+    <p>podcast-player goes "kernel-owned": Swift logic deleted wholesale &mdash; inbox triage, auto-download, and merge policy all moved into the Rust core.</p>
+    <p class="why">why: if the logic can live in the shared core, it shouldn't live in the shell &mdash; that's the whole discipline of NMP.</p>
   </template>
 </button>
 </div>
@@ -81,20 +414,83 @@
   </template>
 </button>
 <button class="entry" type="button">
-  <span class="entry-date">2026-05-27</span>
-  <span class="entry-title">Shipped serial-killer, a relay implementing NIP-EC</span>
-  <span class="entry-sub">Relay-enforced linear event chains so you can't accidentally wipe your follow list.</span>
+  <span class="entry-date">2026-05-31</span>
+  <span class="entry-title">NMP cuts its first releases, v0.1.0 &rarr; v0.2.0</span>
+  <span class="entry-sub">"156 commits since 0.1.0." Kernel delivers an initial snapshot offline at launch.</span>
   <template>
-    <p>Shipped serial-killer, a relay implementing NIP-EC: relay-enforced linear event chains so you can't accidentally wipe your follow list.</p>
+    <p>NMP cuts its first releases v0.1.0 &rarr; v0.2.0: "156 commits since 0.1.0"; "kernel delivers an initial snapshot offline at launch without waiting for a relay."</p>
+    <p class="why">why: an offline-first snapshot is the whole point of a shared Rust core &mdash; the app should never sit staring at a spinner waiting on a relay.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-30</span>
+  <span class="entry-title">TENEX picks up Claude-Code-compatible project hooks</span>
+  <span class="entry-sub">Meet agents where their tooling already expects hooks to live.</span>
+  <template>
+    <p>TENEX picks up Claude-Code-compatible project hooks.</p>
+    <p class="why">why: interoperate with the hook conventions agents already know instead of inventing a new one.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-28</span>
+  <span class="entry-title">proactive-context born</span>
+  <span class="entry-sub">"Every project has a spec. Yours is scattered across months of conversations with your coding agent."</span>
+  <template>
+    <p>proactive-context (`pc`) born: a Rust binary that hooks coding-agent lifecycles and distills a per-project, citation-anchored wiki from your conversations. "Every project has a spec. Yours is scattered across months of conversations with your coding agent... pc writes it down."</p>
+    <p class="why">why: fabricated citations are unrepresentable, not merely caught &mdash; Rust slices the quoted evidence directly out of the source conversation, so a hallucinated claim has nowhere to point.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-28</span>
+  <span class="entry-title">serial-killer adds divergence detection and a `fix` command</span>
+  <span class="entry-sub">"Don't mistake this for a global enforcement or ordering guarantee... there is no global."</span>
+  <template>
+    <p>Shipped serial-killer, a relay implementing NIP-EC: relay-enforced linear event chains so you can't accidentally wipe your follow list. It's per-relay optimistic concurrency (CAS), not global &mdash; "don't mistake this for a global enforcement or ordering guarantee... There is no global." A few days later it adds divergence detection plus `fix` (replay the winning branch).</p>
     <p class="why">why: "Data consistency has a price; the question is not when you don't want it, it's how much you're paying for it."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-25</span>
+  <span class="entry-title">podcast-player commits to NMP</span>
+  <span class="entry-sub">M0&ndash;M13 migration plan, first Rust crates: podcast-core, podcast-transcripts, podcast-knowledge.</span>
+  <template>
+    <p>podcast-player commits to NMP: an M0&ndash;M13 migration plan and the first Rust crates &mdash; podcast-core, podcast-transcripts, podcast-knowledge.</p>
+    <p class="why">why: a real app committing to the shared core, not just a proof of concept.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-25</span>
+  <span class="entry-title">TENEX-TUI fixes an LMDB/nostrdb segfault class on macOS</span>
+  <span class="entry-sub">Found it, fixed it, upstreamed it.</span>
+  <template>
+    <p>TENEX-TUI fixed an LMDB/nostrdb segfault class on macOS, and upstreamed the fix.</p>
+    <p class="why">why: if you find a bug in a dependency, the fix belongs upstream, not in a local patch nobody else benefits from.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-24</span>
+  <span class="entry-title">nostrord v1.1.0 &mdash; NIP-57 zaps</span>
+  <span class="entry-sub">Zaps land on the ordered relay.</span>
+  <template>
+    <p>nostrord v1.1.0: NIP-57 zap support.</p>
+    <p class="why">why: instant participation in the zapconomy is non-negotiable, even for infrastructure projects.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-18</span>
+  <span class="entry-title">TENEX gets LLM key-rotation resilience</span>
+  <span class="entry-sub">A RotatingModel wrapper so one dead API key doesn't take down the agent.</span>
+  <template>
+    <p>TENEX gets LLM key-rotation resilience: a RotatingModel wrapper that rotates across API keys automatically.</p>
+    <p class="why">why: production agents shouldn't go down because one API key got rate-limited or revoked.</p>
   </template>
 </button>
 <button class="entry" type="button">
   <span class="entry-date">2026-05-17</span>
   <span class="entry-title">Created nostr-multi-platform &mdash; the NMP bet begins</span>
-  <span class="entry-sub">One Rust core, thin native shells. The duplication tax is unpayable.</span>
+  <span class="entry-sub">One Rust core, thin native shells. A single-day M1&ndash;M14 milestone plan, run as a multi-agent codex swarm.</span>
   <template>
-    <p>Created nostr-multi-platform. The NMP bet begins: one Rust core, thin native shells on iOS/Android/web.</p>
+    <p>Created nostr-multi-platform. The NMP bet begins: one Rust core, thin native shells on iOS/Android/web. The repo opens with doctrine ("promote negentropy + best-effort rendering to cardinal doctrines") and runs as a multi-agent codex swarm with heartbeat logs &mdash; a single-day M1&ndash;M14 milestone plan, LMDB schema, outbox routing &mdash; and it plans its first consumers from day one: "m11: podcast rebuild plan on NMP" plus "add M11.5 Highlighter."</p>
     <p class="why">why: years of maintaining Olas-iOS next to Olas-Android next to ndk-mobile taught me the duplication tax is unpayable.</p>
     <p class="why">Following the spirit of fiatjaf's RMP: write the hard part once, in Rust, and let the platforms be dumb skins.</p>
     <p class="why">If this works, it changes how I build everything.</p>
@@ -109,6 +505,96 @@
     <p class="why">why: before betting the farm on an architecture, build something real on it and see where it bleeds.</p>
   </template>
 </button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-14</span>
+  <span class="entry-title">nostrord gets multi-account support</span>
+  <span class="entry-sub">One relay, several identities.</span>
+  <template>
+    <p>nostrord gets multi-account support.</p>
+    <p class="why">why: infrastructure should assume you run more than one identity, because you do.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-13</span>
+  <span class="entry-title">AgentNoise born</span>
+  <span class="entry-sub">"The available agent-chat bridges were too heavy, too slow-moving, or too awkward. Everything else sucks."</span>
+  <template>
+    <p>AgentNoise born: drive local Codex/Claude coding agents from your phone over White Noise (Nostr). Then roughly 25 nightly releases, v0.1.1 &rarr; v0.1.28, in 9 days.</p>
+    <p class="why">why: "agentnoise exists because the available agent-chat bridges were too heavy, too slow-moving, or too awkward... I had to build it because everything else sucks and Jeff moves too slow."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-11</span>
+  <span class="entry-title">TENEX gets persistent ACP child sessions</span>
+  <span class="entry-sub">Mid-turn prompt injection into a running session.</span>
+  <template>
+    <p>TENEX gets persistent ACP child sessions, with mid-turn prompt injection.</p>
+    <p class="why">why: if the harnesses won't let me steer agents mid-flight, I'll build the plumbing that does &mdash; same instinct as the Codex app-server adapter back in January.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-09</span>
+  <span class="entry-title">podcast-player scaffolded as "Podcastr" &mdash; a whole native app in a day</span>
+  <span class="entry-sub">AudioEngine, RSS/OPML, ElevenLabs transcripts, sqlite-vec RAG, voice mode with barge-in.</span>
+  <template>
+    <p>podcast-player scaffolded as "Podcastr": an entire native podcast app in one day &mdash; AudioEngine, RSS/OPML parsing, ElevenLabs transcripts, sqlite-vec RAG, voice mode with barge-in.</p>
+    <p class="why">why: before betting on architecture, build something real and see where it bleeds &mdash; this is the app that later becomes the NMP flagship.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-08</span>
+  <span class="entry-title">Alana Cash born</span>
+  <span class="entry-sub">A voice-driven kids' allowance app with an AI ledger agent, named for his daughter.</span>
+  <template>
+    <p>Alana Cash born: a voice-driven kids' allowance app with an AI ledger agent, built in a day on ios-app-template. Named for his daughter.</p>
+    <p class="why">why: a father building a money app for his daughter &mdash; "save two bucks toward Barbie" turns straight into a ledger entry.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-05</span>
+  <span class="entry-title">nak gets a path-traversal security fix</span>
+  <span class="entry-sub">Found it, fixed it.</span>
+  <template>
+    <p>nak gets a path-traversal security fix.</p>
+    <p class="why">why: a CLI that touches the filesystem on your behalf has to earn that trust.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-04</span>
+  <span class="entry-title">ios-app-template created</span>
+  <span class="entry-sub">The iOS 26 Liquid-Glass shell every app forks from now.</span>
+  <template>
+    <p>ios-app-template created: the iOS 26 Liquid-Glass shell every app forks from &mdash; Nostr identity, BYOK, AppIntents/Siri, OpenRouter/ElevenLabs baked in.</p>
+    <p class="why">why: seed the family &mdash; podcast-player and Alana Cash are direct clones of this template.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-03</span>
+  <span class="entry-title">BYOK source published</span>
+  <span class="entry-sub">A self-hostable multi-tenant API-key vault, web + iOS, one-line curl deploy.</span>
+  <template>
+    <p>BYOK source published: a self-hostable multi-tenant API-key vault (web + iOS, byok:// scheme). "A small multi-tenant key vault for labeled API keys," one-line curl deploy.</p>
+    <p class="why">why: agents and apps need to hold API keys without every project reinventing its own vault.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-03</span>
+  <span class="entry-title">Rebranded Win the Day &mdash; now Rocking Life</span>
+  <span class="entry-sub">Name widened from "win today" to sustained operation, alongside nostr-native agent plumbing.</span>
+  <template>
+    <p>Rebranded Win the Day to Rocking Life &mdash; same app, same repo, wider name.</p>
+    <p class="why">why: the name widened from "win today" to sustained operation, as nostr-native agent plumbing got built in alongside it.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-05-01</span>
+  <span class="entry-title">Cut Tracker born</span>
+  <span class="entry-sub">"The weight tracker built around the cut &mdash; not the journey. Every morning it tells you honestly: are you going to make it?"</span>
+  <template>
+    <p>Cut Tracker born: a full iOS + watchOS weight tracker built in a day, with an AI "cut coach."</p>
+    <p class="why">why: "The weight tracker built around the cut &mdash; not the journey... every morning it tells you honestly &mdash; are you going to make it?"</p>
+  </template>
+</button>
 </div>
 </div>
 
@@ -116,12 +602,102 @@
 <h3 class="month-heading">April</h3>
 <div class="entries">
 <button class="entry" type="button">
+  <span class="entry-date">2026-04-30</span>
+  <span class="entry-title">Turned an autonomous codex-loop on TENEX itself</span>
+  <span class="entry-sub">"Iteration 30 &mdash; automated refactor/improve/probe." Dogfood the agents as maintainers of their own repo.</span>
+  <template>
+    <p>Turned an autonomous "codex-loop" on TENEX itself: "iteration 30 &mdash; automated refactor/improve/probe."</p>
+    <p class="why">why: dogfood the agents as maintainers of their own repo.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-04-29</span>
+  <span class="entry-title">Highlighter web app ships SSR pages, Kindle import, ISBN search</span>
+  <span class="entry-sub">It was a serious web product, not just iOS.</span>
+  <template>
+    <p>Highlighter web app ships SSR highlight pages, Kindle-clippings import, and Open Library ISBN search.</p>
+    <p class="why">why: it was a serious web product, not just iOS.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-04-29</span>
+  <span class="entry-title">nostrord v0.1.0 &mdash; first release</span>
+  <span class="entry-sub">The ordered-relay project's first tagged release.</span>
+  <template>
+    <p>nostrord v0.1.0, its first tagged release.</p>
+    <p class="why">why: ship the first version, then iterate in public.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-04-28</span>
+  <span class="entry-title">Heartbeat born, live at heartbeat.opensats.org</span>
+  <span class="entry-sub">"The browser never talks to GitHub directly, so visitors don't burn any rate-limit budget."</span>
+  <template>
+    <p>Heartbeat born and live at heartbeat.opensats.org: a static GitHub-activity dashboard rendering commits/PRs/releases as a git-log timeline.</p>
+    <p class="why">why: "The browser never talks to GitHub directly, so visitors don't burn any rate-limit budget."</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-04-27</span>
+  <span class="entry-title">Win the Day gets an agent</span>
+  <span class="entry-sub">Tool-calling dispatcher + a "What Changed" panel &mdash; Phases 1&ndash;6 in a day.</span>
+  <template>
+    <p>Win the Day gets an agent: a tool-calling dispatcher plus a "What Changed" panel, Phases 1&ndash;6 shipped in a day.</p>
+    <p class="why">why: it stopped being a voice notepad and became an agent that mutates your day and shows its diffs.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-04-27</span>
+  <span class="entry-title">Sprout goes "agentic"</span>
+  <span class="entry-sub">Owner Attestation, cross-device read sync, git-over-Nostr transport, Blossom media for agents.</span>
+  <template>
+    <p>Sprout goes "agentic": Owner Attestation (NIP-OA), cross-device read sync, NIP-34 git-over-Nostr transport, Blossom media for MCP/CLI. Sprout is a Rust Nostr relay built for the agentic era &mdash; structured channels + an MCP server so agents participate natively.</p>
+    <p class="why">why: "cryptographic proof of agent authorization."</p>
+  </template>
+</button>
+<button class="entry" type="button">
   <span class="entry-date">2026-04-21</span>
   <span class="entry-title">Win the Day &mdash; a voice-native commitment compiler for iOS</span>
-  <span class="entry-sub">Say what you'll do out loud, let the machine hold you to it.</span>
+  <span class="entry-sub">Say what you'll do out loud, let the machine hold you to it. One voice button, AI routes the rest.</span>
   <template>
-    <p>Win the Day &mdash; a constraint-first, voice-native commitment compiler for iOS.</p>
+    <p>Win the Day &mdash; a constraint-first, voice-native commitment compiler for iOS. The core bet was locked at birth: "Omni compiler: one utterance &mdash; many structured actions" &mdash; "one voice button, AI routes the rest."</p>
     <p class="why">why: say what you'll do out loud, let the machine hold you to it. Habit engineering has been my thing since before nostr existed.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-04-12</span>
+  <span class="entry-title">Highlighter is born</span>
+  <span class="entry-sub">A Nostr highlights/reading app on NIP-29 + khatru, multi-platform from day one.</span>
+  <template>
+    <p>Highlighter is born: a Nostr highlights/reading app on NIP-29 + khatru, multi-platform from day one. First commits are pure product spec &mdash; "product spec v2.0 + technical architecture (NIP-29, khatru, multi-platform)."</p>
+    <p class="why">why: reading and highlighting is a native use case worth its own app, not a feature bolted onto something else.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-04-06</span>
+  <span class="entry-title">TENEX Reports tab shipped in TUI + iOS</span>
+  <span class="entry-sub">Agent-published plans and HTML report bundles as first-class documents you can chat from.</span>
+  <template>
+    <p>TENEX Reports tab shipped in TUI + iOS: agent-published plans and HTML report bundles are now first-class documents you can chat from.</p>
+    <p class="why">why: close the loop so a report is a place you act, not a blob.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-04-05</span>
+  <span class="entry-title">Cascade completes its React&rarr;Svelte rewrite, 21 routes live</span>
+  <span class="entry-sub">A dollar-denominated prediction market on Nostr with a custom Cashu mint. An April story, not an ongoing one.</span>
+  <template>
+    <p>Cascade completes its React&rarr;Svelte rewrite, 21 routes live: "all React&rarr;Svelte migration shipped, 21 routes live, build green, zero blockers." Cascade is a dollar-denominated prediction market on Nostr plus a custom Cashu mint, LMSR pricing.</p>
+    <p class="why">why: it's a real, substantial project &mdash; it just goes dormant after this month, so it belongs here as an April story rather than an ongoing thread.</p>
+  </template>
+</button>
+<button class="entry" type="button">
+  <span class="entry-date">2026-04-01</span>
+  <span class="entry-title">Stood up tenex-analytics-web</span>
+  <span class="entry-sub">A token/context-editing analytics dashboard for TENEX conversations.</span>
+  <template>
+    <p>Stood up tenex-analytics-web, a token/context-editing analytics dashboard for TENEX conversations &mdash; a "tokens removed by context editing" / "context savings" series.</p>
+    <p class="why">why: you can't tune agent context-compaction without seeing the token curve.</p>
   </template>
 </button>
 </div>
