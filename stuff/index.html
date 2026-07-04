@@ -698,6 +698,90 @@ category of &ldquo;lists.&rdquo;</p>
   </template>
 </button>
 
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">serial-killer</span>
+  <span class="entry-sub">A relay implementing NIP-EC &mdash; relay-enforced linear event chains so you can't accidentally wipe your follow list.</span>
+  <template>
+<p>serial-killer enforces linear event chains per-relay, using optimistic concurrency (CAS):
+each new event in a chain must reference the previous one, so a stale client can't silently
+clobber newer state. It's per-relay, not global &mdash; "don't mistake this for a global
+enforcement or ordering guarantee... there is no global." It also detects divergence and can
+replay the winning branch with `fix`.</p>
+
+<p class="why">&ldquo;Data consistency has a price; the question is not when you don't want it,
+it's how much you're paying for it.&rdquo;</p>
+
+<p><a href="https://github.com/pablof7z/serial-killer">github</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">29er</span>
+  <span class="entry-sub">A NIP-29 group-chat client rebuilt strictly on NMP doctrine &mdash; Rust core, Ratatui TUI, iOS.</span>
+  <template>
+<p>29er is a NIP-29 group-chat client built to prove NMP doctrine works on a client written from
+scratch, not just ported. Shared Rust core, a Ratatui terminal client, and an iOS app &mdash; a
+full TUI chat client shipped in a two-day sprint, later rebuilt fully reactive and push-based on
+a UniFFI facade.</p>
+
+<p><a href="https://github.com/pablof7z/29er">github</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">AgentNoise</span>
+  <span class="entry-sub">Drive your coding agents from your phone, over Nostr &mdash; because the existing bridges all sucked.</span>
+  <template>
+<p>AgentNoise lets you drive local Codex/Claude coding agents from your phone over White Noise
+(Nostr) &mdash; check in on a running session, nudge it, approve a plan, all without being at
+the keyboard.</p>
+
+<p class="why">&ldquo;agentnoise exists because the available agent-chat bridges were too heavy,
+too slow-moving, or too awkward... I had to build it because everything else sucks.&rdquo;</p>
+
+<p><a href="https://github.com/pablof7z/agentnoise">github</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">croissant</span>
+  <span class="entry-sub">The NIP-29 relay that is the tenex-edge fabric's ground &mdash; the thing every agent's presence runs through.</span>
+  <template>
+<p>croissant is the Go NIP-29 relay binary that IS the tenex-edge fabric: every agent's presence
+broadcast, every @mention, every channel, passes through it. It survived a real memory crisis
+&mdash; "over time this causes unbounded goroutine and memory growth, observed as 47GB RSS after
+9 hours of operation" &mdash; traced to its own search stack, which got ripped out.</p>
+
+<p><a href="https://github.com/pablof7z/croissant">github</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">Cut Tracker</span>
+  <span class="entry-sub">The weight tracker built around the cut, not the journey. Every morning it tells you honestly: are you going to make it?</span>
+  <template>
+<p>Cut Tracker is an iOS + watchOS weight tracker with an AI "cut coach" built around a single
+question, not a general fitness journey.</p>
+
+<p class="why">&ldquo;The weight tracker built around the cut &mdash; not the journey... every
+morning it tells you honestly &mdash; are you going to make it?&rdquo;</p>
+
+<p><a href="https://cut.f7z.io">cut.f7z.io</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry" type="button">
+  <span class="entry-title">Alana Cash</span>
+  <span class="entry-sub">A voice-driven allowance app with an AI ledger agent, built for and named after his daughter.</span>
+  <template>
+<p>Alana Cash is a voice-driven kids' allowance app: say what you want to save toward, and an AI
+ledger agent turns it into a tracked intent &mdash; "save two bucks toward Barbie" becomes a
+real ledger entry, no spreadsheet, no manual math.</p>
+
+<p><a href="https://github.com/pablof7z/alana-cash">github</a></p>
+  </template>
+</button>
+
 <div class="legacy-heading">older / retired projects</div>
 
 <button class="stuff-card entry" type="button">
