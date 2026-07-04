@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>pablof7z — podcast appearances</title>
+  <link>https://f7z.io/podcast/</link>
+  <description>Episodes of No Solutions, a dialogue podcast with Gigi — no solutions, only trade-offs. Also other podcast appearances by pablof7z.</description>
+  <language>en</language>
+  <atom:link href="https://f7z.io/podcast/feed.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Sat, 04 Jul 2026 12:00:00 GMT</lastBuildDate>
+
+  <item>
+    <title>19: Romantically Shitting on Paywalls</title>
+    <link>https://sovereignengineering.io/podcast/19-romantically-shitting-on-paywalls-w-pablo</link>
+    <guid>https://sovereignengineering.io/podcast/19-romantically-shitting-on-paywalls-w-pablo</guid>
+    <pubDate>Wed, 01 Apr 2026 12:00:00 GMT</pubDate>
+    <description>"You cannot box content in, no matter how hard you try. So what you can actually monetize is special times and places where you have an elevated access level."</description>
+  </item>
+
+  <item>
+    <title>18: Rewriting TENEX</title>
+    <link>https://sovereignengineering.io/podcast/18-rewriting-tenex-w-pablo</link>
+    <guid>https://sovereignengineering.io/podcast/18-rewriting-tenex-w-pablo</guid>
+    <pubDate>Wed, 01 Apr 2026 12:00:00 GMT</pubDate>
+    <description>"I can buy more tokens. I cannot buy another day for my life. Comparing the cost of tokens with the cost of human time is not even a comparison."</description>
+  </item>
+
+  <item>
+    <title>#11: 10x Less Productive</title>
+    <link>https://sovereignengineering.io/podcast/11-10x-less-productive-w-pablo</link>
+    <guid>https://sovereignengineering.io/podcast/11-10x-less-productive-w-pablo</guid>
+    <pubDate>Sat, 21 Jun 2025 12:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>#08: Navigating the Vibe</title>
+    <link>https://sovereignengineering.io/podcast/08-navigating-the-vibe-w-pablo</link>
+    <guid>https://sovereignengineering.io/podcast/08-navigating-the-vibe-w-pablo</guid>
+    <pubDate>Fri, 04 Apr 2025 12:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>#06: The Winds of AI</title>
+    <link>https://sovereignengineering.io/podcast/06-the-winds-of-ai-w-pablo</link>
+    <guid>https://sovereignengineering.io/podcast/06-the-winds-of-ai-w-pablo</guid>
+    <pubDate>Thu, 27 Mar 2025 12:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>#03: Data Ownership is a Lie</title>
+    <link>https://sovereignengineering.io/podcast/03-data-ownership-is-a-lie-w-pablo</link>
+    <guid>https://sovereignengineering.io/podcast/03-data-ownership-is-a-lie-w-pablo</guid>
+    <pubDate>Sun, 23 Feb 2025 12:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>#02: There is No Global</title>
+    <link>https://sovereignengineering.io/podcast/02-there-is-no-global-w-pablo</link>
+    <guid>https://sovereignengineering.io/podcast/02-there-is-no-global-w-pablo</guid>
+    <pubDate>Sat, 15 Feb 2025 12:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>#01: Start Ugly</title>
+    <link>https://sovereignengineering.io/podcast/01-start-ugly-w-pablo</link>
+    <guid>https://sovereignengineering.io/podcast/01-start-ugly-w-pablo</guid>
+    <pubDate>Sun, 09 Feb 2025 12:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>#00: Test Recording / Teaser</title>
+    <link>https://sovereignengineering.io/podcast/00-test-recording-teaser-w-pablo</link>
+    <guid>https://sovereignengineering.io/podcast/00-test-recording-teaser-w-pablo</guid>
+    <pubDate>Fri, 07 Feb 2025 12:00:00 GMT</pubDate>
+  </item>
+
+</channel>
+</rss>

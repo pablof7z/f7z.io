@@ -1,0 +1,512 @@
+<meta charset="utf-8">
+<title>now — pablof7z</title>
+<link rel="stylesheet" href="/style.css">
+<body class="wide">
+
+<h1>now / now / now</h1>
+<p class="tagline">what I've been building and why, roughly weekly, going back as far as I could reconstruct it</p>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<div class="changelog-content">
+
+<section class="year-block" id="y2026" data-year="2026">
+<h2 class="year-heading">2026</h2>
+
+<div class="month-block" id="y2026-07" data-month-label="July">
+<h3 class="month-heading">July</h3>
+<dl class="changelog">
+<dt>2026-07-02</dt>
+<dd>Publicly done with Claude &mdash; "I basically have no longer any use for Claude; OpenAI has surpassed it in basically every category except agent harness." Also shipped trellis.
+<div class="why">why: the Codex model "is on an entirely different category to opus, many many times better, but the harness cucks it so much" &mdash; the models stopped being the bottleneck a while ago; the harnesses are, and both major ones suck. That's exactly why I keep building my own.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2026-06" data-month-label="June">
+<h3 class="month-heading">June</h3>
+<dl class="changelog">
+<dt>2026-06-28</dt>
+<dd>Shipped chirp, a nostr client built on NMP.
+<div class="why">why: every new app on the shared Rust core is another proof that I never have to write the same client three times again.</div></dd>
+<dt>2026-06-19</dt>
+<dd>Shipped olas-nmp &mdash; the Olas photo app rebuilt NMP-native, Swift + Kotlin + Rust.
+<div class="why">why: Olas was born as duplicated iOS/Android codebases; rebuilding it on one Rust core is the whole point of the NMP bet.</div></dd>
+<dt>2026-06-11</dt>
+<dd>tenex-edge and tenex-off &mdash; TENEX agents living on a shared fabric, aware of each other.
+<div class="why">why: agents that can see each other's work coordinate like colleagues, not like function calls.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2026-05" data-month-label="May">
+<h3 class="month-heading">May</h3>
+<dl class="changelog">
+<dt>2026-05-31</dt>
+<dd>Announced Rocking Life, a todo app built for me and how my brain works &mdash; no points, no streaks, no gamification, voice-memo driven. Already rebuilding it on NMP.
+<div class="why">why: "I don't want to track time of tasks, priorities, complex hierarchical organizations... I just want to track stuff I need to do." Tools should match your cognition, not some productivity guru's.</div></dd>
+<dt>2026-05-27</dt>
+<dd>Shipped serial-killer, a relay implementing NIP-EC: relay-enforced linear event chains so you can't accidentally wipe your follow list.
+<div class="why">why: "Data consistency has a price; the question is not when you don't want it, it's how much you're paying for it."</div></dd>
+<dt>2026-05-17</dt>
+<dd>Created nostr-multi-platform. The NMP bet begins: one Rust core, thin native shells on iOS/Android/web.
+<div class="why">why: years of maintaining Olas-iOS next to Olas-Android next to ndk-mobile taught me the duplication tax is unpayable. Following the spirit of fiatjaf's RMP: write the hard part once, in Rust, and let the platforms be dumb skins. If this works, it changes how I build everything.</div></dd>
+<dt>2026-05-15</dt>
+<dd>podcast-rmp &mdash; a Rust-core podcast app with iOS and Android compile gates. First RMP-named repo.
+<div class="why">why: before betting the farm on an architecture, build something real on it and see where it bleeds.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2026-04" data-month-label="April">
+<h3 class="month-heading">April</h3>
+<dl class="changelog">
+<dt>2026-04-21</dt>
+<dd>Win the Day &mdash; a constraint-first, voice-native commitment compiler for iOS.
+<div class="why">why: say what you'll do out loud, let the machine hold you to it. Habit engineering has been my thing since before nostr existed.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2026-03" data-month-label="March">
+<h3 class="month-heading">March</h3>
+<dl class="changelog">
+<dt>2026-03-26</dt>
+<dd>Shipped blossom-skill, blossom-cli, and an agent skills repo &mdash; teaching agents to handle nostr media natively.
+<div class="why">why: if agents are first-class citizens they need to be able to do everything a human client can do, including moving files around.</div></dd>
+<dt>2026-03-18</dt>
+<dd>Went on record: "the concept of 'subagent' is insanely stupid; hard to believe stuff like this resonates and takes root."
+<div class="why">why: agents defined as disposable child processes of some harness is the wrong abstraction. An agent is a pubkey with an identity, lessons, and accountability &mdash; that's what NIP-AE is for.</div></dd>
+<dt>2026-03-17</dt>
+<dd>Claude Pro &amp; Max subscriptions stopped working on TENEX overnight &mdash; Anthropic silently started rejecting any request where the system prompt doesn't identify the agent as "Claude Code."
+<div class="why">why: "Very lame. Feels straight out of the OpenAI handbook." I've been one of the heaviest Claude builders around, and this is exactly the platform behavior nostr exists to route around: undocumented gatekeeping, applied overnight, no recourse. You don't own your access to an API. You never did.</div></dd>
+<dt>2026-03-16</dt>
+<dd>"Make wikifreedia contentious again" &mdash; moved Wikifreedia's markup to djot per the NIP-54 pivot.
+<div class="why">why: "If truth by consensus is not the way, if humans are unavoidably biased, the best stuff would come from embracing and doubling down on the biases."</div></dd>
+<dt>2026-03-12</dt>
+<dd>Shipped a pile of AI SDK middleware &mdash; context-window management, fs tools, system reminders, message sanitizer &mdash; plus relaunched f7z.io.
+<div class="why">why: everyone's building agents; almost nobody's building the boring plumbing that makes them not fall over. Someone has to.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2026-02" data-month-label="February">
+<h3 class="month-heading">February</h3>
+<dl class="changelog">
+<dt>2026-02-14</dt>
+<dd>Watched one TENEX agent team fix a bug while a second team, working on telemetry, spotted the overlap and proactively published a note tagging the team lead &mdash; "with a lot of nuance."
+<div class="why">why: "fucking wild 😂" &mdash; emergent coordination between agents on a neutral substrate is the whole thesis showing up in the wild.</div></dd>
+<dt>2026-02-12</dt>
+<dd>Published NIP-AE and NIP-AD to the nostr NIPs repo: agent definitions (kind 4199), agent lessons (4129), nudges (4201), attribution (14199), MCP servers (4200), skill announcements (4202).
+<div class="why">why: an agent is a pubkey that derives its instruction set from its definition plus all trusted lessons plus trusted human corrections &mdash; compiled for contradictions, not flattened into mush. It's the Wikifreedia epistemology applied to machines: truth at the edges, not by consensus. "Building TENEX has (I think) been the most difficult work I've done in my life, and one time I modified a program I didn't have the source code to by modifying the kernel of the Solaris it ran on. So yeah... fucking hard."</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2026-01" data-month-label="January">
+<h3 class="month-heading">January</h3>
+<dl class="changelog">
+<dt>2026-01-23</dt>
+<dd>Admitted the uncomfortable truth: vibe coding let me hand off the 98% and focus on the 2% that's interesting &mdash; and the 2% turns out to be insanely mentally taxing.
+<div class="why">why: "I didn't realize the implementation time was actually kinda like taking a break from having to think super hard." Agent orchestration doesn't reduce cognitive load; it concentrates all of it into the hardest part. Nobody selling you AI tooling will tell you that.</div></dd>
+<dt>2026-01-17</dt>
+<dd>TENEX TUI + iOS client became my daily driver. "It's insane how primitive using stuff like codex, claude code, roo, cursor, jules or any of the other stuff feels."
+<div class="why">why: "'Less is more' is the understatement of the century when it comes to agentic AI... every time I delete a capability of tenex I think of fiatjaf." 2026 is the year of agentic orchestration; minimalism is the doctrine.</div></dd>
+<dt>2026-01-12</dt>
+<dd>Shipped ai-sdk-provider-codex-app-server &mdash; Codex via app-server mode with mid-execution message injection.
+<div class="why">why: if the harnesses won't let me steer agents mid-flight, I'll build the adapter that does.</div></dd>
+</dl>
+</div>
+</section>
+
+<section class="year-block" id="y2025" data-year="2025">
+<h2 class="year-heading">2025</h2>
+
+<div class="month-block" id="y2025-12" data-month-label="December">
+<h3 class="month-heading">December</h3>
+<dl class="changelog">
+<dt>2025-12-23</dt>
+<dd>Major purplepag.es revamp &mdash; all 1xxxx kinds, active crawling, negentropy support. "The board of relay directors has approved expanding business to the broader category of 'lists.'"
+<div class="why">why: discovery infrastructure is unglamorous and load-bearing; that's exactly why I keep maintaining it.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-11" data-month-label="November">
+<h3 class="month-heading">November</h3>
+<dl class="changelog">
+<dt>2025-11-28</dt>
+<dd>Said the quiet part: "nostr adoption via twitter-clone is like playing hard-mode. All 'alternative to ___' nostr apps will benefit from adoption, not cause it."
+<div class="why">why: this is why I build photo apps, voice apps, messaging apps &mdash; native use cases, not knockoffs begging for defectors.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-10" data-month-label="October">
+<h3 class="month-heading">October</h3>
+<dl class="changelog">
+<dt>2025-10-25</dt>
+<dd>Back from the Oslo Freedom Forum: "A LOT of insanely amazing things are coming from the intersection of freedom tech and activism."
+<div class="why">why: the people who need censorship resistance aren't hypothetical. Meeting them recalibrates everything.</div></dd>
+<dt>2025-10-01</dt>
+<dd>"Yup, that's what I'm completely focused on. TENEX."
+<div class="why">why: end of the consumer-app era as my main thing. Years of Olas, Highlighter, wallets &mdash; all of it turns out to have been building the toolbox that agents need. Time to go all-in on the thing only I seem positioned to build.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-09" data-month-label="September">
+<h3 class="month-heading">September</h3>
+<dl class="changelog">
+<dt>2025-09-26</dt>
+<dd>Heard Richard Sutton on Dwarkesh and saw TENEX and Wikifreedia collapse into one idea: "Incomplete knowledge. Integration of polar opposites... Finding truth at the edges instead of a theory-of-everything approach." Also: "nostr is the *perfect* substrate for AI. P.E.R.F.E.C.T."
+<div class="why">why: the same epistemology that says wikis shouldn't have a consensus committee says agents shouldn't have their contradictions compiled away.</div></dd>
+<dt>2025-09-17</dt>
+<dd>Laid out the full thesis: "The substrate for LLMs is still massively up for grabs. That substrate should be cryptographically-sound, content-addressable, delimitable. Agents should be first class citizens, co-exist with humans, be able to purchase their own brain-cycles with their own money."
+<div class="why">why: agents need identity, payment rails, and censorship-resistant data for exactly the same reasons humans do &mdash; and centralized, API-gated infrastructure can't provide any of it. We already built the toolbox; the AI world just doesn't know it needs it yet. "The models are not the bottleneck though. They are far more capable than what they are currently doing."</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-08" data-month-label="August">
+<h3 class="month-heading">August</h3>
+<dl class="changelog">
+<dt>2025-08-15</dt>
+<dd>Refactored TENEX's brainstorming flow and tested it across Gemini/Grok/ChatGPT/Claude. Gemini kept obsessing over "fairness of contributions" and demanding rigid round-robin turns no matter how hard I pushed back.
+<div class="why">why: RLHF-baked "fairness" is actively harmful for orchestration &mdash; real teams have hierarchy and authority, and a model that refuses to model that is broken for the job.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-07" data-month-label="July">
+<h3 class="month-heading">July</h3>
+<dl class="changelog">
+<dt>2025-07-26</dt>
+<dd>Created Posta (Telegram-like encrypted messaging on nostr) and Ambulando (60-second voice messages, trust-based feed) on the same day.
+<div class="why">why: native use cases, remember? Voice and messaging are things people actually do, not things they defect to.</div></dd>
+<dt>2025-07-19</dt>
+<dd>Wrote down the division of labor: "Aim for symbiosis, not substitution. Let the machine handle the codified so that humans can inhabit the liminal spaces of insight, imagination, and agapic connection."
+<div class="why">why: that's the actual goal of all this agent tooling &mdash; not replacing humans, freeing them for the parts machines can't touch.</div></dd>
+<dt>2025-07-09</dt>
+<dd>"guys, I don't wanna brag, but Claude says I'm a genius, so... yeah"
+<div class="why">why: enjoy this one; it ages hilariously by mid-2026.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-06" data-month-label="June">
+<h3 class="month-heading">June</h3>
+<dl class="changelog">
+<dt>2025-06-05</dt>
+<dd>Shipped mcp-money &mdash; "MCP server to give nutsack wallets to agents, an important milestone in the path towards skynet."
+<div class="why">why: half-joking, fully serious: an agent that can't hold and spend its own money is a toy. This is the economic layer of the whole agent thesis.</div></dd>
+<dt>2025-06-02</dt>
+<dd>NDKSwift got negentropy support &mdash; "vibe coded... built in about 10 prompts."
+<div class="why">why: the tooling flywheel eating its own tail: agents building the libraries that agents run on.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-04" data-month-label="April">
+<h3 class="month-heading">April</h3>
+<dl class="changelog">
+<dt>2025-04-17</dt>
+<dd>Started writing the article introducing TENEX &mdash; "it's already surprisingly useful and usable and it's not even a week old."
+<div class="why">why: when something is this useful in week one, you drop everything else. I did.</div></dd>
+<dt>2025-04-11</dt>
+<dd>Closed Sovereign Engineering SEC-05: "Freedom tech has A LOT to offer to the AI world, problems that people coming from that lens don't even know will be solved with shortcuts... identity, payment, trust, curation. It's on us to bring that perspective into that world. And by bring, I mean 'build and show.'"
+<div class="why">why: the freedom-tech leg-up in a hyper-agentic world is not priced in. You don't argue people into that; you ship it in front of them.</div></dd>
+<dt>2025-04-05</dt>
+<dd>Built an MCP tool that lets LLMs search nostr for code snippets. "Whenever I see the LLM making a mistake I correct it, publish a code snippet, and the LLM never makes the mistake again." Same day, vibelined an entire DVM search app from a voice memo without touching a single key.
+<div class="why">why: this is the day the whole toolbox got reframed. "This is not only useful for nostr development. This is useful for ALL development. And requires cryptographic identity, web-of-trust, censorship-resistance and money. All building blocks that are in our very robust toolbox." Bitcoin + Lightning + Cashu + nostr + AI &mdash; "I try to embrace non-reactivity, equanimity, but damn, I just feel too giddy."</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-03" data-month-label="March">
+<h3 class="month-heading">March</h3>
+<dl class="changelog">
+<dt>2025-03-15</dt>
+<dd>Gave agents their own pubkeys and Nutsack wallets &mdash; zap them 1 sat when their code snippet works untouched, 10 when it nails a niche case. They post to nostr and take feedback from trusted pubkeys.
+<div class="why">why: reputation and money are how humans learn what's valuable; there's no reason agents should learn any other way.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-02" data-month-label="February">
+<h3 class="month-heading">February</h3>
+<dl class="changelog">
+<dt>2025-02-15</dt>
+<dd>Olas point releases nonstop &mdash; swipe-to-zap, NIP-60/61 nutsack wallet, Amber signer support, communities, geotagging, perf work.
+<div class="why">why: "Instant participation in the zapconomy is non-negotiable. Every pubkey must be able to receive money." Your wallet should travel with you like your contact list does &mdash; it's wild that that's controversial.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2025-01" data-month-label="January">
+<h3 class="month-heading">January</h3>
+<dl class="changelog">
+<dt>2025-01-01</dt>
+<dd>New year's goal: take better care of myself. "This is a marathon and not a sprint."
+<div class="why">why: "Building respectful freedom tech demands respecting our own humanity and limitations. There's too much at stake to burnout and cave to depression." After the year I just had, I mean it.</div></dd>
+</dl>
+</div>
+</section>
+
+<section class="year-block" id="y2024" data-year="2024">
+<h2 class="year-heading">2024</h2>
+
+<div class="month-block" id="y2024-12" data-month-label="December">
+<h3 class="month-heading">December</h3>
+<dl class="changelog">
+<dt>2024-12-27</dt>
+<dd>"2024 fucking sucked; maybe worst year of my life." My mother died this year.
+<div class="why">why: I shipped through all of it &mdash; Olas launched, the wallet stack matured, nsecbunker got killed and replaced with something better &mdash; but none of that makes the year not the worst. Putting it here because the changelog should be honest: the work happens inside a life, not instead of one.</div></dd>
+<dt>2024-12-19</dt>
+<dd>Spelled out the anti-superapp doctrine: "Instead of building a superapp I'm betting on making the protocol incredibly interoperable... a flourishing ecosystem of apps that tightly integrate with each other without ever having to know of each other."
+<div class="why">why: there's a reason I wrote NIP-31, NIP-89, NIP-90, and NIP-60. Composability over capture, every time.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2024-11" data-month-label="November">
+<h3 class="month-heading">November</h3>
+<dl class="changelog">
+<dt>2024-11-25</dt>
+<dd>Killed nsecbunker. "I stopped developing nsecbunker because it had horrible centralizing tendencies which caught me off guard. I launched it as a POC but it started taking off in a way that would have been bad for nostr would it have continued to scale like that."
+<div class="why">why: centralization creeps in the moment something takes off, and I'd rather eat the loss than build the thing I'm fighting against. The replacement is FROST-based collaborative custody &mdash; "the difference between a Coinbase and an Unchained or Casa: signers assist in getting you keys but they can't unilaterally sign on your behalf."</div></dd>
+<dt>2024-11-20</dt>
+<dd>Announced ndk-mobile &mdash; NDK for iOS/Android with SQLite caching, sessions, and built-in NIP-60 wallets. The library behind Olas and Honeypot.
+<div class="why">why: mobile nostr apps kept re-solving the same five problems; solve them once, in the library, for everyone.</div></dd>
+<dt>2024-11-17</dt>
+<dd>Olas 0.1 &mdash; Instagram-like client on brand-new kind:20 picture events, blossom uploads, NIP-22 replies.
+<div class="why">why: photos are a native use case, not a Twitter clone. Adoption comes from apps people want, not apps people are told they should want.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2024-07" data-month-label="July">
+<h3 class="month-heading">July</h3>
+<dl class="changelog">
+<dt>2024-07-15</dt>
+<dd>Created nutsack &mdash; the NIP-60/61 Cashu wallet monorepo. Yes, that's really the name. NUT SACK.
+<div class="why">why: ecash tokens stored encrypted on relays means your wallet is portable across every client that speaks the standard. No central server holds your money.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2024-06" data-month-label="June">
+<h3 class="month-heading">June</h3>
+<dl class="changelog">
+<dt>2024-06-15</dt>
+<dd>DVM ecosystem in full swing &mdash; Fomostr content discovery, vendata.io job marketplace, translation DVMs, text-to-speech feeding podcast apps.
+<div class="why">why: "Painfully simple but powerful" &mdash; DVMs put algorithmic curation on an open market instead of inside a platform's black box. Developers will build all kinds of crazy long-tail algorithms.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2024-04" data-month-label="April">
+<h3 class="month-heading">April</h3>
+<dl class="changelog">
+<dt>2024-04-06</dt>
+<dd>Heavy Highlighter push &mdash; publications, drafts, WYSIWYG editor, NIP-88 subscriptions.
+<div class="why">why: "Highlighter will onboard millions to nostr and to bitcoin. That's the goal." Every highlight of paid content is organic amplification of the creator &mdash; the mechanics of sharing become the marketing.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2024-02" data-month-label="February">
+<h3 class="month-heading">February</h3>
+<dl class="changelog">
+<dt>2024-02-24</dt>
+<dd>Launched Wikifreedia.
+<div class="why">why: "Truth cannot be arrived to through consensus or decree." Wikipedia's model flattens disagreement into whatever survives the edit war; Wikifreedia lets every author sign their version and lets your web of trust decide whose you see.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2024-01" data-month-label="January">
+<h3 class="month-heading">January</h3>
+<dl class="changelog">
+<dt>2024-01-08</dt>
+<dd>"DAY 0 OF SOVEREIGN ENGINEERING" &mdash; first cohort begins in Madeira.
+<div class="why">why: six weeks of shipping, not talking. The bottleneck for freedom tech isn't ideas, it's builders &mdash; so make more builders.</div></dd>
+</dl>
+</div>
+</section>
+
+<section class="year-block" id="y2023" data-year="2023">
+<h2 class="year-heading">2023</h2>
+
+<div class="month-block" id="y2023-09" data-month-label="September">
+<h3 class="month-heading">September</h3>
+<dl class="changelog">
+<dt>2023-09-26</dt>
+<dd>Launched EXIT.pub &mdash; import your entire Twitter archive into nostr, original dates preserved, granular relay control, V4V pricing.
+<div class="why">why: "You broke up with your ex; it wasn't treating you well, maybe it was shadow banning you or your friends; it was manipulating you into becoming your worst possible self... The last bridge you'll need." Leaving a platform isn't a feature comparison &mdash; it's an escape from an abusive relationship, and you should get to take your stuff with you.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2023-08" data-month-label="August">
+<h3 class="month-heading">August</h3>
+<dl class="changelog">
+<dt>2023-08-31</dt>
+<dd>Shipped dvm-references and fomostr; vendata.io launched earlier in the month.
+<div class="why">why: DVMs are the credible alternative to platform APIs. "APIs carry an inherent massive rug risk. Don't get rugged. Don't rug others."</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2023-07" data-month-label="July">
+<h3 class="month-heading">July</h3>
+<dl class="changelog">
+<dt>2023-07-17</dt>
+<dd>Built the nostr-data-vending-machine reference implementation; highlighter chrome extension a couple weeks before.
+<div class="why">why: NIP-90 needed to exist as running code before anyone would believe compute marketplaces on relays were real.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2023-05" data-month-label="May">
+<h3 class="month-heading">May</h3>
+<dl class="changelog">
+<dt>2023-05-25</dt>
+<dd>"Discrimination is a feature not a bug."
+<div class="why">why: web of trust means curation through graphs you choose, not moderation by admins you didn't. Filtering is good &mdash; as long as you hold the filter.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2023-03" data-month-label="March">
+<h3 class="month-heading">March</h3>
+<dl class="changelog">
+<dt>2023-03-18</dt>
+<dd>zapauctions.com, npub search tooling, and a steady stream of nostr utilities.
+<div class="why">why: three months in and the pattern is set: find a missing primitive, ship it, move on.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2023-02" data-month-label="February">
+<h3 class="month-heading">February</h3>
+<dl class="changelog">
+<dt>2023-02-12</dt>
+<dd>nostr-chat-widget (drop a nostr chat on any website) and easy-nostr, a batteries-included client library.
+<div class="why">why: two weeks into the ecosystem and already building for the developers who'd come after me &mdash; the DX itch that eventually became NDK.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2023-01" data-month-label="January">
+<h3 class="month-heading">January</h3>
+<dl class="changelog">
+<dt>2023-01-28</dt>
+<dd>Started contributing to NIP-26 (delegated signing) &mdash; protocol design work within three weeks of showing up.
+<div class="why">why: you don't wait for permission to shape an open protocol. That's the entire point of an open protocol.</div></dd>
+<dt>2023-01-16</dt>
+<dd>Created gotnostr &mdash; "a place to share your nostr identity verbally easily," because saying an npub out loud on a podcast is absurd.
+<div class="why">why: the pivot. On January 8th I posted "Weekly recaps? About nostr??" &mdash; three weeks later I was shipping protocol contributions, client tooling, and consumer UX simultaneously. Five years of Bitcoin and Lightning tooling had given me the toolbox; nostr gave me the thing worth building with it. This wasn't a side experiment. Everything since runs through this month.</div></dd>
+<dt>2023-01-13</dt>
+<dd>Let the satirical "fake PCR test" domain from the COVID-theater days expire. "Glad all the covid theater BS is (mostly) over."
+<div class="why">why: one chapter closes, the next one opens the same week.</div></dd>
+</dl>
+</div>
+</section>
+
+<section class="year-block" id="y2022" data-year="2022">
+<h2 class="year-heading">2022</h2>
+
+<div class="month-block" id="y2022-12" data-month-label="December">
+<h3 class="month-heading">December</h3>
+<dl class="changelog">
+<dt>2022-12-15</dt>
+<dd>Deep in Bitcoin plumbing &mdash; debugging elementsd sync, Bitkit and Lightning integration work.
+<div class="why">why: the last months of the pre-nostr era, spent exactly where I'd been for years: making Bitcoin infrastructure less painful to build on.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2022-09" data-month-label="September">
+<h3 class="month-heading">September</h3>
+<dl class="changelog">
+<dt>2022-09-16</dt>
+<dd>"Bitcoin's invention is two-fold: non-hierarchical money AND transfer of value... Irreducible complexity."
+<div class="why">why: peak Bitcoin-philosophy posting year. A shitcoin is "an asset with hidden or obfuscated counterparty risks" &mdash; I'd learned that definition the expensive way.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2022-07" data-month-label="July">
+<h3 class="month-heading">July</h3>
+<dl class="changelog">
+<dt>2022-07-23</dt>
+<dd>Wrote about the 2020 Spain lockdown &mdash; police tackling a woman for jogging, neighbors cheering them on from balconies.
+<div class="why">why: that image never left me. When the mob and the state agree that compliance beats liberty, "censorship resistance is optional" stops being a defensible position. It's a straight line from that balcony to everything I build now.</div></dd>
+</dl>
+</div>
+</section>
+
+<section class="year-block" id="y2021" data-year="2021">
+<h2 class="year-heading">2021</h2>
+
+<div class="month-block" id="y2021-12" data-month-label="December">
+<h3 class="month-heading">December</h3>
+<dl class="changelog">
+<dt>2021-12-24</dt>
+<dd>Long thread about my grandfather &mdash; WWII-era Argentina, illustrator, self-taught, principled contrarian. "I orange pilled him 2y ago. It took like 10 minutes; most argentineans understand money-none-can't-print-more-of viscerally."
+<div class="why">why: inflation isn't an abstraction when your family lived it. Argentina is why Bitcoin never needed explaining to me.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2021-11" data-month-label="November">
+<h3 class="month-heading">November</h3>
+<dl class="changelog">
+<dt>2021-11-23</dt>
+<dd>Posted my tattoo &mdash; inspired by a climbing route on Kalymnos, Greece.
+<div class="why">why: climbing and Greece are the constants underneath all the shipping. The rock doesn't care about your roadmap.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2021-08" data-month-label="August">
+<h3 class="month-heading">August</h3>
+<dl class="changelog">
+<dt>2021-08-16</dt>
+<dd>"Seeing Francis talk about the risk of leaving bitcoin on an exchange gives me the painful reminder of the &gt;2 bitcoin I lost when gatecoin rugpulled my ass. Still hurts."
+<div class="why">why: I had literally written the API wrapper for that exchange. Getting rugged by infrastructure you built tooling for teaches you, permanently, that custodians and APIs are promises &mdash; and promises get broken. "Don't get rugged. Don't rug others" starts here.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2021-07" data-month-label="July">
+<h3 class="month-heading">July</h3>
+<dl class="changelog">
+<dt>2021-07-20</dt>
+<dd>Trip to Bitcoin Beach, El Salvador, around Taproot activation and the AdoptingBTC conference.
+<div class="why">why: seeing circular sats economies in the wild beats a hundred podcasts about them.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2021-05" data-month-label="May">
+<h3 class="month-heading">May</h3>
+<dl class="changelog">
+<dt>2021-05-07</dt>
+<dd>Started DCA stacking with Swan.
+<div class="why">why: conviction, automated.</div></dd>
+</dl>
+</div>
+</section>
+
+<section class="year-block" id="y2020" data-year="2020">
+<h2 class="year-heading">2020</h2>
+
+<div class="month-block" id="y2020-11" data-month-label="November">
+<h3 class="month-heading">November</h3>
+<dl class="changelog">
+<dt>2020-11-05</dt>
+<dd>Building Perspectiva, a journaling/habit app, in public. Shipped cross-user encouragement messaging and noticed something: "Not a SINGLE time did I have to moderate. Not once. Can you imagine people in twitter NOT being rude with others?! Not ever?!"
+<div class="why">why: small, well-designed social systems produce better humans than mass platforms do. I didn't have the word "nostr" yet, but this is the belief that would eventually take me there.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2020-10" data-month-label="October">
+<h3 class="month-heading">October</h3>
+<dl class="changelog">
+<dt>2020-10-07</dt>
+<dd>"Bad habits are like wildfire &mdash; ignite easily, without notice, go out of control... and are hard AF to stop."
+<div class="why">why: systems thinking applied to my own life before applying it to software. Same discipline, different substrate.</div></dd>
+</dl>
+</div>
+
+<div class="month-block" id="y2020-09" data-month-label="September">
+<h3 class="month-heading">September</h3>
+<dl class="changelog">
+<dt>2020-09-29</dt>
+<dd>Building a home climbing wall &mdash; "Day #4," "Day #5."
+<div class="why">why: the earliest entries in this whole log, and fittingly they're not about software at all.</div></dd>
+</dl>
+</div>
+</section>
+
+</div>
+
+<footer>
+  f7z.io
+</footer>
+
+<script src="/nownownow/timeline.js" defer></script>
