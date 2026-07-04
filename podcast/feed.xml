@@ -292,5 +292,251 @@
     <itunes:episodeType>full</itunes:episodeType>
   </item>
 
+
+  <item>
+    <title>PCR45: The Sovereign Engineering Cohort with PABLOF7Z, GSovereignty, Stuart Bowman and Zach Meyer</title>
+    <link>https://feeds.fountain.fm/xRzQd3loNa0ItnvWXcOz/items/CtfZhn5ojFjEMCCZd9Xu/files/AUDIO---DEFAULT---6dc137b3-7b7d-461f-9d7e-4d5897428ae9.mp3</link>
+    <guid>https://feeds.fountain.fm/xRzQd3loNa0ItnvWXcOz/items/CtfZhn5ojFjEMCCZd9Xu/files/AUDIO---DEFAULT---6dc137b3-7b7d-461f-9d7e-4d5897428ae9.mp3</guid>
+    <pubDate>Sat, 27 Jan 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Plebchain Radio</itunes:subtitle>
+    <itunes:summary>Plebchain Radio</itunes:summary>
+    <itunes:image href="https://feeds.fountain.fm/xRzQd3loNa0ItnvWXcOz/files/COVER_ART---DEFAULT---72d98f3f-84d4-4e69-a04a-0ed1e26b5b00.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+    <enclosure url="https://feeds.fountain.fm/xRzQd3loNa0ItnvWXcOz/items/CtfZhn5ojFjEMCCZd9Xu/files/AUDIO---DEFAULT---6dc137b3-7b7d-461f-9d7e-4d5897428ae9.mp3" type="audio/mpeg"/>
+  </item>
+
+  <item>
+    <title>Lyn Alden and Pablo Fernandez — E87</title>
+    <link>https://www.youtube.com/watch?v=k6JR97a4KfQ</link>
+    <guid>https://www.youtube.com/watch?v=k6JR97a4KfQ</guid>
+    <pubDate>Wed, 17 Aug 2022 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Swan Signal Live</itunes:subtitle>
+    <itunes:summary>Swan Signal Live</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/k6JR97a4KfQ/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>BTC083: Jack Dorsey's Decentralized Identity Network</title>
+    <link>https://www.youtube.com/watch?v=hGT9yuuIa6Q</link>
+    <guid>https://www.youtube.com/watch?v=hGT9yuuIa6Q</guid>
+    <pubDate>Thu, 23 Jun 2022 12:00:00 GMT</pubDate>
+    <itunes:subtitle>The Investor's Podcast</itunes:subtitle>
+    <itunes:summary>The Investor's Podcast</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/hGT9yuuIa6Q/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Bitcoin Beach Recap</title>
+    <link>https://cdn.simplecast.com/audio/4a95f57a-3de2-4ca5-bca1-be809f1b7a0b/episodes/a65402dd-429e-4753-8f54-5ce4f9543c41/audio/2ba078e4-ff0a-4bea-b9be-c14c330e206f/default_tc.mp3</link>
+    <guid>https://cdn.simplecast.com/audio/4a95f57a-3de2-4ca5-bca1-be809f1b7a0b/episodes/a65402dd-429e-4753-8f54-5ce4f9543c41/audio/2ba078e4-ff0a-4bea-b9be-c14c330e206f/default_tc.mp3</guid>
+    <pubDate>Fri, 30 Jul 2021 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Swan Lounge</itunes:subtitle>
+    <itunes:summary>Swan Lounge</itunes:summary>
+    <itunes:image href="https://image.simplecastcdn.com/images/0cb5ca85-da11-4b94-9f5e-381719ff4f48/8d7463a6-bd59-49fc-a5ba-d9bc7af7accb/3000x3000/7-9-tomer-gigi.jpg?aid=rss_feed"/>
+    <itunes:episodeType>full</itunes:episodeType>
+    <enclosure url="https://cdn.simplecast.com/audio/4a95f57a-3de2-4ca5-bca1-be809f1b7a0b/episodes/a65402dd-429e-4753-8f54-5ce4f9543c41/audio/2ba078e4-ff0a-4bea-b9be-c14c330e206f/default_tc.mp3" type="audio/mpeg"/>
+  </item>
+
+  <item>
+    <title>Bitcoin Black Swans — E116</title>
+    <link>https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/6eb783e2-8e3b-456b-b9fc-f682177fa6e9/episodes/7a8fe275-06df-4015-86ff-0414ea5a6b40/audio/a9af676a-4b49-40ac-b1b8-8ae13ac6cc33/default_tc.mp3</link>
+    <guid>https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/6eb783e2-8e3b-456b-b9fc-f682177fa6e9/episodes/7a8fe275-06df-4015-86ff-0414ea5a6b40/audio/a9af676a-4b49-40ac-b1b8-8ae13ac6cc33/default_tc.mp3</guid>
+    <pubDate>Fri, 29 Jan 2021 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Citizen Bitcoin</itunes:subtitle>
+    <itunes:summary>Citizen Bitcoin</itunes:summary>
+    <itunes:image href="https://image.simplecastcdn.com/images/21b749e3-cf0e-4093-9658-6b2a13488a87/52866208-173d-43d5-aea0-c56477446d07/3000x3000/citizen-bitcoin-podcast-art-swan-2.jpg?aid=rss_feed"/>
+    <itunes:episodeType>full</itunes:episodeType>
+    <enclosure url="https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/6eb783e2-8e3b-456b-b9fc-f682177fa6e9/episodes/7a8fe275-06df-4015-86ff-0414ea5a6b40/audio/a9af676a-4b49-40ac-b1b8-8ae13ac6cc33/default_tc.mp3" type="audio/mpeg"/>
+  </item>
+
+  <item>
+    <title>How Nostr Can Revolutionize Journalism</title>
+    <link>https://www.youtube.com/watch?v=6oE019vqOMw</link>
+    <guid>https://www.youtube.com/watch?v=6oE019vqOMw</guid>
+    <pubDate>Thu, 05 Jun 2025 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Presentation</itunes:subtitle>
+    <itunes:summary>Presentation</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/6oE019vqOMw/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>BR083: Nostr Rising 06 — Zap the Planet and Nostr Money ft. Calle, Pablo &amp; Miljan</title>
+    <link>https://www.youtube.com/watch?v=SE88l1HLHkQ</link>
+    <guid>https://www.youtube.com/watch?v=SE88l1HLHkQ</guid>
+    <pubDate>Fri, 25 Oct 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Bitcoin.Review</itunes:subtitle>
+    <itunes:summary>Bitcoin.Review</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/SE88l1HLHkQ/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>BR079: Nostr Rising 02 — Communities ft. Rabble, Alex Gleason, Hodlbod &amp; Pablo</title>
+    <link>https://www.youtube.com/watch?v=xU9Pj2_khU0</link>
+    <guid>https://www.youtube.com/watch?v=xU9Pj2_khU0</guid>
+    <pubDate>Wed, 16 Oct 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Bitcoin.Review</itunes:subtitle>
+    <itunes:summary>Bitcoin.Review</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/xU9Pj2_khU0/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Build It Right: Open Networks = Interoperable Businesses — BTC Prague 2024 Keynote</title>
+    <link>https://www.youtube.com/watch?v=RBXuhzGiIYU</link>
+    <guid>https://www.youtube.com/watch?v=RBXuhzGiIYU</guid>
+    <pubDate>Fri, 28 Jun 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>BTC Prague</itunes:subtitle>
+    <itunes:summary>BTC Prague</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/RBXuhzGiIYU/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Nostr: All Your Silos Are Broken — Martti Malmi, Aleksandar Svetski, Pablof7z, Miljan &amp; Derek Ross</title>
+    <link>https://www.youtube.com/watch?v=SSFVR5ZXOuA</link>
+    <guid>https://www.youtube.com/watch?v=SSFVR5ZXOuA</guid>
+    <pubDate>Fri, 21 Jun 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>BTC Prague</itunes:subtitle>
+    <itunes:summary>BTC Prague</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/SSFVR5ZXOuA/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Pablo Fernandez, Troy Cross, Jeff Booth &amp; Knut Svanholm</title>
+    <link>https://www.youtube.com/watch?v=hcIUxwGEPKM</link>
+    <guid>https://www.youtube.com/watch?v=hcIUxwGEPKM</guid>
+    <pubDate>Fri, 03 May 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Bitcoin Atlantis 2024</itunes:subtitle>
+    <itunes:summary>Bitcoin Atlantis 2024</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/hcIUxwGEPKM/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Pablo Fernandez &amp; Tony Giorgio — SEC Presentation</title>
+    <link>https://www.youtube.com/watch?v=Yj_NRq_mzOw</link>
+    <guid>https://www.youtube.com/watch?v=Yj_NRq_mzOw</guid>
+    <pubDate>Thu, 25 Apr 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Bitcoin Atlantis 2024</itunes:subtitle>
+    <itunes:summary>Bitcoin Atlantis 2024</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/Yj_NRq_mzOw/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Daniel Prince, Pablo Fernandez, Sylvia Brinded-P&#252;ls, Alex Kons &amp; Rogzy</title>
+    <link>https://www.youtube.com/watch?v=EiH2AbqM-IA</link>
+    <guid>https://www.youtube.com/watch?v=EiH2AbqM-IA</guid>
+    <pubDate>Thu, 18 Apr 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Bitcoin Atlantis 2024</itunes:subtitle>
+    <itunes:summary>Bitcoin Atlantis 2024</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/EiH2AbqM-IA/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Marce, Max K, Pablo Fernandez, Sylvia Brinded-P&#252;ls &amp; Andr&#233; Loja</title>
+    <link>https://www.youtube.com/watch?v=VC9Lxjyw0TM</link>
+    <guid>https://www.youtube.com/watch?v=VC9Lxjyw0TM</guid>
+    <pubDate>Thu, 28 Mar 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Bitcoin Atlantis 2024</itunes:subtitle>
+    <itunes:summary>Bitcoin Atlantis 2024</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/VC9Lxjyw0TM/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>BR060: Sparrow, Tor Connect, NDK, AQUA Wallet, Linux vulnerability +MORE</title>
+    <link>https://www.youtube.com/watch?v=SRwpssg0Gjk</link>
+    <guid>https://www.youtube.com/watch?v=SRwpssg0Gjk</guid>
+    <pubDate>Thu, 08 Feb 2024 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Bitcoin.Review</itunes:subtitle>
+    <itunes:summary>Bitcoin.Review</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/SRwpssg0Gjk/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Why Are We Bullish?</title>
+    <link>https://www.youtube.com/watch?v=IBCsG7fLmQQ</link>
+    <guid>https://www.youtube.com/watch?v=IBCsG7fLmQQ</guid>
+    <pubDate>Sat, 09 Dec 2023 12:00:00 GMT</pubDate>
+    <itunes:subtitle>BTC Chat</itunes:subtitle>
+    <itunes:summary>BTC Chat</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/IBCsG7fLmQQ/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>The Gossip Model</title>
+    <link>https://www.youtube.com/watch?v=VvApmH7rmVQ</link>
+    <guid>https://www.youtube.com/watch?v=VvApmH7rmVQ</guid>
+    <pubDate>Wed, 15 Nov 2023 12:00:00 GMT</pubDate>
+    <itunes:subtitle>NostrAsia</itunes:subtitle>
+    <itunes:summary>NostrAsia</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/VvApmH7rmVQ/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>BR034: Nostr Taking Off! Catch-up with NVK ft. Fiatjaf, JB55, Pablo &amp; Odell</title>
+    <link>https://www.youtube.com/watch?v=Ul74FXtJ6Bw</link>
+    <guid>https://www.youtube.com/watch?v=Ul74FXtJ6Bw</guid>
+    <pubDate>Thu, 11 May 2023 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Bitcoin.Review</itunes:subtitle>
+    <itunes:summary>Bitcoin.Review</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/Ul74FXtJ6Bw/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Nostr Highlighter built by PabloF7z</title>
+    <link>https://www.youtube.com/watch?v=BoJetSxZZM0</link>
+    <guid>https://www.youtube.com/watch?v=BoJetSxZZM0</guid>
+    <pubDate>Fri, 28 Apr 2023 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Nostr Talks / Curious DK</itunes:subtitle>
+    <itunes:summary>Nostr Talks / Curious DK</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/BoJetSxZZM0/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Nostrica Recap with PabloF7z, GSovereignty, Max Webster and DK</title>
+    <link>https://www.youtube.com/watch?v=0At8zPYSwQI</link>
+    <guid>https://www.youtube.com/watch?v=0At8zPYSwQI</guid>
+    <pubDate>Thu, 23 Mar 2023 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Nostr Talks / Curious DK</itunes:subtitle>
+    <itunes:summary>Nostr Talks / Curious DK</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/0At8zPYSwQI/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Nostr: Microapps by Pablof7z</title>
+    <link>https://www.youtube.com/watch?v=FFf3O8HF5_I</link>
+    <guid>https://www.youtube.com/watch?v=FFf3O8HF5_I</guid>
+    <pubDate>Mon, 20 Mar 2023 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Talk</itunes:subtitle>
+    <itunes:summary>Talk</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/FFf3O8HF5_I/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
+  <item>
+    <title>Nostrica March 19 2023 Workshop — Building Microapps</title>
+    <link>https://www.youtube.com/watch?v=DvnAHp60zpU</link>
+    <guid>https://www.youtube.com/watch?v=DvnAHp60zpU</guid>
+    <pubDate>Sun, 19 Mar 2023 12:00:00 GMT</pubDate>
+    <itunes:subtitle>Nostrica</itunes:subtitle>
+    <itunes:summary>Nostrica</itunes:summary>
+    <itunes:image href="https://img.youtube.com/vi/DvnAHp60zpU/hqdefault.jpg"/>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+
 </channel>
 </rss>
