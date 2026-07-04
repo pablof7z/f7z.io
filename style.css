@@ -221,7 +221,7 @@ hr {
   font-weight: 900;
   line-height: 0.88;
   letter-spacing: -0.035em;
-  font-size: clamp(2.6rem, 13vw, 10.5rem);
+  font-size: clamp(2.4rem, 12vw, 10rem);
   margin: 0;
   white-space: nowrap;
 }
@@ -240,6 +240,22 @@ hr {
   line-height: 1.55;
 }
 
+/* fragments as essay links */
+a.fragment {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a.fragment:hover .frag-word,
+a.fragment:focus-visible .frag-word { color: var(--accent); }
+
+a.fragment.accent:hover .frag-word,
+a.fragment.accent:focus-visible .frag-word { opacity: 0.75; }
+
+a.fragment:hover .frag-index,
+a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
+
 /* scroll-reveal, JS-driven, opt-in only when motion is allowed */
 .js-animate .fragment {
   opacity: 0;
@@ -251,6 +267,36 @@ hr {
   transform: translateY(0);
   transition: opacity 0.9s cubic-bezier(.16, .8, .24, 1), transform 0.9s cubic-bezier(.16, .8, .24, 1);
 }
+
+/* ---------- essays ---------- */
+
+.page.essay { max-width: 660px; }
+
+.essay p {
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.essay-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.essay-nav a {
+  text-decoration: none;
+  border-bottom: none;
+  opacity: 0.6;
+}
+
+.essay-nav a:hover { opacity: 1; color: var(--accent); }
 
 /* ---------- quiet section (homepage bio) ---------- */
 
@@ -323,6 +369,16 @@ hr {
   opacity: 0.5;
   margin: 3rem 0 1.2rem;
 }
+
+/* featured section breaks out of the .page column width */
+
+.featured-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.5rem) var(--pad-x) 0;
+}
+
+.featured-wrap .stuff-section-label { margin-top: 0; }
 
 .stuff-more {
   display: grid;
