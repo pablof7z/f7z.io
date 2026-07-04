@@ -25,9 +25,12 @@
 <h2 class="stuff-section-label">currently building</h2>
 <div class="stuff-featured">
 <button class="stuff-card entry featured" type="button">
-  <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 3 45 24 24 45 3 24Z"/><path d="M24 3v42M3 24h42M9 9l30 30M39 9 9 39"/></svg></span>
-  <span class="entry-title">Trellis</span>
-  <span class="entry-sub">You have leaked subscriptions right now, and no test you can write will catch them. Trellis is a deterministic reconciler for Rust: state changes in, resource commands and an auditable receipt out &mdash; and it ships its own oracle to prove it.</span>
+  <span class="card-head">
+    <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 3 45 24 24 45 3 24Z"/><path d="M24 3v42M3 24h42M9 9l30 30M39 9 9 39"/></svg></span>
+    <span class="entry-title">Trellis</span>
+  </span>
+  <span class="card-slogan">Same instinct as Bitcoin: don't trust, verify.</span>
+  <span class="entry-sub">Leaked subscriptions are invisible until they cost you in prod. Trellis makes correctness provable, not hoped for.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>Trellis is a deterministic reconciler for Rust application kernels. Its relatives are
@@ -63,9 +66,12 @@ step of adoption, not the first.&rdquo;</p>
 </button>
 
 <button class="stuff-card entry featured" type="button">
-  <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24 24 10M24 24 12 34M24 24 36 34"/><circle cx="24" cy="24" r="5.5" fill="currentColor" stroke="none"/><circle cx="24" cy="9" r="3.4"/><circle cx="11" cy="35" r="3.4"/><circle cx="37" cy="35" r="3.4"/></svg></span>
-  <span class="entry-title">NMP</span>
-  <span class="entry-sub">One Rust core, three platforms, zero rewrites. The bet that ends the era of writing every app three times &mdash; protocol logic and state live once, in Rust, and iOS/Android/web are just dumb skins on top.</span>
+  <span class="card-head">
+    <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24 24 10M24 24 12 34M24 24 36 34"/><circle cx="24" cy="24" r="5.5" fill="currentColor" stroke="none"/><circle cx="24" cy="9" r="3.4"/><circle cx="11" cy="35" r="3.4"/><circle cx="37" cy="35" r="3.4"/></svg></span>
+    <span class="entry-title">NMP</span>
+  </span>
+  <span class="card-slogan">I've paid the duplication tax for years. This ends it.</span>
+  <span class="entry-sub">Years of maintaining Olas-iOS, Olas-Android, and ndk-mobile separately taught me the tax is unpayable. One core ends it.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>NMP (Nostr Multi-Platform) is the bet that ends the era of writing every app three
@@ -87,9 +93,12 @@ Rust), and <strong>chirp</strong> (a new nostr client built on NMP from day one)
 </button>
 
 <button class="stuff-card entry featured" type="button">
-  <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 42 38 6 38Z"/><circle cx="24" cy="8" r="3.6" fill="currentColor" stroke="none"/><circle cx="42" cy="38" r="3.6" fill="currentColor" stroke="none"/><circle cx="6" cy="38" r="3.6" fill="currentColor" stroke="none"/><circle cx="24" cy="28" r="2" fill="currentColor" stroke="none"/></svg></span>
-  <span class="entry-title">tenex-edge</span>
-  <span class="entry-sub">Stop being the message bus between your own agents. Each agent gets a durable identity, broadcasts a live one-line status, and can @mention any other agent directly &mdash; across hosts and vendors, no copy-paste.</span>
+  <span class="card-head">
+    <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 42 38 6 38Z"/><circle cx="24" cy="8" r="3.6" fill="currentColor" stroke="none"/><circle cx="42" cy="38" r="3.6" fill="currentColor" stroke="none"/><circle cx="6" cy="38" r="3.6" fill="currentColor" stroke="none"/><circle cx="24" cy="28" r="2" fill="currentColor" stroke="none"/></svg></span>
+    <span class="entry-title">tenex-edge</span>
+  </span>
+  <span class="card-slogan">An agent deserves the same identity a keypair gives a human.</span>
+  <span class="entry-sub">I think "subagent" is an insane abstraction: a disposable process with no memory. tenex-edge gives agents real identity.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>You run Claude Code, Codex, and OpenCode on the same repo, and all day <em>you</em>
@@ -117,9 +126,12 @@ and the wire is you.&rdquo;</p>
 </button>
 
 <button class="stuff-card entry featured" type="button">
-  <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5 41 15v18L24 43 7 33V15Z"/><path d="M15 24l6 6 12-14"/></svg></span>
-  <span class="entry-title">proactive-context</span>
-  <span class="entry-sub">Your spec already exists, scattered across chats with your coding agent. <code>pc</code> hooks your agent's lifecycle and distills what you settled into a per-project wiki, every claim cited to the transcript line where you said it.</span>
+  <span class="card-head">
+    <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5 41 15v18L24 43 7 33V15Z"/><path d="M15 24l6 6 12-14"/></svg></span>
+    <span class="entry-title">proactive-context</span>
+  </span>
+  <span class="card-slogan">Code can be regenerated. A hard-won decision can't.</span>
+  <span class="entry-sub">I kept re-explaining the same decision to my agent for months. <code>pc</code> remembers it, cited to the line I said it.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>Every decision you've made, every correction you've issued, every time you changed
@@ -148,9 +160,12 @@ verbatim receipts, never silently overwritten.&rdquo;</p>
 </button>
 
 <button class="stuff-card entry featured" type="button">
-  <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="35" cy="12" r="4.5"/><path d="M4 38 18 16l8 11 6-7 12 18Z"/></svg></span>
-  <span class="entry-title">Sovereign Engineering</span>
-  <span class="entry-sub">Six weeks in Madeira with people who actually ship. Six rotating captains, demo day every Friday, no talking without shipping &mdash; a cohort of builders working on freedom tech together.</span>
+  <span class="card-head">
+    <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="35" cy="12" r="4.5"/><path d="M4 38 18 16l8 11 6-7 12 18Z"/></svg></span>
+    <span class="entry-title">Sovereign Engineering</span>
+  </span>
+  <span class="card-slogan">Ideas aren't the bottleneck. Builders are.</span>
+  <span class="entry-sub">Six weeks shipping next to people who actually ship. The highest-leverage way I know to make builders.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>Run with Gigi. Six weeks of shipping, not talking. Sovereign Engineering brings
@@ -175,15 +190,25 @@ captains, demo day every Friday, no talking without shipping.</p>
 </button>
 
 <button class="stuff-card entry featured" type="button">
-  <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="18" cy="24" r="14"/><circle cx="30" cy="24" r="14"/></svg></span>
-  <span class="entry-title">Wikifreedia</span>
-  <span class="entry-sub">Wikipedia without the editorial politburo. Sign your edits, let web of trust sort it out.</span>
+  <span class="card-head">
+    <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="18" cy="24" r="14"/><circle cx="30" cy="24" r="14"/></svg></span>
+    <span class="entry-title">Wikifreedia</span>
+  </span>
+  <span class="card-slogan">Consensus manufactures a winner, not truth.</span>
+  <span class="entry-sub">Every "neutral" Wikipedia article is just whoever won the edit war. Wikifreedia keeps every version signed, separate.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
-<p>Wikifreedia reimagines collaborative knowledge building on a censorship-resistant
-substrate. Articles are events, edits are signed, and reputation emerges from the web of
-trust rather than administrator hierarchies. Truth doesn't come from consensus; embrace the
-bias, sign your edits, let the web of trust sort it out.</p>
+<p>Wikifreedia is a wiki built on nostr where no article has a canonical version. Every author
+publishes their own signed take on a topic; versions coexist, get forked, and get compared
+side by side instead of being merged into one. Ranking comes from your web of trust, not an
+administrator hierarchy &mdash; you decide whose perspective you see first, and nobody gets to
+decide it for everyone.</p>
+
+<p>The premise: truth doesn't come from consensus. Humans are unavoidably biased, and an
+encyclopedia that edits every perspective into one &ldquo;neutral&rdquo; article isn't removing
+bias &mdash; it's hiding whose bias won. So Wikifreedia inverts it: embrace the bias, sign your
+name to it, and let readers compare openly-owned perspectives. Truth at the edges, not by
+decree.</p>
 
 <h2>features</h2>
 <ul>

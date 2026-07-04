@@ -402,11 +402,13 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 
 .stuff-more .entry-sub { font-size: 0.85rem; }
 
-/* featured: portrait cards with icon + richer copy */
+/* featured: portrait cards with icon + richer copy.
+   auto-fit + a fixed portrait aspect-ratio means the column count is
+   purely a function of available width, not a hand-picked breakpoint. */
 
 .stuff-featured {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
   gap: 1.1rem;
 }
 
@@ -414,33 +416,55 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 21rem;
-  padding: 1.9rem 1.6rem 1.5rem;
+  aspect-ratio: 3 / 4;
+  padding: 1.7rem 1.6rem 1.5rem;
+  overflow: hidden;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.1rem;
+  flex-shrink: 0;
 }
 
 .card-icon {
   display: block;
-  width: 2.6rem;
-  height: 2.6rem;
-  margin-bottom: 1.3rem;
+  width: 1.85rem;
+  height: 1.85rem;
   color: var(--ink);
   opacity: 0.88;
+  flex-shrink: 0;
 }
 
 .card-icon svg { width: 100%; height: 100%; display: block; }
 
 .stuff-featured .entry-title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
+.card-slogan {
+  display: block;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+
 .stuff-featured .entry-sub {
-  font-size: 0.92rem;
-  line-height: 1.62;
+  font-size: 0.86rem;
+  line-height: 1.55;
   margin-top: 0.7rem;
   opacity: var(--muted-op);
   flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .card-cta {
@@ -454,6 +478,7 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
   padding-top: 1rem;
   width: 100%;
   border-top: 1px solid var(--rule);
+  flex-shrink: 0;
 }
 
 .stuff-card.entry:hover .card-cta,
@@ -468,14 +493,9 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
   opacity: 1;
 }
 
-@media (max-width: 60em) {
-  .stuff-featured { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 40em) {
-  .stuff-featured,
-  .stuff-more { grid-template-columns: 1fr; }
-  .stuff-featured .stuff-card.entry { min-height: 0; }
+@media (max-width: 26em) {
+  .stuff-featured .stuff-card.entry { aspect-ratio: auto; }
+  .stuff-featured .entry-sub { -webkit-line-clamp: 8; }
 }
 
 .legacy-heading,
@@ -587,6 +607,80 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 
 .post-foot a { text-decoration: none; opacity: 0.5; border-bottom: none; }
 .post-foot a:hover { opacity: 1; color: var(--accent); }
+
+/* ---------- /podcast ---------- */
+
+.podcast-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.podcast-card {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 1.1rem;
+  border: 1px solid var(--rule);
+  padding: 1.1rem 1.3rem;
+  transition: border-color 0.15s ease;
+}
+
+.podcast-card:hover { border-color: var(--accent); }
+
+.podcast-art {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  align-self: start;
+}
+
+.podcast-body { min-width: 0; }
+
+.podcast-title {
+  display: block;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.15rem;
+}
+
+.podcast-meta {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  opacity: 0.5;
+  margin-bottom: 0.6rem;
+}
+
+.podcast-quote {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin: 0 0 0.6rem;
+  opacity: var(--muted-op);
+}
+
+.podcast-quote + .podcast-quote { margin-top: -0.3rem; }
+
+.podcast-listen {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-bottom: none;
+  opacity: 0.6;
+}
+
+.podcast-listen:hover { opacity: 1; color: var(--accent); }
+
+@media (max-width: 34em) {
+  .podcast-card { grid-template-columns: 1fr; }
+  .podcast-art { width: 100%; height: 10rem; }
+}
 
 /* ---------- /nownownow changelog ---------- */
 
