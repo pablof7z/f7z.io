@@ -1,0 +1,81 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trellis — pablof7z</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="/style.css">
+<body class="wide">
+
+<header class="masthead">
+  <a class="who" href="/">f7z.io</a>
+  <nav class="mast-nav">
+    <a href="/stuff/" aria-current="page">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+</header>
+
+<header class="page-head">
+  <div class="kicker">f7z.io / stuff</div>
+  <h1 class="page-title">Trellis<span class="dot">.</span></h1>
+  <p class="page-note">A deterministic reconciler for Rust. State changes in; resource commands, output frames, and an auditable receipt out.</p>
+</header>
+
+<main class="page">
+
+<p>Trellis is a deterministic reconciler for Rust application kernels. Its relatives are
+Terraform's <code>plan</code> phase, the Kubernetes reconcile loop, and React's commit phase
+&mdash; not signal libraries, not query caches. State changes in; resource commands, output
+frames, and an auditable receipt out.</p>
+
+<h2>the shape of the bug it kills</h2>
+<ul>
+  <li>followed accounts &rarr; relay set &rarr; live subscriptions</li>
+  <li>active workspace &rarr; visible projects &rarr; desired sync windows</li>
+  <li>open files &rarr; module graph &rarr; affected files &rarr; file watchers</li>
+</ul>
+
+<p>Callbacks and subscription handles work until the source set shrinks, a scope closes,
+permissions are revoked, or a stale status arrives late. Then a resource leaks &mdash;
+silently, unfalsifiably, in production. You cannot assert your way out, because the bug lives
+in the gap between your state and your side effects. Trellis makes every one of those
+transitions an explicit, ordered, testable command: your state lives in a transactional graph,
+side effects never happen inside it, and every committed transaction returns a resource plan,
+output frames, and a receipt.</p>
+
+<h2>what ships with it</h2>
+<ul>
+  <li>A full-recompute oracle in the production crate, not the test crate</li>
+  <li>An honest, documented cost model &mdash; O(total-state) per transaction, stated as a design consequence, not hidden</li>
+  <li>Shadow mode: run it beside your existing code and compare, before you trust it or delete anything</li>
+  <li>&ldquo;Leak Duel&rdquo; &mdash; a browser demo, callbacks vs. Trellis, with a chaos slider showing leaked attachments</li>
+  <li>&ldquo;Flight Recorder&rdquo; &mdash; git blame for side effects</li>
+</ul>
+
+<h2>who's running it</h2>
+<ul>
+  <li><strong>NMP</strong> &mdash; first consumer, in shadow-mode equivalence</li>
+  <li><strong>tenex-edge</strong> &mdash; live surfaces (relay subscriptions, fabric snapshot) reconciled through Trellis</li>
+</ul>
+
+<p>Pre-1.0: the semantics are stable, the names may not be. MIT OR Apache-2.0.</p>
+
+<p class="why">&ldquo;Don't trust it &mdash; shadow it. Deleting your bespoke code is the last
+step of adoption, not the first.&rdquo;</p>
+
+<p><a href="https://trellis.rs">trellis.rs</a> &middot; <a href="https://github.com/pablof7z/trellis">github</a></p>
+
+<p class="back"><a href="/stuff/">&larr; back to stuff</a></p>
+
+</main>
+
+<footer>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+  <span class="colophon">f7z.io</span>
+</footer>

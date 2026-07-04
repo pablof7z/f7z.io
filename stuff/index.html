@@ -26,6 +26,42 @@
 <h2 class="stuff-section-label">currently building</h2>
 <div class="stuff-featured">
 <button class="stuff-card entry featured" type="button">
+  <span class="entry-title">Trellis</span>
+  <span class="entry-sub">You have leaked subscriptions right now, and no test you can write will catch them.</span>
+  <template>
+<p>Trellis is a deterministic reconciler for Rust application kernels. Its relatives are
+Terraform's <code>plan</code> phase, the Kubernetes reconcile loop, and React's commit phase
+&mdash; not signal libraries, not query caches. State changes in; resource commands, output
+frames, and an auditable receipt out.</p>
+
+<p>Every long-lived client grows an implicit graph &mdash; followed accounts &rarr; relay set
+&rarr; live subscriptions, active workspace &rarr; sync windows, open files &rarr; file
+watchers &mdash; and eventually a resource outlives the state that justified it. No unit test
+catches it, because the bug lives in the gap between state and side effect. Trellis closes
+that gap: state lives in a transactional graph, side effects never happen inside it, and every
+transaction returns a resource plan, output frames, and a receipt you can replay.</p>
+
+<h2>what it ships with</h2>
+<ul>
+  <li>A full-recompute oracle in the production crate, not the test crate</li>
+  <li>A documented, honest cost model &mdash; O(total-state) per transaction, deliberately</li>
+  <li>Shadow mode: run it beside your existing code before you trust it</li>
+  <li>Two browser demos &mdash; &ldquo;Leak Duel&rdquo; and &ldquo;Flight Recorder&rdquo; (git blame for side effects)</li>
+</ul>
+
+<p>First consumer is NMP, running Trellis in shadow-mode equivalence; tenex-edge adopted it
+next for its live surfaces. Pre-1.0: the semantics are stable, the names may not be.</p>
+
+<p class="why">&ldquo;Don't trust it &mdash; shadow it. Deleting your bespoke code is the last
+step of adoption, not the first.&rdquo;</p>
+
+<p><a href="https://trellis.rs">trellis.rs</a> &middot; <a href="https://github.com/pablof7z/trellis">github</a></p>
+
+<p><a href="/stuff/trellis/">full page &rarr;</a></p>
+  </template>
+</button>
+
+<button class="stuff-card entry featured" type="button">
   <span class="entry-title">NMP</span>
   <span class="entry-sub">One Rust core, three platforms, zero rewrites.</span>
   <template>
