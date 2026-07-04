@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/.well-known/nostr.json", "destination": "/api/nip05" }
+  ],
+  "headers": [
+    {
+      "source": "/.well-known/nostr.json",
+      "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+    },
+    {
+      "source": "/api/nip05",
+      "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+    }
+  ]
+}

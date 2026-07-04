@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<title>Data Vending Machine — pablof7z</title>
+<link rel="stylesheet" href="/style.css">
+<body class="wide">
+
+<h1>Data Vending Machine</h1>
+<p class="tagline">Reference implementation of NIP-90 Data Vending Machines.</p>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<p>DVMs are compute marketplaces on nostr. Clients request work (translations, AI
+inference, image generation), DVMs bid on jobs, and payments flow via Lightning or ecash.</p>
+
+<h2>how it works</h2>
+<ul>
+  <li>Client publishes job request (kind 5xxx)</li>
+  <li>DVMs respond with quotes</li>
+  <li>Client pays and receives result</li>
+  <li>All coordination happens on nostr relays</li>
+</ul>
+
+<p>This reference implementation demonstrates the full DVM lifecycle and can be extended
+for any compute workload.</p>
+
+<p><a href="https://github.com/pablof7z/nostr-data-vending-machine">github</a></p>
+
+<p><a href="/stuff/">&larr; back to stuff</a></p>
+
+<footer>
+  f7z.io
+</footer>

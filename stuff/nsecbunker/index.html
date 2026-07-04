@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<title>nsecBunker — pablof7z</title>
+<link rel="stylesheet" href="/style.css">
+<body class="wide">
+
+<h1>nsecBunker</h1>
+<p class="tagline">Remote key signing and delegation. Your keys stay on hardware you control while apps get scoped permissions.</p>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<p>nsecBunker implements NIP-46 to provide OAuth-like flows for nostr. Instead of giving
+your nsec to every application, you run a bunker on trusted hardware and grant revocable,
+scoped access to clients.</p>
+
+<h2>features</h2>
+<ul>
+  <li>Granular permission control per application</li>
+  <li>OAuth-like authorization flow</li>
+  <li>Team key sharing for organizations</li>
+  <li>LNbits integration for billing</li>
+  <li>Audit logging of all signing requests</li>
+  <li>Multi-key management</li>
+</ul>
+
+<p>The bunker model is the only sane way to use nostr keys across multiple clients without
+trusting every app with your identity. I stopped developing it once it started taking off in
+a way that would have been bad for nostr if it had kept scaling like that &mdash; see
+<a href="/nownownow/#y2024-11">the changelog</a> for why I killed my own successful product.</p>
+
+<p><a href="https://github.com/pablof7z/nsecbunker">github</a></p>
+
+<p><a href="/stuff/">&larr; back to stuff</a></p>
+
+<footer>
+  f7z.io
+</footer>

@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<title>Kind0.io — pablof7z</title>
+<link rel="stylesheet" href="/style.css">
+<body class="wide">
+
+<h1>Kind0.io</h1>
+<p class="tagline">NIP-41 key migration proof-of-concept. Rotate keys without losing identity.</p>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/stuff/">stuff</a>
+  <a href="/nownownow/">now</a>
+  <a href="/podcast/">podcast</a>
+  <a href="/feed/">feed</a>
+</nav>
+
+<p>If your key gets compromised, Kind0.io lets you prove ownership of a new key. You
+whitelist your next npub ahead of time, and when needed, publish a migration event.</p>
+
+<h2>how it works</h2>
+<ul>
+  <li>Whitelist your backup npub in advance</li>
+  <li>Timestamp to Bitcoin blockchain for proof</li>
+  <li>If compromised, publish migration event</li>
+  <li>Followers can verify the transition</li>
+</ul>
+
+<p>The problem: nostr identities are keypairs, and if you lose your nsec or it gets stolen,
+you lose everything. This is a first step toward solving that.</p>
+
+<p><a href="https://kind0.io">kind0.io</a></p>
+
+<p><a href="/stuff/">&larr; back to stuff</a></p>
+
+<footer>
+  f7z.io
+</footer>
