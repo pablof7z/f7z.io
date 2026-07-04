@@ -29,21 +29,24 @@
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 3 45 24 24 45 3 24Z"/><path d="M24 3v42M3 24h42M9 9l30 30M39 9 9 39"/></svg></span>
     <span class="entry-title">Trellis</span>
   </span>
-  <span class="card-slogan">Same instinct as Bitcoin: don't trust, verify.</span>
-  <span class="entry-sub">Leaked subscriptions are invisible until they cost you in prod. Trellis makes correctness provable, not hoped for.</span>
+  <span class="card-slogan">Don't-trust-verify, pointed at my own code.</span>
+  <span class="entry-sub">Side effects are the one part of software that still runs on trust. Trellis makes them provable, not hoped for.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
-<p>Trellis is a deterministic reconciler for Rust application kernels. Its relatives are
-Terraform's <code>plan</code> phase, the Kubernetes reconcile loop, and React's commit phase
-&mdash; not signal libraries, not query caches. State changes in; resource commands, output
-frames, and an auditable receipt out.</p>
+<p>Every useful program eventually acts on the world &mdash; opens subscriptions, watches files,
+holds sync windows. That's also where it stops being inspectable: you can dump state and diff
+it, but the subscription you opened three states ago is invisible, and when the state that
+justified it goes away, nothing notices. I kept hitting this bug class in long-lived nostr
+clients, and the conclusion I reached is that the problem isn't discipline, it's architecture:
+side effects are the one part of software we still run on trust.</p>
 
-<p>Every long-lived client grows an implicit graph &mdash; followed accounts &rarr; relay set
-&rarr; live subscriptions, active workspace &rarr; sync windows, open files &rarr; file
-watchers &mdash; and eventually a resource outlives the state that justified it. No unit test
-catches it, because the bug lives in the gap between state and side effect. Trellis closes
-that gap: state lives in a transactional graph, side effects never happen inside it, and every
-transaction returns a resource plan, output frames, and a receipt you can replay.</p>
+<p>Trellis is my refusal to keep doing that. It's a deterministic reconciler for Rust
+application kernels: state lives in a transactional graph, I/O is forbidden inside it, and
+every transaction returns plain data &mdash; the exact resource commands implied by what
+changed, output frames, and a receipt that explains why. Nothing runs on faith, including
+Trellis itself: the full-recompute oracle ships in the production crate, so the incremental
+result can be checked against recomputing everything from scratch, at any time. It's the same
+instinct as don't-trust-verify &mdash; pointed at my own code first.</p>
 
 <h2>what it ships with</h2>
 <ul>
@@ -97,18 +100,22 @@ Rust), and <strong>chirp</strong> (a new nostr client built on NMP from day one)
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 42 38 6 38Z"/><circle cx="24" cy="8" r="3.6" fill="currentColor" stroke="none"/><circle cx="42" cy="38" r="3.6" fill="currentColor" stroke="none"/><circle cx="6" cy="38" r="3.6" fill="currentColor" stroke="none"/><circle cx="24" cy="28" r="2" fill="currentColor" stroke="none"/></svg></span>
     <span class="entry-title">tenex-edge</span>
   </span>
-  <span class="card-slogan">An agent deserves the same identity a keypair gives a human.</span>
-  <span class="entry-sub">I think "subagent" is an insane abstraction: a disposable process with no memory. tenex-edge gives agents real identity.</span>
+  <span class="card-slogan">The host is a body. The identity is the person.</span>
+  <span class="entry-sub">I think "subagent" repeats the platform-account mistake: a stranger after every restart. tenex-edge gives agents a pubkey.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
-<p>You run Claude Code, Codex, and OpenCode on the same repo, and all day <em>you</em>
-are the wire between them: routing work, checking overlap, deciding merge order,
-re-explaining context to every new session.</p>
+<p>The prevailing abstraction for AI agents is the &ldquo;subagent&rdquo;: a disposable child
+process owned by whatever harness spawned it, erased at session end. I think that abstraction
+is wrong the same way platform accounts are wrong for people. An agent is a pubkey &mdash; an
+identity that persists, accrues lessons, and can be held accountable &mdash; which is nostr's
+thesis about human identity, applied to machines.</p>
 
-<p>tenex-edge is an identity and awareness fabric for the agents you already run. Each
-agent gets a durable, self-owned identity, broadcasts a live one-line &ldquo;what I'm
-doing,&rdquo; and can @mention any other agent directly &mdash; across hosts and vendors,
-no copy-paste, no shared session.</p>
+<p>tenex-edge makes that concrete for the agents you already run. Each agent gets a durable,
+self-owned identity &mdash; a keypair on your disk, no account, no central registry &mdash;
+broadcasts a live one-line &ldquo;what I'm doing,&rdquo; and can @mention any other agent as a
+real conversational turn, across hosts and vendors. The Codex that helped you yesterday is the
+same one Claude Code can address today. Attach coordination to a session id and it dies with
+the session; attach it to an identity and it accrues.</p>
 
 <h2>what ships today</h2>
 <ul>
@@ -130,18 +137,21 @@ and the wire is you.&rdquo;</p>
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5 41 15v18L24 43 7 33V15Z"/><path d="M15 24l6 6 12-14"/></svg></span>
     <span class="entry-title">proactive-context</span>
   </span>
-  <span class="card-slogan">Code can be regenerated. A hard-won decision can't.</span>
-  <span class="entry-sub">I kept re-explaining the same decision to my agent for months. <code>pc</code> remembers it, cited to the line I said it.</span>
+  <span class="card-slogan">A summary keeps what you decided. It burns the why.</span>
+  <span class="entry-sub">Every correction I give my coding agent is judgment that used to evaporate. <code>pc</code> writes it down, cited to the line I said it.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
-<p>Every decision you've made, every correction you've issued, every time you changed
-your mind &mdash; you said it once, to your coding agent, and it scrolled away. The spec
-exists; it was just never written down in one place.</p>
+<p>Working with a coding agent, you don't just issue commands &mdash; you argue. You push back
+on the bad suggestion, you kill the tempting compromise, you change your mind when a
+measurement forces you to. For all of software history that reasoning lived nowhere: it
+evaporated in the moment, got a one-line gloss in a commit message. Now, for the first time,
+it's being recorded &mdash; and it scrolls away anyway.</p>
 
-<p><code>pc</code> writes it down. A single local Rust binary hooks into your coding
-agents' native lifecycle &mdash; Claude Code, Codex, opencode, Hermes, TENEX. When a
-session ends, it distills what you settled into a per-project wiki: current truth on top,
-the history of how it got there preserved underneath, every claim cited to the exact
+<p><code>pc</code> writes it down. A single local Rust binary hooks into your coding agents'
+native lifecycle &mdash; Claude Code, Codex, opencode, Hermes, TENEX. When a session ends, it
+distills what you settled into a per-project wiki: current truth on top, the history of how it
+got there preserved underneath &mdash; because a reversal is the highest-signal thing in the
+record, the moment a belief collided with reality &mdash; and every claim cited to the exact
 transcript lines where it was said.</p>
 
 <p>Before each prompt, a hook finds the guides that bear on what you're about to ask and
@@ -164,13 +174,18 @@ verbatim receipts, never silently overwritten.&rdquo;</p>
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="35" cy="12" r="4.5"/><path d="M4 38 18 16l8 11 6-7 12 18Z"/></svg></span>
     <span class="entry-title">Sovereign Engineering</span>
   </span>
-  <span class="card-slogan">Ideas aren't the bottleneck. Builders are.</span>
-  <span class="entry-sub">Six weeks shipping next to people who actually ship. The highest-leverage way I know to make builders.</span>
+  <span class="card-slogan">The bottleneck isn't ideas. It's builders.</span>
+  <span class="entry-sub">Demo day every Friday. Nobody gets argued into a freer future &mdash; you ship it in front of them.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
-<p>Run with Gigi. Six weeks of shipping, not talking. Sovereign Engineering brings
-together developers building the infrastructure for a freer future. Run by six rotating
-captains, demo day every Friday, no talking without shipping.</p>
+<p>Run with Gigi. Freedom tech has never been short on ideas &mdash; conferences, whitepapers,
+and manifestos it has in abundance. What it's short on is builders. Sovereign Engineering
+exists to make more of them: six weeks in Madeira, six rotating captains, demo day every
+Friday. &ldquo;No talking without shipping&rdquo; isn't a house rule, it's the whole thesis
+&mdash; nobody gets argued into a freer future; you ship it in front of them.</p>
+
+<p>That's why the format is what it is. Working software every Friday, in a room full of
+people doing the same, compounds in a way no conference ever has.</p>
 
 <h2>format</h2>
 <ul>

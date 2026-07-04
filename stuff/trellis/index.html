@@ -23,10 +23,18 @@
 
 <main class="page">
 
-<p>Trellis is a deterministic reconciler for Rust application kernels. Its relatives are
-Terraform's <code>plan</code> phase, the Kubernetes reconcile loop, and React's commit phase
-&mdash; not signal libraries, not query caches. State changes in; resource commands, output
-frames, and an auditable receipt out.</p>
+<p>Every useful program eventually acts on the world &mdash; opens subscriptions, watches files,
+holds sync windows. That's also where it stops being inspectable: you can dump state and diff
+it, but the subscription you opened three states ago is invisible, and when the state that
+justified it goes away, nothing notices. I kept hitting this bug class in long-lived nostr
+clients, and the conclusion I reached is that the problem isn't discipline, it's architecture:
+side effects are the one part of software we still run on trust.</p>
+
+<p>Trellis is my refusal to keep doing that. It's a deterministic reconciler for Rust
+application kernels: state lives in a transactional graph, I/O is forbidden inside it, and
+every transaction returns plain data &mdash; the exact resource commands implied by what
+changed, output frames, and a receipt that explains why. It's the same instinct as
+don't-trust-verify &mdash; pointed at my own code first.</p>
 
 <h2>the shape of the bug it kills</h2>
 <ul>
