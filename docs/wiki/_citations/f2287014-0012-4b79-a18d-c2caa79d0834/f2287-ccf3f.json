@@ -1,0 +1,6 @@
+{
+  "id": "f2287-ccf3f",
+  "ts": "2026-07-04T13:22:50Z",
+  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
+  "text": "Assistant: Yes — this fits the site well, actually. The site is 100% static (no build, no framework, no server state beyond one Vercel function for NIP-05), and NDK's whole model is \"relays are the backend,\" so there's no server to build — comments and highlights just become nostr events fetched/published client-side."
+}

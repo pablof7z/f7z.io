@@ -1,0 +1,6 @@
+{
+  "id": "f2287-5bef5",
+  "ts": "2026-07-04T13:30:43Z",
+  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
+  "text": "- Smoke-checked: `/`, `/essays/`, `/receipts/`, `/js/highlights.js` all 200; `/docs/` correctly 404 (excluded via `.vercelignore`)\n\n**Two things worth your attention:**\n\n1. **`docs/wiki/` was excluded from the deploy.** Your working tree had a large auto-generated `docs/wiki/` folder (session transcripts, research notes, citations) that got committed to git but I added it to `.vercelignore` so it isn't served publicly at f7z.io — seemed like internal notes, not site content. Say the word if you actually want it public.\n"
+}

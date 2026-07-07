@@ -1,0 +1,6 @@
+{
+  "id": "3aefe-84597",
+  "ts": "2026-07-04T16:08:04Z",
+  "session": "3aefe616-5e3d-4be9-8bfb-e5f9e1b8dd81",
+  "text": "Assistant: Feed is valid with 45 items. Now let's update the podcast page to match — adding the new \"Guest appearances\" entries and a new \"Talks & panels\" section.\n\nAssistant: Good. Now let's append both new batches into the podcast page before the closing `</ul>`.\n\nAssistant: 45 cards now matching the 45 feed items. Let's verify it renders and preview.\n\nAssistant: Done. The feed went from 23 to **45 items** — added 5 more guest-appearance episodes (The Investor's Podcast, Swan Signal Live, Citizen Bitcoin, Swan Lounge, Plebchain PCR45) and 17 YouTube talks/panels/workshops (Nostrica, NostrAsia, BTC Prague keynote + panel, four Bitcoin Atlantis 2024 panels, and four Bitcoin.Review episodes). Both `podcast/feed.xml` and the `/podcast/` page are in sync and committed (only those two files — I left the unrelated `docs/wiki/` changes untouched since that looks like separate work in progress). [...] User: Including no solutions episodes I assume. Publish to prod\n\nAssistant: Confirmed live — https://f7z.io/podcast/ and the RSS feed both show all 45 items (9 No Solutions + 5 guest-appearance episodes + 17 talks/panels). Deployed to production."
+}

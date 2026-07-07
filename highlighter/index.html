@@ -1,0 +1,128 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>highlighter — pablof7z</title>
+<meta name="description" content="A name with more history than I have. Two failures taught the same lesson — build narrow, or don't build at all — and I'm restarting on it.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="/style.css">
+
+<header class="masthead">
+  <a class="who" href="/">f7z.io</a>
+  <nav class="mast-nav">
+    <a href="/essays/">Essays</a>
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+</header>
+
+<header class="essay-head">
+  <div class="essay-eyebrow">Essays &middot; <span class="essay-count">on Highlighter</span></div>
+  <h1 class="essay-title">Highlighter<span class="dot">.</span></h1>
+  <p class="essay-dek">A name with more history than I have. Two people built it too broad and paid for it &mdash; one of them was me. This time it starts narrow.</p>
+  <nav class="essay-dots" aria-label="Essays">
+    <a href="/attention/" aria-label="Attention (01)"></a>
+    <a href="/memory/" aria-label="Memory (02)"></a>
+    <a href="/structure/" aria-label="Structure (03)"></a>
+    <a href="/citizens/" aria-label="Citizens (04)"></a>
+    <a href="/zero/" aria-label="Zero (05)"></a>
+  </nav>
+</header>
+
+<main class="page essay">
+
+<p>The name isn't mine, and it isn't only mine, and the honest place to start is admitting
+both. There was a company called Highlighter, Inc. &mdash; David King's, founded in 2018 as
+Curious Labs, pivoted in 2019 to the exact idea I keep circling: gather communities around the
+best highlights from books. He is not a beginner. He&rsquo;d sold a social network to Disney,
+angel-invested in Clubhouse and Quora and Opendoor. And separately, on a completely different
+codebase and a completely different protocol, <span class="hi">I&rsquo;d been building
+something with the same name since early 2023</span>, because the idea is good enough that more
+than one person will independently refuse to let it go.</p>
+
+<p>King&rsquo;s version worked in exactly one place and failed everywhere else. The author
+town-halls &mdash; Nadia Eghbal, Jason Crawford in a room with readers &mdash; those landed. The
+Chrome extension, the podcast highlighting, the video highlighting: nothing caught. He ran out
+of money in late 2022, put more than a hundred thousand dollars of his own in to keep it
+breathing, laid off half the team, and shut the company for good in March 2024. His own
+retrospective is the part I can&rsquo;t stop rereading: he built too broad, and he should have
+<span class="hi">picked a single book, created a community around that specific content</span>,
+and let the network effects follow from the narrow channel. Paul Davison and Naval had told him
+that early. He didn&rsquo;t fully take it.</p>
+
+<p>The strange thing is that while his company was still alive, in April 2023, King wrote about
+<em>my</em> Nostr version on his own blog. A founder publicly endorsing an open reimplementation
+of his own product concept. My version wasn&rsquo;t a competitor to his; it was the same idea
+poured into a protocol nobody can shut down &mdash; identity you hold, highlights that are
+portable events any client can read. NIP-84 &mdash; kind:9802, the highlight event &mdash; comes
+out of that lineage. For a while I thought that made it safe from the mistake that killed his
+company. It didn&rsquo;t. The protocol was open; my scope was not disciplined.</p>
+
+<p>Because I made his exact error, in my own dialect. Highlighter 2.0, October 2023, release
+name &ldquo;Sig&rdquo;: DVM-based extraction, zap-splits, NIP-88 subscriptions. April 2024:
+&ldquo;Highlighter will onboard millions to nostr and to bitcoin. That&rsquo;s the goal.&rdquo;
+The subscription engine was interesting enough that it spun out as its own thing, Honeypot. By
+January 2025 I&rsquo;d deleted my other accounts to pour everything into it &mdash; &ldquo;you can
+think of it as a Substack where distribution is different&rdquo; &mdash; and the thing was, in my
+own words, in a very raw state because I was rebuilding pretty much all of it. Again.</p>
+
+<p>Then two notes from April 2025 that are the whole essay compressed. First: <span class="hi">
+&ldquo;That was the scope-creeped vision for Highlighter which I am now building as a completely
+separate project.&rdquo;</span> I was doing King&rsquo;s move in real time &mdash; amputating the
+sprawl and admitting the core had gotten buried under it. And second, a week later, finding a
+feature I&rsquo;d shipped and forgotten I&rsquo;d shipped: &ldquo;I had completely forgotten I had
+added a NIP-29 chat to highlighter, jesus, what a fucking disaster &mdash; can&rsquo;t wait to
+finish setting all this straight.&rdquo; When you can&rsquo;t remember the surface area of your
+own product, the product is telling you something.</p>
+
+<p>There&rsquo;s a detail in that stretch I only understand in hindsight. Also in April 2025:
+&ldquo;I&rsquo;ve been working on all the tooling I need to be able to work and maintain well all
+the things I want to see in the world without losing my mind.&rdquo; That tooling became
+tenex-edge, proactive-context &mdash; the agent infrastructure that has its own cards on this
+same page. I built an entire way of working <em>in order to</em> be able to come back to this one
+thing without drowning in it. Highlighter is the reason half the rest of my work exists.</p>
+
+<p>So the current repo starts fresh on April 12, 2026 &mdash; not a continuation of the messy
+2023-2025 codebase, a clean restart on top of everything I learned building the tools to survive
+it. And this time the discipline is structural, not a promise. Community-first: invite-only
+NIP-29 groups as the narrow channel King&rsquo;s retrospective was begging for &mdash; not a feed,
+a room of people reading the same book. No custom event kinds: NIP-84 for highlights, NIP-73 for
+what a highlight is <em>of</em>, plain kind:11 for the threads &mdash; interop over lock-in, so a
+community can move relays if a host disappears. And a design system that is actually locked:
+warm paper palette, one terracotta accent, a 2px rule down the left of every highlight like a
+printer&rsquo;s mark, no emoji, calm transitions. The recent commits aren&rsquo;t features. They&rsquo;re
+removals &mdash; delete the prototype pages, simplify the vault, cut the label. Ship breadth,
+then compress. The opposite of the last three attempts.</p>
+
+<p>The part that makes me believe it this time isn&rsquo;t the design system. It&rsquo;s that
+between June 8 and June 27, 2026, I migrated the whole thing onto NMP &mdash; the shared-Rust-core
+bet that has its own card here, the one where I said <span class="hi">I&rsquo;ve paid the
+duplication tax for years and this ends it</span>. Highlighter is now literally proof number four
+that the bet holds, next to podcast-rmp, olas-nmp, and chirp: one core, thin native shells, and
+the web client porting onto the same core through a WASM bridge as I write this. The idea that
+outlasted a company and three of my own restarts is finally sitting on infrastructure built to
+carry it &mdash; instead of a codebase I have to rebuild every eighteen months.</p>
+
+<p class="punch">Two people learned the same lesson the same expensive way: an idea that survives
+everything can still die of being too broad. The idea was never the problem. The scope was. This
+time it starts as one room.</p>
+
+<nav class="essay-nav">
+  <a href="/receipts/">&larr; receipts</a>
+  <a href="/stuff/">the work &rarr;</a>
+</nav>
+
+</main>
+
+<footer>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/stuff/">Stuff</a>
+    <a href="/nownownow/">Now</a>
+    <a href="/podcast/">Podcast</a>
+    <a href="/feed/">Feed</a>
+  </nav>
+  <span class="colophon">f7z.io</span>
+</footer>
+
+<script defer src="/js/highlights.js"></script>

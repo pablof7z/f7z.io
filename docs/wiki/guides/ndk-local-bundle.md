@@ -19,6 +19,6 @@ sources:
 
 ## NDK Local Bundle
 
-NDK integration on the site uses a local build step (esbuild) that bundles source modules with NDK into committed static `.js` assets. The bundled scripts are loaded with `<script defer>` and have no runtime CDN dependency. NDK nostr content (comments and highlights) loads client-side on the static site with relays as the backend, requiring no server beyond the existing NIP-05 Vercel function.
+NDK integration on the site uses a local build step (esbuild) that bundles source modules with NDK into committed static `.js` assets. The bundled scripts are loaded with `<script defer>` and have no runtime CDN dependency. Two bundles follow this pattern: the highlights bundle (`src/highlights.js` → `js/highlights.js`, ~355KB minified, ~90–100KB gzipped) and the feed-thread bundle (`src/feed-thread.js` → `js/feed-thread.js`, ~352KB minified). NDK nostr content (comments and highlights) loads client-side on the static site with relays as the backend, requiring no server beyond the existing NIP-05 Vercel function.
 
-<!-- citations: [^f2287-fa096] [^f2287-a6bcb] [^f2287-c1bf5] -->
+<!-- citations: [^f2287-fa096] [^f2287-a6bcb] [^f2287-c1bf5] [^f2287-9539e] -->

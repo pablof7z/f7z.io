@@ -2,7 +2,7 @@
 title: Feed Thread Panel
 slug: feed-thread-panel
 topic: feed-ui
-summary: Clicking any `.post` card on the `/feed/` page opens a slide-in panel showing the clicked post as the OP plus its replies, in a flat Twitter-style conversation
+summary: The site has a `/feed` page with selected nostr notes rendered as post cards â avatar, name/handle, date header, content, and a 'view on nostr' link footer â
 tags:
   - capture
 volatility: warm
@@ -13,11 +13,14 @@ verified: 2026-07-04
 compiled-from: conversation
 sources:
   - session:f2287014-0012-4b79-a18d-c2caa79d0834
+  - session:3aefe616-5e3d-4be9-8bfb-e5f9e1b8dd81
 ---
 
 # Feed Thread Panel
 
 ## Feed Thread Panel
+
+The site has a `/feed` page with selected nostr notes rendered as post cards — avatar, name/handle, date header, content, and a 'view on nostr' link footer — in bordered rounded cards stacked like a real feed. The 'feed' nav link is added consistently across all pages. Feed notes are matched to their nostr event IDs and encoded as bech32 `note1` links.
 
 Clicking any `.post` card on the `/feed/` page opens a slide-in panel showing the clicked post as the OP plus its replies, in a flat Twitter-style conversation view. The panel reuses the same `.detail-panel`/`.detail-backdrop` chrome already used on `/nownownow/`. The 'view on nostr' link inside a post card still navigates normally and is not swallowed by the card's click handler.
 
@@ -25,7 +28,7 @@ The panel subscribes live via NDK for kind:1 events tagging the note's id across
 
 Panel state does not leak between posts: opening a new post resets the reply list, and empty/loading states render correctly when no replies are found.
 
-<!-- citations: [^f2287-db3fb] [^f2287-5a205] [^f2287-79cd0] -->
+<!-- citations: [^f2287-db3fb] [^f2287-5a205] [^f2287-79cd0] [^3aefe-6f7b9] [^3aefe-a880d] -->
 ## Feed Thread Bundle
 
 The feed thread bundle is built from `src/feed-thread.js` into `js/feed-thread.js` using the same local-esbuild-bundle pattern, ~352KB minified, loaded with `defer`. <!-- [^f2287-a49d7] -->

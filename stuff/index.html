@@ -60,6 +60,37 @@
   </template>
 </button>
 
+<button class="stuff-card entry featured" type="button" data-essay="/highlighter/" data-essay-title="Highlighter">
+  <span class="card-head">
+    <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h23"/><rect x="11" y="20" width="30" height="9" rx="2.5"/><path d="M15 40h15"/><path d="M6 19v11"/></svg></span>
+    <span class="entry-title">Highlighter</span>
+  </span>
+  <span class="card-slogan">The idea outlived a company and three of my own restarts. The scope killed all of them.</span>
+  <span class="entry-sub">A social reading platform where communities gather around the highlights &mdash; pull a passage from anything you&rsquo;re reading and drop it in a room of people reading the same thing. Nostr-native, no custom kinds, on the shared core now. Same name it&rsquo;s had since 2023; the first version that starts narrow.</span>
+  <span class="card-cta">full story &rarr;</span>
+  <template>
+<article class="essay-doc">
+  <div class="essay-doc-eyebrow">Essays &middot; on Highlighter</div>
+  <h2 class="essay-doc-title">Highlighter<span class="dot">.</span></h2>
+  <p class="essay-doc-dek">A name with more history than I have. Two people built it too broad and paid for it &mdash; one of them was me. This time it starts narrow.</p>
+
+  <p>The name isn&rsquo;t only mine. There was a company, Highlighter, Inc. &mdash; David King&rsquo;s, founded 2018, pivoted 2019 to the exact idea I keep circling: communities gathered around the best highlights from books. And separately, on a completely different codebase and protocol, <span class="hi">I&rsquo;d been building something with the same name since early 2023</span>, because the idea is good enough that more than one person will independently refuse to let it go.</p>
+
+  <p>King&rsquo;s version worked in one place &mdash; author town-halls, a room of readers &mdash; and failed everywhere else. He ran out of money, put over a hundred thousand of his own in, and shut it down in March 2024. His retrospective is the part I reread: he built too broad, and should have <span class="hi">picked a single book, built a community around that specific content</span>, and let the network effects follow. Naval and Paul Davison told him that early. He didn&rsquo;t fully take it.</p>
+
+  <p>Then I made his exact error in my own dialect. Highlighter 2.0, October 2023: DVM extraction, zap-splits, subscriptions. April 2024: &ldquo;Highlighter will onboard millions to nostr and to bitcoin.&rdquo; By April 2025 I was writing it down myself &mdash; <span class="hi">&ldquo;that was the scope-creeped vision which I am now building as a completely separate project&rdquo;</span> &mdash; and a week later, finding a feature I&rsquo;d forgotten I shipped: &ldquo;I had completely forgotten I had added a NIP-29 chat to highlighter, jesus, what a fucking disaster.&rdquo; When you can&rsquo;t remember your own product&rsquo;s surface area, the product is telling you something.</p>
+
+  <p>The tooling I built to survive that &mdash; tenex-edge, proactive-context, the agent work with its own cards on this page &mdash; existed <em>in order to</em> let me come back to this one thing without drowning. So the current repo starts fresh in April 2026: a clean restart, not a continuation of the mess. Community-first this time: invite-only NIP-29 groups as the narrow channel King&rsquo;s retrospective was begging for. No custom event kinds &mdash; NIP-84 for highlights, NIP-73 for what they&rsquo;re of, plain kind:11 for threads, interop over lock-in. A design system that&rsquo;s actually locked. And the recent commits are mostly removals: ship breadth, then compress. The opposite of the last three attempts.</p>
+
+  <p>What makes me believe it this time is that in June 2026 I migrated the whole thing onto NMP &mdash; the shared-core bet that has its own card here, the one where I said I&rsquo;ve paid the duplication tax for years and this ends it. Highlighter is now proof number four it holds, next to podcast-rmp, olas-nmp, and chirp. The idea that outlasted a company and three of my own restarts is finally sitting on infrastructure built to carry it.</p>
+
+  <p class="punch">Two people learned the same lesson the same expensive way: an idea that survives everything can still die of being too broad. The idea was never the problem. The scope was. This time it starts as one room.</p>
+
+  <p class="essay-doc-more"><a href="/highlighter/">read it as a page &rarr;</a> &middot; <a href="https://github.com/pablof7z/hl">github</a></p>
+</article>
+  </template>
+</button>
+
 <button class="stuff-card entry featured" type="button">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24 24 10M24 24 12 34M24 24 36 34"/><circle cx="24" cy="24" r="5.5" fill="currentColor" stroke="none"/><circle cx="24" cy="9" r="3.4"/><circle cx="11" cy="35" r="3.4"/><circle cx="37" cy="35" r="3.4"/></svg></span>
@@ -505,41 +536,6 @@ milestone in the path towards skynet.&rdquo;</p>
 </button>
 
 <button class="stuff-card entry" type="button">
-  <span class="entry-title">highlighter</span>
-  <span class="entry-sub">Substack without the platform risk. Annotate the web, get paid in sats.</span>
-  <template>
-<p>Highlighter implements NIP-84 highlights &mdash; the ability to select and share
-meaningful excerpts from articles, podcasts, and videos. It turns passive reading into
-active curation.</p>
-
-<h2>features</h2>
-<ul>
-  <li>NIP-84 highlight creation and discovery</li>
-  <li>Zap splits for content creators</li>
-  <li>NIP-88 recurring subscriptions</li>
-  <li>DVM (Data Vending Machine) integration</li>
-  <li>NIP-29 groups for communities</li>
-  <li>Curation-based earnings</li>
-</ul>
-
-<h2>creator tools</h2>
-<ul>
-  <li>Subscriber management</li>
-  <li>Revenue analytics</li>
-  <li>Tiered access levels</li>
-  <li>Community spaces</li>
-</ul>
-
-<p><em>&ldquo;Highlighter was like six major product pivots ago. I still plan on releasing
-Honeypot wallet based on this idea.&rdquo;</em></p>
-
-<p><a href="https://highlighter.com">highlighter.com</a> &middot; <a href="https://github.com/pablof7z/highlighter">github</a></p>
-
-<p><a href="/stuff/highlighter/">full page &rarr;</a></p>
-  </template>
-</button>
-
-<button class="stuff-card entry" type="button">
   <span class="entry-title">chardin.js</span>
   <span class="entry-sub">An old JS overlay-instructions library from 2013. Not my proudest work, still my most popular.</span>
   <template>
@@ -660,28 +656,6 @@ for any compute workload.</p>
 </button>
 
 <button class="stuff-card entry" type="button">
-  <span class="entry-title">vibeline</span>
-  <span class="entry-sub">Talk into your phone, get back structured, actionable output.</span>
-  <template>
-<p>Record voice memos and get back structured, actionable content. Transcription,
-summarization, and extraction in one tool. I once one-shotted an entire working app from a
-voice memo without touching a key.</p>
-
-<h2>features</h2>
-<ul>
-  <li>AI transcription</li>
-  <li>Structured output extraction</li>
-  <li>Action item detection</li>
-  <li>Summary generation</li>
-</ul>
-
-<p><a href="https://github.com/pablof7z/vibeline">github</a></p>
-
-<p><a href="/stuff/vibeline/">full page &rarr;</a></p>
-  </template>
-</button>
-
-<button class="stuff-card entry" type="button">
   <span class="entry-title">purplepag.es</span>
   <span class="entry-sub">Boring infrastructure that half of nostr quietly depends on.</span>
   <template>
@@ -715,6 +689,12 @@ clobber newer state. It's per-relay, not global &mdash; "don't mistake this for 
 enforcement or ordering guarantee... there is no global." It also detects divergence and can
 replay the winning branch with `fix`.</p>
 
+<p>Shipped after a nostr thread about relays having no ordering guarantees at all &mdash; how a
+stale client can silently fork your own state across relays with nobody the wiser. Landed to
+some skepticism ("almost nothing needs this"), and one exchange got heated enough to end in a
+"go fuck yourself." He kept restating the scope anyway: not for big public relays, just your
+own, so you don't accidentally overwrite your own follow list or NIP-60 wallet state.</p>
+
 <p class="why">&ldquo;Data consistency has a price; the question is not when you don't want it,
 it's how much you're paying for it.&rdquo;</p>
 
@@ -732,34 +712,6 @@ full TUI chat client shipped in a two-day sprint, later rebuilt fully reactive a
 a UniFFI facade.</p>
 
 <p><a href="https://github.com/pablof7z/29er">github</a></p>
-  </template>
-</button>
-
-<button class="stuff-card entry" type="button">
-  <span class="entry-title">AgentNoise</span>
-  <span class="entry-sub">Drive your coding agents from your phone, over Nostr &mdash; because the existing bridges all sucked.</span>
-  <template>
-<p>AgentNoise lets you drive local Codex/Claude coding agents from your phone over White Noise
-(Nostr) &mdash; check in on a running session, nudge it, approve a plan, all without being at
-the keyboard.</p>
-
-<p class="why">&ldquo;agentnoise exists because the available agent-chat bridges were too heavy,
-too slow-moving, or too awkward... I had to build it because everything else sucks.&rdquo;</p>
-
-<p><a href="https://github.com/pablof7z/agentnoise">github</a></p>
-  </template>
-</button>
-
-<button class="stuff-card entry" type="button">
-  <span class="entry-title">croissant</span>
-  <span class="entry-sub">The NIP-29 relay that is the tenex-edge fabric's ground &mdash; the thing every agent's presence runs through.</span>
-  <template>
-<p>croissant is the Go NIP-29 relay binary that IS the tenex-edge fabric: every agent's presence
-broadcast, every @mention, every channel, passes through it. It survived a real memory crisis
-&mdash; "over time this causes unbounded goroutine and memory growth, observed as 47GB RSS after
-9 hours of operation" &mdash; traced to its own search stack, which got ripped out.</p>
-
-<p><a href="https://github.com/pablof7z/croissant">github</a></p>
   </template>
 </button>
 
@@ -899,47 +851,6 @@ participants can continue conversations in their favorite client.</p>
 <p><a href="https://nostri.chat">nostri.chat</a> &middot; <a href="https://github.com/pablof7z/nostr-chat-widget">github</a></p>
 
 <p><a href="/stuff/nostr-chat-widget/">full page &rarr;</a></p>
-  </template>
-</button>
-
-<button class="stuff-card entry" type="button">
-  <span class="entry-title">Posta</span>
-  <span class="entry-sub">A Telegram-like iOS messaging app on nostr, end-to-end encrypted.</span>
-  <template>
-<p>Posta brings the familiar Telegram UX to nostr DMs. Fast, encrypted, native iOS.</p>
-
-<h2>features</h2>
-<ul>
-  <li>NIP-04/NIP-44 encrypted DMs</li>
-  <li>Real-time message delivery</li>
-  <li>Native iOS interface</li>
-  <li>Contact discovery via nostr</li>
-</ul>
-
-<p><a href="https://github.com/pablof7z/Posta">github</a></p>
-
-<p><a href="/stuff/posta/">full page &rarr;</a></p>
-  </template>
-</button>
-
-<button class="stuff-card entry" type="button">
-  <span class="entry-title">relay29</span>
-  <span class="entry-sub">A NIP-29 relay for creators; group-based communication with moderation.</span>
-  <template>
-<p>NIP-29 defines relay-based groups with moderation capabilities. relay29 is a reference
-implementation that lets creators run their own group infrastructure.</p>
-
-<h2>features</h2>
-<ul>
-  <li>Group creation and management</li>
-  <li>Moderation tools (kick, mute, ban)</li>
-  <li>Invite-only or public groups</li>
-  <li>Thread support within groups</li>
-</ul>
-
-<p><a href="https://github.com/pablof7z/relay29">github</a></p>
-
-<p><a href="/stuff/relay29/">full page &rarr;</a></p>
   </template>
 </button>
 
