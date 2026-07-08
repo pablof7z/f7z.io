@@ -132,6 +132,7 @@ a { color: inherit; }
 
 .subscribe a { text-decoration: none; border-bottom: 1px solid var(--rule); }
 .subscribe a:hover { border-bottom-color: var(--accent); }
+.subscribe .sep { opacity: 0.5; margin: 0 0.35em; }
 
 /* ---------- content column ---------- */
 
