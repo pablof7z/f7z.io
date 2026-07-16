@@ -1,6 +1,0 @@
-{
-  "id": "f2287-83f3d",
-  "ts": "2026-07-04T13:22:50Z",
-  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
-  "text": "Assistant: All key pages return 200, and `docs/` correctly returns 404 (excluded from the deploy as intended, not publicly exposed). Let's do a final inspection of the deployment record. [...] - Smoke-checked: `/`, `/essays/`, `/receipts/`, `/js/highlights.js` all 200; `/docs/` correctly 404 (excluded via `.vercelignore`) [...] 1. **`docs/wiki/` was excluded from the deploy.** Your working tree had a large auto-generated `docs/wiki/` folder (session transcripts, research notes, citations) that got committed to git but I added it to `.vercelignore` so it isn't served publicly at f7z.io — seemed like internal notes, not site content. Say the word if you actually want it public."
-}

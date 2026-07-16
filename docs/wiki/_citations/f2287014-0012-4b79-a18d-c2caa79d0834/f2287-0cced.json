@@ -1,6 +1,0 @@
-{
-  "id": "f2287-0cced",
-  "ts": "2026-07-04T11:47:26Z",
-  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
-  "text": "- **Sign-in**: floating bottom-right pill, only rendered if a NIP-07 extension is detected; shows avatar/name once signed in, click to sign out; silently re-signs-in on return visits via a localStorage flag."
-}

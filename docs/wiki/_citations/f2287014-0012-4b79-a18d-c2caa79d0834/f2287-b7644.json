@@ -1,6 +1,0 @@
-{
-  "id": "f2287-b7644",
-  "ts": "2026-07-04T12:30:47Z",
-  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
-  "text": "Assistant: Build works, 355KB minified (~90-100KB gzipped, served with `defer`). Now let's add the styling and wire the script tag into the essay pages. [...] Summary of what's shipped on the `attention`/`memory`/`structure`/`citizens`/`zero` essay pages:\n- **Build**: `npm run build` (esbuild) bundles `src/highlights.js` + NDK into the committed static `js/highlights.js` (~355KB minified, loaded via `<script defer>`, no runtime CDN dependency)."
-}

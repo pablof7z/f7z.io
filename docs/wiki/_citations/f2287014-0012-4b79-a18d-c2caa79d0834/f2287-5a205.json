@@ -1,6 +1,0 @@
-{
-  "id": "f2287-5a205",
-  "ts": "2026-07-04T11:47:24Z",
-  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
-  "text": "- The panel shows the clicked post cloned as the OP, then subscribes live via NDK for `kind:1` events tagging that note's id across four public relays, rendering each as a `.post`-styled reply card (avatar, name/nip05, relative timestamp, content, its own \"view on nostr\" link) — a flat, Twitter-style conversation view. [...] One known simplification worth flagging: it fetches *all* kind:1 events tagging the post via `#e`, without NIP-10 marker filtering — so a rare quote-post that merely mentions the note (rather than replying to it) could show up alongside true replies. Not seen in testing, but possible. Say if you want that tightened."
-}

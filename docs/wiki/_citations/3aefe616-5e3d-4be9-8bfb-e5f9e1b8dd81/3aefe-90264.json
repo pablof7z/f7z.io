@@ -1,6 +1,0 @@
-{
-  "id": "3aefe-90264",
-  "ts": "2026-07-04T16:00:46Z",
-  "session": "3aefe616-5e3d-4be9-8bfb-e5f9e1b8dd81",
-  "text": "Assistant: Good — clean orphan branch `old-school-rebuild`, remote `origin` set, nothing pushed. I won't push until you say so. Now waiting on the copywriting agent; I'll build the actual HTML/CSS once it returns. [...] User: commit everything\n\nAssistant: `.claude/` is internal harness state (a scheduled-tasks lock file), not part of the site — I'll exclude it from git too rather than committing it.\n\nAssistant: Everything staged, cleanly. Committing now.\n\nAssistant: Committed on `old-school-rebuild` (12 files, 1579 lines). Not pushed to GitHub — let me know if you want me to push it or open a PR against the old site's history."
-}

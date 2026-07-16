@@ -1,6 +1,0 @@
-{
-  "id": "f2287-a49d7",
-  "ts": "2026-07-04T11:47:24Z",
-  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
-  "text": "- Built via `src/feed-thread.js` → `js/feed-thread.js` (same local-esbuild-bundle pattern as the highlights feature), ~352KB minified, loaded with `defer`."
-}

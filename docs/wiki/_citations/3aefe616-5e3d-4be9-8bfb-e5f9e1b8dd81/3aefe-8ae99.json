@@ -1,6 +1,0 @@
-{
-  "id": "3aefe-8ae99",
-  "ts": "2026-07-04T16:07:53Z",
-  "session": "3aefe616-5e3d-4be9-8bfb-e5f9e1b8dd81",
-  "text": "User: find me on nostr should be using _@f7z.io as my nip05 and linking to nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft\n\nAssistant: Confirmed — same identity, just the nip05 alias and a `nostr:` URI link instead of a raw npub string. Updating the homepage."
-}

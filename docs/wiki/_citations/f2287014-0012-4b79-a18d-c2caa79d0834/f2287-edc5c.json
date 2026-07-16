@@ -1,6 +1,0 @@
-{
-  "id": "f2287-edc5c",
-  "ts": "2026-07-04T11:47:20Z",
-  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
-  "text": "- **Comments**: NIP-22 (`kind:1111`) anchored via NIP-73 external-content tags (`I`/`K` = the essay's canonical URL, since the essay pages aren't nostr events themselves) — read by filtering `#I` on that URL, threaded by `e`/`E` for replies. [...] Comments (the other half of the original ask) aren't built yet — say the word when you want that pass."
-}

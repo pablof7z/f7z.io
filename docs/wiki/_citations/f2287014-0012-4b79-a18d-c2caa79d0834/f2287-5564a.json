@@ -1,6 +1,0 @@
-{
-  "id": "f2287-5564a",
-  "ts": "2026-07-04T13:22:44Z",
-  "session": "f2287014-0012-4b79-a18d-c2caa79d0834",
-  "text": "User: link to the trellis essay from a new Essays section which will link to all the essays (including attention, etc) [...] - New `/essays/` index page: lists the five core essays (01 Attention → 05 Zero) plus a separate \"on trellis\" section linking to `/receipts/` — the existing essay about Trellis, which I'd initially missed since its slug doesn't mention Trellis by name. [...] - Added an \"Essays\" link (first item, before Stuff) to the masthead nav across all 40 pages on the site. [...] - New `.essays-list` CSS matches the site's existing hairline-divider/mono-index conventions."
-}

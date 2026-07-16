@@ -1,6 +1,0 @@
-{
-  "id": "3aefe-7f287",
-  "ts": "2026-07-04T16:01:04Z",
-  "session": "3aefe616-5e3d-4be9-8bfb-e5f9e1b8dd81",
-  "text": "User: I want you to make a personal static website for myself -- make it very old school and simple -- it should have a /stuff with one-liner of the things I work on\n\nblack on white, simple colors, very very minimalistic and unpretentious. [...] \nblack on white, simple colors, very very minimalistic and unpretentious. [...] No javascript anywhere -- all just static stuff. [...] User: find me on nostr should be using _@f7z.io as my nip05 and linking to nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft\n\nAssistant: Confirmed — same identity, just the nip05 alias and a `nostr:` URI link instead of a raw npub string. Updating the homepage. [...] User: deploy to vercel prod under my url f7z.io\n\nAssistant: Linked to the existing `dev-f7z-io` project, which owns the root `f7z.io` domain (currently serving the old JS-driven site). Deploying the new static site to production now will replace it.\n\nAssistant: Deployed and aliased to `f7z.io`. Verifying it's actually live.\n\nAssistant: Live on production — https://f7z.io now serves the new site (home, `/stuff`, `/nownownow`, `/audio` all confirmed). This replaced the old JS-driven site that was previously there."
-}
