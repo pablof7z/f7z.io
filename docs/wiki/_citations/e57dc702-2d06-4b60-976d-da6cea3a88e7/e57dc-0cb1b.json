@@ -1,0 +1,6 @@
+{
+  "id": "e57dc-0cb1b",
+  "ts": "2026-07-16T15:01:16Z",
+  "session": "e57dc702-2d06-4b60-976d-da6cea3a88e7",
+  "text": "**4. You're rebutting the weak objection.** \"Custom software might preserve an irrational process\" — nobody serious leads with that, and swatting it makes the piece look defensive against a strawman. The real objection is stewardship: you now own maintenance, security, migration, schema evolution, forever, unamortized. Scale doesn't just buy features, it buys incident response and someone else's institutional memory. I suspect your actual answer is interesting — something like *these apps are cheap enough to abandon or regenerate that the maintenance question changes shape* — but you have to go get it rather than dodge it. [...] The usual objection that custom software might preserve an inefficient or irrational process misses the argument. The claim is not that every existing process should be copied uncritically. The claim is that the user should ultimately be able to decide how the tool behaves rather than being permanently constrained by decisions made for a broader market."
+}

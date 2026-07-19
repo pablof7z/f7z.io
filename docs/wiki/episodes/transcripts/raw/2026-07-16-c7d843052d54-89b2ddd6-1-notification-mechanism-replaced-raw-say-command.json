@@ -1,0 +1,34 @@
+[
+  [
+    "user",
+    "what is making you use the command `say` every once in a while?"
+  ],
+  [
+    "assistant",
+    "It's a line in your global `~/.claude/CLAUDE.md`:\n\n> \"Send me important notifications by running the `say` command.\"\n\nThat's a standing instruction you (or a past session) saved, applying to all projects — it tells me to speak important notifications aloud via macOS's `say` rather than just printing text."
+  ],
+  [
+    "user",
+    "delete it"
+  ],
+  [
+    "assistant",
+    "Deleted — `~/.claude/CLAUDE.md` is now empty, so I won't use `say` anymore."
+  ],
+  [
+    "user",
+    "send haiku agents to see if its some other agent instruction place"
+  ],
+  [
+    "assistant",
+    "No `say` references in the f7z.io repo either — clean. Still waiting on the global `.claude` config search."
+  ],
+  [
+    "user",
+    "and in ~/.agents ?"
+  ],
+  [
+    "assistant",
+    "Found more — in `~/.agents`, four references to `say` for notifications:\n\n1. **`homes/chief-of-staff/workflows/inbox-monitor.md`** (line 21) — an active workflow doc: `` `say` once that session finishes (or fails) — no alert for the comment itself ``. This looks like a live instruction for the chief-of-staff agent's inbox-monitoring workflow.\n2. **`home/harbor-134-codex/design-exploration-capture/nmp/reconcile-local-only-protocol-network.md`** (3 refs) — reads like a saved design-exploration session transcript, not live config.\n3. **`home/harbor-134-codex/design-exploration-capture/nmp/reconcile-local-only-product-workflow.md`** (2 refs) — same, looks like session notes.\n\nThe two `design-exploration-capture` files look like historical session logs (not instructions I'd edit), but `inbox-monitor.md` is a workflow definition that's still telling an agent to use `say`. Want me to update that one to use the `tts` skill too, or leave it alone since it's chief-of-staff's own workflow rather than this session's?"
+  ]
+]

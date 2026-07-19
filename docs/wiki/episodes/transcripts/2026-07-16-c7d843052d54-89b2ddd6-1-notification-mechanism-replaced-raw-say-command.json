@@ -1,0 +1,34 @@
+[
+  [
+    "user",
+    "what is making you use the command `say` every once in a while?"
+  ],
+  [
+    "assistant",
+    "It's a standing instruction in your global ~/.claude/CLAUDE.md telling me to send important notifications via macOS's say command."
+  ],
+  [
+    "user",
+    "delete it"
+  ],
+  [
+    "assistant",
+    "Deleted — ~/.claude/CLAUDE.md is now empty, so I won't use say anymore."
+  ],
+  [
+    "user",
+    "send haiku agents to see if its some other agent instruction place"
+  ],
+  [
+    "assistant",
+    "No say references in the f7z.io repo; still searching the global .claude config."
+  ],
+  [
+    "user",
+    "and in ~/.agents ?"
+  ],
+  [
+    "assistant",
+    "Found say references in ~/.agents: one in chief-of-staff's inbox-monitor workflow (live instruction), and several in design-exploration-capture files (historical session logs). Asked whether to update the workflow file."
+  ]
+]

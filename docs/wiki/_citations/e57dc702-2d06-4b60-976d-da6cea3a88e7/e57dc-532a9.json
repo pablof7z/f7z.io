@@ -1,0 +1,6 @@
+{
+  "id": "e57dc-532a9",
+  "ts": "2026-07-16T15:01:16Z",
+  "session": "e57dc702-2d06-4b60-976d-da6cea3a88e7",
+  "text": "**5. \"Fully directable\" needs teeth.** Right now it's an assertion. Your research has the concrete version: translation depth. User → support → PM → designer → engineer → roadmap → maybe never, versus user → tool. That's not an abstraction, that's a thing your reader has personally lost years to. [...] * **Translation depth.**\n\n  Number of interpretive handoffs between the user expressing a need and the system changing: user → support → product manager → designer → engineer → release, versus user → tool."
+}

@@ -1,0 +1,6 @@
+{
+  "id": "e57dc-5df4d",
+  "ts": "2026-07-16T15:01:16Z",
+  "session": "e57dc702-2d06-4b60-976d-da6cea3a88e7",
+  "text": "This is not an argument against opinionated software. In fact, **opinionated tools are better**.\n\nA non-opinionated product tries to accommodate a broad range of very different users. Because it is designed around a wide and heterogeneous audience, it may achieve only moderate alignment with each of them. As an illustration, it might fit a large number of users by roughly 50%.\n\nAn opinionated product targets a much more narrowly defined persona. Because the intended users are more similar to one another, the product can make stronger and more specific decisions on their behalf. It might therefore achieve something closer to 85% alignment across that smaller group.\n\nThe remaining 15% does not represent one shared set of missing requirements. It fragments into smaller areas of disagreement between the individual users. Different people diverge from the product in different ways.\n\nA fully opinionated tool built for one specific user can, by definition, achieve 100% fit with that user. It can embody that person’s exact preferences, workflows, assumptions, and requirements."
+}
