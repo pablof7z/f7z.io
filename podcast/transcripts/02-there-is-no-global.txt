@@ -1,1 +1,2051 @@
-I just, I won't look at the phone anymore. [laughs] I'll trust it. I fully, I fully trust technology. [laughs] Is that better? Yeah. Maybe? That's great. I don't know. We'll see. I never know how to start these things. [laughs] So how are you doing, Pablo? Good morning. Good morning. Pretty good. Excited. Yeah. Another- Let's see how it goes ... another episode of, uh, No Solutions. Let's see how it goes. Well, it's not even an episode, right? It's a dialogue. Yeah. [laughs] I think, I think, uh, yeah, I'm not sure. People will call it episodes anyway. [laughs] But I, I, I see it as a dialogue. You know, that's the problem with naming. You're not in charge of naming. [laughs] That's another thing. Like, people... You're not even in charge of your name. People will call you whatever. [laughs] In school, school makes this very apparent. It doesn't matter what your name is. It's like, you'll, you'll get your own. Anyway, I digress already. [laughs] So, um, yeah, the- We, we go on a tangent before hitting any point whatsoever. [laughs] Yeah. I, I listened back to the first one and, and, uh, it's actually... It- I was able to listen to it. That's okay. So the sound quality was okay. Mm-hmm. But it's... I, I hope we will improve. Um, but one thing that we didn't talk too much about was, like, what this experiment actually is. We talked a little bit about, you know, it kinda came out of Sovereign Engineering, or some of the things we discussed during Sovereign Engineering. We wanna kind of refine and have a more open, more public dialogue about it, and I think that's, that's a large part of it. But it's also, the way I view it is the whole problem space is way too big for one person to come up with a solution in some sense, so the only thing we have is dialogue. I think the, to, to navigate this whole space, like, how should we build it, and how should we build it right, and how do we think about Nostr and Saps and, you know, building something on a Bitcoin standard, building something, like rebuilding the internet, reinventing the internet on a Bitcoin standard, so to speak, um, it's too big of a task for one person or even a couple of people. You need to muddle your way through and talk about it and have many, many dialogues about what might be not the correct solution, I don't think there is a correct solution- Mm ... but what are the right trade-offs? How can you think about it? What is the... What, what would be the pro of cons of doing it this way as opposed to that way? And I think the way I see this, the way I see these, like, No Solutions conversations, dialogues, whatever, is I wanna talk to the people that are closest to that, that have been closest to that for the longest time, and to kind of have a, almost like a time capsule in some sense. Mm-hmm. How did we think about it in January 2025? Oh, now it's February, so how did we think about it? [laughs] Time flies, man. [laughs]  And just to see where we're at, and maybe, maybe something useful comes out of it. And maybe it's also... My hope is that we will also get better at explaining to regular people why is this exciting- Mm ... why is this a massive opportunity, and why, I think I mentioned it the last time as well, if you're just a regular JavaScript developer or whatever, and you just learned how to code, why should you take a look at this, and why is this exciting? Yeah. I think ex- explaining these things is, is just so hard. And the, the closer you are, the, the harder it gets. Um, I was listening to, to, uh, to Adam Curry on, uh, on Joe Rogan y- last night. And- Oh, he went again? Yeah, yeah, yeah. Oh, wow. He went like- Yeah, a sixth ... six or seven times now already, I think. [laughs] He's a regular. Yeah. Um, and at one point he started talking about Bitcoin, and the way he was explaining Bitcoin, it w- it wasn't too compelling. [laughs] Yeah, yeah, yeah, yeah. Yeah. Yeah. It was, "No, but I, I believe in Bitcoin. No, I don't believe on the other shitcoins." And it y- that puts them in regular... in, in the same footing. You know? Uh, it's, it's a, it's a belief system. And, and, uh, it's not about- Hmm. Yeah, I see. Okay ... oh, I believe in this one- Yeah, yeah ... and you believe on this other one. Yeah, yeah. Um, and I, I think it does a, a huge disservice when you explain things in the wrong way- Yeah ... um, which is something that I see a lot. Um, I, I saw Hazard wrote, uh, wrote, um, a long form, maybe like a year ago, making that point, saying something like, uh, a, a, a bad explanation is worse, worse than no explanation. [laughs]  Which I think is a very good point. [laughs] Yeah, I think that's true. One of the things that you've mentioned a bunch of times in, uh, in, in Sovereign Engineering, uh, I think we... it's a, it's a good point to, to touch on, is the, the distributed cognition. Yeah. I think it's a very e- very useful way of thinking. Yeah. You, you wanna, you wanna touch on that? Yeah. I, I, I mean, those are not my ideas. Um, uh, there is a lot of, uh, you know, like, people [laughs] that are way smarter than me that point this out, that all the hard problems, all the interesting problems are actually not solved by one person. They're all solved by distributed cognition, by, by, like, uh, you know... Uh, who runs an airline, for example? Who, who, who steers a large cruise ship? It's not, like, one guy. You need, you need, like, 100 people to do these things, and no single one person can tell you how it works. Or, like, who runs America, or who runs a big country, or who runs a big corporation, and so on. So we put systems in place, and we, we have various things that hopefully self-regulate, and that's what, in combination with humans, runs the thing. And I think, um, just kind of, you know, who came up with the idea of X? It's a very hard... X as a placeholder, not X as in, like, the new Twitter now. [laughs]  It's a very- Yeah. He, he ruined, he ruined the, the, the X word. [laughs] Yeah. Ah, what a shame. No, but it's a very, it's a very, um- Hard question to answer because you don't actually have, like, true real original thoughts, so to speak. Like, everything is a remix of, of something else- Hmm ... and so on and so forth. And so there is, um... I mean, the, the, the way I look at all that is that there is a reason why, for example, in the West, the logos is sacred, and why in the US, the First Amendment is the First Amendment. That it's about free speech and having the ability to actually speak freely about things and discuss things. And the... It's, it's the only way to figure out what you actually need to do. It's the only way to get a grasp on a complex thing that doesn't have a well-defined problem space, and I think all those things are the most interesting problems. All the most interesting problems don't have, like, a definite solution. Hmm. Evolution is a great example. Yeah, 100%. Like, like the problem space of life itself. What is the perfect organism? There is no perfect organism. You, you- The, the question makes no sense. Exactly. The question makes no sense. And, and in a s- I, I view Nostr under the same light, for example. Yeah. I view the stuff that we are doing under the same light. What is the perfect Nostr app? There is no perfect Nostr app. It's, it's... First, first of all, it's even hard to even say what Nostr is in, in, in, like, to box it in, in some sense. Yeah. And, and th- I think that's why you can't figure it out. Like, you as a single person, you can't figure it out. You don't, you don't even know. Like, even if you build a s- a thing, and you think you understand it from start to finish, if you, if you, uh, actually shoot it out into the wild, if you actually ship it, if you actually release it, the people will use it in surprising ways. Hmm. That's always what happens. So you don't even understand what you built yourself. You know? Like, uh, the people that, that created Viagra, for example, thought it was a heart medi- medicine, you know? [laughs] Like, it's... I, I always use this example because most people know it. Yeah. And that's true for absolutely everything, you know? Like, it's true, it's true across the board. Like, pick your thing that was invented. People will use it in very surprising ways. And, and, and so I, I, I think we're at a point now where, um, it's absolutely crucial to have these conversations and also involve kind of... How should I put it? Let me start, let me start somewhere else. I think we figured out a lot of things by building the first iteration of the internet. Hmm. And a lot of... Like, Rebel is a great example. Rebel knows a lot of things about [laughs] social media and the history of social media and how things went and, and how all this built and how this came about, and he knows all the mistakes that were made along the way, basically. So it's important to really hear these people and not res- repeat those mistakes, I think. I think it's... We, we actually have a chance of, you know, building the next iteration of the free and open internet, and I would... Like, it would be a missed opportunity if we repeat the mistakes of the past. Yeah, and I, I think one of the, the things, um, one of the benefits of having these conversations, and especially about opening them up, uh, like we're doing now, is that i-i-it is very easy to just default to... N- Nostr and, like, the stuff that we're working on, it technically, it looks a lot like the old world. Um, like the peer-to-peer, like the strictly peer-to-peer technologies with a VHD. They architecturally, they look very different than a, a client-server model. Nostr looks a lot like a client-server model. It looks very, very similar. It just changes. It's a very small change that is incredibly significant. Yeah. The, the servers are stupid and, and very much replaceable, and also you don't use one server. And the data- I think that's the main difference, right? And, and, and the data is bare. Yes. The, exactly. The, the, the authenticity- Yeah, yeah, yeah ... of the data is- Yeah ... in the data- Yeah ... and that makes all the difference. Yeah. All the difference. Yeah. Yeah. It doesn't matter if the, the data is coming from, uh, uh, a server you do not trust. Yeah. The signature is there. Yeah. Yeah. That's all that matters. Yeah. Yeah. Um, but fr- from an architectural standpoint, it looks very similar. Yeah. It looks extremely, extremely similar. So it would be very easy to default, and it is something that we keep seeing. It is very easy to default to having the same answers that we had before. Yeah. The same answers of how do you grow? How do you- Trying the same thing because it worked in the past ... revenue? Trying ex- Yeah. Yeah. Exactly. Exactly. And just trying to rebuild the same thing. Um, and I think opening up these conversations where we have free... B- because that, it is the thing that we do not have the answers. [laughs] Yeah. Like- Yeah ... we, we are not recording ourselves thinking, "Oh, this is how you need to do it." Yeah, no, not at all. Uh, it, it is quite the opposite, is we are opening up the- Trying to figure it out as you go. We're trying to figure it out. Yeah. Yeah. Which, like, the first slide, or among the first two or three slides on the day one of software engineering is you are the guinea pig. [laughs] Yeah. Yeah. Which is still true. Yeah. It is very much true. Yeah. Um, and, and these- Yeah. And we are, and we are too. [laughs] And we are too, 100%. Yeah, yeah, yeah. We're just trying to figure these things out and what this is, right? Yeah. Yeah. I, I think, I think the, the default architecture of how most of the things in the web work right now, they, over the last 20 years or so, they impressed various thoughts into the minds of people and developers, and it's very, very, very hard to undo that. Hmm. Hard. And it's actually lies. I mean, you talked about this a couple of times already, but it's very much worth pointing out, and it's one of the, one of the themes we, we had in, uh, in the course as well. It's like, for example, there is no global. There is no global view of the whole thing. It's impossible. It's an impossible problem. If you wanna have a global view, you need to actually build Bitcoin. You need to rebuild Bitcoin- I understand ... you need proof of work, you need all the limitations ... with all the limitations- Everything, yeah ... with everything that that means. Everything else is a lie. Yeah. You know, like, the, the, the global view count of a y- of a YouTube video is a lie. It's a complete lie. You can't have the global view. It's, it's, it's always wrong. It's always outdated. I just- That's just how ... Because the speed of light and how information works- Yeah ... and all of it, it's like I don't wanna get into the detail of why it's ... uh, the details of why it is a lie, but it's always a lie. The like count of your, of your, of your tweet, it's a lie, and so on and so forth. And- And even within Bitcoin, Bitcoin, you, you need to rebuild Bitcoin. Bitcoin only claims to have the truth of its own system. Oh, absolutely. Yeah, yeah. And that's why inscribing shit- Yeah, yeah. No, no ... on the blockchain is retarded, right? We, we already- You need to- [laughs] ... talked about the retardation of NFT last time. [laughs] Let's not repeat that. [laughs] Yeah. But, but, but Bitcoin doesn't claim to have a global view of the other stuff- Yeah, no, no ... of everything that is not within the system. You, you can't have that. But, but I think that's so, that's so ... You just have to be okay with having an incomplete view of the thing. Yeah. You just have to be okay with things potentially being out of order or incomplete or what have you. That's just the, the ... That's just how the world works. It's just reality. And there is no way around it. If you, if you ... And, and, and the reason why I think it's super important to, to, to talk about this and, and really ... Like, we have to land on some things where you really drive this into people's heads because it's like if you, if you fix this, like, if you fix this problem, you reintroduce centralization. You have a central authority, and with that, with that fix, with that supposed fix of the problem, you reintroduce all the things that made all the [laughs] stuff that we use right now terrible. [laughs] There is no way around it. So you, you just have to be okay with there being no global, and that's just how it is. Yeah. The ... I, I think that there are, there are things that we don't know, and there are things that we do know, and it, it's provable, provably impossible to have a global view. Yeah. Absolutely. It, it just makes no sense. I mean, from, from a, a, an, um- Yeah, even physics ... constraints of the universe. Yeah, even physics shows it. Yeah. In, in, in physics terms- Yeah ... it makes no sense. Yeah. And so you just have to be okay with that. And also, it's, uh, uh, there, there, there is just ... I don't know. There, th- there's so many problems that are like this, and, and I feel like we ... You know, I don't know. Maybe we should list them all out and kind of [laughs] may- [laughs] ... maybe that would be helpful. But one, one issue is, like, the, the, the problem of naming came up so often because- Which is the same problem ... it is the same problem, which relates to, um ... There is no global database of, um, uh, like handles, of, like, usernames. If you have one, then again, it's like you, you, uh, uh, you're, you're back at square one, where there is a central server which tells the world, like, who is who. It's a problem that DNS tries to solve. That's why DNS is, like, one of the Achilles heels of the internet because it's like, it's a centralized solution. It's like you have to map IP addresses to human-readable and understandable names, and so there is a central registry, and that's how things work. But as we know, a central registry, the issue with a central registry is whoever is in charge can remove the entry points. Mm-hmm. Can remove the, the, what- whatever is in the register. And so if we actually care about long-lived, and ... Uh, I kinda hate the word censorship resistant because that's ... it's also, it's, it's such bad marketing in some sense. [laughs]  If you wanna have something that's a h- has 100% uptime, which says the same thing- Yeah ... um, then you, you must not have the central re- register because a central register can get down ... uh, can go down. And I think all of this stuff is important. To, to ... I don't hear this talked about too often. It's ... I ... Or, le- let me rephrase that. A lot of people do talk about this stuff, but new people come in, they try to build something. They build something, and they try to fix exactly these issues. Yes. Yes. And they try to give everyone in Nostr, like, a username, for example- Yeah ... that works everywhere and so on. [laughs] And, and, and so okay, that shows me they haven't ever deeply thought about these issues, and they don't understand the problem space right because it's impossible. They're ... You're trying to do an impossible thing. So maybe don't spend your time on trying to fix the impossible problems. [laughs] Try to fix the possible problems [laughs] and be okay with some things being messy and remaining messy. Yeah. To, to me, one of the interesting aspects of, of just freedom tech in general is, uh, I mean, as Matt would say, how much it humbles you, uh, how much it, it forces you to be okay with constraints that are unremovable. There are constraints that cannot be withdrawn. Um, and it i- it is a ... It ... I, I think it's, um, it's a very self-actualizing, um, moment where when, when you accept the constraints and you accept moving forward without trying to be perfect- Yeah ... without trying to have the username, without trying to have perfect data, data guarantees. Like, uh, that, that's also something that keeps coming up, is the, the guarantee of the data. There are no guarantees. [laughs] You cannot have them. [laughs] Yeah, no. It's ... Yeah. I ... And I feel like- And by, by, by guarantee, I mean the availability of the data, not the- Yeah, sure. No. Like DC- But that's ... The best you can do ... I mean, and I feel like we, we know this. Every- everyone who, who ever, like, you know, like ev- everyone who has been around a couple years and, and worked with computer stuff or is a computer scientist and so on, it's like RAID shows this clearly, for example. RAID is a great example of, like, okay, there's only these couple of trade-offs. If you have a RAID system, what do you wanna achieve? You wanna achieve that if one hard disk goes bad, not everything is fucked. And so there's these different kind of RAID levels and so on. Yeah. And, and if you compare RAID to Bitcoin, for example, Bitcoin is like an extreme RAID system- [laughs] ... where it's like as long as one- Hard disk, so to speak, survives, everything is fine. For RAID, it's like RAID 5, for example. If, like, one goes bad, you're still fine. If two go bad, you're fucked again, you know? And, and so, so that's the trade-off that you have. There's, like, how, how fault-tolerant is the system? And I think that's, that's what, from an engineering perspective, that's what we should focus on. If you wanna have something that is long-lived and resilient, it has to be fault-tolerant. Central servers are not t- fault-tolerant, and we see this over and over again. Mm. I mean, we see it like, you know, everyone uses Wallet of Satoshi to receive sats. Wallet of Satoshi gets banned from the US. [laughs]  Okay, everyone who is in the US has to use something else. It's not very fault-tolerant, you know? We see it also, you know, like, uh, lots of people nowadays use Primal, and don't get me wrong. I love Primal. I, I think they're, they're doing a great job of, you know, getting, pushing Nostr forward in terms of UX and just raising the bar higher and so on. But if Primal goes down, if the caching server goes down, if the, the wallet goes down, like, it goes down for many, many, many, many people. Hmm. And I think that's why... That's, that's actually what, what Nostr from an- Oh, yeah ... architecture standpoint did really, really right. If, like, if one relay goes down, it doesn't matter. Like, we'll nuke the Damus relay, I think, like, at least two times by now. Mm-hmm. And Damus is used by a lot of people, and it's a big relay. That didn't matter at all. You didn't even feel it. It didn't matter at all. That, that's the thing. You can't even tell. Yeah. You can't tell that the thing- Yeah ... happened. And, and so if you have a system that works like this, I think that's the right approach. That's why, you know, like, I, I think there is a way of building it right, so to speak. I think Blossom would be another example. Mm. You know, we're not there yet because we don't have... Like, not every client has, like, automatically healing links and all those kind of things, but in theory, it's, it's the same principle, um, just like with Nostr. If one relay goes down, it doesn't matter. If one Bitcoin node goes down, it doesn't matter, [laughs] you know? And if one Blossom server goes down, it also doesn't ma- it, it shouldn't matter. It's like you just grab it from somewhere else. But again, it's like a trade-off. There is no perfect solution because the answer can't also be, like, if we want to rebuild YouTube, for example, you can't host every single video on every single hard disk of the world. You know, that also doesn't make sense. Yeah. So, so what is the right trade-off balance? What is the right amount of, of, of replication? What is the right amount of deduplication and so on? And also, if you overdo it... I, I mean, IPFS showed this clearly. They had other problems as well, but IPFS, they, they did deduplication to the max, and then it was impossible to retrieve files- [laughs] ... because it's just, like, one shard goes offline, and you can't, you can't reassemble your file, and it was just way too complicated. But anyway. Via Jeff has a lot to say about IPFS. [laughs]  He probably has no thoughts. [laughs] Yeah, I think you, you want to be... At, at, at the systemic level, you want to be fa- 100% fault-tolerant. At the edges is, is perfectly acceptable to not be fault-tolerant. Oh, absolutely. But, but that also, that also leads us to, to the next issue of this doesn't come for free. So someone has to run the things- Mm-hmm ... and someone has to actually, you know, like, host your image or also run the relay and all those kind of things, or run the mint or run the Bitcoin nodes and so on. And so, so it all kinda hangs together because you, uh, uh, you, you will never have the perfect solution of, like, it's super easy to use, it's super fast, it's, like, super convenient, it's super fault-tolerant, and it's free, and you don't have to think- [laughs] ... about anything, and you don't have to do anything. It's not how the world works. [laughs] And so, so- Again, no free lunch. Yeah. There, there literally is no free lunch, and you see this... I mean, that's true across all areas of life. It- not everyone can have their private chauffeur and, you know, that goes all- [laughs] ... that comes in a Ro- Rolls Royce and so on. Like, most people will need to learn how to drive and use their own car and potentially fix their own car, all those kind of things and so on. And yes, we can make steps towards that direction, as was shown with Uber and Bolt and so on. Mm. Make it easier, make it more convenient, and so on, but it's still. It's like you're living in the European Union. There's a new stupid law passed. Uber is illegal. We're back to square one. You know what I mean? [laughs] It's like... I don't know. Yeah, so, the, the, so from the work that I've been doing with the, uh, with NIP60 and, and NIP61, the- Came out of conversations like this, by the way ... it ca- 100%. [laughs] Uh, the number one issue that people raise is, "Oh, wait, but the mints can rug you." Yeah. [laughs] Yeah. Yes, they can. [laughs] That's the idea. That, that is the idea. [laughs] You should never put a meaningful amount of money- Yes ... into the thing. [laughs] It, it is not for your cold storage. But- Yeah ... but it comes from this sense of I should have perfect guarantees of everything. Yeah, yeah. It should be seamless UX- Yeah ... and, uh, no one should be able to rug me. Yeah. Perfectly secure. Perfectly. [laughs] Perfectly available, all those kind of things. And, and, like, I, I think one of the... I, I mentioned I, I did this, this, uh, this talk in, uh, in software engineering about the, the, the sovereign Legos. It, it's about having building blocks- Yeah ... with different trade-offs, because it, it is all about the trade-offs. With different trade-offs that increase the design space that we have available. Yeah. The tools that we can- Yeah. And so I, I don't see, obviously, I don't see, uh, NATSAG and NIP60 as the be-all [laughs] end-all. Yeah, yeah. Build the- I, I don't have- Build the new banking system there ... most of my Bitcoin there, obviously. Yeah, yeah. Yeah. But it, it is one more tool. Yeah. And then LSPs and opening your own channels is, is also a tool, and Liquid can be a tool, and Sidechains, no, but- Yeah. [laughs]  Um, um- Yeah, but I think the issue is we don't even understand the tools right, and most people, um, don't know about the tools at all, basically. Hmm. I think that's the issue. I think in, in the real world, so to speak, we don't have this issue. Most people know what a hammer is. Most people know what a sharp knife is. Most people know what a saw is, and so on, and they know when to use what, you know? Like, most people don't try to eat their, I don't know, like, soup with a chainsaw. [laughs] It's like it's, we understand the various tools and the various- There, there probably was someone ... trades. I, I'm sure someone tried ... 100% someone tried. [laughs] I'm sure someone tried But, but still, like, we are at the point now where, like, we just built the tools, like, basically yesterday- Yeah ... in some sense. 100%, absolutely. Again, I, I keep coming back to Blossom just b- uh, uh, I like it a lot. [laughs] Yeah, Blossom is fantastic. That's the main reason. But, but it's also, um... So a little over a year ago, it didn't exist at all, not even as an idea, and, um, now it's, it hosts this podcast. So this podcast- Oh. I call it a podcast- Oh, goddammit. [laughs] Damn it. See? That's how, that's how indoctrinated I am. [laughs] So just, just for the record, this will not be a, just another podcast. This thing will end, and it's like we're gonna have a couple of conversations, record them, and that's gonna be it. But still, the fucking MP3 files, they're served on a Blossom server. So if we are right about our assumptions and things work out as we hope they will, uh, like, this will be around for a while, and, uh, it will be very hard to get rid of the MP3 files potentially. And so, um... Now I lost my train of thought. Where was I going? It's the waves. They are so loud. [laughs]  Enjoy, enjoy the breeze. [laughs] We, we barely... We, we just made the tools- Oh, yeah. Exactly ... like a year ago. So a, a year ago, all of this stuff, most of this stuff didn't exist. Like, uh, NIP 60 is, like, I don't know, six months old now or so. Six, yeah, maybe six months. And, and we're just figuring out, okay, when can we use this? How do we use this? And when does it make sense? And- Where does it fit? Yeah, exactly. And I really like the building block idea. I think, I think that's also, that's also... I think now is the right time to really open it up and talk about all this stuff because I really think we have almost all of the building blocks now. It's, I think, two years ago, three years ago, I wouldn't have been as bullish as I am now because there was- Absolutely ... a lot of stuff missing. Yeah, absolutely. Like, how do we do this, and what about privacy? What about DNS? All those kind of things. And, and we, we have made so much progress in figuring out all these little things, like how do you, you know, like, um, how do you look up other people? How do you look up other relays? How do you, how do you do discovery in Osteride without relying too much on DNS, for example- Yeah ... and all those kind of things. And we figured out a couple of things, and, and I think, yeah, may- maybe that would be one outcome. Just be very clear about what kind of Lego pieces we have, so to speak. Yeah, I- I'm not sure. We'll see. No, yeah, I th- I think that's, uh, that's a useful... So for, for example, I, I think, um, N- NIP 89, which is the, the discovery NIP, uh, and I gave a talk in, um, in Tokyo about, uh, discoverability in Osteride doesn't suck. And I, I think N- NIP 89 is a, is a good example because in the past, I mean, in the present, [laughs] we, we think about app discovery, and by app discovery, I mean capability discovery. Yeah. Uh, via going to some fucking app store- Yeah ... and, and getting, and getting, uh, getting... Seeing what's possible. And I, I think NIP 89 is, like, a, is l- still a very underexplored, um, building block that we have available, which is radically different because instead of going to this place where you, you find, "What can I do?" You, you see the people doing the thing. It's, it's the same principle, right? Like, the app speaks for itself, what it can do. Yes, yes. Yes. It's just like the, the, the signed message speaks for itself. Very much. It's, it's very much the same principle. And so how do you... Because it's also, like, in, in, in an Oster world, like, how do you get to the signed JSON? It doesn't matter whether it comes from a central server or whether you get it on a USB stick or whatever. Just like how, how do you get a new valid Bitcoin block? It doesn't matter. Mm. The data speaks for itself, so it, it... That's the only way how it can work so that you can ignore any central authority, any supposed central authority. And this is the same idea, right? Like, you basically ask the app, tell in a self-sufficient manner what you can do and what you can handle, and how people discover you and, and get to know, get to get a, get a hold of this information, doesn't matter. Yeah. The, the people, the people interacting with the tool is the distribution of the tool. Yeah. And, and, and you, you're just... If I see that you are live streaming, for example, and, and I follow you, and I see that you are doing the thing, and I'm unsure what the thing is. Like, why, what, what is GG- Yeah ... what's the context here? NIP 89 is that building block that, that takes you from that point of utter confusion of what's going on to, oh, this is a live stream. I didn't even know that this was possible. Yeah. Um, and I'm using live stream as a placeholder because literally anything- All the things. Yeah ... all the things- Yeah ... fit in that, in that, in that, in that box. Yeah. And that, that is just one more building block. It is just very different, very new. It's a very, it's a very different idea. There is no equivalent on, on, on, on the legacy web, uh, that has that capability. Again, NATS is another. Blossom is another. NCIX is another. There is so many of these tools that are just completely different. Um, or, or not completely different. Like, Blossom is not completely different. Blossom solves a very known problem. Yeah. How many times have we tried to solve- Oh, many times ... like, [laughs] so many times. Yeah. And this is such a stupid, simple- Yeah ... left side of the curve solution. Yeah. It is just- And it will also, it will not work for everything. Oh, no, no. Yeah. It's like torrents might be the better solution for, for some things, you know, like really large file stream or whatever. I don't know. But it's, it, it's not a one-size-fits-all solution. There, there isn't any, right? But, yeah, there isn't. Right. That's the point of the... [laughs] That is the point. [laughs] There is no solution. Okay. There is no solution. We arrived. [laughs] There's a, there's only, there's only trade-offs. Yeah, that's the whole point. No, but I, I... Yeah, I really like that, but I, I, I... Coming back to what you said about- Adam Curry explaining the coin on Rogan and doing [laughs] not the best job he could do. [laughs] I think that's where we are at in the Nostr developer space right now. [laughs] I, I feel like, um, uh, I, I think everyone has their own reason to work on this stuff and be excited abou- about it and so on, and there, there might be quite a bit of overlap in regards what are these reasons. But I think we're not very good yet at explaining, like, why, why should you take a look at this? Hmm. I mean, uh, just like with, with Bitcoin. We were, I think, kinda terrible in some sense, um, [laughs] trying to explain to the world why, why is this important and why should you take a look at it and so on. With Bitcoin, it's, I think, harder because money is, like, an icky subject. Yeah. Um, most people, you know, like either have too much or too little, and it's always a taboo subject and, and people- And, and also the Bitcoin approach is so counterintuitive. If you, if you believe in Bitcoin the first time you heard it, you're either- Oh, it's a scam ... a massive genius- Yeah, no, it's [laughs] ... or you need to arrive to the conclusion it's obviously a scam. [laughs] Yeah. [laughs] Yeah. It's, um, uh, I think we'll have an easier time now, but it's still, it's still kinda weird, and some things are counterintuitive. Hmm. And, and I think, I think the, the, the killer app of Nostr is you can't be rug pulled. I think that's the killer app. Yeah. I really think that's the killer app, both for the users and for the developers. I think everything else is kind of like a side use case in some sense. [laughs] And, but I, I do agree with, with, um, what a lot of people are saying. Like, i- in the end, we will be better than the centralized solutions, but you see this also. You see this, again, coming back to Bitcoin. It- it- it, uh- [laughs] We're again going to- I apologize. It is, it is another Bitcoin podcast. It's, it's terrible. I hate myself right now. It is a podcast? [laughs] Oh, my Lord. It's about Bitcoin. [laughs] Oh, my God. [laughs] We're failing on all fronts. [laughs] But, but fiat credit rails can never do what Bitcoin does. Hmm. It's impossible. Yeah. So Bitcoin, give them enough time and innovation, Bitcoin has to be better than fiat credit rails. There is no other way. There is no other way. It's, uh, uh, it's, it's, it's the better thing. It's the better solution. It's the superior system, and there's many technical reasons why this is the case, and I, you, you know, I don't wanna waste time to, to get into those. I think the same is true for Nostr. I think it's the superior solution. It really is, and I think the, the legacy centralized systems that, that we now have with Y- you know, like YouTube, and, and X, and Instagram, and whatnot, and I don't know, TikTok and so on, they will never be able to do what Nostr will be able to do or what Nostr already is able to do. 100%. Like, Zaps show this very clearly. 100%. Like, you can only do, like, micro payments without a signup, you can only do on Nostr and with Bitcoin. There is no other way. Everything else- Yeah. Like, that, that's already something that we can do way better than anyone else. Yeah. And we'll have more and more and more of those things, but I don't think that's the killer feature. I think Zaps is an incredibly important feature. I think it's a novel thing. I think, again, I think we, we don't understand it right yet. I, I, I hope to talk about Zaps at length at, at one point, but, but, but not today. [laughs]  Another day. But the, the thing about being rug pull resistant is something... It actually solves a problem. It solves a problem for users, and it solves a problem for developers. Hmm. How many people have there been that built their whole developer career about the fucking Reddit API? [laughs] They're all rug pulled now. Everything is garbage now, and the same goes for YouTube and every other API and all those kinda things. It all goes away. E- every API, e- even if you don't get cut off, the API just changes the interface- Oh, absolutely ... and you're fucked again. Yeah. Yeah. Yeah. Yeah. Uh, absolutely. No, it's terrible. And, and so, so- I, I, I tell it. One of the, one of the, um, moments where I said, "All right. I, I need to go full on on Nostr," was that company that we, uh, that I was working in, um, had KYC issues, and they were changing the, the, uh, provider for their KYC and their, uh, banking partners and whatnot. Yeah. Everything's different. I, I, I had to start learning a new API from some proprietary KYC thing, and I was hating every single second of it. [laughs] And I was comparing the work that I was doing in Nostr with learning this stupid fucking API, hating myself, and it's like, "No, this- [laughs] ... this cannot be it." [laughs] There has to be a better way. There's got to be a better way. Yeah. [laughs] Yeah. Yeah. No, it's also... It's just not fun. It's not fun being- It's not fun. It- It sucks. It... Y- you know that you're wasting your time. Yeah. You're building that. Yeah. You know... I, I ha- I had this friend, um, who works on, uh, civil engineering, and he was, he was working on, on designing dams. And he was telling me that the calculations that they make, uh, have to build in the assumption that the dam must last for 500 years. Yeah. And I was wondering, "What piece of code ha- have I written that has withstood 10 years?" [laughs] Like, how, how much code, what's the percentage of code that has been written that have withstood one year? It, it, it's, it's almost all disposable, man. Yeah. Yeah. Yeah. It's just, it's a, it's kind of a sad state of affairs, right? Yeah. It's, um... But I mean, with the dams, it's interesting because, because that's the w- the right way of, of looking at the problem. It's like if, if a flood comes, it's a catastrophic event, and one time in 100 years, a really big flood comes, so the whole dam has to be built to w- withstand this event. Mm-hmm. It's like a, a, you know- Once, once in a lifetime kind of catastrophic flood or earthquake or what have you, and you have to take all that into account. And if you're doing your thing properly, then it actually works. And we do very, very little of that- Hmm ... um, in the kind of, you know, like, thinking about the web infrastructure and the inter- internet infrastructure of, of, of those kind of things or, or building out products or building out various systems that ... Most things are completely disposable. Mm-hmm. And, and I, [sighs] I'm old enough now that I really kind of ... You know, I, I'm a grumpy old man- [laughs] ... where it's just like I s- I saw all the things come and go. Can we kinda stop doing that? [laughs] Doing, like, the next MySpace, and then it goes away, and then we, we move on to something else, and then it goes away, and then ... And, and it also, it iterates quicker and quicker and quicker. Hmm. Because things speed up, and then it, it, then it was this, and then it's like ... And it was musical.ly. And musical.ly was around for, I don't know, 10 months, and then became TikTok. And now TikTok basically got banned or whatever, and people moved on to the other thing. Snapchat, I forgot Snapchat, and all those kind of things. It's, uh, it's also fine. You know, like, the, the new generation has to find their own thing. And it's like you don't wanna join Facebook because Mom is on Facebook, and so on. It's all, it's all okay. It's, it's ... I don't wanna be too grumpy and too old. Like- [laughs] ... I do [laughs] I think I do understand it to some extent. But still, like, if it comes to infrastructure stuff, you know? It's ... That's why I like email so much. It's like email, um, yeah, I just [laughs] I, I actually just mentioned this yesterday, is, like, people thought ICQ was superior to email. You know, email is still around. ICQ isn't. So email got something right. And so can we, can we, can we do more of this? Yeah, I think when, when one of the, the incredible benefits that gets you not quite there but very close to there is what we discuss a few times when you de- decouple the building of the, of the software and the running of the software. Yeah. If you, like- Build the infrastructure. Don't run it. The, the- Kinda ... authors of RFC 822, they, they've, they've all moved on from SMTP. Yeah. They're all retired. Yeah. But they were not running the thing. Yeah. They, they, they weren't in charge of running- Yeah, that's not the point ... the SMTP servers. Yeah, yeah, yeah. Yeah. And I think, I think what, what kind of ... I mean, they were all idealists, as, as were the early internet people. Yeah. And I think Nostr is full of idealists. [laughs] Um, uh, and, and that's perfectly fine, but I think, [sighs] I think we have an opportunity now to mix the best of both worlds because I am a capitalist as well, you know? Like, it's contra- [laughs] contrary to popular belief. [laughs] I like Stallman and the new licenses, but I'm still not a communist, you know? Like, I'm not a full-blown commie. Uh- NVK is gonna be so shocked ... sorry, sorry to disappoint. [laughs] But, but I mean, there is a reason why we were never, uh, able to build out the 402 error code, payment required. It just, it didn't work. It doesn't work on, on, on fiat payment rails. It just, it doesn't work. It cannot work. They didn't understand this back then. I'm- Hmm ... I'm convinced that, like, it's very hard to really understand this and really internalize it, that, that fiat implies ... Like, fiat credit, fiat rails are credit rails, and credit requires KYC, and so you can't do all those things. It's, it's, it's, it's, it's something that took me, like, years and years and years- Hmm ... to figure out, and, and I feel like most people still haven't figured this out- Oh, 100% ... in some sense. It's- 100% ... it's ... And, and so now, now we have, now, now we actually have the building block with, you know, like, for example, eCash. eCash is a great example for that. It's phenomenal. eCash fixes 402. It absolutely does. In the header of your request, you can put some eCash, and with that, the request is paid. You don't even have to go back and forth- Yeah, yeah, like [laughs] ... and do, like, 10 round trips. It's just like, "Here's five bucks. Give me the apple," you know? It's like, whatever. And, and, and so I think we have the opportunity now to do what you just mentioned, actually think deeply about the infrastructure we wanna build, come up with something that anyone can run. So again, like, you wanna build the infrastructure. You don't wanna run everything yourself. Then you're just like ... Then you're like Apple or Google- Hmm ... or what have you, you know? Like, that doesn't make any sense. And, and it doesn't have to be all altruistic and all, like, you know, like Richard Stallman-type people that don't believe in money. [laughs]  You can actually build services, uh, that scale, that are useful, and you can make money if you run your service well, and I think that's how, how things sh- should be. I think we touched on it the last time as well. It's like that's how restaurants are run. It's like it's no secret what's happening there. They, they provide a service. They do it well. They sell something that's actually scarce, and if you do your job well, you can make money on a restaurant, and you can do it for a long time. That's why you can have multi-generational restaurants and inns and other things that are actually fantastic businesses. And you can have fun while you're doing it, and you don't have to take over the world, and you don't have to, you know, compete with McDonald's and capture the whole food market- [laughs] ... of the world. And, like, it's like all, all these ideas are, are not- And they don't run a compliance department. Restaurants don't have a compliance department- [laughs] ... which is the, the goal. [laughs] Yeah, but I, I feel like in the, in the, in the Web 2.0 era at least, and we are still in this era, I think at the, at the end of it, but, but it's still, it's always, the question is always: How can you take over the world? How can you take on Google? How can you, you know, replace Facebook? Yeah. Like, you launch a video thing. How do you kill YouTube? Are you the YouTube killer? Ah. You know? It's like, all of that's bullshit. [laughs] It's like you don't have to. If you're st- if, if I'm starting a, a lemonade stand, I'm not gonna be the Coca-Cola killer. You know what I mean? It's like, it's like the, uh- It's like, I don't know ... like, the, the concept of hyper-Bitcoinization, you know? It's like, oh, but when, when are you gonna be able to sit in any coffee shop and, and pay, pay with Bitcoin? And when is everything going to be based ... It doesn't have to. It doesn't have to. Like, we, you can- It's true in my life. [laughs] It's true in your life. It's true in my life. [laughs] We don't need all the other people to agree with us. My- [laughs] My life is very much hyper-Bitcoinized. 100%. And it has been for a while, so- 100%, 100% ... I feel like the whole discussion is moot. But- But, but I think- Yeah ... I, I think it, it stems from the same problem of an all or nothing approach- Yeah ... where- When are, when is Nostr going to replace Facebook? It doesn't have to. No. No, no, not at all. And, uh, and in some sense it also shouldn't. It should, it should... It's, yeah. I'm surprised still that I, I feel there's a lot of overlap between other communities that have identified the problem, I think. I think they, they have i- identified the issue. Um, but they haven't necessarily landed on the right solution yet. Oh, 100%. Um- Awesome ... all the Mastodon people is a great example. They, they know the problem well. They, their sol- their solution sucks. Sorry Mastodon people. [laughs] I mean, most of, a lot of the Mastodon people went to Nostr now and so on. But, but I, even broader than that, I think a lot of the s- the, the self-hosting people, they have identified the problem really well. Yeah. But I, I still think most of the solutions are kind of very limited in some sense. It's like you, you then... Okay, so, so either you use, I don't know, like, Google Drive or whatever, or whatever centralized service, or you run absolutely everything yourself in your own server rack in your kitchen- [laughs] ... and if one time you're in, you're in a place where the power goes out and your whole stuff is down for, like, a month or whatever. [laughs] You know? Like, that's... You know what I mean? Yeah. They, they, the... I think we can do better than that. I, I really think we can... And again, Blossom is a great example for that, where it's like- [laughs] You or th- Nostr- It's a Blossom podcast. [laughs] It's a, that, that's way better. That's way better. It's better than a Bitcoin podcast. 100%. [laughs] But the, the, the Nostr has the right, right architecture. It's like I, I, I wanna host my own thing, and it's kind of a fail-safe if everything else goes down or whatever. But I don't wanna be personally responsible for all the infrastructure all the time. Mm. I wanna pay other people to do it for me, and I don't want those people to know what I'm doing. I don't want those people to be able to shut me off in a meaningful way or control me in a meaningful way, and those kind of things. And I think that's the right, those, those are the right parameters. Like, it's none of your business- [laughs] ... if, if, what, what I do with, I don't know, like, you know, what kind of lightning payment your node routes, for example. [laughs] It's none of your business. If you p- pass on an encrypted message that I send, it's none of your business what's in there. It's like, I mean, that's what, how the postal office used to operate at least. I'm not sure what they do now, but- [laughs]  It's probably illegal- Not, not, not, not- ... in like six different ways. [laughs] Yeah. [laughs] Now, I don't know, I feel like an old man ranting, but anyway. No, y- That's, uh- But, but one of the things that I've seen is, um, you know, the, the local first movement, uh, where it's, like, the idea is that applications should be, um, should be performant, should be expected to work offline. Yeah. They should, they, they can- Yeah ... they can still use the internet, of course. Yeah. Um, but, but the application, the state of the application should be on the application itself and instead of, oh, you are not connected to the internet, so you cannot- Yeah, yeah, nothing works ... edit your document. Yeah, yeah, yeah. You know? Nothing, your OS doesn't boot because- Yeah, yeah ... your [laughs] internet is down. Yeah. Um, and I, I, I listened to, to a bunch of, uh, podcasts from the local first community. Which is, I didn't even realize there is a local first community. Oh, there is. They, they have, they, they have a conference. [laughs] Oh, r- really? Wow. For real. At home? By themselves? [laughs]  Disconnected from the internet. [laughs] It's just three guys screaming into a screen. They discuss all the things local first, and then- [laughs] ... maybe meet at a later point. Um, but, but it's very interesting because they, they arrive to many of the same problems. But as you say, they identify the right problem, and they arrive to a completely wrong solution. One of them, um, is working on identity. How do you solve identity? Local first. I- not, not just local first, but within the, the realm of you own your data because your data is stored locally, and you can always access it, and no one can take it from you because it's literally sitting on your hard drive. Um, how can you go around the different applications and do the login with Google or login with Facebook? And- Using your local identity solution ... us- using your local identity. And it, it, it is the right, uh, it, it is the right, uh, problem to, to- It's the right question to ask, yeah ... it's the right question, 100%. Yeah, yeah. Mm. The solution is, well, passkey. [laughs] Mm. Okay. Let's just use, let's just have... So they arrive at the solution of, well, we need public, private key cryptography, so we'll go in this direction. Yeah. Get there. Perfect. Awesome. Yes. But if passkey is what's giving your, your identity, your, your public key- Yeah ... first, you, you cannot actually access the private key. [laughs] Yeah. Uh, you cannot take your p- your private key, um, with you to a different, uh, to a different system. Yeah. It's, it's Apple, you know? Yeah. So it's constrained to the Apple ecosystem or to the Google ecosystem or to whatever. So you are still downstream from- Yeah ... the Google. Yes, it's beautiful. You just put your tou- your, your, your finger, it scans your touch ID, and it's just boom, it just works. But what's the trade-off? Like, the trade-off to me is unacceptable. Yeah. Um, where, where Apple can just deplatform you from your local first software. [laughs] Yeah, yeah. Yeah. But it's, it's all the right, it's all the right, uh, questions, all the wrong answers. And, and I keep thinking, these people, they, they, they, they have a very, uh, like, the, the local first community, as most communities, they hate Bitcoin. [laughs] Oh, everyone hates Bitcoin. That's fine. That's just a g- that's the default. E- Yeah ... yeah, we go, "Oh, man, it's so inefficient." [laughs] Oh, sure, yeah. No, there, yeah. But, but, but w- given, uh, within the, um, the it's so inefficient- Look how trivial the problem looks from the outside that the HTTP spec people thought, "Oh, let's just put, like, a 402 error." Yeah. "We- we'll figure it out next week." [laughs] Yeah. "We'll figure out- Yeah, we'll figure out the payments ... payments." [laughs] Next week, yeah. Yeah. It's, it's such a... It's, it, it looks like a such a simple problem. Yeah. And it's so hard. Yeah. It's so hard. It is a simple problem. We- It is a very simple problem. [laughs] But simple problems don't always have simple solutions. Yeah. That's the issue. It's- Yeah, it requires building, like, these- Yeah ... mining sites and this whole infrastructure- Yeah ... in the world- Yeah ... that has a, a, a very significant, uh, cost. Yeah. But it, it is the only way. It's the only way. And from the outside, it might look like, "Oh, why don't you just use Passkeys? An API call. It's just there." Yeah. Why are you building all these weird apps and all this stuff? Like, just use Passkey. Yeah. It's so simple. But I, I really like the local-first idea. I had no idea that this is an actual- Oh, it's phenomenal. Oh, no, no, it's great. Yeah. So- But they also arrive at the same problems of, okay, and how do you sync the data? Okay, but what if, what if you are on device A? What if you have, like, three different devices and- Yeah. Okay, well- Yeah, absolutely ... let's put a server. Yeah. Oh, but what if the server goes down? Yeah, it's, it's an actually a really hard problem. Yeah. It, it is a hard problem. Yeah. Yeah. And, and it's impossible to solve without conflicts. Everyone who ever worked with Git knows this. Yeah. [laughs] It's like, it's, it's... You know, i- if you actually... Let, let's say you have three or four devices and you travel around, and you forgot to switch your phone, like, back, uh, uh, like deactivate the flight mode again, and then you sit down on your computer. I run into this problem all the time- Yeah ... because I actually use systems like this- Yeah ... and in my note-taking apps and so on, and I will have conflicts that I need to resolve. Oh, of course. Because I updated it on the other machine, and I updated another thing on the other machine. Both of them were offline. What's the state? And then what's the state? There is no global state. [laughs] There is, like, there can't be. Not even within your own note-taking app. Not even within me. [laughs] Like, it doesn't work. [laughs]  But, but that's... I think that's the right way. Like, um, Rabble tried to came up with a list of criteria for, like, what makes a social network protocol open and so on. I think we need something like that for Nostr stuff. Hm. And it's like, it, that's one criteria. It has to work in flight mode. Yeah, hundred percent. If it works, if it doesn't work in flight mode, if it doesn't work... If, if, if, if it do- I have a relay on my phone, and I should be able to switch it to flight mode, and everything just kinda still works. And I say just kinda, you know? Like, not absolutely everything can work, but still, it, it has to- A, a, a lot can work ... A lot can work. Way more than you would think. A lot can work. Yeah. Yeah. A lot can work. And it, I think it's the right approach. I think it's, it's, it's a fantastic... I really, I love the local-first thing. [laughs] So see, I learned something, man. That's fantastic. It's already working. [laughs] See? See what can happen in, like, a, in a conversation, in a dialogue? [laughs] You, you usually learn things, and you figure stuff out along the way. [laughs] So that's the idea. No, but, but I, I... Again, it's, the local-first, it... Because I, I, in my head, I already tried to, to kind of make this list, and I think, uh, uh, Hoddlebot gave it a try as well, right? Like, doing a, a list of- Yeah ... what makes a Nostr app an Nostr app- What is a Nostr app anyway? ... those kind of things. And, and, and, uh, I mean, I think we obviously still suck at all those things, but I hope that in a year from now we'll have something- Yeah ... where we can actually take a quick look at something and immediately go, "Yeah, that's, that's wrong." That's like you, it say- Yeah, that's- You know ... that's within this category of error. [laughs] Yeah. And I think that would be super useful because, again, I think the, uh, like, everyone who worked on Nostr so far, we figured out a, a couple of things, and I think we have to get a little bit better at passing that on and explaining it to just regular developers. I don't, I don't even care about the users that much, so to speak, because it's like the users, this stuff will be figured out. The developer s- side is, I think, harder to figure out because I don't want... I'm still worried that if we... There's still a chance that Nostr kind of goes bad in some sense, I think. And- Yeah, I, I, I tend to agree. I- I think we're in better footing than we were- Oh, yeah ... a year ago You were insanely stressed out a year ago. [laughs] Yes. [laughs] I very much was. I agree. I agree. I think, I think we are- Should we turn around? Yeah, let's do... But we can also, we can, we can, we can- Go through the tunnel? ... go through the pain once more. [laughs] It's not an issue. [laughs] But let's do, let's do one ring around the rosy, and then let's see where we're at. That might, that, it's probably very confusing for people as well. [laughs] Like, we're sometimes talking about the Nostr things. We're mostly talking about Bitcoin. [laughs] But then we're also talking about how to best keep walking without running into things. [laughs] Or running into too many other people. But yeah, that, that's kind of my hope for the whole project and having these conversations and so on, that, that hopefully we land on some, on some things where we, [sighs] not only, not only figure out these criteria, but also refine the message. Why, why is it important? Like, why- Hm ... should you care about it? Why do you wanna build on it, for example? And, and I, I, I think it has to be, it has to be wound up with the money and the money-making. Oh, yeah. It's like- Yeah, absolutely ... it's, it's, because that's, it's such a novel thing as well that you can, you c- you will receive sats. Like, if you do your thing right- [laughs] ... you will receive sats from the get-go. It's not gonna be a lot, but still, having the possibility of having money flowing in and flowing through the system from second one, basically. [laughs] I mean, sh- we pushed out, uh, this in a, in a, like, the first conversation that we had, and also even the teaser. The teaser made money. [laughs] It was, like, 100 sats or something. I don't know. But, uh, but it's not nothing, you know? And we, we, we put very little effort into marketing or refining- CK, well, we didn't market, like, at all. [laughs] CK would, would say that's more than generational wealth. [laughs] Yes, absolutely. Yeah. [laughs] If you disagree, you're not bullish enough. [laughs] But yeah, I don't know. I, I hope I hope that we can figure this out because I really think- I, I, I'm- ... Noster is one of the- I'm absolutely sure that, that we will. What, so when, when- I'm surprised that not more developers are flocking to it because I think- Mm. Yeah, me too ... I think, I think it's one of the most exciting things that's happening right now- Mm ... in the kind of internet development space. Yeah. And most people are completely unaware. I think it's mostly bec- our own fault because everyone hates Bitcoiners, and [laughs] it's just the- That, that is very likely the case. [laughs] Um, [laughs] also o- I mean, one of the things that keeps coming up is people join Noster, and they get 20 different people say, "I tried to sub you. [laughs] I couldn't sub you." Oh, yeah, yeah, yeah. "Download this thing." Yeah, yeah. And it's like, okay, I was here for, like, a minute, and now I have- And everyone... Yeah, yeah. [laughs]  I have, like, six hours' worth. Yeah. You have to watch this video- Yeah ... and you have to sub these things. Yeah. What? [laughs] No, that's true. Yeah. But, you know, NATSapp's fi- fixes this, so. Yeah, yeah, yeah. The, the, the- They, they, they won't be able to really spend it except for, you know, pass it on You, you c- you can pa- you can pay la- Lightning, uh, uh, invoices. [laughs] So you could go to the Mythical coffee shop and, and buy a coffee. Oh, yeah, yeah. It, uh, uh... [laughs] But again, regular users. [laughs] But, um, but that's the thing. I, so the reason I started working on, on the NATSapp stuff is that, um, I was looking very hard at how Substack works, how they do onboarding. And within the onboarding flow of, of, uh, an author trying to write something on, on Substack and make some money, the moment you say that you want to get paid, they, they take you in a very beautiful, uh, design. They take you to this KYC process with Stripe. So they hand you off to Stripe, and Stripe is doing the KYC for them, and then you have to link it and, and whatnot. The, the, the U- the UX is as good as it can get when you bake in the assumption of KYC-ing the person. Yeah [laughs] Yeah, yeah, yeah. Yeah. Y- once you have to scan your face and take- Yeah ... a picture of your proof of address and your passport and whatnot- Yeah ... there, you can't have, like, a really [laughs] good UX because it fucking sucks. Yeah. [laughs] Um, and it's still very, very raw. It's still very, um, early stages. But the fact that you can go and have a Substack equivalent or have a, a whatever equivalent and not have to go through that, you can go to Shopster and sell shit without having to KYC you with, with Stripe, that is a massive deal. Oh, absolutely. That is a massive, massive deal. Absolutely. And I think developers might not, yeah, developers might not understand the, the identity piece and why, like, all these parts are so... Why is all this shit required? Why do we have to find announcements on Bitcoin? And why, like- Yeah ... why, why is the mining, um... They won't have to understand those th- those things. Yeah, yeah. No, no. Not at all. I mean- But the sales pitch of you can, you can have your users selling their shit immediately- Yeah ... that i- that is a very easy narrative to understand. Yeah. No, and that, that's what I also mean. Like, in the end, like, give them enough improvements and all those kind of things, it will be better and easier, just like Bitcoin is better and easier than the legacy f- fiat banking system. Like, try to do an international wire with any bank. It's like, it's hell. It's, it's- [laughs] You're, you're, you're in the, in the fifth circle of hell. [laughs] Like, it doesn't matter how you cut it. And also, when it comes to the bigger platforms, um, if you do account creation, for example, that's already so cumbersome. On Noster, it's a click. Yeah. It's, uh, one click, and you have an account. And, and if we do our- No email verification. Nothing. Nothing. It's- You, and you don't have to... Because on, on many things that I use, like, like, they wanna know everything about you. Like, and I, I'm always going like, "Why? Why do you need to know this?" [laughs] "Why do you need my first name and my middle name and my last name and my birth date and my, you know, like, my blood type and my- [laughs] ... my, my country and my location and, like, all those kind of things? And why, why, why?" I mean, I know why, but it's still, it's still very much stupid. It's like it's, it's, it... I just wanted to try out, like, a to-do note-making app. It's like, "Please, don't, don't- [laughs]  ... like, just, just let me try the thing. Just let, let me in." [laughs]  "I promise. I'm not a terrorist, I promise." You know? [laughs] And so, uh, I don't know. And so, so- Yeah, I was, I was getting, uh... A few months ago, I was getting KYC'd by this, uh, company. They, and one of the questions that, that they asked me, I, I bailed, but [laughs] one of the questions that they asked me is, "How much money do you have?" [laughs] It's like- Oh ... "Fuck you." Like- I don't know. [laughs] What the... How is that a... Imagine, imagine if you download Sparrow, [laughs] and Craig says- Yeah ... "Okay." Yeah. "How much money do you have? I need to report it." [laughs] I, I ne- I, I need to know, oth- otherwise you can't use my software. [laughs] No, I think that's what, that's where we can really shine. I think that's where, where Noster can really shine. Like, literally everything can be one click, and I think this, it's still, it's still very much underutilized- Mm ... because, and, and I think because we are so wedded to the old way of doing things. Like, every single Noster client should have a one-click onboarding thing- Yeah ... where you just, like, create a new account to try it out. It's like, why not? It's like, uh, NSAKS are free. [laughs] It's, uh, there's, there's, like, there's infinity of them. [laughs] Just let me... Like, I, I don't want, even wanna have to do it myself. Like, just, like, bam, do it. I, I don't care about losing it. Like, who cares? [laughs] You know? All those kind of things. There's nothing in there. Why would I care? Yeah, yeah. [laughs] Exactly. It, uh, to me, when, when I install a, a, a Bitcoin, a Bitcoin wallet, and it tells you, it forces you to verify your voice- Oh, yeah, yeah ... like- Yeah. There's nothing in there ... there's literally zero money because I haven't been able to use the fucking app. [laughs] Like, why are you making me? [laughs] But again, trade-offs. Trade-offs. It's like, and so many people lost Bitcoin, so- [laughs] ... so okay, fine. But still, I, I, I, that's one of the things I th- we, we, we haven't tried all these things out enough. Mm. Like, most people that are currently on Noster, what, what, what would, what would be your guess? How, how many percent of people using Nostr know that you can paste an NPUP into p- pretty much any client and see the Nostrverse through the eyes of, I don't know, you know, like Pablo or Jack or what have you? How many people know that you can do that? Um, I, I, I would think it's gotta be half. Y- wow. Whoa, man. It, it's so- You're, you're, you're... I would've said less than 1%. Such a fucking bubble, right? [laughs] Less than 1%. Really? Yeah. No one knows this. M- most clients don't advertise this or show this or whatever. Show me a couple profiles. When I open the thing and I wanna click on it and I wanna see it, I wanna use your NPUP to log in or whatever, to just check it out. Y- we, we, we, we don't do those kind of things. [laughs] And it's all possible because it was all impossible in the old system. Right. Yeah, yeah, yeah. It was completely impossible to do stuff like that in the old system, and we're still so wedded to the old way of thinking and the old system. And, and also in, in the old system, the old system has your private da- your private data unencrypted. Sure. So in the old system, logging with someone else's account- Would be very weird ... and you can... it, it not only could it be very weird, from, from an, from a developer perspective, you gotta be fucking sure you're not leaking the DMs- Oh, yeah, sure ... because you, you can. Yeah. You can. Yeah. In Nostr, y- you don't have the private key, so you cannot decrypt. Yeah, exactly. You can only see the public data. The, the stuff that's public anyway. But it looks and feels as if you were doing the thing. Yeah. You can't interact, but you can... It feels like I'm looking over your shoulder, basically. [laughs] That's what I can do, in some sense. [laughs] It's, uh, but, but w- I, I don't know. I f- I feel like we're in a new paradigm, and we haven't even done the new paradigm things- [laughs] ... yet enough, and I think it, it is because people don't really understand it well enough yet in some sense. I don't know. It sh- it should be the default. Having, having an nsec for just, like, a day or something, it should be the default. Yeah, yeah. Absolutely. I think there's very few clients that, that implemented this. I think Amethyst did as, like, replying as a NIM, basically- Hmm ... where you just, you spin up a new NPUP just for this reply. That's fantastic. Yeah. Stuff like that is fantastic. Like, we should, we should have way more of, of, of these kind of, you know, experimentations and th- and really leaning into the new paradigm. But, but then first of all, we'll have to understand what is the new paradigm, basically. And I think, again, like, local-first is part of this. Like, the, i- it's a new paradigm that your thing works whether you're online or not. It's a completely new paradigm. That's unheard of in, like, a client-server architecture, like, old way of thinking. Yeah. In, um, in the, uh... Based on the, the, the way the local-first community people speak, I, I wrote the documenta- uh, a local-first documentation for NDK, and it's a guide on building local-first apps within, within NDK because I... To me, like, the idea of I click the whatever, a reaction or make a comment- Yeah ... or something. Yeah. And, and it just works. Yeah. It, it doesn't... It do- because the data is already signed. Yes. So, so I know it worked. Once the device comes online, and it will- Yeah. The, the device goes on, so- Yeah ... whether it published to the relays or it didn't yet, it's kind of secondary. Yeah. So it should be reflected in the app immediately. Yeah, absolutely. Absolutely. No, it's the right way of, of thinking about it. So let's end with an echo and- [laughs] ... then we're done with it. And someone yelling in the tunnel? We'll see. We'll, we'll... Oh, that was just a, just a sound check. Just, just an echo test. [laughs] Sound, sound check- [laughs] ... by some random guy. Yeah, I feel like my brain is fried again anyway, so I'll have to... Oh, I don't, I don't have anything- Insightful? [laughs] ... yeah, useful to say anymore. Not, not that I said a lot of useful things. [laughs] Oh, you always do. But no, I really like that the, the, the combination of there being no global and building stuff in a way that it works in an offline mode, that it works local-first, that's already, you know... Like, everyone should [laughs] know that this is how things work in the Nostr world, basically, and I feel like we're not there yet. No, no, not at all. Not at all. Most people, most people still try to make a global view work, and most people have never tested their own app in flight mode, for example. Yeah. So. And, and, and, and the, the idea of building this global view is one... Like, I've seen many peo-... We've, we've seen many, many, many people attempt that, and it's, it's such an, an endless pursuit. Um, and the complex- the complexity just explodes. Oh, absolutely. And it will never stop exploding either. [laughs] No. The, the, the deeper you dig into the problem, the worse it gets. It's, I... That's, that's what I have the feeling with a lot of the... still in the, the Shitcoin world and the proof of stake people and so, and so on. They don't even know how hard it is, how hard the problem is that they're trying to solve. Hmm. They don't know. Yeah. And they try and they try and they try, and all their attempts are misguided, and they don't even understand how... They don't even understand the impossibility of the problem that they are trying to solve. And I've seen this so many times now, where new people come in and they wanna build something, and they wanna make a global view happen. And, and I think that's something where we just have to get better at explaining to people- Yeah. So, so- ... that you have to be okay with there being no global. So let's, uh, let's try to, to identify a bit more, ne- or narrow down the problem. Let's stop walking before I completely lose my breath. [laughs] Um, uh, how... Because we've seen many people just personally working on these type of assurances and these type of views and not real- realizing, not feeling, even though we've yelled [laughs] so many times. Literally yelled. Literally yelled so many times. What, what do you think is the, um, is the holdup? What... Why, why are these people that are smart and capable- Why do you think we are not getting through? I think it's, it's incredibly hard and also painful to deprogram yourself. Mm. And it's like, you, you, you grew up with this stuff, and it always worked like this, and you always had a server that tell, told you the truth and nothing but the truth and the whole truth. [laughs] And if you don't, if you don't have that, then you... It's very hard to accept that, that you don't have that, I think. I think that's the, that's the main issue. Uh, to pick another example, um, that we run into often, it's like the main way of, of making money, um, online basically, or b- building out such apps and systems and so on, is, um, to either capture your users, which... Or introduce yourself as a middleman, and capturing your users is just like you are the middleman, you are the thing, and so on. And so people default to those kind of things. Most developers that are new to Nostr and, and, and wanna do something and, and, uh, potentially eventually also make money, they, they really try hard to capture their users in some way, and because that's what they learned, that's what they know, that's what everyone taught them up to now. And in, in sense of y- adding yourself as a middleman, it's the same thing. Like, they try to s- to insert themselves. Like, it only works if you use this client. It only works if you do it like this. And then they take, like, a whatever percentage cut and so on. And that's, that... I- I think that's the old business model. I think there is a, there is another way of doing things and a, a more honest way of doing thing, um, things, a more long-lived way of doing things. I think Robosats, it's, it's the first innovation that I saw in, in that sort, of monetizing open source software in a, I think, very honest way. It's where they, the coordinators can decide to give back parts of their profit to Robosats open source development, and they advertise that. And they adv- advertise it, and it's part of their, um... Like, they have a reputation. They have various ratings and all those kind of things. They, they advertise the liquidity and all those kind of things, and, and that's part of that. And so I personally am not gonna choose a coordinator that has this put to 0%. Hmm. I wanna support the whole system and the whole thing, and so I... And I think most people are not a- assholes, actually. I think most people are... A meaningful percentage of people will choose to select someone that actually gives back to the whole system and gives back to open source development and makes the whole thing work and so on. And, and, and that's a, that's a very new idea, I think. And, and you can do it in a way... Like, you, you can do it in a way s- so that it's automated and transparent and verifiable and all those kind of things, and we can do that now. We can... A- and I feel the whole, this whole space is very un ex- unexplored yet. Most people haven't tried something like that. Most people are still stuck in the old paradigm, which is like, "I'm gonna be the middleman, and I'm gonna facilitate the things, and I'm gonna take, like, a 4% cut," or whatever. I don't know. I don't have a better answer. I, uh- Uh, to, to me, the, the, the question about the, the money and the becoming the, the central point so you can take your cut, that, that is a much clearer reason why you wanna be there, because there is a profit motive. There is an incentive to be there because you wanna take your, the, you wanna take the money. The, the global view people, that I have a harder time- How should we call them? Globalists? [laughs] [laughs] The Websters. [laughs] Oh, you're a globalist. I understand. I, I don't need to talk to you anymore. [laughs] You're a globalist. I, I'm not interested. [laughs] Yeah, the glo- the globalist perspective, I, I have a harder time understanding because you're not gonna make money because you are trying to solve the data assurance of all the data in Nostr or naming or- I mean, it, it, in their defense, it kind of, stuff kind of feels like there is a global truth, right? Like, if you- your everyday experience and all those kind of things tells you that there is a global shared view of things and there is a global truth and there's, like, one truth. Like, how many beans are in the jar? Like, there is a, there is a definitive answer. Mm. And- I, I don't know what happened in your house this morning. [laughs] I cannot have a view of what happened in Tokyo- [laughs] ... an hour ago. Like... [laughs] Yeah, sure, but I, I think people have a hard time wrapping their head around the fact that, um, in, in a global system, which by default is a distributed system... Like, YouTube is a distributed system. Let's stick with YouTube, because everyone kinda knows YouTube, knows how it works, knows how the interface looks like and so on. The like count is a complete lie, and it has to be, and you c- you can also tell, if a, if a y- if a YouTube video ever goes viral, the like count will stop at, like, 137 or something. [laughs] Because that's when they start to actually start counting the likes, and they have to reconcile between the different geographically distributed servers that they have. And so there is not one server that has the number. It, it can't have it because the YouTube video in Germany is gonna be served from a German server. If someone else in Japan looks at it, it's gonna be a Japanese server and so on, and they have to reconcile. And while they are reconciling, and that's just speed of light physics stuff- Mm-hmm ... like, a million other people have seen the video a- again. So, so, so the, it's not off by a little. [laughs] It's like if a, if a video really goes viral, it's, it's not off by a little. It's not off by two or three views. It's off by thousands and millions of views. It's like, it's insane how, how hard this problem is. Also, you know, like, what counts for a view and all those kind of things. And so, so, so I, I, I think people, most of the globalists just haven't talked about or [laughs] thought about... I love it already. [laughs] They, they haven't thought about, uh, the problem at hand deeply enough, I think. Mm. They never thought about it. It's just like, "Oh, that's the like count." And again, the server says that's the like count, so that's the like count. They never considered that this could be a lie. It has to be a lie. It has to be a lie, basically, you know? Like, what's the global state of the internet? [laughs] And everyone knows, like, what Google has indexed is not the global state of the internet. It's not. It's, it's a very small sliver of the internet. You cannot have a global state of the internet. You can't. You literally can't. It's physically impossible. And so, so- That- I don't know. It, I, I think it comes from a place of both ignorance and also trying to have a nice and easy solution. Mm. Because actually not having a global state, like, like real- the realization that global is a lie, it's a hard realization. Yeah. It makes... It's harder to build stuff that way. It's like you, you, you have to just be okay with it. And, and, uh, I, I think it's hard to confront that and, and build stuff accordingly. Yeah, I, I think it, it, it's hard to accept. It, it's a good, uh, it's a good explanation be- because it forces you to just accept the discomfort of not having a perfect answer, and that there can't be. Yeah. Having, having a global- There is a perfect answer, you will never know it. [laughs] Having, having a global would be very comforting and very simple and very easy, and that's it, and that's the source of truth, and that's what I'm gonna work with and so on. And so I think, I think, yeah, I, I, I think that's it. I think most people would love to have it, and so they kind of force themselves to think that it exists [laughs] [laughs] ... in some way. [laughs] Yeah, I don't know, but we'll, we'll get there. We'll... I mean, it, it... Also, not everyone has to understand this stuff. Mm. I think a critical percentage of people has to understand the things, and if, if we, if we have a couple of hundred devs that are really good that deeply understand this stuff, I'm happy. [laughs] I don't need, you know, my mom to understand this stuff. It's like, it's fine. She'll, she'll be fine. Yeah, I think the, uh, the eternal September of Nuster is going to be people coming in and building, uh, an A- a REST API- Building global- ... that gives you... What? Building REST APIs to give you go- global feeds. [laughs] Yes. That, that's going to be our eternal September. [laughs] Yeah. Let's prepare for it accordingly. Yeah. [laughs] Any last words? Anything else you wanna touch on? I need to get out of the sun. No, I'm good. All good? Uh, yeah. All right. Then see you next week. See you next week. [laughs]
+[00:00] Gigi: I just, I won't look at the phone anymore.
+
+[00:03] Pablo: [laughs]
+
+[00:03] Gigi: I'll trust it. I fully, I fully trust technology.
+
+[00:07] Pablo: [laughs]
+
+[00:07] Gigi: Is that better?
+
+[00:08] Pablo: Yeah.
+
+[00:08] Gigi: Maybe?
+
+[00:09] Pablo: That's great.
+
+[00:10] Gigi: I don't know. We'll see. I never know how to start these things.
+
+[00:15] Pablo: [laughs]
+
+[00:16] Gigi: So how are you doing, Pablo? Good morning.
+
+[00:19] Pablo: Good morning. Pretty good. Excited.
+
+[00:23] Gigi: Yeah.
+
+[00:23] Pablo: Another-
+
+[00:23] Gigi: Let's see how it goes
+
+[00:23] Pablo: ... another episode of, uh, No Solutions.
+
+[00:25] Gigi: Let's see how it goes.
+
+[00:26] Pablo: Well, it's not even an episode, right? It's a dialogue.
+
+[00:28] Gigi: Yeah. I think-
+
+[00:29] Pablo: [laughs]
+
+[00:29] Gigi: ... I think, uh, yeah. I'm not sure. People will call it episodes anyway.
+
+[00:33] Pablo: [laughs]
+
+[00:34] Gigi: But I, I, I see it as a dialogue. You know, that's the problem with naming. You're not in charge of naming.
+
+[00:38] Pablo: [laughs]
+
+[00:38] Gigi: That's another thing. Like, people... You're not even in charge of your name. People will call you whatever.
+
+[00:43] Pablo: [laughs]
+
+[00:44] Gigi: In school, school makes this very apparent. It doesn't matter what your name is. It's like you'll, you'll get your own. Anyway, I digress already.
+
+[00:51] Pablo: [laughs]
+
+[00:52] Gigi: So, um, yeah, the-
+
+[00:53] Pablo: We, we go on a tangent before hitting any point whatsoever. [laughs]
+
+[00:58] Gigi: Yeah. I, I listened back to the first one and, and, uh, it's actually, it... I was able to listen to it. That's okay. So the sound quality was okay.
+
+[01:06] Pablo: Mm-hmm.
+
+[01:06] Gigi: But it's... I, I hope we will improve. Um, but one thing that we didn't talk too much about was, like, what this experiment actually is. We talked a little bit about, you know, it kinda came out of Sovereign Engineering or some of the things we discussed during Sovereign Engineering. We wanna kind of refine and have a more open, more public dialogue about it, and I think that's, that's a large part of it. But it's also, the way I view it is the whole problem space is way too big for one person to come up with a solution in some sense. So the only thing we have is dialogue. I think the, to, to navigate this whole space, like, how should we build it and how should we build it right, and how do we think about Nostr and Saps and, you know, building something on a Bitcoin standard, building something, like rebuilding the internet, reinventing the internet on a Bitcoin standard, so to speak, um, it's too big of a task for one person or even a couple of people. You need to muddle your way through and talk about it and have many, many dialogues about what might be not the correct solution, I don't think there is a correct solution.
+
+[02:20] Pablo: Mm.
+
+[02:20] Gigi: But what are the right trade-offs? How can you think about it? What is the, what, what would be the pro of cons of doing it this way as opposed to that way? And I think the way I see this, the way I see these, like, No Solutions conversations, dialogues, whatever, is I wanna talk to the people that are closest to that, that have been closest to that for the longest time, and to kind of have a, almost like a time capsule in some sense.
+
+[02:45] Pablo: Mm-hmm.
+
+[02:45] Gigi: How did we think about it in January 2025? Oh, now it's February. So, how did we think about it? [laughs] Time flies, man. [laughs]
+
+[02:53] Pablo: [laughs]
+
+[02:53] Gigi: And just to see where we're at, and maybe, maybe something useful comes out of it. And maybe it's also... My hope is that we will also get better at explaining to regular people why is this exciting-
+
+[03:07] Pablo: Mm
+
+[03:07] Gigi: ... why is this a massive opportunity, and why, I think I mentioned it the last time as well, if you're just a regular JavaScript developer or whatever, and you just learned how to code, why should you take a look at this and why is this exciting?
+
+[03:20] Pablo: Yeah. I think ex- explaining these things is, is just so hard, and the, the closer you are, the, the harder it gets. Um, I was listening to, to, to, uh, Adam Curry on, uh, on Joe Rogan y- last night. And-
+
+[03:36] Gigi: Oh, he went again?
+
+[03:37] Pablo: Yeah, yeah, yeah.
+
+[03:37] Gigi: Oh, wow. He went like-
+
+[03:38] Pablo: Yeah, a kick-
+
+[03:39] Gigi: ... six or seven times now already, I think.
+
+[03:40] Pablo: [laughs] He's a regular.
+
+[03:41] Gigi: Yeah.
+
+[03:41] Pablo: Um, and at one point he started talking about Bitcoin, and the way he was explaining Bitcoin, it w- it wasn't too compelling. [laughs]
+
+[03:51] Gigi: Yeah, yeah, yeah, yeah. Yeah. Yeah.
+
+[03:53] Pablo: It was, "No, but I, I believe in Bitcoin. No, I don't believe on the other shitcoins." And it y- that puts them in regular, in, in the same footing. You know? Uh, it's, it's a, it's a belief system. And, and, a, it's not about-
+
+[04:07] Gigi: Hmm. Yeah, I see. Okay. Yeah
+
+[04:07] Pablo: ... oh, I believe in this one, and you believe on this other one.
+
+[04:09] Gigi: Yeah, yeah.
+
+[04:10] Pablo: Um, and I, I think it does a, a huge disservice when you explain things in the wrong way.
+
+[04:17] Gigi: Yeah.
+
+[04:17] Pablo: Um, which is something that I see a lot. Um, I, I saw Hazard wrote a, wrote, um, a long form maybe like a year ago making that point, saying something like, uh, a, a, a bad explanation is worse, worse than no explanation. [laughs]
+
+[04:35] Gigi: [laughs]
+
+[04:36] Pablo: Which I think is a very good point.
+
+[04:38] Gigi: [laughs] Yeah, I think that's true.
+
+[04:40] Pablo: One of the things that you've mentioned a bunch of times in, uh, in, in Sovereign Engineering, uh, I think we, it's a, it's a good point to, to touch on, is the, the distributed cognition.
+
+[04:53] Gigi: Yeah.
+
+[04:53] Pablo: I think it's a very i- very useful way of thinking.
+
+[04:56] Gigi: Yeah.
+
+[04:57] Pablo: You, you wanna, you wanna touch on that?
+
+[04:58] Gigi: Yeah. I, I, I mean, those are not my ideas. Um, uh, there is a lot of, uh, you know, like, people that are way smarter than me that point this out, that all the hard problems, all the interesting problems are actually not solved by one person. They're all solved by distributed cognition, by, by, like, uh, you know, uh, who runs an airline, for example. Who, who, who steers a large cruise ship? It's not, like, one guy. You need, you need, like, 100 people to do these things, and no single one person can tell you how it works. Or, like, who runs America or who runs a big country or who runs a big corporation and so on. So we put systems in place, and we, we have various things that hopefully self-regulate, and that's what, in combination with humans, runs the thing. And I think, um, just kind of, you know, who came up with the idea of X? It's a very hard... X as a placeholder, not X as in, like, the new Twitter now.
+
+[06:02] Pablo: [laughs]
+
+[06:03] Gigi: [laughs] It's a very-
+
+[06:04] Pablo: Yeah. He, he ruined, he ruined the, the, the X word.
+
+[06:07] Gigi: [laughs] Yeah. Ah, what a shame. No, but it's a very, it's a very, um- Hard question to answer because you don't actually have, like, true real original thoughts, so to speak. Like, everything is a remix of, of something else-
+
+[06:20] Pablo: Mm
+
+[06:20] Gigi: ... and so on and so forth. And so there is, um... I mean, the, the, the way I look at all that is that there is a reason why, for example, in the West, the logos is sacred, and why in the US, the First Amendment is the First Amendment. That it's about free speech and having the ability to actually speak freely about things and discuss things. And the... It's, it's the only way to figure out what you actually need to do. It's the only way to get a grasp on a complex thing that doesn't have a well-defined problem space, and I think all those things are the most interesting problems. All the most interesting problems don't have, like, a definite solution.
+
+[07:06] Pablo: Mm.
+
+[07:06] Gigi: Evolution is a great example.
+
+[07:08] Pablo: Yeah, 100%.
+
+[07:08] Gigi: Like, like, the problem space of life itself. What is the perfect organism? There is no perfect organism. You, you-
+
+[07:14] Pablo: The, the question makes no sense.
+
+[07:15] Gigi: Exactly. The question makes no sense. And, and in a s- I, I view Nostr under the same light, for example.
+
+[07:19] Pablo: Yeah.
+
+[07:19] Gigi: I view the stuff that we are doing under the same light. What is the perfect Nostr app? There is no perfect Nostr app. It's, it's... First, first of all, it's even hard to even say what Nostr is in, in, in, like, to box it in, in some sense.
+
+[07:30] Pablo: Yeah.
+
+[07:31] Gigi: And, and I think that's why you can't figure it out. Like, you as a single person, you can't figure it out. You don't, you don't even know. Like, even if you build a s- a thing, and you think you understand it from start to finish, if you, if you actually shoot it out into the wild, if you actually ship it, if you actually release it, the people will use it in surprising ways.
+
+[07:52] Pablo: Mm.
+
+[07:52] Gigi: That's always what happens. So you don't even understand what you built yourself. You know? Like, uh, the people that, that created Viagra, for example, thought it was a heart medi- medicine, you know?
+
+[08:01] Pablo: [laughs]
+
+[08:02] Gigi: Like, it's... I, I always use this example because most people know it.
+
+[08:05] Pablo: Yeah.
+
+[08:05] Gigi: And that's true for absolutely everything, you know? Like, it's true, it's true across the board. Like, pick your thing that was invented. People will use it in very surprising ways. And, and, and so I, I, I think we're at a point now where, um, it's absolutely crucial to have these conversations and also involve kind of... How should I put it? Let me start, let me start somewhere else. I think we figured out a lot of things by building the first iteration of the internet.
+
+[08:42] Pablo: Hmm.
+
+[08:44] Gigi: And a lot of... Like, Rebel is a great example. Rebel knows a lot of things about [laughs] social media and the history of social media, and how things went, and, and how all this built, and how this came about. And he knows all the mistakes that were made along the way, basically. So it's important to really hear these people and not res- repeat those mistakes, I think. I think it's... We, we actually have a chance of, you know, building the next iteration of the free and open internet, and I would... Like, it would be a missed opportunity if we repeat the mistakes of the past.
+
+[09:20] Pablo: Yeah, and I, I think one of the, the things, um, one of the benefits of having these conversations, and especially about opening them up, uh, like we're doing now, is that it, it, it is very easy to just default to... N- Nostr and, like, the stuff that we're working on, it technically, it looks a lot like the old world. Um, like the peer-to-peer, like the strictly peer-to-peer technologies with a VHD. They... Architecturally, they look very different than a, a client-server model. Nostr looks a lot like a client-server model. It looks very, very similar. It just changes. It's a very small change that is incredibly significant.
+
+[10:05] Gigi: Yeah. The, the servers are stupid and, and very much replaceable, and also you don't use one server.
+
+[10:11] Pablo: And the data-
+
+[10:11] Gigi: I think that's the main difference, right
+
+[10:13] Pablo: ... and, and, and the data is better.
+
+[10:14] Gigi: Yes. The, exactly.
+
+[10:15] Pablo: The, the, the authenticity-
+
+[10:16] Gigi: Yeah, yeah, yeah
+
+[10:16] Pablo: ... of the data-
+
+[10:17] Gigi: Yeah
+
+[10:17] Pablo: ... is in the data-
+
+[10:18] Gigi: Yeah
+
+[10:18] Pablo: ... and that makes all the difference.
+
+[10:19] Gigi: Yeah.
+
+[10:20] Pablo: All the difference.
+
+[10:21] Gigi: Yeah. Yeah.
+
+[10:22] Pablo: It doesn't matter if the, the data is coming from, uh, uh, a server you do not trust.
+
+[10:27] Gigi: Yeah.
+
+[10:27] Pablo: The signature is there.
+
+[10:28] Gigi: Yeah. Yeah.
+
+[10:28] Pablo: That's all that matters.
+
+[10:29] Gigi: Yeah. Yeah.
+
+[10:30] Pablo: Um, but from, from an architectural standpoint, it looks very similar.
+
+[10:34] Gigi: Yeah.
+
+[10:34] Pablo: It looks extremely, extremely similar. So it would be very easy to default, and it is something that we keep seeing. It is very easy to default to having the same answers that we had before.
+
+[10:46] Gigi: Yeah.
+
+[10:46] Pablo: The same answers of, how do you grow? How do you-
+
+[10:49] Gigi: Trying the same thing because it worked in the past
+
+[10:51] Pablo: ... revenue? Trying ex-
+
+[10:51] Gigi: Yeah. Yeah.
+
+[10:51] Pablo: Exactly. Exactly. And just trying to rebuild the same thing. Um, and I think opening up these conversations where we have free... B- because that, it is the thing that we do not have the answers. [laughs]
+
+[11:05] Gigi: Yeah.
+
+[11:05] Pablo: Like-
+
+[11:06] Gigi: Yeah
+
+[11:06] Pablo: ... we, we-
+
+[11:06] Gigi: Yeah
+
+[11:06] Pablo: ... are not recording ourselves thinking, "Oh, this is how you need to do it."
+
+[11:09] Gigi: Yeah, no, not at all.
+
+[11:10] Pablo: Uh, it, it is quite the opposite, is we are opening up the-
+
+[11:14] Gigi: Trying to figure it out as you go.
+
+[11:14] Pablo: We're trying to figure it out.
+
+[11:15] Gigi: Yeah. Yeah.
+
+[11:15] Pablo: Which, like, the first slide, or among the first two or three slides on the day one of software engineering is, "You are the guinea pig." [laughs]
+
+[11:25] Gigi: Yeah. Yeah. Which is still true. Yeah.
+
+[11:26] Pablo: It is very much true.
+
+[11:27] Gigi: Yeah.
+
+[11:28] Pablo: Um, and, and these-
+
+[11:30] Gigi: Yeah. And we are, and we are, too. [laughs]
+
+[11:31] Pablo: And we are, too, 100%. Yeah, yeah, yeah. We're just trying to figure these things out and what this is, right?
+
+[11:37] Gigi: Yeah. Yeah. I, I think, I think the, the default architecture of how most of the things in the web work right now, they, over the last 20 years or so, they impressed various thoughts into the minds of people and developers, and it's very, very, very hard to undo that.
+
+[12:00] Pablo: Hmm. Hard.
+
+[12:00] Gigi: And it's actually lies. I mean, you talked about this a couple of times already, but it's very much worth pointing out, and it's one of the, one of the themes we, we had in, uh, in the course as well. It's like, for example, there is no global. There is no global view of the whole thing. It's impossible. It's an impossible problem. If you wanna have a global view, you need to actually build Bitcoin. You need to rebuild Bitcoin-
+
+[12:20] Pablo: Ah, I never-
+
+[12:20] Gigi: ... you need proof of work, you need-
+
+[12:21] Pablo: All the limitations
+
+[12:21] Gigi: ... proof of location, everything. Yeah
+
+[12:22] Pablo: ... with everything that that means.
+
+[12:23] Gigi: Everything else is a lie.
+
+[12:25] Pablo: Yeah.
+
+[12:25] Gigi: You know, like, the, the, the global view count of a y- of a YouTube video is a lie. It's a complete lie. You can't have the global view. It's, it's, it's always wrong. It's always outdated.
+
+[12:35] Pablo: And it's-
+
+[12:35] Gigi: That's just how ... Because the speed of light and how information works-
+
+[12:38] Pablo: Yeah
+
+[12:38] Gigi: ... and all of it, it's like I don't wanna get into the deal of why it's, uh, the details of why it is a lie, but it's always a lie. The like count of your, of your, of your tweet, it's a lie, and so on and so forth. And-
+
+[12:47] Pablo: And even within Bitcoin, Bitcoin, you, you need to rebuild Bitcoin. Bitcoin only claims to have the truth of its own system.
+
+[12:55] Gigi: Oh, absolutely. Yeah.
+
+[12:55] Pablo: And that's why inscribing-
+
+[12:57] Gigi: Yeah, yeah
+
+[12:57] Pablo: ... shit on the blockchain-
+
+[12:58] Gigi: No, no, no, no, no, no, no
+
+[12:58] Pablo: ... is retarded, right? We, we need to-
+
+[13:00] Gigi: We already talked about the retardation of NFTS last time.
+
+[13:02] Pablo: [laughs]
+
+[13:02] Gigi: Let's not repeat that. [laughs]
+
+[13:03] Pablo: Yeah. But, but, but Bitcoin doesn't claim to have a global view of the other stuff-
+
+[13:09] Gigi: Yeah, no, no
+
+[13:09] Pablo: ... of everything that is not-
+
+[13:10] Gigi: Yeah
+
+[13:10] Pablo: ... within the system.
+
+[13:11] Gigi: You, you can't have that. But, but I think that's so, that's so ... You just have to be okay with having an incomplete view of the thing.
+
+[13:21] Pablo: Yeah.
+
+[13:22] Gigi: You just have to be okay with things potentially being out of order or incomplete or what have you. That's just the, that's just how the world works.
+
+[13:30] Pablo: It's just reality.
+
+[13:30] Gigi: And there is no way around it. If you, if you ... And, and, and the reason why I think it's super important to, to, to talk about this and, and really ... Like, we have to land on some things where you really drive this into people's heads because it's like if you, if you fix this, like, if you fix this problem, you reintroduce centralization. You have a central authority, and with that, with that fix, with that supposed fix of the problem, you reintroduce all the things that made all the [laughs] stuff that we use right now terrible.
+
+[13:59] Pablo: [laughs]
+
+[14:00] Gigi: There is no way around it. So you, you just have to be okay with there being no global, and that's just how it is.
+
+[14:07] Pablo: Yeah, th- I, I think that there are, there are things that we don't know, and there are things that we do know, and it, it's provable, provably impossible to have a global view.
+
+[14:18] Gigi: Yeah, absolutely.
+
+[14:18] Pablo: It, it just makes no sense, uh, from, from a, a, an, um-
+
+[14:23] Gigi: Uh, even physics
+
+[14:24] Pablo: ... constraint of the universe.
+
+[14:24] Gigi: Yeah, even physics shows it. Yeah.
+
+[14:26] Pablo: In, in, in physics terms-
+
+[14:27] Gigi: Yeah
+
+[14:27] Pablo: ... it makes no sense.
+
+[14:28] Gigi: Yeah. And so you just have to be okay with that. And also, it's, uh, uh, there, there, there is just ... I don't know. There, there, there's so many problems that are like this, and, and I feel like we, you know ... I don't know. Maybe we should list them all out and kind of [laughs] may-
+
+[14:45] Pablo: [laughs]
+
+[14:45] Gigi: ... maybe that would be helpful. But one, one issue is, like, the, the, the problem of naming came up so often because-
+
+[14:51] Pablo: Which is the same problem
+
+[14:52] Gigi: ... it is the same problem, which relates to, um, there is no global database of, um, like handles, of, like, usernames. If you have one, then again, it's like you, you, uh, uh, you're, you're back at square one where there is a central server which tells the world, like, who is who. It's a problem that DNS tries to solve. That's why DNS is, like, one of the Achilles heels of the internet because it's like it's a centralized solution. It's like you have to map IP addresses to human-readable and understandable names, and so there is a central registry, and that's how things work. But as we know, a central registry, the issue with a central registry is whoever is in charge can remove the entry points-
+
+[15:35] Pablo: Mm-hmm
+
+[15:35] Gigi: ... can remove the, the, what- whatever is in the register. And so if we actually care about long-lived and ... Uh, I kinda hate the word censorship resistant because that's, it's also, it's such bad marketing in some sense. [laughs]
+
+[15:49] Pablo: [laughs]
+
+[15:51] Gigi: If you wanna have something that's a h- has 100% uptime, which says the same thing-
+
+[15:56] Pablo: Yeah
+
+[15:56] Gigi: ... um, then you, you must not have the central re- register, because a central register can get down, uh, can go down. And I think all of this stuff is important. To, to ... I don't hear this talked about too often. It's, I ... Or le- let me rephrase that. A lot of people do talk about this stuff, but new people come in, they try to build something. They build something, and they try to fix exactly these issues.
+
+[16:19] Pablo: Yes, yes.
+
+[16:20] Gigi: And they try to give everyone in Nostr, like, a username, for example-
+
+[16:22] Pablo: Yeah
+
+[16:23] Gigi: ... that works everywhere and so on.
+
+[16:24] Pablo: [laughs]
+
+[16:25] Gigi: And, and, and so okay, that shows me they haven't ever deeply thought about these issues, and they don't understand the problem space right because it's impossible. They're, you're trying to do an impossible thing. So maybe don't spend your time on trying to fix the impossible problems.
+
+[16:40] Pablo: [laughs]
+
+[16:40] Gigi: Try to fix the possible problems [laughs] and be okay with some things being messy and remaining messy.
+
+[16:47] Pablo: Yeah, uh, to, to me, one of the interesting aspects of, of just freedom tech in general is, uh, I mean, as Matt would say, how much it humbles you, uh, how much it, it forces you to be okay with constraints that are unremovable. There are constraints that cannot be withdrawn. Um, and it, it is a, it, I, I think it's, um, it's a very self-actualizing, um, moment where when, when you accept the constraints and you accept moving forward without trying to be perfect-
+
+[17:24] Gigi: Yeah
+
+[17:25] Pablo: ... without trying to have the username, without trying to have perfect data, data guarantees. Like, uh, that, that's also something that keeps coming up, is the, the guarantee of the data. There are no guarantees. [laughs] You cannot have them. [laughs]
+
+[17:40] Gigi: Yeah, no. It's ... Yeah. I, and I feel like-
+
+[17:45] Pablo: And by, by, by guarantee, I mean the availability of the data, not the-
+
+[17:47] Gigi: Yeah, sure. No. But that's-
+
+[17:49] Pablo: It's easier
+
+[17:49] Gigi: ... the best you can do, I mean ... And I feel like we, we know this. Every- everyone who, whoever, like, you know, like ev- everyone who has been around a couple of years and, and worked with computer stuff or is a computer scientist and so on, it's like RAID shows this clearly, for example. RAID is a great example of, like, okay, there's only these couple of trade-offs. If you have a RAID system, what do you wanna achieve? You wanna achieve that if one hard disk goes bad, not everything is fucked. And so there's these different kind of RAID levels and so on.
+
+[18:15] Pablo: Yeah.
+
+[18:15] Gigi: And, and if you compare RAID to Bitcoin, for example, Bitcoin is like an extreme RAID system-
+
+[18:21] Pablo: [laughs]
+
+[18:21] Gigi: ... where it's like as long as one- Hard disk, so to speak, survives. Everything is fine. For RAID, it's like RAID 5, for example. If, like, one goes bad, you're still fine. If two go bad, you're fucked again, you know? And, and so, so that's the trade-off that you have. There's, like, how, how fault-tolerant is the system? And I think that's, that's what, from an engineering perspective, that's what we should focus on. If you wanna have something that is long-lived and resilient, it has to be fault-tolerant. Central servers are not t- fault-tolerant, and we see this over and over again.
+
+[18:52] Pablo: Mm.
+
+[18:52] Gigi: I mean, we see it like, you know, everyone uses Wallet of Satoshi to receive sats. Wallet of Satoshi gets banned from the US. [laughs]
+
+[18:59] Pablo: [laughs]
+
+[18:59] Gigi: Okay, everyone who is in the US has to use something else. It's not very fault-tolerant, you know? We see it also, you know, like, uh, lots of people nowadays use Primal, and don't get me wrong. I love Primal. I, I think they, they're doing a great job of, you know, getting, pushing Nostr forward in terms of UX and just raising the bar higher, and so on. But if Primal goes down, if the caching server goes down, if the, the wallet goes down, like, it goes down for many, many, many, many people.
+
+[19:24] Pablo: Hmm.
+
+[19:25] Gigi: And I think that's why... That's, that's actually what, what Nostr from an-
+
+[19:29] Pablo: Oh, yeah
+
+[19:29] Gigi: ... architecture standpoint did really, really right. If, like, if one relay goes down, it doesn't matter. Like, we'll nuke the Damus relay, I think, like, at least two times by now.
+
+[19:38] Pablo: Mm-hmm.
+
+[19:39] Gigi: And Damus is used by a lot of people, and it's a big relay. That didn't matter at all. You didn't even feel it. It didn't matter at all.
+
+[19:45] Pablo: That, that's the thing. You can't even tell.
+
+[19:46] Gigi: Yeah.
+
+[19:46] Pablo: You can't tell that the thing-
+
+[19:47] Gigi: Yeah
+
+[19:47] Pablo: ... happened.
+
+[19:48] Gigi: And, and so if you have a system that works like this, I think that's the right approach. That's why, you know, like, I, I think there is a way of building it right, so to speak. I think Blossom would be another example.
+
+[19:58] Pablo: Mm.
+
+[19:58] Gigi: You know, we're not there yet because we don't have, like... Not every client has, like, automatically healing links and all those kind of things, but in theory, it's, it's the same principle. Um, just like with Nostr, if one relay goes down, it doesn't matter. If one Bitcoin node goes down, it doesn't matter, [laughs] you know? And if one Blossom server goes down, it also doesn't ma- it, it shouldn't matter. It's like you just grab it from somewhere else. But again, it's like a trade-off. There is no perfect solution because the answer can't also be, like, if we want to rebuild YouTube, for example, you can't host every single video on every single hard disk of the world. You know, that also doesn't make sense.
+
+[20:31] Pablo: Yeah.
+
+[20:32] Gigi: So, so what is the right trade-off balance? What is the right amount of, of, of replication? What is the right amount of deduplication? And so on. And also, if you overdo it... I, I mean, IPFS showed this clearly. They had other problems as well, but IPFS, they, they did deduplication to the max, and then it was impossible to retrieve files-
+
+[20:49] Pablo: [laughs]
+
+[20:49] Gigi: ... because it's just, like, one shard goes offline, and you can't, you can't reassemble your file, and it was just way too complicated. But anyway. Fear JEFF has a lot to say about IPFS. [laughs]
+
+[20:59] Pablo: [laughs] He probably has, no doubt.
+
+[21:01] Gigi: [laughs]
+
+[21:02] Pablo: Yeah, I think you, you want to be... At, at, at the systemic level, you want to be fa- 100% fault-tolerant. At the edges is, is perfectly acceptable to not be fault-tolerant.
+
+[21:13] Gigi: Oh, absolutely. But, but that also, that also leads us to, to the next issue of this doesn't come for free. So someone has to run the things-
+
+[21:23] Pablo: Mm-hmm
+
+[21:23] Gigi: ... and someone has to actually, you know, like, host your image or also run the relay, and all those kind of things, or run the mint, or run the Bitcoin nodes, and so on. And so, so it all kind of hangs together because you, uh, you will never have the perfect solution of, like, it's super easy to use, it's super fast, it's, like, super convenient, it's super fault-tolerant, and it's free, and you don't have to think about anything, and you don't have to do anything. It's not how the world works.
+
+[21:51] Pablo: [laughs]
+
+[21:51] Gigi: And so-
+
+[21:52] Pablo: Again, no free lunch.
+
+[21:54] Gigi: Yeah. There, there literally is no free lunch, and you see this... I mean, that's true across all areas of life. It... Not everyone can have their private chauffeur and, you know, that goes all-
+
+[22:03] Pablo: [laughs]
+
+[22:04] Gigi: ... that comes in a Ro- Rolls Royce, and so on. Like, most people will need to learn how to drive, and use their own car, and potentially fix their own car, all those kind of things, and so on. And yes, we can make steps towards that direction, as was shown with Uber, and Bolt, and so on. Make it easier, make it more convenient, and so on, but it's still. It's like you're living in the European Union. There's a new stupid law passed. Uber is illegal. We're back to square one. You know what I mean? It's like, I don't know.
+
+[22:32] Pablo: Yeah, so the, the... So from the work that I've been doing with the, uh, with NIP60 and, and NIP61, the-
+
+[22:39] Gigi: Came out of conversations like this, by the way
+
+[22:41] Pablo: ... it ca- 100%.
+
+[22:42] Gigi: [laughs]
+
+[22:43] Pablo: Uh, the number one issue that people raise is, "Oh, wait, but the mints can rug you." Yeah. [laughs]
+
+[22:51] Gigi: Yeah.
+
+[22:51] Pablo: Yes, they can. [laughs]
+
+[22:52] Gigi: That's the idea.
+
+[22:53] Pablo: That i- that is the idea. [laughs]
+
+[22:54] Gigi: You should never put a meaningful amount of money-
+
+[22:56] Pablo: Yes
+
+[22:56] Gigi: ... into the thing. [laughs]
+
+[22:57] Pablo: It, it is not for your cold storage. But-
+
+[22:59] Gigi: Yeah
+
+[22:59] Pablo: ... but it comes from this sense of, "I should have perfect guarantees of everything."
+
+[23:04] Gigi: Yeah, yeah.
+
+[23:05] Pablo: "It should be seamless UX-
+
+[23:06] Gigi: Yeah
+
+[23:07] Pablo: ... and, uh, no one should be able to rug me."
+
+[23:08] Gigi: Yeah. Perfectly secure.
+
+[23:10] Pablo: Perfectly. [laughs]
+
+[23:11] Gigi: Perfectly available, all those kind of things.
+
+[23:13] Pablo: And, and, like, I, I think one of the... I, I mentioned I, I did this, this, uh, this talk in, uh, in software engineering about the, the, the sovereign Legos. It, it's about having building blocks-
+
+[23:26] Gigi: Yeah
+
+[23:26] Pablo: ... with different trade-offs, because it, it is all about the trade-offs. With different trade-offs that increase the design space that we have available.
+
+[23:35] Gigi: Yeah.
+
+[23:35] Pablo: The tools that we can-
+
+[23:36] Gigi: Yeah.
+
+[23:36] Pablo: And so I, I don't see, obviously, I don't see, uh, NATSAG and NIP60 as the be-all [laughs] end-all.
+
+[23:44] Gigi: Yeah. Build the, build the new banking system there.
+
+[23:45] Pablo: I, I don't have most of my Bitcoin there, obviously.
+
+[23:48] Gigi: Yeah, yeah, yeah.
+
+[23:49] Pablo: But it, it is one more tool.
+
+[23:51] Gigi: Yeah.
+
+[23:52] Pablo: And then LSPs and opening your own channels is, is also a tool, and Liquid can be a tool, and Sidechains. No, but-
+
+[24:00] Gigi: Yeah.
+
+[24:00] Pablo: [laughs] Um, um-
+
+[24:05] Gigi: Yeah, but I think the issue is we don't even understand the tools right, and most people, um, don't know about the tools at all, basically.
+
+[24:13] Pablo: Hmm.
+
+[24:13] Gigi: I think that's the issue. I think in, in the real world, so to speak, we don't have this issue. Most people know what a hammer is. Most people know what a sharp knife is. Most people know what a saw is, and so on, and they know when to use what, you know? Like, most people don't try to eat their, I don't know, like, soup with a chainsaw.
+
+[24:29] Pablo: [laughs]
+
+[24:29] Gigi: It's like that's... We understand the various tools and the various trades.
+
+[24:32] Pablo: There, there probably was someone doing it.
+
+[24:33] Gigi: I, I'm sure someone tried.
+
+[24:35] Pablo: 100% someone tried. [laughs]
+
+[24:35] Gigi: I'm sure someone tried But, but still, like we are at the point now where, like we just built the tools like basically yesterday-
+
+[24:43] Pablo: Yeah
+
+[24:43] Gigi: ... in some sense.
+
+[24:43] Pablo: 100%, absolutely.
+
+[24:44] Gigi: Again, I, I keep coming back to Blossom just b- uh, uh, I like it a lot. [laughs]
+
+[24:48] Pablo: Yeah, Blossom is fantastic.
+
+[24:48] Gigi: That's the main reason. But, but it's also, um... So a little over a year ago it didn't exist at all, not even as an idea, and, um, now it's, it hosts this podcast. So this podcast-
+
+[25:03] Pablo: Oh.
+
+[25:03] Gigi: I call it a podcast-
+
+[25:03] Pablo: Oh, God damn it. [laughs]
+
+[25:05] Gigi: ... because, damn it. See? That's how, that's how indoctrinated I am.
+
+[25:07] Pablo: [laughs]
+
+[25:08] Gigi: So just, just for the record, this will not be, uh, just another podcast. This thing will end, and it's like we're gonna have a couple of conversations, record them, and that's gonna be it. But still, the fucking MP3 files, they're served on a Blossom server. So if we are right about our assumptions and things work out as we hope they will, uh, like this will be around for a while, and, uh, it will be very hard to get rid of the MP3 files potentially. And so, um... Oh, I lost my train of thought. Where was I going? It's the waves. They are so loud.
+
+[25:41] Pablo: [laughs]
+
+[25:42] Gigi: [laughs] Enjoy, enjoy the breeze. [laughs]
+
+[25:46] Pablo: We, we barely... We, we just made the tools-
+
+[25:48] Gigi: Oh, yeah. Exactly
+
+[25:48] Pablo: ... like a year ago.
+
+[25:49] Gigi: So a, a year ago all of this stuff, most of this stuff didn't exist, like, uh, NIP 60 is, like, I don't know, six months old now or so.
+
+[25:57] Pablo: Six... Yeah, maybe six months.
+
+[25:58] Gigi: And, and we're just figuring out, okay, when can we use this? How do we use this, and when does it make sense? And-
+
+[26:03] Pablo: Where does it fit?
+
+[26:04] Gigi: Yeah, exactly. And I really like the building block idea. I think, I think that's also, that's also... I think now is the right time to really open it up and talk about all this stuff, because I really think we have almost all of the building blocks now. It's, I think, two years ago, three years ago, I wouldn't have been as bullish as I am now, because there was-
+
+[26:28] Pablo: Absolutely
+
+[26:28] Gigi: ... a lot of stuff missing.
+
+[26:29] Pablo: Yeah, absolutely.
+
+[26:29] Gigi: Like how do we do this, and what about privacy? What about DNS? All those kind of things. And, and we, we have made so much progress in figuring out all these little things, like how do you, you know, like, um, how do you look up other people? How do you look up other relays? How do you, how do you do discovery in Osteride without relying too much on DNS, for example-
+
+[26:52] Pablo: Yeah
+
+[26:52] Gigi: ... and all those kind of things, and we figured out a couple of things. And, and I think, yeah, may- maybe that would be one outcome. Just be very clear about what kind of Lego pieces we have, so to speak.
+
+[27:05] Pablo: Yeah.
+
+[27:06] Gigi: I'm not sure. We'll see.
+
+[27:06] Pablo: No, yeah. I, I think that's, uh, that's a useful... So for, for example, I, I think, um, N- NIP 89, which is the, the discovery NIP, uh, and I gave a talk in, um, in Tokyo about, uh, discoverability in Osteride doesn't suck. And I, I think N- NIP 89 is a, is a good example, because in the past... I mean, in the present, [laughs] we, we think about app discovery, and by app discovery I mean capability discovery-
+
+[27:39] Gigi: Yeah
+
+[27:39] Pablo: ... uh, via going to some fucking app store-
+
+[27:42] Gigi: Yeah
+
+[27:42] Pablo: ... and, and getting, and getting, uh, getting... Seeing what's possible. And I, I think NIP 89 is like a, is l- still a very underexplored, um, building block that we have available, which is radically different. Because instead of going to this place where you, you find what can I do, you, you see the people doing the thing.
+
+[28:10] Gigi: It's, it's the same principle, right? Like the app speaks for itself what it can do.
+
+[28:14] Pablo: Yes, yes. Yes.
+
+[28:15] Gigi: It's just like the, the, the signed message speaks for itself.
+
+[28:20] Pablo: Very much.
+
+[28:20] Gigi: It's, it's very much the same principle. And so how do you... Because it's also, like in, in, in an Oster world, like how do you get to the signed JSON? It doesn't matter whether it comes from a central server or whether you get it on a USB stick or whatever. Just like how, how do you get a new valid Bitcoin block? It doesn't matter.
+
+[28:37] Pablo: Mm.
+
+[28:38] Gigi: The data speaks for itself, so it, it... That's the only way how it can work so that you can ignore any central authority, any supposed central authority, and this is the same idea, right? Like you basically ask the app, tell in a self-sufficient manner what you can do and what you can handle, and how people discover you and, and get to know, get to get a, get a hold of this information. Doesn't matter.
+
+[29:02] Pablo: Yeah. The, the people, the people interacting with the tool is the distribution of the tool.
+
+[29:07] Gigi: Yeah.
+
+[29:08] Pablo: And, and, and you, you're just... If I see that you are live streaming, for example, and, and I follow you, and I see that you are doing the thing, and I'm unsure what the thing is. Like why... W- what is GG-
+
+[29:23] Gigi: Yeah
+
+[29:24] Pablo: ... w- what's the context here? NIP 89 is that building block that, that takes you from that point of utter confusion of what's going on to, oh, this is a live stream. I didn't even know that this was possible.
+
+[29:36] Gigi: Yeah.
+
+[29:37] Pablo: Um, and I'm using live stream as a placeholder, because literally anything-
+
+[29:42] Gigi: All the things. Yeah
+
+[29:43] Pablo: ... all the things-
+
+[29:43] Gigi: Yeah
+
+[29:43] Pablo: ... fit in that, in that, in that, in that box.
+
+[29:45] Gigi: Yeah.
+
+[29:45] Pablo: And that, that is just one more building block. It is just very different, very new. It's a very, it's a very different idea. There is no equivalent on, on, on, on the legacy web, uh, that has that capability. Again, NATS is another. Blossom is another. NCIX is another. There is so many of these tools that are just completely different. Um, or, or not completely different. Like Blossom is not completely different. Blossom solves a very known problem.
+
+[30:15] Gigi: Yeah.
+
+[30:15] Pablo: How many times have we tried to solve-
+
+[30:17] Gigi: Oh, many times
+
+[30:18] Pablo: ... like [laughs] so many times.
+
+[30:21] Gigi: Yeah.
+
+[30:21] Pablo: And this is such a stupidly simple-
+
+[30:24] Gigi: Yeah
+
+[30:24] Pablo: ... left side of the curve solution.
+
+[30:27] Gigi: Yeah.
+
+[30:27] Pablo: It is just-
+
+[30:27] Gigi: And it will also... It will not work for everything.
+
+[30:29] Pablo: Oh, no, no. Yeah.
+
+[30:29] Gigi: It's like torrents might be the better solution for, for some things, you know, like really large file streaming, whatever. I don't know. But it's, it, it's not a one-size-fits-all solution.
+
+[30:39] Pablo: There, there isn't any, right?
+
+[30:40] Gigi: But... Yeah, there isn't. Right. That's the point of the... [laughs]
+
+[30:42] Pablo: That is the point. [laughs]
+
+[30:42] Gigi: There is no solution.
+
+[30:43] Pablo: Okay.
+
+[30:43] Gigi: There is no solution.
+
+[30:44] Pablo: We've arrived. [laughs]
+
+[30:45] Gigi: There is a, there's only, there's only trade-offs. Yeah, that's the whole point. No, but I, I... Yeah, I really like that. But I, I, I... Coming back to what you said about- Adam Curry explaining the coin on Rogan and doing [laughs] not the best job he could do.
+
+[31:02] Pablo: [laughs]
+
+[31:02] Gigi: I think that's where we are at in the Nostr developer space right now.
+
+[31:07] Pablo: [laughs]
+
+[31:07] Gigi: I, I feel like, um, uh, I, I think everyone has their own reason to work on this stuff and be excited about, about it and so on, and there, there might be quite a bit of overlap in regards what are these reasons. But I think we're not very good yet at explaining, like, why, why should you take a look at this?
+
+[31:27] Pablo: Hmm.
+
+[31:27] Gigi: I mean, uh, just like with, with Bitcoin. We were, I think, kinda terrible in some sense, um, [laughs] trying to explain to the world why, why is this important and why should you take a look at it and so on. With Bitcoin, it's, I think, harder because money is, like, an icky subject.
+
+[31:43] Pablo: Yeah.
+
+[31:43] Gigi: Um, most people, you know, like either have too much or too little, and it's always a taboo subject and, and people-
+
+[31:50] Pablo: And, and also the Bitcoin approach is so counterintuitive. If you, if you believe in Bitcoin the first time you heard it, you're either-
+
+[31:56] Gigi: Oh, it's a scam
+
+[31:57] Pablo: ... a massive genius. [laughs]
+
+[31:59] Gigi: Yeah, no. It's... [laughs]
+
+[31:59] Pablo: You need to arrive to the conclusion it's obviously a scam. [laughs]
+
+[32:03] Gigi: Yeah. [laughs] Yeah. It's, um, uh, I think we'll have an easier time now, but it's still, it's still kinda weird, and some things are counterintuitive.
+
+[32:11] Pablo: Hmm.
+
+[32:11] Gigi: And, and I think, I think the, the, the killer app of Nostr is you can't be rug pulled. I think that's the killer app.
+
+[32:18] Pablo: Yeah.
+
+[32:18] Gigi: I really think that's the killer app, both for the users and for the developers. I think everything else is kind of like a side use case in some sense.
+
+[32:26] Pablo: [laughs]
+
+[32:26] Gigi: And, but I, I do agree with, with, um, what a lot of people are saying. Like, i- in the end, we will be better than the centralized solutions, but you see this also, you see this, again, coming back to Bitcoin. It, it, uh-
+
+[32:37] Pablo: [laughs] We're again going to-
+
+[32:39] Gigi: I apologize. It is, it is another Bitcoin podcast. It's, it's terrible. I hate myself right now.
+
+[32:43] Pablo: It is a podcast? [laughs]
+
+[32:44] Gigi: Oh, my Lord.
+
+[32:45] Pablo: It's about Bitcoin. [laughs]
+
+[32:45] Gigi: Oh, my God. [laughs] We're failing on all fronts.
+
+[32:49] Pablo: [laughs]
+
+[32:49] Gigi: But, but fiat credit rails can never do what Bitcoin does.
+
+[32:53] Pablo: Hmm.
+
+[32:54] Gigi: It's impossible.
+
+[32:54] Pablo: Yeah.
+
+[32:55] Gigi: So Bitcoin, give them enough time and innovation, Bitcoin has to be better than fiat credit rails. There is no other way. There is no other way. It's, uh, uh, it's, it's, it's the better thing. It's the better solution. It's the superior system, and there's many technical reasons why this is the case, and I, you, you know, I don't wanna waste time to, to get into those. I think the same is true for Nostr. I think it's the superior solution. It really is. And I think the, the legacy centralized systems that, that we now have with you- you know, like YouTube, and, and X, and Instagram, and whatnot, and I don't know, TikTok and so on, they will never be able to do what Nostr will be able to do or what Nostr already is able to do.
+
+[33:39] Pablo: 100%.
+
+[33:39] Gigi: Like, Zaps show this very clearly.
+
+[33:41] Pablo: 100%.
+
+[33:41] Gigi: Like, you can only do, like, micro payments without a signup, you can only do on Nostr and with Bitcoin. There is no other way. Everything else-
+
+[33:53] Pablo: Yeah.
+
+[33:54] Gigi: Like, that, that's already something that we can do way better than anyone else.
+
+[33:59] Pablo: Yeah.
+
+[33:59] Gigi: And we'll have more, and more, and more of those things. But I don't think that's the killer feature. I think Zaps is an incredibly important feature. I think it's a novel thing. I think, again, I think we, we don't understand it right yet. I, I, I hope to talk about Zaps at length at, at one point, but, but, but not today. [laughs]
+
+[34:18] Pablo: [laughs]
+
+[34:19] Gigi: Another day. But the, the thing about being rug pull resistant is something, it actually solves a problem. It solves a problem for users, and it solves a problem for developers.
+
+[34:32] Pablo: Hmm.
+
+[34:32] Gigi: How many people have there been that built their whole developer career about the fucking Reddit API?
+
+[34:37] Pablo: [laughs]
+
+[34:38] Gigi: They're all rug pulled now. Everything is garbage now. And the same goes for YouTube and every other API, and all those kind of things. It all goes away.
+
+[34:44] Pablo: E- every API, e- even if you don't get cut off, the API just changes the interface-
+
+[34:49] Gigi: Oh, absolutely. Yeah
+
+[34:50] Pablo: ... and you're fucked again.
+
+[34:50] Gigi: Yeah, yeah, yeah. Uh, absolutely. No, it's terrible. And, and so, so-
+
+[34:56] Pablo: I, I, I tell you, one of the, one of the, um, moments where I said, "All right, I, I need to go full on on Nostr," was that company that we, uh, that I was working in, um, had KYC issues. And they were changing the, the, uh, provider for their KYC and their, uh, banking partners and whatnot.
+
+[35:21] Gigi: Yeah. Everything's different.
+
+[35:23] Pablo: I, I, I had to start learning a new API from some proprietary KYC thing, and I was hating every single second of it.
+
+[35:32] Gigi: [laughs]
+
+[35:32] Pablo: And I was comparing the work that I was doing in Nostr with learning this stupid fucking API, hating myself, and it's like, "No, this-
+
+[35:40] Gigi: [laughs]
+
+[35:40] Pablo: ... this cannot be it." [laughs]
+
+[35:43] Gigi: There has to be a better way.
+
+[35:44] Pablo: There's got to be a better way.
+
+[35:46] Gigi: Yeah. Yeah.
+
+[35:47] Pablo: [laughs]
+
+[35:48] Gigi: Yeah. No, it's als- it's just not fun. It's not fun being-
+
+[35:50] Pablo: It's not fun. It sucks. It, y- you know that you're wasting your time.
+
+[35:53] Gigi: Yeah.
+
+[35:54] Pablo: You're building that.
+
+[35:55] Gigi: Yeah.
+
+[35:55] Pablo: You know... I, I ha- I had this friend, um, who works on, uh, civil engineering. And he was, he was working on, on designing dams. And he was telling me that the calculations that they make, uh, have to build in the assumption that the dam must last for 500 years.
+
+[36:15] Gigi: Yeah.
+
+[36:16] Pablo: And I was wondering, "What piece of code ha- have I written that has withstood 10 years?"
+
+[36:22] Gigi: [laughs]
+
+[36:23] Pablo: Like, how, how much code, what's the percentage of code that has been written that have withstood one year? It, it, it's, it's almost all disposable, man.
+
+[36:32] Gigi: Yeah. Yeah. Yeah. It's just, it's a, it's kind of a sad state of affairs, right?
+
+[36:36] Pablo: Yeah.
+
+[36:36] Gigi: It's, um... But I mean, with the dams, it's interesting because, because that's the w- the right way of, of looking at the problem. It's like, if, if a flood comes, it's a catastrophic event, and one time in 100 years, a really big flood comes, so the whole dam has to be built to w- withstand this event.
+
+[36:56] Pablo: Mm-hmm.
+
+[36:56] Gigi: It's like a, a, you know- Once, once in a lifetime kind of catastrophic flood or earthquake or what have you, and you have to take all that into account. And if you're doing your thing properly, then it actually works. And we do very, very little of that-
+
+[37:10] Pablo: Hmm
+
+[37:10] Gigi: ... um, in the kind of, you know, like, thinking about the web infrastructure and the inter- internet infrastructure of, of, of those kind of things or, or building out products or building out various systems that the most things are completely disposable.
+
+[37:26] Pablo: Mm-hmm.
+
+[37:27] Gigi: And, and I, I'm old enough now that I really kind of, you know, I'm a grumpy old man-
+
+[37:33] Pablo: [laughs]
+
+[37:33] Gigi: ... where it's just like I s- I saw all the things come and go. Can we kinda stop doing that?
+
+[37:38] Pablo: [laughs]
+
+[37:38] Gigi: Doing like the next MySpace, and then it goes away, and then we, we move on to something else, and then it goes away, and then... And, and it also, it iterates quicker and quicker and quicker.
+
+[37:46] Pablo: Hmm.
+
+[37:46] Gigi: Because things speed up, and then it, it, then it was this, and then it's like, and it was musically, and musically was around for, I don't know, 10 months, and then became TikTok. And now TikTok basically got banned or whatever, and people moved on to the other thing. Snapchat, I forgot Snapchat, and all those kind of things. It's, it's also fine. You know, like, the, the new generation has to find their own thing, and it's like you don't wanna join Facebook because mom is on Facebook and so on. It's all, it's all okay. It's, it's... I don't wanna be too grumpy and too old. Like-
+
+[38:12] Pablo: [laughs]
+
+[38:13] Gigi: ... I do, I think I do understand it to some extent. But still, like, if it comes to infrastructure stuff, you know. It's, that's why I like email so much. It's like email, um, yeah, I just [laughs] I, I actually just mentioned this yesterday, is like people thought ICQ was superior to email. You know, email is still around, ICQ isn't. So email got something right. And so can we, can we, can we do more of this?
+
+[38:38] Pablo: Yeah, I think when, when one of the, the incredible benefits that gets you not quite there, but very close to there, is what we discussed a few times when you de- decouple the building of the, of the software and the running of the software.
+
+[38:53] Gigi: Yeah.
+
+[38:53] Pablo: If you, like-
+
+[38:54] Gigi: Build the infrastructure, don't run it.
+
+[38:55] Pablo: The, the-
+
+[38:56] Gigi: Kind of
+
+[38:56] Pablo: ... authors of RFC 822, they, they've, they've all moved on from SMTP.
+
+[39:00] Gigi: Yeah.
+
+[39:00] Pablo: They're all retired.
+
+[39:02] Gigi: Yeah.
+
+[39:02] Pablo: But they were not running the thing.
+
+[39:04] Gigi: Yeah.
+
+[39:05] Pablo: They, they, they weren't in charge of running-
+
+[39:06] Gigi: Yeah, that's not the point
+
+[39:07] Pablo: ... the SMTP servers.
+
+[39:07] Gigi: Yeah. Yeah, yeah. Yeah. And I think, I think what, what kind of... I mean, they were all idealists, as w- as were the early internet people.
+
+[39:15] Pablo: Yeah.
+
+[39:15] Gigi: And I think Nostr is full of idealists.
+
+[39:18] Pablo: [laughs]
+
+[39:19] Gigi: Um, uh, and, and that's perfectly fine. But I think, I think we have an opportunity now to mix the best of both worlds. Because I am a capitalist as well, you know. Like, it's contra- [laughs] contrary to popular belief.
+
+[39:38] Pablo: [laughs]
+
+[39:38] Gigi: I like Stallman and the new licenses. But I'm still not a communist, you know. Like, I'm not a full-blown commie. Uh-
+
+[39:44] Pablo: NVK is gonna be so shocked
+
+[39:45] Gigi: ... sorry, sorry to disappoint.
+
+[39:46] Pablo: [laughs]
+
+[39:47] Gigi: But, but I mean, there is a reason why we were never, uh, able to build out the 402 error code, payment required. It just, it didn't work. It doesn't work on, on, on fiat payment rails. It just, it doesn't work. It cannot work. They didn't understand this back then. I'm, I'm convinced that, like, it's very hard to really understand this and really internalize it, that, that fiat implies... Like, fiat credit, fiat rails are credit rails, and credit requires KYC, and so you can't do all those things. It's, it's, it's, it's, it's something that took me, like, years and years and years to figure out. And, and I feel like most people still haven't figured this out-
+
+[40:20] Pablo: Oh, 100%
+
+[40:20] Gigi: ... in some sense. It's-
+
+[40:21] Pablo: 100%.
+
+[40:21] Gigi: It's... And, and so now, now we have, now, now we actually have the building block with, you know, like, for example, eCash. eCash is a great example for that.
+
+[40:30] Pablo: Phenomenal.
+
+[40:31] Gigi: eCash fixes 402. It absolutely does. In the header of your request, you can put some eCash, and with that, the request is paid. You don't even have to go back and forth-
+
+[40:40] Pablo: Yeah, yeah, like [laughs]
+
+[40:41] Gigi: ... and do, like, 10 round trips. It's just like, "Here's five bucks. Give me the apple." You know? It's like, whatever. And, and, and so I think we have the opportunity now to do what you just mentioned, actually think deeply about the infrastructure we wanna build, come up with something that anyone can run. So again, like, you wanna build the infrastructure. You don't wanna run everything yourself. Then you're just like, then you're like Apple or Google-
+
+[41:03] Pablo: Mm
+
+[41:03] Gigi: ... or what have you. You know? Like, that doesn't make any sense. And, and it doesn't have to be all altruistic and all, like, you know, like Richard Stallman type people that don't believe in money. [laughs]
+
+[41:15] Pablo: [laughs]
+
+[41:16] Gigi: You can actually build services, uh, that scale, that are useful, and you can make money if you run your service well. And I think that's how, how things sh- should be. I think we touched on it the last time as well. It's like that's how restaurants are run. It's like it's no secret what's happening there. They, they provide a service. They do it well. They sell something that's actually scarce. And if you do your job well, you can make money on a restaurant, and you can do it for a long time. That's why you can have multi-generational restaurants and inns and other things that are actually fantastic businesses. And you can have fun while you're doing it, and you don't have to take over the world, and you don't have to, you know, compete with McDonald's and capture the whole food market of the world.
+
+[41:51] Pablo: [laughs]
+
+[41:51] Gigi: And like, it's like all, all these ideas are, are not-
+
+[41:54] Pablo: And they don't run a compliance department. Restaurants don't have a compliance department.
+
+[41:58] Gigi: [laughs]
+
+[41:58] Pablo: Which is the, the goal. [laughs]
+
+[42:02] Gigi: Yeah, but I, I feel like in the, in the, in the Web 2.0 era at least, and we are still in this era, I think at the, at the end of it, but, but it's still, it's always, the question is always: How can you take over the world? How can you take on Google? How can you, you know, replace Facebook?
+
+[42:15] Pablo: Yeah.
+
+[42:16] Gigi: Like, you launch a video thing. How do you kill YouTube? Are you the YouTube killer?
+
+[42:20] Pablo: Oh.
+
+[42:20] Gigi: You know? It's like a- all of that's bullshit.
+
+[42:23] Pablo: [laughs]
+
+[42:23] Gigi: It's like you don't have to. If you're st- if, if I'm starting a, a lemonade stand, I'm not gonna be the Coca-Cola killer. You know what I mean?
+
+[42:30] Pablo: It's like, it's like the, uh-
+
+[42:31] Gigi: It's like, I don't know
+
+[42:31] Pablo: ... like, the, the concept of hyper Bitcoinization. You know? It's like, oh, but when, when are you gonna be able to sit in any coffee shop and, and pay, pay with Bitcoin? And when is everything going to be based on... It doesn't have to.
+
+[42:43] Gigi: It doesn't have to.
+
+[42:44] Pablo: Like, we, you can-
+
+[42:45] Gigi: It's true in my life. [laughs]
+
+[42:45] Pablo: It's true in your life. It's true in my life. We don't need all the other people to agree with us.
+
+[42:50] Gigi: My-
+
+[42:51] Pablo: [laughs]
+
+[42:51] Gigi: My life is very much hyper Bitcoinized.
+
+[42:53] Pablo: 100%.
+
+[42:53] Gigi: And it has been for a while, so-
+
+[42:54] Pablo: 100%, 100%
+
+[42:55] Gigi: ... I feel like the whole discussion is moot. But-
+
+[42:57] Pablo: But, but I think-
+
+[42:57] Gigi: Yeah
+
+[42:57] Pablo: ... I, I think it, it stems from the same problem of an all or nothing approach-
+
+[43:02] Gigi: Yeah
+
+[43:03] Pablo: ... where- When are, when is Nostr going to replace Facebook? It doesn't have to.
+
+[43:06] Gigi: No. No, no, not at all. And, uh, and in some sense it also shouldn't. It should, it should... It's, yeah. I'm surprised still that I, I feel there's a lot of overlap between other communities that have identified the problem, I think. I think they, they have i- identified the issue, um, but they haven't necessarily landed on the right solution yet.
+
+[43:33] Pablo: Oh, 100%.
+
+[43:34] Gigi: Um-
+
+[43:34] Pablo: Absolutely
+
+[43:35] Gigi: ... all the Mastodon people is a great example. They, they know the problem well. They, their sol- their solution sucks. Sorry Mastodon people.
+
+[43:40] Pablo: [laughs]
+
+[43:40] Gigi: I mean, most of- a lot of the Mastodon people went to Nostr now and so on. But, but I, even broader than that, I think a lot of the s- the, the self-hosting people, they have identified the problem really well.
+
+[43:50] Pablo: Yeah.
+
+[43:50] Gigi: But I, I still think most of the solutions are kind of very limited in some sense. It's like you, you then... Okay, so, so either you use, I don't know, like, Google Drive or whatever, or whatever centralized service, or you run absolutely everything yourself in your own server rack in your kitchen-
+
+[44:09] Pablo: [laughs]
+
+[44:09] Gigi: ... and if one time you're in, you're in a place where the power goes out and your whole stuff is down for, like, a month or whatever.
+
+[44:15] Pablo: [laughs]
+
+[44:15] Gigi: You know? Like, that's... You know what I mean?
+
+[44:18] Pablo: Yeah.
+
+[44:18] Gigi: They're, they're... I think we can do better than that. I, I really think we can... And again, Blossom is a great example for that, where it's like-
+
+[44:25] Pablo: [laughs]
+
+[44:25] Gigi: You or th- No-
+
+[44:26] Pablo: It's a Blossom podcast [laughs].
+
+[44:27] Gigi: It's a, that's, that's way better. That's way better. It's better than a Bitcoin podcast.
+
+[44:31] Pablo: 100%. [laughs]
+
+[44:32] Gigi: But the, the, the Nostr has the right, right architecture. It's like I, I, I wanna host my own thing, and it's kind of a fail-safe if everything else goes down or whatever. But I don't wanna be personally responsible for all the infrastructure all the time.
+
+[44:49] Pablo: Mm.
+
+[44:49] Gigi: I wanna pay other people to do it for me, and I don't want those people to know what I'm doing. I don't want those people to be able to shut me off in a meaningful way or control me in a meaningful way, and those kind of things. And I think that's the right, those, those are the right parameters. Like, it's none of your business-
+
+[45:06] Pablo: [laughs]
+
+[45:06] Gigi: ... if, if, what, what, what I do with, I don't know, like, you know, what kind of lightning payment your node routes, for example.
+
+[45:13] Pablo: [laughs]
+
+[45:13] Gigi: It's none of your business. If you p- pass on an encrypted message that I send, it's none of your business what's in there. It's like, I mean, that's what, how the postal office used to operate, at least. I'm not sure what they do now, but-
+
+[45:23] Pablo: [laughs] It's probably illegal-
+
+[45:25] Gigi: Not, not, not, not-
+
+[45:25] Pablo: ... in like six different ways.
+
+[45:26] Gigi: Yeah. [laughs]
+
+[45:28] Pablo: [laughs]
+
+[45:29] Gigi: Nah, I don't know. I feel like an old man ranting, but anyway.
+
+[45:31] Pablo: No, y-
+
+[45:31] Gigi: That's, uh-
+
+[45:32] Pablo: But, but one of the things that I've seen is, um, you know, the, the local first movement, uh, where it's, like, the idea is that applications should be, um, should be performant, should be expected to work offline.
+
+[45:49] Gigi: Yeah.
+
+[45:49] Pablo: They should... They, they can-
+
+[45:50] Gigi: Yeah
+
+[45:50] Pablo: ... they can still use the internet, of course.
+
+[45:52] Gigi: Yeah.
+
+[45:53] Pablo: Um, but, but the application, the state of the application should be on the application itself, and instead of, oh, you are not connected to the internet, so you cannot-
+
+[46:04] Gigi: Yeah, yeah. Nothing works
+
+[46:04] Pablo: ... edit your document.
+
+[46:05] Gigi: Yeah, yeah, yeah.
+
+[46:05] Pablo: You know? Nothing... Your OS doesn't boot because-
+
+[46:07] Gigi: Yeah, yeah
+
+[46:08] Pablo: ... your [laughs] internet is down.
+
+[46:09] Gigi: Yeah.
+
+[46:09] Pablo: Um, and I, I, I listened to, to a bunch of, uh, podcasts from the local first community, which is-
+
+[46:16] Gigi: I didn't even realize there is a local first community.
+
+[46:18] Pablo: Oh, there is. They, they have, they, they have a conference. [laughs]
+
+[46:20] Gigi: Oh, r- really? Wow.
+
+[46:21] Pablo: For real.
+
+[46:22] Gigi: At home? By themselves? [laughs]
+
+[46:25] Pablo: [laughs] Disconnected from the internet.
+
+[46:29] Gigi: [laughs]
+
+[46:29] Pablo: It's just three guys screaming into a screen.
+
+[46:31] Gigi: Discuss all the things local first, and then-
+
+[46:34] Pablo: [laughs]
+
+[46:34] Gigi: ... maybe meet at a later point.
+
+[46:37] Pablo: Um, but, but it's very interesting because they, they arrive to many of the same problems, but as you say, they identify the right problem, and they arrive to a completely wrong solution. One of them, um, is working on identity. How do you solve identity?
+
+[46:54] Gigi: Local first.
+
+[46:55] Pablo: Uh, not, not just local first, but within the, the realm of you own your data because your data is stored locally, and you can always access it, and no one can take it from you because it's literally sitting on your hard drive. Um, how can you go around the different applications and do the login with Google or login with Facebook? And-
+
+[47:19] Gigi: Using your local identity solution
+
+[47:20] Pablo: ... us- using your local identity, and it, it, it is the right, uh, it, it is the right, uh, problem to, to-
+
+[47:27] Gigi: It's the right question to ask, right? Yeah.
+
+[47:28] Pablo: It's the right question, 100%.
+
+[47:30] Gigi: Yeah. Yeah.
+
+[47:30] Pablo: The solution is, well, passkey. [laughs]
+
+[47:35] Gigi: Okay.
+
+[47:36] Pablo: Let's just use, let's just have... So they arrive at the solution of, well, we need public/private key cryptography, so we'll go in this direction.
+
+[47:45] Gigi: Yeah. Been there.
+
+[47:45] Pablo: Perfect. Awesome.
+
+[47:46] Gigi: Yeah.
+
+[47:46] Pablo: Yes. But if passkey is what's giving your, your identity, your, your public key-
+
+[47:52] Gigi: Yeah
+
+[47:52] Pablo: ... first, you, you cannot actually access the private key. [laughs]
+
+[47:55] Gigi: Yeah.
+
+[47:56] Pablo: Uh, you cannot take your p- your private key, um, with you to a different, uh, to a different system.
+
+[48:03] Gigi: Yeah.
+
+[48:03] Pablo: It's, it's Apple, you know?
+
+[48:04] Gigi: Yeah.
+
+[48:04] Pablo: So it's constrained to the Apple ecosystem or to the Google ecosystem or to whatever. So you are still downstream from-
+
+[48:11] Gigi: Yeah
+
+[48:11] Pablo: ... the Google. Yes, it's beautiful. You just put your tou- your, your, your finger, it scans your touch ID, and it's just boom, it just works. But what's the trade-off? Like, the trade-off to me is unacceptable.
+
+[48:23] Gigi: Yeah.
+
+[48:23] Pablo: Um, where, where Apple can just deplatform you from your local first software. [laughs]
+
+[48:30] Gigi: Yeah, yeah. Yeah.
+
+[48:31] Pablo: But it's, it's all the right, it's all the right, uh, questions, all the wrong answers, and, and I keep thinking these people, they, they, they have a very, uh, like, the, the local first community, as most communities, they hate Bitcoin. [laughs]
+
+[48:48] Gigi: Oh, everyone hates Bitcoin. That's fine. That's just a g- that's the default.
+
+[48:52] Pablo: Yeah, we go, "Oh, man, it's so inefficient." [laughs]
+
+[48:54] Gigi: Oh, sure, yeah. No, there, yeah.
+
+[48:55] Pablo: But, but, but w- given, uh, within the, um, the it's so inefficient- Look how trivial the problem looks from the outside that the HTTP spec people thought, "Oh, let's just put like a 402 error."
+
+[49:10] Gigi: Yeah.
+
+[49:10] Pablo: "We- we'll figure it out next week." [laughs]
+
+[49:12] Gigi: Yeah.
+
+[49:12] Pablo: "We'll figure out-
+
+[49:12] Gigi: Yeah, we'll figure out the payments-
+
+[49:14] Pablo: ... payments." [laughs]
+
+[49:14] Gigi: ... next week. Yeah. Yeah.
+
+[49:16] Pablo: It's, it's such a... It's, it, it looks like a such a simple problem.
+
+[49:19] Gigi: Yeah.
+
+[49:20] Pablo: And it's so hard.
+
+[49:21] Gigi: Yeah.
+
+[49:21] Pablo: It's so hard. We-
+
+[49:21] Gigi: It is a simple problem.
+
+[49:22] Pablo: [laughs]
+
+[49:22] Gigi: It is a very simple problem.
+
+[49:23] Pablo: [laughs]
+
+[49:24] Gigi: But simple problems don't always have simple solutions.
+
+[49:26] Pablo: Yeah.
+
+[49:26] Gigi: That's the issue. It's-
+
+[49:27] Pablo: Yeah, it requires building, like, these-
+
+[49:29] Gigi: Yeah
+
+[49:29] Pablo: ... mining sites and this whole infrastructure-
+
+[49:32] Gigi: Yeah
+
+[49:32] Pablo: ... in the world-
+
+[49:33] Gigi: Yeah
+
+[49:33] Pablo: ... that has a, a, a very significant, uh, cost.
+
+[49:37] Gigi: Yeah.
+
+[49:37] Pablo: But it, it is the only way.
+
+[49:39] Gigi: It's the only way.
+
+[49:40] Pablo: And from the outside, it might look like, "Oh, why don't you just use Passkey? It's an API call. It's just there."
+
+[49:47] Gigi: Yeah.
+
+[49:47] Pablo: "Why are you building all these weird apps and all this stuff? Like, just use Passkey."
+
+[49:53] Gigi: Yeah.
+
+[49:53] Pablo: "It's so simple."
+
+[49:54] Gigi: But I, I really like the local-first idea. I had no idea that this is-
+
+[49:57] Pablo: Oh, it's phenomenal
+
+[49:58] Gigi: ... an actual, uh, yeah
+
+[49:58] Pablo: Oh, no, no, it's great.
+
+[49:59] Gigi: So-
+
+[49:59] Pablo: But they also arrive at the same problems of, okay, and how do you sync the data? Okay, but what if, what if you are on device A?
+
+[50:06] Gigi: What if you have, like, three different devices and-
+
+[50:08] Pablo: Yeah. Okay, well-
+
+[50:08] Gigi: Yeah, absolutely
+
+[50:08] Pablo: ... let's put a server. Oh, but-
+
+[50:10] Gigi: Yeah
+
+[50:10] Pablo: ... what if the server goes down?
+
+[50:11] Gigi: Yeah, it's, it's an actually a really hard problem. Yeah.
+
+[50:13] Pablo: It, it is a hard problem.
+
+[50:14] Gigi: Yeah.
+
+[50:14] Pablo: Yeah.
+
+[50:14] Gigi: And, and it's impossible to solve without conflicts. Everyone who ever worked with Git knows this.
+
+[50:19] Pablo: Yeah. [laughs]
+
+[50:19] Gigi: It's like, it's, it's... You know, i- if you actually... Le- let's say you have three or four devices and you travel around, and you forgot to switch your phone, like, back, uh, uh, like deactivate the flight mode again, and then you sit down on your computer. I run into this problem all the time-
+
+[50:34] Pablo: Yeah
+
+[50:34] Gigi: ... because I actually use systems like this-
+
+[50:36] Pablo: Yeah
+
+[50:37] Gigi: ... and in my note-taking apps and so on, and I will have conflicts that I need to resolve.
+
+[50:41] Pablo: Oh, of course.
+
+[50:41] Gigi: Because I updated it on the other machine, and I updated another thing on the other machine. Both of them were offline.
+
+[50:46] Pablo: What's the state?
+
+[50:46] Gigi: And then what's the state? There is no global state.
+
+[50:49] Pablo: [laughs]
+
+[50:49] Gigi: There is, like, there can't be.
+
+[50:50] Pablo: Not even within your own note-taking app. [laughs]
+
+[50:52] Gigi: Not even within me.
+
+[50:53] Pablo: [laughs]
+
+[50:53] Gigi: Like, it doesn't work.
+
+[50:55] Pablo: [laughs]
+
+[50:56] Gigi: But, but that's... I think that's the right way. Like, um, Rabble tried to came up with a list of criteria for, like, what makes a social network protocol open and so on. I think we need something like that for Nostr stuff.
+
+[51:08] Pablo: Hm.
+
+[51:08] Gigi: And it's like, it, that's one criteria. It has to work in flight mode.
+
+[51:13] Pablo: Yeah, 100%.
+
+[51:13] Gigi: If it works, if it doesn't work in flight mode, if it doesn't work... If, if, if it do- I have a relay on my phone, and I should be able to switch it to flight mode, and everything just kinda still works. And I say just kinda, you know? Like, not absolutely everything can work, but still, it, it has to-
+
+[51:29] Pablo: A, a, a lot can work
+
+[51:30] Gigi: ... a lot can work. Way more than you would think.
+
+[51:32] Pablo: A lot can work.
+
+[51:32] Gigi: Yeah.
+
+[51:32] Pablo: Yeah. A lot can work.
+
+[51:33] Gigi: And it, I think it's the right approach. I think it's, it's, it's a fantastic... I really, I love the local-first thing.
+
+[51:39] Pablo: [laughs]
+
+[51:39] Gigi: So see, I learned something. Man, that's fantastic.
+
+[51:41] Pablo: [laughs]
+
+[51:41] Gigi: It's already working. See? See what can happen in, like, a, in a conversation, in a dialogue?
+
+[51:45] Pablo: [laughs]
+
+[51:46] Gigi: You, you usually learn things, and you figure stuff out along the way.
+
+[51:49] Pablo: [laughs]
+
+[51:50] Gigi: So that's the idea. No, but, but I, I... Again, it's, the local-first, it... Because I, I, in my head, I already tried to, to kind of make this list, and I think, uh, uh, Hoddle Bot gave it a try as well, right? Like, doing a, a list of-
+
+[52:05] Pablo: Yeah
+
+[52:05] Gigi: ... what makes a Nostr app a Nostr app-
+
+[52:06] Pablo: What is a Nostr app anyway?
+
+[52:08] Gigi: ... and those kind of things. And, and, and, uh, I mean, I think we obviously still suck at all those things, but I hope that in a year from now we'll have something-
+
+[52:17] Pablo: Yeah
+
+[52:18] Gigi: ... where we can actually take a quick look at something and immediately go, "Yeah, that's, that's wrong." That's like w- it says-
+
+[52:25] Pablo: Yeah, that's-
+
+[52:25] Gigi: You know
+
+[52:25] Pablo: ... that's within this category of error.
+
+[52:27] Gigi: [laughs] Yeah. And I think that would be super useful because, again, I think the, uh, like, everyone who worked on Nostr so far, we figured out a, a couple of things, and I think we have to get a little bit better at passing that on and explaining it to just regular developers. I don't, I don't even care about the users that much, so to speak, because it's like the users, this stuff will be figured out. The developer s- side is, I think, harder to figure out because I don't want... I'm still worried that if we... There's still a chance that Nostr kind of goes bad in some sense, I think. And-
+
+[53:06] Pablo: Yeah, I, I, I, I tend to agree.
+
+[53:08] Gigi: I-
+
+[53:08] Pablo: I think we're in better footing than we were-
+
+[53:11] Gigi: Oh, yeah
+
+[53:11] Pablo: ... a year ago
+
+[53:11] Gigi: You were insanely stressed out a year ago.
+
+[53:13] Pablo: [laughs] Yes.
+
+[53:14] Gigi: [laughs]
+
+[53:14] Pablo: I very much was.
+
+[53:15] Gigi: I agree. I agree. I think, I think we are-
+
+[53:17] Pablo: Should we turn around?
+
+[53:18] Gigi: Yeah, let's do... But we can also, we can, we can, we can-
+
+[53:22] Pablo: Go through the tunnel?
+
+[53:22] Gigi: ... go through the pain once more.
+
+[53:24] Pablo: [laughs]
+
+[53:24] Gigi: It's not an issue.
+
+[53:24] Pablo: [laughs]
+
+[53:25] Gigi: But let's do, let's do one ring around the rosy, and then let's see where we're at. That might, that, it's probably very confusing for people as well.
+
+[53:34] Pablo: [laughs]
+
+[53:34] Gigi: Like, we're sometimes talking about the Nostr things. We're mostly talking about Bitcoin.
+
+[53:37] Pablo: [laughs]
+
+[53:37] Gigi: But then we're also talking about how to best keep walking without running into things-
+
+[53:41] Pablo: [laughs]
+
+[53:42] Gigi: ... or running into too many other people. But yeah, that, that's kind of my hope for the whole project and having these conversations and so on, that, that hopefully we land on some, on some things where we, not only, not only figure out these criteria, but also refine the message. Why, why is it important? Like, why-
+
+[54:02] Pablo: Hm
+
+[54:02] Gigi: ... should you care about it? Why do you wanna build on it, for example? And, and I, I, I think it has to be, it has to be wound up with the money and the money-making.
+
+[54:12] Pablo: Oh, yeah.
+
+[54:12] Gigi: It's like-
+
+[54:12] Pablo: Yeah, absolutely
+
+[54:13] Gigi: ... it's, it's, because that's, it's such a novel thing as well that you can... You c- you will receive sats. Like, if you do your thing right-
+
+[54:21] Pablo: [laughs]
+
+[54:21] Gigi: ... you will receive sats from the get-go. It's not gonna be a lot, but still, having the possibility of having money flowing in and flowing through the system from second one, basically.
+
+[54:31] Pablo: [laughs]
+
+[54:32] Gigi: I mean, s- we pushed out, uh, this in a, in a, like, the first conversation that we had, and also even the teaser. The teaser made money.
+
+[54:39] Pablo: [laughs]
+
+[54:40] Gigi: It was like 100 sats or something. I don't know. But, uh, but it's not nothing, you know? And we, we, we put very little effort into marketing or refining-
+
+[54:49] Pablo: CK, well, we didn't market, like, at all.
+
+[54:50] Gigi: [laughs]
+
+[54:51] Pablo: CK would say that's more than generational wealth. [laughs]
+
+[54:54] Gigi: Yes, absolutely. Yeah. [laughs] If you disagree, you're not bullish enough.
+
+[54:58] Pablo: [laughs]
+
+[54:59] Gigi: But yeah, I don't know. I, I hope- I hope that we can figure this out because I really think-
+
+[55:05] Pablo: I, I, I'm-
+
+[55:05] Gigi: ... Nostr is one of the-
+
+[55:06] Pablo: I'm absolutely sure that, that we will. What, so when, when-
+
+[55:08] Gigi: I'm surprised that not more developers are flocking to it because I think-
+
+[55:11] Pablo: Mm. Yeah, me too
+
+[55:12] Gigi: ... I think, I think it's one of the most exciting things that's happening right now-
+
+[55:15] Pablo: Mm
+
+[55:15] Gigi: ... in the kind of internet development space.
+
+[55:17] Pablo: Yeah.
+
+[55:17] Gigi: And most people are completely unaware. I think it's mostly bec- our own fault because everyone hates Bitcoiners, and [laughs] it's just the-
+
+[55:24] Pablo: That, that is very likely the case. Um, [laughs] also o- I mean, one of the things that keeps coming up is people join Nostr, and they get 20 different people saying, "I tried to sub you. [laughs] I couldn't sub you."
+
+[55:42] Gigi: Oh, yeah, yeah, yeah.
+
+[55:43] Pablo: "Download this thing."
+
+[55:44] Gigi: Yeah, yeah.
+
+[55:44] Pablo: And it's like, okay, I was here for, like, a minute, and now I have-
+
+[55:47] Gigi: And everyone... Yeah, yeah. [laughs]
+
+[55:48] Pablo: [laughs] I have like six hours worth.
+
+[55:50] Gigi: Yeah.
+
+[55:50] Pablo: You have to watch this video-
+
+[55:51] Gigi: Yeah
+
+[55:51] Pablo: ... and you have to sub these things.
+
+[55:53] Gigi: Yeah.
+
+[55:53] Pablo: What?
+
+[55:53] Gigi: No, that's true. Yeah.
+
+[55:55] Pablo: [laughs]
+
+[55:55] Gigi: But, you know, NATSapp f- fixes this, so.
+
+[55:57] Pablo: Yeah, yeah, yeah. The, uh-
+
+[55:58] Gigi: They, they, they won't be able to really spend it except for, you know, pass it on.
+
+[56:02] Pablo: You, you c- you can pa- you can pay la- Lightning at, uh, invoices.
+
+[56:05] Gigi: [laughs]
+
+[56:05] Pablo: So you could go to the Mythical coffee shop and, and buy a coffee.
+
+[56:09] Gigi: Oh, yeah, yeah. It, uh, uh... [laughs] But again, regular users.
+
+[56:12] Pablo: [laughs] But, um, but that's the thing. I, so the reason I started working on, on the NATSapp stuff is that, um, I was looking very hard at how Substack works, how they do onboarding. And within the onboarding flow of, of, uh, an author trying to write something on, on Substack and make some money, the moment you say that you want to get paid, they, they take you in a very beautiful, uh, design. They take you to this KYC process with Stripe. So they hand you off to Stripe, and Stripe is doing the KYC for them, and then you have to link it and, and whatnot. The, the, the U- the UX is as good as it can get when you bake in the assumption of KYC-ing the person.
+
+[57:04] Gigi: Yeah. Yeah, yeah, yeah.
+
+[57:05] Pablo: [laughs]
+
+[57:05] Gigi: Yeah.
+
+[57:06] Pablo: Once you have to scan your face and take-
+
+[57:08] Gigi: Yeah
+
+[57:08] Pablo: ... a picture of your proof of address and your passport and whatnot-
+
+[57:11] Gigi: Yeah
+
+[57:12] Pablo: ... there, you can't have, like, a really [laughs] good UX because it fucking sucks.
+
+[57:16] Gigi: Yeah.
+
+[57:17] Pablo: [laughs] Um, and it's still very, very raw. It's still very, um, early stages, but the fact that you can go and have a Substack equivalent or have a, a whatever equivalent and not have to go through that, you can go to Shopstr and sell shit without having to KYC you with, with Stripe, that is a massive deal.
+
+[57:42] Gigi: Oh, absolutely.
+
+[57:42] Pablo: That is a massive, massive deal.
+
+[57:44] Gigi: Absolutely.
+
+[57:45] Pablo: And I think developers might not... Yeah, developers might not understand the, the identity piece and why, like, all these parts are so... Why is all this shit required? Why do we have to find announcements on Bitcoin? Why, like-
+
+[58:05] Gigi: Yeah
+
+[58:05] Pablo: ... why, why is the mining, um... They won't have to understand those th- those things.
+
+[58:11] Gigi: Yeah, yeah. No, no. Not at all. I mean-
+
+[58:11] Pablo: But the sales pitch of you can, you can have your users selling their shit immediately-
+
+[58:16] Gigi: Yeah
+
+[58:17] Pablo: ... that i- that is a very easy narrative to understand.
+
+[58:19] Gigi: Yeah. No, and that, that's what I also mean. Like, in the end, like, given enough improvements on all those kind of things, it will be better and easier, just like Bitcoin is better and easier than the legacy f- fiat banking system. Like, try to do an international wire with any bank. It's like, it's hell. It's, it's-
+
+[58:34] Pablo: [laughs]
+
+[58:35] Gigi: You're, you're, you're in the, in the fifth circle of hell.
+
+[58:37] Pablo: [laughs]
+
+[58:37] Gigi: Like, it doesn't matter how you cut it. And also, when it comes to the bigger platforms, um, if you do account creation, for example, that's already so cumbersome. On Nostr, it's a click.
+
+[58:48] Pablo: Yeah.
+
+[58:48] Gigi: It's, uh, one click, and you have an account. And, and if we do our-
+
+[58:51] Pablo: No email verification.
+
+[58:52] Gigi: Nothing. Nothing.
+
+[58:53] Pablo: It's-
+
+[58:53] Gigi: You, and you don't have to... Because on, on many things that I use, like, like, they wanna know everything about you. Like, and I, I'm always going like, "Why? Why do you need to know this?"
+
+[59:01] Pablo: [laughs]
+
+[59:01] Gigi: "Why do you need my first name and my middle name and my last name and my birth date and my, you know, like, my blood type and my-
+
+[59:08] Pablo: [laughs]
+
+[59:08] Gigi: ... my, my country and my location and, like, all those kind of things? And why, why, why?" I mean, I know why, but it's still, it's still very much stupid. It's like it's, it's, it... I just wanted to try out, like, a to-do note-making app. It's like, "Please, don't, don't- [laughs]
+
+[59:23] Pablo: [laughs]
+
+[59:23] Gigi: ... like, just, just let me try the thing. Just let, let me in." [laughs]
+
+[59:27] Pablo: [laughs]
+
+[59:27] Gigi: "I promise. I'm not a terrorist. I promise." You know? [laughs] And so, uh, I don't know. And so, so-
+
+[59:32] Pablo: Yeah, I was, I was getting, uh... A few months ago, I was getting KYC'd by this, uh, company. They, and one of the questions that, that they asked me, I, I bailed, but [laughs] one of the questions that they asked me is, "How much money do you have?" [laughs] It's like-
+
+[59:46] Gigi: Oh
+
+[59:46] Pablo: ... fuck you. Like-
+
+[59:47] Gigi: I don't know.
+
+[59:47] Pablo: Wha- how is that a... [laughs] Imagine, imagine if you download Sparrow, [laughs] and Craig says-
+
+[59:53] Gigi: Yeah
+
+[59:53] Pablo: ... "Okay."
+
+[59:53] Gigi: Yeah.
+
+[59:54] Pablo: "How much money do you have? I need to report it." [laughs]
+
+[59:56] Gigi: I, I, I, I need to know, oth- otherwise you can't use my software.
+
+[59:59] Pablo: [laughs]
+
+[1:00:00] Gigi: No, I think that's what, that's where we can really shine. I think that's where, where Nostr can really shine. Like, literally everything can be one click, and I think this, it's still, it's still very much underutilized-
+
+[1:00:08] Pablo: Mm
+
+[1:00:09] Gigi: ... because, and I, and I think because we are so wedded to the old way of doing things. Like, every single Nostr client should have a one-click onboarding thing-
+
+[1:00:17] Pablo: Yeah
+
+[1:00:17] Gigi: ... where you just, like, create a new account to try it out. It's like, why not? It's like, uh, uh, NSAPs are free.
+
+[1:00:23] Pablo: [laughs]
+
+[1:00:24] Gigi: It's, uh, there's, there's, like, there's infinity of them.
+
+[1:00:26] Pablo: [laughs]
+
+[1:00:26] Gigi: Just let me... Like, I, I don't w- even wanna have to do it myself. Like, just, like, bam, do it. I, I don't care about losing it. Like, who cares?
+
+[1:00:33] Pablo: [laughs]
+
+[1:00:33] Gigi: You know? All those kind of things.
+
+[1:00:34] Pablo: There's nothing in there. Why would I care?
+
+[1:00:36] Gigi: Yeah, yeah. [laughs] Exactly.
+
+[1:00:37] Pablo: It, i- to me, when, when I install a, a, a Bitcoin, a Bitcoin wallet, and it tells you, it forces you to verify your voice-
+
+[1:00:43] Gigi: Oh, yeah, yeah
+
+[1:00:45] Pablo: ... like-
+
+[1:00:45] Gigi: Yeah. There's nothing in there
+
+[1:00:45] Pablo: ... there's literally zero money-
+
+[1:00:46] Gigi: I mean-
+
+[1:00:46] Pablo: ... because I haven't been able to use the fucking app.
+
+[1:00:48] Gigi: [laughs]
+
+[1:00:48] Pablo: Like, why are you making me? [laughs]
+
+[1:00:49] Gigi: But again, trade-offs. Trade-offs. It's like, so many people lost Bitcoin, so-
+
+[1:00:53] Pablo: [laughs]
+
+[1:00:53] Gigi: ... so, okay, fine. But still, I, I, I... That's one of the things I th- we, we, we haven't tried all these things out enough.
+
+[1:01:02] Pablo: Mm.
+
+[1:01:02] Gigi: Like, most people that are currently on Nostr, what, what, what would, what would be your guess- How, how many percent of people using Nostr know that you can paste an NPUP into p- pretty much any client and see the Nostrverse through the eyes of, I don't know, you know, like Pablo or Jack or what have you? How many people know that you can do that?
+
+[1:01:23] Pablo: Um, I, I, I would think it's gotta be half.
+
+[1:01:28] Gigi: Y- wow. Whoa, man. You are-
+
+[1:01:29] Pablo: It, it's so-
+
+[1:01:30] Gigi: You are, you are... I would've said less than 1%
+
+[1:01:32] Pablo: ... in such a fucking bubble, right? [laughs]
+
+[1:01:33] Gigi: Less than 1%.
+
+[1:01:34] Pablo: Really?
+
+[1:01:34] Gigi: Yeah. No one knows this. M- most clients don't advertise this or show this or whatever. Show me a couple profiles. When I open the thing and I wanna click on it and I wanna see it, I wanna use your NPUP to log in or whatever, to just check it out. Y- we, we, we, we don't do those kind of things.
+
+[1:01:53] Pablo: [laughs]
+
+[1:01:53] Gigi: And it's all possible, because it was all impossible in the old system.
+
+[1:01:56] Pablo: Right. Yeah, yeah, yeah.
+
+[1:01:56] Gigi: It was completely impossible to do stuff like that in the old system, and we're still so wedded to the old way of thinking and the old system.
+
+[1:02:03] Pablo: And, and also in, in the old system, the old system has your private da- your private data unencrypted.
+
+[1:02:10] Gigi: Sure.
+
+[1:02:10] Pablo: So in the old system, logging with someone else's account-
+
+[1:02:14] Gigi: Would be very weird
+
+[1:02:15] Pablo: ... and you can't... It, it not only could be very weird, from, from an, from a developer perspective, you gotta be fucking sure you're not leaking the DMs.
+
+[1:02:23] Gigi: Oh, yeah, sure.
+
+[1:02:24] Pablo: Because you, you can.
+
+[1:02:24] Gigi: Yeah.
+
+[1:02:25] Pablo: You can.
+
+[1:02:25] Gigi: Yeah.
+
+[1:02:26] Pablo: In Nostr, y- you don't have the private key, so you cannot decrypt.
+
+[1:02:29] Gigi: Yeah, exactly.
+
+[1:02:29] Pablo: You can only see the public data.
+
+[1:02:31] Gigi: The, uh, the stuff that's public anyway. But it looks and feels as if you were doing the thing.
+
+[1:02:34] Pablo: Yeah.
+
+[1:02:34] Gigi: You can't interact, but you can... It feels like I'm looking over your shoulder, basically.
+
+[1:02:38] Pablo: [laughs]
+
+[1:02:38] Gigi: That's what I can do in some sense.
+
+[1:02:39] Pablo: [laughs]
+
+[1:02:40] Gigi: It's... Uh, but, but w- I, I don't know. I f- I feel like we're in a new paradigm, and we haven't even done the new paradigm things yet enough.
+
+[1:02:49] Pablo: [laughs]
+
+[1:02:49] Gigi: And I think it, it is because people don't really understand it well enough yet in some sense. I don't know. It sh- it should be the default. Having, having an nsec for just, like, a day or something, it should be the default.
+
+[1:02:58] Pablo: Yeah, yeah. Absolutely.
+
+[1:02:59] Gigi: I think there's very few clients that, that implemented this. I think Amethyst did as, like, replying as a NIM, basically-
+
+[1:03:04] Pablo: Hmm
+
+[1:03:04] Gigi: ... where you just, you spin up a new NPUP just for this reply. That's fantastic.
+
+[1:03:10] Pablo: Yeah.
+
+[1:03:10] Gigi: Stuff like that is fantastic. Like, we should, we should have way more of, of, of these kind of, you know, experimentations and th- and really leaning into the new paradigm. But, but then first of all, we'll have to understand what is the new paradigm, basically. And I think, again, like, local-first is part of this. Like, the, it, it's a new paradigm that your thing works whether you're online or not. It's a completely new paradigm that's unheard of in, like, a client-server architecture, like, old way of thinking.
+
+[1:03:41] Pablo: Yeah. In, um, in the, uh... Based on the, the, the way the local-first community people speak, I, I wrote the documenta- uh, a local-first documentation for NDK, and it's a guide on building local-first apps within, within NDK because I... To me, like, the idea of I click the whatever, a reaction or make a comment-
+
+[1:04:04] Gigi: Yeah
+
+[1:04:04] Pablo: ... or something.
+
+[1:04:04] Gigi: Yeah.
+
+[1:04:04] Pablo: And, and it just works.
+
+[1:04:05] Gigi: Yeah.
+
+[1:04:06] Pablo: It, it doesn't... It d- because the data is already signed.
+
+[1:04:08] Gigi: Yes.
+
+[1:04:09] Pablo: So, so I know it worked.
+
+[1:04:10] Gigi: Once the device goes online, and it will-
+
+[1:04:11] Pablo: Yeah. The, the device goes o- so-
+
+[1:04:12] Gigi: ... yeah
+
+[1:04:12] Pablo: ... whether it published to the relays or it didn't yet, it's kind of secondary.
+
+[1:04:18] Gigi: Yeah.
+
+[1:04:18] Pablo: So it should be reflected in the app immediately.
+
+[1:04:21] Gigi: Yeah, absolutely. Absolutely. No, it's the right way of, of thinking about it. So let's end with an echo and-
+
+[1:04:27] Pablo: [laughs]
+
+[1:04:27] Gigi: ... then we're done with it.
+
+[1:04:29] Pablo: And someone yelling in the tunnel?
+
+[1:04:30] Gigi: We'll see. We'll, we'll... Oh, that was just a, just a sound check.
+
+[1:04:35] Pablo: Just, just an echo test. [laughs]
+
+[1:04:37] Gigi: Sound, sound check by some random guy. Yeah. I feel like my brain is fried again anyway, so I'll have to... Uh, I don't, I don't have anything-
+
+[1:04:47] Pablo: Insightful? [laughs]
+
+[1:04:48] Gigi: ... yeah, useful to say anymore. Not, not that I said a lot of useful things. [laughs] But-
+
+[1:04:54] Pablo: Oh, you always do
+
+[1:04:54] Gigi: ... no, I really like that. The, the, the combination of there being no global and building stuff in a way that it works in an offline mode, that it works local-first, that's already, you know... Like, everyone should [laughs] know that this is how things work in the Nostr world, basically, and I feel like we're not there yet.
+
+[1:05:18] Pablo: No, no, not at all. Not at all.
+
+[1:05:20] Gigi: Most people, most people still try to make a global view work, and most people have never tested their own app in flight mode, for example.
+
+[1:05:28] Pablo: Yeah.
+
+[1:05:29] Gigi: So.
+
+[1:05:29] Pablo: And, and, and, and the, the idea of building this global view is one... Like, I've seen many peo-... We've, we've seen many, many, many people attempt that, and it's, it's such an, an endless pursuit. Um, and the complex- the complexity just explodes.
+
+[1:05:49] Gigi: Oh, absolutely.
+
+[1:05:50] Pablo: And it will never stop exploding either. [laughs]
+
+[1:05:53] Gigi: No. The, the, the deeper you dig into the problem, the worse it gets. It's... I... That's, that's what I have the feeling with a lot of the... still in the, the Shitcoin world and the proof of stake people and so, and so on. They don't even know how hard it is, how hard the problem is that they're trying to solve.
+
+[1:06:09] Pablo: Hmm.
+
+[1:06:09] Gigi: They don't know.
+
+[1:06:10] Pablo: Yeah.
+
+[1:06:10] Gigi: And they try, and they try, and they try, and all their attempts are misguided, and they don't even understand how... They don't even understand the impossibility of the problem that they are trying to solve. And I've seen this so many times now, where new people come in and they wanna build something, and they wanna make a global view happen. And, and I think that's something where we just have to get better at explaining to people-
+
+[1:06:32] Pablo: Yeah. So, so-
+
+[1:06:32] Gigi: ... that you have to be okay with there being no global.
+
+[1:06:35] Pablo: So let's, uh, let's try to, to identify a bit more, ne- or narrow down the problem.
+
+[1:06:39] Gigi: Let's stop walking before I completely lose my breath.
+
+[1:06:41] Pablo: [laughs] Um, uh, uh, how... Because we've seen many people just personally working on these type of assurances and these type of views and not real- realizing, not feeling, even though we've yelled [laughs] so many times.
+
+[1:06:57] Gigi: Literally yelled.
+
+[1:06:58] Pablo: Literally yelled so many times. What, what do you think is the, um, is the holdup? What... Why, why are these people that are smart and capable- Why do you think we are not getting through?
+
+[1:07:14] Gigi: I think it's, it's incredibly hard and also painful to deprogram yourself.
+
+[1:07:19] Pablo: Mm.
+
+[1:07:19] Gigi: And it's like you, you, you grew up with this stuff, and it always worked like this, and you always had a server that tell, told you the truth and nothing but the truth and the whole truth.
+
+[1:07:27] Pablo: [laughs]
+
+[1:07:27] Gigi: And if you don't, if you don't have that, then you... It's very hard to accept that, that you don't have that, I think. I think that's the, that's the main issue. Uh, to pick another example, um, that we ran into often, it's like the main way of, of making money, um, online basically or b- building out such apps and systems and so on is, um, to either capture your users, which... Or introduce yourself as a middleman, and capturing your users is just like you are the middleman, you are the thing, and so on. And so people default to those kind of things. Most developers that are new to Nostr and, and, and wanna do something and, and, uh, potentially eventually also make money, they, they really try hard to capture the users in some way, and because that's what they learned, that's what they know, that's what everyone taught them up to now. And in, in sense of y- adding yourself as a middleman, it's the same thing. Like, they try to s- to insert themselves. Like, it only works if you use this client. It only works if you do it like this. And then they take like a whatever percentage cut and so on. And that's, that... I- I think that's the old business model. I think there is a, there is another way of doing things, and a, a more honest way of doing thing, um, things, a more long-lived way of doing things. I think Robosats, it's, it's the first innovation that I saw in, in that sort, of monetizing open source software in a, I think, very honest way. It's where they, the coordinators can decide to give back parts of their profit to Robosats open source development, and they advertise that. And they adver- advertise it, and it's part of their, um... Like, they have a reputation. They have various ratings and all those kind of things. They, they advertise the liquidity and all those kind of things, and, and that's part of that. And so I personally am not gonna choose a coordinator that has this put to 0%.
+
+[1:09:16] Pablo: Hmm.
+
+[1:09:16] Gigi: I wanna support the whole system and the whole thing. And so, uh, the... And I think most people are not a- assholes actually. I think most people are... A meaningful percentage of people will choose to select someone that actually gives back to the whole system and gives back to open source development and makes the whole thing work and so on. And, and, and that's a, that's a very new idea, I think. And, and you can do it in a way... Like, you, you can do it in a way s- so that it's automated and transparent and verifiable and all those kind of things, and we can do that now. We can... A- and I feel the whole, this whole space is very unex- unexplored yet. Most people haven't tried something like that. Most people are still stuck in the old paradigm, which is like, "I'm gonna be the middleman, and I'm gonna facilitate the things, and I'm gonna take like a 4% cut," or whatever. I don't know. I don't have a better answer. I, uh-
+
+[1:10:05] Pablo: Uh, to, to me, the, the, the question about the, the money and the becoming the, the central point so you can take your cut, that, that is a much clearer reason why you wanna be there because there is a profit motive. There is an incentive to be there because you wanna take your, the, you wanna take the money. The, the global view people, that I have a harder time-
+
+[1:10:27] Gigi: How should we call them? Globalists?
+
+[1:10:28] Pablo: [laughs]
+
+[1:10:32] Gigi: [laughs]
+
+[1:10:33] Pablo: The Websters.
+
+[1:10:34] Gigi: [laughs] Oh, you're a globalist. I understand. I, I don't need to talk to you anymore.
+
+[1:10:38] Pablo: [laughs]
+
+[1:10:38] Gigi: You're a globalist. I, I'm not interested. [laughs]
+
+[1:10:44] Pablo: Yeah. The glo- the globalist perspective, I, I have a harder time understanding because you're not gonna make money because you are trying to solve the data assurance of all the data in Nostr or naming or-
+
+[1:11:00] Gigi: I mean, it, it, in their defense, it kind of, stuff kind of feels like there is a global truth, right? Like, if you-
+
+[1:11:08] Pablo: Yeah
+
+[1:11:08] Gigi: ... your everyday experience and all those kind of things tells you that there is a global shared view of things and there is a global truth and there is, like, one truth. Like, how many beans are in the jar? Like, there is a, there is a definitive answer.
+
+[1:11:21] Pablo: Mm.
+
+[1:11:22] Gigi: And-
+
+[1:11:22] Pablo: I, I don't know what happened in your house this morning.
+
+[1:11:25] Gigi: [laughs]
+
+[1:11:25] Pablo: I cannot have a view of what happened in Tokyo-
+
+[1:11:29] Gigi: [laughs]
+
+[1:11:29] Pablo: ... an hour ago. Like... [laughs]
+
+[1:11:31] Gigi: Yeah, sure, but I, I think people have a hard time wrapping their head around the fact that, um, in, in a global system, which by default is a distributed system... Like, YouTube is a distributed system. Let's stick with YouTube because everyone kinda knows YouTube, knows how it works, knows how the interface looks like and so on. The like count is a complete lie, and it has to be. And you c- you can also tell, if a, if a y- if a YouTube video ever goes viral, the like count will stop at like 137 or something.
+
+[1:11:58] Pablo: [laughs]
+
+[1:11:58] Gigi: Because that's when they start to actually start counting the likes, and they have to reconcile between the different geographically distributed servers that they have. And so there is not one server that has the number. It, it can't have it because the YouTube video in Germany is gonna be served from a German server. If someone else in Japan looks at it, it's gonna be a Japanese server and so on, and they have to reconcile. And while they are reconciling, and that's just speed of light physics stuff-
+
+[1:12:22] Pablo: Mm-hmm
+
+[1:12:22] Gigi: ... like a million other people have seen the video a- again. So, so, so the, it's not off by a little.
+
+[1:12:28] Pablo: [laughs]
+
+[1:12:28] Gigi: It's like if a, if a video really goes viral, it's, it's not off by a little. It's not off by two or three views. It's off by thousands and millions of views. It's like it's insane how, how hard this problem is. Also, you know, like what counts for a view and all those kind of things. And so, so, so I, I, I think people, most of the globalists just haven't talked about or [laughs] thought about... I love it already.
+
+[1:12:48] Pablo: [laughs]
+
+[1:12:48] Gigi: They, they haven't thought about, uh, the problem at hand deeply enough, I think.
+
+[1:12:54] Pablo: Mm.
+
+[1:12:54] Gigi: They never thought about it. It's just like, "Oh, that's the like count." And again, the server says that's the like count, so that's the like count. They never considered that this could be a lie. It has to be a lie. It has to be a lie, basically, you know? Like, what's the global state of the internet?
+
+[1:13:07] Pablo: [laughs]
+
+[1:13:09] Gigi: And everyone knows, like, what Google has indexed is not the global state of the internet. It's not. It's, it's a very small sliver of the internet. You cannot have a global state of the internet. You can't. You literally can't. It's physically impossible. And so, so-
+
+[1:13:22] Pablo: That-
+
+[1:13:23] Gigi: I don't know. It, I, I think it comes from a place of both ignorance and also trying to have a nice and easy solution.
+
+[1:13:32] Pablo: Mm.
+
+[1:13:32] Gigi: Because actually not having a global state, like, like real- the realization that global is a lie, it's a hard realization.
+
+[1:13:40] Pablo: Yeah.
+
+[1:13:41] Gigi: It makes... It's harder to build stuff that way. It's like you, you, you have to just be okay with it. And, and, uh, I, I think it's hard to confront that and, and build stuff accordingly.
+
+[1:13:53] Pablo: Yeah, I, I think it, it, it's hard to accept. It, it's a good, uh, it's a good explanation be- because it forces you to just accept the discomfort of not having a perfect answer, and that there can't be.
+
+[1:14:07] Gigi: Yeah. Having, having a global-
+
+[1:14:07] Pablo: There is a perfect answer, you will never know it. [laughs]
+
+[1:14:09] Gigi: Having, having a global would be very comforting and very simple and very easy, and that's it, and that's the source of truth, and that's what I'm gonna work with and so on. And so I think, I think, yeah, I, I think that's it. I think most people would love to have it, and so they kind of force themselves to think that it exists [laughs]
+
+[1:14:30] Pablo: [laughs]
+
+[1:14:30] Gigi: In some way. [laughs] Yeah, I don't know, but we'll, we'll get there. We'll... I mean, it, it... Also, not everyone has to understand this stuff.
+
+[1:14:39] Pablo: Mm.
+
+[1:14:39] Gigi: I think a critical percentage of people has to understand the things, and if, if we, if we have a couple of hundred devs that are really good, that deeply understand this stuff, I'm happy.
+
+[1:14:49] Pablo: [laughs]
+
+[1:14:50] Gigi: I don't need, you know, my mom to understand this stuff. It's like, it's fine. She'll, she'll be fine.
+
+[1:14:54] Pablo: Yeah, I think the, uh, the eternal September of Nuster is going to be people coming in and building, uh, an A- a REST API-
+
+[1:15:00] Gigi: Building global-
+
+[1:15:00] Pablo: ... that gives you... What?
+
+[1:15:02] Gigi: Building REST APIs to give you go- global feeds. [laughs]
+
+[1:15:04] Pablo: Yes. That, that's going to be our, our eternal September. [laughs]
+
+[1:15:08] Gigi: Yeah. Let's prepare for it accordingly.
+
+[1:15:10] Pablo: Yeah. [laughs]
+
+[1:15:12] Gigi: Any last words? Anything else you wanna touch on? I need to get out of the sun.
+
+[1:15:15] Pablo: No, I'm good.
+
+[1:15:16] Gigi: All good?
+
+[1:15:17] Pablo: Uh, yeah.
+
+[1:15:17] Gigi: All right. Then see you next week.
+
+[1:15:20] Pablo: See you next week. [laughs]
