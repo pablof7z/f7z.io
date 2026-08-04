@@ -638,12 +638,16 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
     font-size: clamp(3.5rem, 8vw, 8rem);
   }
 
+  .home-stage .fragment {
+    min-height: 31.2vh;
+  }
+
   .home-stage .quiet {
     position: sticky;
     top: 3.45rem;
     align-self: start;
     max-width: none;
-    max-height: calc(100vh - 3.45rem);
+    height: calc(100vh - 3.45rem);
     margin: 0;
     padding: clamp(2.25rem, 3.4vw, 4rem);
     overflow-y: auto;
