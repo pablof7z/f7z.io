@@ -1,0 +1,3553 @@
+[00:00] Gigi: The wrong side.
+
+[00:00] Sandwich: [laughs]
+
+[00:00] Gigi: That's true. But yeah, let's go all the way. I like it. We're live, basically. I mean, not live, but you know. [laughs] That's... I'm not brave enough yet to live stream it. [laughs] But that was one of the things you showed w- uh, was a live stream applet, right?
+
+[00:18] Sandwich: Yeah, yeah.
+
+[00:19] Gigi: So that's basically doing the same thing that Zap Stream is doing-
+
+[00:24] Sandwich: Yep
+
+[00:24] Gigi: ... but just in a Noster applet.
+
+[00:26] Sandwich: Exactly.
+
+[00:27] Gigi: All right, yeah.
+
+[00:27] Sandwich: It's just pulling in the streaming events.
+
+[00:29] Gigi: Yeah. So we should, we should explain what applets are. We had the most successful workshop ever in the world today.
+
+[00:37] Sandwich: [laughs]
+
+[00:37] Gigi: [laughs] A dozen people at least created applets-
+
+[00:41] Sandwich: Yeah
+
+[00:41] Gigi: ... and all this kind of stuff. And yeah, it's really fucking cool. So first of all, congrats on that-
+
+[00:47] Sandwich: Yeah, thanks
+
+[00:48] Gigi: ... you doing all that. And after we hit the party music, I think we'll just lean in and explain-
+
+[00:55] Sandwich: Yeah, sounds good
+
+[00:57] Gigi: ... to everyone. But first of all, how, how did you come up with the idea for it? Like, what was the motivation behind building it out?
+
+[01:04] Sandwich: It's always been on my mind. Um, when I saw early Noster, the clients weren't really that interesting to me. That's why I didn't really work on any. It seemed like the way that Noster is, is designed and architected, or for the lack of it, it demands maximum flexibility, and no... Like, a standard client is very restrictive. It's, it's... And everything's isolated, which is the opposite of what the protocol is.
+
+[01:35] Gigi: Restricted in, restrictive in, in what way?
+
+[01:38] Sandwich: Well, because you have a team of people or a single developer building their one thing, and just, just to get it functional takes a lot of work, and all these people are working in a silo. Um, and there's no way that even a large team could develop everything that you could possibly develop. So it just made sense to me that every functionality should be atomic. It should be switchable between one client and another. You should be able to compose your clients.
+
+[02:07] Gigi: Hm, I see. So in terms of complexity, you mean taking care of the keys, taking care of the signing, taking care of the relay connections-
+
+[02:14] Sandwich: Relay connections
+
+[02:14] Gigi: ... taking care of-
+
+[02:14] Sandwich: Everything. Outbox
+
+[02:15] Gigi: ... caching, taking care of outbox.
+
+[02:17] Sandwich: Yeah.
+
+[02:17] Gigi: So all the, all the things that, um... I mean, that's why we, we have a library layer now basically. Like, we have NDK, we have Applesauce-
+
+[02:26] Sandwich: Of course
+
+[02:26] Gigi: ... we have other things.
+
+[02:27] Sandwich: Yeah.
+
+[02:27] Gigi: Um, but your approach with the Noster applets is quite different. Like, it's on a different, different layer.
+
+[02:37] Sandwich: Oh, yeah.
+
+[02:37] Gigi: So, so what... How, how did you end up on, with this design decision basically?
+
+[02:42] Sandwich: Well, it took, it took some time to actually get to the point where I understand... un- un- uh, understood what I was thinking, um, or what I was sort of visioning, envisioning when I was... first got introduced to Noster.
+
+[02:54] Gigi: What was the first version? Like, uh, like if it took some time-
+
+[02:57] Sandwich: The first version
+
+[02:57] Gigi: ... and it took some iterations.
+
+[02:59] Sandwich: [laughs]
+
+[02:59] Gigi: Like, what did you learn along the way, and how did the first version look like?
+
+[03:01] Sandwich: The first version was at my friend's house in Sacramento, and I was, uh, getting into vibe coding a little bit. Uh, I think he was really into Claude, and he's like, "You have to use Claude." So I was like, "All right. I'll, I'll try Claude for you."
+
+[03:16] Gigi: So that was one and a half years ago or so, something like that?
+
+[03:18] Sandwich: No, it was like... 'Cause I was using other, I was using other things. He, he was really into Anthropic. I hadn't used Anthropic yet. It was in July, a year ago.
+
+[03:28] Gigi: Okay, a year ago.
+
+[03:28] Sandwich: Um, and I was sitting in his living room, and I was like, you know, like, Insights had just come out, and I knew there was something there, that there was something special with Insights. Um, and so I thought of like... Also, I had recently gotten into the, uh, Hyprland compositor.
+
+[03:48] Gigi: Oh, okay.
+
+[03:49] Sandwich: So I was, like, kind of inspired by that new fresh look at, like, what a, uh, a desktop could be, and, uh, I built a prototype of what I showed you today.
+
+[04:01] Gigi: How come you got into Hyprland? Is it... And were you always a Wayland's kind of guy, or-
+
+[04:07] Sandwich: No, I mean... Well, Way- uh, I don't wanna get into the, uh, tribal fights between X11 [laughs] and Wayland.
+
+[04:13] Gigi: Why not? Why not? [laughs]
+
+[04:15] Sandwich: Uh, no, it was more of just like, "Well, I should at least try it." Um, uh, so why I got into it was I was looking for a new desktop environment, and I didn't want a desktop environment. I was sick of the bloat. I was sick of the opinionation. I just wanted to build my own thing.
+
+[04:30] Gigi: [laughs]
+
+[04:31] Sandwich: You know? Like-
+
+[04:32] Gigi: Sick of the opinionation, so I'm gonna build my own opinionated thing. [laughs]
+
+[04:35] Sandwich: [laughs] Exactly, yeah. Well, other people's opinionation, right?
+
+[04:38] Gigi: Yeah, exactly. [laughs]
+
+[04:39] Sandwich: Um, and, like, having to live through it. And, um, yeah, I just, I just tested it out. I was just gonna, you know, rice it up and see what it was about.
+
+[04:50] Gigi: Yeah.
+
+[04:53] Sandwich: And-
+
+[04:54] Gigi: So, so you were in that kind of mindset when you-
+
+[04:56] Sandwich: Yeah, yeah
+
+[04:56] Gigi: ... when you started hacking on what is now applets?
+
+[05:00] Sandwich: Yeah, yeah. And I just saw, like, that, um, when we were... Well, I was making a lot of Insights too. Like, Insights barely worked, and they... I was finding that I was spending a lot of time building a lot of things over and over and over and over, right? Um, I think Makestack was just around the corner, but even that, you have to maintain it after you've implemented it. So yeah, I just built a prototype, and then I, uh, I saw. I was like, "Wait. First of all, it's really hard to manage the memory in this because everything's in the main thread." And then I started breaking them into iframes, and at that point I realized that in order to do it correctly, I would have to really step back from this prototype idea, this vision I have, and then actually figure out what it actually looks like to do this well. Um, I found a lot of different security problems with my prototype and all this stuff, so.
+
+[06:03] Gigi: Iframes, just hearing iframes, I-
+
+[06:05] Sandwich: I know. It sounds so funny.
+
+[06:06] Gigi: Yeah. Is it like-
+
+[06:07] Sandwich: It sounded funny to me too, yeah.
+
+[06:09] Gigi: [laughs] Did it work at all with iframes? And-
+
+[06:12] Sandwich: Yes, but it, it... But the, but everything was... The lines were blurred So because there was, um, the, the-
+
+[06:19] Gigi: There's the line between container and applet.
+
+[06:21] Sandwich: Yeah. The, because the, the applet could do whatever the runtime could do.
+
+[06:25] Gigi: Mm-hmm.
+
+[06:25] Sandwich: And so it could do things without the runtime knowing, without the user knowing.
+
+[06:29] Gigi: Mm-hmm.
+
+[06:29] Sandwich: And it couldn't be possible to sort of restrict what the, what the app was doing, right?
+
+[06:33] Gigi: Mm-hmm.
+
+[06:34] Sandwich: At this time, it was actually called Napps.
+
+[06:35] Gigi: Okay.
+
+[06:36] Sandwich: Yeah.
+
+[06:36] Gigi: Okay.
+
+[06:36] Sandwich: Which is kind of funny.
+
+[06:37] Gigi: Yeah.
+
+[06:38] Sandwich: Um. [laughs]
+
+[06:40] Gigi: [laughs] Which is fitting. Apps can do more than applets.
+
+[06:42] Sandwich: Yeah, yeah.
+
+[06:43] Gigi: [laughs]
+
+[06:43] Sandwich: So I, I moved into a Tori app, um, nsight.run, actually. Or no, it was, it was napp.run. And I built that pretty quick, but it hit the ceiling really quickly as well, 'cause I couldn't... There was a bunch of stuff I couldn't do. And then I immediately went into, uh, forking Thorium, which is like a slimmed down Chromium, but it, uh, the build chain for that was insane. It took a huge amount of space to, to run the, the CI, and I just was like, "I, I can't do this right now."
+
+[07:17] Gigi: [laughs]
+
+[07:17] Sandwich: So I stepped back further, and I just started with a single frame, and I started attacking the runtime from inside of the iFrame.
+
+[07:28] Gigi: Hmm.
+
+[07:28] Sandwich: And progressively, I removed more and more and more features of what the iFrame was allowed to do, until it got to the point where it could basically do nothing except for talk over post message.
+
+[07:40] Gigi: Okay.
+
+[07:42] Sandwich: And I wasn't very hopeful. [laughs] I didn't think it would work because to redefine... I found myself redefining Nostr inside of the sub-protocol that it has now become. Um, and it took a few months, like four, five, six months, before I understood that I was approaching it entirely wrong. Uh, and I, I identified that the person making the application doesn't need to know as much as I originally thought. Like, they don't need to know that they're uploading to Blossom.
+
+[08:21] Gigi: Mm-hmm.
+
+[08:21] Sandwich: They don't need to know where they're uploading.
+
+[08:23] Gigi: They don't need to know about relays. They don't need to know about keys, right?
+
+[08:25] Sandwich: They need to know a little bit. They, they need to understand that there are relays.
+
+[08:29] Gigi: Mm-hmm.
+
+[08:30] Sandwich: Um, and so once I got the security posture where it was, and I played with the API enough, I realized there was really two sets of, um, API services that the runtime... Or sorry, that the, uh, napplet should have, which is sort of like a high-level helper kind of style API. And then escape hatches so that flexibility isn't compromised. Because if you try to do everything through helpers, you sort of constrain the potential experiences that you could create.
+
+[09:02] Gigi: What's, what's an escape hatch in that context?
+
+[09:05] Sandwich: Uh, outbox would be the easiest way to retrieve notes, because you basically delegate the outbox context to the runtime. But the escape hatch is a relay interface that allows you to, uh, have lower level access to the protocol if you need it.
+
+[09:24] Gigi: Okay. Okay, okay. So in, in case something doesn't work right, you us- you use the escape hatch and try to do things more directly.
+
+[09:32] Sandwich: Exactly.
+
+[09:32] Gigi: Okay.
+
+[09:32] Sandwich: Exactly.
+
+[09:33] Gigi: I get it. I see.
+
+[09:34] Sandwich: Um, the next challenge was getting napplets to talk to one another. That was very difficult. Uh, actually, we only settled on it last night how to fix that.
+
+[09:46] Gigi: Who is we?
+
+[09:47] Sandwich: Uh, Hazard and I.
+
+[09:48] Gigi: Okay.
+
+[09:49] Sandwich: We were talking about it.
+
+[09:50] Gigi: It's goddamn Hazard.
+
+[09:51] Sandwich: [laughs]
+
+[09:51] Gigi: He has his fingers in everything. [laughs]
+
+[09:53] Sandwich: Yeah. It took me a while to, to get him on board.
+
+[09:56] Gigi: [laughs] Yeah, you mentioned that briefly today. You tried to explain it to him-
+
+[10:00] Sandwich: [laughs]
+
+[10:00] Gigi: ... for multiple weeks or months or something.
+
+[10:02] Sandwich: A year. Almost a year.
+
+[10:03] Gigi: [laughs] And then, and then you showed it to him, and he was hooked-
+
+[10:06] Sandwich: [laughs]
+
+[10:06] Gigi: ... in, like, 10 minutes or something.
+
+[10:08] Sandwich: Yeah, yeah.
+
+[10:09] Gigi: Yeah.
+
+[10:09] Sandwich: Um, he got it immediately. Uh, and I found that. Like, trying to es- es- eh, explain the paradigm is a lot more difficult than just showing it. Uh.
+
+[10:21] Gigi: And you built this awesome workshop tutorial page that-
+
+[10:26] Sandwich: Yeah, yeah
+
+[10:26] Gigi: ... I was able to point my agent to, and just everything worked, basically.
+
+[10:30] Sandwich: [laughs]
+
+[10:30] Gigi: I was able to build the first applet in five minutes or so, something like that.
+
+[10:34] Sandwich: Yeah, it was, like, five or six minutes.
+
+[10:35] Gigi: Yeah. And-
+
+[10:36] Sandwich: And deployed.
+
+[10:36] Gigi: Yeah.
+
+[10:36] Sandwich: Deployed in six minutes. Yeah.
+
+[10:38] Gigi: Yeah. So if someone's curious, uh, I'll, I'll definitely link that, and then you can just, you know.
+
+[10:42] Sandwich: I'm, I'm gonna make some improvements to it-
+
+[10:44] Gigi: [laughs]
+
+[10:44] Sandwich: ... 'cause some people had some issues.
+
+[10:45] Gigi: Yeah.
+
+[10:46] Sandwich: But, uh.
+
+[10:46] Gigi: I mean, you, you have to understand what's going on on the-
+
+[10:49] Sandwich: Yeah
+
+[10:49] Gigi: ... on the underlying side, and it helps to have a proper setup. Um, you know, like, I, um, I was lucky that I just, I have Amber on my phone and can set up the-
+
+[10:59] Sandwich: Yeah, yeah
+
+[10:59] Gigi: ... signing for the publication flow and all this kind of stuff.
+
+[11:02] Sandwich: Uh-huh.
+
+[11:03] Gigi: And I have, you know, like, also a proper Nostr setup and a proper signing setup on, on my laptop, on my development machine.
+
+[11:10] Sandwich: Oh, yeah. Yeah.
+
+[11:10] Gigi: That, that makes everything easier. But, uh, if you have that, if you do a little bit of prep work, then pointing an agent at this tutorial will just work.
+
+[11:20] Sandwich: Yep.
+
+[11:20] Gigi: So that's, that's awesome.
+
+[11:21] Sandwich: That was the idea.
+
+[11:22] Gigi: Yeah.
+
+[11:23] Sandwich: Um, and fortunately too, it's not... Like, a lot of this, while everything is agent-assisted, uh, there's a lot of experience that went into it. Like, it wasn't designed by AI. Uh, if it was designed by AI, I don't think it would work.
+
+[11:38] Gigi: [laughs]
+
+[11:39] Sandwich: Uh.
+
+[11:40] Gigi: It's amazing how well it works, by the way.
+
+[11:42] Sandwich: Yeah.
+
+[11:42] Gigi: So, so-
+
+[11:43] Sandwich: Yeah. It's surprising to me too
+
+[11:44] Gigi: ... it kind of blew me away. [laughs] But talk to me more about kind of the level of abstraction that you landed on, um, iter- iterating on it for, like, almost a year, because it's... You also mentioned briefly, FiatJef kind of hates it in the sense that it doesn't-
+
+[12:00] Sandwich: Well-
+
+[12:00] Gigi: ... use kinds as a, as a messaging bus-
+
+[12:03] Sandwich: Yeah
+
+[12:03] Gigi: ... and so on.
+
+[12:04] Sandwich: Yeah, yeah.
+
+[12:04] Gigi: So, so you, you chose a different level of abstraction. So, so explain that some more.
+
+[12:09] Sandwich: Well, I wouldn't say he, he hates it, 'cause it inspired him when I showed him an early, uh, demonstration. I just sent him a screenshot and said, "This can open that." And he was like, "Well, that would be a paradigm change." And it did inspire him to actually revisit one of his old projects that was very similar to this. But some of the design decisions I've made, he has been disagreeing with Um, uh, quite a bit
+
+[12:33] Gigi: I mean, to be fair, Fietjef basically hates everything on first sight, so-
+
+[12:36] Sandwich: Of course
+
+[12:36] Gigi: ... you know.
+
+[12:36] Sandwich: Yeah.
+
+[12:36] Gigi: That's just how it goes. [laughs]
+
+[12:37] Sandwich: That's, that's just how it goes. Yeah. Um-
+
+[12:40] Gigi: It's almost like a stamp of approval. [laughs]
+
+[12:42] Sandwich: Almost, yeah. Uh, yeah, actually, you're, you're probably right. [laughs]
+
+[12:47] Gigi: Because, you know, like I... If he wouldn't say he hates it, then, then he would just be indifferent to it and wouldn't say anything.
+
+[12:52] Sandwich: Exactly.
+
+[12:53] Gigi: [laughs]
+
+[12:53] Sandwich: Yeah. Uh, so yeah, it took a lot of different iterations. I mean, it started with the shell, which is what mediates every request from, like, over the bus, right? Uh, being a relay. And then the naplets were sending, uh, Nostr messages using NIP1, and then I was going to extend new messages, but this created a bunch of, uh, a huge convoluted mess because you had to arbitrarily assign a key pair from the runtime to the naplet, right? And this was just completely unnecessary because the, the runtime already had full control over the naplet already. So it doesn't need it to confirm it.
+
+[13:41] Gigi: Mm. I see.
+
+[13:42] Sandwich: And then otherwise, then you'd be sending unsigned events, which then was weird, because you did wanna know sort of where the events were when they were being routed. One of the benefits the first design had was that you could tell where the event came from at any point in the runtime. You could always tell, oh, it came from this naplet. But that can easily-
+
+[14:04] Gigi: 'Cause every, every naplet had a key as well. Or that's something you mentioned, right?
+
+[14:08] Sandwich: Yeah, yeah.
+
+[14:08] Gigi: Like, yeah.
+
+[14:09] Sandwich: Yeah. So it did, it did simplify certain things, but it made pretty much everything else complicated.
+
+[14:14] Gigi: Mm-hmm. Mm-hmm.
+
+[14:15] Sandwich: And then, uh, I think I figured out... S- there was an aha moment when I did resource, because trying to load, like, the... It, it created a unique problem where you want to load bytes, but you can't fetch, fetch them because the naplet doesn't have any, any, uh, access to the network, and you have to stream the bytes over, over the bus. And then I'm like, "Okay, so how do I do YouTube videos? How do I do streams?" And then I... It clicked because this is the same problem that operating systems face, and they have the media API. And so I just basically copied Linux, um, and it worked, like, pretty much first try.
+
+[14:58] Gigi: [laughs]
+
+[14:59] Sandwich: And when that happened, I just realized I didn't have to reinvent anything. And then I looked at-
+
+[15:03] Gigi: You just have to rebuild an operating system in a browser window, basically. [laughs]
+
+[15:06] Sandwich: Sure. Yeah. Yeah, and you didn't even see all of it. [laughs] Um, uh, so I-
+
+[15:16] Gigi: So walk me, walk me through what happens if you, you used the example before, uploading something to a Blossom server.
+
+[15:21] Sandwich: Yeah.
+
+[15:21] Gigi: Let's say, let's say we have a naplet, very simple drag-and-drop upload-
+
+[15:24] Sandwich: Yep
+
+[15:24] Gigi: ... to the user's Blossom servers, and then, you know, like, let's do the same for download. Like, what happens on the, on the-
+
+[15:31] Sandwich: Sure
+
+[15:31] Gigi: ... naplet's, uh, um, shell level?
+
+[15:34] Sandwich: Cool.
+
+[15:34] Gigi: Like on the container level.
+
+[15:36] Sandwich: So the, the naplet would just... You'd probably have a drop zone. Maybe it would be have a listener for, uh, paste, and an upload button obviously. You'd upload the image. It would be in memory. And then you would, uh, use-
+
+[15:53] Gigi: Yeah, you showed that today, by the way, right?
+
+[15:55] Sandwich: Yeah.
+
+[15:55] Gigi: Like you right-click copied an image.
+
+[15:57] Sandwich: Yeah.
+
+[15:57] Gigi: And you went to another applet.
+
+[15:59] Sandwich: Yeah.
+
+[15:59] Gigi: And then you just pasted it-
+
+[16:00] Sandwich: Yep
+
+[16:00] Gigi: ... and it did an upload.
+
+[16:01] Sandwich: Yeah, that was-
+
+[16:02] Gigi: So, so the paste will of course, you know, drop the bytes, stream [laughs] the bytes into the thing.
+
+[16:07] Sandwich: Yeah, yeah.
+
+[16:08] Gigi: And, and, and, uh, how, how does it work? Like, how, how does it figure out, like, which Blossom server to upload and, like, all those kind of things?
+
+[16:14] Sandwich: Absolutely. So it actually, the interface is just upload, and then the runtime is what decides what that means. And it's, the, the runtime's target market also decides what that means. So you could have a runtime that supports, say, Blossom, Hash Tree, let's say IP- uh, IPFS just for fun, and maybe, like, let's just even say Google Drive.
+
+[16:38] Gigi: Mm.
+
+[16:38] Sandwich: Like, I, I would never do it, but you could, right? And the user has none configured, and they, they initiate an upload. The runtime detects, "Hey, you know, I support these things, but none of them are configured. You do not have a server list for Blossom." Um, it would then prompt them to configure it. Uh, if it, if they did have a, one of them already configured, it would... If they had one, maybe it would just automatically upload it to that, that source. Or if they had maybe two configured, it would ask if they wanted to upload to one or the other or both. Now, on read, you would just pass the, um, the Blossom hash or whatever the resource is. So the resource, because the runtime's mediating everything, it knows where it's uploading, and so when you pass a resource, it knows where to look.
+
+[17:25] Gigi: Yeah.
+
+[17:26] Sandwich: Because the runtime is mediating everything. Um, there are obviously some gaps here. Um, so for example, if you have notes on Nostr that are IPFS and the runtime doesn't support IPFS, then it won't work, right?
+
+[17:38] Gigi: Mm.
+
+[17:39] Sandwich: Um, there's all sorts of gaps like that. And there is ways to deal with that. You could just detect that in the naplet, like when a resource isn't returned, you could do something so that it's not a bad user experience. Um, but yeah, that's, it's a pretty straightforward, uh, solution. There are some bookends-
+
+[17:59] Gigi: And in terms of signing events and all those kind of things-
+
+[18:02] Sandwich: Yeah
+
+[18:03] Gigi: ... like, how does it work? Like, you have this-
+
+[18:04] Sandwich: So-
+
+[18:04] Gigi: What, what kind of interface do you have, and how does the, the, the app itself that contains the applet, um, kind of-
+
+[18:13] Sandwich: The host?
+
+[18:13] Gigi: Yeah.
+
+[18:14] Sandwich: The runtime. Yeah, yeah.
+
+[18:14] Gigi: The, the host-
+
+[18:15] Sandwich: We could call it a host application.
+
+[18:16] Gigi: Yeah.
+
+[18:16] Sandwich: People resonate with that a bit.
+
+[18:17] Gigi: And, and just to, to maybe mention that, um, uh, like you mentioned Amethyst already supports, uh-
+
+[18:24] Sandwich: Yeah, an earlier version
+
+[18:26] Gigi: ... these applets.
+
+[18:26] Sandwich: Yeah.
+
+[18:26] Gigi: And, uh, Nostrula also supports it.
+
+[18:29] Sandwich: Yep.
+
+[18:29] Gigi: And so, like, this is already working right now, and then you have, like, a, a, a little applet thing, whatever, um- In [laughs] if you're a Nostr client, in your Nostr environment, and, um, the signing and, like you said, like the what is my Blossom server list, for example, this is all handled by the, by the host-
+
+[18:49] Sandwich: Yeah
+
+[18:49] Gigi: ... application.
+
+[18:50] Sandwich: Yeah.
+
+[18:50] Gigi: And so, so, um, how, how does this get triggered and passed on in, let's say, you know, like you just wanna post an event or even for a Blossom upload you have to sign something.
+
+[18:59] Sandwich: Yeah.
+
+[18:59] Gigi: Like, what, what, what happens there?
+
+[19:01] Sandwich: So the signature always occurs in, um, by the shell. So beyond the shell we could call it. We'll just use the word host. Um, I prefer runtime for technical reasons, but I think host makes the most sense for people who are being introduced to it. So the host application for the naplets, um, is responsible for all encryption, decryption, and, uh, uh, over the shell is always clear text. So, um, if it receives encrypted, uh, text over the shell, it must reject it. That's part of the rule. The ... If you're publishing, you're doing a publish, or you can do publish encrypted. Um, and if you're decrypting, you can just do decrypt. On the-
+
+[19:45] Gigi: E- explain that some more with, uh, the one rule you just mentioned, that over the shell it's always plain text.
+
+[19:50] Sandwich: Right.
+
+[19:50] Gigi: I don't think I understand.
+
+[19:51] Sandwich: So, so, so there's a number of attacks that you can do, because the ... In order for this to work, uh, naplets have to be safe to use even when they're malicious. So, like, the user can't have to second-guess the naplet, otherwise it will never work. Um, the ... There's a number of side channel attacks. So for example, you can do a sort of store- storage of decrypted data, um, or sorry, encrypted data, and then you could also do, like, heuristics in the naplet and store stuff in storage scopes, and then send it in a de- in an encrypted message back to yourself-
+
+[20:35] Gigi: Mm
+
+[20:35] Sandwich: ... as the naplet author. Um, so everything is required to be plain text over the, the message bus.
+
+[20:40] Gigi: Okay, okay.
+
+[20:41] Sandwich: Yeah.
+
+[20:41] Gigi: Okay. I see.
+
+[20:41] Sandwich: That way, that way there's, that way the runtime can tell the user what-
+
+[20:45] Gigi: Yeah
+
+[20:45] Sandwich: ... the naplet is doing.
+
+[20:46] Gigi: Yeah.
+
+[20:46] Sandwich: It can log it appropriately.
+
+[20:48] Gigi: Yeah, yeah.
+
+[20:48] Sandwich: Um-
+
+[20:48] Gigi: And you as the user can be sure, have a reasonable assurance that no f- no, no funny business is going on-
+
+[20:54] Sandwich: Right
+
+[20:54] Gigi: ... because you can, uh, inspect everything that goes back and forth.
+
+[20:58] Sandwich: Exactly.
+
+[20:58] Gigi: Yeah, I see. Okay.
+
+[20:59] Sandwich: And, and the, the runtime cannot protect the user from something it doesn't know about.
+
+[21:04] Gigi: Yeah.
+
+[21:04] Sandwich: So, um, that's really important.
+
+[21:06] Gigi: Yeah. Yeah. Okay, okay. I see, I see. Yeah. Fancy stuff. So the, quite a bit of thought-
+
+[21:13] Sandwich: Yeah
+
+[21:13] Gigi: ... quite a bit of thought went into that. [laughs]
+
+[21:15] Sandwich: Oh, yeah. A lot of testing.
+
+[21:17] Gigi: How did you, how did you build it out in terms of, um, you know, like you have quite a sophisticated development set up and those kind of things, and some ideas around how to use agents properly. Like, how, what did you use to build out, um, yeah, the whole applet engine and everything? [laughs]
+
+[21:38] Sandwich: [laughs] Um, I think both. Well, they, I went through phases, and I may have done a rewrite. I did a rewrite on naplet on the naplet dev tooling. Um, and when I redid the rewrite I used GSD, and same with Keeto, which is the runtime packages.
+
+[21:57] Gigi: So GSD is get shit done?
+
+[21:58] Sandwich: Yeah. Or it was. They, they had to rebrand.
+
+[22:01] Gigi: Yeah, yeah. Let's, let's stick with let's get shit-
+
+[22:04] Sandwich: Yeah
+
+[22:04] Gigi: ... get shit done. Good name.
+
+[22:05] Sandwich: Yeah.
+
+[22:05] Gigi: [laughs] And Keeto you mentioned?
+
+[22:09] Sandwich: Yeah, yeah, yeah. It's like, um, it's ... So the name, it's actually Finnish, and there's actually no real reason for that. I was just looking for five letter words that hadn't been used on any project.
+
+[22:20] Gigi: Okay.
+
+[22:20] Sandwich: And it was the only one that when translated made sense. It's, uh, Finnish for crib or cradle.
+
+[22:26] Gigi: Okay.
+
+[22:27] Sandwich: Which kind of made sense, because it sort of, you know, cradles naplets. It, it-
+
+[22:31] Gigi: Yeah
+
+[22:31] Sandwich: ... protects the, I guess, the user is the baby. [laughs]
+
+[22:34] Gigi: Yeah, yeah.
+
+[22:35] Sandwich: Um, and then the development runtime is Paija, which I just learned how to pronounce it today from my roommate.
+
+[22:43] Gigi: [laughs]
+
+[22:43] Sandwich: Um, and that is workbench.
+
+[22:47] Gigi: Okay.
+
+[22:47] Sandwich: Um, in Finnish as well. Uh, that is, can be used to build runtimes. So that includes a shell, an ACL, a firewall which really only behaves like a rate limiter right now to relieve pressure from the runtime. It includes, um, services, stubs for services like notifications, relay pools, storage, KB storage, um, media handler, and a few other things. Um, the naplet dev tooling is about conformance. Uh, it has the shim, which might actually be moved to Keeto 'cause it's injected by Keeto. Um, it includes a SDK, some types, a boilerplate, and skills, and a few others. Um, these are pretty tightly, like, the, the, the architecture of these was pretty heavily considered because, um, they ... First of all, there's no dependencies in any of them. Um, they're lightweight. By using them-
+
+[24:06] Gigi: No dependencies on any other Nostr stuff, or what, what do you mean by no-
+
+[24:10] Sandwich: No
+
+[24:10] Gigi: ... no dependencies?
+
+[24:11] Sandwich: Like, it's, it's vanilla JavaScript, except for maybe, like, the skills and the dev tooling, like the, the, the bundlers and stuff. But other than that, um, it is the, uh-
+
+[24:25] Gigi: [fireworks exploding] Fireworks
+
+[24:25] Sandwich: ... without dependencies. [laughs] Yeah.
+
+[24:27] Gigi: They're celebrating the launch of many, many naplets today. [laughs]
+
+[24:33] Sandwich: [laughs] The, uh-
+
+[24:34] Gigi: Okay, that's quite something. No dependencies.
+
+[24:36] Sandwich: Yeah.
+
+[24:36] Gigi: Isn't it? Like, that's-
+
+[24:37] Sandwich: Yeah
+
+[24:37] Gigi: ... that's a very pure approach-
+
+[24:39] Sandwich: Well, it's, it's-
+
+[24:39] Gigi: ... to build, to build a runtime
+
+[24:39] Sandwich: ... intentional, too. It's, it's, um- Because-
+
+[24:44] Gigi: Was it security considerations?
+
+[24:45] Sandwich: Yeah, it was.
+
+[24:46] Gigi: Okay.
+
+[24:47] Sandwich: Uh, and also just simplicity of maintenance because you could... You don't need these packages. I mean, you could just... The- there's a protocol, right? Like, it's-
+
+[24:55] Gigi: Yeah
+
+[24:55] Sandwich: ... um, so you could build all of this without any of the packages-
+
+[24:58] Gigi: Yeah
+
+[24:59] Sandwich: ... for sure. It would be really hard to sell anyone on it in 2026, but, uh, yeah, you could do it without any of the packages and create a runtime and naplets without using my packages.
+
+[25:10] Gigi: Yeah. Yeah. I see. I see.
+
+[25:12] Sandwich: Um, one of the interesting things about it is naplets are single file, so every naplet is one file. And, uh, you know, a n- an applet is a application that does one thing really well and is served by a host application as opposed to being, like, a standalone application. And by making it a single file, you sort of implicitly force people to sort of conform to that philosophy.
+
+[25:37] Gigi: Yeah, yeah, yeah. It has to be small.
+
+[25:38] Sandwich: Yeah.
+
+[25:39] Gigi: Yeah. It's, uh... Yeah, it's, i- it- it's quite interesting also to, to look at because, um, widgets were a big thing, um, in a different era.
+
+[25:52] Sandwich: Yeah.
+
+[25:52] Gigi: Like, also, um, operating, like, O- OS level widgets-
+
+[25:56] Sandwich: Mm-hmm
+
+[25:57] Gigi: ... both on the, like, any operating system basically. Like, on the Linux side, on the, on the Windows side, it was a big thing where it just, you, you have your desktop and you have all these widgets that you can compose and so on.
+
+[26:07] Sandwich: Yeah.
+
+[26:07] Gigi: And then, like, even, um, you know, like in, in the early kind of Web 2.0 days, there were also some landing pages that were insanely widget-heavy. And, and so it's, it's, it's kind of cool and kind of interesting to, to see this emerge on, on Noster. And before we go deeper into the basically operating system you've built [laughs]
+
+[26:32] Sandwich: [laughs]
+
+[26:32] Gigi: ... for it, um, um, you mentioned also that there is some competing projects or projects-
+
+[26:38] Sandwich: Yeah
+
+[26:38] Gigi: ... that had the same idea.
+
+[26:40] Sandwich: Yeah, yeah.
+
+[26:40] Gigi: Fiatjaf had one of them.
+
+[26:41] Sandwich: Yeah.
+
+[26:41] Gigi: Um, like, talk me, talk me through, um, the, the other projects that-
+
+[26:46] Sandwich: Sure, yeah
+
+[26:46] Gigi: ... kind of tried to do this. And, and I-
+
+[26:47] Sandwich: Ah, some of them are still going.
+
+[26:49] Gigi: Yeah, yeah.
+
+[26:49] Sandwich: Yeah, yeah, yeah. Um-
+
+[26:50] Gigi: Yeah, but just in, in kind of as a comparison and, and, and just that, um, you know, like, uh, not everyone knows all this stuff. And-
+
+[26:57] Sandwich: Of course
+
+[26:57] Gigi: ... as y- as you know, I, um, philosophically I was always a big believer and a fan of Hyponote-
+
+[27:05] Sandwich: Mm
+
+[27:05] Gigi: ... what, uh, Paul came up with.
+
+[27:07] Sandwich: Oh, yeah.
+
+[27:07] Gigi: And, um, it's, it's kind of... it's very similar in, in, in style in some sense.
+
+[27:12] Sandwich: It is.
+
+[27:12] Gigi: Very diff- very different execution. Very different execution.
+
+[27:15] Sandwich: Yeah. Yeah.
+
+[27:15] Gigi: But, but very similar, like, spir- spiritually. [laughs]
+
+[27:18] Sandwich: Yeah.
+
+[27:18] Gigi: So, so talk me through, uh, kind of the, the other projects that, that have been trying to do similar things.
+
+[27:24] Sandwich: So I think if I do it in order, I guess it would be Fiatjafs, which I really don't know much about. He started it before the whole Jax wave things in the-
+
+[27:33] Gigi: Yeah
+
+[27:33] Sandwich: ... late 2022, right? So I, I've only been working on Noster-
+
+[27:38] Gigi: It's an ancient, ancient idea
+
+[27:39] Sandwich: ... Ancient. Yes, ancient.
+
+[27:39] Gigi: Ancient idea. [laughs]
+
+[27:41] Sandwich: And I think probably too early, you know-
+
+[27:43] Gigi: Yeah
+
+[27:43] Sandwich: ... for that kind of idea, but clearly this was in his head. Um, the next one that I'm aware of, 'cause there could be others, th- didn't Yakihonne have something? Like, a, a view or something?
+
+[27:56] Gigi: Potentially.
+
+[27:56] Sandwich: Yes, they had something.
+
+[27:57] Gigi: I'm, I'm not a Yakihonne power user, so I don't-
+
+[28:00] Sandwich: Yeah
+
+[28:00] Gigi: ... I wouldn't know.
+
+[28:00] Sandwich: Yeah, but I believe they had something similar, but it was very, um, it's very s- uh, simple, um, which isn't a bad thing. And then I believe Soapbox has tiles, which is slightly different. It's made for native. It's Lua-based, which is cool.
+
+[28:16] Gigi: Hm.
+
+[28:17] Sandwich: I've been talking to that guy a lot, and it's a really cool project. Um, Balash and Fiatjaf have been, uh... My, my project's a little bit inspired Fiatjaf to revisit his original idea. Um, so he's working with Balash, who is... They're working on Noster apps or naps. Um-
+
+[28:38] Gigi: So that's called Noster Apps-
+
+[28:40] Sandwich: Yeah
+
+[28:40] Gigi: ... the project.
+
+[28:40] Sandwich: Yeah.
+
+[28:41] Gigi: Okay. 'Cause I have to look it up later-
+
+[28:43] Sandwich: Yeah
+
+[28:43] Gigi: ... and, and link to it.
+
+[28:44] Sandwich: That one is, is, is good. It reminds me, if I look at the commit history, it basically looks like my thinking from about a year ago. So-
+
+[28:53] Gigi: [laughs]
+
+[28:53] Sandwich: So-
+
+[28:53] Gigi: Interesting. Let's hear it
+
+[28:54] Sandwich: ... they're, they... I, they... Yeah.
+
+[28:55] Gigi: Yeah. [laughs]
+
+[28:55] Sandwich: They're, they're kind of solving problems in a similar order-
+
+[28:58] Gigi: Yeah
+
+[28:58] Sandwich: ... and maybe they'll come to a different conclusion.
+
+[29:00] Gigi: Yeah.
+
+[29:00] Sandwich: Um, that would be interesting. Uh, there's a lot of unique problems to solve, you know? Uh... Yeah, like you used the, the operating system briefly.
+
+[29:11] Gigi: Yeah.
+
+[29:11] Sandwich: It was pretty fast, right?
+
+[29:13] Gigi: Yeah.
+
+[29:14] Sandwich: Yeah, it's fast because-
+
+[29:14] Gigi: It was surprisingly fast and worked-
+
+[29:17] Sandwich: Yeah
+
+[29:17] Gigi: ... and also surprisingly intuitive. And, and yeah, it also looks very good. Like, I, I like that style of window management and-
+
+[29:24] Sandwich: Yeah, me too
+
+[29:25] Gigi: ... and doing things. So...
+
+[29:26] Sandwich: Um, so a lot of that is because of how it's designed. It's the security posture. It's the fact that they don't have web APIs, and it's also that, you know, the main thread is kept really... It's solely reserved for rendering the dome in, in the parent frame and routing messages. Pretty much everything else occurs in web workers.
+
+[29:53] Gigi: I see.
+
+[29:53] Sandwich: Um, and with, without that, uh, CSP and sandboxing iframes, it's pretty much impossible to do that. You could just have a naplet start calling every relay on Noster, and then no other naplet works, and then the parent frame crashes.
+
+[30:12] Gigi: Mm-hmm. I see.
+
+[30:13] Sandwich: Right. Uh-
+
+[30:14] Gigi: But-
+
+[30:14] Sandwich: ... and there's no way for the, there's no way for the parent frame to regulate the pressure of each naplet-
+
+[30:22] Gigi: Mm-hmm
+
+[30:22] Sandwich: ... and control it. But, um, so that's the primary difference between, um, some of the other existing projects and, and naplets as it is right now. Um, maybe that will change. Um, but that's the, actually the only difference right now between Noster apps and naplets.
+
+[30:40] Gigi: Okay. With-
+
+[30:40] Sandwich: Uh, they have different APIs, and they have a different, uh, philosophy as well
+
+[30:45] Gigi: What made you choose the browser as an environment to build all that stuff out-
+
+[30:52] Sandwich: [laughs]
+
+[30:52] Gigi: ... as opposed to just doing a native desktop app or whatever? Because as you mentioned-
+
+[30:57] Sandwich: Yeah
+
+[30:57] Gigi: ... the, the applet system is, is, it's, it's a protocol specification. Like, there's no need to do all this in the browser.
+
+[31:04] Sandwich: Of course not.
+
+[31:04] Gigi: You could write native code, whatever. Like you can-
+
+[31:07] Sandwich: Yeah
+
+[31:07] Gigi: ... you can do... use Swift and build a-
+
+[31:11] Sandwich: Of course
+
+[31:12] Gigi: ... an applet browser for iOS and just do everything natively. So, so what made you, what made you do it in a browser, kind of? Because the OS you showed off just works in the browser, basically.
+
+[31:23] Sandwich: Yeah, yeah.
+
+[31:24] Gigi: Which I th- it's, it's awesome.
+
+[31:25] Sandwich: Yeah.
+
+[31:25] Gigi: It's like it, it felt kind of magical to, to use it. And if you go full screen, you wouldn't even notice-
+
+[31:29] Sandwich: Exactly
+
+[31:30] Gigi: ... if you are in a browser.
+
+[31:30] Sandwich: Exactly. Um, so a few reasons. So the first one is practical and also more like release strategy. Um, the user doesn't have to install anything. So you can give someone a link, and they can use it in seconds. They don't have to, um... Like, even anonymous user, you know?
+
+[31:50] Gigi: Yeah.
+
+[31:51] Sandwich: The onboarding could include just an anonymous user. You browse as Jack, and you're, you're in, right?
+
+[31:55] Gigi: Yeah.
+
+[31:56] Sandwich: You browse as Gigi.
+
+[31:56] Gigi: And just to give people an idea, that might be a good, like, like, a lots of people maybe know the Synology interface-
+
+[32:03] Sandwich: Mm-hmm
+
+[32:03] Gigi: ... for Synology NAS devices, and they basically have their own OS, their own window manager, and so on, and it all runs in a browser as well, and you can, you know, drag your windows around-
+
+[32:14] Sandwich: Yeah. Sure
+
+[32:14] Gigi: ... and just, you know, like right click on stuff, and the context window will pop up and so on. And so very similar to-
+
+[32:20] Sandwich: Yeah
+
+[32:20] Gigi: ... what you've built in, uh, from the kind of... just to, to get pe- to give people an idea of, like-
+
+[32:26] Sandwich: What is possible
+
+[32:26] Gigi: ... how this looks.
+
+[32:27] Sandwich: Yeah, yeah, yeah.
+
+[32:28] Gigi: How, how, how it looks and feels, basically.
+
+[32:29] Sandwich: Yeah, exactly. Um, so, so the other reason, too, is that it's sort of permissionless because, um, the runtime res- doesn't have any gateways like Insight. It resolves... The runtime resolves everything and does all the blob hash validation. And so everything-
+
+[32:49] Gigi: Oh, that's an interesting-
+
+[32:50] Sandwich: Yeah
+
+[32:50] Gigi: ... thing that I didn't think about yet. Okay.
+
+[32:53] Sandwich: Um, it can be deployed as an insight.
+
+[32:56] Gigi: Yeah, yeah, yeah. The shell basically runs locally, and the bits and pieces are-
+
+[33:00] Sandwich: Yes
+
+[33:00] Gigi: ... collected from whatever, like relays-
+
+[33:02] Sandwich: Exactly
+
+[33:02] Gigi: ... blossom servers, IPFS, Torrent, whatever. Like-
+
+[33:04] Sandwich: Exactly
+
+[33:04] Gigi: ... I... That's very interesting. Yeah.
+
+[33:06] Sandwich: Um, and so that and also-
+
+[33:08] Gigi: You don't need an initial delivery in some sense.
+
+[33:10] Sandwich: Yeah.
+
+[33:11] Gigi: Um, okay. Yeah, yeah.
+
+[33:13] Sandwich: And, and I see it... Uh, so it's not the furthest edge. Like, I guess the furthest edge would be some microcontroller or something with, like, a screen and, like-
+
+[33:20] Gigi: Yeah, sure
+
+[33:21] Sandwich: ... like the-
+
+[33:21] Gigi: I mean, it literally acts-
+
+[33:22] Sandwich: Does it play Doom kind of thing
+
+[33:23] Gigi: ... it, it literally, a shell literally acts like an operating system.
+
+[33:25] Sandwich: Yeah.
+
+[33:26] Gigi: And you can boot it up, and if you're... If, let's say, you're offline, then it's just empty. It just can't get stuff from outside, but it still works.
+
+[33:32] Sandwich: Exactly.
+
+[33:33] Gigi: That's how it's... Yeah.
+
+[33:34] Sandwich: Yeah, that's how it's, uh-
+
+[33:34] Gigi: Yeah, interesting.
+
+[33:36] Sandwich: Yeah, yeah, yeah. That's a beautiful bug. Um.
+
+[33:41] Gigi: [laughs] This one?
+
+[33:43] Sandwich: Yeah.
+
+[33:43] Gigi: Yeah. [laughs]
+
+[33:45] Sandwich: There's a lot of them, by the way.
+
+[33:46] Gigi: [laughs] Yeah, that's, uh, very old bugs. [laughs]
+
+[33:49] Sandwich: Yeah.
+
+[33:49] Gigi: No, no need to fix this one. [laughs]
+
+[33:53] Sandwich: Nope. So, like, like, a, uh... It also sort of proves something. So it's on an edge that you think this wouldn't work in. So if it can work on this edge, and then you, you push it all the way to another edge, and you can get it, the protocol to work on that edge that's not web, then theoretically it should work everywhere in between, right?
+
+[34:12] Gigi: Okay.
+
+[34:12] Sandwich: So.
+
+[34:13] Gigi: Yeah.
+
+[34:14] Sandwich: Uh, the idea, the thinking was I do it in the browser, which should be impossible, then the next logical step is a browser or a native app. No, the next logical step is a native app, then a browser, then an operating system, and then, like-
+
+[34:30] Gigi: By browser, you mean an, an applet explorer.
+
+[34:32] Sandwich: Yeah.
+
+[34:32] Gigi: Let's walk up here. It's w- we, we will be a little bit, you know, sweating and-
+
+[34:37] Sandwich: Winded
+
+[34:37] Gigi: ... huffing and puffing, but it's worth it. It's a good, good spot. [laughs]
+
+[34:44] Sandwich: The, the next step after that would probably be, like, a custom kernel, like a microkernel, like a cyberdeck type thing, which is really where we should be heading. Um, a lot of the hardware is, you know, very well guarded by, by the people who own them and, like, produce these. The, the hardware we take for granted every day.
+
+[35:06] Gigi: Mm-hmm, mm-hmm.
+
+[35:07] Sandwich: Um, so by... Uh, oh, yeah. So I, uh, produced a RISC-V microkernel that implemented some of the basic interfaces-
+
+[35:24] Gigi: Okay [laughs]
+
+[35:25] Sandwich: ... of nit5d.
+
+[35:25] Gigi: I didn't realize that was- [laughs]
+
+[35:28] Sandwich: Yeah
+
+[35:28] Gigi: ... applet related. I thought it was a completely different project.
+
+[35:32] Sandwich: Um-
+
+[35:33] Gigi: So
+
+[35:33] Sandwich: ... and I just implemented it to see if there was any, like, hiccups in something, a completely different environment. The harder ones like resource, outbox, and I implemented KV storage, and one other one that's not coming to me right now. And I was able to get that working with the 2E that was in a moderately sandbox environment. And once I could see that working in theory, I went full force on the website-
+
+[36:10] Gigi: Okay
+
+[36:10] Sandwich: ... just to get it to the public.
+
+[36:12] Gigi: Yeah, I see. I see.
+
+[36:13] Sandwich: Yeah.
+
+[36:13] Gigi: Yeah, no, it looks, it looks, it looks and feels really, really well. And, um, yeah, it was kind of magical to see all the, like... I don't know. The hit rate was probably two-thirds or so of the cohort-
+
+[36:30] Sandwich: Yeah
+
+[36:30] Gigi: ... managed to create an applet.
+
+[36:33] Sandwich: More. [laughs]
+
+[36:34] Gigi: [laughs] 80-
+
+[36:35] Sandwich: Oh, the whole cohort.
+
+[36:36] Gigi: Yeah.
+
+[36:36] Sandwich: Yeah, two-thirds.
+
+[36:37] Gigi: Of the, of the people that were at the workshop, it was probably, like, 80%. And you could just load these applets in your OS, and it would just pop up-
+
+[36:45] Sandwich: Yeah
+
+[36:45] Gigi: ... and would just work. So-
+
+[36:47] Sandwich: You could load it in their strudel.
+
+[36:48] Gigi: Yeah.
+
+[36:48] Sandwich: It would work
+
+[36:50] Gigi: Yeah.
+
+[36:50] Sandwich: Py, uh, it might work. There was a bug there.
+
+[36:53] Gigi: [laughs] Amethyst.
+
+[36:55] Sandwich: Yeah, Amethyst.
+
+[36:55] Gigi: Still, yeah, I still, I still don't really know how to load them properly or how to view them all, but, you know, we had s- we had some successes. [laughs]
+
+[37:03] Sandwich: Yeah, there were some. The, the more simple ones loaded. Um, he hasn't chased the spec. Um, I don't blame him. Uh-
+
+[37:11] Gigi: Yeah, you mentioned it's still-
+
+[37:13] Sandwich: Yeah
+
+[37:13] Gigi: ... evolving, right?
+
+[37:14] Sandwich: Yeah, exactly. Uh, I'll probably have to open some PRs. Um, or it would even be better if someone from the cohort, you know-
+
+[37:22] Gigi: [laughs]
+
+[37:23] Sandwich: ... from the cohort, uh, opened an issue and everyone else put some thumbs up on it.
+
+[37:30] Gigi: We, we, we can do that on Amethyst no problem.
+
+[37:32] Sandwich: Yeah.
+
+[37:34] Gigi: [laughs] All right. That's the turnaround point. It's nice though, right? You've been here before, right?
+
+[37:43] Sandwich: Yeah.
+
+[37:44] Gigi: Yeah.
+
+[37:44] Sandwich: Yeah, I believe so.
+
+[37:44] Gigi: Yeah, yeah.
+
+[37:45] Sandwich: It looks familiar.
+
+[37:47] Gigi: That's the... My, my explicit goal, you see the, the, uh, dancing lights up there?
+
+[37:53] Sandwich: Uh-huh.
+
+[37:54] Gigi: The, the green and, and blue lights. There seems to be a party. That's a really nice house with, like, a glass, um, the, like, glass window front, and it's right on top of the cliff, and it goes straight down.
+
+[38:07] Sandwich: Oh, that's beautiful.
+
+[38:07] Gigi: And my, my, my goal in Madeira is to get to know the guy and just, you know, have coffee there and look down. That's- [laughs]
+
+[38:15] Sandwich: [laughs]
+
+[38:16] Gigi: ... It's one of my goals why, why I'm here. I wanna know who owns this place and-
+
+[38:20] Sandwich: Knock, knock, knock
+
+[38:20] Gigi: ... and just-
+
+[38:21] Sandwich: Yeah
+
+[38:21] Gigi: ... just come swing by for a coffee one day-
+
+[38:23] Sandwich: [laughs]
+
+[38:24] Gigi: ... and, and look straight down, like, 300 meters or something. Like, it's an insane cliff. And the, the, the building goes, like, right over the cliff. Like, it's literally... If you're, if you're in front of the glass, like, it, it, it will feel like you're flying.
+
+[38:37] Sandwich: Is it like that bar at, uh, what is it? Ponta do Sol?
+
+[38:41] Gigi: Oh, I don't-
+
+[38:41] Sandwich: It's like-
+
+[38:41] Gigi: I don't know the bar
+
+[38:42] Sandwich: ... there's, like, a-
+
+[38:42] Gigi: I don't think so
+
+[38:43] Sandwich: ... Yeah, there's, like, a bar, and it's... It's right over the cliff.
+
+[38:45] Gigi: Okay.
+
+[38:45] Sandwich: When you come into the city and then you turn right before you hit the, this tunnel, uh, there's this bar on the cliff.
+
+[38:52] Gigi: All right.
+
+[38:52] Sandwich: And it has, like-
+
+[38:53] Gigi: I'll, I'll have, I'll have to check that out. That sounds really cool.
+
+[38:54] Sandwich: Yeah, yeah. It's really pretty.
+
+[38:56] Gigi: So yeah. No, that's, that's good. Yeah, good place. Good place. All right. So we have the... or you have the, um, basically OS in the browser-
+
+[39:07] Sandwich: Yeah
+
+[39:07] Gigi: ... in pretty good shape, I would say.
+
+[39:09] Sandwich: Yeah, yeah. Yeah, it's not done.
+
+[39:10] Gigi: What's still, what's still missing? Like, what's... what, what are the bits and pieces-
+
+[39:13] Sandwich: Uh
+
+[39:13] Gigi: ... that you still wanna implement?
+
+[39:14] Sandwich: Uh, you know, some polish, uh, the onboarding. Um, there's still some bugs, uh, some 12-week conditions.
+
+[39:20] Gigi: You mentioned notifications, and you mentioned, um-
+
+[39:24] Sandwich: Notifications-
+
+[39:24] Gigi: ... inter-
+
+[39:25] Sandwich: ... are not done, yeah
+
+[39:26] Gigi: ... inter applet communication.
+
+[39:28] Sandwich: Yeah.
+
+[39:28] Gigi: Tell me a little bit about that. Like, how are you thinking about, um, like, one applet spawning an action or spawning something in another applet?
+
+[39:35] Sandwich: It's a scheme. So it's like an applet colon archetype slash intent parameters.
+
+[39:42] Gigi: So that's similar to, like, you open a deep link, and an app pops up, uh, on Android or iOS-
+
+[39:47] Sandwich: Yes
+
+[39:47] Gigi: ... and it does, like... I don't know. Like, ev- everyone kind of knows this. If you, I don't know, like, you, you have a video or whatever, and you go, like, share as a new post on Amethyst, and then it will pop up and do the thing and so on.
+
+[39:58] Sandwich: Yeah.
+
+[39:58] Gigi: So a similar idea.
+
+[39:59] Sandwich: Yeah.
+
+[39:59] Gigi: Like, how the, um, like intents and all those kind of things is-
+
+[40:03] Sandwich: Exactly
+
+[40:03] Gigi: ... is, is how this works as well.
+
+[40:04] Sandwich: Yeah.
+
+[40:05] Gigi: Okay.
+
+[40:05] Sandwich: Because I found that the semantics of data alone is really hard.
+
+[40:09] Gigi: You know what? Let's, let's go the o- let's go the other way, then, then we, we-
+
+[40:12] Sandwich: Yeah, sure
+
+[40:12] Gigi: ... have a little bit of a loop going. We don't go, go the, the same direction. I'm just saying the switcharoo. All right. So polish, and then you mentioned the next step would be-
+
+[40:23] Sandwich: So the inter-
+
+[40:23] Gigi: Pro-
+
+[40:23] Sandwich: ... applet communication.
+
+[40:24] Gigi: Yeah.
+
+[40:24] Sandwich: Right.
+
+[40:25] Gigi: Oh, yeah.
+
+[40:25] Sandwich: Yeah, yeah, yeah.
+
+[40:25] Gigi: Sorry. [laughs]
+
+[40:27] Sandwich: Um, [laughs]
+
+[40:27] Gigi: Very late. I know it was a long day. [laughs]
+
+[40:30] Sandwich: [laughs] I want... I gotta keep you on track.
+
+[40:32] Gigi: [laughs]
+
+[40:32] Sandwich: Uh, so yes, it's similar to Android and many operating systems. The semantics of the data were too constraining. Um, so the way they're defined... So this is very experimental. This could very well not work at all. Uh, but the way we're thinking of it is that if you're gonna open a profile, you're probably gonna pass an NPUB or an NPROFILE.
+
+[40:58] Gigi: Mm-hmm.
+
+[40:58] Sandwich: And we don't think that the developer that makes the app that talks to profile needs any specification to do that.
+
+[41:05] Gigi: Mm-hmm.
+
+[41:06] Sandwich: Um, we are kind of betting that people can sort of figure it out. [laughs]
+
+[41:11] Gigi: Okay.
+
+[41:12] Sandwich: Because it's implicit. It's like, what else are you gonna pass to a profile intent or-
+
+[41:17] Gigi: Mm
+
+[41:17] Sandwich: ... archetype, right? Um, uh, if it's, if it's like profile/open, then you're gonna be passing an NPUB, an NPROFILE, maybe a hex-
+
+[41:28] Gigi: Mm-hmm
+
+[41:29] Sandwich: ... if you're mean. Uh-
+
+[41:30] Gigi: Maybe an APEL5.
+
+[41:32] Sandwich: Yeah. And, and, yeah, exactly. And w- we, like, we're, we're, we're gonna, like, specify this in a repo somewhere. Uh, I don't, I really don't think so. Uh, and there's probably... If this is successful, there will be hundreds of thousands of potential m- like wire formats. Um, and we think we're gonna try to figure that out later because that is way too much overhead at this point-
+
+[41:57] Gigi: Mm-hmm
+
+[41:57] Sandwich: ... to try to design some system to manage these, these messages that we don't even know if this will exist. So right now, they're ad hoc. Um, so far it's working. Balash m- uh, made a profile maplet today, and it worked.
+
+[42:13] Gigi: It opened-
+
+[42:14] Sandwich: Yeah
+
+[42:14] Gigi: ... the, the feed, I believe.
+
+[42:16] Sandwich: Yeah.
+
+[42:17] Gigi: Um-
+
+[42:17] Sandwich: I th- I think at the point where we're at, the most important thing kind of is, can your agent make sense of it? It's less than, like-
+
+[42:25] Gigi: Yeah
+
+[42:25] Sandwich: ... is everything perfectly specified or-
+
+[42:27] Gigi: Exactly
+
+[42:28] Sandwich: ... whatever, like, for humans. It's just like, [laughs] is it in a state so that it makes sense to the LLM? [laughs]
+
+[42:33] Gigi: Yeah. Exactly. Um-
+
+[42:36] Sandwich: So it's, yeah
+
+[42:37] Gigi: ... and then also there's something magical about two developers being in two different locations, never talking, and just sort of being like, "Hey, we agree. It works."
+
+[42:45] Sandwich: Mm-hmm.
+
+[42:45] Gigi: Or, like, developer A is figuring it out.
+
+[42:47] Sandwich: Mm-hmm.
+
+[42:47] Gigi: Like, he's using developer B's maplet, and he's like, "How do I talk to this?" Figures it out.
+
+[42:52] Sandwich: And then he's just like, "I'm gonna use that. That makes sense."
+
+[42:54] Gigi: Yeah.
+
+[42:54] Sandwich: Um, I don't think we need to specify everything.
+
+[42:57] Gigi: Yeah, I think in, in the LLM world, in the agent world, over-specification is, is-
+
+[43:02] Sandwich: Yeah, can be a problem
+
+[43:02] Gigi: ... sometimes a burden. Yeah.
+
+[43:04] Sandwich: Yeah.
+
+[43:04] Gigi: So under-specifying, oftentimes you see, just works better. [laughs]
+
+[43:09] Sandwich: Mm-hmm.
+
+[43:10] Gigi: They'll, they'll, they'll figure it out.
+
+[43:12] Sandwich: Yeah.
+
+[43:13] Gigi: Okay. So no, oh, yeah, that's cool. So that's, that's next as well, right? Like, you, you said you're still working on that and the, yeah, the inter applet communication, like isn't-
+
+[43:25] Sandwich: Yeah
+
+[43:25] Gigi: ... isn't where it needs to be yet.
+
+[43:26] Sandwich: No.
+
+[43:27] Gigi: Okay.
+
+[43:27] Sandwich: No, it's experimental. We'll see what happens.
+
+[43:29] Gigi: And after that, uh, you mentioned probably a, a, a desktop shell.
+
+[43:35] Sandwich: Yep.
+
+[43:36] Gigi: Um, and yeah, after that, the more esoteric things, um-
+
+[43:41] Sandwich: Mm-hmm
+
+[43:41] Gigi: ... yeah, that you just went through before. So how can we best help? [laughs]
+
+[43:49] Sandwich: [laughs]
+
+[43:49] Gigi: If someone is excited about this, what's the, what's the best way to contribute and test it out and, and help you move things along?
+
+[43:57] Sandwich: Well, I mean, the dev tooling needs polish, needs work. Um, use cases need to be explored, and questions need to be asked and answered. Um, there is a danger in that though, because it is a little bit jarring for most Nostr developers to understand where the boundary of, of the shell, like the, the seam between the, the-
+
+[44:24] Gigi: Mm
+
+[44:24] Sandwich: ... the shell and the naplet is. And so, uh, there's this tendency-
+
+[44:28] Gigi: So it might be better if you're coming fresh.
+
+[44:30] Sandwich: A little bit, yeah.
+
+[44:31] Gigi: Yeah.
+
+[44:32] Sandwich: Um, so, like, a Nostr developer or anyone with a client can implement a runtime, like right now.
+
+[44:39] Gigi: Mm-hmm.
+
+[44:39] Sandwich: It's just a translation layer between the shell and their existing business logic.
+
+[44:43] Gigi: Mm-hmm. How long did it take Hazard to implement the shell in Nostr?
+
+[44:46] Sandwich: I don't know. I think, I think it was working really fast. Like, like, like, you know, kind of working in a few hours to a day.
+
+[44:53] Gigi: Hmm.
+
+[44:53] Sandwich: Um, I think he, he still has work to do on it, but, um, and it doesn't have that many capabilities yet. Uh, but I think it was, like, two days or three days until stable, but I don't wanna speak for him.
+
+[45:03] Gigi: Yeah, yeah.
+
+[45:04] Sandwich: Um-
+
+[45:04] Gigi: No, but that's awesome. It's... At least it's not weeks, you know.
+
+[45:06] Sandwich: No, I think-
+
+[45:07] Gigi: That's, that's really good
+
+[45:07] Sandwich: ... Vitor did it in, like, a day.
+
+[45:08] Gigi: Yeah. Yeah.
+
+[45:10] Sandwich: Um, but he also had a very limited subset of capabilities.
+
+[45:14] Gigi: Yeah.
+
+[45:16] Sandwich: Uh, any, uh, like any developer can make naplets because they have very little, uh, Nostr domain knowledge requirements. So you don't need to... Like, they don't need to think about anything. [laughs]
+
+[45:27] Gigi: You, you don't need to, like, deeply understand how Nostr works and need to know-
+
+[45:31] Sandwich: Exactly
+
+[45:31] Gigi: ... all the kinds and need to know all the, you know, intricate details of how the WebSocket connections work and, like, all this kind of stuff, right? Like that's-
+
+[45:39] Sandwich: Exactly
+
+[45:39] Gigi: ... the main benefit.
+
+[45:40] Sandwich: Yeah.
+
+[45:40] Gigi: You can just, you can just do stuff- [laughs]
+
+[45:43] Sandwich: Yeah
+
+[45:43] Gigi: ... more easily. [laughs]
+
+[45:44] Sandwich: You can just build things. Yeah.
+
+[45:45] Gigi: [laughs] Yeah. That's awesome.
+
+[45:48] Sandwich: And you-
+
+[45:48] Gigi: Okay
+
+[45:48] Sandwich: ... and you leave the security and the optimization to the runtime people.
+
+[45:51] Gigi: Awesome. Awesome.
+
+[45:52] Sandwich: Another cool opportunity is runtimes because I showed you, like, a pretty, um, powerful runtime, but they don't all have to be like that, and they can be many different things. So-
+
+[46:07] Gigi: So what you're, what you're saying is the runtime can be very slim-
+
+[46:09] Sandwich: Oh, yeah
+
+[46:10] Gigi: ... and very minimal.
+
+[46:11] Sandwich: It could also be have nothing to do with social. So I have a game from S, from Sec1. Uh, the... It was Pubkey Land, but I changed it to NPub Land for obvious reasons, and that uses naplets. That's a runtime, and you can use naplets as a modific- like, as a mod system-
+
+[46:31] Gigi: Hmm
+
+[46:31] Sandwich: ... for the game.
+
+[46:32] Gigi: Okay.
+
+[46:32] Sandwich: Permissionless.
+
+[46:34] Gigi: Huh. Interesting.
+
+[46:37] Sandwich: So in that, in that context, you can, like, place items on the user's land, and then when they go near it, you know, it pops up a naplet.
+
+[46:46] Gigi: Hmm.
+
+[46:46] Sandwich: And that could be one of many things.
+
+[46:47] Gigi: Mm-hmm, mm-hmm, mm-hmm, mm-hmm. Okay.
+
+[46:50] Sandwich: Um, then there's also, uh, global naplets. So you could have, like, a radio station playing from, uh, like, your own radio.
+
+[46:57] Gigi: Yeah, yeah. That's awesome.
+
+[46:58] Sandwich: Right.
+
+[46:58] Gigi: [laughs]
+
+[46:59] Sandwich: It's a small... That's, like, a really small example.
+
+[47:00] Gigi: [laughs]
+
+[47:01] Sandwich: Um, another thing would be something nothing related to social at all, or, like, very loosely related. Um, like music collaboration or video editing collaboration.
+
+[47:11] Gigi: Yeah.
+
+[47:11] Sandwich: That's all possible as well.
+
+[47:12] Gigi: Yeah.
+
+[47:14] Sandwich: Uh, you could have plugin systems. You could use naplets as a plugin for that application. Uh, and it doesn't necessarily need to be social, uh, social naplets at all.
+
+[47:27] Gigi: Yeah, yeah.
+
+[47:28] Sandwich: It could be very limited capabilities.
+
+[47:30] Gigi: Yeah, it doesn't need to make use of the social aspect of Nostr.
+
+[47:34] Sandwich: Yeah, you could-
+
+[47:34] Gigi: And-
+
+[47:34] Sandwich: ... just have the identities for the purpose of, like, sessions-
+
+[47:37] Gigi: Yeah
+
+[47:37] Sandwich: ... basically. Um-
+
+[47:39] Gigi: Yeah, yeah, yeah. I see. I see. I mean, one of the demos we saw today is, uh, the paint, uh, naplet that Hazard-
+
+[47:46] Sandwich: Oh, yeah
+
+[47:46] Gigi: ... Hazard I think built, right?
+
+[47:47] Sandwich: Yeah, yeah. Yeah.
+
+[47:48] Gigi: And so you, you literally have, like, an MS Paint style, uh, mini app, uh, as a naplet.
+
+[47:55] Sandwich: Yep.
+
+[47:55] Gigi: And, like, yeah, you can just load that everywhere and just [laughs] do your thing.
+
+[48:01] Sandwich: Yeah.
+
+[48:02] Gigi: [laughs]
+
+[48:02] Sandwich: You can load that in any client, and, you know. It could be used for whatever. Like, you could mark up images. A, a-
+
+[48:08] Gigi: Yeah
+
+[48:08] Sandwich: ... client could say, "Okay, cool. I want..." I don't know if it has this capability right now, but you could say, "Hey, load the image"-
+
+[48:15] Gigi: Yeah, yeah
+
+[48:15] Sandwich: ... um, "into here, and then from somewhere else"-
+
+[48:19] Gigi: Yeah. Yeah
+
+[48:19] Sandwich: ... "mark it up, and then post it as a comment."
+
+[48:22] Gigi: It's, it's a very-
+
+[48:22] Sandwich: So-
+
+[48:22] Gigi: ... interesting way of, like, decomposing... Like, Am- let's take Amethyst as the kitchen th- kitchen sink everything client.
+
+[48:30] Sandwich: Yeah.
+
+[48:30] Gigi: Like, no, no, no offense to Vitor, but everyone knows that it's just, like... W- whatever is out there, Vitor will put into Amethyst. [laughs]
+
+[48:37] Sandwich: It's a good thing. It's a sandbox. Yeah, it's fun.
+
+[48:39] Gigi: And, and so kind of the, uh, with the, with the naplet line of thinking, it's basically every, almost every feature of Amethyst or every, every screen in some sense and, and those kind of things, um, can be done as a naplet.
+
+[48:55] Sandwich: Yes.
+
+[48:55] Gigi: And can then be- recomposed in, in one of the shells. Like, again, like, it, it, it looks and feels like an operating system, and it just, like, pull out these widgets and place them where you wanna have them or, like, arrange them however you s- you, you see fit.
+
+[49:11] Sandwich: Right.
+
+[49:11] Gigi: And they're very loosely coupled, like the paint application we just mentioned that we saw today. Like, you paint the picture, whatever, like, paint or annotate something and so on, and then it's literally, like, right-click.
+
+[49:23] Sandwich: Copy. Yeah.
+
+[49:24] Gigi: Copy image.
+
+[49:25] Sandwich: Yeah.
+
+[49:25] Gigi: And then you go to your, like, whatever, sent tweet, [laughs] sen-
+
+[49:28] Sandwich: Yeah
+
+[49:28] Gigi: ... send post kind of thing, or to your long form, uh, applet, and you just paste it. And, you know, we're back in the good old days where everything-
+
+[49:36] Sandwich: Exactly
+
+[49:36] Gigi: ... is very simple. [laughs]
+
+[49:37] Sandwich: Yeah.
+
+[49:38] Gigi: So that's really cool.
+
+[49:39] Sandwich: It's really exciting.
+
+[49:40] Gigi: [laughs]
+
+[49:41] Sandwich: It's fun to see what people come up with, too.
+
+[49:42] Gigi: And, yeah, it's amazing how well it works. Like, I, I was blown away today how well it works and, and how, how fast everything is and kind of, again, like, just deploying, deploying an applet, it's basically you, you, you have this one file, and you sign it, and you push it to a relay, and then it's just out there. And, and you just... Like, I basically created a mini app in, like, five minutes on my machine-
+
+[50:04] Sandwich: Yeah
+
+[50:04] Gigi: ... pushed it out, like published it-
+
+[50:06] Sandwich: Yeah
+
+[50:06] Gigi: ... to, to, to, to nowhere.
+
+[50:08] Sandwich: [laughs]
+
+[50:08] Gigi: Like, you, you, you compared it to SAP Store as well, right?
+
+[50:11] Sandwich: Yeah, yeah.
+
+[50:11] Gigi: Like, with SAP Store as well, where-
+
+[50:12] Sandwich: Yeah
+
+[50:12] Gigi: ... you, you, you just, you just push it to your relays, it's out there. And your operating system basically immediately saw it. You immediately drag and dropped the thing onto your desktop, and it was there.
+
+[50:25] Sandwich: Yeah.
+
+[50:25] Gigi: And it's, it's-
+
+[50:26] Sandwich: It's amazing.
+
+[50:27] Gigi: Yeah. It, it-
+
+[50:28] Sandwich: It really is
+
+[50:28] Gigi: ... it was fantastic to see, like, how, how well it works and, and, and how everything plays together. So-
+
+[50:33] Sandwich: And how many different, uh, napplets came out, too. Almost everyone produced an applet.
+
+[50:38] Gigi: Yeah.
+
+[50:38] Sandwich: Um, there was a chess game that works, multiplayer.
+
+[50:42] Gigi: Yeah.
+
+[50:42] Sandwich: Although you can make, as the player, you can make both moves.
+
+[50:44] Gigi: [laughs]
+
+[50:45] Sandwich: Um. [laughs]
+
+[50:49] Gigi: [laughs] Yeah, caveat emptor, you know, like, like [laughs] absolutely everything is alpha, including the, the applets. [laughs]
+
+[50:55] Sandwich: Yeah. Yeah, of course. Of course. Um, and then it's also nice to see it, like, go into that exact same napplet, go into another runtime, and it does the exact same thing.
+
+[51:04] Gigi: Yeah, yeah. Yeah, really cool. Really cool. Yeah. Yeah, awesome. And so you got sidetracked by that, basically. The whole, the whole napplet idea swallowed you whole the last 12 months or so.
+
+[51:16] Sandwich: Ish. Well, I wasn't working full time on it.
+
+[51:18] Gigi: Yeah.
+
+[51:19] Sandwich: I didn't have the, uh, the energy or resources.
+
+[51:22] Gigi: [laughs]
+
+[51:22] Sandwich: But-
+
+[51:22] Gigi: Because you, you, uh, you've been involved in, in, in quite some projects, you know, like, uh-
+
+[51:29] Sandwich: Yeah
+
+[51:30] Gigi: ... um, lots of stuff on the relay side and, and-
+
+[51:34] Sandwich: Mm
+
+[51:34] Gigi: ... those kind of things. Um, was, uh, like, you, you mentioned you had this idea very early on. Was it helpful to... Like, talk to me a little bit about the No- the Nostr journey you, you went through in terms of development because pre-napplets, I, I feel like you occu- occupied yourself with very different ideas, you know? You did.
+
+[51:57] Sandwich: Oh, yeah. I mean, you could, you could say that. Um, it actually all builds up to this-
+
+[52:02] Gigi: Mm
+
+[52:02] Sandwich: ... if you look at it, right? So, um, like, and also I wanna, I wanna, uh, sort of correct previous statement. It wasn't, I didn't have an exact idea of this, but it was, like, a feeling that I didn't really have words for, and I just knew that it was on the horizon. But I also knew it couldn't be done right then-
+
+[52:23] Gigi: Mm
+
+[52:23] Sandwich: ... like, when I first found Nostr. Um, I mean, my journey started because I was on a self-funded sabbatical and, in 2022, and I was kind of miserable. And-
+
+[52:38] Gigi: [laughs] Many such cases.
+
+[52:39] Sandwich: [laughs] Yeah.
+
+[52:40] Gigi: [laughs]
+
+[52:40] Sandwich: And, and I was getting off of it, and I was like, "Okay, what am I gonna do? Am I gonna go get a contract? Am I gonna get a job?" And I was like, "No, I'm gonna, like, play around a little bit. I'm, I'm tired of that scene." And so I, uh, launched a Lightning node, and I install... I was playing around with various, uh, open source software. I think it was LNDg. And then there was a... Right, there was an input for a Nostr notification, and I'm like, "What the hell is Nostr?"
+
+[53:11] Gigi: Mm.
+
+[53:11] Sandwich: "This must be related to Bitcoin."
+
+[53:12] Gigi: [laughs]
+
+[53:13] Sandwich: And then I clicked on it. The repo was already starred.
+
+[53:18] Gigi: [laughs]
+
+[53:19] Sandwich: Um, a friend of mine later reminded me that we ran into it in 2020 when all the censorship stuff was going on.
+
+[53:25] Gigi: Mm.
+
+[53:25] Sandwich: But it was just, like, a repo, and then there was... We ne- we were actually looking for something to use. We weren't looking for something to build- [laughs]
+
+[53:31] Gigi: Mm
+
+[53:31] Sandwich: ... at the time. But I had starred it. Um, I was looking around. I started playing with Astral Ninja. I saw that it, it, they had activity, you know, maybe, like, the same 10 people over-
+
+[53:43] Gigi: Yeah
+
+[53:43] Sandwich: ... and over.
+
+[53:44] Gigi: Yeah. [laughs]
+
+[53:45] Sandwich: Um, [laughs] uh, and then I, I kind of just wanted to learn more because it seemed very interesting the way that it was laid out. I read NIP1, and it kind of immediately something happened in my head, and it just felt like an explosion. Like, I don't know. It's hard to explain, like the whole mind-blown means-
+
+[54:00] Gigi: It immediately made sense, basically.
+
+[54:01] Sandwich: Yeah, like, in a weird way.
+
+[54:03] Gigi: Yeah.
+
+[54:03] Sandwich: Uh, and not everything made sense perfectly, but it, something very deep-
+
+[54:07] Gigi: Yeah
+
+[54:07] Sandwich: ... uh, lured me in.
+
+[54:08] Gigi: Yeah.
+
+[54:09] Sandwich: And I-
+
+[54:09] Gigi: Let's maybe have a sip of water before we collapse, and also get a bit of distance-
+
+[54:13] Sandwich: Yeah, that would be a good idea
+
+[54:14] Gigi: ... to, to those.
+
+[54:15] Sandwich: Yeah.
+
+[54:16] Gigi: You know, usually after an hour, it's like your, your brain needs a little bit of water and-
+
+[54:20] Sandwich: Yeah, and, like-
+
+[54:20] Gigi: [laughs]
+
+[54:20] Sandwich: ... very little sleep as well.
+
+[54:22] Gigi: Yeah, yeah, yeah. [laughs]
+
+[54:22] Sandwich: On a hot day.
+
+[54:23] Gigi: I think it's a-
+
+[54:24] Sandwich: [laughs]
+
+[54:24] Gigi: It was a long, long day.
+
+[54:25] Sandwich: It was a long day.
+
+[54:26] Gigi: Mm.
+
+[54:26] Sandwich: Yeah.
+
+[54:27] Gigi: There you go.
+
+[54:28] Sandwich: Um.
+
+[54:30] Gigi: Yeah, yeah. And it's very late. It's, it's, you know, well-
+
+[54:33] Sandwich: Oh, come on.
+
+[54:34] Gigi: Yeah.
+
+[54:34] Sandwich: 10:17. I've had later nights than this.
+
+[54:35] Gigi: It's... You know, but I, you know, like, I'm an old man. I go to sleep with the kids usually. [laughs]
+
+[54:42] Sandwich: Oh. [laughs] This is two hours past my bedtime.
+
+[54:47] Gigi: All right. Yeah, have, have some more before, like, you know. Stay hydrated. Where's my, where's my Hydrollys?
+
+[54:54] Sandwich: Yeah, I could lower my heartbeat a little bit.
+
+[54:56] Gigi: [laughs]
+
+[54:57] Sandwich: Um, so I was looking for something to do 'cause the, uh- I was just curious, okay, what relays are out there? And then there was Nostr Relay Registry. I think it was Fiat Jafs. Maybe not. I don't remember. But I forked it, and then I was just... Also, the other thing is, is that I hadn't been working, uh, at a low level, as a low-level developer for many years. Like, I'm a developer, but I was doing higher level things.
+
+[55:26] Gigi: Mm-hmm.
+
+[55:27] Sandwich: Uh, and so I also sort of wanted to sort of reacclimate-
+
+[55:29] Gigi: Mm
+
+[55:30] Sandwich: ... to, to development. Um, and also, I, it had been even longer since I was doing front-end development.
+
+[55:35] Gigi: Mm.
+
+[55:36] Sandwich: So, uh, picking up the, the, uh, a fork of Nostr Relay Registry-
+
+[55:42] Gigi: Mm
+
+[55:42] Sandwich: ... which was sort of hurting and barely worked-
+
+[55:43] Gigi: And that became Nostr Watch.
+
+[55:45] Sandwich: And that became Nostr Watch. And then, like, I got sick. I got the flu, and I remember I was on my couch for... I was, like, bedridden for three days, and my phone just kept vibrating, like, over and over for, like, for, like, hours. And eventually, I, I could, like, look at the, the phone, 'cause, you know, I, I was very light sensitive at the time with the flu.
+
+[56:05] Gigi: [laughs]
+
+[56:06] Sandwich: And, and I'm like, it was like, like, 50 pull requests, and I'm like, "What the fuck?"
+
+[56:11] Gigi: [laughs]
+
+[56:11] Sandwich: So, um, I, like, go, and I'm like, "Okay, people are adding relays." I'm like, "Well, that's a lot of relays." Like, this... There was, I think, six relays online-
+
+[56:19] Gigi: Mm
+
+[56:19] Sandwich: ... when I started the thing. And it took me about a day to figure out that Jack had posted it, and then other people were sending people there to add their relays so that other people could find it.
+
+[56:29] Gigi: Mm-hmm.
+
+[56:29] Sandwich: Um, that became a whole thing. Um, uh, it's a, that's a mess. But-
+
+[56:35] Gigi: [laughs]
+
+[56:36] Sandwich: ... uh, I mean, it-
+
+[56:37] Gigi: How-
+
+[56:37] Sandwich: The thing is-
+
+[56:37] Gigi: How so? I still use Nostr Watch.
+
+[56:39] Sandwich: I know, I know, I know.
+
+[56:40] Gigi: [laughs]
+
+[56:40] Sandwich: A lot of people do. Um, it, it just, it took a lot out of me, and a lot of things happened, too, like, that year in 2023. Um, and it was just a pretty hard year. So-
+
+[56:52] Gigi: Yeah
+
+[56:52] Sandwich: ... uh, I- a- a lot of those memories are tied in with-
+
+[56:56] Gigi: Yeah, yeah, yeah. I see
+
+[56:56] Sandwich: ... with that sort of experience and-
+
+[56:58] Gigi: I see. Yeah
+
+[56:58] Sandwich: ... and also, you know-
+
+[56:58] Gigi: Having, having a side project that kinda-
+
+[57:00] Sandwich: Like, sucks it out
+
+[57:01] Gigi: ... you know-
+
+[57:01] Sandwich: Like, you're just being basically assaulted every day-
+
+[57:03] Gigi: It, it-
+
+[57:03] Sandwich: ... in a variety of ingredients
+
+[57:04] Gigi: ... not, it's not always good.
+
+[57:05] Sandwich: Yeah. [laughs]
+
+[57:05] Gigi: Not, not, not, not, not every phase of your life is side project friendly.
+
+[57:09] Sandwich: Exactly.
+
+[57:10] Gigi: [laughs]
+
+[57:11] Sandwich: Exactly. Um, it's, it's really stable now. I, I never touch it. I mean, there was a cross-site scripting attack a couple weeks ago, and I had to do an update. But other than that, it runs itself. It's very cheap. It's fast-ish. I mean, the client kind of sucks, but, um, the, the infrastructure is solid. It-
+
+[57:27] Gigi: No, I still use it
+
+[57:28] Sandwich: ... and I... Yeah
+
+[57:28] Gigi: I use it all the time, mostly to find, like, NIP50 relays and-
+
+[57:31] Sandwich: Yeah, yeah
+
+[57:31] Gigi: ... like, to just kind of, uh, you know, health check my own stuff and, and all kinds of things. Like, I think it's, it's, it's very, very useful.
+
+[57:38] Sandwich: Yeah.
+
+[57:38] Gigi: So thanks for building that as well.
+
+[57:39] Sandwich: Yeah.
+
+[57:39] Gigi: That's, that's great.
+
+[57:40] Sandwich: Appreciate it.
+
+[57:41] Gigi: [laughs]
+
+[57:42] Sandwich: Yeah. I, I don't get... I, I think I've g- gotten more thanks recently for it, uh, but up until a few, maybe, like, six months ago, it was definitely I got more crap for it than, than thanks. [laughs]
+
+[57:53] Gigi: I mean, that's always kind of disproportional, unfortunately-
+
+[57:56] Sandwich: Yeah
+
+[57:56] Gigi: ... uh, on the internet. Like, it's, it's, if something annoys you, it's very easy to scream at the guy and, like, whatever, and, and shit on stuff, and, and, and most of the people that are super happy with s- with things are just silent. Like, there's the silent majority-
+
+[58:11] Sandwich: Yeah. [laughs]
+
+[58:11] Gigi: ... that just y- you won't hear from. Uh, that's just how it goes. But yeah, you, you ran into nsight early on as well, and-
+
+[58:19] Sandwich: Yeah
+
+[58:19] Gigi: ... you built nsight.run as well.
+
+[58:21] Sandwich: Yep, yep.
+
+[58:21] Gigi: So-
+
+[58:21] Sandwich: Well, both nsight.runs. [laughs]
+
+[58:23] Gigi: Yeah. [laughs] Fair enough. Fair enough.
+
+[58:26] Sandwich: [laughs]
+
+[58:26] Gigi: Yeah. N- nsight is such a weird project.
+
+[58:29] Sandwich: It is.
+
+[58:30] Gigi: Uh, because, um, you know, the guy... When was it? Was it the-
+
+[58:33] Sandwich: Sec two
+
+[58:33] Gigi: ... second, second cohort, right?
+
+[58:35] Sandwich: Yeah, sec two.
+
+[58:35] Gigi: And, and, like, the original author of nsight, like, didn't really understand what he had with nsight.
+
+[58:43] Sandwich: Yeah.
+
+[58:44] Gigi: And so other people had to pick up the pieces and move it forward, and you were one of them, and Hazard was one of them as well.
+
+[58:49] Sandwich: Hazard was the big-
+
+[58:50] Gigi: Yeah
+
+[58:50] Sandwich: ... piece of it.
+
+[58:50] Gigi: Yeah.
+
+[58:51] Sandwich: Yeah, he took over the spec.
+
+[58:52] Gigi: Yeah.
+
+[58:53] Sandwich: Yeah.
+
+[58:53] Gigi: And so, so now, now it's definitely a, a, a thing, and, like, you know, half the demos we see, and, like, from SEC '03, '04 onward, like, half the demos were deployed as nsights, and that's, that's quite something to see.
+
+[59:06] Sandwich: Yeah, that's really great to see. Yeah.
+
+[59:07] Gigi: So what, what made you, what made you excited about nsight? What made you build nsight.run and all that stuff?
+
+[59:12] Sandwich: Actually nothing to do with nsight. To be honest, the first... I, I didn't have high hopes for nsight. I mean, I, obviously it's interesting to me. The reason why I did it is because I really love CLI interfaces and toolies, and I wanted to build a toolie.
+
+[59:27] Gigi: [laughs]
+
+[59:27] Sandwich: And I couldn't, and, and Florian did a great job at doing the first, um, uh, the first CLI for nsight.
+
+[59:34] Gigi: Mm.
+
+[59:34] Sandwich: But I really, uh, I like automation, and I didn't want to put my private key in some secrets field on some random website.
+
+[59:41] Gigi: Mm.
+
+[59:41] Sandwich: So I needed NIP46-
+
+[59:43] Gigi: [laughs]
+
+[59:43] Sandwich: ... and so I needed a more sophisticated key management system.
+
+[59:46] Gigi: Mm.
+
+[59:47] Sandwich: And I was like, "I wanna build a... I haven't built a beautiful CLI in over a decade." So I, like-
+
+[59:52] Gigi: [laughs]
+
+[59:52] Sandwich: That's, that's the main reason I did it. Um-
+
+[59:55] Gigi: [laughs] That's awesome
+
+[59:55] Sandwich: ... and I didn't expect that when I released it, that was the first time that a lot of people knew it existed.
+
+[1:00:00] Gigi: Yeah.
+
+[1:00:01] Sandwich: And then that kicked off people launching gateways and making their own CLIs and all this stuff, right?
+
+[1:00:07] Gigi: Right.
+
+[1:00:07] Sandwich: And people s- tried to use it. The first version didn't work very well. So I started the other nsight, [laughs] the nsight with the, that's spelt correctly, .run, to sort of coalesce people around the, uh, the specification.
+
+[1:00:22] Gigi: Yeah.
+
+[1:00:23] Sandwich: And then over the next year, I think it was, um, Hazard slowly developed the specification, identified things that were wrong. Um, I think at one point he was willing to give up on it, but he, he pushed forward, and he pushed a new spec. I believe it was December of 2025, he, he finally, like, we landed somewhere after some contention about how it should actually work, and, uh, nobody updated anything.
+
+[1:00:52] Gigi: Mm.
+
+[1:00:52] Sandwich: And so I was kind of getting pissed off and fed up with Master, to be honest.
+
+[1:00:57] Gigi: [laughs]
+
+[1:00:58] Sandwich: And I was like, "I need to take a break from this," but-
+
+[1:01:01] Gigi: I remember
+
+[1:01:01] Sandwich: ... the nsight... Yeah.
+
+[1:01:02] Gigi: I, I-
+
+[1:01:02] Sandwich: Yeah
+
+[1:01:02] Gigi: ... I told you to go into the woods-
+
+[1:01:04] Sandwich: [laughs]
+
+[1:01:04] Gigi: ... and stay there for a couple months or, like-
+
+[1:01:06] Sandwich: That didn't happen
+
+[1:01:06] Gigi: ... you know, go into Solike.
+
+[1:01:07] Sandwich: And then instead-
+
+[1:01:07] Gigi: You didn't listen. You didn't listen. [laughs]
+
+[1:01:09] Sandwich: No, I didn't.
+
+[1:01:10] Gigi: [laughs]
+
+[1:01:11] Sandwich: Um- And so I was like, "Well, before I do this, this nsight thing is pissing me off. No one's updated their stack." So I sort of just learned from the first time that it's just if you do it, then other people will follow. So I built out... I basically just chased the spec everywhere. So I released an nsight v2 gateway Blossom server for it. Um, not that it matters, but... And a relay, uh, that only accepts nsight events, and then I updated the CLI, and then I added a web deployer so you wouldn't have to download anything, and you could just drop an, a static site onto the deployer. And, um, it's actually the... It was made really funny too, 'cause the infrastructure is... It's all edge scripting on bunny.net.
+
+[1:02:00] Gigi: Okay.
+
+[1:02:01] Sandwich: Everything.
+
+[1:02:01] Gigi: Okay.
+
+[1:02:01] Sandwich: The relay.
+
+[1:02:02] Gigi: [laughs]
+
+[1:02:02] Sandwich: The Blossom server. Like, it's... There, there's... It's completely serverless and, like, has very tight constraints. Uh, that was kind of a fun problem to solve, and it barely works, but-
+
+[1:02:11] Gigi: [laughs]
+
+[1:02:11] Sandwich: ... it's, it's very cheap to run. Um, uh, and that was actually not intended for long-term infrastructure. It was just to get people to update their, their stack.
+
+[1:02:21] Gigi: Yeah.
+
+[1:02:21] Sandwich: Um, I'm actually gonna take it down soon. So, uh, pushed that out, you know. Made... I think I, I shared something. I pushed that out, it got some traction, and then I made a novel... sort of proposed a novel idea about how you can use nsights with, like, stealing them, and, like, spraying-
+
+[1:02:44] Gigi: Oh, yeah, yeah. I know
+
+[1:02:44] Sandwich: ... yeah.
+
+[1:02:44] Gigi: The, uh-
+
+[1:02:44] Sandwich: Yeah
+
+[1:02:44] Gigi: ... you can steal these nsights button.
+
+[1:02:46] Sandwich: And that, and that had, like, a virality to it, and then that gave me the leverage to then, like, tag everyone who has infrastructure and say, "Update your shit."
+
+[1:02:54] Gigi: Yeah. Yeah.
+
+[1:02:54] Sandwich: And then, um, it got updated, and a week later it was merged.
+
+[1:02:57] Gigi: Yeah. Awesome.
+
+[1:02:58] Sandwich: So.
+
+[1:02:59] Gigi: Awesome. And you mentioned, like, all these little parts of, of your journey. Um, like, like everything that you just mentioned led to the Naplet idea in some way-
+
+[1:03:12] Sandwich: Yeah. Yeah
+
+[1:03:12] Gigi: ... kind of.
+
+[1:03:13] Sandwich: Yeah, it did. Uh-
+
+[1:03:14] Gigi: Yeah
+
+[1:03:14] Sandwich: ... so relays too. So hard-coded relays really bother me. Um, I mean, you're always gonna have a bootstrap. That's always gonna be a part of it.
+
+[1:03:23] Gigi: Yeah, yeah. I mean, yeah.
+
+[1:03:24] Sandwich: But there are al- ... There's so many different varieties of relays that you start to hard-code relays into everything. And to have a truly, like, dynamic system-
+
+[1:03:35] Gigi: Yeah, yeah
+
+[1:03:35] Sandwich: ... you need to have a way to find them-
+
+[1:03:36] Gigi: Yeah, yeah. You need-
+
+[1:03:37] Sandwich: ... without hard coding them
+
+[1:03:37] Gigi: ... you need relay discovery, and yeah. And I mean, that's why Pablo has been harping on, uh, you know, outbox for such a long time because otherwise Nostr is kind of, uh, like, yeah, useless [laughs] in some sense.
+
+[1:03:51] Sandwich: Yeah. Yeah.
+
+[1:03:51] Gigi: Like, uh [laughs] the... If we don't have that, everything will centralize about one... around one or two big relays.
+
+[1:03:57] Sandwich: Yeah.
+
+[1:03:57] Gigi: And-
+
+[1:03:57] Sandwich: And, and outbox solves most of it-
+
+[1:03:59] Gigi: Yeah
+
+[1:03:59] Sandwich: ... but it doesn't solve every problem. Um-
+
+[1:04:01] Gigi: Yeah. So talk to me about NIP 66 and your-
+
+[1:04:04] Sandwich: Oh, geez.
+
+[1:04:04] Gigi: Yeah.
+
+[1:04:04] Sandwich: Are you sure?
+
+[1:04:05] Gigi: [laughs]
+
+[1:04:05] Sandwich: Are you sure your audience wants to hear anything about NIP 66?
+
+[1:04:08] Gigi: [laughs]
+
+[1:04:09] Sandwich: Um-
+
+[1:04:09] Gigi: Because it's related to that as well, right?
+
+[1:04:10] Sandwich: Isn't it, like, all of, like-
+
+[1:04:11] Gigi: Yeah
+
+[1:04:11] Sandwich: ... sack your audience?
+
+[1:04:12] Gigi: [laughs]
+
+[1:04:12] Sandwich: I mean, I'm pretty sure they all just turned it off.
+
+[1:04:15] Gigi: No. [laughs]
+
+[1:04:16] Sandwich: [laughs]
+
+[1:04:16] Gigi: It's fine. It's fine. Like, you just have to be... Like, we, we're not doing this for the audience.
+
+[1:04:20] Sandwich: [laughs]
+
+[1:04:20] Gigi: So this... I, I'm doing this to pick your brain.
+
+[1:04:22] Sandwich: Um-
+
+[1:04:22] Gigi: And you just have to be okay. Like, the way it goes is, like, we start to walk.
+
+[1:04:26] Sandwich: Yeah.
+
+[1:04:26] Gigi: We have, like, maybe five people listening, you know?
+
+[1:04:28] Sandwich: Yeah. Right.
+
+[1:04:28] Gigi: And then, like, after 20 minutes may- it's down to three people.
+
+[1:04:31] Sandwich: [laughs]
+
+[1:04:31] Gigi: After an hour... And we're an hour in now.
+
+[1:04:33] Sandwich: [laughs]
+
+[1:04:34] Gigi: Uh, after an hour it's, like, one guy with half a brain listening maybe.
+
+[1:04:38] Sandwich: [laughs]
+
+[1:04:38] Gigi: You know? And-
+
+[1:04:38] Sandwich: Asleep.
+
+[1:04:39] Gigi: Yeah, it's probably Pablo who's asleep, you know? Like, that's [laughs]... That's how he goes.
+
+[1:04:43] Sandwich: [laughs]
+
+[1:04:43] Gigi: So, so, so yeah, no-
+
+[1:04:45] Sandwich: Um-
+
+[1:04:45] Gigi: ... t- talk to me a little bit about c- you know, like, how, how you think about outbox and, and relay discovery and, and that. Talk to me about NIP 66 as well. I wanna hear it all.
+
+[1:04:54] Sandwich: Yeah. Yeah.
+
+[1:04:55] Gigi: [laughs]
+
+[1:04:55] Sandwich: So, like, so, so NIP 66 is really interesting to me 'cause it, it, it's a sta- it's using Nostr as a state machine, and it's fuzzy. It's not a global state. It's relative to what the user trusts. Um, the npubs, like, a, a monitor, an observer is just an npub publishing that... some information about a, uh, about a relay, and that can just be someone you follow or that could be your web of trust. That could be anything. It's a base... I- at first glance, it seems very arbitrary and useless until you actually understand the domain of relays on Nostr. It's actually really freaking complicated because they're just fuzzy strings. They're, they're, they're not guaranteed unique. Um, NIP 1 up until recently didn't specify any rules around how relays should handle their segments or paths. And so DeMus, like relay.demus.io is the same as relay.demus.io.io/gg. Both will respond as a relay.
+
+[1:06:03] Gigi: Mm.
+
+[1:06:04] Sandwich: This creates all sorts of optimization-
+
+[1:06:06] Gigi: I see
+
+[1:06:06] Sandwich: ... problems for clients. Um, and so, and so th- this is just an example of one of the complexities.
+
+[1:06:12] Gigi: Yeah.
+
+[1:06:12] Sandwich: There's a lot of them. Um, most of it is garbage. I mean, there's, like, probably, like, 15,000, if not 20,000 unique strings that are relays, but, uh, most of them are either-
+
+[1:06:23] Gigi: Sure
+
+[1:06:23] Sandwich: ... online or it's just garbage.
+
+[1:06:24] Gigi: Mm-hmm.
+
+[1:06:24] Sandwich: You know, some client bug-
+
+[1:06:26] Gigi: Mm
+
+[1:06:26] Sandwich: ... seven months ago that still exists somewhere.
+
+[1:06:28] Gigi: Okay. Interesting.
+
+[1:06:29] Sandwich: Yeah. So that's, like, one problem. Um, the other one is, is that y- like, if you want to find out-of-band relays, so you wanna find, for example, like you're saying, NIP 50, uh, doing that in a web of trust will probably be difficult. There's no way to say, "Hey, I want all the NIP 50 relays in my web of trust," without hitting every one of their NIP 11s-
+
+[1:06:50] Gigi: Yeah
+
+[1:06:50] Sandwich: ... deduplicat- deduplicating the relays on client side. And you can do this over time actually pretty efficiently-
+
+[1:06:56] Gigi: Mm-hmm
+
+[1:06:57] Sandwich: ... um, and, uh, et cetera. But it's not only just discovery because you can build data on top of it. So there is a NIP called trusted relay assertions.
+
+[1:07:09] Gigi: Mm. Yeah, I saw that recently. I, I still haven't wrapped my head around the trusted assertions bit.
+
+[1:07:14] Sandwich: Yeah. It's, so r- trusted relay assertions are the same idea as trusted assertions, but for relays, and that's someone building data on top of the liveness data. So they know what, what... Because what the liveness data does is it reduces the amount of work someone else has to do to build on top of that, right?
+
+[1:07:30] Gigi: Mm-hmm.
+
+[1:07:31] Sandwich: And now you can sort relays based on these, you know, subjective trust scores.
+
+[1:07:36] Gigi: Yeah.
+
+[1:07:36] Sandwich: And there could be many of those, and you could pick-
+
+[1:07:37] Gigi: Yeah
+
+[1:07:37] Sandwich: ... which one you th- you support.
+
+[1:07:39] Gigi: Yeah.
+
+[1:07:39] Sandwich: Okay. So then how does this help-
+
+[1:07:41] Gigi: So it's-
+
+[1:07:41] Sandwich: ... anything?
+
+[1:07:41] Gigi: Yeah. Ping, reachability, liveness, is it in your web of trust, all those kind of things.
+
+[1:07:45] Sandwich: Exactly.
+
+[1:07:46] Gigi: Yeah.
+
+[1:07:46] Sandwich: Um, so then, like, there's a lot of uses for this, and some of it is contentious. And, um, uh, there's been some people that have chimed in and said that they don't like the trust model, but, uh, you can use this data in order to optimize your outbox connections, to prioritize, uh, a- as a second layer of prioritization after, uh, web of trust grouping. So, like, you would need to group the relays by how many of your followers are on a specific relay so that you get as many notes as quickly as possible, right?
+
+[1:08:18] Gigi: Yeah.
+
+[1:08:18] Sandwich: But you can do a secondary pass on speed, you can do it on trust, you could do it on decentralization.
+
+[1:08:24] Gigi: Mm-hmm.
+
+[1:08:25] Sandwich: Um, you could do it on specific NIP support if you're looking for specific types of notes.
+
+[1:08:28] Gigi: Yeah.
+
+[1:08:29] Sandwich: And this makes the client more responsive. I actually use... The first thing I did in Hyper in the, um, in the, uh, operating system-
+
+[1:08:36] Gigi: Uh-huh
+
+[1:08:37] Sandwich: ... is to, uh, implement NIP66, and it's used very exclusively in outbox optimizations, and to help with also, like, auto-complete throughout the entire application, in any applet really. Um, and I found it to speed things up quite a bit. Um, there has been research by someone that has been contentious in the past, but my findings, uh, have mirrored what he found as well. Um...
+
+[1:09:03] Gigi: We're not gonna name names? [laughs] No, it's okay. You don't have to. [laughs]
+
+[1:09:09] Sandwich: No, I, I, I like him. He's a friend of mine.
+
+[1:09:12] Gigi: [laughs]
+
+[1:09:12] Sandwich: Um, but he, he caused some problems in your repo at one point.
+
+[1:09:16] Gigi: [laughs]
+
+[1:09:16] Sandwich: And, and, uh-
+
+[1:09:17] Gigi: There we go. [laughs]
+
+[1:09:19] Sandwich: Yeah.
+
+[1:09:19] Gigi: Identified. [laughs]
+
+[1:09:20] Sandwich: [laughs]
+
+[1:09:20] Gigi: And Papa identified.
+
+[1:09:21] Sandwich: It's okay, it's okay, it's okay.
+
+[1:09:22] Gigi: [laughs]
+
+[1:09:23] Sandwich: He's a really nice guy. One of the, one of the sweetest people I know.
+
+[1:09:26] Gigi: [laughs]
+
+[1:09:27] Sandwich: Um, uh, so yeah, I mean, it's, it's just, you know, adding the ability to discover relays might seem arbitrary. Um, and it kind of is. Uh, there's not that many right now. Uh, if you include Tor and I2P, it's, like, 1,500 after de-duplication. There's some margin of error because-
+
+[1:09:46] Gigi: I mean, that's more relays than users.
+
+[1:09:48] Sandwich: Yeah, pretty much.
+
+[1:09:49] Gigi: [laughs]
+
+[1:09:49] Sandwich: Yeah. And so-
+
+[1:09:50] Gigi: So there is a lot of relays. [laughs]
+
+[1:09:52] Sandwich: Yeah, yeah.
+
+[1:09:53] Gigi: What the fuck? That's a bird. Oh, wow. That was the weirdest sound I've heard in a long time.
+
+[1:10:03] Sandwich: Same.
+
+[1:10:03] Gigi: Like, that was... It's, it... I, I, I thought, I thought-
+
+[1:10:06] Sandwich: I thought it was, like, a drone with a speaker.
+
+[1:10:06] Gigi: Yeah, me too. Me too.
+
+[1:10:07] Sandwich: I was like, "Where is G?"
+
+[1:10:09] Gigi: Me too.
+
+[1:10:09] Sandwich: [laughs]
+
+[1:10:09] Gigi: That, that was super weird. Like, that was a very, very weird sounding bird.
+
+[1:10:14] Sandwich: Yeah.
+
+[1:10:15] Gigi: See?
+
+[1:10:16] Sandwich: Yeah.
+
+[1:10:16] Gigi: Night active. Night active birds. I really hope the microphones picked that up. That's so weird. [laughs]
+
+[1:10:21] Sandwich: That's the weirdest sound I've heard in a while.
+
+[1:10:23] Gigi: Holy shit. [laughs] Squeaky, random squeaky bird. [laughs]
+
+[1:10:28] Sandwich: Anyways, I could go on-
+
+[1:10:29] Gigi: It's strange
+
+[1:10:29] Sandwich: ... for hours about the intricacies of, of relays. It's, it's not that interesting. Um, I think it's more interesting-
+
+[1:10:35] Gigi: It's interesting to me.
+
+[1:10:37] Sandwich: Yeah.
+
+[1:10:37] Gigi: Like, h- the, the fact you, that you mentioned that you created a relay that exclusively accepts, um, uh... In what context was it? I'm blanking out. NSight.
+
+[1:10:48] Sandwich: Yeah.
+
+[1:10:48] Gigi: Uh, NSight events. Um, that's fascinating to me.
+
+[1:10:51] Sandwich: Yeah.
+
+[1:10:51] Gigi: Like, I always loved Pablo's idea. [bird squeaking] [laughs] Holy shit, what kind of bird is that? It's almost-
+
+[1:10:59] Sandwich: I think it's an alien. [laughs]
+
+[1:11:01] Gigi: So strange. Anyway, um, so he did Purple Pages of course.
+
+[1:11:05] Sandwich: Yeah, of course. Early.
+
+[1:11:06] Gigi: And, and-
+
+[1:11:06] Sandwich: Very early
+
+[1:11:07] Gigi: ... very early. Yeah. And, um, yeah, I'm, I'm very tempted to kind of go hard on my relays. Like, I, I, I, I have a couple relays, like mostly web of trust and just Haven I use a lot for, like, basically personal use and backups and so on. And I've... I, I wanna do my own instance of Purple Pages just for profile lookups.
+
+[1:11:29] Sandwich: Mm-hmm.
+
+[1:11:29] Gigi: And I wanna do one, I wanna rebuild Boris, my highlight app.
+
+[1:11:33] Sandwich: Oh, yeah.
+
+[1:11:33] Gigi: And I just wanna do one for highlights and long form stuff and so on. And like, it's, it's... I, I really wanna lean into the specialization you've, you've hinted at. So how, how do you, how do you think about, like, going forward, the evolution of relays and relay discovery and relay specialization and all those kind of things?
+
+[1:11:52] Sandwich: Yeah.
+
+[1:11:53] Gigi: It's fascinating.
+
+[1:11:53] Sandwich: So, so Hazard and I have been, like, bouncing off each other for a, a year and a half I think. Um, and he opened... We, we were talking in Costa Rica, like, eight months ago or so, and we settled on relay attributes. Um, so you can add attributes to your NIP11, um, up to nine PascalCase. There's a reason for that. Um, we, uh... Anyone who aggregates them should truncate anything after nine. Uh, and that allows them to be found based on self-descriptive words about the relay. Not technical implementations, but subjective decisions made by the relay operator or developer that resulted in the way the relay behaves. So an example would be, like, pub key indexer, which would be, um, Purple Pages.
+
+[1:12:49] Gigi: Yeah.
+
+[1:12:49] Sandwich: But we're not trying to atomize them at all.
+
+[1:12:51] Gigi: Okay.
+
+[1:12:52] Sandwich: Um, we don't want to. We think that people can just coalesce around words-
+
+[1:12:55] Gigi: So-
+
+[1:12:55] Sandwich: ... and form their own words.
+
+[1:12:56] Gigi: Yeah. Okay, okay.
+
+[1:12:56] Sandwich: And then, and it'll be messy.
+
+[1:12:59] Gigi: Yeah.
+
+[1:13:00] Sandwich: Um-
+
+[1:13:00] Gigi: Like hashtag clouds, whatever-
+
+[1:13:01] Sandwich: Exactly
+
+[1:13:02] Gigi: ... those kind of things. Yeah.
+
+[1:13:02] Sandwich: And, and that would allow relays to be found-
+
+[1:13:04] Gigi: Yeah
+
+[1:13:05] Sandwich: ... um, based on what they do.
+
+[1:13:06] Gigi: Yeah.
+
+[1:13:06] Sandwich: And in this case, like, uh, highlights, you could come up with some terminology and coalesce around with similar... uh, coalesce around a term with similar, uh, relays.
+
+[1:13:16] Gigi: Yeah.
+
+[1:13:17] Sandwich: Um.
+
+[1:13:18] Gigi: Yeah, yeah, I see. No, I think-
+
+[1:13:19] Sandwich: So that, that is sort of the end game because at that point you don't need to hard code all these relays. You can actually even allow users to fix it themselves, and it's intuitive.
+
+[1:13:29] Gigi: Yeah. Yeah, I think also in terms of... I think tagging kind of is the right approach because it's not only what kind of data do, do you allow.
+
+[1:13:36] Sandwich: Yeah.
+
+[1:13:36] Gigi: It's way more than that. It's like what capabilities do you offer. Like, you might support search, NIP50, or you don't. Um, it might be a web of trust gated or it isn't. It might be paid or it's free, and all those kind of things.
+
+[1:13:46] Sandwich: Yeah, exactly.
+
+[1:13:46] Gigi: All... You have all these dimensions of relay specialization. Um, and yeah, or you just, whatever, geo-block like the Japanese relays, you know.
+
+[1:13:54] Sandwich: Yep.
+
+[1:13:54] Gigi: It's like if you're not from Japan, like go fuck yourself. [laughs]
+
+[1:13:58] Sandwich: Yeah. Yeah, yeah, yeah.
+
+[1:13:59] Gigi: And, and yeah, no, okay. Th- Yeah, no, all that's, all that's fascinating. Um-
+
+[1:14:04] Sandwich: You can already right now, without the attributes, you can already do payment, uh, filtering.
+
+[1:14:11] Gigi: Yeah.
+
+[1:14:11] Sandwich: So it's just capital R tag-
+
+[1:14:13] Gigi: Yeah
+
+[1:14:13] Sandwich: ... and then payment. And then if you want it free, like no payment, it's exclamation point payment-
+
+[1:14:18] Gigi: Yeah
+
+[1:14:18] Sandwich: ... due to the limitations-
+
+[1:14:19] Gigi: Yeah
+
+[1:14:20] Sandwich: ... in NIP1. Um, and then also the same for restricted rights.
+
+[1:14:24] Gigi: Okay.
+
+[1:14:25] Sandwich: So, um, and then also for proof of work.
+
+[1:14:27] Gigi: Yeah.
+
+[1:14:27] Sandwich: So you can find proof of work relays. You can find-
+
+[1:14:29] Gigi: Yeah
+
+[1:14:29] Sandwich: ... paid relays, public relays. You can find Clearnet, TorNet or Tor-
+
+[1:14:33] Gigi: Yeah
+
+[1:14:33] Sandwich: ... I2P, soon FIPS.
+
+[1:14:35] Gigi: Yeah.
+
+[1:14:35] Sandwich: If someone does it. I'm waiting for someone else to do it. I could easily do it, but I can't do everything. Like, someone else needs to find the need and do it.
+
+[1:14:42] Gigi: We'll, we'll, we'll nerd snipe someone with-
+
+[1:14:44] Sandwich: Yeah
+
+[1:14:44] Gigi: ... with the FIPS stuff. It's, you know.
+
+[1:14:46] Sandwich: I think it'll be more important-
+
+[1:14:47] Gigi: [laughs]
+
+[1:14:47] Sandwich: ... in the future-
+
+[1:14:48] Gigi: Yeah
+
+[1:14:48] Sandwich: ... if I'm being honest.
+
+[1:14:49] Gigi: Yeah.
+
+[1:14:49] Sandwich: And maybe there'll be a better way to do it in the future. Um, it may have been a waste of time, but maybe not.
+
+[1:14:55] Gigi: Yeah. Last thing. Last 20 minutes. We'll, we'll, we'll... That then will be 20 minutes to the tunnel invite-
+
+[1:15:02] Sandwich: Yeah, sure
+
+[1:15:02] Gigi: ... something like that. Um, your development setup-
+
+[1:15:07] Sandwich: Yeah
+
+[1:15:07] Gigi: ... um, that has been happening since basically SSE 03 or something. Like, when, when, when vibe coding came around, you were one of the first people that I know that went like, "Okay," like, "let's just do Waterfall." [laughs]
+
+[1:15:25] Sandwich: Yeah. [laughs]
+
+[1:15:25] Gigi: Like, agents are really good at Waterfall.
+
+[1:15:27] Sandwich: Yeah.
+
+[1:15:28] Gigi: So write the specification.
+
+[1:15:30] Sandwich: Yeah.
+
+[1:15:30] Gigi: Like, everything that's like 30 years old is perfect. Like it's, it's-
+
+[1:15:34] Sandwich: Yeah
+
+[1:15:34] Gigi: ... the LLMs have gobbled it up and internalized it and so on.
+
+[1:15:37] Sandwich: Yeah.
+
+[1:15:37] Gigi: And, and, um, yeah, I, I wanna hear more about your vibe coding journey-
+
+[1:15:45] Sandwich: Yeah
+
+[1:15:45] Gigi: ... and like how it evolved and how you started. And you, you talked about it a little bit when you mentioned that your friend, you know, like he... You, you weren't using anything from the Anthropic side, and he made you like-
+
+[1:15:57] Sandwich: Yeah
+
+[1:15:57] Gigi: ... look into that, and so on. And, um, yeah, you, you showed some of the things of today in the first workups, works, workshop session as well-
+
+[1:16:06] Sandwich: Oh, yeah, yeah
+
+[1:16:06] Gigi: ... with like, uh, GSD, uh-
+
+[1:16:08] Sandwich: Uh-huh
+
+[1:16:08] Gigi: ... GetJitDone and so on. So, so, so talk to me about not only the evolution of your tool set, but also how you think about basically how to, how to properly build production-ready stuff-
+
+[1:16:25] Sandwich: Yeah
+
+[1:16:25] Gigi: ... in the agentic world, because I think you're exceptionally good at that. Like, you're... Y- We, we talked about the distinction today between prototyping and building something that's production ready.
+
+[1:16:34] Sandwich: Yeah.
+
+[1:16:34] Gigi: And like, you know, ex- explain where you're at and, and, and a little bit. Talk, talk me through your journey.
+
+[1:16:39] Sandwich: Sure. Uh, it started really early. I mean, basically right when LLMs came out, a bunch of nerds, you know, s- the first thing they try to do is make an agent. That's the very first thing.
+
+[1:16:49] Gigi: Yeah.
+
+[1:16:49] Sandwich: It's like, uh, you had two, two big projects. Um, uh, Auto GPT and Baby AGI. Um, neither of them really worked, right? I could, I could get agents to, to go in loops and have turns and sort of go in some direction. But like imagine, you know like when you get angry at your agent? Imagine it, it's like Q points were like 100 points lower. That's what it was like.
+
+[1:17:14] Gigi: Yeah. [laughs] Yeah, yeah, yeah.
+
+[1:17:14] Sandwich: Like, it, it, it... Like, you get angry at it for like writing comments somewhere and leaving a stub or a to-do.
+
+[1:17:20] Gigi: Yeah.
+
+[1:17:20] Sandwich: Like, this thing would like write the same file over and over like 100 times.
+
+[1:17:24] Gigi: Yeah. [laughs]
+
+[1:17:24] Sandwich: Like right next to each other.
+
+[1:17:25] Gigi: Yeah.
+
+[1:17:25] Sandwich: And then like go to your root folder and just start, you know.
+
+[1:17:28] Gigi: Yeah.
+
+[1:17:28] Sandwich: Um, uh, but that's where it started. Um, and then I tried, 'cause I have an experience. You know, I've, I've worked with teams. I've ran teams. I've been doing it since I was pretty young. Like, some of my earliest projects were me hiring people in Eastern Europe to do projects for me, and I would learn from, you know, working with them how to do things, and it was a great education. Um, better than any university experience I've ever-
+
+[1:17:54] Gigi: So you were, you were agent babysitting before it was cool. [laughs]
+
+[1:17:58] Sandwich: [laughs] Waiting for-
+
+[1:17:58] Gigi: And they, they, they-
+
+[1:17:59] Sandwich: I should have been outside skateboarding or-
+
+[1:18:00] Gigi: And they all had a Russian accent
+
+[1:18:02] Sandwich: Yeah.
+
+[1:18:03] Gigi: [laughs]
+
+[1:18:03] Sandwich: Uh, usually, usually Ukrainian or Romanian.
+
+[1:18:05] Gigi: Same, same.
+
+[1:18:06] Sandwich: Yeah, yeah.
+
+[1:18:06] Gigi: Same, same. All the same. [laughs]
+
+[1:18:07] Sandwich: Um, so I had some experience, and so I would try to apply that because it seems obvious. You have these, these beings that are s- non-sentient-
+
+[1:18:20] Gigi: [laughs]
+
+[1:18:20] Sandwich: ... um, but you can give them instructions, and they do things. Um-
+
+[1:18:23] Gigi: These entities that produce code. [laughs]
+
+[1:18:25] Sandwich: Yeah, exactly. So it seemed very obvious to me that, you know, it's, this is where it was going. And every few months I would always try, like see where it was at, see where it was at. And at some point in 2024 it became obvious to me... I think it was actually... Fiat Jaf asked me about it. He's like, "So how's AI doing?" I'm like, "I think we're getting close."
+
+[1:18:44] Gigi: [laughs]
+
+[1:18:44] Sandwich: Um, I said like a year or something, and I think I was right. I don't remember the timeframe though. Um. And I... When was the first time I had success? It was the end of 2024. I was... A reasoning model. I think it was the end of 2024. I, I could be wrong, but I think there were some reasoning models that finally came out, and that obviously they're not actually reasoning. But for the first time-
+
+[1:19:10] Gigi: Let's build up some space
+
+[1:19:12] Sandwich: ... for the first time, I was able to give an agent an instruction, and it would start to ... inflect on its decisions. And when that happened, I noticed a abrupt change in its ability for me to delegate something to it and for it to come back to me with something of value.
+
+[1:19:32] Gigi: Mm.
+
+[1:19:32] Sandwich: Um, and so then I started trying this more often. Instead of every three months, it was, like, every couple days. And I tried different, uh, SDLCs. So I tried Agile, I tried various forms of Waterfall, I tried, um, like, just, like, general iterative development. I tried to do, like, extract characteristics of Agile that didn't suck and use that. I- But every time I hit Waterfall, it worked really well. So I would just define a high-level document. I would work with an agent... Well, really, I would start myself writing out a spec. I would sort of expand that with an agent, then compress it a little bit, get rid of things that didn't make sense. And then when I could read it, and when the shape of the document looked right, um, I would feel confident, and I would break that into low-level design documents. And those were little chunks of context that were very specialized to a specific part of the stack, and I could give that to an agent, and it would come back and give it to me exactly as I'd asked for.
+
+[1:20:31] Gigi: Hmm. Hmm.
+
+[1:20:31] Sandwich: Um, and I, I may have skipped some parts in there. There was definitely struggle-
+
+[1:20:36] Gigi: Wh- where-
+
+[1:20:36] Sandwich: ... but I don't remember all of that
+
+[1:20:37] Gigi: ... where... What kind of models, uh, did you use where you had this success? Like, what-
+
+[1:20:42] Sandwich: It was, like, I think it was around 5, like, GPT 5.0. It was like... 'Cause that's when, if I remember correctly, that's when things started to make sense. I could be wrong about the exact version. Um, but it was, it was ChatGPT.
+
+[1:20:55] Gigi: Yeah.
+
+[1:20:55] Sandwich: It was Pro. I got Pro, and it was able to, like, do things correctly-
+
+[1:20:59] Gigi: Okay
+
+[1:20:59] Sandwich: ... do research.
+
+[1:21:00] Gigi: So GPT 4 or 5, that era.
+
+[1:21:02] Sandwich: Yeah, like, late fours or-
+
+[1:21:03] Gigi: There about
+
+[1:21:03] Sandwich: ... yeah, late fours-
+
+[1:21:04] Gigi: Yeah
+
+[1:21:04] Sandwich: ... early five.
+
+[1:21:05] Gigi: Yeah, yeah.
+
+[1:21:05] Sandwich: Um-
+
+[1:21:06] Gigi: Yeah
+
+[1:21:06] Sandwich: ... I don't remember the years of any of this stuff. It's all a blur, kind of.
+
+[1:21:09] Gigi: Yeah, yeah. I mean-
+
+[1:21:10] Sandwich: Um
+
+[1:21:10] Gigi: ... definitely. Def- [laughs]
+
+[1:21:11] Sandwich: Yeah.
+
+[1:21:11] Gigi: I mean, we're still, we're still in the it's-all-a-blur stage, kind of f- of [laughs] as far as I'm concerned.
+
+[1:21:16] Sandwich: Yeah.
+
+[1:21:17] Gigi: [laughs]
+
+[1:21:18] Sandwich: So that was, like, the first successful thing where I could, I could plan something out, I could feed it into this, manually by the way, not... There was no looping or, like, there was no context injection.
+
+[1:21:27] Gigi: Yeah.
+
+[1:21:28] Sandwich: I didn't have my own agent or my own harness. Um, this was all just manual, and it was working pretty consistently. And then at this point, now there's, like, tools everywhere. You have, like, Rue code, and you have all these other tools that are-
+
+[1:21:39] Gigi: Yeah
+
+[1:21:39] Sandwich: ... just kinda doing the same idea. So I started playing around basically with everything. Um, I found some success and, and, and honestly, pretty much all of the tooling I think is good for someone. [laughs] Um, but I never... didn't really run into anything that worked great for me until GSD. Like, that was the first one where I could... It, it worked exactly with how I thought. Um, and I was able to very clearly define a project scope and iterate through milestones and capture things and bring them up to the surface. Um, and so this became what I'm doing now. Uh, and I've been on that for seven, eight months, I think.
+
+[1:22:19] Gigi: Hmm.
+
+[1:22:19] Sandwich: Um-
+
+[1:22:20] Gigi: Okay, interesting. Seven, eight months, and with little change from your approach.
+
+[1:22:24] Sandwich: Well, no, it's changed. Um, but-
+
+[1:22:27] Gigi: But your, your GSD stack grew in some sense, I think.
+
+[1:22:29] Sandwich: A little bit, yeah.
+
+[1:22:30] Gigi: Yeah.
+
+[1:22:30] Sandwich: Yeah. And I have been doing loop engineering as well, which has replaced a bit of it. Um, and I, I do anticipate that I'm nearing the end of that-
+
+[1:22:37] Gigi: Hmm
+
+[1:22:37] Sandwich: ... with GSD. Um, there, uh... Things are just going much faster now. Um, I'm probably gonna outgrow it, uh, uh, very soon, if not already.
+
+[1:22:47] Gigi: Hmm.
+
+[1:22:47] Sandwich: Like, I'm just waiting for something like GSD to come again, right? I, I anticipate I'm going to replace it.
+
+[1:22:52] Gigi: Okay, okay.
+
+[1:22:52] Sandwich: Yeah.
+
+[1:22:52] Gigi: So next iteration of GSD, whatever-
+
+[1:22:54] Sandwich: Is something, yeah
+
+[1:22:55] Gigi: ... that, that will be. Okay.
+
+[1:22:56] Sandwich: Uh, 'cause, like, loop engineering is ba- Like, GSD is basically loop engineering.
+
+[1:23:00] Gigi: Mm-hmm.
+
+[1:23:00] Sandwich: Right? So, um, it's like a template for it, and it's a very specific workflow, and it works really well. Um, but I th- Yeah, there's something on the horizon. I don't know what it is, but I ant- Oh, you're right. There are cockroaches.
+
+[1:23:12] Gigi: [laughs]
+
+[1:23:12] Sandwich: Um, they're just, like, dancing too. It's weird.
+
+[1:23:15] Gigi: Yeah. [laughs]
+
+[1:23:18] Sandwich: Um, the, uh... Yeah. There, there's a... There's, there's more things in the future. I'm not stuck on it, 'cause I do test other things all the time. Uh, Fran shared something a few weeks ago. I tested it for a couple days. It's very lightweight. I think it's OpenSpec. I think that's what it's called. Um, really, it's actually quite good. Uh, if you're someone that doesn't like the heaviness of GSD, uh, I'm almost certain it's OpenSpec, so I'm... I hope that's what it is.
+
+[1:23:45] Gigi: Yeah.
+
+[1:23:46] Sandwich: Um, then that is really quite a good starting point, 'cause you could build on that to create something like GSD without all the heaviness.
+
+[1:23:53] Gigi: Mm-hmm. Mm-hmm.
+
+[1:23:53] Sandwich: Um, for me, the heaviness is good. Um, okay, so my, my flow now is it's really a back and forth. So I... When I start a project, I have, like, a agents.md template that's very small. It just has some basic policy things that they change around what the project... around some of the constraints or parameters, language of the project. Um, and I will start a new project in GSD. I will have a pretty good conversation, produce a series of documents. Um, GSD does, like, research, uh, right when you start a project to understand the domain-
+
+[1:24:32] Gigi: Mm-hmm
+
+[1:24:32] Sandwich: ... so that it can make more informed decisions. And, uh, it's really important that you, especially if the domain you're in is novel or experimental, that you check those documents, like Nostr. Although-
+
+[1:24:43] Gigi: Yeah
+
+[1:24:43] Sandwich: ... models are getting really good with Nostr.
+
+[1:24:45] Gigi: Yeah. Yeah.
+
+[1:24:45] Sandwich: Yeah.
+
+[1:24:45] Gigi: Yeah.
+
+[1:24:46] Sandwich: Before, they used to hate it. They're like, "What the heck is this?"
+
+[1:24:48] Gigi: Yeah. Now, now it's a thing-
+
+[1:24:49] Sandwich: [laughs]
+
+[1:24:49] Gigi: ... and it's part of the training data-
+
+[1:24:51] Sandwich: Yeah
+
+[1:24:51] Gigi: ... and they're not as confused about it.
+
+[1:24:53] Sandwich: Yeah.
+
+[1:24:53] Gigi: But in the beginning it was hell.
+
+[1:24:54] Sandwich: Oh, it was terrible.
+
+[1:24:54] Gigi: They were always fighting the models-
+
+[1:24:55] Sandwich: Yeah. [laughs]
+
+[1:24:55] Gigi: ... so they were always trying to do client server-
+
+[1:24:58] Sandwich: Yeah. [laughs]
+
+[1:24:58] Gigi: ... REST interface, kinda like everything.
+
+[1:25:00] Sandwich: Every time.
+
+[1:25:00] Gigi: U- username, password kinda stuff.
+
+[1:25:02] Sandwich: Right.
+
+[1:25:02] Gigi: And, and, yeah.
+
+[1:25:03] Sandwich: It was, it was painful.
+
+[1:25:04] Gigi: [laughs]
+
+[1:25:04] Sandwich: It was so painful.
+
+[1:25:06] Gigi: But the building up context for a new thing-
+
+[1:25:08] Sandwich: Yeah
+
+[1:25:08] Gigi: ... uh, that's one thing I forgot to mention today when I showed off my stuff. Uh, it's a, it's a very small thing. Um, but the, the, the way I do it, like, I do very primitive context engineering, and I use the Socratic method Basically exclusively.
+
+[1:25:23] Sandwich: Yeah.
+
+[1:25:23] Gigi: So when I start a greenfield project, very new thing, I just, the first 10 prompts will be questions.
+
+[1:25:30] Sandwich: Yeah. Yeah, yeah.
+
+[1:25:30] Gigi: Like, like what's out there? Like what's...
+
+[1:25:32] Sandwich: Of course
+
+[1:25:32] Gigi: ... what do you know about this? All those kind of things. And from that I'll, I'll, I'll land on the design document that you-
+
+[1:25:38] Sandwich: Oh, yeah
+
+[1:25:39] Gigi: ... that you mentioned.
+
+[1:25:39] Sandwich: That, that's actually what the-
+
+[1:25:40] Gigi: So-
+
+[1:25:40] Sandwich: ... the, the, uh, the new project and the planners use the Socratic method.
+
+[1:25:44] Gigi: Yeah. Awesome. Awesome.
+
+[1:25:45] Sandwich: So, so it, it, it-
+
+[1:25:46] Gigi: Yeah
+
+[1:25:46] Sandwich: ... will ask questions to you.
+
+[1:25:47] Gigi: Yeah.
+
+[1:25:47] Sandwich: So instead of you asking questions.
+
+[1:25:49] Gigi: Ah, okay. Interesting.
+
+[1:25:49] Sandwich: It will ask questions to you-
+
+[1:25:50] Gigi: Yeah
+
+[1:25:50] Sandwich: ... and then use that input as a question-
+
+[1:25:53] Gigi: Yeah
+
+[1:25:53] Sandwich: ... for how it, it-
+
+[1:25:54] Gigi: Yeah
+
+[1:25:54] Sandwich: ... approaches the research, right?
+
+[1:25:55] Gigi: Yeah.
+
+[1:25:56] Sandwich: So-
+
+[1:25:56] Gigi: No, I, I, I always do it just to be sure. Like, like I, I showed off today, every, every one of my projects has an npup and I use-
+
+[1:26:03] Sandwich: Yep
+
+[1:26:03] Gigi: ... NIP17 to communicate with the project. And let's say I wanna add a search keyword to ants, to the Nostr search I've built. And then, then I, I would go like, like I already know what I wanna build, but I'm not gonna hit it with that. I'm gonna go like, "What are the search keywords that we have?"
+
+[1:26:18] Sandwich: Yeah.
+
+[1:26:18] Gigi: You know? And it already builds up context. Okay, so these are the search keywords. And I go like, "Would it make sense to add this one?"
+
+[1:26:25] Sandwich: Yeah.
+
+[1:26:26] Gigi: And it would go like, "Yeah, that makes sense, and we could do this and that." And it's like, okay, like, you know, like g- give me, like how would you implement it, you know? And then it would, and we iterate a little bit and so on.
+
+[1:26:35] Sandwich: [laughs]
+
+[1:26:35] Gigi: And then at, at once I'm happy, I- I'm like, "Okay, go, let's implement it." So just S- Socratic method through and through.
+
+[1:26:41] Sandwich: Yeah.
+
+[1:26:41] Gigi: And then I pull the trigger, and then it's basically done.
+
+[1:26:43] Sandwich: Nice.
+
+[1:26:43] Gigi: And I also always end, I mean, I mentioned this today, um, I, I always end, um, like I, I use the same development workflow I've always used, so feature branches and so on, and I always end with like, "What's the top five things we could improve on this feature branch?"
+
+[1:26:58] Sandwich: Yeah.
+
+[1:26:58] Gigi: Like before-
+
+[1:26:58] Sandwich: Oh, of course
+
+[1:26:58] Gigi: ... before I merge and so on. And so, so like oftentimes, uh, one or two things are okay, and then I ask again, and if all top five are complete bullshit, then I'll-
+
+[1:27:07] Sandwich: Yeah
+
+[1:27:07] Gigi: ... I know I'm done. [laughs]
+
+[1:27:08] Sandwich: Yeah, exactly. Exactly.
+
+[1:27:09] Gigi: So.
+
+[1:27:09] Sandwich: I do the same thing.
+
+[1:27:11] Gigi: Always, yeah. Yeah, it's great.
+
+[1:27:11] Sandwich: Yeah, yeah, yeah, yeah, yeah.
+
+[1:27:12] Gigi: Yeah.
+
+[1:27:13] Sandwich: Um, it's, it's a similar workflow. Yeah. It's a, a slightly different approach. It's a little bit more structured.
+
+[1:27:18] Gigi: Your, your, yours is, yours is probably more automated and more, more structured than mine.
+
+[1:27:21] Sandwich: A little bit, yeah.
+
+[1:27:21] Gigi: Mine is very-
+
+[1:27:22] Sandwich: And, uh-
+
+[1:27:22] Gigi: ... ad hoc kind of.
+
+[1:27:23] Sandwich: Yeah. I, I use like automated agents for issues, and my agents are very, like under a very strict policy for how they interface and interact with other repos.
+
+[1:27:33] Gigi: Yeah.
+
+[1:27:33] Sandwich: And, um, how they interact with issues and pull requests.
+
+[1:27:36] Gigi: Yeah. Yeah. I see.
+
+[1:27:37] Sandwich: And then I have automated agents that go through and look for sloppy issues-
+
+[1:27:41] Gigi: Yeah
+
+[1:27:42] Sandwich: ... um, likely posted by me, and then they contextualize them and put in, like basically do the planning for the next agent.
+
+[1:27:49] Gigi: Yeah.
+
+[1:27:49] Sandwich: And then there's a, um, the development team will then come in and look for issues-
+
+[1:27:54] Gigi: Yeah
+
+[1:27:54] Sandwich: ... on a cron, right?
+
+[1:27:56] Gigi: Yeah, same thing.
+
+[1:27:56] Sandwich: And on a heartbeat.
+
+[1:27:56] Gigi: I've nightly, nightly crons.
+
+[1:27:58] Sandwich: And then, yep.
+
+[1:27:58] Gigi: Yeah.
+
+[1:27:59] Sandwich: And then it'll address them, open a PR, and then I have a review team-
+
+[1:28:02] Gigi: Yeah
+
+[1:28:02] Sandwich: ... come in and-
+
+[1:28:03] Gigi: Yeah, yeah
+
+[1:28:03] Sandwich: ... review them.
+
+[1:28:04] Gigi: It's very nice.
+
+[1:28:04] Sandwich: And then I do the final review, and then if something's wrong-
+
+[1:28:06] Gigi: Yeah
+
+[1:28:06] Sandwich: ... it means I fucked up somewhere.
+
+[1:28:08] Gigi: Yeah.
+
+[1:28:08] Sandwich: And I don't blame the agents.
+
+[1:28:09] Gigi: Yeah.
+
+[1:28:10] Sandwich: I haven't gotten angry at agents in a long time.
+
+[1:28:12] Gigi: Yeah.
+
+[1:28:13] Sandwich: It's been-
+
+[1:28:13] Gigi: Yeah, me neither
+
+[1:28:14] Sandwich: ... I don't even know.
+
+[1:28:15] Gigi: I, I never did.
+
+[1:28:15] Sandwich: Seven-
+
+[1:28:15] Gigi: I never, I never believed [laughs]
+
+[1:28:17] Sandwich: ... seven, eight, eight months. No. There's, there's-
+
+[1:28:18] Gigi: I never believed in screaming at them. [laughs]
+
+[1:28:20] Sandwich: Dude, they have done some things, man.
+
+[1:28:22] Gigi: [laughs]
+
+[1:28:22] Sandwich: Sometimes like Claude in, like a year ago, it would just do things where you just thought it was trying to fuck with you.
+
+[1:28:29] Gigi: [laughs]
+
+[1:28:30] Sandwich: Seriously.
+
+[1:28:31] Gigi: I mean, maybe, maybe-
+
+[1:28:31] Sandwich: It would gaslight you. It would lie to you.
+
+[1:28:33] Gigi: Yeah, yeah.
+
+[1:28:34] Sandwich: And be like-
+
+[1:28:34] Gigi: No
+
+[1:28:34] Sandwich: ... "Oh, no, no, I fixed that. I fixed that."
+
+[1:28:35] Gigi: Yeah. Yeah, the-
+
+[1:28:35] Sandwich: You go into the code and it's like, like, "Yeah, can't fix."
+
+[1:28:38] Gigi: Yeah, yeah.
+
+[1:28:39] Sandwich: "Tell operator it's fixed" or something.
+
+[1:28:40] Gigi: The, the, the gaslighting-
+
+[1:28:41] Sandwich: And you're like, "Oh, you-"
+
+[1:28:41] Gigi: ... the gaslighting is strong-
+
+[1:28:42] Sandwich: [laughs]
+
+[1:28:42] Gigi: ... that's for sure. But it's funny how we are rebuilding the same structures that we landed on in regular software development.
+
+[1:28:49] Sandwich: Yep.
+
+[1:28:49] Gigi: But now instead of humans, we have agents, but we still have specialization, we still have communication.
+
+[1:28:53] Sandwich: Yeah, of course.
+
+[1:28:53] Gigi: We still have issue tracking, we still have milestones, we still have specifications, all those kind of things.
+
+[1:28:58] Sandwich: Yeah, yeah.
+
+[1:28:58] Gigi: And I think that's why you're especially good at all this stuff because, like you said, you started at a very early age working with teams and working-
+
+[1:29:05] Sandwich: Yeah
+
+[1:29:05] Gigi: ... with teams that come from other cultures, speaking other languages and so on.
+
+[1:29:08] Sandwich: Exactly.
+
+[1:29:08] Gigi: And then you have to do all this stuff properly.
+
+[1:29:11] Sandwich: Yeah.
+
+[1:29:12] Gigi: Like you have to specify all the things properly.
+
+[1:29:14] Sandwich: You really do.
+
+[1:29:14] Gigi: You have to test stuff properly. You have to do all the, all the things.
+
+[1:29:17] Sandwich: Absolutely.
+
+[1:29:18] Gigi: And so, yeah.
+
+[1:29:18] Sandwich: I, I was pretty bad at testing though until like the late 2010s.
+
+[1:29:22] Gigi: Yeah, yeah.
+
+[1:29:23] Sandwich: I, I hated doing it.
+
+[1:29:24] Gigi: There's a, there's a time and a place for everything. I still-
+
+[1:29:26] Sandwich: Yeah
+
+[1:29:26] Gigi: ... for my vibe coded slop, I still don't test anything because-
+
+[1:29:29] Sandwich: Yeah
+
+[1:29:29] Gigi: ... I feel like it pollutes the context and-
+
+[1:29:31] Sandwich: A little bit, yeah
+
+[1:29:31] Gigi: ... pollutes everything, and I just like no tests. It's one of the rules I have, like never write tests ever.
+
+[1:29:35] Sandwich: Oh, really? That's hilarious.
+
+[1:29:36] Gigi: Yeah. [laughs]
+
+[1:29:36] Sandwich: I, I'm, I, uh, for... Well, it depends on what I'm working on, right?
+
+[1:29:39] Gigi: [laughs]
+
+[1:29:39] Sandwich: If it's UX or interface, I get that.
+
+[1:29:41] Gigi: None of my stuff is important. That's why I can-
+
+[1:29:43] Sandwich: Gotcha. Gotcha
+
+[1:29:43] Gigi: ... that's why I can get away with it. But, but speaking of that, you mentioned one thing that you gate, um, using-
+
+[1:29:49] Sandwich: Slop
+
+[1:29:49] Gigi: ... LLM slop detection.
+
+[1:29:50] Sandwich: Oh, yeah. Yeah.
+
+[1:29:51] Gigi: So talk to me about that.
+
+[1:29:52] Sandwich: It's pretty simple. I mean, it was like a couple months ago, a library got pop, uh, popular called AI Slop Scan, and it works pretty well. And that one's built only for JavaScript. I found the one I was talking about for Rust, um, that was on crates, and I shared it in the gist, but I don't remember it right now. Um, I use that in my agents at MD. I use that in my CI, and it basically prevents-
+
+[1:30:20] Gigi: Ah, nice. In the CI, that's awesome. So, so pull-
+
+[1:30:22] Sandwich: Both
+
+[1:30:23] Gigi: ... pull, pull requests is still, will, won't go green until it passes-
+
+[1:30:26] Sandwich: Exactly
+
+[1:30:26] Gigi: ... the slop state.
+
+[1:30:26] Sandwich: You got it. Yeah.
+
+[1:30:27] Gigi: Yeah.
+
+[1:30:27] Sandwich: Yeah.
+
+[1:30:27] Gigi: That's awesome.
+
+[1:30:28] Sandwich: Um-
+
+[1:30:29] Gigi: That's great.
+
+[1:30:29] Sandwich: Yes.
+
+[1:30:30] Gigi: I'll, I'll add that today.
+
+[1:30:30] Sandwich: Yes. You need to.
+
+[1:30:31] Gigi: Yeah.
+
+[1:30:31] Sandwich: It, it makes a world of difference because-
+
+[1:30:33] Gigi: Yeah
+
+[1:30:33] Sandwich: ... every time you add slop, you're adding context poison.
+
+[1:30:36] Gigi: Yeah. Forever, basically.
+
+[1:30:37] Sandwich: Yeah.
+
+[1:30:37] Gigi: Like for-
+
+[1:30:38] Sandwich: And like-
+
+[1:30:38] Gigi: [laughs]
+
+[1:30:38] Sandwich: ... until, until you spend like three days getting rid of it.
+
+[1:30:41] Gigi: Yeah.
+
+[1:30:41] Sandwich: There is nothing more difficult-
+
+[1:30:42] Gigi: Yeah
+
+[1:30:43] Sandwich: ... than renaming a term-
+
+[1:30:44] Gigi: Yeah
+
+[1:30:44] Sandwich: ... in a code base.
+
+[1:30:46] Gigi: Yeah.
+
+[1:30:46] Sandwich: The agents will come back to you and be like, "Okay, yeah, the, the term doesn't exist anywhere."
+
+[1:30:49] Gigi: Yeah.
+
+[1:30:49] Sandwich: And then a week later, it like pops up again.
+
+[1:30:51] Gigi: [laughs]
+
+[1:30:51] Sandwich: And you're like, "Wait, we uh, we, we did this." [laughs]
+
+[1:30:55] Gigi: [laughs]
+
+[1:30:56] Sandwich: It's like, oh wait, no, no, the function signatures still have it. Oh, okay. Okay.
+
+[1:30:59] Gigi: [laughs]
+
+[1:31:00] Sandwich: Go through all the signatures of the functions and the properties and the, and, and every parameter of everything you can find and get rid of it.
+
+[1:31:06] Gigi: Yeah.
+
+[1:31:06] Sandwich: And then it's like-
+
+[1:31:06] Gigi: See?
+
+[1:31:06] Sandwich: ... cool, I got rid of it.
+
+[1:31:07] Gigi: See?
+
+[1:31:07] Sandwich: And then a week later, pops right back up.
+
+[1:31:09] Gigi: Naming is still, naming is still one of the n- main problems when it comes to development.
+
+[1:31:12] Sandwich: God, it is the worst.
+
+[1:31:14] Gigi: [laughs]
+
+[1:31:14] Sandwich: The worst, man. The more things change, the more they stay the same.
+
+[1:31:18] Gigi: And, and, and that, and that word could like just, its meaning could screw you, you know?
+
+[1:31:22] Sandwich: Yeah.
+
+[1:31:22] Gigi: It's like context poison.
+
+[1:31:23] Sandwich: Yeah.
+
+[1:31:24] Gigi: So, um-
+
+[1:31:25] Sandwich: Yeah, the slot scan, that has been a game changer for sure.
+
+[1:31:30] Gigi: Yeah.
+
+[1:31:30] Sandwich: That, that makes reviews easier. The code quality stays more consistent because the code becomes the context at a certain-
+
+[1:31:39] Gigi: Yeah
+
+[1:31:39] Sandwich: ... point in the project, and-
+
+[1:31:40] Gigi: Absolutely, yeah
+
+[1:31:40] Sandwich: ... it defines the patterns that every agent uses.
+
+[1:31:43] Gigi: Yeah.
+
+[1:31:43] Sandwich: And when there's good patterns already in the code, it produces good code.
+
+[1:31:48] Gigi: Yeah, yeah.
+
+[1:31:48] Sandwich: Um, also behavioral, you know, test-driven development, behavior-driven development-
+
+[1:31:53] Gigi: Yeah
+
+[1:31:54] Sandwich: ... I've been doing that a lot, and that, uh, uh, also works really, really, really well.
+
+[1:31:58] Gigi: Yeah.
+
+[1:31:58] Sandwich: Um, not at the beginning of the project, though, but at a certain point it starts to create, like, certainty behind every single-
+
+[1:32:07] Gigi: Yeah
+
+[1:32:07] Sandwich: ... action. They start- They, they don't fake the tests.
+
+[1:32:10] Gigi: Yeah.
+
+[1:32:10] Sandwich: When they write the tests after the functionality-
+
+[1:32:12] Gigi: Especially if you have two-
+
+[1:32:14] Sandwich: ... they fake the tests
+
+[1:32:14] Gigi: ... t- like, I, I'm a big believer in opponent processing. Like-
+
+[1:32:17] Sandwich: Oh, yeah
+
+[1:32:17] Gigi: ... you, you wanna have a s- a specialized tester, and you wanna have a specialized implementation guy.
+
+[1:32:22] Sandwich: Yes. Yeah.
+
+[1:32:22] Gigi: And they must not be the same guys.
+
+[1:32:24] Sandwich: Yeah.
+
+[1:32:24] Gigi: And, and, and, yeah.
+
+[1:32:24] Sandwich: A- absolutely. Yeah, no, they have to be different.
+
+[1:32:26] Gigi: Yeah.
+
+[1:32:26] Sandwich: And the even different models-
+
+[1:32:27] Gigi: Yeah
+
+[1:32:27] Sandwich: ... uh, some diversity in the way they approach the problem-
+
+[1:32:30] Gigi: Yeah
+
+[1:32:30] Sandwich: ... is really helpful.
+
+[1:32:31] Gigi: Yeah. Yeah, 100%. No, I love that everyone is kind of figuring out, like, uh, similar patterns and-
+
+[1:32:35] Sandwich: Yeah, yeah
+
+[1:32:36] Gigi: ... and, and the, the same way of, of doing, of, [laughs] of getting shit done.
+
+[1:32:39] Sandwich: Yeah. [laughs]
+
+[1:32:39] Gigi: [laughs] Hence the name. Um, last question from my side. How do you think about, um, running stuff on bare metal, buying lots of hardware to run models-
+
+[1:32:48] Sandwich: [laughs]
+
+[1:32:48] Gigi: ... all those kind of things? Because I'm very close to-
+
+[1:32:51] Sandwich: Yeah
+
+[1:32:51] Gigi: ... just saying, "Fuck it," and buying a bunch of shit, so.
+
+[1:32:54] Sandwich: Yeah, just dropping-
+
+[1:32:54] Gigi: [laughs]
+
+[1:32:55] Sandwich: ... 50 to 100 grand. [laughs]
+
+[1:32:56] Gigi: Instead of buying a new car, you know-
+
+[1:32:58] Sandwich: Yeah
+
+[1:32:58] Gigi: ... like, you might as well. [laughs]
+
+[1:32:59] Sandwich: Um, yeah, I think we need to do it. I mean, I think we should squeeze as much as we can out of the subsidized models and services as we can.
+
+[1:33:07] Gigi: I mean, the subsidy era will end.
+
+[1:33:08] Sandwich: Yes, it will end.
+
+[1:33:09] Gigi: And that's why I'm thinking about hardware and-
+
+[1:33:10] Sandwich: And when it ends, the prices are gonna go up, yeah.
+
+[1:33:12] Gigi: Yeah.
+
+[1:33:13] Sandwich: Um-
+
+[1:33:13] Gigi: So.
+
+[1:33:14] Sandwich: Yeah, I think we should all be doing it.
+
+[1:33:17] Gigi: Yeah. You-
+
+[1:33:17] Sandwich: Yeah
+
+[1:33:17] Gigi: ... you explored any of that stuff yet?
+
+[1:33:19] Sandwich: Oh, God, yeah. Oh, yeah, yeah, yeah, yeah. RTX 6000 Pro Blackwell, that s- seems to be the route right now. The only limitation is, like, SPI. I met someone in Oslo who was, who was working on getting SPI working on the Blackwell cards, the 6000s, and he says that basically it has all of the chips it needs, but something's not connected.
+
+[1:33:44] Gigi: Hmm.
+
+[1:33:45] Sandwich: And last time I talked to him he mentioned that, um... Or when I... Well, actually, like, when he left-
+
+[1:33:51] Gigi: H- h- how many layers of tin foil do I need?
+
+[1:33:53] Sandwich: Yeah, basically like a jumper.
+
+[1:33:54] Gigi: Like, how, how deep-
+
+[1:33:55] Sandwich: I assume it's like a jumper, basically.
+
+[1:33:56] Gigi: [laughs] How, how deep does the conspiracy go for that? [laughs]
+
+[1:33:59] Sandwich: Well, I mean, it's Nvidia. They're, they're known to do this, like.
+
+[1:34:02] Gigi: Okay. [laughs]
+
+[1:34:03] Sandwich: Uh, they, they arbitrarily limit, uh, uh, encodes and decodes-
+
+[1:34:09] Gigi: Hmm
+
+[1:34:09] Sandwich: ... on their, uh, GTX cards-
+
+[1:34:12] Gigi: Interesting
+
+[1:34:12] Sandwich: ... to, like, four. But they can totally hand... A 1050 Ti can do, like, 12 or something.
+
+[1:34:17] Gigi: Okay.
+
+[1:34:17] Sandwich: But they just limit it to four. So when they introduced this limitation, it was because they wanted to sell enterprise cards-
+
+[1:34:23] Gigi: Hmm
+
+[1:34:24] Sandwich: ... um, at, you know, 10 times the cost.
+
+[1:34:26] Gigi: Yeah.
+
+[1:34:27] Sandwich: And someone released a bash script that removes the limitation. You just run it when your-
+
+[1:34:31] Gigi: [laughs]
+
+[1:34:31] Sandwich: ... system starts.
+
+[1:34:32] Gigi: Nice. [laughs]
+
+[1:34:32] Sandwich: And then you get... It removes it, and you're good to go.
+
+[1:34:34] Gigi: It's like chip tuning your car. [laughs]
+
+[1:34:35] Sandwich: Yeah, it's just called Nvidia Patch, I think-
+
+[1:34:37] Gigi: [laughs]
+
+[1:34:37] Sandwich: ... if I remember correctly. Um, so yeah, I think, I think everyone should do it. I have explored. I have some hardware waiting for me. Um, and I can't wait to get ahold of it.
+
+[1:34:49] Gigi: Y- w- hardware waiting for you at home? [laughs]
+
+[1:34:53] Sandwich: [laughs] Uh, in the US, yeah.
+
+[1:34:55] Gigi: Yeah. [laughs]
+
+[1:34:56] Sandwich: Yeah.
+
+[1:34:56] Gigi: So, so after the call you'll go do an unboxing video and just-
+
+[1:35:00] Sandwich: No, I hope so, yeah
+
+[1:35:01] Gigi: ... set stuff up, s- set stuff up.
+
+[1:35:02] Sandwich: Yeah.
+
+[1:35:02] Gigi: All right, nice. Awesome. Yeah.
+
+[1:35:03] Sandwich: Um, yeah, I think everyone should. It's like... But at the same time, it's, it's sort of like Bitcoin mining or mining in general.
+
+[1:35:11] Gigi: Yeah. Yeah, yeah, yeah.
+
+[1:35:12] Sandwich: Like, you have-
+
+[1:35:12] Gigi: A massive investment
+
+[1:35:12] Sandwich: ... you can't get attached to the... It's a massive investment. You can't get attached to it. You have to watch the market. You have to cycle your equipment. Otherwise, you're gonna lose money, and you'll just-
+
+[1:35:22] Gigi: Yeah.
+
+[1:35:22] Sandwich: It, it... Because it's like cost per watt is what you're really looking at, right?
+
+[1:35:25] Gigi: Yeah.
+
+[1:35:26] Sandwich: Um-
+
+[1:35:27] Gigi: Yeah
+
+[1:35:27] Sandwich: ... so.
+
+[1:35:28] Gigi: Yeah, but to me it's like, it, it, it is gonna be a timing issue because we're still living in the subsidy era.
+
+[1:35:33] Sandwich: Yeah.
+
+[1:35:33] Gigi: It's like Pablo figured out this hack how you can use unlimited compute thanks to ChatGPT.com. You know? Like, he built an MCP around, an MCP wrapper [laughs] around ChatGPT, and you can just... Like, for, for example, analyzing code and so on.
+
+[1:35:47] Sandwich: [laughs]
+
+[1:35:47] Gigi: Like, he, he, he will pipe all his repos through ChatGPT.com, and it doesn't go towards your plan or anything.
+
+[1:35:54] Sandwich: Yeah.
+
+[1:35:54] Gigi: And, and we're still living in crazy times. Like, it's-
+
+[1:35:57] Sandwich: Yeah, yeah
+
+[1:35:57] Gigi: ... it's, it's because of people like Pablo that do this shit the AI bubble will pop, you know? Like, incurring costs-
+
+[1:36:03] Sandwich: [laughs]
+
+[1:36:04] Gigi: ... of like 50K USD per week or something.
+
+[1:36:06] Sandwich: Yeah, yeah, exactly.
+
+[1:36:07] Gigi: And, uh, there's nothing anyone can do about it. And so this, like, this can't go on forever. Like, this, uh, w- yeah, token use will have to get economical and-
+
+[1:36:15] Sandwich: It does. Yeah, we gotta-
+
+[1:36:17] Gigi: Yeah
+
+[1:36:17] Sandwich: ... optimize. Uh, we're just-
+
+[1:36:18] Gigi: Yeah.
+
+[1:36:18] Sandwich: Uh, everyone's just leaning on compute right now.
+
+[1:36:21] Gigi: Yeah.
+
+[1:36:21] Sandwich: Um, eventually... I mean, it's already happening-
+
+[1:36:23] Gigi: Yeah
+
+[1:36:23] Sandwich: ... that people are optimizing. They're squeezing every, you know, last bit of power out of small models. That's gonna get more and more intense.
+
+[1:36:30] Gigi: Yeah.
+
+[1:36:30] Sandwich: Things are gonna get more performant. It will hit a point where, you know, these models we're using now are gonna look ridiculous.
+
+[1:36:37] Gigi: Yeah, sure.
+
+[1:36:37] Sandwich: It'll be like a mainframe, right?
+
+[1:36:38] Gigi: Yeah, yeah.
+
+[1:36:39] Sandwich: Um-
+
+[1:36:39] Gigi: Yeah, yeah
+
+[1:36:40] Sandwich: ... we'll look at it, it as like-
+
+[1:36:41] Gigi: Yeah, you mentioned Oslo
+
+[1:36:41] Sandwich: ... the old days.
+
+[1:36:42] Gigi: Um, uh, Austin, uh, Austin from, from Austin, [laughs] he did some research on, uh, local models and basically how fast they are catching up to the frontier models.
+
+[1:36:53] Sandwich: Yeah.
+
+[1:36:53] Gigi: And basically what he found is, like, they are getting, uh, smaller and cheaper and, and more competitive faster than anyone basically thinks.
+
+[1:37:01] Sandwich: Exactly.
+
+[1:37:01] Gigi: And so that's, that, that, that's what has me buying hardware, basically.
+
+[1:37:05] Sandwich: Oh, yeah.
+
+[1:37:05] Gigi: Like, I'm, I'm, I'm very close to pulling the trigger, but yeah, no, very exciting times. So yeah, thanks for indulging me-
+
+[1:37:12] Sandwich: Yeah
+
+[1:37:12] Gigi: ... and going on a-
+
+[1:37:13] Sandwich: Yeah, thanks for listening
+
+[1:37:13] Gigi: ... what, what felt like a three-hour walk. It's been such a long day. I'm ti-
+
+[1:37:17] Sandwich: It's been a-
+
+[1:37:17] Gigi: I'm proper tired. [laughs]
+
+[1:37:17] Sandwich: I'm so tired. I feel sorry for anyone who had to listen. [laughs]
+
+[1:37:21] Gigi: No, no, that's all good. That's all good. Any, any last words, or we're just gonna, we're just gonna end it here? You're excited for Friday? You know what you're gonna show off?
+
+[1:37:30] Sandwich: No.
+
+[1:37:30] Gigi: No? [laughs]
+
+[1:37:31] Sandwich: Yeah, I got some ideas.
+
+[1:37:32] Gigi: You got some ideas, okay.
+
+[1:37:33] Sandwich: Yeah, yeah.
+
+[1:37:33] Gigi: We'll see. We'll see.
+
+[1:37:34] Sandwich: I mean-
+
+[1:37:35] Gigi: Me not. I'll go sleep, and I hope that I'll-
+
+[1:37:36] Sandwich: I'm gonna go sleep
+
+[1:37:37] Gigi: ... I, I, I ho- I hope that my subconscious will, will do the work and, and something pops up.
+
+[1:37:42] Sandwich: Thank you.
+
+[1:37:43] Gigi: All right, fantastic.

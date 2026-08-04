@@ -1,2 +1,1965 @@
-With no people in it. Oh, okay. (sighs) Wait, let... Okay, let me... uh, let me see. (footsteps landing) Let's do it like this. (sighs) All right. But let's not, let's not, let's not waste any more time. This is just gonna be a No Solutions- This is on? ... afternoon. Yeah, but it's not plugged in yet. All right. It's on. (sighs) All right. Okay, change of plans. (laughs)  The- the break was not a break. We, we... (laughs) We wanted to do something else. We wanted to go sauna, but, um, yeah, like, it's just the people around here are just, just, you know- Their hands, too much time. Yeah, yes. It's... Ah, I think it's in, in, in their history, you know. Like ever since this one, one guy came to power, they were speaking weird and just had this weird mustache. (laughs) Went all downhill from there, from this point on. Was it Jean-Barbates? No, different, different guy. Different guy. (laughs) Shorter. He could... Not as hard to pronounce, the name. (laughs)  Me- memorable name. Yeah, very memorable. He had really good marketing. Yeah, great marketing. (laughs)  Great designs- Yeah. ... beautiful logos. Oh, man. Like, the, the, the, the suits he made, they're still killer. (laughs) The Hugo Boss was behind all that. Crazy. Great cars. Killer cars. Killer, killer cars. (laughs) Great, great, great autobahn that he built, you know. Great, great streets. He, he did, he did many, many things. He did many things. Where are we? There's like that, uh, like- Today? ... the 360. Oh, they're reappearing. They're, they're- (laughs) They're a... They're coming back. They're coming back. Yeah, yeah, yeah. There's, there's- (laughs)  Yeah, some, some... Many people, I think, who would, who would like to, would like to have a, a second merry-go-round around the authoritarian machine kind of thing. (laughs) It hasn't really been tried, you know. Exactly, exactly. Full, full, real socialism hasn't, hasn't been tried yet. (laughs) Well, anyway, we're just gonna talk about, um, your adventure some more. So change of plans, we're gonna grab a drink, um, at the thing, at the box, at the box office. (laughs)  You'll see. I show you. The Iron Man box. Because we, we actually made the mistake multiple times, I think, right? With just kind of completely dehydrating during- Yeah. ... a No Solutions recording. Yeah, yeah. So yeah, let's not make this mistake again. (laughs)  Four times the same mistake. Yeah, yeah. Enough. I mean, at least it's not on the, the Madeira sun. It's, we're, we're behaving like LLM agents. (laughs) You know, it's just like, "Never, never learn. Never learn." (laughs)  You are totally right. Yeah, you're totally right. (laughs) I mean, give me a couple of billion dollars to retrain myself, and maybe I'll, I'll not make the mistake again. (laughs)  All right. Go ahead. PI, PI.JF sent me, uh, today this, um, this thing, um, and it was like a very long report. I only le- (laughs) read the first two lines. They were very interesting. Um, that apparently someone prompted them with, um, with, "Fix, uh, fix world poverty." (laughs) Oh, okay. Apparently, they, they let the thing run for like... I don't know how. Like, I have no idea what the setup was, but, uh... (laughs) Apparently, it made like a Google Doc and a React app, nothing worked. (laughs) Like, all the different agents were saying that they had conflicts, that each one of the... Like, after like two days of working, they realized that they were working in isolated, uh, workspaces. (laughs) One of them was trying to debug, but it couldn't log it into Google. (laughs)  So, so world hunger is still not fixed? So, it's, it's still not fixed. Uh, we'll- Ah, man. ... win some, we'll tokens. Ah, man. What, what a shame. What a shame. (laughs) But that would be interesting what the, the... Because what they actually do is like, take the accumulated written knowledge of the world and, and trying to make sense of it, and how would the accumulated knowledge of the world fix world hunger? Because it's- A React app. (laughs) It's, it's... (laughs) Well, that explains the state of the world. (laughs) I would have guessed like straight up communism, basically. (laughs) That's, that's... That would have been my guess. But I, I think world hunger is actually basically fixed in some sense. Like, we... There's more fat people than starving people, and it has been like this for a very long time. Yeah. And I mean, we are producing food like crazy. Like, we, we, we have an overabundance of food. Yeah, it's not a, it's not amount of food. It's distribution- Yeah. ... and, and stuff like that. Yeah, yeah. And, and corruption in the really poor places and, and so on, and so on, but anyway. In Argentina, there was this, um, this organization sending food from Buenos Aires to like very poor provinces. Um, and sometimes they would put like, you know, inside of, whatever, like a, like a, like a box or something like that, they would put like messages. Yeah. And (laughs) they would pop up being sold, the same food box being sold in Buenos Aires. (laughs) Oh, okay. Okay. Like, repurposing. (laughs)  I see. They've, they've, they've built a, uh, a system just like the, the NFC tags, the RFID tags. (laughs) But just handwritten notes (laughs) just to figure out how... where stuff circulates. That's smart, actually. Speaking of Argentina, tell me about all your other projects. (laughs) None of them are about Argentina. (laughs)  I only do, like, projects that might go somewhere at some point. (laughs)  Um, yeah, no. It's, it's interesting, like most of the stuff, like basically all the stuff that I'm doing is as a way to test stuff for TenX. Um, like again, I did Olas and then Swift and Olas Android and Olas Whale, like all the, all stuff that it serves in the purpose of, "I need to build something to test the thing." Um, so yeah, I mean, the, the, the focus has been 100% on, on, on this. I also find it insanely interesting, like it, it is so fascinating, the, the type of problems. Um, so yeah, integrated Indicatey, Swift and Indicatey Kaufland with, with, uh, with Nosir DV. Um- Then I've been doing a lot of work with, uh, with Aura, with, uh, Leopoldo Lopez. Yeah. Um, it's, it's an, it's an interesting client. It's, it's a client that it's sort of like starting from the premise of instead of the premise of, like, rebuilding Twitter or, you know, like this more "global" feed, it's starting from the premise of you only care about your immediate surroundings. Yeah. So when you are, when you, when you join, you are c- it, it's kinda assumed that you're joining because someone invited you. Okay, yeah. Um, so I wrote, um... Oh, you need a card to join? Yeah, there's, there's KYC at the entrance. (laughs)  Oh, no. (laughs) Oh, you need to pass the KYC. Oh, no, I'm already, I'm, I'm already locked out. All right, I'll, I'll, I'll need another one. I'll need another identity. Let me see. Let's see. Ah, but that's bad. Then now we might, we might dehydrate completely. I have none. But, ah, maybe, may- Unless it works with, uh... Oh, there we go. Oh, there we go. See? Oh, well. (laughs) They just, it just needed a while to copy the card, you know. Just to completely scam you. (laughs) It just needed four different proofs of identity. (laughs)  All right. What do you, what do you want to have? I, I really like this one. That's the, some, some sort of- Is it like mango? No, it's like a, it's almost like an iced tea, but it's, it's in- incredibly low on sugar. Okay. Yeah, I'll have one of those. There's regular water as well, if you want. Some more? No? You'll be fine with this? Oh, I'm fine with that. Yeah. All right, let's do it. You know, having someone to blame if it's bad is, uh (laughs)- That's a- ... that's a- ... that's a benefit. ... that's (laughs) You learned that from your agents? (laughs)  So how did the launch go? Of the, of the, of the client and all those kind of things? It's, it's still an ongoing process. (laughs) All right, all right. And so the idea is kind of local, um, basically that you build your network by the, the network of invites? Is that right? Yeah, that's, that's basically it. So, like, I, I, I think trust is something that within Bitcoin is kinda don't trust, verify. Yeah. But there is a lot of value in trust, if you can trust. Oh, sure. Yeah. Uh, like, I, I'm doing peer-to-peer trades right now, I told you- Yeah, yeah. ... in, in a way that- With the person that you trust. Because I know the counterpart so well- Yeah. ... I can pay him, like, a couple of days later. Yeah, yeah. Sure, sure. We don't need an escrow. We don't need, like, a lo- a lot of all of these things, right? Yeah. Um, so what if you do the peer-to-peer trade with someone that you know how you are related to that person? If, if it's a neighbor or if you know someone that can vouch for that person, because you can see cryptographically linked this person was invited into the, into the relay by this other person. Yeah. Um, and, yeah, it has a bunch of interesting things. I built, um... The, the use case is very, is very different than what we think of Nostr as. Like, the use case is a lot about a local place for, where people can have like a, like a public square, but within one specific region, and they might be doing citizen journalism. Mm-hmm. Now, those people, they don't wanna, like, dox their, their real identities if they're publishing stuff about corruption and stuff like that, if they are in those, um- Yeah, sure. ... places, right? Physically. But what if you can kind of out of bound without leaving, like, any trace, um, be able to say, "Hey, I'm gonna be publishing with this pub key. I'm gonna be publishing something," and you can vouch for this person. And it's kinda like a source. Like, a journalist says... They don't say who the source is. The journalist is saying, "This is a b- a credible source." Mm-hmm. You don't need to know who that person is. You just need to trust that the journalist is not lying. Mm. Yeah, yeah, I, I see. So you can do the same thing, and with Nostr, we can do all that shit out of band. Yeah. Within, like, with gift wraps and other things, right? Yeah. In a way that Leopoldo or someone that is well-known within that community says, "This is a credible person. He's not publishing bullshit." I'm lending my credibility to this pub key. Yeah. And that pub key can publish whatever they need to. Yeah, yeah. Um, I haven't implemented that, but I will. They can do the publishing with the, uh, onion routing, like stuff that we built in, in software engineering, where not even their IP address is leaked. Yeah, yeah, yeah. Um, so there are no ties to their real identity in any kind of way. Yeah, you can build a dedicated publishing tool that takes care of all of that. That take c- and all the tech- Yeah. ... because y- you go from the premise that these are non-technical people- Yeah. ... which is actually the case. Yeah, yeah, yeah. It's actually the case. Activists are non-technical people. Oh, yeah, yeah, I know. I, I mean, I've, I've onboarded a bunch and, and, like, almost, almost everyone, of course, you know, lost their first key. (laughs) Including me. (laughs)  But I think that's also fine. I think that's a, that's a, you know, it's a very inexpensive lesson to learn. And, and it's also something- But, but that's also something, you know, that we're, we're working on fixing. Yeah, hopefully will be fixed in, in, in some way in the long run with... Again, like, I think, I think, um, Fedi did this really well. I think Fedi had the right, uh, right ideas around that with kind of a community based backup and recovery approach, those kind of things. So I think that, that, that, that's really nice. So we did Nostr XXXX, um, what? Like, a month ago or, or so. Um, and we did a session just on this, just on identity migration. Yeah. ... and we run through the proposal that I wrote, like, two years ago- Yeah. ... and I did the implementation. And I had some refinement, because one of the things is the, the Agora client comes with an MIP60 wallet. And you can get subs. There will be, like, substantial subs because there is some real funds coming- Yeah. ... from people that you know. Yeah. Um, and the, the money is in the key, right? Yeah, yeah. So, so now that the key is not just your identity, it's also fucking money. Yeah. So, and this is non-technical people. So now, what I built for, for, for Agora, uh, that we are now, like, making an MIP around it, is when y- at some point, you know, like, you get two and a half followers, there is enough value on the private key to make it worth your while. You can select people, not that you trust. You select people that you can reach. Mm-hmm. Which is different. And (laughs) all you're doing is you symmetrically encrypt with, with, like, a passphrase, a passphrase that you remember, you know? It doesn't have to be, like, super secure. It's just to protect yourself a little bit more. Yeah. Shamir Secret, sharding the private key and you send it as a follow event from an ephemeral key to the people that you say that... not trust, again- Yeah. ... someone that you can call on the phone. Yeah. And you... With, uh, enough quorum, say three out of five, whatever it might be, if you tell them, "Okay, send me the shard, send me the shard, send me the shard." Uh, which is... they don't need to know what a shard is. Yeah, yeah, sure. Yeah. But it's, "Click here. Click here." It's all extracted away. Yeah, yeah. And, and that's it- Help this person recover. ... and you get your key back. Yeah. You get your key back. Yeah. So that protects you from, "I lost my key." Yeah. And the, um, the identity migration stuff protects you from, "My key got stolen." Yeah. "Someone else has my key." Two very different things- Yeah. ... that we can solve with the same problem. Yeah. But you... What you can't solve and I th-... Or, or, uh, correct me if I'm wrong, but one really hard problem is, like, if you build s- stuff up over time, like, and, and your key gets stolen, like, the rolling over old events basically. No, no, no. That's... It's, uh, to me, it's probably not- Not worth solving. ... not worth solving. Yeah. I, I, I think I agree. (laughs) You can do s- (laughs) You c- you can do some stuff around it. Yeah. It's- You can republish with a new one. You can republish with a new one. Yeah. There's still... Old events are going to be linked- Yeah. ... retagging the old, the old top key. No, and it's a- it's al- what I like about Nostr is, uh, and to some degree also about Bitcoin, is that, that it just... it works in practice even if all... like, not every s- problem is perfectly solved theoretically. And I think that's- No solutions. ... that's one of those... Yeah, there you go. (laughs)  There is no solutions to, to certain things. (laughs)  And, yeah, I, I think I agree with you that, that, that, that particular problem is probably not worth solving. But the key, loss, like, onboarding and loss problem is definitely worth solving. And- And it's very... kind of trivially solvable. It is- Kind of trivial- It should be. Yeah, yeah. ... to solve. And again, I think Fedi did a really good job with, with that. That was kind of the... There, there were wallets before that, that did also the social recovery- Yeah. ... uh, Shamir secret sharing thing. And that also worked as far as I know, but the issue with that is always that they had to bootstrap their own social network basically. Exactly. Exactly. And that's where Nostr shines, where you can just, like... you already have your contacts, you already know the people, and you just need to, during the startup process basically, select, like, the- Select the people. ... five people or select the 10 people or whatever that, um, are actually reachable. Uh, uh, talk to me more about the reachable versus, uh, trust thing. Why, why is this distinction important here? Well, you, you're not giving them your key. You know what I mean? Sha- Shamir. You... They don't really gain any kind of special access. You... They, they... And the fact that they don't even know necessarily, I mean, they could... maybe they can guess it, but they could... they wouldn't necessarily know who the other counterparts are of the split, uh, because it's all published with a different key, and it's all published in a following that they don't even know. Ah, yeah, yeah. You, you just know your person, you don't know the whole quorum. Yeah. So conspiring is, is, is very hard. You don't even, you don't even know that you- Yeah. ... are a holder until someone asks you, "Hey, I need-" You will know, you will know after the fact. You will know only af- after the fact. Okay, okay. Um, which is kinda cool. Oh, yeah. Interesting. Okay. Yeah. Huh. Yeah, because it's, it's... You are P tagging them on a kind three, on a follow. Yeah. All they see is a follow event. There is just this weird payload somewhere- Yeah. ... on the event. Uh, but if you see the event on, on Primal or something, you will just see, "Someone followed you." Yeah. That's it. Yeah. Yeah. I see. Okay. Yeah. No, that's cool. That's cool. That's cool. How... What else was discussed in the Nostr XXX event? Um, I, I think the most interesting- What was kind of the main points? ... the, the, the most interesting stuff was, was the, the identity. I think it's, like, something that is still- Yeah. ... very important to solve properly. Yeah, the next cohort will focus on identity purely basically. Right. (laughs) Let's see how it goes. Okay. (laughs)  All implementations will go there. Um, what else? Um, what else did we discuss? We discussed, um, like, uh, not paywalls but, um, like, subscriptions and stuff like that. That's still, um, yet to be solved. Um... (laughs) Yeah. It's one of my pet peeves, as you know. (laughs) There's still so many people in the, in the Bitcoin world and in the Nostr world that are trying to paywall content. I'm just gonna yap about that for a couple minutes because that's just, uh... (laughs)  I, I, I, I still think it's so misguided and it's just kind of... I don't know. Look at the most... ... I, I don't know. It's, (sighs) eh, it's very frustrating to me, because I just think it's the wrong approach. Hm. And if you look at, um, online creators, how they actually make money, and, and, and how they, how they monetize themselves, it's not with pay walled content in the traditional sense. Hm. And I see, that's my, that's my, my main criticism for most people that would like to do that, is still that most people think about pay walls with, "You cannot see the blog post, but if you pay 21 cents, then you will be able to see the blog post." And that just never works, because, like, someone will pay it and screenshot it and then send it around for free. Yeah. And, and, uh, and the distinction is terribly important, because what actually works is... I mean, you see that on Twitch and then on, on, on, on, on the big platforms and so on. OnlyFans is maybe a great example as well, where, like, (laughs) I mean, I'm, I, I still don't know why people pay for OnlyFans, but in the best case, it's kind of early access, you know? Yeah. It's, it's actually (laughs), it's actually, like, all the stuff is... You cannot box content in, no matter how hard you try. And so what you, what you can monetize is special, special times and places where you have, like, a, a, a, an elevated access level basically. And I think, I think FiaJeff is right about his kind of Relay idea, that kind of you, eh, like, it, it, (sighs) it could be Relay based in some sense, where it's like this, this, this Relay is, like, paid only, and it's, it's very much like a, you know, a closed chat room that you might- Yeah, yeah. It's a close community. ... have on Discord or, or what have you on those kind of things. And e- and it's the thing that doesn't scale, right? Yeah. Like, you can copy content endlessly for no cost. Exactly. That's the thing. But you cannot, you cannot copy a relationship. Yeah, you can't copy a, a live chat that has Q&A and those kinds of things. And- E- exactly. You can copy a one-on-one- Yeah. ... or a 10-to-one with a creator. Yeah. Yeah. Anyway, like, quick rant about that, because I just, I still see projects and I still see people trying to make paywalls, like traditional paywalls work, and they, I, I think they're just very misguided. I, I, I still think, yeah, I, I don't know. Like, in, in some sense, I mention Twitch a lot in- Oh, wow. ... these kind of conversations. Yeah, it's nice, right? Shit. (laughs) There you go. Welcome. I'm having to take a picture of this. Yeah, let's go. My kids are gonna be- (laughs) ... insanely- (laughs) ... insanely jealous already. (laughs) They're gonna be like, "I saw this." You, you didn't. (laughs) You, you did not. (laughs) No. But you know me, and I saw them, so one degree of separation. (laughs) On- one degree of separation. (laughs) You saw it by proxy. That's cute, right? Yeah. (laughs) Eh, I think there is a- Yeah. Th- there, like, um, um, f- not too, not too long ago, we saw a, we saw a deer, like, every day. Really? Or different deers, kind of. Wow. It's, it's, um, because the, the, uh, we had to drive the same route all the time. Yeah. And, and just every single day (laughs) there was a deer somewhere, either on the street or in the field, like, uh, nearby and so on. But yeah, it's, it's, you know, it's very, very romantic. It is. A very romantic place. We are in a romantic stroll kind of situation, like shitting on paywalls. (laughs) Romantically shitting on paywalls. No, I think- But I think, I think it's, it's kinda interesting because I think there is a, a, a, like, our instinct is to build wh- with the new technology what has already been built before without this new technology. I think we did the same thing, and it's kind of like the re- realization I've been having lately with, with Nostr is that we started as just rebuilding the alternative to Twitter, the alternative to, like, the In- to Instagram, like, I built it. Yeah. And, and I think it's the wrong framing. Like, it's, I told this to Emilien, it's like, it's like doing Nostr adoption h- in hard mode, (laughs) you know? It's, it's you are picking the hardest battle, because you're focusing on a problem o- of a network effects, an overserved market, it's like, the, the, the level of the, the quality of the applications that you're going against is insane. Like, you'll never be able to match that. Um, and there are new things that can be built because of this technology. B- because of Bitcoin, because of Nostr. There are new things that could not be built before. And I find that so much more interesting. But it's, I think it's very hard to figure out what the new things are. Let's go here. Hm. By the way, it's, I, I think we're in the process of trying to figure it out. I, I, I still think it's valuable to have a Substack and Medium and Instagram and Twitter replacement and so on. Like, just speaking purely self- selfish- selfishly, ah, what are you looking at? Oh. (laughs) It just- I came on that seat on the flight over, actually, to take a picture. Ah, there you go. I meant to send it to you. No coincidences. (laughs) 21 is everywhere. (laughs) Um, but the, like, for me, Nostr replaced Twitter completely. And I know I'm a very special case. I know, you know, like- Yeah, I mean, yeah, you, you are- ... for me, it was only Bitcoin, Twitter and son. ... like us, like, all the people- Yeah. ... that's are currently on Nostr, we're a different market. Oh, absolutely, absolutely. It's a totally different audience. But to me, to me, it's kind of, like, to me, it's not clear what the new things are outside of the frictionless value sending that, that Bitcoin and Saps and, and Lightning and E-cash and everything provides, which is kind of a little bit outside of Nostr. ... strong overlap, but, but, but... You, you know what I'm trying to say? Yeah, yeah. Like, the, the rest of it is a very hard sell. The rest of it is kind of the, um, I talked about this in the past, the computer science professor that self-hosts his, like, static index HTML website, (laughs) and has self-hosted it for the last 40 years from his, like, you know, toaster that runs Linux on it- (laughs) ... from his closet, you know? Th- th- that's the value proposition. It's like you... If, if you know how to use Nostr right, you can actually be self-sovereign in, in this corner of the internet. And the corner of the internet very much feels like what the b- platforms brought us. Uh, so, so here's the, what I, what I've been thinking, is that... What, like... I, I think intuitively, we think, like, our instinct compels us to think that the next thing is a replica of the previous big thing. Like, all the people that go for shitcoins is, "What is the next Bitcoin?" And the next Bitcoin is Bitcoin, right? Oh, yeah. Sure. And, and I think that's the case. Like, what is the next Facebook? It's, it's fucking Facebook. Um, like, unless it's not gonna be the next Instagram, because the next Instagram is Instagram. What I, what I think is, is, is compelling... And, I, I don't know if you follow, like, how close you follow, like, the, the stuff that goes on, on Substack, but there is a lot of backlash against Substack, for the simple reason... And it's an unfixable problem, (laughs) which I think it's so fucking interesting. It's just a, a function of size. It is so big, and it's, it's always Pareto distributions, right? Mm-hmm. There's always a lo- a few people making a fuckload of money- Yeah, yeah, everyone else. ... and everybody else starves. Yeah. Yeah. And everybody, everybody else is trying to go, "What is the latest marketing gimmick of what you can do? How much you, you have to post on notes, on, on, on, uh-" Yeah. "... on Substack." And they're all playing for peanuts. Yeah. They're all working their fucking asses off. They went there with the assumption there is a small market, which is why it worked at the beginning. Mm-hmm. It worked not because of h- how the thing is structured or because the founders have, like, really good intentions and whatnot. Like, the intentions don't matter. It's just the size is so big, and it's always going to be Pareto, because humans, we think this way. Like, you see that someone has a million followers, and you're gonna pay more attention. Yeah, I mean, that's the, that's the... It, it seems like that's how the, the universe works. I mean, uh, Peterson had a long, uh, like, rant on that many, many years ago. It's, it's the, the Matthew Principle, like, to, to, you know... It's in the Bible already, I don't know the verse, but it's like, "To those who have everything, more will be given and to tho- to those who have nothing, you know, even more will be taken." Those kinda things. So, it's similar, like, you can see the Pareto distribution everywhere, like size of stars, height of trees, (laughs) you know, (laughs) nu- nutrition in, in, in, like, you know, packs of animals, like, the, the, the, the most successful will get everything basically, like, or like 80% of it. The, eh, it, it seems to be just, uh, yeah, how things work. It's just the law of nature. Yeah, yeah- Yeah. ... it's, it's just how the universe is structured. And, uh... But do you, do you think Nostr will have an easier time kind of counteracting that? In some sense, like, l- let me rephrase that. It seems to me that all the platforms are especially prone to that because you have, like, one single lens on the whole graph, so to speak. Yes. And email, for example, doesn't have this issue that much, right? Yeah, totally, totally. I would, I would guess. (laughs) Yeah, yeah, totally, totally. Yeah, the, the way I think about it is that within s- a platform, which is a database, within a database, you're putting all content in the same database. This way. Okay. And you are, you are weighting the value, ho- in however way you define value, engagement, whatever it might be, um, under that same lens. And that's why we end up with it's all porn, it's all cats video, it's all short videos, it's all, like, the most engaging stuff, because you are weighting... Yeah, you're optimizing for the wrong thing. You're optimizing for attention and engagement. You're... And... Hi, Eron. Hi. Hi. You are... You're optimizing for engagement. It could be that you're optimizing for, I don't know, haikus or whatever it might be. Like, you could use whatever algorithm you want, but it's one thing. It's like you're weighting the value of a picture with the value of a, a poem or a song- Yeah. ... or a tweet or a shitpost. Yeah. Um, and the reason why I do think that Nostr has a different promise is that scaling Nostr is hard. Like, scaling a single relay is impossible. It's impos- So, it will always fragment. It tends toward fragmentation- Yeah. ... naturally. Yeah. It naturally tends towards you are not gonna have a billion people using one virtual relay, like one single entity. Which is also why many small markets is strictly superior to, like, one big centrally planned instance that distributes goods. (laughs) Exactly. Right? It's a scaling issue as well. Exactly, and I, and I think the promise of Nostr, like, what's interesting about it, is that you as the user, with your outbox and with your, your key and whatnot, you get to decide what the internet is for you- Let's actually go in here. ... at any point in time, and the system can react. ... to how your preferences evolve, how your consumption of content and your interactions, how do they evolve. And you can have completely different weighting of, um, what is valuable to you on different relays. So to me, it's like a much more organic and natural way of approaching the problem of what is worth my attention. Yeah. Yeah, to me, to me, it's a different paradigm in the sense, and I, I made this comparison just recently. Um, can you believe it? I appeared in a, in another podcast, German-speaking one. What? (laughs) Oh my God, the spell has been broken. Yeah. The, the, the one I, uh, launched myself, uh- The einundzwanzig. Yeah, thanks. I was, I was asking you to pronounce it. (laughs)  It must sound- How did I do? Did I even sound like Vervaeke? (laughs) It must sound very similar to Vervaeke in your ears. (laughs) Same, same word, basically, einundzwanzig and Vervaeke. Exactly the same thing. But I, I feel like the... T- to me, it's very interesting that all the... I think you made a great point before where all the content types compete with each other, basically, for attention, because that's the only thing that you have online. It's the only metric, yeah. And that's why all the platforms turn themselves into TikTok. They have to. Just look at SevStock. Oh, I know, they have to. It turned into TikTok. Like, it's so far, like, long-form too short videos. It's like- Yeah. ... so far. It's like you cannot go any further than that. Yeah, yeah, it's really bad. It's really bad. And the, the comparison I made was actually to kind of, um, fast food and to, like, if you don't think about what you eat, and if it's just about consuming calories, and if it's just about kind of distracting yourself, eating as a form of distraction, then fast food is really appealing. Yeah, totally. And I think what the platform, the platforms, like, a- again, I think it comes back to monetization in a large, to a large degree. That's why some platforms try to push people into monthly subscriptions and so on, because it is a different way of monetizing, and I think it would be strictly better from a quality perspective. Um, but if you don't do that, you have to cater towards attention. Yeah. And the best way to do it is by producing basically, like, lucid dreams. (laughs) I think what we are building is, like, lucid dreaming platforms, where, like... That's what TikTok short form videos are. It's like 10-second snippets of whatever you wanna dream about- Yeah. ... and it's maximally engaging, so to speak, or maximally, again, it's a Vervaeke, Vervaekean term, hyper-salient. Like you, whatever appeals to you the most, that's what will be shown to you. Yeah. And if the algorithm doesn't know much about you, it will send something your way that most people in your age bracket, with your tastes and your gender and your browsing habits find appealing. And then, like, after, like, two minutes of yes-no scrolling, you're locked in. (laughs) Yeah, totally. And it will, it, it's literally like a lucid dream. And, and it will be like that more and more as, you know, more AI-generated stuff. They will generate stuff on the fly for you. Oh, 100%. That's what they wanna do. No doubt. I mean, spokespeople already told us that much. That's, that's, that's where they wanna go. I mean, im- imagine if you are no longer constrained on what is the most addicting for this person for this moment to content that actually exists. Yeah. You can just make it on the fly. Oh, sure. I mean, porn already does that as far as I know. That's, like, the, the most... I, I think, I think not even, not even in the porn department, but also in the, like, soft porn- Right. ... like, trending towards porn, uh, Instagram kind of content. It's... I highly doubt that, like, uh, the, the time has long passed where this stuff is real. It used to be filters. It used to be, like, you know, Photoshop on steroids. And I'm pretty sure most of the stuff right now that most people consume is just straight up generated. Who's gonna give jobs to the pornstars now? (laughs) Developers and pornos stars (overlapping 00:04:38). There, there will, there will always be a market. It's just, like, homegrown, h- h- homegrown porn, you know. Well, when, when Napster came around for, for musicians was, "Okay, you actually have to go live and perform." So for pornstars, you know, there might be something similar. Same idea. Yeah, I think so. But I, I think the Pareto stuff points to an interesting reality. And I think we talked about this in the past, but it's worth repeating. There is a large chunk of Nostr that is just, um, interested in and dealing with music. Yeah. And that part really seems to work. And there's, of course, like, lots of crossover to the podcasting 2.0 decentralized music kind of movement and so on. But I think for those kind of segments, it can really work, where, um, you, you, you have your, kind of... You fill your niche, in some sense, you have a little bit of a following, and you make it really frictionless to build a community and to send value around, basically. I think that's kind of the main value proposition. Without, without, um, without needing to self-censor, I think that's kind of the main issue that lots of the platforms have, where it's just, like, you have to... ... Always be wary of being deplatformed. And it's like, "Can I say that?" And like most of the YouTube content that I watch still, like every sentence is like has a little bleep in it somewhere- (laughs) ... because the people, they have to self-c- like, they have to censor it, otherwise, the video will be demonetized. Right. And like, they like to swear, and they will say, you know, fucking shit and whatever, and, and talk about political topics, and they have to... Like, they were, for example, one guy was going through the Epstein files, and every, every time he said, you know, like, the rapist or even sex offender or something like that, he had to bleep the words. Wow. That's the state of YouTube. That's so fucking retarded, just Right? (laughs) ... crazy. Yeah. (laughs) That's really bad, right? That's... And I think, I think that's... Again, I, I think, I think the internet needs a corner where you don't have to worry about this stuff too much. The... From, from what I've seen and the, the conversations that I've had, the, the people that are trying to make a living out of their "content", which is a such a fucking insulting word- (laughs) ... this content. Fuck that, Jesus. (laughs) Hey, hey, hey, we're- Dostoevsky was making con- We're- ... we're making content. ... we're, we're producing content right now, man. (laughs) This is content. (laughs)  Um, the, their, their issue is like top of mind is the distribution, you know. It's, it's all about... And that's kind, that's kind of interesting because a lot of people that I, that I've spoken with, they arrive to the same conclusion that you mentioned briefly, uh, um, a while ago about paywalls and whatnot, is if your content is behind a paywall- No one will see it, period. ... no one fucking sees it. Yeah. So no one reads you. Yeah. So- You don't want to artificially restrict the distribution of your content. And that's what the Twitch people figured out, for example, you know. Like it's... Everything is everywhere at all times, and everything is reshared and reclipped, and like re-uploaded to YouTube and other things, and so on. And that's how, how the content kind of distributes itself naturally. And it's still like people still pay for it, but they pay for something else. Right. I would argue similar to OnlyFans and other things, you know, where it's like you, you actually, you, you... (laughs) I'm gonna stick with Twitch, otherwise, it will just get out of hand. (laughs) But if you donate to someone on Twitch, like if you subscribe to someone on Twitch, you're not paying... you're not buying the MP4 file. You're not buying the, the, the video stream file. You know what I mean? You always had access to that. You're buying something else, and that's something, that's something that, that I think most people in the Bitcoin and Noster world and so on still don't get like at all. Yeah. Anyway, I'm still ranting. (laughs)  But yeah. I mean, I, I think, uh, it, it, a lot of it comes down from the fact that what everybody in... And I'm gonna stick to Substack because that's the one that I know the best, the, uh, what everybody is trying to replicate on Substack is the early adopters that ha- that are making a fucking killing on Substack, of which there are like 20- Yeah. ... out of millions of writers. Yeah. Um, and they're trying to replicate this model where you have hundreds of thousands of subscribers. You have an insane income and an insane, uh, MRR. Yeah. And just by sheer numbers, not everybody can have that. A very, very, very small few can have that. Yeah. Um, so they are all fighting for kind of like a dream. Uh, it's, it's, it's, um, a pipe dream, you know. Yeah, yeah, yeah. But it's the same everywhere. A very s- a very small percentage of all musicians make all the money. A very small percentage of all movie stars make all the money. A very small percentage of all movies make all the money, you know. (laughs) And so on and so forth. It's like it's the same everywhere. Take writers and so on, it's like... But, but to me, it's interesting the, the fact that they are being sold that, that dream of, oh, you can make as much money as this writer. Lo- like, basically, that's what the, when they are advertising that so and so is making this amount is you could also make this amount, right? Like, if you- Ah, yeah, yeah, yeah. ... apply yourself, you can make that, that same amount. Same with OnlyFans. And- They, they're being sold a lie. (laughs) They're, they're being to- so- Yeah. ... sold a lie- Yeah. ... into a trap. They're, they're prostituting themselves for nothing. (laughs) Be- be- because you're playing in a market that ha- (laughs) ... that is, has already been... It's a, it's a winner takes most market where there is already a winner. Yeah. And you're gonna bring all your effort and all your whatnot, all your sweat and tears- Yeah. ... into a place where basically you cannot win. Yeah. Basically, it's worse than a casino. And that's actually a good point, because I think that's one thing that Substack actually did right, was the, the main distribution channel, at least in the beginning, that was the case, I'm not sure how it is now, was email. Right. Yeah. And I think what Nostr allows you to do is to, to be yourself, find your niche, just do the one thing. Like n- no one can be better at being you than you, you know. Yeah. And just kind of be yourself (laughs) without risk of being deplatformed. And you can actually build your digital empire, for lack of a better word, you know, and, and have people that actually follow you and are interested in the stuff you have to put out. And that you can form real connection and you can have real value flowing, again, without intermediaries. And I think that's the value proposition. It just takes a lot of time and it takes a lot of effort to build it out and, and all those kind of things. But you can actually do it in a way without ever getting rug pulled. And that to me is the value proposition, which of course, coincidentally, to me, is also the value proposition of Bitcoin. Right. Like, no rug pulls. Yeah. Like, if you're getting rug pulled, you rug pull yourself. (laughs)  Which is definitely possible. Which, which happens. Which happens, so... (laughs) Easily. No, no, no free lunch. These people don't know. No free lunch. That's why a very long time ago, I wrote about like how in, in, in the Bitcoin world, like responsibility is like programmed in. Like if you take Bitcoin seriously and you, you rearrange your life to live on a Bitcoin standard, for example, you have to be responsible, like at least for your keys, for example- Yeah. ... and those kind of things. And in, in a large, like following up to that also... ... you have to be, you have to take your privacy more seriously. You have to take your digital hygiene more seriously and so on. And all of that is true for Nostr as well. Yeah. Like, if you actually wanna go down that route and build out... I think that's why the overlap to the regenerative farmer community is so big, because if you wanna take charge of your life, you actually have to go buy a farm... (laughs)  (laughs) ...buy a plot of land, so, you know, grow your own food, have your, you know, all those kind of things. But I'm only half-joking. Like, I think, I really think that the, that's why the overlap is so big, because the same is true on, like, with your, your, your digital estate, you know. Like, you, you will actually have to run your own relay, you have to take care of your own key material, you have to run your own node, you have to take care of all those kind of things, you know. Like, you actually have to, on the Bitcoin side, you know, like you have to stamp your fucking words in s- in, in steel and like make sure that they're (laughs) held somewhere safely. Just for the whole retail ￠ okay, And, and so on, and then, you know. ... in the dark. (laughs)  Exactly. And then I, I, and so on and so on.
-(laughs) And you'll have to upgrade over time, all those kind of things, you know. And, and, I mean, just looking at myself, at my own, like Nostr infrastructure, th- like, I run multiple relays, I, I have multiple Blossom servers, and, and like I have to take care of all this stuff, just like you would have to, you know, like, (laughs) plow the field... (laughs)  (laughs) ... and milk the cows in the morning, you know. (laughs) It's just like, it's work, but it's also rewarding in the sense that you at least know that's yours. Yeah, yeah, totally. And you're not, you're not just renting the YouTube channel, and, I mean, it always breaks my heart every time I see someone who has built a life around a certain platform for the last 10, 15 years, whatever, and then by just some, whatever, sometimes it's just like straight up bureaucratic mistake or whatever, they just get nuked off the planet and everything's gone. Like their whole library, everything, the whole output that they produced over the last 15 years, completely gone, no backups. (laughs)  It's insane. It's in the, it's in the cloud. It's completely insane, right? The backup is in the cloud. (laughs)  If, oh, if only someone would have made T-shirts and stickers and so on that says, "The cloud is just someone else's computer." (laughs) If only. Well, anyway. Anyway, let's see. Let's see how it goes. I mean, again, but again, there is, there's no free lunch in that sense. Like, you ha- it, it, it actually is work and it actually requires a certain amount of thought and care and responsibility to take care of your digital infrastructure and so on. So I doubt that... I, I'm only mentioning that because I doubt that the masses will ever do that. Maybe the markets will solve that, that maybe, you know, like, people, enough people will be willing to pay for it in a sense, and, and I think it will get easier and easier to self-host and so on. I think it will get easier and easier, and, and I think the, I'm, I'm a forever optimist. (laughs) Uh, uh, I think the, the level of complacency that everybody has, um, like all these assumptions that we have on how people behave are coming down from an observation of the, the current world of the, of the fast food. Yeah. And we haven't even identified like that digitally we are all being served fast food. Like peop- more- like we know, we know, we know. Yeah, most pe- most people haven't realized it yet. (laughs) Like 99.9999% of people... That they're poisoning themselves. Yeah. ... on fucking Nostr don't know that yet. Like, it, it is, it is... The lack of awareness of where we're at... Yeah. ...it is... And, and I think that complacency that we have, "Oh, it's in the cloud," like all these things. Yeah. If, in, in one hand, the tech will get better, it will be easier to do all these things, distribution will also come which, you know, brings like, okay, I'm doing all this work for a reach of like maybe 500 people will see what I'm writing. (laughs)  Like I, I think all these lines will converge in, like will go in the right direction together. Yeah. Um, but I also think that people will, will care more when they, like... Yeah. ... you know, like- Also 500 is a very respectable number. You can make a living. Like imagine, imagine... You can make a living. Imagine going up to a podium and there's like 500 people actually listening to you. Yeah, 100%. That's a lot of people, you know what I mean? That is a fuckload of people. Yeah. I, I, I also think the, the whole, like everything is completely out of whack right now, because if you're not making like 10 million views, you're le- you're a loser, you know. (laughs) Yeah, totally. Totally. Totally. (laughs) That's kind of... Of which 99 are bots. (laughs)  Yeah, of course. But, but it's, everything's so out of whack where, where just, it's... I hope that we can return to a smaller, more saner world, and I hope that Nostr can help with that, because you actually, um... I mean, the, there is, there... Lots, lots has been written about those kind of things in the past. There was this one book I... It was actually a very well-known author, but I, I'm, I'm drawing a blank now, but the 1,000 True Fans, right? Yeah, 1,000 True Fans, Kevin Kelly. Oh, there you go, Kevin Kelly, right. And there is a lot of truth in that, that, that's kind of, that's the, that's the right size. (laughs) Yeah. (laughs) You know what I mean? You don't need 20 million true fans. Like that's, that's completely... That's, that's like... You're missing the mark by so much. (laughs)  But, but, but, but I think the, the, the problem is that because all content, going back, all content is being compared and weighed under the same scale... Yeah. ...you, you cannot have 1,000 true fans. No, no, you can't. But, b- Like you either have 20 million or you have nothing. On the bright side, that's what makes all, and in the long run, will make all the platforms kind of vanish and crumble. Like because they, it, it's, it, it turns itself into a unified slop machine. Yeah. You know, it's, it's literally... We are moving from the slot machines of social media, to the slot machines of AI... Yeah. ... and AI generated content. ... and everyone will have to produce the same slop, just like all the fast food chains had to produce the same fast food. Yeah, 100%. Totally. Totally. Equally, equally cheaply, and- and like the- the only thing that- that's missing from the food is nutrition. (laughs)  You know? Like taste is there. Calories. It's cheese, it's grape. You have it. But like health and nutrition, that's like, no, nowhere to be found. But- but here's what... I- I've been making this point pri- in private conversations a- a lot. But look at the health industry, like fast fo- it came as a- as a- as a byproduct of noticing, uh, fast food and it is a real huge, um, industry with a lot of people that create that kind of product. There's- McDonald's still exists. Yeah, sure. But there are many, many, many companies building products for the health-conscious people. Yeah. Yeah, yeah, yeah. And- and I think for digital health, um, uh, health- We don't have that much yet. ... ????? ???? Yeah, yeah. I think there's a- Yeah. ... insane demand. Yeah. I go to subReddits that have nothing to do with tech. They have- Yeah, yeah. Yeah. And you can notice the appeal, and- and- and for- for- for the nostalgia of a lot of these products. And I think one thing that, like, you and me and- and I think people in our circles, we- we tend to disregard the nostalgia for the GLCs and like the- the look and feel of the current ??? product, uh, website. That- that we think, "Oh, it's because we are this age," you know, and we look back. But people that are young, they- they don't- they don't, um, they don't mention by name that nostalgia, but they do crave the products that are not just influencer slop. Yeah. I see, yeah. You know, like real connections. Yeah. So- so I think that the market- There's very young people that are also drawn towards, like, gramophones and like very old style, like, vi- vinyl players and so on. Yes. Uh, that's kind of, that's a fair comparison, right? Where it's like- 100%. ... they're not from that era, but they still prefer- But they still- They prefer that to like a, I don't know, like an iTunes subscription. And- and you don't have to replace Twitter or TikTok. Oh. Like you don't have to- By the way, fun fact, the path we're walking right now, can you see here, that's the tracks? Yeah. That's from the- that's from the Romans. That's like 3,000 years old. Yeah. No fucking way. Holy shit. That's from Roman carts being moved. Wow. Yeah, they went this path a lot as you can tell. It's like, you know, like a meter deep in terms of- Very warm. (laughs) That's... Wow, that's amazing. Yeah, yeah. That's amazing. That's... The- the path we're walking is called the Roman Path for that reason. I thought you were gonna say like Second World War, but... (laughs) A little bit older. No, it's very, very old. (laughs) See, and we crave it. Yeah, yeah. (laughs) We are like, "Wow, that's amazing." (laughs) Look at... Look at the look and feel. Look at the look and feel. Look at the UX of that thing. (laughs)  It's great. It worked 3,000 years ago, it still works today. That's what we're trying to build, right? Like something that still works like in- in many, many years and decades from now. Totally, totally. Yeah. I mean, that's- that's why I switched my whole online identity to Nostr only like a long while ago, because I realized, okay, like, this thing has legs and it will still work like, you know, 30 years from now even if it means I'm running the only relay that ex- the only relay that exists, right? Like, I can just- I can just make it work indefinitely. (laughs) And you can't say the same thing about whatever, Geo Cities, YouTube, what have you. Yeah, totally. You know, Substack and everything else. And- and I think that's a big appeal in the sense of if you- if you actually understand how it works, you can just... That's also why my- my personal homepage, for example, is just a static HTML, and it's just like, it's Jekyll. It's a Jekyll site- Right. ... and it's just generated sta- static HTML. And the reason why I built it this way is not only because I hate JavaScript and all the frameworks- (laughs) ... but I,like I know it's built to last. It's like just- I slap, uh, wha- whatever web server on it and it's- it's just... it's- it's bound to work. And I think we... (sighs) Also, outside of the Nostr community, to your point, there's lots of people that crave that and want to have that. And like we talked a lot about the self-hosting community, right? The local first people- Mm-hmm, local first thing. ... and so on. And, but there's also... I think what we are ma- again, making the comparison to fast food and those kind of things, there's a lot of people right now that are quitting everything and they're straight up fasting. Yeah. Yeah. Totally. Totally. (laughs) With food, you can't do that, by the way. With digital stuff, you can actually do it. Like you can, um, you know, like you can actually detox massively. But I'm- I'm still a technologist at heart. I wanna- I wanna have technology. I just don't want the technology to rape me and spy on me and spit in my face- (laughs) ... and just telling me that it's raining, right? It's like... that's- (laughs) But that's the current state of technology. It totally is. It's... (laughs) And- and I- I think there is a better way, and I think that Nostr has a- a big role to play in it. So that- that would be my summary, I guess. Yeah, I- I mean, if- if you look at like the email marketing people, like info product people, they are very heavy on- on email and they- like people like Ben Settle, like they say, it's their one... Yeah, because you actually- ... subscribe. ... own the email list. Yeah, you have the- you have their fucking email address. Yeah. You know what? That- that's the only reason. It's the only reason. It literally is. It's the only reason. Yeah. And- and what they do is spend literally zero minutes on social media. Yeah. Don't even have a social media because- Yeah. ... the... it's... it doesn't matter if you have 10 million followers, they can be taken away like that. Oh, yeah. Only take people to your email list. Yeah. It's the final destination. Yeah. And part- Everything else is a funnel for the email. E- exactly. Yeah. And I think for people like that, that have that point of view- Yeah. ... you go in with a Nostr pitch, "Oh, no, Nostr is different, blah, blah, blah," and they will say, "Fuck you. I've been burned before." Uh, yeah, sure. (laughs) I mean, same with Bitcoin, right? Same thing. Same, same, exact- Same thing. Exactly. Exactly the same thing. Exactly the same thing. Same fucking thing. Yeah. Use- use that. Use the magic internet money and- and, you know, everything will work flawlessly and (laughs) you'll be rich over time. (laughs) I was... I was, um... I was- I was listening to, um... y- you probably know who- ... who Nick Fuentes is. Uh, well, by, yeah- I didn't know before either. (laughs) Yeah. I- I wouldn't call myself a Nick Fuentes expert, but I know- Oh, I'm a- I'm a- I'm a Nick Fuentes connoisseur now. (laughs)  I- I- I know the name, I know some memes, that's about it. So- so apparently the guy was, um, was like, uh, the platform from, like, PayPal and Visa and whatnot- Of course. ... like four or five years ago. And he has outlandish, uh, political opinions. Yeah. (laughs)  You- you- you- I mean, I guess. (laughs) Moderate. Uh, and, um, and- and the guy, he disbelieves on e- everything is a conspiracy, everything is, like, the CIA out to get you and whatnot. Yeah. He got- he went for, like, um, like, high risk, uh, payment credit card processors and whatnot, nobody would take the guy. Yeah. And he ended up on Bitcoin. Yeah. And he fucking hates Bitcoin. (laughs) Like, he's, "It's a fucking total scam." But for, like, now he- I think he has a credit card processor- CIA accredited. Yeah, CIA cred- like the whole- everything, you know? Yeah. But the guy was using it because it was, like, the only thing- The only thing that worked, yeah. ... that worked. Like, he would immediately sell it, I'm guessing. Yeah. Yeah. He would immediately sell it, for sure. But- but he- he was using the thing because he was- Yeah. ... cornered into it. (laughs) Yeah. Yeah. I think Nostr will have a similar fate for- for- for a couple of people, where it's kind of the- the- the- the final, (laughs) the- the last bastion, the last thing that works, the last tool that works, where you can actually... yeah, I- it's actually surprising to me that we didn't get any, um... there aren't any people o- on Nostr that I know of that were deplatformed everywhere else. Hm. I m- I mean, I- I think that- Before they join Nostr, they will start their own social network. (laughs)  That has been the pattern that I've observed. Yes. (laughs) Yeah. But I- I think the- i- it's a bit because, like, just the timing of how, what happened with Elon and Twitter and, like, oh, now everybody's a free, uh, free speech ............................ Yeah, Blue Sky as well. Uh, bl- what? I mean, lots of people went to Blue Sky for, you know, like, "Oh, that's the actual green pasture." Yeah. Yeah, yeah, yeah. "That's the actual free speech zone." Yeah, for the Liberals, that... (laughs) But- but it's interesting, like, one of the, one of the- the interesting things that people, um, point to with Blue Sky is that, um, is that it censors, right? And one of the- the- the reasons why, like, I think the second reason why people leave Substack the most is that they- they don't censor enough. Oh. Yeah. (laughs) Really? Yeah. (laughs) How- how so? Like, explain that more. Be- because- Is- it's like there is atrocious stuff on Substack, and that's why they leave? Substack is like, um... Substack, e- it's kinda, like, the- the pitch is a bit, like, rumbly, you know- Hm. ... ish, in the sense of, oh, you can come in, you own your audience and whatnot, um, and it's kinda, like, free speech, uh, adjacent. Mm-hmm. It's like they are positioning themselves, obviously, there is a door to knock, so obviously- Hm. ... that will not hold, but they- they did, uh, allow, like, I don't know, like what the left calls neo-Nazi content. It might be someone that said something pro-Trump or something like that. (laughs) Okay. Yeah. Um, so a lot of people started leaving because of that, citing, "They are allowing this hate speech and whatnot in the platform, so I'm going to Patreon," you know? A lot of people are leaving- Interesting. ... towards Patreons and stuff like that. Huh. It's the second most popular reason. Interesting. Yeah. Um, which, I don't know, I- I think that's also something that is quite interesting about Nostr, that it's not one big Substack. Yeah, yeah, yeah, yeah. You know? It's a relay. You- you don't have to- You- you don't say, "I'm gonna leave email just because someone sent a bad email." E- exactly. Yeah. You don't have to produce this stupid fuckery. But I think- I think people didn't- don't- are- aren't at the point yet to understand Nostr as a protocol, and I think this will take time- But I think the reason- ... because there's some- there's some, like- like, Blue Sky roleplays as a protocol, basically. But the reason, I think the reason why people don't perceive it that way is because we are not building it that way. You join Primal- Yeah, fair enough. ... and there is one experience. Yeah. You join whatever, Armati- and- and it's, like, this one experience, and sure, if you're, like, very technically inclined, you can select your relays and you can be on, like, the Tai Nostr, it's- it's not designed in that way. Like, the products, the protocol absolutely allows for that. But none of the applications really- Yeah. ... are going for... this is... more like the- the- like, the way I'm seeing it is the relay is like a magazine, and you subscribe to a magazine. You don't quit magazines- Hm. ... because there's a magazine that you don't like. Yeah. You just don't fucking read the ma- fucking magazine- Yeah. ... and then that's it. But to be fair, Nostr isn't- d- doesn't work like that yet. Like, most relays have most of the content, right? There's like- there's no... again, I'm- And- and I think that it's also- Back to- back to the- ... also a function of the products. Back to the... I agree, I agree, but also back to the, like, it- it's a fool's errand to try to box content in. Content, especially viral content, will proliferate a- across relays. I- I- I don't agree with that. No? No, no, no, because you can simply just whitelist who can write on the- on the relays. Sure, but I- I'll just hit rebroadcast and I'm whitelisted in most relays. Yeah, but my- my relay simply doesn't allow you, like this pub to publish. My relay only allows these 200 parties to publish. Yeah, yeah, sure. No, I just- Like there are 140- ... mean like if something is viral, one of the 200 will- will republish it to your relay. That's my point. Yeah, but if you, uh, like- like- Yeah. ... copy and paste and whatnot, ah, I think that's perfectly fine. Yeah, yeah. I think that's perfectly fine. Or like other, like with a re- with a retweet or, like, a quote tweet or whatever. So for example, on the- on the- the- Those kind of things. ... the Agora relay, so each- each relay- But I- I- I do agree, sorry to interrupt- Yeah. ... but I do agree with your point because I do have personal relays and that's a very small subset of the whole Nostr verse is on that relay, because it's just for my personal backup. Right. Yeah. And- and I think, like, relay feeds, it's... It's what's interesting. Yeah. I- I do agree. It's why you- you subscribe, like, and you can select- select five relays which, in your mind- Yeah. ... they- they are the same kind of thing. Yeah. I- and I think, in the long run, Nostr will actually be something else entirely. I mean, it obviously started as a Twitter clone. But I think the other thing that was successful in terms of grouping was Reddit with subreddits. Yeah. And I think- I think we'll have a mix in the sense of you- you- you will follow Relay and you will have, like, Relay-based feeds and also, uh, you know, algo-based feeds and so on and so on. But, um, yeah, no, it's- it's- (sighs) it will just still take time to- to- to play out because most people, I think... The reason why I mentioned that before is, like, if- if you- if you talk to... (laughs) I don't talk to people. (laughs) As you know, I hate people. Fuck people, man. No. But if you- if you read online and it's like you- you read on Hacker News, you read on Reddit, you read on whatever, Blue Sky and whatever, and other networks so to speak, what they talk- what they say about Nostr is like, "Ugh, it's just like this app. It's this app for, like, you know-" Bitcoiners. "... crypto people." No, not even crypto people. Yeah, true. Crypto people. It's this crypto app. Isn't this the crypto app? You know, like... And I think that's where the level of understanding is for most people. We're not at the, "Hey, email is actually a protocol," kind of stage yet. Because I- I'm sure in the beginning, it was like AT&T or whatever, and I don't know what... You know, like the (laughs) email was such a new thing, people were not able to wrap their head around it. It was like one product by one company basically, is what I'm trying to say, right? And I think that's where we're at in the development cycle of Nostr, like, kind of socially speaking. Yeah. But- but I think the way we are designing products is playing on that hand, like- like piling on on that perception of you to treat Relays in this generic way, you know? Um, and not... Like, I- I- I see... Say, for example, you wanted to use, let's say, Amethyst, for example, to use Nostr in this way. It's- it's- it's in this, like, magazine type of way. Mm-hmm. In this- that really is- is like this- this group of, like, content or community or group. Yeah. Like, it's- it's some type of abstract curation. Yeah. There's very few clients that do that. There's Jumbo, right? It is so fucking hard. And there's, like, two more. There- there's, like, a few, but- but even- even the- the experience itself, it's kinda weird. It's- Yeah. ... kinda weird. Um, and- and again, it's- it's a- it's a- a self-fulfilling prophecy. It- it's hard to use Nostr in this way, so you end up using the- the- the- the Relays are- as this generic content bucket. Um, and, yeah, I think there is- there is a lot of work that we... But- but- but I think we need to break with this paradigm of this is how we- like, Nostr clients work. They- they look like Twitter, you know? Like (laughs)- Yeah, yeah. ... this is kind of the experience. I think subreddit is a much more, uh, compelling way of thinking of how to build up a client. Mm-hmm. I think it's also... It's- it- it will depend on your form factor in the sense of, like, the mobile clients will look very different than desktop clients, and this is already emerging. This is already happening. Yeah. And there- there is interesting clients. I mean, uh, Grimoire, for example, um, is... Th- there's all these clients now that are kind of desktop power user clients. Mm-hmm. And I- I, myself, for example, I use many different Nostr clients, and they're all kind of special purpose or many of them are special purpose. I still use Amethyst as my- my main- Daily driver. ... driver, like, my daily driver, which is, of course, comical because it's the everything client, basically. (laughs)  And here I am talking about special purpose clients. (laughs) No, but- but I'm serious. I'm- I'm... What always- what always, um- Oh, look at the mist. Jesus. Yeah, there you go. So cool. Yeah. Yeah, it's- it can be pretty if- if- if- if you're not depressed, it's a very pretty place. (laughs) If you are already depressed, you're gonna have a bad time here. (laughs) Depressed. The environment tells you, "Yeah, you're right." Yeah, yeah, yeah. "Life is worthless." Next six months, just- just kill yourself. Do it. Get it over with right now. (laughs) It's like, you won't see the sunlight for many months. Just- just- just get it done. (laughs) No, but I... There is a- a client written by a Japanese guy. I can't pronounce the name, like, at all. Rami... Mi... It has a little... It has... It sounds something like it. It has a little postage stamp in the top left, and the only purpose is- is to send a kind one note, and it shows nothing else. It's an empty text field, right? Yeah. And it does things really well with, like, also posting images, file upload and so on. And many times, I just want to write something, and I don't want to see anything else. Right. Right? Yeah. Because if I open any client, I'll be in the feed. Yeah. And I'll see something, I'm immediately distracted, you know? And- and so I have this as, uh, one of my... Um, I have this as my- my homepage basically. Like, I open up my browser, and this thing is in one of the tabs. I have- (laughs) ... like three or four tabs that open up, and that- that's one of them because if I want to post something that's on my mind, I'm just gonna go ahead and hit post. I'm just gonna send it. Not even looking at Nostr basically, right? And I mean, and there's- there's a bunch of other special purpose clients that I think are- are- are interesting, like the... (sighs) I don't know, like... Then we come back to, like, what is a Nostr client? But again, me posting stuff, for example, like this recording right now, if I say some magic words, they're- it's automatically posted to Nostr. And then Castor, which is obviously, you know, a- a Nostr client that transforms a Nostr feed into an RSS feed- Yeah. ... picks it up and- and pushes it out as an RSS feed. And all this is, like, special purpose. It's not very user-facing, but it's like special purpose clients do exist. This- I- I think kind of icon. Oh, no, no, absolutely. No, no, no, of course. Oh, another one. Uh, my- the search that I built and also- also Boris. Hants. I- I keep a close, like... (laughs) One of the tabs that opens up in my browser is, like, the ant search for most recent highlights, what people have highlighted. And I always, every single day, I discover one or two interesting articles this way. ... and, and like all those kinda little things. It's, it's a read-only client, like its... ants can't do shit. It's just like, you know, it's just doing search. (laughs) (laughs) No, no, no. Uh, uh, I mean, of course, I absolutely ar- agree with that. And, uh, I think these special purpose clients, it's endlessly science-based. Yeah, I, uh- Yeah, but you have a point. I mean, there is, there is Primal and there is, uh, you know, there is all these, the products, so to speak. There's Primal, Amethyst, Stamos, and so on. And that's... If, if we're being honest, that's like for most people, that's the first touchpoint. That's, that's what Nostr is- Yeah. ... for most people. Yeah. It's like- And they don't make the switch to another client. But I think, I, I think right now that... I think that's also fine because probably like 10% of them do. (laughs) (laughs) It's very similar to Bitcoin, right? Like most people that get into Bitcoin don't stay with Bitcoin and they will get into shitcoining or they, they are fiat maxis and, you know, you, you... we'll, we'll have to live with that, I guess. (sniffs) Yeah. And if- I think, I think we'll find... I'm still very hopeful in the sense of- I realize that was all- ... mmm. ... very pessimistic talk- Yeah. (laughs) ... from my side. Well, it's the, it's the environment, you know? (laughs) It's the miss. (laughs) No, that's fine. I, I still think we're fine. I still think... Like, on the positive side, I'm, I'm actually amazed about how well things work. Yeah. It's probably because there's very few people using Nostr. (laughs) (laughs) No, but... No, but I, I really mean it, like the... even stuff that came out of Sovereign Engineering, it's amazing to me how well this stuff works. Yeah. Like I use Blossom every single day without thinking about it, without anything. Yeah, it's just one more tool, right? And I, and I s- and I see it absolutely everywhere. It's integrated everywhere. Yeah. And it's like most of the links are Blossom links and so on. Yeah. And, and just kind of how buggy Nostr was in the beginning, it's amazing right... like, like I think I told this in the past. I, I told it in, in, in one of the conversations it came up, like it's my go-to method to see if I'm online or not. (laughs) It's like I, I, um, you know, I launch my, my Nostr client and I refresh because I immedia- I can immediately tell like if new stuff is streaming in and coming in, then I, I know I'm on... If, if I'm offline, it still kinda works, but I only see my stuff- (laughs) ... that I just recently posted, right? Which is great, like, it's, it's fantastic. You are online-ish. Yeah, exactly. And, and just like all the stuff that you've been working on, uh, just NIP60, NIP61 and so on, it really, really works, like- Yeah. ... it's all this stuff really works and, and just kind of the clients became more polished and like even video and shit works, you know? Like all those kind of things. I, I think we've been on this like professionalizing mode in the past six months, nine months, that, where there is a lot of very solid, uh, very solid frameworks, very solid relays. Like I think we're in, in... technically, we're in very good shape. Yeah. Okay. Except my brother. Yeah. (laughs) I'm fucking dying. (laughs) All right. Any last words before you take a piss? No. Because we're not gonna record this. I, I can only- All right. ... think of one thing. (laughs) (laughs) Thanks for indulging me. Oh, thanks for the walk. All right. Let's see- Thanks for the drink. Yeah. (laughs) Let's see if we can... wait, well, let's see if we can draw this story close and yeah, we'll have to, we'll have to, to do the other thing another time. But for now, it was just a walk and a recording, which is- It was very nice. ... which is great. It was very nice. All right. (laughs) (laughs) All right. We managed. All right.
+[00:00] Speaker 1: With no people in.
+
+[00:01] Speaker 2: Oh, okay.
+
+[00:02] Speaker 1: But okay, let me, let me see. Let's do it like this. All right, but let's not, let's not, let's not waste any more time. This is just gonna be a no solutions-
+
+[00:12] Speaker 2: This is on?
+
+[00:13] Speaker 1: ... afternoon. Yeah, but it's not plugged in yet.
+
+[00:15] Speaker 2: All right.
+
+[00:17] Speaker 1: It's on. All right. Okay, change of plans. [laughs]
+
+[00:26] Speaker 2: The break wasn't a break.
+
+[00:27] Speaker 1: We, we [laughs] we wanted to do something else. We wanted to go sauna, but, um, yeah, like, it's just the people around here are just, just, you know-
+
+[00:38] Speaker 2: There is too much sun.
+
+[00:38] Speaker 1: Yeah. Yes, it's...
+
+[00:39] Speaker 2: [laughs]
+
+[00:41] Speaker 1: I think it's in, in their history, you know? Like, ever since this one, one guy came to power that was speaking weird and just had this weird mustache, it went all downhill from there. From this point on-
+
+[00:52] Speaker 2: Is it, was it John Barbados? [laughs]
+
+[00:53] Speaker 1: ... people... Yeah. [laughs] No, different, different guy. Different guy.
+
+[00:57] Speaker 2: Shorter.
+
+[00:57] Speaker 1: Equa- [laughs] not as hard to pronounce, the name.
+
+[01:01] Speaker 2: [laughs] Very memorable name.
+
+[01:04] Speaker 1: Yeah, very memorable.
+
+[01:04] Speaker 2: He had really good marketing.
+
+[01:05] Speaker 1: Yeah. Great marketing. Like [laughs]
+
+[01:08] Speaker 2: Great designs.
+
+[01:09] Speaker 1: Yeah.
+
+[01:09] Speaker 2: Beautiful logos.
+
+[01:10] Speaker 1: Oh, man, like the, the, the, the suits he made, they still kill her.
+
+[01:15] Speaker 2: [laughs]
+
+[01:15] Speaker 1: The Hugo Boss was behind all that. Crazy. Great cars.
+
+[01:19] Speaker 2: Killer cars.
+
+[01:20] Speaker 1: Killer, killer cars.
+
+[01:21] Speaker 2: [laughs]
+
+[01:21] Speaker 1: Great, great, great Autobahn and, that he built, you know? Great, great streets. He, he did, he did many, many things. Many things.
+
+[01:28] Speaker 2: Where are leaders like that now? Like-
+
+[01:29] Speaker 1: Where... Today... [laughs] Oh, they are reappearing. [laughs] They're, they're-
+
+[01:32] Speaker 2: [laughs] They are
+
+[01:33] Speaker 1: ... they're, they're-
+
+[01:34] Speaker 2: Coming back
+
+[01:34] Speaker 1: ... they're coming back. Yeah, yeah, yeah. There is, there is.
+
+[01:36] Speaker 2: [laughs]
+
+[01:37] Speaker 1: [laughs] Yeah. Some, some... Many people, I think, would, would like to-
+
+[01:40] Speaker 2: [laughs]
+
+[01:41] Speaker 1: ... would like to have a s- a, a second merry-go-round around the authoritarian regime kind of thing.
+
+[01:47] Speaker 2: [laughs] It hasn't really been tried, you know?
+
+[01:49] Speaker 1: Exactly. Exactly. Full, full real socialism hasn't, hasn't been tried yet.
+
+[01:54] Speaker 2: [laughs]
+
+[01:55] Speaker 1: Well, anyway, we're just gonna talk about, um, your adventures some more. So change of plans, we're gonna grab a drink, um, at the thing, at the box, at the box office. [laughs]
+
+[02:07] Speaker 2: [laughs]
+
+[02:07] Speaker 1: You'll see. I'll show you.
+
+[02:08] Speaker 2: The Iron Man box.
+
+[02:09] Speaker 1: Because we, we actually made the mistake multiple times, I think, right? With just kind of completely dehydrating-
+
+[02:15] Speaker 2: Yeah
+
+[02:15] Speaker 1: ... during a No Solutions recording.
+
+[02:19] Speaker 2: Yeah, yeah, yeah.
+
+[02:19] Speaker 1: So yeah, let's not make this mistake again. [laughs]
+
+[02:22] Speaker 2: Four times the same mistake.
+
+[02:24] Speaker 1: Yeah. [laughs] Yeah, it's enough.
+
+[02:24] Speaker 2: I mean, at least it's not under the Madayan sun.
+
+[02:26] Speaker 1: It's... We, we're behaving like LLM agents, you know? [laughs] It's just like-
+
+[02:29] Speaker 2: We learn-
+
+[02:29] Speaker 1: ... never, never learn. [laughs]
+
+[02:31] Speaker 2: [laughs]
+
+[02:31] Speaker 1: Never learn. [laughs]
+
+[02:33] Speaker 2: You are totally right.
+
+[02:34] Speaker 1: Yeah, you're totally right. I mean, give me a couple of billion dollars to retrain myself, and maybe I'll, I'll not make the mistake again.
+
+[02:43] Speaker 2: [laughs]
+
+[02:44] Speaker 1: [laughs] All right. But-
+
+[02:45] Speaker 2: P- Pierre Jeff sent me, uh, today this, um, this thing. Um, I don't know, it was like a very long report. I only l- read the first two lines that were very interesting. Um, that apparently someone prompted them with, um, with fix, uh, fix world poverty. [laughs]
+
+[03:02] Speaker 1: Oh, okay.
+
+[03:03] Speaker 2: Apparently, they, they let the thing run for like... I don't know how. Like, I have no idea what the setup was, but, uh, [laughs] apparently it made like a Google Doc and a React app. Nothing worked.
+
+[03:14] Speaker 1: [laughs]
+
+[03:15] Speaker 2: Like, all the different agents were saying that they had conflicts, that each one of the... Like, after, like, two days of working, they realized that they were working in isolated, uh, workspaces. [laughs] One of them was trying to debug why it couldn't log into Google. [laughs]
+
+[03:29] Speaker 1: [laughs] So, so world hunger is still not fixed?
+
+[03:32] Speaker 2: So it, it's still not fixed. Uh-
+
+[03:33] Speaker 1: Oh, man
+
+[03:34] Speaker 2: ... well, we, we need some more tokens.
+
+[03:35] Speaker 1: Oh, man, what a, what a shame.
+
+[03:36] Speaker 2: [laughs]
+
+[03:37] Speaker 1: What a shame.
+
+[03:39] Speaker 2: [laughs]
+
+[03:39] Speaker 1: Ugh. That, but that would be interesting what the, the... Because what they actually do is, like, take the a- accumulated written knowledge of the world and, and trying to make sense of it, and how would the accumulated knowledge of the world fix world hunger? Because it-
+
+[03:54] Speaker 2: A React app. [laughs]
+
+[03:55] Speaker 1: It's, it's... [laughs] Well, that explains the state of the world.
+
+[04:00] Speaker 2: [laughs]
+
+[04:00] Speaker 1: I would've guessed, like, straight up communism, basically.
+
+[04:02] Speaker 2: [laughs]
+
+[04:02] Speaker 1: That's, that's... That would've been my guess. But I, I think world hunger is actually basically fixed in some sense. Like, we... There's more fat people than starving people, and it has been like this for a very long time.
+
+[04:15] Speaker 2: Yeah.
+
+[04:16] Speaker 1: And I mean, we are producing food like crazy. Like, we-
+
+[04:20] Speaker 2: Yeah
+
+[04:20] Speaker 1: ... we, we have an overabundance of food
+
+[04:21] Speaker 2: ... it's, it's not, it's not amount of food. It's distribution-
+
+[04:23] Speaker 1: Yeah, yeah
+
+[04:24] Speaker 2: ... and, and stuff like that.
+
+[04:25] Speaker 1: Yeah, yeah, and, and corruption in the really poor places, and, and so on, and so on. But anyway.
+
+[04:30] Speaker 2: Yeah, in Argentina, there was this, um, this organization sending food from Buenos Aires to, like, very poor provinces. Um, and sometimes they would put like, you know, inside of whatever, like a, like a, like a box or something like that, they would put like messages.
+
+[04:45] Speaker 1: Yeah.
+
+[04:45] Speaker 2: And [laughs] they would pop up being sold, the same food box, being sold in Buenos Aires.
+
+[04:51] Speaker 1: Oh, okay. Okay.
+
+[04:52] Speaker 2: Like, repurposing. [laughs]
+
+[04:55] Speaker 1: [laughs] I see. They, they, they built a, a system just like the, the NFC tags, the RFID tags-
+
+[05:02] Speaker 2: Yeah
+
+[05:02] Speaker 1: ... but just handwritten notes [laughs] just to figure out how, where stuff circulates.
+
+[05:06] Speaker 2: [laughs]
+
+[05:07] Speaker 1: That's smart, actually. Speaking of Argentina, tell me about all your other projects.
+
+[05:13] Speaker 2: [laughs] None of them are about Argentina. [laughs]
+
+[05:17] Speaker 1: [laughs]
+
+[05:17] Speaker 2: I only do, like, projects that might go somewhere at some point. [laughs]
+
+[05:22] Speaker 1: [laughs]
+
+[05:23] Speaker 2: Um, yeah, no, it's, it's interesting. Like, most of the stuff, like, basically all the stuff that I'm doing is as a way to test stuff for TenX. Um, like, again, I did Olas and then NDK Swift and Olas Android and Olas Web, like all the, all stuff that it serves in the purpose of I need to build something to test the thing. Um, so yeah, I mean, the, the, the focus has been 100% on, on, on this. I also find it insanely interesting, like it, it is so fascinating, the, the type of problems. Um, so yeah, integrated NDK Swift and NDK Kotlin with, with, uh, with NosterDB. Um- Then I've been doing a lot of work with, uh, with Agora, with, uh, Leopoldo Lopez. Yeah. Um, it's, so it's an interesting client. It's, it's a client that, it's sort of like starting from the premise of instead of the premise of, like, rebuilding Twitter or, you know, like this more global, quote unquote, "feed". It's starting from the premise of you only care about your immediate surroundings. Yeah. So when you are, when you, when you join, you are c- it- it's kinda assumed that you're joining because someone invited you. Okay, yeah. Um, so I wrote, um... Oh, you need a card to join? Yeah, there's, that's KYC at the entrance. [laughs] Oh, no. [laughs] You even passed the KYC. Oh no, I'm already, I'm already locked out. All right. I'll, I'll, I'll need another one. I'll need another identity. Let me see. Let's see. Ah, th- but that's bad. Then w- now we might, we might dehydrate completely. I have none. But, uh- Oh, see if it works with, uh- ... maybe, may- oh, there we go. Oh, there we go. Si. Oh, well. They just, it just needed a while to copy the card. [laughs] Just to completely scam me. [laughs] It just needed 40 proofs of identity. [laughs] Yeah. [laughs] All right. What do, what do you wanna have? I, I really like this one. That's the some, some sort of- Is it like mango? No, it's like a, it's almost like an iced tea, but it's, it's in- incredibly low on sugar. Okay. Yeah, I'll have one of those. There's regular water as well, if you want some more. No? You'll be fine with this? Oh, I'm fine with that. Yeah. All right, let's do it. You know, having someone to blame if it's bad is, uh, [laughs]- That's, that's a, that's a- ... that's- ... benefit. You learned that from your agents? Yeah. [laughs]  So how did the launch go of the, of the, of the client and all those kind of things? It's, it's still an ongoing process. [laughs] All right. All right. And so the idea is kind of local, um, basically you build your network by the s- the network of invites? Is that right? Yeah, that's, that's basically it. So like, I, I, I think trust is something that within Bitcoin is kind of don't trust, verify. Yeah. But there is a lot of value in trust, if you can trust. Oh, sure. Yeah. Uh, like I, I'm doing peer-to-peer trades right now, I told you- Yeah, yeah ... in, in a way that- With a person that you trust ... because I know the counterpart so well- Yeah, yeah ... I can pay him, like, a couple of days later. Yeah, yeah. Sure. We don't need an escrow. Sure. We don't need, like, a lo- a lot of, all of these things, right? Yeah. Um, so what if you do the peer-to-peer trade with someone that you know how you are related to that person, if, if it's a neighbor or if you know someone that can vouch for that person because you can see cryptographically linked, this person was invited into, into the relay by this other person. Yeah. Um, and yeah, it has a bunch of interesting things. I built, um... The, the use case is very, it's very different than what we think of Nostr as. Like, the use case is a lot about a local place for f- where people can have like a, like a public square, but within one specific region, and they might be doing citizen journalism. Mm-hmm. Now, those people, they don't wanna, like, dox their, their real identity. They're publishing stuff about corruption, stuff like that, if they are in those, um- Yeah, sure ... places, right? Physically. But what if you can kind of out of band, without leaving like any trace, um, be able to say, "Hey, I'm gonna be publishing, with this pubkey, I'm gonna be publishing something, and you can vouch for this person." And it's kinda like a source, like a journalist says, they don't say who the source is. The journalist is saying, "This is a b- a credible source." Mm-hmm. You don't need to know who that person is. You just need to trust that the journalist is not lying. Mm. Yeah, yeah. I see, I see. So you can do the same thing, and within Nostr, we can do all that shit out of band- Yeah ... within, like, with gift wraps and all the things, right? Yeah. In a way that Leopoldo or someone that is well-known within that community says, "This is a credible person, he's not publishing bullshit. I'm lending my credibility to this pubkey." Yeah. And that pubkey can publish whatever they need to. Yeah, yeah. Um, I haven't implemented that, but I will. They can do the publishing with the onion routing, like stuff that we built in, in Sovereign Engineering, where not even their IP address is leaked. Yeah, yeah, yeah. Um, so there are no ties to their real identity in any kind of way. Yeah. You can build a dedicated publishing tool that takes care of all of that. That take care- And- And all the tech- Yeah ... because y- you go from the premise that these are non-technical people- Yeah ... which is actually the case. Yeah, yeah. It's actually the case. Activists are non-technical people. Oh, yeah, yeah. I know. I've, I mean, I've, I've onboarded a bunch and, and, like, almost, almost everyone, of course, you know, lost their first key. [laughs] Including? [laughs] But I think that's also fine. I think that's a, that's a, you know, it's a very inexpensive lesson to learn. And, and it's also something- But that's also something, you know, that we're, we're working on fixing. Yeah. Hopefully will be fixed in, in, in some way in the long run with... Again, like, I think, I think, um, Fedi did this really well. I think Fedi had the right, uh, right ideas around that, with kind of a community-based backup and recovery approach, those kind of things. I think that, that, that, that's really nice. So we did Nostr XXX, um, what, like, a month ago or so. Um, and we did a session just on this, just on identity migration. And we run through the proposal that I wrote like two years ago-
+
+[12:13] Speaker 1: Yeah
+
+[12:13] Speaker 2: ... and I did the implementation. And I had some refinement because one of the things is the, the Agora client comes with an IP60 wallet, and you can get subs. There will be, like, substantial subs because there is some real funds coming-
+
+[12:28] Speaker 1: Yeah
+
+[12:28] Speaker 2: ... from people that you know.
+
+[12:29] Speaker 1: Yeah.
+
+[12:29] Speaker 2: Um, and the, the money is in the key.
+
+[12:35] Speaker 1: Yeah, yeah.
+
+[12:35] Speaker 2: Right?
+
+[12:36] Speaker 1: Yeah.
+
+[12:36] Speaker 2: So, so now that the key is not just your identity, it's also fucking money.
+
+[12:40] Speaker 1: Yeah.
+
+[12:40] Speaker 2: So, and this is non-technical people. So now what I built for, for, for Agora, uh, that we are now, like, making an IP around it, is when y- at some point, you know, like you get to enough followers, there is enough value on the private key to make it worth your while. You can select people, not that you trust, you select people that you can reach-
+
+[13:07] Speaker 1: Mm
+
+[13:07] Speaker 2: ... which is different, and all you're doing is you symmetrically encrypt with a, with like a passphrase, a passphrase that you remember. You know, it doesn't have to be, like, super secure. It's just to protect yourself a little bit more.
+
+[13:19] Speaker 1: Yeah.
+
+[13:20] Speaker 2: Shamir secret sharding the private key, and you send it as a follow event from an ephemeral key to the people that you say that you, not trust again-
+
+[13:31] Speaker 1: Yeah
+
+[13:31] Speaker 2: ... someone that you can call on the phone.
+
+[13:32] Speaker 1: Yeah.
+
+[13:33] Speaker 2: And you, with, uh, enough quorum, say three out of five, whatever it might be, if you tell them, "Okay, send me the shard, send me the shard, send me the shard," uh, which is, they don't need to know what a shard is. [laughs]
+
+[13:45] Speaker 1: Yeah, yeah, sure. Yeah.
+
+[13:45] Speaker 2: But it's click here-
+
+[13:47] Speaker 1: It's all abstracted away
+
+[13:48] Speaker 2: ... click here.
+
+[13:48] Speaker 1: Yeah, yeah.
+
+[13:48] Speaker 2: And, and that's it-
+
+[13:49] Speaker 1: Help this person recover
+
+[13:50] Speaker 2: ... and you get your key back.
+
+[13:51] Speaker 1: Yeah.
+
+[13:51] Speaker 2: You get your key back.
+
+[13:51] Speaker 1: Yeah.
+
+[13:51] Speaker 2: So that protects you from I lost my key.
+
+[13:53] Speaker 1: Yeah.
+
+[13:54] Speaker 2: And the, um, the identity migration stuff protects you from my key got stolen.
+
+[13:59] Speaker 1: Yeah.
+
+[13:59] Speaker 2: Someone else has my key. Two very different things-
+
+[14:02] Speaker 1: Yeah
+
+[14:03] Speaker 2: ... that we can solve with the same problem.
+
+[14:04] Speaker 1: Yeah. But you, what you can solve, and I th- or, or, uh, correct me if I'm wrong, but one really hard problem is, like, if you build s- stuff up over time, like, and, and your key gets stolen, like the rolling over old events basically.
+
+[14:19] Speaker 2: No, no, no. That's, uh-
+
+[14:20] Speaker 1: That's, uh-
+
+[14:20] Speaker 2: ... it's, to me, it's a problem not-
+
+[14:22] Speaker 1: Not worth solving
+
+[14:23] Speaker 2: ... not worth solving.
+
+[14:24] Speaker 1: Yeah.
+
+[14:24] Speaker 2: You can do some-
+
+[14:24] Speaker 1: I, uh, I th- I think I agree. [laughs]
+
+[14:26] Speaker 2: You can do some... [laughs]
+
+[14:29] Speaker 1: [laughs]
+
+[14:29] Speaker 2: You can, you can do some stuff around it.
+
+[14:31] Speaker 1: Yeah.
+
+[14:32] Speaker 2: It's-
+
+[14:32] Speaker 1: You can republish with the new one
+
+[14:33] Speaker 2: ... you can republish with-
+
+[14:34] Speaker 1: Yeah
+
+[14:35] Speaker 2: ... a new one. There still, old events are going to be link-
+
+[14:38] Speaker 1: Yeah, yeah
+
+[14:38] Speaker 2: ... be tagging the old, the old copy.
+
+[14:39] Speaker 1: No, and it's, it's als- what I like about Nostr is, uh, and to some degree also about Bitcoin, is that, that it just, it works in practice even if all, like not every s- problem is perfectly solved theoretically, and I think that's, that's one of those-
+
+[14:55] Speaker 2: No solutions.
+
+[14:55] Speaker 1: Yeah. [laughs] There you go. There is no solutions to, to certain things. [laughs]
+
+[15:00] Speaker 2: [laughs] S- s- s-
+
+[15:00] Speaker 1: And yeah, I, I think I agree with you that, that, that, that particular problem is probably not worth solving, but the key loss, like onboarding and loss problem is definitely worth solving, and-
+
+[15:12] Speaker 2: And it's very, it's kinda trivially solvable. It is-
+
+[15:16] Speaker 1: It should be. Yeah, yeah
+
+[15:17] Speaker 2: ... kinda trivial to solve.
+
+[15:17] Speaker 1: And again, I think Fanny did a really good job with, with that. That was kind of the, there, there were wallets before that that did also the social recovery-
+
+[15:26] Speaker 2: Yeah
+
+[15:27] Speaker 1: ... uh, Shamir secret sharing thing, and that also worked as far as I know. But the issue with that is always that they had to bootstrap their own social network, basically.
+
+[15:38] Speaker 2: That, that, exactly.
+
+[15:39] Speaker 1: And that's where Nostr shines, where you can just, like you already have your contacts, you already know the people, and you just need to, during the setup process, basically select like the-
+
+[15:47] Speaker 2: Select the people
+
+[15:47] Speaker 1: ... five people-
+
+[15:48] Speaker 2: Yeah
+
+[15:48] Speaker 1: ... or select the 10 people or whatever that, um, are actually reachable. Uh, talk to me more about the reachable versus, uh, trust thing. Why, why is this distinction important here?
+
+[15:58] Speaker 2: Well, you, you're not giving them your key. You know what I mean? Sha- Shamir, you, they don't really gain any kind of special access. You, they, they... And the, the fact that they don't even know necessarily, I mean, they could, maybe they can guess it, but they could, they wouldn't necessarily know who the other counterparts are of the split, uh, because it's all published with a different key, and it's all published in a follow event.
+
+[16:24] Speaker 1: Ah, yeah, yeah.
+
+[16:24] Speaker 2: They don't even know-
+
+[16:24] Speaker 1: You, you just know you're a person. You don't know the whole quorum.
+
+[16:27] Speaker 2: You don't-
+
+[16:27] Speaker 1: So conspiring is-
+
+[16:28] Speaker 2: You don't even-
+
+[16:28] Speaker 1: ... is very hard
+
+[16:29] Speaker 2: ... you don't even know that you-
+
+[16:30] Speaker 1: Yeah
+
+[16:30] Speaker 2: ... are a holder until someone asks you, "Hey, I need-
+
+[16:33] Speaker 1: You will know-
+
+[16:34] Speaker 2: "... I help."
+
+[16:34] Speaker 1: You will know after the fact.
+
+[16:35] Speaker 2: You will know only after the fact.
+
+[16:36] Speaker 1: Okay, okay.
+
+[16:37] Speaker 2: Um, which is kinda cool. [laughs]
+
+[16:39] Speaker 1: Yeah, interesting. Okay. Yeah. Huh.
+
+[16:42] Speaker 2: Yeah, because it, it's, you are P tagging them on a kind of three, on a follow.
+
+[16:46] Speaker 1: Yeah.
+
+[16:47] Speaker 2: All they see is a follow event. There is just this weird payload somewhere-
+
+[16:51] Speaker 1: Yeah
+
+[16:51] Speaker 2: ... on the event. Uh, but if you see the event on, on Primal or something, you will just see someone followed you.
+
+[16:58] Speaker 1: Yeah.
+
+[16:58] Speaker 2: That's it.
+
+[16:59] Speaker 1: Yeah. Yeah, I see. Okay. Yeah, no, that's cool. That's cool. That's cool. How, what else was discussed in the Nostr XXX event?
+
+[17:10] Speaker 2: Um, I, I think the most interesting-
+
+[17:11] Speaker 1: What was kind of the main points?
+
+[17:12] Speaker 2: The, the, the most interesting stuff was, was the, the identity. I think it's like something that is still-
+
+[17:20] Speaker 1: Yeah
+
+[17:20] Speaker 2: ... very important to solve properly.
+
+[17:21] Speaker 1: Yeah. The next core will focus on identity purely basically.
+
+[17:25] Speaker 2: Right.
+
+[17:25] Speaker 1: [laughs] Let's see how it goes.
+
+[17:28] Speaker 2: Okay. [laughs]
+
+[17:29] Speaker 1: [laughs]
+
+[17:29] Speaker 2: All the implementations will go there. Um, what else? Um, what else did we discuss? We discussed, um, like, uh, not paywalls, but, um, like subscriptions and stuff like that that's still, um, yet to be solved. Um-
+
+[17:50] Speaker 1: Yeah. [laughs] It's one of my pet peeves, as you know.
+
+[17:52] Speaker 2: [laughs]
+
+[17:52] Speaker 1: There's still so many people in the, in the Bitcoin world and in the Nostr world that are trying to paywall content. I'm just gonna yap about that for a couple minutes-
+
+[18:01] Speaker 2: [laughs]
+
+[18:01] Speaker 1: ... because that's just, uh, [laughs] I s- I, I, I still think it's so misguided, and it's just kind of, I don't know, look at the most- I, I don't know. It's, [sighs] it's very frustrating to me because I just think it's the wrong approach.
+
+[18:20] Speaker 2: Mm.
+
+[18:21] Speaker 1: And if you look at, um, online creators, how they actually make money and, and, and how they, how they monetize themselves, it's not with paywall content in the traditional sense.
+
+[18:36] Speaker 2: Mm.
+
+[18:37] Speaker 1: And I see... That's my, that's my, my main criticism for most people that would like to do that, is still that most people think about paywalls with, you cannot see the blog post, but if you pay 21 cents, then you will be able to see the blog post, and that just never works because, like, someone will pay it and screenshot it and then send it around for free.
+
+[18:57] Speaker 2: Yeah.
+
+[18:58] Speaker 1: And, and, and the distinction is terribly important because what actually works is... I mean, you see that on Twitch and then on, on, on, on the big platforms and so on. OnlyFans is maybe a great example as well, where like, [laughs] I mean, I'm, I, I still don't know why people pay for OnlyFans, but in the best case, it's kind of early access, you know?
+
+[19:16] Speaker 2: Yeah.
+
+[19:16] Speaker 1: It's, it's actually, [laughs] it's actually like all this stuff is... Y- you cannot box content in, no matter how hard you try. And so what you, what you can monetize is special, special times and places where you have like a, a, an elevated access level basically. And I think, I think Feodarf is right about his kind of relay idea, that kind of you... Like, it, it, it could be relay based in some sense, where it's like this, this, this relay is, like, paid only, and it's, it's very much like a, you know, a closed chat room that you might have-
+
+[19:56] Speaker 2: Yeah, yeah
+
+[19:56] Speaker 1: ... on Discord-
+
+[19:56] Speaker 2: A closed community
+
+[19:57] Speaker 1: ... or, or what have you, and those kind of things.
+
+[19:59] Speaker 2: And, and it's the thing that doesn't scale.
+
+[20:00] Speaker 1: Yeah.
+
+[20:00] Speaker 2: Right? Like, you can copy content endlessly for no cost.
+
+[20:03] Speaker 1: Exactly. That's the thing.
+
+[20:04] Speaker 2: But you, you cannot copy a relationship.
+
+[20:05] Speaker 1: Yeah. You can't copy a, a live chat that has Q&A and those kind of things.
+
+[20:08] Speaker 2: E- exactly. You can copy-
+
+[20:09] Speaker 1: And-
+
+[20:09] Speaker 2: ... a one-on-one-
+
+[20:10] Speaker 1: Yeah
+
+[20:10] Speaker 2: ... or a 10 to one-
+
+[20:11] Speaker 1: Yeah
+
+[20:11] Speaker 2: ... with a creator.
+
+[20:12] Speaker 1: Yeah. Anyway, like quick rant about that because I just, I still see projects and I still see people trying to make paywalls, like traditional paywalls work, and they... I, I think they're just very misguided. I, I, I still think... Yeah. I, I don't know. Like, in, in some sense, I mention Twitch a lot-
+
+[20:31] Speaker 2: Oh, wow
+
+[20:31] Speaker 1: ... in these kind of conversations.
+
+[20:32] Speaker 2: Look at that.
+
+[20:32] Speaker 1: Yeah, it's nice, right? [laughs]
+
+[20:34] Speaker 2: Shit.
+
+[20:36] Speaker 1: [laughs] There you go.
+
+[20:37] Speaker 2: I'm, I'm gonna take-
+
+[20:38] Speaker 1: Welcome
+
+[20:38] Speaker 2: ... a picture of this.
+
+[20:38] Speaker 1: Yeah. Let's go. [laughs]
+
+[20:40] Speaker 2: My kids are gonna be-
+
+[20:41] Speaker 1: [laughs]
+
+[20:42] Speaker 2: ... insanely-
+
+[20:43] Speaker 1: We-
+
+[20:43] Speaker 2: ... insanely jealous of all this.
+
+[20:46] Speaker 1: [laughs]
+
+[20:46] Speaker 2: They're gonna be like, "I saw this."
+
+[20:48] Speaker 1: You, you didn't. [laughs]
+
+[20:49] Speaker 2: You did not. [laughs] No. But you know me, and I saw them, so you're one degree of separation. [laughs]
+
+[20:55] Speaker 1: One, one degree of separation. [laughs] You saw it by proxy. [laughs] That's cute, right?
+
+[21:03] Speaker 2: Yeah.
+
+[21:03] Speaker 1: [laughs]
+
+[21:08] Speaker 2: Hey, I think there is a-
+
+[21:08] Speaker 1: Yeah, there, there like, um, um, f- not too, not too long ago, we saw a, we saw a deer like every day.
+
+[21:18] Speaker 2: Really?
+
+[21:18] Speaker 1: Uh, or different deers kind of.
+
+[21:19] Speaker 2: Wow.
+
+[21:19] Speaker 1: It's, it's, um, because the, the... We had to drive the same route all the time.
+
+[21:26] Speaker 2: Yeah.
+
+[21:27] Speaker 1: And, and just every single day there was a deer somewhere, [laughs] either on the street or in the field n- uh, nearby and so on. But yeah, it's, it's, you know, it's very, very romantic.
+
+[21:39] Speaker 2: It is.
+
+[21:39] Speaker 1: Very romantic place. And we are in a romantic stroll kind of situation, like shitting on paywalls. [laughs]
+
+[21:47] Speaker 2: [laughs]
+
+[21:47] Speaker 1: Romantically shitting on paywalls. No, I-
+
+[21:50] Speaker 2: And I think, I think it's, it's kinda interesting because I think there is a, a, a, a... Like, our instinct is to build w- with the new technology what has already been built before without this new technology. I think we did the same thing, and it's kind of like the re- realization I've been having lately with, with Noster, is that we started just rebuilding the alternative to Twitter or the alternative to, like, the In- to Instagram that I built. [laughs]
+
+[22:13] Speaker 1: Yeah.
+
+[22:14] Speaker 2: And, and I think it's the wrong framing. Like, it... [laughs] I told this to Mia, and it's like, it's like doing Noster adoption h- in hard mode. [laughs] It's, it's you are picking the hardest battle because you're focusing on a problem o- of, uh, network effects, an overserved market. It like, the, the, uh, the level of the, the quality of the applications that you're going against is insane. Like, you'll never be able to match that. Um, and there are new things that can be built because of this technology. Well, because of Bitcoin, because of Noster, there are new things that could not be built before, and I find that so much more interesting.
+
+[22:55] Speaker 1: But it's, I think it's very hard to figure out what the new things are. Let's go here-
+
+[22:59] Speaker 2: Mm
+
+[22:59] Speaker 1: ... by the way. It's, I, I think we're in the process of trying to figure it out. I, I, I still think it's valuable to have a Substack and Medium and Instagram and Twitter replacement and so on. Like, just speaking purely self- self- selfishly. Oh, what are you looking at? [laughs]
+
+[23:18] Speaker 2: Oh. [laughs]
+
+[23:19] Speaker 1: It's just-
+
+[23:19] Speaker 2: I came on that seat on the flight over. I actually took a picture.
+
+[23:22] Speaker 1: Oh, there we go.
+
+[23:22] Speaker 2: I meant to send it to you.
+
+[23:24] Speaker 1: [laughs]
+
+[23:24] Speaker 2: No coincidences. [laughs]
+
+[23:25] Speaker 1: 21 is everywhere.
+
+[23:26] Speaker 2: [laughs]
+
+[23:26] Speaker 1: Um, but like for me, Noster replaced Twitter completely, and I know I'm a very special case. I know, you know, like-
+
+[23:35] Speaker 2: Yeah. I mean, yeah
+
+[23:35] Speaker 1: ... for me it was only Bitcoin Twitter-
+
+[23:36] Speaker 2: You, you-
+
+[23:36] Speaker 1: ... and so on
+
+[23:37] Speaker 2: ... and like us-
+
+[23:37] Speaker 1: Yeah
+
+[23:37] Speaker 2: ... like all the people that's-
+
+[23:38] Speaker 1: Yeah
+
+[23:39] Speaker 2: ... are currently on Noster, we're a different market.
+
+[23:41] Speaker 1: Oh, absolutely. Absolutely.
+
+[23:42] Speaker 2: It's a totally different audience.
+
+[23:42] Speaker 1: But, but to me, to me it's kind of like... To me it's not clear what the new things are outside of the frictionless value sending that the, that the Bitcoin and Zaps and, and Lightning and Ecash and everything provides, which is kind of a little bit outside of Noster. Strong overlap, but l- but, but you know, you know what I'm trying to say?
+
+[24:10] Speaker 2: Yeah, yeah.
+
+[24:11] Speaker 1: Like, the, the rest of it is a very hard sell. The rest of it is kind of the, um... I talked about this in the past, the computer science professor that self-hosts his, like, static, uh, index HTML website [laughs] and has self-hosted it for the last 40 years from his, like, you know, toaster that runs Linux on it-
+
+[24:28] Speaker 2: [laughs]
+
+[24:28] Speaker 1: ... from his closet, you know? That, that's the value proposition. It's like you... If, if you know how to use Nostr right, you can actually be self-sovereign in, in, in this corner of the internet, and the corner of the internet very much feels like what the platforms brought us.
+
+[24:46] Speaker 2: Uh, so, so here's the... What, what I've been thinking, is that, w- like, I, I think intuitively we think, like, our instinct compels us to think that the next thing is a replica of the previous big thing. Like, all the people that go for shit coins is, "What is the next Bitcoin?" And the next Bitcoin is Bitcoin, right?
+
+[25:08] Speaker 1: Oh, yeah. Sure.
+
+[25:09] Speaker 2: And, and I think that's the case. Like, what is the next Facebook? It, it's fucking Facebook. Um, like, all this is not gonna be the next Instagram, because the next Instagram is Instagram. What I, what I think is, is, is compelling, and y- I, I don't know if you follow, like, how close you follow, like, the s- the stuff that goes on, on Substack, but there is a lot of backlash against Substack for the simple reason... And it's an unfixable problem [laughs] which I think is so fucking interesting. It's just a, a function of size. It is so big, and it's, it's always Pareto distribution, right?
+
+[25:49] Speaker 1: Mm.
+
+[25:49] Speaker 2: There's always a lo- a few people making a fuckload of money-
+
+[25:53] Speaker 1: Yeah, yeah, everyone else
+
+[25:54] Speaker 2: ... and everybody else starves.
+
+[25:55] Speaker 1: Yeah, yeah.
+
+[25:55] Speaker 2: And everybody, everybody else is trying to g-... What is the latest marketing gimmick of what you can do, how much you have to post on notes on, on, on, uh-
+
+[26:04] Speaker 1: Yeah
+
+[26:04] Speaker 2: ... on Substack, and they're all playing for peanuts.
+
+[26:07] Speaker 1: Yeah.
+
+[26:08] Speaker 2: They're all working their fucking asses off. They went there with the assumption that it's a small market, which is why-
+
+[26:15] Speaker 1: Mm
+
+[26:15] Speaker 2: ... it worked at the beginning.
+
+[26:16] Speaker 1: Mm.
+
+[26:17] Speaker 2: It worked not because of h- how the thing is structured or because the founders have, like, really good intentions or whatnot. Like, the intentions don't matter. It's just the size is so big, and it's always going to be Pareto because humans, we think in this way. Like, you see that someone has a million followers, and you're gonna pay more attention.
+
+[26:35] Speaker 1: Yeah. I mean, that's, uh, that's, uh, it, it, it seems like that's how the, the universe works. I mean, uh, Peterson had a long, uh, like, rant on that many, many years ago. It's, it's the, the Matthew principle. Like, to, to... You know, it's in the Bible already. I don't know the verse, but it's like, "To those who have everything, more will be given, and to tho- to those who have nothing, you know, even more will be taken," those kind of things. So it's, it's similar. Like, you can see the Pareto distribution everywhere, like size of stars, height of trees [laughs], you know, nu- nutrition in, in, in, like, you know, packs of animals. Like, the, the, the, the most successful will get everything, basically, like, or like 80% of it. The, uh... It, it seems to be just, uh, yeah, how things work.
+
+[27:25] Speaker 2: It's just the law of nature.
+
+[27:25] Speaker 1: Yeah. [laughs]
+
+[27:25] Speaker 2: Yeah, yeah, it's, it's just how the universe is structured.
+
+[27:27] Speaker 1: And, and... But do, do you think Nostr will have an easier time kind of counteracting that? In some sense, like, let me rephrase that. It seems to me that all the platforms are especially prone to that because you have, like, one single lens on the whole graph, so to speak.
+
+[27:48] Speaker 2: Yes.
+
+[27:48] Speaker 1: And email, for example, doesn't have this issue that much.
+
+[27:52] Speaker 2: Yeah.
+
+[27:52] Speaker 1: Right?
+
+[27:53] Speaker 2: Totally, totally.
+
+[27:54] Speaker 1: I would, I would guess. [laughs]
+
+[27:55] Speaker 2: Yeah, yeah, totally. Totally. Yeah, the, the way I think about it is that within s- a platform, which is a database, within a database, you're putting all content in the same database.
+
+[28:09] Speaker 1: This way.
+
+[28:10] Speaker 2: Okay. And you are, you are weighting the value, ho- however way you define value, engagement, whatever it might be, um, under that same lens. And that's why we end up with it's all porn, it's all cats video, it's all short videos. It's all, like, the most engaging stuff because you are weighting-
+
+[28:34] Speaker 1: Yeah, you're optimizing for the wrong thing. You're optimizing for attention and engagement.
+
+[28:38] Speaker 2: You're... And-
+
+[28:40] Speaker 1: Hi, there.
+
+[28:42] Speaker 2: Hi.
+
+[28:42] Speaker 1: Hi.
+
+[28:44] Speaker 2: You are, you're optimizing for engagement. It could be that you're optimizing for, I don't know, haikus or whatever it might be. [laughs] Like, you could use whatever algorithm you want, but it's one thing. It's like you are weighting the value of a picture with the value of a, a poem or a song-
+
+[29:12] Speaker 1: Yeah
+
+[29:13] Speaker 2: ... or a tweet or a shit post.
+
+[29:15] Speaker 1: Yeah.
+
+[29:16] Speaker 2: Um, and the reason why I do think that Nostr has a different promise is that scaling Nostr is hard. Like, scaling a single relay is impossible.
+
+[29:30] Speaker 1: So it will always fragment.
+
+[29:32] Speaker 2: It's impossible. It, it, it tends toward fragmentation-
+
+[29:35] Speaker 1: Yeah
+
+[29:35] Speaker 2: ... naturally.
+
+[29:36] Speaker 1: Yeah.
+
+[29:37] Speaker 2: It naturally tends towards you are not gonna have a billion people using one virtual relay, like one single entity.
+
+[29:46] Speaker 1: Which is also why many small markets is strictly superior to, like, one big centrally planned instance that distributes goods. [laughs]
+
+[29:57] Speaker 2: Exactly.
+
+[29:57] Speaker 1: Right? It's a scaling issue as well.
+
+[29:59] Speaker 2: Exactly. And I, and I think the promise of Nostr, like what's interesting about it, is that you as the user, with your outbox and with your, your key and whatnot, you get to decide what the internet is for you-
+
+[30:12] Speaker 1: Let's actually go here
+
+[30:12] Speaker 2: ... at any point in time, and the system can react To how your preferences evolve, how your consumption of content and your interactions, how do they evolve? And you can have completely different weighting of, um, what is valuable to you on different relays. So to me, it's like a much more organic and natural way of approaching the problem of what is worth my attention.
+
+[30:47] Speaker 1: Yeah. Yeah, to me, to me it's a different paradigm in the sense, and I, I made this comparison just recently. Um, can you believe it? I appeared in a, in another podcast, German-speaking one.
+
+[31:03] Speaker 2: What?
+
+[31:04] Speaker 1: [laughs]
+
+[31:05] Speaker 2: Oh my God, the spell has been broken. [laughs]
+
+[31:07] Speaker 1: Yeah. The, the, the one I, uh, launched myself, uh, us-
+
+[31:12] Speaker 2: The Einundzwanzig and dreißig.
+
+[31:14] Speaker 1: Yeah, thanks. I was, I was asking you to pronounce it.
+
+[31:16] Speaker 2: [laughs]
+
+[31:17] Speaker 1: [laughs] It must sound-
+
+[31:18] Speaker 2: How did I do? That... Did it sound like Vervaeke? [laughs]
+
+[31:21] Speaker 1: It, it must sound very similar to Vervaeke in your ears.
+
+[31:24] Speaker 2: [laughs]
+
+[31:24] Speaker 1: [laughs] Same, same word, basically. Einundzwanzig and Vervaeke.
+
+[31:29] Speaker 2: [laughs]
+
+[31:29] Speaker 1: Ex- exactly the same thing.
+
+[31:31] Speaker 2: [laughs]
+
+[31:31] Speaker 1: But I, I feel like the... To, to me it's very interesting that all the... I think you made a great point before where all the content types compete with each other, basically, for attention, because that's the only thing that you have online.
+
+[31:49] Speaker 2: It's the, the only metric. Yeah.
+
+[31:50] Speaker 1: And that's why all the platforms turn themselves into TikTok. They have to.
+
+[31:55] Speaker 2: Just look at Substack.
+
+[31:56] Speaker 1: Oh, I know. They have to.
+
+[31:57] Speaker 2: It turned into TikTok. Like, it's so far. Like-
+
+[32:00] Speaker 1: Yeah
+
+[32:00] Speaker 2: ... long form to short videos. It's like-
+
+[32:01] Speaker 1: Yeah
+
+[32:02] Speaker 2: ... so far. It's like you cannot get any further than that. [laughs]
+
+[32:04] Speaker 1: Yeah, yeah. It's really bad. It's really bad. And the, the comparison I made was actually to kind of, um, f- fast food and to, like, if you don't think about what you eat, and if it's just about consuming calories, and if it's just about kind of distracting yourself, eating as a form of distraction, [laughs] then fast food is really appealing.
+
+[32:29] Speaker 2: Yeah, totally.
+
+[32:30] Speaker 1: And I think what the platform, the platforms... Like, a- again, I think it comes back to monetization in a large, to a large degree. That's why some platforms try to push people into monthly subscriptions and so on, because it is a different way of monetizing, and I think it would be strictly better from a quality perspective. Um, but if you don't do that, you have to cater towards attention.
+
+[32:58] Speaker 2: Yeah.
+
+[32:59] Speaker 1: And the best way to do it is by producing basically, like, lucid dreams. [laughs]
+
+[33:04] Speaker 2: [laughs]
+
+[33:05] Speaker 1: I think what we're building is, like, lucid dreaming platforms, where... Like, that's what TikTok short form videos are. It's like ten-second snippets of whatever you wanna dream about.
+
+[33:17] Speaker 2: Yeah.
+
+[33:17] Speaker 1: And it's m- maximally engaging, so to speak, or maximally... Again, it's a Vervaeke, Vervaekian term, hyper-salient. Like, you, whatever appeals to you the most, that's what will be shown to you.
+
+[33:31] Speaker 2: Yeah.
+
+[33:32] Speaker 1: And if the algorithm doesn't know much about you, it will send something your way that most people in your age bracket, with your tastes and your gender and your browsing habits find appealing. And then, like, after, like, two minutes of yes, no scrolling, you're locked in. [laughs]
+
+[33:49] Speaker 2: Yeah, totally.
+
+[33:51] Speaker 1: And it will... It, it's literally like a lucid dream.
+
+[33:53] Speaker 2: [laughs]
+
+[33:53] Speaker 1: And, and it will be like that more and more as, you know, more AI-generated stuff. They will generate stuff on the fly for you.
+
+[34:01] Speaker 2: Oh, 100%.
+
+[34:02] Speaker 1: That's what they wanna do.
+
+[34:03] Speaker 2: No doubt.
+
+[34:03] Speaker 1: I mean, spokespeople already told us that much. That's, that's, that's where they wanna go.
+
+[34:08] Speaker 2: I mean, im- imagine if you're no longer constrained on what is the most addicting for this person for this moment to content that actually exists.
+
+[34:16] Speaker 1: Yeah.
+
+[34:17] Speaker 2: You can just make it on the fly.
+
+[34:18] Speaker 1: Oh, sure. I mean, porn already does that as far as I know. That's, like, the, the most... I, I think, I think not even, not even in the porn department, but also in the, like, soft porn-
+
+[34:28] Speaker 2: Right
+
+[34:29] Speaker 1: ... [laughs] like, trending towards porn, uh, Instagram kind of content. It's... I highly doubt that, like, uh... The, the time has long passed where this stuff is real. It used to be filters. It, it used to be, like, you know, Photoshop on steroids, and I'm pretty sure most of the stuff right now that most people consume is just straight-up generated.
+
+[34:55] Speaker 2: [laughs]
+
+[34:56] Speaker 1: Who's gonna give jobs to the porn stars now? [laughs]
+
+[34:59] Speaker 2: [laughs] Developers and porn stars might, might be nice.
+
+[35:02] Speaker 1: There, there will, there will always be a market.
+
+[35:04] Speaker 2: [laughs]
+
+[35:04] Speaker 1: It's just like homegrown, ho- home- homegrown porn, you know? [laughs]
+
+[35:08] Speaker 2: Well, when, when Napster came around for, for musicians was o- you actually have to go live and perform.
+
+[35:14] Speaker 1: [laughs]
+
+[35:14] Speaker 2: So for porn stars, you know-
+
+[35:16] Speaker 1: [laughs]
+
+[35:16] Speaker 2: ... there might be something similar.
+
+[35:17] Speaker 1: Same idea. You think so?
+
+[35:18] Speaker 2: [laughs]
+
+[35:19] Speaker 1: But I, I think the Perito stuff points to an interesting reality, and I think we talked about this in the past, but it's worth repeating. There is a large chunk of Nostr that is just, um, interested in and dealing with music.
+
+[35:35] Speaker 2: Yeah.
+
+[35:36] Speaker 1: And that part really seems to work. And there's of course, like, lots of crossover to the podcasting 2.0 decentralized music kind of movement and so on. But I think for those kind of segments, it can really work, where, um, you, you, you have your kind of... You fill your niche [laughs] in some sense. You have a little bit of a following, and you make it really frictionless to build a community and to send value around, basically. I think that's kind of the main value proposition. Without, without, um, without needing to self-censor. I think that's kind of the main issue that lots of the platforms have, where it's just like you have to Always be wary of being deplatformed, and it's like, can I say that? And like most of the YouTube content that I watch still, like every sentence is like, has a little bleep in it somewhere.
+
+[36:34] Speaker 2: [laughs]
+
+[36:34] Speaker 1: Because the people, they have to self c- like they have to censor it, otherwise the video will be demonetized.
+
+[36:39] Speaker 2: Right.
+
+[36:40] Speaker 1: And like they like to swear and they will say, you know, "Fucking shit," and whatever, and, and talk about political topics and they have to... Like there were, for example, one guy was going through the Epstein files, and every, every time he said, you know, like, the rapist or even sex offender or something like that, he had to bleep the words.
+
+[36:56] Speaker 2: Wow.
+
+[36:57] Speaker 1: That's the state of YouTube.
+
+[36:58] Speaker 2: That's so fucking retarded. Jesus Christ.
+
+[36:58] Speaker 1: Right? [laughs] Yeah. That's really bad, right? That's... And I think, I think that's, again, I, I think... I think the internet needs a corner where you don't have to worry about this stuff too much.
+
+[37:15] Speaker 2: The... From, from what I've seen and the, the conversations that I've had, the, the people that are trying to make a living out of their content, which is a, such a fucking insulting word.
+
+[37:26] Speaker 1: [laughs]
+
+[37:27] Speaker 2: Content. Fuck that. Jesus.
+
+[37:29] Speaker 1: Hey, hey, hey. We're, we're-
+
+[37:30] Speaker 2: No, Stanovsky was making con-
+
+[37:31] Speaker 1: We're, we-
+
+[37:32] Speaker 2: We're making content
+
+[37:32] Speaker 1: ... we're, we're producing content right now, man.
+
+[37:33] Speaker 2: [laughs]
+
+[37:34] Speaker 1: This is content.
+
+[37:35] Speaker 2: [laughs] Um, the, their, their issue is, like top of mind is the distribution, you know. It's, it's all about... And that's ki- that's kinda interesting because a lot of people that I, that I've spoken with, they arrive to the same conclusion that you mentioned briefly, uh, um, a while ago about paywalls and whatnot, is if your content is behind a paywall, is-
+
+[38:00] Speaker 1: No one will see it, period
+
+[38:01] Speaker 2: ... no one fucking sees it.
+
+[38:01] Speaker 1: Yeah.
+
+[38:02] Speaker 2: So no one reads you.
+
+[38:04] Speaker 1: Yeah.
+
+[38:04] Speaker 2: So-
+
+[38:05] Speaker 1: You don't wanna artificially restrict the distribution of your content. And that's what the Twitch people figured out, for example, you know? Like it's, everything is everywhere at all times, and everything is re-shared and re-clipped and like re-uploaded to YouTube and other things and so on. And that's how, how the content kind of distributes itself naturally. And it's still like, people still pay for it, but they pay for something else.
+
+[38:28] Speaker 2: Right.
+
+[38:29] Speaker 1: I would argue j- similar to OnlyFans and other things, you know, where it's like you, you actually, you, you... [laughs] I, I'm gonna stick with Twitch, otherwise it will just get out of hand.
+
+[38:37] Speaker 2: [laughs]
+
+[38:38] Speaker 1: But if you donate to someone on Twitch, like if you subscribe to someone on Twitch, you're not paying, you're not buying the MP4 file. You're not buying the s- the, the video stream file. You know what I mean? You'll always have access to that. You're buying something else, and that's something, that's something that, that I think most people in the Bitcoin investor world and so on still don't get like at all.
+
+[38:59] Speaker 2: Yeah.
+
+[39:01] Speaker 1: Anyway, I'm still ranting. [laughs]
+
+[39:05] Speaker 2: [laughs]
+
+[39:06] Speaker 1: But yeah, but-
+
+[39:06] Speaker 2: No, but I, I think, uh, it, it, a lot of it comes down from the fact that what everybody in... And, and I'm gonna stick to Substack because that's the one that I know the best. The, uh, what everybody's trying to replicate on Substack is the early adopters that ha- that are making a fucking killing on Substack, of which there are like 20-
+
+[39:29] Speaker 1: Yeah
+
+[39:29] Speaker 2: ... out of millions of writers.
+
+[39:31] Speaker 1: Yeah.
+
+[39:32] Speaker 2: Um, and they're trying to replicate this model where you have hundreds of thousands of subscribers. You have an insane income and an insane, uh, MRR.
+
+[39:42] Speaker 1: Yeah.
+
+[39:43] Speaker 2: And just by sheer numbers, not everybody can have that. A very, very, very small few can have that.
+
+[39:52] Speaker 1: Yeah.
+
+[39:53] Speaker 2: Um, so they are all fighting for kinda like a dream. Uh, it's, it's, it's, um, a pipe dream.
+
+[40:01] Speaker 1: Yeah.
+
+[40:01] Speaker 2: You know?
+
+[40:02] Speaker 1: But it's the same everywhere. A very s- a very small percentage of all musicians make all the money. A very small percentage of all movie stars make all the money. A very small percentage of all movies make all the money, you know?
+
+[40:14] Speaker 2: Yes.
+
+[40:14] Speaker 1: A very... [laughs] And so on and so forth. It's like, it's the same everywhere.
+
+[40:16] Speaker 2: But-
+
+[40:16] Speaker 1: Take writers and so on. It's like-
+
+[40:18] Speaker 2: But, but to me, it's interesting the, the fact that they are being sold that, that dream of, oh, you can make as much money as this writer. L- like, basically that's what the... When they are advertising that so and so is making this amount, is you could also make this amount, right? Like, if you-
+
+[40:33] Speaker 1: Ah, yeah, yeah, yeah
+
+[40:34] Speaker 2: ... apply yourself-
+
+[40:34] Speaker 1: Yeah
+
+[40:34] Speaker 2: ... you can make that, that same amount.
+
+[40:35] Speaker 1: Yeah, same with OnlyFans. It's-
+
+[40:37] Speaker 2: And-
+
+[40:37] Speaker 1: They, they're being sold a lie. [laughs]
+
+[40:38] Speaker 2: They're, they're being to-
+
+[40:39] Speaker 1: Yeah
+
+[40:39] Speaker 2: ... sold, sold a lie-
+
+[40:41] Speaker 1: Yeah
+
+[40:41] Speaker 2: ... into a trap.
+
+[40:41] Speaker 1: They're, they're prostituting themselves for nothing. [laughs]
+
+[40:44] Speaker 2: Be- be- because you're playing in a market that ha- that is, has already been... It's a, it's a winner takes most market, where there is already a winner.
+
+[40:52] Speaker 1: Yeah.
+
+[40:52] Speaker 2: And you're gonna bring all your effort and all your whatnot, all your sweat and tears-
+
+[40:58] Speaker 1: Yeah
+
+[40:58] Speaker 2: ... into a place where basically you cannot win.
+
+[41:01] Speaker 1: Yeah.
+
+[41:01] Speaker 2: Basically it's worse off than a casino.
+
+[41:02] Speaker 1: And that's actually a good point, because I think that's one thing that Substack actually did right, was they, the main distribution channel, at least in the beginning that was the case, I'm not sure how it is now, was email.
+
+[41:12] Speaker 2: Right. Yeah.
+
+[41:12] Speaker 1: And I think what Nostr allows you to do is to, to be yourself, find your niche, just do the one thing. Like n- no one can be better at being you than you, you know?
+
+[41:21] Speaker 2: Yeah.
+
+[41:21] Speaker 1: And just kind of be yourself without risk of being deplatformed. And you can actually build your digital empire, for lack of a better word, you know, and, and have people that actually follow you and are interested in the stuff you have to put out. And y- you can form real connection, and you can have real value flowing, again, without intermediaries, and I think that's the value proposition. It just takes a lot of time, and it takes a lot of effort to build it out and, and all those kind of things. But you can actually do it in a way without ever getting rug pulled. And that, to me, is the value proposition, which of course, coincidentally, to me, is also the value proposition of Bitcoin.
+
+[41:54] Speaker 2: Right.
+
+[41:54] Speaker 1: Like, no rug pulls.
+
+[41:55] Speaker 2: Yeah.
+
+[41:56] Speaker 1: Like, if you're getting rug pulled, you rug pulled yourself. [laughs]
+
+[41:59] Speaker 2: [laughs]
+
+[41:59] Speaker 1: Which is definitely possible.
+
+[42:01] Speaker 2: Which, which happens.
+
+[42:02] Speaker 1: Which happens. [laughs]
+
+[42:03] Speaker 2: Easily.
+
+[42:04] Speaker 1: So again, no, no, no free lunch.
+
+[42:05] Speaker 2: He, he got loaned. [laughs]
+
+[42:06] Speaker 1: No free lunch. That's why a very long time ago I wrote about like how in, in, in the Bitcoin world, like responsibility is like programmed in. Like, if you take Bitcoin seriously, and you, you rearrange your life to live on the Bitcoin standard, for example, you have to be responsible, y- like at least for your keys, for example-
+
+[42:24] Speaker 2: Yeah
+
+[42:24] Speaker 1: ... and, and those kind of things. And in, in a large, like following up to that also You have to be, you have to take your privacy more seriously. You have to take your digital hygiene more seriously and so on. And all of that is true for Nostr as well.
+
+[42:36] Speaker 2: Yeah.
+
+[42:36] Speaker 1: Like, if you actually wanna go down that route and build out... I think that's why the overlap to the regenerative farmer community is so big. Because if you wanna take charge of your life, you actually have to go buy a farm [laughs]
+
+[42:52] Speaker 2: [laughs]
+
+[42:52] Speaker 1: Buy a lot of plants, you know, grow your own food, have your, [laughs] you know, all those kind of things. But I- I'm only half-joking. Like, I think, I really think that the- that's why the overlap is so big. Because the same is true on, uh, like, with your, your, your digital estate, you know? Like, you, you will actually have to run your own relay. You have to take care of your own key material. You have to run your own node. You have to take care of all those kind of things, you know? Like, you actually have to, on the Bitcoin side, you know, like, you have to stamp your fucking words in s- in, in steel and, like [laughs] make sure-
+
+[43:25] Speaker 2: [laughs]
+
+[43:25] Speaker 1: ... that they're held somewhere safely.
+
+[43:27] Speaker 2: Just pull the whole rig
+
+[43:27] Speaker 1: And, and so on
+
+[43:29] Speaker 2: ... every night, uh-
+
+[43:29] Speaker 1: And then, you know-
+
+[43:29] Speaker 2: ... in the dark. [laughs]
+
+[43:30] Speaker 1: [laughs] Exactly. And then, a- and so on, and so on. And you'll have to upgrade over time, all those kind of things, you know? And, and I mean, just looking at myself, at my own, like, Nostr infrastructure, th- like, I run multiple relays. I, I have multiple Blossom servers, and, and, like, I have to take care of all this stuff, just like you would have to, you know, like [laughs] plow the field- [laughs]
+
+[43:52] Speaker 2: [laughs]
+
+[43:53] Speaker 1: ... and, and, and milk the cows in the morning, you know?
+
+[43:55] Speaker 2: [laughs]
+
+[43:55] Speaker 1: It's just, like, it's work, but it's also rewarding in the sense that you at least know that's yours.
+
+[44:01] Speaker 2: Yeah, yeah. Totally.
+
+[44:01] Speaker 1: And you're not, you know, just renting the YouTube channel. And I mean, it always breaks my heart every time I see someone who has built a life around a certain platform for the last 10, 15 years, whatever, and then by just some, whatever, sometimes it's just, like, straight up bureaucratic mistake or whatever, they just get nuked off the planet, and everything's gone. Like, their whole library, everything, their whole output that they produced over the last 15 years, completely gone, no backups. [laughs]
+
+[44:33] Speaker 2: [laughs]
+
+[44:33] Speaker 1: It's insane.
+
+[44:34] Speaker 2: It's in, it's in the cloud.
+
+[44:34] Speaker 1: It's completely insane, right?
+
+[44:35] Speaker 2: The fuck is in the cloud? [laughs]
+
+[44:38] Speaker 1: [laughs] If o- if only someone would've made T-shirts and stickers and so on that says, "The cloud is just someone else's computer."
+
+[44:45] Speaker 2: [laughs]
+
+[44:45] Speaker 1: If only. Well, anyway. Anyway, let's see. Let's see how it goes. I mean, again, but again, there is, there's no free lunch in that sense. Like, you ha- it, it, it actually is work, and it actually requires a certain amount of thought and care and responsibility to take care of your digital infrastructure and so on. So I doubt that... I, I'm only mentioning that because I doubt that the masses will ever do that. Maybe the markets will solve that, and maybe, you know, like, people, enough people will be willing to pay for it, in a sense, and, and I think it will get easier and easier to self-host and so on.
+
+[45:27] Speaker 2: I think it will get easier and easier, and, and I think the... I- I'm, I'm a forever optimist. [laughs] I, I, I think the, the level of complacency that everybody has, um, like, all these assumptions that we have on how people behave are coming down from an observation of the, the current world of the, of the fast food.
+
+[45:52] Speaker 1: Yeah.
+
+[45:52] Speaker 2: And we haven't even identified, like, that digitally we are all being served fast food. Like, peop- mo- like, we s- know. We know.
+
+[46:00] Speaker 1: Yeah, most pe-
+
+[46:00] Speaker 2: We know
+
+[46:01] Speaker 1: ... most people haven't realized yet. [laughs]
+
+[46:02] Speaker 2: Like, 99.9999%-
+
+[46:03] Speaker 1: That they're poisoning themselves
+
+[46:05] Speaker 2: ... even the people on fucking Nostr don't know that yet.
+
+[46:06] Speaker 1: Yeah.
+
+[46:06] Speaker 2: Like, it, it is s- it is... The lack of awareness of-
+
+[46:10] Speaker 1: Yeah, yeah
+
+[46:10] Speaker 2: ... where we're at, it is... And, and I think that complacency that we have, "Oh, it's in the cloud," like, all these things.
+
+[46:16] Speaker 1: Yeah.
+
+[46:17] Speaker 2: It f- in, in one hand, the tech will get better. It will be easier to do all these things. Distribution will also come, which, you know, brings, like, okay, I'm doing all this work for a reach of, like, maybe 500 [laughs] people will see what I'm writing.
+
+[46:31] Speaker 1: [laughs]
+
+[46:32] Speaker 2: [laughs] Like, I, I think all these lines will converge in, like, will go in the right direction together.
+
+[46:38] Speaker 1: Yeah.
+
+[46:38] Speaker 2: Um, but I also think that people will, will care more when they, like-
+
+[46:45] Speaker 1: Yeah
+
+[46:46] Speaker 2: ... you know? Like-
+
+[46:47] Speaker 1: Also, 500 is a very respectable number.
+
+[46:49] Speaker 2: You can make a living.
+
+[46:50] Speaker 1: Like, imagine-
+
+[46:50] Speaker 2: You can make a living
+
+[46:51] Speaker 1: ... imagine, imagine going up to a podium, and there's, like, 500 people actually listening to you.
+
+[46:56] Speaker 2: Yeah. Hundred-
+
+[46:56] Speaker 1: That's a lot of people
+
+[46:57] Speaker 2: ... that is self-
+
+[46:58] Speaker 1: You know what I mean?
+
+[46:58] Speaker 2: That's a lot of people. Yeah.
+
+[46:59] Speaker 1: I, I, I, I also think the, the whole... Like, everything is completely out of whack right now because if you're not making, like, 10 million views, you're a l- you're a loser, you know? [laughs]
+
+[47:10] Speaker 2: Yeah, totally. Totally. Totally.
+
+[47:11] Speaker 1: That's kind of-
+
+[47:12] Speaker 2: Of which 1,900 bots. [laughs]
+
+[47:15] Speaker 1: Yeah, of course. But, but it's, everything's so out of whack where, where just, it's... I hope that we can return to a smaller, more saner world, and I hope that Nostr can help with that. Because you actually, um... I mean, the, the, there's, there... Lots, lots has been written about those kind of things in the past. Uh, there was this one book. I... It was actually a very well-known a- author, but I, I'm, I'm drawing a blank now, but the One Thousand True Fans-
+
+[47:43] Speaker 2: Yeah, One Thousand True Fans, Kevin Kelly
+
+[47:45] Speaker 1: ... right? Ah, there you go. Kevin Kelly, right. And there is a lot of truth in that, that that's kind of... That's the, that's the right size. [laughs]
+
+[47:55] Speaker 2: Yeah. [laughs]
+
+[47:55] Speaker 1: You know what I mean? You don't need 20 million true fans. Like, that's, that's completely... That's, that's, like, you're missing the mark by so much. [laughs]
+
+[48:04] Speaker 2: But, but, but, but I think the, the, the problem is that because all content, going back, all content's being compared and weighed under the same scale-
+
+[48:14] Speaker 1: Yeah
+
+[48:14] Speaker 2: ... you, you cannot have 1,000 true fans. Like-
+
+[48:16] Speaker 1: No, no. You can't
+
+[48:17] Speaker 2: ... you either have 20 million-
+
+[48:18] Speaker 1: But, uh-
+
+[48:18] Speaker 2: ... or you have nothing
+
+[48:19] Speaker 1: ... on the bright side, that's what makes all, and in the long run will make all the platforms kind of vanish and crumble. Like, because they... It, it's, it, it, it turns itself into a unified slop machine.
+
+[48:29] Speaker 2: Yeah.
+
+[48:30] Speaker 1: You know? It's, it's literally... We are moving from the slop machines of social media to the slop machines of AI and-
+
+[48:35] Speaker 2: Yeah
+
+[48:36] Speaker 1: ... AI-generated content. And everyone will have to produce the same slop, just like all the fast food chains had to produce the same fast food.
+
+[48:43] Speaker 2: Yeah, 100%, totally. Totally
+
+[48:44] Speaker 1: ... and equally, equally cheaply and, and, like, the, the only thing that, that's missing from the food is nutrition. [laughs]
+
+[48:50] Speaker 2: [laughs]
+
+[48:51] Speaker 1: And, you know? Like, taste is there-
+
+[48:53] Speaker 2: Calories
+
+[48:54] Speaker 1: ... it's cheap, it's great
+
+[48:55] Speaker 2: ... you, you have it.
+
+[48:55] Speaker 1: But, like, health and nutrition, that's like, no, nowhere to be found.
+
+[48:58] Speaker 2: But, but, but here's what... I, I've been making this point pri- in private conversations a, a lot. But look at the health industry. Like, fast f- it came as a, as a, as a byproduct of noticing, uh, fast food, and it is a real huge, um, industry with a lot of people that crave that kind of product. There's... McDonald's still exists.
+
+[49:22] Speaker 1: Ah, sure.
+
+[49:23] Speaker 2: But there are many, many, many companies building products for the health conscious people.
+
+[49:28] Speaker 1: Yeah. Yeah, yeah, yeah.
+
+[49:29] Speaker 2: And, and I think for digital, health, um, uh, health relationship with digital-
+
+[49:33] Speaker 1: We don't have that much yet. Yeah, yeah
+
+[49:34] Speaker 2: ... I think there's a-
+
+[49:35] Speaker 1: Yeah
+
+[49:35] Speaker 2: ... insane demand.
+
+[49:37] Speaker 1: Yeah.
+
+[49:38] Speaker 2: I go to subreddits that have nothing to do with tech, they have-
+
+[49:42] Speaker 1: Yeah, yeah, yeah
+
+[49:42] Speaker 2: ... and you can notice the appeal and, and, uh, for, for, for the nostalgia of a lot of these products. And I think one thing that, like, you and me and, and I think people in our circles, we, we tend to disregard the nostalgia for the GeoCities and, like, the, the look and feel of the current-
+
+[50:01] Speaker 1: Mm
+
+[50:01] Speaker 2: ... century product, uh, websites. That, that we think, ah, it's because i- we are this age, you know? And we look back. But people that are young, they, they don't, they don't, um, they don't mention by name that nostalgia, but they do crave the products that are not just influencer slop.
+
+[50:23] Speaker 1: Yeah.
+
+[50:23] Speaker 2: You know? Like, real connections.
+
+[50:25] Speaker 1: I see, yeah. Yeah.
+
+[50:26] Speaker 2: S- so I think that the market-
+
+[50:27] Speaker 1: There is very young people that are also drawn towards, like, gramophones and, like, very old style, like vi- vinyl players and so on.
+
+[50:35] Speaker 2: Yes.
+
+[50:36] Speaker 1: Uh, that's kind of... That's a fair comparison, right? Where it's like-
+
+[50:38] Speaker 2: 100%
+
+[50:38] Speaker 1: ... they're not from that era, but they still prefer-
+
+[50:41] Speaker 2: But they still-
+
+[50:41] Speaker 1: ... they prefer that to, like, a, I don't know, like, an iTunes subscription.
+
+[50:45] Speaker 2: And, and you don't have to replace-
+
+[50:47] Speaker 1: Yeah
+
+[50:47] Speaker 2: ... Twitter or TikTok.
+
+[50:49] Speaker 1: Oh.
+
+[50:49] Speaker 2: Like, you don't have to-
+
+[50:50] Speaker 1: By the way, fun fact, the path we're walking right now, can you see here? That's the tracks.
+
+[50:54] Speaker 2: Yeah.
+
+[50:55] Speaker 1: That's from the, that's from the Romans. That's, like, 3,000 years old.
+
+[50:57] Speaker 2: No fucking way.
+
+[50:58] Speaker 1: Yeah. That's from Roman carts-
+
+[50:59] Speaker 2: Holy shit
+
+[51:00] Speaker 1: ... being, being moved.
+
+[51:01] Speaker 2: Wow.
+
+[51:03] Speaker 1: Yeah, they went this path a lot, as you can tell. It's, like, you know, like, a meter deep in terms of-
+
+[51:08] Speaker 2: Yeah, very worn
+
+[51:08] Speaker 1: ... [laughs] wear.
+
+[51:08] Speaker 2: That's... Wow, that's amazing.
+
+[51:09] Speaker 1: Yeah, yeah.
+
+[51:10] Speaker 2: That's amazing.
+
+[51:11] Speaker 1: It's... The, the path we're walking is called the Roman Path for a reason.
+
+[51:13] Speaker 2: I thought you were gonna say, like, second World War, but [laughs] so a little bit older.
+
+[51:17] Speaker 1: No, no, it's very, very old. [laughs]
+
+[51:19] Speaker 2: See? And we crave it. [laughs]
+
+[51:20] Speaker 1: Yeah, yeah. We are like, "Wow, that's amazing."
+
+[51:24] Speaker 2: [laughs]
+
+[51:24] Speaker 1: L- look at h- look at the look and feel. Look at the look and feel. Look at the UX of that thing. [laughs]
+
+[51:30] Speaker 2: [laughs]
+
+[51:30] Speaker 1: It's great. It worked 3,000 years ago. It still works today.
+
+[51:34] Speaker 2: [laughs]
+
+[51:34] Speaker 1: That's what we're trying to build, right? Like, something that still works [laughs] like, in, in many, many years and decades from now.
+
+[51:39] Speaker 2: Totally. Totally.
+
+[51:40] Speaker 1: Yeah. I mean, that's, that's why I switched my whole online identity to Nostr only, like, a long while ago because I realized, okay, like, this thing has legs and it will still work, like, you know, 30 years from now, even if it means I'm running the only relay that ex- the only relay that exists, right? Like, I can just, [laughs] I can just make it work indefinitely. [laughs]
+
+[52:03] Speaker 2: [laughs]
+
+[52:03] Speaker 1: And you can't say the same thing about whatever, GeoCities, YouTube, whatever-
+
+[52:07] Speaker 2: Yeah, totally
+
+[52:08] Speaker 1: ... you know, Substack and everything else. And, and I think that's a big appeal in the sense of if you, if you actually understand how it works, you can just... That's also why my, my personal homepage, for example, is just the static HTML, and it's just... Like, it's Jekyll. It's a Jekyll site.
+
+[52:26] Speaker 2: Right.
+
+[52:26] Speaker 1: And it's just generated sta- static HTML. And the reason why I built it this way is not only because I hate JavaScript and all the frameworks-
+
+[52:34] Speaker 2: [laughs]
+
+[52:35] Speaker 1: ... [laughs] but I, like, I know it's built to last. It's, like, just I slap a f- whatever web server on it, and it, it's just, it's, it's bound to work. And I think we... Also, outside of the Nostr community, to your point, there's lots of people that crave that and wanna have that. And, like, we talked a lot about the self-hosting community, right? The local first people-
+
+[52:57] Speaker 2: Mm-hmm, local first, yeah
+
+[52:57] Speaker 1: ... and so on. And but there's also... I think what we are, ag- again, making the comparison to fast food and those kind of things, there's a lot of people right now that are quitting everything and they're straight up fasting. [laughs]
+
+[53:08] Speaker 2: Yeah. Yeah, totally. Totally.
+
+[53:09] Speaker 1: With food you can't do that, by the way. With digital stuff, you can actually do it. Like, you can, um, you know, like, you can actually detox massively, but I'm, I'm still a technologist at heart. I wanna, I wanna [laughs] have technology. I just don't want the technology to rape me and spy on me-
+
+[53:25] Speaker 2: [laughs]
+
+[53:25] Speaker 1: ... and spit in my face and just telling me that it's raining, right?
+
+[53:29] Speaker 2: [laughs]
+
+[53:29] Speaker 1: It's like that's... But that's the current state of technology.
+
+[53:32] Speaker 2: It totally is. [laughs]
+
+[53:33] Speaker 1: [laughs] And, and I, I think there is a better way, and I think that Nostr has a, a big role to play in it. So that, that would be my summary, I guess.
+
+[53:41] Speaker 2: Yeah. I, I mean, if you, if you look at, like, the email marketing people, like info product people, they are very heavy on, on email, and they s- like, people like Ben Settle, like they say it's, they're a one-off
+
+[53:54] Speaker 1: Yeah, because you actually own the email list
+
+[53:55] Speaker 2: ... Yeah, you have, you have the fucking email address.
+
+[53:57] Speaker 1: You know? That, that's the only reason. It's the only reason.
+
+[53:59] Speaker 2: It, it literally is.
+
+[54:00] Speaker 1: It's the only reason. [laughs]
+
+[54:01] Speaker 2: And, and what they do is spend literally zero minutes on social media.
+
+[54:07] Speaker 1: Yeah.
+
+[54:07] Speaker 2: Don't even have a social media because-
+
+[54:09] Speaker 1: Yeah
+
+[54:09] Speaker 2: ... the, it's, it doesn't matter if you have 10 million followers, they can be taken away like that.
+
+[54:13] Speaker 1: Yeah, yeah, yeah.
+
+[54:14] Speaker 2: Only take people to your email list.
+
+[54:16] Speaker 1: Yeah.
+
+[54:16] Speaker 2: It's the final destination.
+
+[54:17] Speaker 1: Yeah.
+
+[54:18] Speaker 2: And I-
+
+[54:18] Speaker 1: Everything else is a funnel for the email.
+
+[54:20] Speaker 2: E- exactly.
+
+[54:20] Speaker 1: Yeah.
+
+[54:21] Speaker 2: And I think for people like that, that have that point of view-
+
+[54:23] Speaker 1: Yeah
+
+[54:23] Speaker 2: ... you go in with a Nostr pitch, "Oh, no, Nostr is different, blah, blah, blah," and they will say, "Fuck you. I've been burned before." [laughs]
+
+[54:28] Speaker 1: Uh, yeah, sure. I mean, same with Bitcoin, right? Same thing.
+
+[54:31] Speaker 2: Sa- exactly.
+
+[54:31] Speaker 1: Same thing.
+
+[54:32] Speaker 2: Exactly.
+
+[54:32] Speaker 1: Exactly the same thing.
+
+[54:33] Speaker 2: Exactly the same thing.
+
+[54:34] Speaker 1: Yeah.
+
+[54:34] Speaker 2: Same fucking thing.
+
+[54:34] Speaker 1: You use, use that. Use the magic internet money and, and, you know, everything will work flawlessly and [laughs] you'll be rich over time. [laughs]
+
+[54:42] Speaker 2: I was, I was, um, I was, I was listening to, um... You probably know who- Who Nick Fuentes is
+
+[54:48] Speaker 1: Oh, well, by, yeah
+
+[54:49] Speaker 2: I didn't know before either [laughs]
+
+[54:50] Speaker 1: Yeah. I, I wouldn't call myself a Nick Fuentes expert, but I know-
+
+[54:55] Speaker 2: Oh, I'm a, I'm a Nick Fuentes connoisseur now [laughs]
+
+[54:56] Speaker 1: I, I, I know the name, I know some memes. That's about it.
+
+[54:59] Speaker 2: So, so apparently the guy was, um, was like, uh, deplatformed from, like, PayPal and Visas and whatnot-
+
+[55:05] Speaker 1: Of course
+
+[55:06] Speaker 2: ... like four or five years ago.
+
+[55:07] Speaker 1: And he has outlandish, uh, political opinions. [laughs]
+
+[55:09] Speaker 2: Yeah. [laughs] So you, you... I mean, I guess. [laughs] Moderate. Uh, and, um, and, and the guy, he disbelieves on e- everything is a conspiracy, everything is, like, the CIA out to get you and whatnot.
+
+[55:25] Speaker 1: Yeah.
+
+[55:26] Speaker 2: He go- he went for, like, um, like the high risk, uh, payment credit card processors and whatnot. Nobody would take the guy.
+
+[55:33] Speaker 1: Yeah.
+
+[55:34] Speaker 2: And he ended up on Bitcoin.
+
+[55:35] Speaker 1: Yeah.
+
+[55:35] Speaker 2: And he fucking hates Bitcoin.
+
+[55:37] Speaker 1: [laughs]
+
+[55:37] Speaker 2: Like, he's, "It's a fucking total scam."
+
+[55:40] Speaker 1: [laughs]
+
+[55:40] Speaker 2: But for, like, now he, I think he has a credit card processor-
+
+[55:43] Speaker 1: CIA created
+
+[55:43] Speaker 2: ... yeah, CIA crea-... Like the whole, e- everything, you know?
+
+[55:46] Speaker 1: Yeah.
+
+[55:46] Speaker 2: But the guy was using it because it was, like, the only thing that worked.
+
+[55:50] Speaker 1: The only thing that worked, yeah.
+
+[55:50] Speaker 2: Like he would immediately sell it, I'm guessing.
+
+[55:53] Speaker 1: Yeah, yeah.
+
+[55:53] Speaker 2: He would immediately sell it, for sure. But, but he w- he was using the thing because he was-
+
+[55:58] Speaker 1: Yeah
+
+[55:58] Speaker 2: ... cornered into it. [laughs]
+
+[55:59] Speaker 1: Yeah, yeah. I think Nostr will have a similar fate for, for, for a couple of people, where it's kind of the, the, the, the final, [laughs] the, the last bastion, the last thing that works, the last tool that works. Where you can actually... Yeah, I, it's actually surprising to me that we didn't get any, um... There aren't any people on Nostr that I know of that were deplatformed everywhere else.
+
+[56:24] Speaker 2: Mm. Um, I mean, I, I think that-
+
+[56:26] Speaker 1: Before they join Nostr they will start their own social network. [laughs]
+
+[56:32] Speaker 2: [laughs]
+
+[56:32] Speaker 1: That has been the pattern that I observed.
+
+[56:34] Speaker 2: Yes.
+
+[56:34] Speaker 1: Yeah. [laughs]
+
+[56:34] Speaker 2: Well, I, I think the, it, it's a bit because, like, just the timing of how, what happened with Elon and Twitter, and like, oh, now everybody's a free, a free speech absolutist.
+
+[56:44] Speaker 1: Yeah, Blue Sky as well.
+
+[56:45] Speaker 2: Uh, Bl- what?
+
+[56:47] Speaker 1: I mean, lots of people went to Blue Sky for, you know, like, oh, that's the actual green pasture.
+
+[56:52] Speaker 2: Yeah. Yeah, yeah, yeah.
+
+[56:53] Speaker 1: That's the actual free speech zone.
+
+[56:55] Speaker 2: Yeah, for the liberals that... [laughs] But, but it's interesting, like one of the, one of the, the interesting things that people, um, point to with Blue Sky is that, um, is that it censors, right? And one of the, the, the reasons why, like I think the second reason why people leave Substack the most is that they, they don't censor enough.
+
+[57:20] Speaker 1: Oh.
+
+[57:20] Speaker 2: Yeah. [laughs]
+
+[57:21] Speaker 1: Really?
+
+[57:22] Speaker 2: Yeah. [laughs]
+
+[57:23] Speaker 1: How, how so? Like explain that more.
+
+[57:24] Speaker 2: B- because Substack-
+
+[57:24] Speaker 1: It, it's like there's atrocious stuff on Substack and that's why they leave? Or-
+
+[57:28] Speaker 2: Substack is like, um, Substack, it's kinda like the, the pitch is a bit like rumbly, you know?
+
+[57:34] Speaker 1: Mm.
+
+[57:34] Speaker 2: Ish. In the sense of, oh, you can come in, you own your audience and whatnot. Um, and it's kinda like free speech, uh, adjacent.
+
+[57:44] Speaker 1: Mm-hmm.
+
+[57:44] Speaker 2: It's like they are positioning themselves, obviously there is a door to knock, so obviously that will not hold. But they, they did, uh, allow like, I don't know, like what the left calls neo-Nazi content. It might be someone that said something pro-Trump [laughs] or something like that.
+
+[58:00] Speaker 1: Okay, yeah.
+
+[58:01] Speaker 2: Um, so a lot of people started leaving because of that, citing, "They are allowing this hate speech and whatnot in the platform, so I'm going to Patreon." You know? A lot of people are leaving-
+
+[58:11] Speaker 1: Interesting
+
+[58:12] Speaker 2: ... towards Patreons-
+
+[58:13] Speaker 1: Huh
+
+[58:13] Speaker 2: ... and stuff like that. It's the second most popular reason.
+
+[58:16] Speaker 1: Interesting.
+
+[58:16] Speaker 2: Yeah. Um, which, I don't know, I, I think that's also something that is quite interesting about Nostr, that it's not one big Substack.
+
+[58:29] Speaker 1: Yeah, yeah.
+
+[58:29] Speaker 2: You know? It's your relay. You, you don't have to share-
+
+[58:31] Speaker 1: You don't say, "I'm gonna leave email just because someone sent a bad email."
+
+[58:34] Speaker 2: It's just because... E- exactly.
+
+[58:35] Speaker 1: Yeah.
+
+[58:35] Speaker 2: You don't have to break up with... It's a stupid thought, right?
+
+[58:37] Speaker 1: But I think, I think people didn't, don't, ar- aren't at the point yet to, to understand Nostr as a protocol, and I think this will take time.
+
+[58:44] Speaker 2: But I think the reason-
+
+[58:44] Speaker 1: Because there's some, there's some... Like, like Blue Sky role plays as a protocol, basically.
+
+[58:49] Speaker 2: But the reason I think, the reason why people don't perceive it that way is because we are not building it that way. You join Primal.
+
+[58:57] Speaker 1: Yeah, fair enough.
+
+[58:57] Speaker 2: There is one experience.
+
+[58:58] Speaker 1: Yeah.
+
+[58:58] Speaker 2: You join whatever, Amathy, and, and it's like this one experience. And sure, if you're like very technically inclined, you can select your relays and you can be like on the Thai Nostr. It's, it's not designed in that way. Like the products, the protocol absolutely allows for that. But none of the applications really-
+
+[59:18] Speaker 1: Yeah
+
+[59:18] Speaker 2: ... are going for... This i- more like the, the... Like the way I'm seeing it is the relay is like a magazine, and you subscribe to a magazine. You don't quit magazines-
+
+[59:29] Speaker 1: Mm
+
+[59:29] Speaker 2: ... because there's a magazine that you don't like.
+
+[59:31] Speaker 1: Yeah.
+
+[59:31] Speaker 2: You just don't fucking read the ma- fucking magazine and that's it.
+
+[59:34] Speaker 1: Yeah. But to be fair, Nostr isn't, doesn't work like that yet. Like most relays have most of the content, right? There's like, there's no... Again, I'm-
+
+[59:45] Speaker 2: And I, and I think that is also-
+
+[59:46] Speaker 1: Back to, back to the-
+
+[59:47] Speaker 2: ... also a function of the product
+
+[59:49] Speaker 1: ... uh, back to the... I agree. I agree. But also back to the, like it's a fool's errand to try to box content in. Content, especially viral content, will proliferate a- across relays.
+
+[1:00:00] Speaker 2: Uh, I, I, I don't agree with that.
+
+[1:00:02] Speaker 1: No?
+
+[1:00:02] Speaker 2: No, no, no, because you can simply just whitelist who can write on the, on the-
+
+[1:00:06] Speaker 1: Sure, but I, I'll just hit rebroadcast and I'm whitelisted to most relays
+
+[1:00:08] Speaker 2: ... No, but my relay simply doesn't allow you, like this puppy to publish. My relay only al- allows these 200 puppies to publish.
+
+[1:00:15] Speaker 1: Yeah, yeah, sure. No, I just mean-
+
+[1:00:16] Speaker 2: Like there are 140, like-
+
+[1:00:16] Speaker 1: ... like if something is viral, one of the 200 will, will republish it to your relay. That's my point.
+
+[1:00:22] Speaker 2: Yeah, but if you... Oh, like, like-
+
+[1:00:23] Speaker 1: Yeah
+
+[1:00:23] Speaker 2: ... copy and paste and whatnot, I, I think that's perfectly fine.
+
+[1:00:26] Speaker 1: Yeah, yeah.
+
+[1:00:27] Speaker 2: I think that's perfectly fine.
+
+[1:00:27] Speaker 1: Or like, like with a re- with a retweet or like a quote tweet or whatever.
+
+[1:00:31] Speaker 2: So for example, on the, on the-
+
+[1:00:32] Speaker 1: Those kind of things
+
+[1:00:32] Speaker 2: ... the, the Agora relay, so each, each relay-
+
+[1:00:35] Speaker 1: But I, I, I do agree... Sorry to interrupt-
+
+[1:00:37] Speaker 2: Yeah
+
+[1:00:37] Speaker 1: ... but I do agree with your point because I do have personal relays, and that's a very small subset of the whole Nostrverse is on that relay, because it's just for my personal backup.
+
+[1:00:47] Speaker 2: Right.
+
+[1:00:47] Speaker 1: Yeah.
+
+[1:00:48] Speaker 2: And, and I think, like relay fits. It's- It's what's interesting.
+
+[1:00:53] Speaker 1: Yeah. I, I do agree.
+
+[1:00:53] Speaker 2: It's what you, you subscribe, like, and you can select, select five relays, which in your mind-
+
+[1:01:00] Speaker 1: Yeah
+
+[1:01:00] Speaker 2: ... they, they are the same kind of thing.
+
+[1:01:03] Speaker 1: Yeah. I, and I think in the long run, Nostr will actually be something else entirely. I mean, it obviously started as a Twitter clone. But I think the other thing that was successful in terms of grouping was Reddit with subreddits.
+
+[1:01:14] Speaker 2: Yeah.
+
+[1:01:15] Speaker 1: And I think, I think we'll have a mix in the sense of you, you, you will follow relay and you will have, like, relay-based feeds, and also, uh, you know, algo-based feeds and so on, and so on. But, um, yeah, no, it's, it's... It will just still take time to, to, to play out because most people, I think... The reason why I mentioned that before is, like, if, if you, if you talk to [laughs]... I don't talk to people. [laughs]
+
+[1:01:44] Speaker 2: [laughs]
+
+[1:01:44] Speaker 1: As you know. I hate people.
+
+[1:01:45] Speaker 2: [laughs]
+
+[1:01:45] Speaker 1: Fuck people, man. [laughs]
+
+[1:01:47] Speaker 2: [laughs]
+
+[1:01:48] Speaker 1: No. But if you, if you read online, and it's like you, you read on Hacker News, you read on Reddit, you read on whatever, Blue Sky and whatever, in other networks, so to speak, what they're talking, what they say about Nostr is like, "Ah, it's just, like, this app. It's this app for, like, you know-"
+
+[1:02:03] Speaker 2: Bitcoiners
+
+[1:02:04] Speaker 1: ... crypto people.
+
+[1:02:04] Speaker 2: Yeah. True.
+
+[1:02:04] Speaker 1: No, not even Bitcoin people.
+
+[1:02:05] Speaker 2: Yeah, yeah, yeah. True, true.
+
+[1:02:05] Speaker 1: Crypto people. It's this crypto app. Isn't this the crypto app? You know, like... And I think that's where the level of understanding is for most people. We're not at the, hey, email is actually a protocol kind of stage yet. Because I- I'm sure in the beginning it was, like, AT&T or whatever, and I don't know what. You know, like, the, [laughs] email was such a new thing, people were not able to wrap their head around it. It was, like, one product by one company, basically, is what I'm trying to say, right? And I think that's where we're at in the development cycle of Nostr, like, kind of socially speaking.
+
+[1:02:37] Speaker 2: Yeah. But, but I think the way we are designing products is playing on that hand, like, like, piling on on that perception of you to treat relays in this generic way, you know? Um, and not, like... I, I, I see... Say, for example, you wanted to use, let's say Amethyst, for example, to use Nostr in this way. It's, it's, it's in this, like, magazine type of way.
+
+[1:03:09] Speaker 1: Mm.
+
+[1:03:09] Speaker 2: In this, the relays are, is, like, this, this group of, like, content or community or group.
+
+[1:03:15] Speaker 1: Yeah.
+
+[1:03:16] Speaker 2: Like, it's, it's some type of abstract curation of some sort.
+
+[1:03:19] Speaker 1: Yeah. There's very few clients that do that. There's Jumble, right?
+
+[1:03:22] Speaker 2: It is so fucking hard.
+
+[1:03:24] Speaker 1: And there's, like, two more, and that's it.
+
+[1:03:25] Speaker 2: There, there's, like, a few.
+
+[1:03:26] Speaker 1: [laughs]
+
+[1:03:26] Speaker 2: But, but even, even the, the experience itself, it's kinda weird.
+
+[1:03:31] Speaker 1: Yeah.
+
+[1:03:32] Speaker 2: It's kinda weird. Um, and, and again, it's, it's a, it's a, a self-fulfilling prophecy. It, it's hard to use Nostr in this way, so you end up using the, the, the, the relays are, as this generic content bucket. Um, and yeah, I think there is, there is a lot of work that we... But, but, but I think we need to break with this paradigm of this is how we, like, Nostr clients work. They, they look like Twitter, you know? Like [laughs]...
+
+[1:03:59] Speaker 1: Yeah, yeah.
+
+[1:03:59] Speaker 2: This is kind of the experience. I think subreddit is a much more, uh, compelling way of thinking about how to build a, a client.
+
+[1:04:05] Speaker 1: Mm. I think it's also, it's... It, it will depend on your form factor in the sense of, like, the mobile clients will look very different than desktop clients, and this is already emerging. This is already happening.
+
+[1:04:15] Speaker 2: Yeah.
+
+[1:04:16] Speaker 1: And there, there is interesting clients. I mean, uh, Grimoire, for example, um, is... There, there's all these clients now that are kind of desktop power user clients.
+
+[1:04:26] Speaker 2: Mm-hmm.
+
+[1:04:27] Speaker 1: And I, I myself, for example, I use many different Nostr clients, and they're all kind of special purpose, or many of them are special purpose. I still use Amethyst as my, my-
+
+[1:04:37] Speaker 2: Daily driver
+
+[1:04:37] Speaker 1: ... main driver, [laughs] like my daily driver, which is of course comical because it's the everything client, basically. [laughs]
+
+[1:04:43] Speaker 2: [laughs]
+
+[1:04:43] Speaker 1: And here I am talking about special purpose clients.
+
+[1:04:45] Speaker 2: [laughs]
+
+[1:04:45] Speaker 1: No, but, but I'm serious. I'm, I'm... What always, what always, um, I-
+
+[1:04:50] Speaker 2: Oh, look at the mist. Jesus.
+
+[1:04:52] Speaker 1: Yeah. There you go.
+
+[1:04:52] Speaker 2: It's so cool.
+
+[1:04:54] Speaker 1: Yeah. All right. It, it can be pretty. If, if, if you're not depressed, it's a very pretty place. [laughs]
+
+[1:04:59] Speaker 2: [laughs] If you-
+
+[1:04:59] Speaker 1: If you are already depressed-
+
+[1:05:01] Speaker 2: If [laughs]
+
+[1:05:01] Speaker 1: ... you're gonna have a bad time here.
+
+[1:05:02] Speaker 2: If you're depressed, the environment tells you, "Yeah, you're right."
+
+[1:05:05] Speaker 1: It says, "Yeah, yeah."
+
+[1:05:05] Speaker 2: "Life is worthless."
+
+[1:05:06] Speaker 1: "Yeah, yeah. Yeah. No, next six months, just, just kill yourself. Do it."
+
+[1:05:08] Speaker 2: [laughs]
+
+[1:05:08] Speaker 1: "Get it over with right now."
+
+[1:05:10] Speaker 2: [laughs]
+
+[1:05:10] Speaker 1: "It's like you won't see the sunlight for many months. Just, just, just get it done."
+
+[1:05:14] Speaker 2: [laughs]
+
+[1:05:15] Speaker 1: No, but I, there is a, a client written by a Japanese guy. I can't pronounce the name, like, at all.
+
+[1:05:20] Speaker 2: Mabi?
+
+[1:05:20] Speaker 1: It has a little-
+
+[1:05:21] Speaker 2: Mabi. [laughs]
+
+[1:05:21] Speaker 1: It has... [laughs] It, it sounds something like it. It has a little postage stamp in the top left, and the only purpose is, is to send a kind one note. And it shows nothing else. It's an empty text field, right?
+
+[1:05:32] Speaker 2: Yeah.
+
+[1:05:33] Speaker 1: And it does things really well with, like, also posting images, file upload, and so on. And many times I just wanna write something, and I don't wanna see anything else.
+
+[1:05:40] Speaker 2: Right.
+
+[1:05:40] Speaker 1: Right?
+
+[1:05:41] Speaker 2: Yeah.
+
+[1:05:41] Speaker 1: Because if I open any client, I'll be in the feed.
+
+[1:05:44] Speaker 2: Yeah.
+
+[1:05:45] Speaker 1: And I'll see something. I'm immediately distracted, you know? And, and so I have this as, uh, one of my, um... I have this as my, my homepage, basically. Like, I open up my browser, and this thing is in one of the tabs.
+
+[1:05:55] Speaker 2: [laughs]
+
+[1:05:55] Speaker 1: I have, like, three or four tabs that open up, and that, that's one of them. Because if I wanna post something that's on my mind, I'm just gonna go ahead and hit post. I'm just gonna send it, not even looking at Nostr, basically, right? And I mean... And there's, there's a bunch of other special purpose clients that I think are, are, are interesting. Like, the... I don't know. Like, then we come back to, like, what is a Nostr client? But again, me posting stuff, for example, like this recording right now, if I say some magic words, they're... it's automatically posted on Nostr. And then Caster, which is obviously, you know, a, a Nostr client that transforms a Nostr feed into an RSS feed-
+
+[1:06:33] Speaker 2: Yeah
+
+[1:06:34] Speaker 1: ... picks it up and, and pushes it out as an RSS feed. And all this is, like, special purpose. It's not very user facing, but it's, like, special purpose clients do exist. There's k- I, I think kind of my point
+
+[1:06:44] Speaker 2: Oh, no, no. Uh, uh, absolutely. No, no, no. Of course.
+
+[1:06:45] Speaker 1: Oh, another one. Uh, my, the search that I built-
+
+[1:06:47] Speaker 2: Yeah, the-
+
+[1:06:47] Speaker 1: ... and also, also Boris, like it's-
+
+[1:06:49] Speaker 2: Ants
+
+[1:06:49] Speaker 1: ... I, I keep a close, like [laughs] one of the tabs that opens up in my browser is, like, the Ant search for most recent highlights, what people have highlighted. And I always, every single day I discover one or two interesting articles this way And, and like all those kind of little things. It's, it's a read-only client. Like, it's... Ants can't do shit. It's just like, you know, it's just doing search. [laughs]
+
+[1:07:12] Speaker 2: [laughs] No, no, no. I, I, I mean, of course, I absolutely, I agree with that. And I, I think these special purposes clients, it's endless design space.
+
+[1:07:24] Speaker 1: Yeah.
+
+[1:07:24] Speaker 2: I, I, uh-
+
+[1:07:25] Speaker 1: No, but you have a point. I mean, there, there's Primal and there is, uh, you know, there's all these, the product, so to speak. There's Primal, Amethyst, Damus, and so on. And that's, if, if we're being honest, that's like, for most people, that's the first touch point.
+
+[1:07:38] Speaker 2: That, that's what Nostr is-
+
+[1:07:39] Speaker 1: Yeah
+
+[1:07:40] Speaker 2: ... for most people.
+
+[1:07:40] Speaker 1: Yeah.
+
+[1:07:41] Speaker 2: It's like-
+
+[1:07:41] Speaker 1: And they don't make the switch to another client. But I think, I, I think right now that's, I think that's also fine because probably, like, 10% of them do. [laughs]
+
+[1:07:50] Speaker 2: [laughs]
+
+[1:07:51] Speaker 1: It's very similar to Bitcoin, right? Like, most people that get into Bitcoin don't stay with Bitcoin, and they will get into shitcoining, or they, they are fiat maxis. And, you know, you, you... We'll, we'll have to live with that, I guess.
+
+[1:08:02] Speaker 2: Yeah.
+
+[1:08:03] Speaker 1: Any fi-
+
+[1:08:03] Speaker 2: I think w- I think we'll find... I'm still very hopeful in the sense of people-
+
+[1:08:11] Speaker 1: I realize that was all very pessimistic talk from my side.
+
+[1:08:13] Speaker 2: Yeah. [laughs] Oh, it's the, it's the environment, you know.
+
+[1:08:15] Speaker 1: [laughs]
+
+[1:08:15] Speaker 2: It's the mission. [laughs]
+
+[1:08:19] Speaker 1: [laughs] No, that's fine. I, I still think we're fine. I still think, l- like, on the positive side, I'm, I'm actually amazed about how well things work.
+
+[1:08:29] Speaker 2: Yeah.
+
+[1:08:30] Speaker 1: It's probably because there's very few people using Nostr. [laughs]
+
+[1:08:34] Speaker 2: [laughs]
+
+[1:08:34] Speaker 1: No, but I, no, but I, I really mean it. Like, the... Even stuff that came out of Sovereign engineering, it's amazing to me how well this stuff works.
+
+[1:08:43] Speaker 2: Yeah.
+
+[1:08:43] Speaker 1: Like, I use Blossom every single day without thinking about it, without anything.
+
+[1:08:47] Speaker 2: Yeah, it's just one more tool, right?
+
+[1:08:48] Speaker 1: And I, and I s- I, and I see it absolutely everywhere. It's integrated everywhere.
+
+[1:08:51] Speaker 2: Yeah.
+
+[1:08:51] Speaker 1: And it's like most of the links are Blossom links and so on.
+
+[1:08:54] Speaker 2: Yeah.
+
+[1:08:54] Speaker 1: And, and just kind of how buggy Nostr was in the beginning, it's amazing, right? Like, like, I think I told this in the past. I, I told it in, in, in, in one of the conversations it came up. Like, it's my go-to method to see if I'm online or not.
+
+[1:09:08] Speaker 2: [laughs]
+
+[1:09:09] Speaker 1: It's like I, I, you know, I launch my, my Nostr client, and I refresh. Because I immediate... I can immediately tell. Like, if new stuff is streaming in and coming in, then I, I know I'm on. If I, if I'm offline, it still kind of works, but I only see my stuff that I just recently posted, right? [laughs]
+
+[1:09:23] Speaker 2: [laughs]
+
+[1:09:23] Speaker 1: Which is great. Like, it's fantastic.
+
+[1:09:25] Speaker 2: You're online-ish. [laughs]
+
+[1:09:27] Speaker 1: Yeah, exactly. And, and just, like, all the stuff that you've been working on and, uh, just NIP60 and NIP61 and so on, it really, really works.
+
+[1:09:34] Speaker 2: Yeah.
+
+[1:09:34] Speaker 1: Like, it's... All the stuff really works. And, and just kind of the clients became more polished, and, like, even video and shit works. You know, like, all those kind of things.
+
+[1:09:42] Speaker 2: I, I think we've been on this, like, professionalizing mode in the past six months, nine months, th- where there is a lot of very solid, uh, very solid frameworks, very solid relays. Like, I think we're in, in... Technically, we're in very good shape.
+
+[1:10:01] Speaker 1: Yeah. Okay.
+
+[1:10:02] Speaker 2: Except my bladder.
+
+[1:10:03] Speaker 1: Yeah. [laughs]
+
+[1:10:04] Speaker 2: I'm fucking dying.
+
+[1:10:05] Speaker 1: [laughs] All right. Any last words before you take a piss?
+
+[1:10:09] Speaker 2: No. [laughs]
+
+[1:10:09] Speaker 1: Because we're not gonna record this.
+
+[1:10:11] Speaker 2: I, I can only think of one thing.
+
+[1:10:15] Speaker 1: All right. [laughs]
+
+[1:10:15] Speaker 2: [laughs]
+
+[1:10:15] Speaker 1: Thanks for indulging me.
+
+[1:10:16] Speaker 2: Oh, thanks for the walk.
+
+[1:10:17] Speaker 1: All right. Let's see.
+
+[1:10:17] Speaker 2: Thanks for the drink.
+
+[1:10:18] Speaker 1: Yeah.
+
+[1:10:19] Speaker 2: [laughs]
+
+[1:10:19] Speaker 1: Let's see if we can w- or let's see if we can draw this to a close. And yeah, we'll have to, we'll have to, to do the other thing another time. But for now, it was just a walk and a recording, which is-
+
+[1:10:29] Speaker 2: It was very nice
+
+[1:10:29] Speaker 1: ... which is great.
+
+[1:10:30] Speaker 2: It was very nice.
+
+[1:10:31] Speaker 1: All right. [laughs]
+
+[1:10:33] Speaker 2: [laughs]
+
+[1:10:34] Speaker 1: All right. We managed

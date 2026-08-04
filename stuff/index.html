@@ -1,8 +1,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>stuff — pablof7z</title>
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
 <link rel="stylesheet" href="/style.css">
+<style>
+  /* /stuff runs the dark, cinematic palette regardless of system theme —
+     the featured image bento reads as one dark surface. */
+  :root {
+    --bg: #0b0b0a;
+    --ink: #f3f1ea;
+    --muted-op: 0.56;
+    --accent: #ff6a3d;
+    --rule: rgba(243, 241, 234, 0.16);
+  }
+</style>
 <body class="wide">
 
 <header class="masthead">
@@ -16,16 +27,15 @@
   </nav>
 </header>
 
-<header class="page-head">
+<section class="featured-wrap">
+<div class="stuff-featured">
+<div class="masthead-cell">
   <div class="kicker">f7z.io / the work</div>
   <h1 class="page-title">Stuff<span class="dot">.</span></h1>
   <p class="page-note">things I work on, roughly in order of how much I think about them &mdash; tap any card for the full story</p>
-</header>
-
-<section class="featured-wrap">
-<h2 class="stuff-section-label">currently building</h2>
-<div class="stuff-featured">
-<button class="stuff-card entry featured" type="button" data-essay="/receipts/" data-essay-title="Receipts">
+  <span class="masthead-tag">currently building</span>
+</div>
+<button class="stuff-card entry featured has-image" style="--card-img:url(/stuff/img/trellis.jpg)" type="button" data-essay="/receipts/" data-essay-title="Receipts">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 3 45 24 24 45 3 24Z"/><path d="M24 3v42M3 24h42M9 9l30 30M39 9 9 39"/></svg></span>
     <span class="entry-title">Trellis</span>
@@ -33,34 +43,9 @@
   <span class="card-slogan">Never guess what your code did. Never gamble on what it&rsquo;ll do.</span>
   <span class="entry-sub">The subscription an app opens and forgets &mdash; still live long after the reason for it is gone &mdash; is the leak no test catches. Trellis makes that whole class impossible, and turns every side effect into data you can question: the exact plan before it runs, the receipt for why after.</span>
   <span class="card-cta">full story &rarr;</span>
-  <template>
-<article class="essay-doc">
-  <div class="essay-doc-eyebrow">Essays &middot; on Trellis</div>
-  <h2 class="essay-doc-title">Receipts<span class="dot">.</span></h2>
-  <p class="essay-doc-dek">Structure decides what a system can&rsquo;t do. A receipt is structure aimed the other way &mdash; at what it did, and what it&rsquo;s about to.</p>
-
-  <p>Structure makes the wrong thing impossible. I&rsquo;ve written that before and I still mean it. But <em>impossible</em> is a promise to whoever writes the code. There&rsquo;s a second person no one designs for: whoever stands in front of the thing while it runs and asks the only question that matters at three in the morning &mdash; <span class="hi">why did it just do that?</span></p>
-
-  <p>To them, most software is a sealed box. You can read the source and you can dump the state, but the two never touch. Logs are the usual answer, and a log is a confession written by the guilty party: it records that things happened and never why. Every diagnosis from a log is a guess you then spend an afternoon paying to confirm.</p>
-
-  <p>The bug that made me care lives in exactly that gap. A long-lived client opens a subscription because some state justified it. The state goes away. Nothing closes the subscription, because nothing ever tied the two together &mdash; a callback fired, a handle got saved, and the handle outlived its reason. You can&rsquo;t test it away; it isn&rsquo;t in any state you can diff, it&rsquo;s in an effect you performed three states ago and can no longer see. Discipline doesn&rsquo;t reach that far down. Only structure does.</p>
-
-  <p>So the move is to make effects into data. State lives in a graph that is forbidden to touch the world. When it changes it doesn&rsquo;t act &mdash; it hands back the exact commands the change implies, and a receipt: what changed, what recomputed, which commands came out, and the path from cause to each one. The subscription that should close, closes, because the graph can see its last owner is gone. And <span class="hi">&ldquo;why is this open?&rdquo; stops being an investigation and becomes a lookup.</span></p>
-
-  <p>Then I noticed the receipt had a mirror, hiding in the one part of the design I&rsquo;d been apologizing for. Every transaction clones the graph before it runs &mdash; the honest, slightly wasteful cost of doing things atomically. Which means a transaction you never commit is a free simulation. Stage the change, run the whole machine, read the plan it <em>would</em> produce, throw the copy away. Terraform has <span class="hi">plan</span>. Kubernetes has dry-run. Application logic never had it, and here it was, already paid for.</p>
-
-  <p>Two directions of one property. Receipts kill guessing about the past; a dry run kills gambling about the future. An agent debugging today works like a programmer in 1975 &mdash; read the source, add a print, guess &mdash; not because it&rsquo;s dim, but because runtime behavior is as illegible to it as it is to me. Give it receipts and diagnosis becomes lookup. Give it a dry run and it never has to gamble.</p>
-
-  <p>I don&rsquo;t trust that as a slogan, so I pointed it at my own things first. tenex-edge &mdash; the fabric my agents actually live on &mdash; runs its live surfaces on this now. The leaked subscription isn&rsquo;t discouraged, it&rsquo;s gone. Status goes on the wire only when something truly changed. You can take any event it published and ask why, and read back the exact prompt that produced it. And the check that proves the engine honest ships inside the engine, not the tests.</p>
-
-  <p class="punch">Guessing is a tax the past charges; gambling is a tax the future charges. A receipt settles one, a dry run the other &mdash; and a system that issues both is one you can operate instead of trust.</p>
-
-  <p class="essay-doc-more"><a href="/receipts/">read it as a page &rarr;</a> &middot; <a href="https://trellis.rs">trellis.rs</a> &middot; <a href="https://github.com/pablof7z/trellis">github</a></p>
-</article>
-  </template>
 </button>
 
-<button class="stuff-card entry featured" type="button" data-essay="/highlighter/" data-essay-title="Highlighter">
+<button class="stuff-card entry featured has-image" type="button" data-essay="/highlighter/" data-essay-title="Highlighter" style="--card-img:url(/stuff/img/highlighter.jpg)">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h23"/><rect x="11" y="20" width="30" height="9" rx="2.5"/><path d="M15 40h15"/><path d="M6 19v11"/></svg></span>
     <span class="entry-title">Highlighter</span>
@@ -68,30 +53,9 @@
   <span class="card-slogan">The idea outlived a company and three of my own restarts. The scope killed all of them.</span>
   <span class="entry-sub">A social reading platform where communities gather around the highlights &mdash; pull a passage from anything you&rsquo;re reading and drop it in a room of people reading the same thing. Nostr-native, no custom kinds, on the shared core now. Same name it&rsquo;s had since 2023; the first version that starts narrow.</span>
   <span class="card-cta">full story &rarr;</span>
-  <template>
-<article class="essay-doc">
-  <div class="essay-doc-eyebrow">Essays &middot; on Highlighter</div>
-  <h2 class="essay-doc-title">Highlighter<span class="dot">.</span></h2>
-  <p class="essay-doc-dek">A name with more history than I have. Two people built it too broad and paid for it &mdash; one of them was me. This time it starts narrow.</p>
-
-  <p>The name isn&rsquo;t only mine. There was a company, Highlighter, Inc. &mdash; David King&rsquo;s, founded 2018, pivoted 2019 to the exact idea I keep circling: communities gathered around the best highlights from books. And separately, on a completely different codebase and protocol, <span class="hi">I&rsquo;d been building something with the same name since early 2023</span>, because the idea is good enough that more than one person will independently refuse to let it go.</p>
-
-  <p>King&rsquo;s version worked in one place &mdash; author town-halls, a room of readers &mdash; and failed everywhere else. He ran out of money, put over a hundred thousand of his own in, and shut it down in March 2024. His retrospective is the part I reread: he built too broad, and should have <span class="hi">picked a single book, built a community around that specific content</span>, and let the network effects follow. Naval and Paul Davison told him that early. He didn&rsquo;t fully take it.</p>
-
-  <p>Then I made his exact error in my own dialect. Highlighter 2.0, October 2023: DVM extraction, zap-splits, subscriptions. April 2024: &ldquo;Highlighter will onboard millions to nostr and to bitcoin.&rdquo; By April 2025 I was writing it down myself &mdash; <span class="hi">&ldquo;that was the scope-creeped vision which I am now building as a completely separate project&rdquo;</span> &mdash; and a week later, finding a feature I&rsquo;d forgotten I shipped: &ldquo;I had completely forgotten I had added a NIP-29 chat to highlighter, jesus, what a fucking disaster.&rdquo; When you can&rsquo;t remember your own product&rsquo;s surface area, the product is telling you something.</p>
-
-  <p>The tooling I built to survive that &mdash; tenex-edge, proactive-context, the agent work with its own cards on this page &mdash; existed <em>in order to</em> let me come back to this one thing without drowning. So the current repo starts fresh in April 2026: a clean restart, not a continuation of the mess. Community-first this time: invite-only NIP-29 groups as the narrow channel King&rsquo;s retrospective was begging for. No custom event kinds &mdash; NIP-84 for highlights, NIP-73 for what they&rsquo;re of, plain kind:11 for threads, interop over lock-in. A design system that&rsquo;s actually locked. And the recent commits are mostly removals: ship breadth, then compress. The opposite of the last three attempts.</p>
-
-  <p>What makes me believe it this time is that in June 2026 I migrated the whole thing onto NMP &mdash; the shared-core bet that has its own card here, the one where I said I&rsquo;ve paid the duplication tax for years and this ends it. Highlighter is now proof number four it holds, next to podcast-rmp, olas-nmp, and chirp. The idea that outlasted a company and three of my own restarts is finally sitting on infrastructure built to carry it.</p>
-
-  <p class="punch">Two people learned the same lesson the same expensive way: an idea that survives everything can still die of being too broad. The idea was never the problem. The scope was. This time it starts as one room.</p>
-
-  <p class="essay-doc-more"><a href="/highlighter/">read it as a page &rarr;</a> &middot; <a href="https://github.com/pablof7z/hl">github</a></p>
-</article>
-  </template>
 </button>
 
-<button class="stuff-card entry featured" type="button">
+<button class="stuff-card entry featured has-image" style="--card-img:url(/stuff/img/nmp.jpg)" type="button">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24 24 10M24 24 12 34M24 24 36 34"/><circle cx="24" cy="24" r="5.5" fill="currentColor" stroke="none"/><circle cx="24" cy="9" r="3.4"/><circle cx="11" cy="35" r="3.4"/><circle cx="37" cy="35" r="3.4"/></svg></span>
     <span class="entry-title">NMP</span>
@@ -118,13 +82,13 @@ Rust), and <strong>chirp</strong> (a new nostr client built on NMP from day one)
   </template>
 </button>
 
-<button class="stuff-card entry featured" type="button">
+<button class="stuff-card entry featured compact feat-lead has-image" style="--card-img:url(/stuff/img/tenex-edge.jpg)" type="button">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 42 38 6 38Z"/><circle cx="24" cy="8" r="3.6" fill="currentColor" stroke="none"/><circle cx="42" cy="38" r="3.6" fill="currentColor" stroke="none"/><circle cx="6" cy="38" r="3.6" fill="currentColor" stroke="none"/><circle cx="24" cy="28" r="2" fill="currentColor" stroke="none"/></svg></span>
     <span class="entry-title">tenex-edge</span>
   </span>
   <span class="card-slogan">The host is a body. The identity is the person.</span>
-  <span class="entry-sub">I think "subagent" repeats the platform-account mistake: a stranger after every restart. tenex-edge gives agents a pubkey.</span>
+  <span class="entry-sub">I think "subagent" repeats the platform-account mistake: a disposable child, a stranger again after every restart. tenex-edge gives each agent a pubkey instead &mdash; an identity that carries its memory, wallet, and reputation across restarts and harnesses, and lives on a fabric its peers can actually see.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>The prevailing abstraction for AI agents is the &ldquo;subagent&rdquo;: a disposable child
@@ -155,50 +119,56 @@ and the wire is you.&rdquo;</p>
   </template>
 </button>
 
-<button class="stuff-card entry featured" type="button">
+<button class="stuff-card entry featured compact feat-lead has-image" style="--card-img:url(/stuff/img/proactive-context.jpg)" type="button" data-essay="/proactive-context/" data-essay-title="proactive-context">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5 41 15v18L24 43 7 33V15Z"/><path d="M15 24l6 6 12-14"/></svg></span>
     <span class="entry-title">proactive-context</span>
   </span>
-  <span class="card-slogan">A summary keeps what you decided. It burns the why.</span>
-  <span class="entry-sub">Every correction I give my coding agent is judgment that used to evaporate. <code>pc</code> writes it down, cited to the line I said it.</span>
+  <span class="card-slogan">The summary meant to preserve your thinking is where your thinking quietly disappears.</span>
+  <span class="entry-sub"><code>pc</code> keeps what you actually said &mdash; corrections, hunches, the whole messy sentence &mdash; and feeds those exact words back to the machine at the moment the work returns to that ground.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
-<p>Working with a coding agent, you don't just issue commands &mdash; you argue. You push back
-on the bad suggestion, you kill the tempting compromise, you change your mind when a
-measurement forces you to. For all of software history that reasoning lived nowhere: it
-evaporated in the moment, got a one-line gloss in a commit message. Now, for the first time,
-it's being recorded &mdash; and it scrolls away anyway.</p>
+<article class="essay-doc">
+  <div class="essay-doc-eyebrow">the work &middot; proactive-context</div>
+  <h2 class="essay-doc-title">Deviation<span class="dot">.</span></h2>
+  <p class="essay-doc-dek">The summary meant to preserve your thinking is where your thinking quietly disappears.</p>
 
-<p><code>pc</code> writes it down. A single local Rust binary hooks into your coding agents'
-native lifecycle &mdash; Claude Code, Codex, opencode, Hermes, TENEX. When a session ends, it
-distills what you settled into a per-project wiki: current truth on top, the history of how it
-got there preserved underneath &mdash; because a reversal is the highest-signal thing in the
-record, the moment a belief collided with reality &mdash; and every claim cited to the exact
-transcript lines where it was said.</p>
+  <p>I noticed it first with my coding assistant. I&rsquo;d spend a real chunk of a morning arguing it out of a bad design &mdash; explaining why a shortcut it wanted to take would rot six months from now, what I actually valued, where my instinct came from. Good work. The kind you can&rsquo;t redo from scratch. And then the session would end, the context would roll over, and what carried forward was a tidy paragraph the assistant had written about itself: <span class="hi">&ldquo;the user prefers a modular approach.&rdquo;</span> Anyone could have said that. The machine already knew anyone could have said that.</p>
 
-<p>Before each prompt, a hook finds the guides that bear on what you're about to ask and
-injects a cited briefing &mdash; the end of &ldquo;no, we use the outbox pattern, I told
-you this three weeks ago.&rdquo;</p>
+  <p>So here is the thing I keep coming back to.</p>
 
-<p>Local-first: local embeddings, a SQLite file on disk, no account, no telemetry, no
-server.</p>
+  <p>A large language model is, very roughly, the average of everything people have written. Ask it a question cold and it hands you the middle of the distribution &mdash; the sensible, expected, already-said answer. That&rsquo;s not a flaw. It&rsquo;s what an average is for.</p>
 
-<p class="why">&ldquo;A summary is lossy compression with no error term. <code>pc</code>
-treats your direction as the most precious signal in the system: kept permanently with
-verbatim receipts, never silently overwritten.&rdquo;</p>
+  <p>But an average, left to itself, never goes anywhere new. The only reason a model ever does something specific, something pointed, something that wasn&rsquo;t already the consensus, is that a person leaned on it. A correction. A conviction. A hunch you couldn&rsquo;t fully justify but turned out to be right about. <span class="hi">You are the deviation the system doesn&rsquo;t contain</span> &mdash; the one input that isn&rsquo;t already folded into the weights.</p>
 
-<p><a href="https://github.com/pablof7z/proactive-context">github</a></p>
+  <p>Which makes what you actually said the most valuable thing in the entire loop. Not the model&rsquo;s output. Yours.</p>
+
+  <p>And yet the standard way we carry knowledge between sessions is to summarize. Compress the conversation, keep the gist, move on. Look closely at who&rsquo;s doing the compressing, though: it&rsquo;s the same machine that produces the average. When it distills your morning of arguing into a sentence, the part it smooths away &mdash; as noise, as verbosity, as detail it judged unimportant &mdash; is precisely the part that came from you. The point of view drains out of the gist. What&rsquo;s left is <span class="hi">the shape of a thought with the person removed</span>.</p>
+
+  <p><code>pc</code> is my answer to that. It&rsquo;s a small tool that runs on your own machine and hooks into your coding assistant. It doesn&rsquo;t paraphrase you. It keeps the literal words you typed &mdash; the correction as you phrased it, the aside, the typo, the sentence you rewrote twice &mdash; and holds onto them.</p>
+
+  <p>Then, later, when the work circles back to ground you&rsquo;ve already covered, it feeds those exact words back into the assistant&rsquo;s context on its own, at the moment they bear on what you&rsquo;re doing. Not a report about what you decided. The decision, in your voice, said again.</p>
+
+  <p>I built it to preserve the human&rsquo;s output as something close to sacred. Intact. Not diluted into a briefing.</p>
+
+  <p>The stakes get sharper the further out you look. Agents are going to write more and more of the software &mdash; plausibly, before long, nearly all of it. When that happens, the code stops being the scarce thing. The scarce thing is direction: a person who knows why one path is worth taking and another isn&rsquo;t, and can say so. The machine can generate around that judgment forever. <span class="hi">It cannot generate the judgment.</span></p>
+
+  <p>I&rsquo;d rather not watch the one irreplaceable input get quietly averaged out to save a few tokens.</p>
+
+  <p class="punch">This message I&rsquo;ve been writing is a small case of the same idea. An assistant, asked to open this essay, offered me &ldquo;You correct your coding assistant on Monday.&rdquo; Serviceable. Empty. It couldn&rsquo;t have written the rest, because the rest is mine &mdash; right or wrong, it&rsquo;s a point of view the average doesn&rsquo;t have. That&rsquo;s the whole thing <code>pc</code> is trying to protect.</p>
+
+  <p class="essay-doc-more"><a href="/proactive-context/">read it as a page &rarr;</a> &middot; <a href="https://github.com/pablof7z/proactive-context">github</a></p>
+</article>
   </template>
 </button>
 
-<button class="stuff-card entry featured" type="button">
+<button class="stuff-card entry featured compact feat-lead has-image" style="--card-img:url(/stuff/img/sovereign-engineering.jpg)" type="button">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="35" cy="12" r="4.5"/><path d="M4 38 18 16l8 11 6-7 12 18Z"/></svg></span>
     <span class="entry-title">Sovereign Engineering</span>
   </span>
   <span class="card-slogan">The bottleneck isn't ideas. It's builders.</span>
-  <span class="entry-sub">Demo day every Friday. Nobody gets argued into a freer future &mdash; you ship it in front of them.</span>
+  <span class="entry-sub">Freedom tech has never been short on ideas &mdash; it drowns in conferences and manifestos. What it's short on is builders. Sovereign Engineering makes more of them: six weeks in Madeira, rotating captains, demo day every Friday. Nobody gets argued into a freer future &mdash; you ship it in front of them.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>Run with Gigi. Freedom tech has never been short on ideas &mdash; conferences, whitepapers,
@@ -227,13 +197,13 @@ people doing the same, compounds in a way no conference ever has.</p>
   </template>
 </button>
 
-<button class="stuff-card entry featured" type="button">
+<button class="stuff-card entry featured compact feat-lead has-image" style="--card-img:url(/stuff/img/rocking-life.jpg)" type="button">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="4" fill="currentColor" stroke="none"/></svg></span>
     <span class="entry-title">Rocking Life</span>
   </span>
   <span class="card-slogan">Built for when I'm overwhelmed, not when I'm not.</span>
-  <span class="entry-sub">Most todo apps assume you're already on top of things. This one treats missed work as input, not failure.</span>
+  <span class="entry-sub">Most todo apps assume you're already on top of things, then punish you with streaks when you're not. Rocking Life is built for the opposite day: voice-first, say what you'll do out loud and it holds you to it. No points, no gamification &mdash; today's three commitments and one next action, and missed work treated as input, not failure.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>Rocking Life (born as Win the Day) is a voice-first execution app: say what you'll do out
@@ -262,13 +232,13 @@ cognition, not some productivity guru's.</p>
   </template>
 </button>
 
-<button class="stuff-card entry featured" type="button">
+<button class="stuff-card entry featured compact has-image" style="--card-img:url(/stuff/img/pod0.jpg)" type="button">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16v16l14-8Z" fill="currentColor" stroke="none"/><path d="M36 16c4 3.2 4 12.8 0 16M40 11c7 5.4 7 21.6 0 27"/></svg></span>
     <span class="entry-title">Pod0</span>
   </span>
   <span class="card-slogan">I don't finish podcasts. I want to talk to them.</span>
-  <span class="entry-sub">An agent with perfect knowledge of everything I'm subscribed to, listened or not &mdash; so I can ask instead of scrub.</span>
+  <span class="entry-sub">An iOS podcast player built around an embedded agent with perfect knowledge of every show you're subscribed to &mdash; including the episodes you never got to. I don't finish podcasts, and I stopped pretending I would. So ask it what a guest actually said, or what you missed, instead of scrubbing three hours for the one minute that mattered.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>Pod0 is an iOS podcast player built around an embedded AI agent with perfect knowledge of
@@ -298,13 +268,13 @@ in code identifiers, but the app is Pod0.</p>
   </template>
 </button>
 
-<button class="stuff-card entry featured" type="button">
+<button class="stuff-card entry featured compact has-image" style="--card-img:url(/stuff/img/wikifreedia.jpg)" type="button">
   <span class="card-head">
     <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="18" cy="24" r="14"/><circle cx="30" cy="24" r="14"/></svg></span>
     <span class="entry-title">Wikifreedia</span>
   </span>
   <span class="card-slogan">Consensus manufactures a winner, not truth.</span>
-  <span class="entry-sub">Every "neutral" Wikipedia article is just whoever won the edit war. Wikifreedia keeps every version signed, separate.</span>
+  <span class="entry-sub">Every "neutral" Wikipedia article is just whoever won the edit war, flattened into one voice. Wikifreedia is a wiki on nostr where no article has a canonical version: every author publishes their own signed take, versions coexist and fork instead of merging, and ranking comes from your web of trust rather than a committee.</span>
   <span class="card-cta">full story &rarr;</span>
   <template>
 <p>Wikifreedia is a wiki built on nostr where no article has a canonical version. Every author
@@ -346,12 +316,9 @@ best stuff would come from embracing and doubling down on the biases.&rdquo;</em
   </template>
 </button>
 </div>
-</section>
 
-<main class="page">
-
-<h2 class="stuff-section-label">everything else</h2>
 <div class="stuff-more">
+<h2 class="stuff-section-label">everything else</h2>
 <button class="stuff-card entry" type="button">
   <span class="entry-title">tenex</span>
   <span class="entry-sub">Orchestrating AI agents over nostr &mdash; the hardest thing I've ever built.</span>
@@ -922,8 +889,7 @@ economy in action.</p>
   </template>
 </button>
 </div>
-
-</main>
+</section>
 
 <footer>
   <nav class="nav">

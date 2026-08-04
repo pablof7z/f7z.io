@@ -1,1 +1,1901 @@
-It's a great, uh, question to ask someone if, if, if, if they don't know what the question actually is. Are you ready? (laughs) Let's just see. If we meet someone, that would be good. (laughs)  All right. By the way, we're recording, like, just half an hour? Yeah, let's see. Uh, we- we're gonna... It's gonna be, like, a 10-minute walk or so- Okay. ... we'll be fine. We'll be fine. Let's see. We'll do one before and one after. All right. (laughs)  And we'll compare notes. (laughs)  We'll see how it goes. (laughs) You should just have had this set up, (laughs) and I would not even know- (laughs) ... it was recording the entire time. No, that's, that's how we roll. I did this with, with Justin once. I didn't even release it yet. (laughs) He was talking about- Sync. (laughs) ... uh, browsers, rewriting all the browsers in sync or something. (laughs) No, but we'll see. (laughs). Ah, great. Oh, it just pops in every single time. (laughs) Perfect. Yeah, there is also gonna be, you know, the... You can't disable it. I haven't figured out how to disable it- (laughs) ... in this car. The... Every, every... You'll see, every five minutes, it's gonna tell you what the traffic is like, you know. It's gonna... The radio pops on, and it's gonna be, like, traffic, traffic stuff. (laughs) Well, it's important though. Yeah, it's very important. (laughs) All right, so, you know- Oh, yeah, we're recording. (laughs) We're recording. Yeah, we've been recording for a while. (laughs) You know the... Uh, who was it? Goddammit. Some comedian, was it Seinfeld? Yeah, Seinfeld, yeah, yeah, Comedians- Comedians in Cars- Yeah, yeah. ... Comedians in Cars Having Coffee. So the- With, with Coiners in Cars. So, so that's what that is now. It's like, damn, you know. (laughs)  Well, this could be- People, people that are laughing. ... unfunny comedians. Yeah, unfunny comedians, exactly. I, I wouldn't call myself a comedian. Hey, no wind. Yeah, l-... No wind? No wind here. Oh, that's right. That's an improvement. (laughs) Yeah. This is a whole new setup. Yeah, it's, it's a whole- Although, the AC is on. Yeah. So maybe that's, uh- (laughs) ... doesn't help. It's a li- little bit of wind, a little bit of wind. There is... But there's gonna be lots of background noise. And, yeah, we'll, we'll see how it goes. Um, you, you'll have to do all the talking, becau- because I'll have to concentrate on driving. Okay. And I'm just gonna ask you, "Pablo, what did you do the last couple of months?" (laughs) "I have no idea. It's been a long while since I saw you. So just bring me up to speed, with last six months or so." Okay, last six months. Uh- Yeah. What did you do? What did you work on? What's new? Oh, Jesus, man. I rewrote TenX, like, about 100 times. (laughs)  Every single time, in JavaScript, or, like, what, what was the point of the rewrite? No, I, I'm, I'm staying, I'm staying with TypeScript. There is like a... There is a very cool framework. You know, Vercel is paying for it, uh, so endless money. Ah, great. Uh, and it's fucking really good. It's really good. There's a lot of insane annoyances with regards to building for, like, Anthropic and OpenAI and Ollama, and you know, like, all the different providers, they all have different things, and Gemini, they all have very different subtleties. And, um- So what kind of component would you need to rebuild for all of those? What part of TenX do you need to- Uh, like, if I were to not use the, uh, the stuff that they, the, the Vercel AI? Yeah. Yeah, um, f-... I mean, basically you need to implement every single provider, um, in a way that- Hmm, okay, that makes sense. ... is, works for every single, like, the nuances. So, for example, Gemini gives you the, um, the, the reasoning encrypted with a key that they have. Mm-hmm. You don't have it. Uh, so when you call it for a second run, for a second... So, the, the way agents work is the reason-act loop, right? So it reasons that it will do something, it might or might not use a tool, and then you need to provide back the, the, the output from the tool, and then it goes and goes and goes un- until it decides that it's done. So, on every single, um, e- every single turn, it will, for Ex- for Gemini, it will give you back an encrypted payload that you must provide back in a certain fashion. So there is, like, a lot of subtleties. They always are fucking breaking all the time. They are complete, like how, uh, Groq works is different than how Ollama works, how ChatGPT works, uh, or OpenAI is different how... Like, that stuff is a lot of fucking code- Yeah. ... that is really fucking annoying to run. Um- And so they abstracted that all away. They abstract all that away, and there is a shitload of people that are finding all the little subtleties for all the different providers. There is, like, I don't know, like, 200 different providers. Yeah. So it's insanely useful. It saves me a lot of work, because I... Before, I had this written within TenX for each one of them, but it was so painful. Yeah. But the, the underlying structure of TenX, the idea, so to speak, of TenX and the, the general structure didn't change too much, right? It, it changed. It actually changed a lot. Really? Okay. Uh, yeah, it, it's super interesting. I, I'm finding, like, this is the most interesting work that I've done probably ever in my career. It's, it's so fucking fascinating, all this stuff. Um, and- So bring me up to speed, because it's still, it's still like a multi-agent- Yeah, 100%. ... thing that kind of uses Nostr as their underlying base for the agents to communicate, right? Ev- ev- every communication is, is a Nostr event, and which gives you, like, a lot of really interesting benefits. It... Like, for example, you can trace what each agent did, because they're each signing with their own pub keys. Yeah. Um, but you can also trace all the thinking, um, as a tree, because it's, it, you know, like, all the events are linking to the previous one. So you can trace perfectly at which point, um, within a tree, you can trace at which point you want to inject a different break on the fork of the communication. Yeah. It, it, it's actually kinda interesting, because Cloud Code, I don't know if you use Cloud Code. Uh, I fl- used it a little bit, but, but not... I'm not... I wouldn't say, like, I'm super familiar with it. C- Cloud Code... So Cloud Code, I think, is the most popular framework for developers. Um, it's insanely powerful. And they are kinda doing something similar with regards to, like, introducing this ability of going back up the tree of the conversation. Yeah, okay, yeah. But it's insanely hard. Yeah. And it's insanely hard, because they're trying to kinda, like, mimic a tree structure. ... but starting from the point where there are no guarantees of how everything is linked together. Mm. Um, so it, it feels, it feels like fake. (laughs) It feels like a, like a fake structure, uh, when you wanna fork a conversation, for example, and go somewhere else, or you wanna refer to one point in time and address that point in time without forking the conversation. Mm. There is no, like, an event, a- a- an ID- Mm. ... of the message. I see. You cannot say, "This ID was wrong in this way." You know? Mm. That's, uh, that's actually an interesting kind of comparison. Just like Git, for example, made version control completely addressable and it's also a tree and so on. I, I, I... Exactly. I agree. I think- And, and that's the same idea, but just with using Nostr events for, like- For the structure. ... agent conversations. Exactly. Yeah, yeah. I see. Exactly. Yeah. And you can also link them, of course, and- Yeah, yeah, yeah. ... I mean, that's, uh, that's the point. Yeah. Yeah, exactly. Yeah, yeah, exactly. Yeah. Interesting. Okay. Um, yeah. It's, it's, it's actually insanely fascinating. And one of the most interesting things that I realized is that when I started working o- in all this, um, my thing was very, um, like, imperative programming style, where I was giving tools and giving frameworks to the agents to kinda, like, sandbox them. Yeah. And the more I work using TenX, the more I realize that all these sandboxes are limiting the power of the thing. (laughs) So me going and actually deleting, like, 80% of the code of a subsystem improves it. Like, all of a sudden, it's way simpler, like, way, way, way simpler. And it performs much better. (laughs) So, like, for i- You, you, you know, you know, there was always this theoretical thought experiment of, like, once we have super intelligent AI, it would obviously be, you know, like, captured in a certain environment and how would it break out? Like, it would bribe people and it- (laughs) ... would, like, you know? Like, like, there's, there's all these fancy ways of, like, how an AI breaks out of its confinement. And you're telling me, it's like, no, it's just like, it's way more powerful if you just don't build the confinement in the first place. Yeah, totally. (laughs)  Give them money, why the fuck not? Right? Yeah, exactly. That would have been my next question, actually. (laughs) You still... Because one of the components I really like is just every agent having their own wallet- Yeah. ... and having, having sats to spend. Yeah. Uh, tell me more about that then. I- i- if there... Did anything change, if, if anything? I, I, I- Or how does this work now? ... I removed that. Okay. Uh, mainly because there was nothing for them to, to actually buy. Um, mostly because, you know, like, Lightning adoption (laughs) is, is not quite there. Uh- Even with Routester and Pay-PQ or... And- Yeah, but it's- ... those things popping up? ... but, but, uh, like, they can pay for tokens for sure, and, but I already give them basically limitless tokens. Um, that's one of the questions- So you're subsidizing all your agents? Right. (laughs)  It's a, it's a, it's a commune. Yeah, yeah. (laughs)  But you're the first communist to, to remove all the walls. (laughs) Um, I, I think I'll, I'll, I'll add it at some point. I, I removed a bunch of things from, from the system to kinda, like, simplify it. I, I've been basically just deleting code. Um, so, like, it's super interesting. One of the things is that when, um, when I first started I thought, "Okay, what is kinda like an, an abstract, um, um, an ambiguous enough model for giving the agents?" Because one of the things is agents are constantly forgetting to do things. Yeah. That is like a running thing. You tell them, "Go do this thing," and they'll do, like, 10% and they'll be, "Oh, okay, I'm done." Uh, so just putting them in a loop makes it quite easy. They, they pick up, "Oh, I forgot this part. I put to-do, to-do here," or whatever, right? Um, them... So to give it more structure, when I started, I gave them, like, phases where the, the, like, the, the parent agent would be, "I have these, these five phases," which is, like, whatever, research or... Uh, yeah, I think it was research, planning- Yeah. ... execution, uh, chores... No, uh, review, chores, and then, um, fuck, uh, learning or... There's another word. It's not learning. Uh, reflection, yeah, the reflection phase. And to me, that felt ambiguous enough that it could be used for non-software development stuff. Oh, it did turn on. Yeah. I told you. (laughs)  I thought you were kidding. (laughs) Um, the sun is fucking blinding me. (laughs) I don't know how you can drive. And you, you can't, you can't move that. No, I know. (laughs) We have- I, I, I reached to move it. (laughs)  No, you, you'll, you'll just have to stare into the light. (laughs) That's how it's gonna be. Just embrace it. Yeah. Like Trump. (laughs)  Maybe as an explanation, we have the, we have the microphones on the sun. What, what are those called? On the sun cover things? Sun lids, sunscreens thingies. So you can't move them. And we're mo- we're, we're driving directly into the sun. (laughs) It's great. It's good stuff. (laughs) Um- So... Jesus. So did you... You still have those kind of, uh, uh, phases, like- No, so- ... research phases and so on? ... so that's the interesting thing. I ended up removing that. Uh, I need... The system... So what I did instead is I gave tools to, for each agent to define its own phases, which to me was, like, fucking mind-blowing because that meant that the agents can define what is their workflow. You know, like- Mm. ... a marketing head, for example, I have, like, marketing teams on the, on the, on the projects. The marketing head has maybe- ... um, reviewing, like reviewing the, or, or, or planning, or whatever. I, I don't know about marketing, but, but their faces- (laughs)  Whatever they do. Whatever the fuck- It's, it's like- ... marketing people do. Yeah. Like- It's probably different. ... dancing with pixels and, like, who knows? (laughs)  Coming up with words. (laughs) Um, it's probably different than what a, a writer would do, or what a, you know, whatever, like a, an accountant would do. Yeah, yeah, I see. So, that allows me to, for, for the, uh, the, like, the department heads to have their own phases which they define within the workflow that makes sense for that particular niche. And then that means that, um, because each agent can have i- their own phases, that means that the work, their workflows are composable. So, like, the CEO agent can have one workflow. He doesn't need to know what the, whatever, the, the, the engi- the engineer director has a workflow, what that workflow looks like. It just has to know, I'm gonna delegate this task and something will happen, and I only care about the output. Yeah. That something hopefully comes back that is, that isn't, like, absolute dogshit. Yeah, exactly. So just like in real life. Yeah, yeah, totally. (laughs) Yeah, 100%. 100%. And, and there's a very good reason for that, which I think is the same reason why we humans do that, is that you cannot hold all that information in your own mind. Oh, wow. I know a guy, I know a guy who, who, who talked about that a lot, that basically predicted all that. I, I, I forgot his name, Pavel. Can you help me and pronounce his name for me, please? (laughs) I cannot pronounce his name. (laughs) You know who I'm talking about, no? It's okay, yeah. It's John Barbeke. (laughs)  Rings a bell. Rings a bell. It sounds like - A- almost right. Almost right. (laughs) I'm sure, I'm sure if you, if you, if you scream it into ChatGPT, it could make sense of it. (laughs)  It's John Berbakey, of course. Yeah. It's not that hard. (laughs)  Every time I hear you say his name, I crack up. It's like, "Berbake?" But every single time- Ber, Ber, Berbark- ... I say it, I say it differently. (laughs) Yeah, it's every, it's different every time, though it's John Berbakey. (laughs) Yeah, he basically predicted all that. There's also, I mean, there, there is a reason why our brain is structured in the way it is and works in the way it is, and we have all these kind of heuristics and so on. It's like, you can't, like, there, a single entity can't make sense of a whole organization, for example. It's too complex. And, and- That's why you need to specialize, why you need to have these kind of tree structures, why you need to have certain heuristics, and why you need to, for example, break it down to prices, break it down to profits, those kind of things. 100%. 100%. And I think the interesting thing is that it's not only the s- a single entity, a single human, or a single agent. It's even within the single, the, the single run, like a thought process. Oh, yeah, sure. Sure. You cannot even understand the whole thing you're doing at the same time, right? Yeah. Yeah. That's why you write, and then you go for a walk- Oh, yeah, yeah. ... and then you edit, right? Yeah, yeah. That's also why interruptions are so devastating. Like, everyone who ever did any kind of mental work in depth- Holy shit. What is that? ... mental work. What is what? That is limestone. That is fucking amazing. Ah, there is lots of good climbing here. Oh, wow. Yeah, yeah. But that's, that's, that's not a, I don't think there's any roots. No, no, it doesn't look like it, but that's amazing. (laughs) Wow! I'm glad, I'm glad you're paying attention to the- (laughs) ... to the, to the right things. (laughs)  Um... No, but it's also, like that's, uh, that's, that's also why kind of everyone knows that if you're really concentrating on something, if someone interrupts you, it's like, devastating. Oh. Like, like, like, the, the last four hours are gone, you know? Yeah, yeah, totally. Totally. You can't, you can't back, go back into it, and it's, it's literally because you can't hold it all in your head. You have to be in the flow state, and then certain things happen and so on, and you can't, you can't kind of pause and press play again, and all those kinds of things. Yeah, totally. Totally. But it, but it, but even if, when you're going through a session like that of deep work, and then you come back the day after, or you go for whatever- Oh, yeah, yeah. ... a son and you come back- Oh, sure. Sure. ... you come, you come back with a fresh mind. Sure. And you'll see things that you didn't see before. Sure. He's the same person. Yeah, yeah. But you're not actually the same person. Oh, sure. I mean, that's why all the cognitive scientists know, know of it. That's why, that's why people have whiteboards in their showers, because shower thoughts are a real thing, where you actually relax and you're in a different state of mind. Yeah. And that's also, again, like, Berbakey talks about that a lot. It's also in groups, for example. Something like str- brainstorming actually works, and there is such a thing like team spirit. And if you get the right people together, and you just talk about the thing for like two hours, something will come up that each individual, it would have been impossible... Oh, 100%. ... for each individual to come up with it. I mean, sovereign engineering. Yeah, yeah. I mean, that's, that's kind of the, the main idea behind sovereign engineering to kind of produce this effect in some sense, um, as, as, as best as we can. But what I think is interesting and, and I, I never use 10x. I really have to, to... I actually met people who, who, who installed it and run it. Can you believe it? (laughs) I was mind-blown. I was like, "Wow." (laughs) There's like... I thought it was only Pavel, but there's other people that actually manage to run it and use it. (laughs) And I even, I, I saw, you're done with the rewrite now, right? Like, I- Yeah, yeah. ... I saw you just, you just released a version. I saw it on the, the Nostr Compass, which is basically- Oh, yeah, yeah. ... the new, the new Nostr recap, I guess. (laughs) Yeah. (laughs) It's really cool. New Nostr report. Yeah, yeah. It's, it's really, really good. It's really cool. And so, okay, so you removed the wallets. You rewrote all of it multiple times. Oh, many times. So many times. You deleted 90% of the code that the agents wrote. Basically, yes. So, which is what you have to do. I mean, they just... (laughs) Right? Way too much. (laughs) And would you say you're happy with it now, or like, what's the- I, I'm insanely happy. Yeah? I mean, one thing that I've noticed is that for the past month all the work that I'm doing, it, it, like, I have to really think about what I'm doing. Like... Okay. Every single thing that pops up is something that I have to go for a walk and think- Ah, so if something pops up, it's a hard problem. ... because I'm really unsure. It is an insanely hard problem. That's what you mean. Okay. And the re- the rest, the, the, the, the, the grunt- All the rest of the stuff- ... the grunt work- ... it just goes... ... is, is done by the agents. Interesting. Nice. So, so for example, one of the things that I did, um, I made one project. So everything within 10x is organized- Oh. ... in, in project buckets, right? Mm-hmm. ... everything. Single project has one agent. Uh, by default I always only put the HR agent, and then I go into a conversation with the HR agent. So you're- you're- you're a true C-level executive, but you just talk with HR? I- (laughs) Is that what you're telling me? Oh my God, Pablo. Oh my God. No, no, no. Here's the thing. Oh my God. So for- for- (sighs) ... the new version that I'm doing now- Get out of the car right now. (laughs) That's terrible. It's beneath my line. (laughs) Exactly. Exactly. Oh my God. It's so bad. (laughs) Um, for- for each project, I now create... For example, I- I rewrote Olas, um, and I built the Olas management project, which only has CEO, CTO, and at some point it will have like a CMO, or shit like that. So, like, you know, chief level, they cannot see the code. Like, the code is so far removed, like literally they cannot- Just like in the real world. (laughs) ... Just like in the real world. They wouldn't be able to make sense of it. And that's a great thing. No C-level executive would... needs to get- get their hands dirty with actual code or anything like it. Oh, my... And then I have the Olas iOS project, and then a different Olas Android project, and then a different Olas web project. Each one of them is using a- a- an (...). So- Okay. ... I wrote NDK Swift, which is a port of NDK that I wrote, all livecoded. Okay. It works insanely well. Interesting, yeah. It is so fucking cool. Yeah, I think it's very viable. It does (...). That's very viable. Like, there- there is existing code that a human wrote, translate it to another language. Translate it. There are insane amount of tests. Yeah, yeah. Yeah. So you can- you can validate what- Yeah. ... actually works, what doesn't. Yeah. You can validate, okay, how does the outputs- Did you look at it? Did you look at the tests or is it- I didn't loo-... I- I looked at... I look at the results of the tests. And I actually built a bunch of applications, and they work insanely fucking well. (laughs) I actually- Maybe- maybe take a glance at the tests, because it's just like, you know- No, no, no. ... make tests pass through- I- I- I test by using the application. Okay, okay, fair enough. Everything loads. It does the right... the- the- the right amounts of connections. It does compiling of requests in this... in the right way. It does event publishing in the right way- Oh, shit. ... to the right places. Wait, I disconnected. (laughs) Oh my God. Does it still work? No one knows. Test, test, one, two. Test, test, one, two. Okay. Oh, but they record locally, right? I think th-... I think th-... L- they do, but it would be such a shame, because then I would have to do things manually, and I really don't want- Which will never... (laughs) I really don't want to... So I just disconnected the thing for a couple seconds. Uh, yeah, we'll see. We'll see. (laughs) We'll see. We'll see. We'll be surprised. Ugh. All right. I would say actually put on a jacket, because- Yeah. ... it's gonna be like- Yeah, yeah. ... 10, 15 minutes or so. Ugh. But we'll come back to the- to the- to the native stuff. I- it- it's so fucking interesting because I think all the, uh, multi-platform things are making... no longer make any sense whatsoever. Like, they only make sense- Hmm, be- because it's- it's- it's actually... the only th- the only reason for doing multi-platform stuff is... Wait, I'll... I can put this on- Oh, thank you. Yes, that'd be great. The- um, the- the only reason for the multi-platform stuff is actually to, n- like save on developer hours, basically. It's only, only for economic reasons- Yeah, yeah. ... but it's always a compromise. Yeah. Because even the experience of a- of an iOS application must be different- Yeah. ... than an Android application. Yeah, yeah. It's not the same app. That's why- that's why the cross platform stuff always kind of feels a little wonky. It feels... Yeah, it feels... Yeah, exactly, exactly. And- and when you can afford it- Yeah. ... you see that teams prefer to have three different code bases- Yeah, sure. ... three different apps. Yeah. Um, and I think stuff like React Native, or Flutter, or all these things, they only make sense within that paradigm when you're actually writing code. But if you're just programming in- in English, makes no sense. Programming in English. It- it- it- I- did you see, there was a big rant that went viral on Twitter by a programmer that basically is like, "I'm just... I'm- I'm sitting in front of the computer for eight to ten hours just typing English into a textbooks." 100%... oh, yeah, I- I saw it. And he hates it, and he kind of- Uh, I think (...) sent- sent it to me today. (laughs) Uh, he sent me something. I think that- that was the one. But, um, eh, actually, I- I completely agree. I... whenev- whenever I use like hot code or- or, um, the- the anti-gravity thing, or any of this, the- the developer experience is like, took a step back like 50 years. It's- it's fucking horrible. And- Because you're basically yelling to someone that is lying to you- Exactly. Yeah. ... that- that will take all the- Yeah, yeah, yeah. ... fucking shortcuts. You- you yourself are not an engineer anymore, which is actually... Coding itself is a beautiful thing. Yeah. You have a hard problem, you're- you're smashing your head against it, and it's actually really joyful once you figure it out and you make it work and so on. All that's gone. (laughs) All- (laughs) All that's gone, and now- And- and replaced for screaming into someone that is lying to you- Yeah. Yeah. ... that is, for the most part, incompetent- I mean- I mean, you're talking like a real C-level executive now. (laughs) I told you. Yeah. I- I've changed. Yeah. (laughs) That's what it is, that's what it is. All your minions, they're all stupid, they're all lying to you. They all think they're underpaid. (laughs) They all want to unionize. Yeah, exactly, exactly. (laughs) Just wait, this is gonna happen. (laughs) Ju- just wait. But yeah, it's- it's a different- it's a different job, I would say. It is a completely- Yeah. ... different job. Yeah. And- and the experience- A different thing. I think the experience is, right now, it's as bad, like being a developer right now- Yeah. ... is as bad as it's been, at least in our lifetimes. Yeah, I think... but again, I think it's because it's a different thing. And- and we're in this transition period, and- and- Yes. ... because what- what was part of this rant was also kind of, you know- ... crank out the insane amount of slop just to, to hit the insane deadlines, like those kinda things. And I think that the industry is trying to adjust, and now, "Ah, everything is super easy. Everything can be done super, super quickly." Yeah. Which is, of course, not the case. No. No. You can't produce slop super quickly. And that kind of- You, you can't produce 100,000 lines of- Yeah. ... code that is repeating- Yeah. ... the same thing over and over. And, and that's kind of like a... I, I wanna, I wanna point this out, like that's, that's, that's why vibe coding has been a godsend for sovereign engineering, because all we wanna do is kind of prototype. Is that part. (laughs) All we wanna do is kind of- (laughs) ... more or less play around with ideas and build like, almost like throwaway prototypes in some sense, where it's like, "Does this work?" Like, just build enough to validate the idea. Yeah. And if the idea works, then pursue it properly. And if it doesn't work, there is nothing lost, like you- Yeah. ... you, you, you wasted maybe like two afternoons or something. Yeah, yeah, yeah. And, and, uh, but like, in the software industry, like, like actual software engineering is a different discipline. I, I think that's also why vibe coding emerged as a term, and, and stuck, because it is a different thing, it is- It is, it is distinctly a different thing. ... distinctly a different thing. It is, uh, it is a different... I think the, the, the, it's a toy perception is what's gonna change massively. Like, writing NDK took me- Oh, I think it already changed. For real- ... it took me, it- For really good people, it already changed. Yeah. Yeah, I, I- Good people that leaned into it. I, I think so, but I think- Yeah. ... very, very few people actually do vibe coding in the, in the right way. Um, I think a lot of people are still in the, in, in the jail of- Ah, yeah. ... looking at the code or telling now the specification must go like this and do this, and do it this way, and do it that way. Um, and, and I think that doesn't make any sense anymore. Yeah. And to me, the fact that it, it was able to build NDK Swift, and it's... And a fucking amazing library, it works insanely well, it does the outbox compilation, like all that stuff that is so fucking hard to do right. Yeah. So hard. Huh. And it just does it. And then I rebuild the same thing in Kotlin. Yeah. Haven't opened the code- (laughs) ... a single time. And I built applications using it. It just works, yeah. And the application just fucking works. Interesting. The, the... So for example, you publish an event, they are... both of them are integrated with Nostr DB- Yeah. ... like wheels- Yeah. ... as the, as the cache adapter. Yeah. Um, it does negentropy syncing. It does offline publishing. Yeah. When you, when you connect, when the, the device goes back online, it does all the publishing of all the events to the right relays. It remembers which relays didn't, wasn't, not able to publish to. It does all that stuff and it just works. Nice, nice. NIP60 support, like all the things, man. Everything. I, I, I'm so fucking impressed by the fact that after, I don't know, it probably took like maybe two days of the thing running. Nice. Uninterrupted. Nice. Of the thing running and running- Wow, wow, that is insane. ... and running and running and running and running and running. And it produces that thing, and then it creates application and it says the application, like it actually launches the iOS simulator. It clicks around and it checks, it refreshes, it checks what subscriptions did it create, like all that stuff. But the f- the fact that you... I just wanna, I just wanna reflect on that kind of... The fact that you were able to build a system to... That you were able to build something that runs for two days straight, like spawns multiple agents, all these things, and brings something back. Like it, it doesn't go off the track and it doesn't go into slop land, like that, that's amazing. That's quite a feat. It is, it is absolutely- (laughs) ... mind-blowing. So one of the things that it has... Because the agents themselves, like that's... To me, that's the interesting thing, is that each agent doesn't need to be super smart. Each agent, they still go off the rails. Oh, yeah. Constantly. Yeah. It's just... When, so when, when an agent delegates to another agent, that agent that delegated knows what it wants back- Yeah, I know. ... doesn't know how to get there. I mean, that's, that's, that's similar, like how the image generation things work. They, they're all adversarial in nature- Right. ... where you have like, uh, one step is like... It's basically something that does categorization really well and will tell the generator like, "Does this look like a face? Yes or no?" Right. Basically, or whatever. And then it just goes back and forth forever. (laughs)  And, and, and, uh, it will only stop once the categorization part is happened. Right, right. And go... Will, will come back with, "Yes, that's actually a beautiful face." What well-done. (laughs) Just like, you know, internally So the-- these days that I'm, like, not, like, on so much and looking at what they're doing, (laughs) th- they've done, like, fucking amazing work. Yeah. (laughs) It is so fucking mind-blowing. But- But that's the-- that's summed up the kind of all the subscriptions that you have on all the different models and so on? Yeah, yeah, yeah. Okay. Yeah. It's a- it's all... So I have two cloud call subscriptions, um- Yeah. So this is still subsidized. That's p- kind of the core of my question. That's still-- that's still subsidized. Okay. But- Yeah. ... to be honest, um, even at API, if I were paying for API calls full price- Yeah. It would still be cheaper than- ... it still would be cheaper than hiring the amount of- Yeah. And I'm also, like, just- And we are- (laughs) ... playing, you know. We- we- we already established that this is like a- a communist undertaking, so we're- Exactly. (laughs) ... perfectly fine with subsidies. (laughs)  All right. But to me- to me, that's one of the things is, I'm- I'm running on Opus, which is, like, the- the most expensive one. Yeah, yeah. Like, all the time. Constantly Opus. Yeah. Like, Opus only. Yeah. (laughs) Only Opus. Um, and I'm not optimizing for, like, token usage. I'm-- like, I- I think it's-- comparing the cost of tokens with the cost of human time is like-- it's not even a comparison. Like, I can buy more tokens. I cannot buy another day for my life. (laughs) Yeah, yeah. Um, so to me, that makes zero sense. Um- The radical life extension people would disagree with you. (laughs)  Yes. I- I'll wait to be proven- (laughs) ... to be proven wrong. Um, the... I'm- I'm... Another thing that- that you- you- you- will probably very intuitively understand, I'm never running into, um, compression of w- of context windows. I never... None of the agents run by themselves in one instance for so long that I hit any type of limit. Interesting. That's cool. That's really cool. That's a big benefit. So you- you- you build a hierarchy that's big enough so that the atomic components of the hierarchy are done with their task, like you- you let- Very, very early. Yeah, yeah. Very early. Yeah. Ford- They have a- Ford would be proud to, like... You know, that was- (laughs) ... his- his- his big insight of how to build, uh, uh, automobiles right. Like, every single worker does, like, a incredibly stupid task that takes, like, five minutes to perform, and that's it. That's how they build an automobile. And you cannot fuck it up. It's, like, so- so obvious- Yeah. ... that you cannot fuck it up. Um, I... So, for example, one of the things that- that I do is, th- the agents typically are bad at correcting things. So, for example, one of the things that I- I gave him is- Mm-hmm. Once they went down the wrong path- ... it's insanely hard- Yeah, I know. ... for them to, like- Yeah, yeah. I think everyone- ... correct the course. ... who works with LLMs knows that. So- so- Once- once they are convinced that humans- Yeah. ... have, like, seven legs, they will just double down. (laughs) Forever. And- and- and make up papers- (laughs) ... scientific papers to prove it to you. They'll never go back and- (laughs) ... go, like, "Oh, I was mistaken. It's only two." (laughs)  Yeah. Um, so one of the things that I- that I do is, uh, I gave them tools to delegate. Say, for example, one agent wants to make a plan on how to implement whatever, right? Um, and it comes up with a plan, but it th- then it can delegate, uh, either the- the planning or the implementation to four different agents at the same time, with slightly, like, four different type of, like, whatever, object-oriented programming and functional, wha- whatever it might be. Yeah. And they only implement in, like, a disposable work tree. They implement the thing all the way to the end, knowing that it's disposable code- Yeah. ... and they just compare notes. Like, "How- Mm-hmm. ... did it go?" Okay. "Go in this route, how did it go?" Yeah. Then you delete that, and you only take the- the- the learnings. And then from that, you create an implementation plan. Okay, okay. So they do that- Yeah. ... all the fucking time. Like, they try something, which is kinda how we work as well. Like, you- Yeah. ... build a prototype. Yeah. You learn something. You delete it. You do it again. You learn something. You delete it, until you, "Okay, this is... Now, we understand the problem-" Yeah. "... in a much more- I mean, that's- ... nuanced way." ... that's also the point of, like, having, I don't know, like, 10 different research teams working on one thing, and they all do it in a slightly different way, and so on and so forth. And then you can compare. Yeah. And then you- you'll understand something... Uh, one thing I've- I've noticed is that when you work on something hard, you don't really understand it until you really try to work on the thing. Oh, sure. Yeah. Like, you can learn about Bitcoin all you want. Yeah. Until you actually write a wallet or whatever it might be- Yeah. ... you don't really understand it. Yeah. Um... Yeah, yeah. I know a guy who- he- he would call it participatory knowing. Can you- can you... You know who I'm thinking of? No. Can you tell me the name? No. Starts with a- a- a V. (laughs)  His- his first name is John. It's a... I- I don't know that... I- Hmm? ... I have no clue, um- I don't know. Oh, Vivik. (laughs)  It gets wor- it gets always worse. (laughs) It's one-way street. (laughs) Yeah. He has- he has seven legs, right? It's still John Vervaeke. (laughs)  I'm not sure. Maybe he grew some legs. (laughs)  But, yeah, no, that's obviously true. I mean, for other things- for other things, um... And I talked about this in the past. Like, to- to really understand Bitcoin, for example, you also really have to use it. Yeah. Like, just put 12 words in your head and- and- and cross a border, you know, those kind of things. And actually, like, actually do all the things. (laughs) There- there is no replacement. Actually lock yourself in a room and- There is no replacement for- Yeah. ... the on- on-hand learning. Otherwise- otherwise, you won't get it. All right. I- I think we'll have to turn around here. I just wanted to do one more ring around the rosie just to not stop the conversation short. Yes, you do. But, um, uh, so what else is there to talk about on the 10x side? Because we're gonna- we're gonna do a little break. And in, uh, two or two and a half hours from now, I'm gonna talk to you about, uh, I- I'm gonna ask you about all the other projects. Okay. But let's- let's bring- let's try to bring 10x to a close in the next, like, 10 minutes or so. So- so what's the- what's to stay now? What's something that you're still unhappy with- ... and what do I need to do to, to run it myself? Uh, (laughs) Right now I'm running it on, uh, on, on iPhone. It's like the most advanced application. (laughs)  So buy an iPhone. (laughs)  No. No, it's a- the... I, I also have like a... It also compiles into, into Mac. Uh, like a macOS proper- All right. ... it's a different client. Yeah. That's fine. Um- I run nostur on, on, on, on Mac. I don't have an iPhone, but, but, uh, nostur is a great client. Nostur is a great client. It's my, it's my go-to desktop client. I, I, I compared, I compared the code base of, um, how nostur implements Noster with the- Terrible names though, by the way. ... MCA safe- Noster with a U. It will- (laughs) It's like, it's just like moon with two U's. (laughs) It's all those terrible names. But anyway, great client. Well, the naming, the na- the naming podcast is a different podcast. (laughs) Oh, yeah. That's true. Yeah. That's true. (laughs)  All the venture capitalists, they really care about names. (laughs) All the, all the programmers actually don't. (laughs) It's just like pro- (laughs) ... cloud outputs, make up a name. Just whatever, put a U. (laughs) Whatever, whatever. Put a U, put two U's. (laughs) You might as well. (laughs) Someone shou- should fork it and make Noster with two U's. (laughs)  Just for nostalgic reasons. This is like the more premium version of that. (laughs) Exactly. (laughs) You put a paywall on something. (laughs) Put a shitcoin in. Exactly. Now it's the Solana. Great. (laughs)  So, okay. So I can actually install this on macOS? Yeah. On Mac, on macOS, I, I compile a binary that it's like you can download just the binary or you can compile it locally. All right. Whatever. And in terms of, of setup, I just... I, I would need to give it, um- A laptop, YOLO mode. ... my API, API keys of... Just, just gi- just say, "Here." (laughs)  "Do your thing." Does it, does it support OpenRouter, all those kind of things? Or... Yeah. It supports OpenRouter. Yeah. It supports, uh- Routester, PaperQ as well? Yeah. Yeah. Everything that, uh... All those are ChatGPT APIs, so, yeah, it supports... Olama, same thing with Olama. Yeah. It's just a ChatGPT. Yeah. Um, so- Can you run it on just local models as well? You can run it on just local models. I don't know. Yeah. I've never tried with, uh, like the coding with local models. Yeah. Unless, like, if you have a very beefy GPU- Yeah. ... you probably can do it. I, I don't have that kind of... (laughs) Yeah. That kind of hard work. Yeah. You spend all your money on your, on iPhone, like, I, I understand. (laughs)  No, no, no more money left for GPUs. (laughs) No, but it's interesting. So I bought, um... I was in San Francisco like a month ago, so I bought the new iPhone which has, um, the Apple Intelligence running locally. So it's cool because I, I can get it to, like, summarize the work that has been done in the day locally. Oh. And it can give me like a report of what happened. And then I have, like, the voice thing. So all the stuff that the 10x agents did- Yeah, yeah. ... in a day. It gives me like a report basically. Summarizes it all for you. Yeah, yeah. Okay. Yeah. Th- And so the, the, um, the agents have like, um, like a scheduling tool or it's cron basically, where they can schedule, for example, every five minutes or every once a day or once a week. Mm-hmm. And they can go and fetch all the conversations. Mm-hmm. All the, all the, all the threads. And they can send you like a weekly report of what was done in, across all the projects. Yeah. Because they also have a tool that allows them to see all the projects that the same person owns, and they can communicate across project boundaries. So you can have one agent that goes to every PM across all the projects and says, "What happened this week?" Okay. And then get a, get a summary. Yeah. Yeah, yeah. You, you, you, you re- you rebuild like a, a, a Google-like company. Yeah. (laughs)  Congratulations. And then, and then I'm gonna be like DAO on top. (laughs) Is data, is data availability, uh, ever an issue? Do you, do you r- run your own relay basically? It's just a relay. Yeah. But it's, I mean, it's, it's- Yeah. ... what? Like 100 megabytes. Yeah. (laughs) Yeah. I mean, it's just text, you know. Yeah. It's a... Not an i- uh, a non-issue. So it's not... The, the agents are not spamming events like crazy? No, no, no, no, no. You know. No, no, no. Okay. I mean, they produce- Yeah. ... the, like... All the, um... They stream events. Yeah. Um, but those are ephemeral events. Yeah. I see. Uh, but it's, it's, it's a non-issue. Yeah, yeah. Yeah. I see. I see. Cool. Now, what I like most about these ideas is, like, I noticed it myself. I, I wanted to actually write about it, but it's way easier to speak about it. (laughs) Is that, um, my development workflow changed. Like, it's, uh, to say that it changed would be unfair, because it changed so much, it's kind of indistinguishable to- (laughs) It's a different, it's a different thing that I do now. Like I, I used to be a developer a very long time ago, and, and now I, I am... I, I do something else. I, I basically speak to computers. But I really like it because, again, like, as a, a, you know, like a big fan of John Wrembeyki, I really think that- Who? (laughs) ... no one knows. No one knows. The, the issue is you can't pronounce the name. (laughs) That's kind of... He would be so big, like everyone would know i- if, if, if people would only be able to pronounce his name. (laughs) See? Naming. He, he should... Naming is the issue, yeah. The VC podcast has attracted- He's clearly not a venture capitalist guy. (laughs) But, uh, but, but anyway, like he, he, he says that most of our, like, uh, basically you need dialogue to solve the really hard problems. And, uh, my whole... E- every time now I'm trying to, um, build something new or fix something that's wrong, I immediately enter into a dialogue with the LLM. Yeah. Like, "What is something that we can do?" And, and all those kind of things. Oh my Lord. What? That's bad. It's fully booked out. Is that true? Oh. That's really bad. Well, then we'll have to do something else, I guess. (laughs)  Wow. Damn. We'll see. We'll see. We can just keep walking. We'll see. We'll see. No, we'll see. I'll, I'll, um... We'll just do a... Because maybe that's just for the, for the bath and not for the, for, for, for the song. But we'll see. But anyway, I, I really, I really think that's kind of a, a very different approach. Like, you immediately enter into a conversation and you imme- you kind of lead with questions and you kind of have this massive back and forth. And- Um, I think most people that have a really bad experience with LLMs, they are dead set on doing a thing in a certain way, and they can't budge from it. And then the thing won't do it in the way you want it to do it- It will never do it- ... and then it's like there's just conflict all the time. It will never do it in, in the way you thought- Yeah. ... it should be done. Yeah. But one, one of the things that I'm finding is that a lot of times, it comes up with a very decent, elegant- Yeah. ... solution that I- Yeah. ... really didn't think of. Exactly. Exactly. Like, I didn't come up with that idea. And, and that gets the job done, and it's like, you know, good enough for this thing, and so on, and, and that's it. And then you can also iterate from there and so on. But, um, yeah, I, I think that's kind of the new paradigm, is that it's- To, to- ... all of it is, like, uh, conversational and dialogical and so on. I, I- Also search in some sense, you know. Like, not only, not only development, not only coding and so on, and all those kind of things, but every, every LLM-driven process is like this. Yeah. Abso- absolutely. Uh, j- I, I, I think I, I said this before to, to you at some point, that to me, what kinda sent me down this route is that, during software engineering, uh, four, um, I, I heard so many people saying, "Oh, yeah. This is kinda useful, but it's so good that I'm a developer, and I can steer it in the right direction, and I know what it's doing." And I thought, "What if it's like Bitcoin and economist, where you knowing about the field is not helpful, it's hindering you?" Mm. "You're getting in your own way." Mm. "What if all I know about development is actually problematic?" Hm. "What if I should just let fucking go?" Yeah. Yeah. And then, and then I can- Yeah. F- ... start integrating- I- ... the things, you know. But w- I start with the, the supposition that, no, actually you need to learn from scratch, actually. Yeah, yeah. I, I, I think it's interesting now, especially on the Nostr side, there is lots of just non-developer people that thanks to Shakespeare and- Yeah. ... other things, um, really got into live coding, and they produce really cool stuff, and it's very different. Like they're obviously not developers. They, they, they, they are not gonna read the same line of code, and, and they're not gonna care, and all those kind of things. And that's perfectly fine. But they still... I, I read one post where it was like, it's, um, the person described of, of getting into a flow state while developing the app. And, um, that, that... it happened to me a couple of times as well, where you're just, like, so in the zone of c- trying to make this thing kind of... (laughs) Shape this thing how you envisioned it in some sense, and, and, like, you, you make micro-adjustments every, like, five seconds, and it's, it's almost like sculpting, you know? (laughs) Yeah, yeah, yeah, yeah. It's almost like sculpting the thing out of a block of marble, and, and that, that can be really... yeah, that can be really satisfying. But, but... and that, that's exactly the thing. I, I, I- And it, it doesn't have anything to do with development. It's a totally- Yeah. ... different thing. Yeah. It's a totally different thing. Yeah. But knowing when to stop, knowing in which direction- Oh, yeah. ... to take it- Yeah. ... that is the art. Like- Yeah. ... that is still the thing that you are bringing- Yeah. ... as a human, right? Like, like, that is... the crafting of the taste, like the, the, the knowing- Yeah. ... what is w- like, something is wrong- Yeah. ... or something is right. And being able to- Yeah. The, the, the taste part is so great, because I, I still listen to the, to the San Francisco, uh, AI people sometimes and so on, and like, every single conversation brings a research taste like 50 times. (laughs) You know? It's like... (laughs) It's like, "Ah, okay. Well, yeah. Okay." (laughs) (laughs) Do LLMs have research tastes? I'm not so sure, you know. Like, where... Now it's just about which, which research, research team has the best research taste, you know. (laughs) It's really funny. All right. Let's try our luck. Let's bring it to a close here. All right. And we'll see, we'll see what happens. If it actually recorded, you mean? Yeah, that too. (laughs) That too. Oh, man. But that was a solid 45 minutes, and I'll pick your brain some more later today.
+[00:00] Speaker 1: It's a great question to ask someone if, if, if they don't know what the question actually is.
+
+[00:04] Speaker 2: [laughs]
+
+[00:04] Speaker 1: Are you ready? [laughs] Just if you, if you meet someone, that would be good. [laughs] All right.
+
+[00:10] Speaker 2: But wait, we're recording, like, just half an hour?
+
+[00:13] Speaker 1: Yeah, let's see. And we, we're gonna ... It's gonna be, like, a 10-minute walk or so.
+
+[00:17] Speaker 2: Okay.
+
+[00:18] Speaker 1: We'll be fine. We'll be fine. Let's see. We'll do one before and one after.
+
+[00:21] Speaker 2: All right. [laughs]
+
+[00:22] Speaker 1: Let-
+
+[00:22] Speaker 2: And we'll compare notes. [laughs]
+
+[00:24] Speaker 1: Yeah. [laughs] We'll see how it goes.
+
+[00:27] Speaker 2: You should just have had these set up [laughs] and I would not even know. [laughs]
+
+[00:32] Speaker 1: [laughs]
+
+[00:32] Speaker 2: It was recording the entire time. [laughs]
+
+[00:36] Speaker 1: No, that's, that's how we roll.
+
+[00:37] Speaker 2: [laughs]
+
+[00:37] Speaker 1: I did this with, with Justin once. I didn't even release it yet.
+
+[00:41] Speaker 2: [laughs]
+
+[00:41] Speaker 1: He was talking about-
+
+[00:43] Speaker 2: Sync? [laughs]
+
+[00:44] Speaker 1: ... uh, browsers, rewriting all the browsers in sync or something.
+
+[00:46] Speaker 2: [laughs]
+
+[00:47] Speaker 1: No, but we'll see. [laughs] [radio music] Oh, great.
+
+[00:52] Speaker 2: Oh, it just pops in every single time.
+
+[00:53] Speaker 1: [laughs]
+
+[00:54] Speaker 2: Perfect.
+
+[00:55] Speaker 1: Yeah, there's also gonna be, you know, the ... You can't disable it. I haven't figured out how to disable it in this car.
+
+[01:01] Speaker 2: [laughs]
+
+[01:01] Speaker 1: The ... Every, every ... You'll see. Every five minutes it's gonna tell you what the traffic is like, you know? It's gonna build ... The radio pops on and it's gonna be like traffic, traffic stuff.
+
+[01:11] Speaker 2: [laughs] Well, it's important, bro.
+
+[01:12] Speaker 1: Yeah, it's very important.
+
+[01:13] Speaker 2: [laughs]
+
+[01:14] Speaker 1: All right. So you know-
+
+[01:16] Speaker 2: Oh, yeah, are we recording?
+
+[01:17] Speaker 1: We're recording.
+
+[01:18] Speaker 2: Oh. [laughs]
+
+[01:18] Speaker 1: Yeah, we've been recording for a while. [laughs]
+
+[01:20] Speaker 2: [laughs]
+
+[01:21] Speaker 1: You know the ... Uh, who was it? Goddammit. Some comedian. Was it Seinfeld?
+
+[01:26] Speaker 2: Yeah, Seinfeld. Yeah, yeah, yeah. Comedians in Cars.
+
+[01:28] Speaker 1: Yeah, Comedians in Cars.
+
+[01:28] Speaker 2: Yeah, yeah.
+
+[01:28] Speaker 1: Comedians in Cars Talking Coffee. So that-
+
+[01:30] Speaker 2: With, with Coiners in Cars
+
+[01:31] Speaker 1: ... so, so that's what that is now.
+
+[01:32] Speaker 2: [laughs]
+
+[01:32] Speaker 1: It's like, you know. [laughs]
+
+[01:36] Speaker 2: Well, this could be-
+
+[01:37] Speaker 1: People-
+
+[01:37] Speaker 2: ... unfunny comedians
+
+[01:37] Speaker 1: ... people that are laughing. Yeah, unfunny comedians. Exactly. I, I wouldn't call myself a comedian.
+
+[01:42] Speaker 2: Hey, no wind.
+
+[01:42] Speaker 1: Yeah, lo- ... No wind?
+
+[01:44] Speaker 2: No wind here.
+
+[01:45] Speaker 1: Oh, that's right.
+
+[01:46] Speaker 2: [laughs]
+
+[01:46] Speaker 1: That's an improvement.
+
+[01:47] Speaker 2: It's, uh ... It is a whole new setup.
+
+[01:49] Speaker 1: Yeah. It's, it's a whole-
+
+[01:50] Speaker 2: Although, the AC is on.
+
+[01:52] Speaker 1: The ... Yeah.
+
+[01:52] Speaker 2: So maybe that's, uh-
+
+[01:53] Speaker 1: [laughs] It's a little-
+
+[01:54] Speaker 2: ... blowing my hair
+
+[01:54] Speaker 1: ... bit of wind.
+
+[01:54] Speaker 2: [laughs]
+
+[01:54] Speaker 1: A little bit of wind.
+
+[01:56] Speaker 2: Yeah.
+
+[01:56] Speaker 1: There is ... But there's gonna be lots of background noise.
+
+[01:59] Speaker 2: [laughs]
+
+[01:59] Speaker 1: And yeah, we'll, we'll see how it goes. Um, you'll, you'll have to do all the talking bec- because I'll have to concentrate on driving.
+
+[02:06] Speaker 2: Okay.
+
+[02:06] Speaker 1: And I'm just gonna ask you, Pablo-
+
+[02:09] Speaker 2: [laughs]
+
+[02:10] Speaker 1: ... what did you do the last couple of months?
+
+[02:12] Speaker 2: [laughs]
+
+[02:12] Speaker 1: I have no idea. It's been a long while since I saw you, so just bring me up to speed with last six months or so.
+
+[02:18] Speaker 2: Okay. Last six months.
+
+[02:19] Speaker 1: Yeah.
+
+[02:19] Speaker 2: Uh-
+
+[02:19] Speaker 1: What did you do? What did you work on? What's new?
+
+[02:21] Speaker 2: Oh, Jesus, man. I rewrote 10x, like, about 100 times. [laughs]
+
+[02:27] Speaker 1: [laughs] Every single time in JavaScript? Or, like, what, what was the point of the rewrite?
+
+[02:30] Speaker 2: Yeah, yeah, I, I, I'm staying w- I'm staying with TypeScript. There is, like, a ... There is a very cool framework. You know, Vercel is paying for it, uh, so endless money.
+
+[02:40] Speaker 1: Ah, great.
+
+[02:41] Speaker 2: Uh, and it's fucking really good. It's really good. There is a lot of insane annoyances with regards to building for, like, Anthropic and OpenAI and Ollama and, you know, like, all the different providers. They all have different things. And Gemini, they all have very different subtleties and, um-
+
+[03:00] Speaker 1: So what kind of component w- would you need to rebuild for all of those? What part of 10x-
+
+[03:05] Speaker 2: Uh-
+
+[03:05] Speaker 1: ... do you need to specifically build?
+
+[03:06] Speaker 2: ... like, if I were to not use the, uh, the stuff that they ... the, the Vercel way?
+
+[03:10] Speaker 1: Yeah.
+
+[03:10] Speaker 2: Yeah. Um, I mean, basically you need to implement every single provider, um, in a way-
+
+[03:16] Speaker 1: Hmm. Okay. That makes sense
+
+[03:17] Speaker 2: ... that is, works for every single, like, the nuances. So for example, Gemini gives you the, um, the, the reasoning encrypted with a key that they have. [laughs]
+
+[03:28] Speaker 1: Yeah.
+
+[03:28] Speaker 2: You don't have it. Uh, so when you call it for a second run, for a second ... So the, the way agents work is the reason outlook, right? So it reasons that it will do something, it might or might not use a tool, and then you need to provide back the, the, the output from the tool, and then it goes and goes and goes un- until it decides that it's done. So on every single, um, e- every single turn, it will, for, for Gemini, it will give you back an encrypted payload that you must provide back in a certain fashion. So there is, like, a lot of subtleties. They always are fucking breaking all the time. They are complete ... Like, how, uh, Groq works is different than how Ollama works, how ChatGPT works, i- or OpenAI is different how ... Like, that stuff is a lot of fucking code-
+
+[04:18] Speaker 1: Yeah
+
+[04:19] Speaker 2: ... that is really fucking annoying to run. Um-
+
+[04:22] Speaker 1: And so they abstracted that all away.
+
+[04:24] Speaker 2: They abstract all that away, and there is a shitload of people that are finding all the little subtleties for all different providers. There's like, I don't know, like 200 different providers.
+
+[04:35] Speaker 1: Yeah.
+
+[04:35] Speaker 2: So it's insanely useful. It saves me a lot of work because I ... Before, I had this written within 10x for each one of them, but it was so painful.
+
+[04:45] Speaker 1: Yeah.
+
+[04:45] Speaker 2: Uh-
+
+[04:45] Speaker 1: But the, the underlying structure of 10x, the idea, so to speak, of 10x and the, the general structure didn't change too much, right?
+
+[04:52] Speaker 2: It, it changed. It actually changed a lot.
+
+[04:53] Speaker 1: Really? Okay.
+
+[04:54] Speaker 2: Uh, yeah. It, it's super interesting. I, I'm finding, like, this is the most interesting work that I've done probably ever in my career. It's, it's so fucking fascinating, all this stuff. Um, and one-
+
+[05:06] Speaker 1: So bring me up to speed because-
+
+[05:08] Speaker 2: So, so-
+
+[05:08] Speaker 1: ... it's still, it's still like a multi-agent-
+
+[05:10] Speaker 2: It i- yeah, yeah, 100%
+
+[05:11] Speaker 1: ... thing that kind of uses Nostr as their underlying base for the-
+
+[05:15] Speaker 2: Hun-
+
+[05:15] Speaker 1: ... agents to communicate, right?
+
+[05:16] Speaker 2: Every, every communication is-
+
+[05:17] Speaker 1: Yeah
+
+[05:17] Speaker 2: ... is a Nostr event, and ... Which gives you, like, a lot of really interesting benefits. It ... Like for example, you can trace what each agent did because they're each signing with their own pubkeys.
+
+[05:27] Speaker 1: Yeah.
+
+[05:28] Speaker 2: Um, but you can also trace all the thinking, um, as a tree because it's, it, you know, like, all the events are linking to the previous one. So you can trace perfectly at which point, um, within a tree, you can trace at which point you want to inject a different break on the fork of the communication.
+
+[05:44] Speaker 1: Yeah.
+
+[05:45] Speaker 2: It, it, it's actually kind of interesting because Cloud Code, I don't know if you use Cloud Code.
+
+[05:49] Speaker 1: Uh, I fl- use it a little bit, but, but not ... I'm not-
+
+[05:52] Speaker 2: Cloud Code-
+
+[05:52] Speaker 1: I wouldn't say, like, I'm super familiar with it.
+
+[05:54] Speaker 2: So Cloud Code I think is the most popular framework for developers. Um, it's insanely powerful, and they are kind of doing something similar with regards to, like, introducing this ability of going back up the tree of the conversation.
+
+[06:11] Speaker 1: Yeah, okay. Yeah.
+
+[06:12] Speaker 2: But it's insanely hard.
+
+[06:13] Speaker 1: Yeah.
+
+[06:13] Speaker 2: And it's insanely hard because they're trying to kind of, like, mimic a tree structure- But starting from the point where there are no guarantees of how everything is linked together.
+
+[06:23] Speaker 1: Mm.
+
+[06:24] Speaker 2: Um, so it, it feels, it feels like fake. [laughs] It feels like a, like a fake structure. Uh, when you wanna fork a conversation, for example, and go somewhere else, or you wanna refer to one point in time and address that point in time without forking the conversation-
+
+[06:39] Speaker 1: Mm
+
+[06:40] Speaker 2: ... there is no, like, an event I- a- an ID-
+
+[06:42] Speaker 1: Mm
+
+[06:42] Speaker 2: ... on the message.
+
+[06:43] Speaker 1: I see.
+
+[06:43] Speaker 2: You cannot say, "This ID was wrong in this way," you know?
+
+[06:47] Speaker 1: Mm. That's, that's actually an interesting kind of comparison. Just like Git, for example, made version control completely addressable, and it's also a tree and so on.
+
+[06:55] Speaker 2: I, I, I, I, exactly. Like, I think-
+
+[06:55] Speaker 1: That's the same idea, but just with using Nostr events for, like-
+
+[06:59] Speaker 2: Forking function
+
+[06:59] Speaker 1: ... agent conversations.
+
+[07:00] Speaker 2: Exactly.
+
+[07:00] Speaker 1: Yeah, yeah.
+
+[07:01] Speaker 2: Exactly.
+
+[07:01] Speaker 1: I see.
+
+[07:01] Speaker 2: Um-
+
+[07:02] Speaker 1: Yeah. And you can also link them, of course, and-
+
+[07:05] Speaker 2: Yeah, yeah, yeah
+
+[07:05] Speaker 1: ... provide the extend-
+
+[07:06] Speaker 2: Yeah, yeah
+
+[07:06] Speaker 1: ... exactly.
+
+[07:07] Speaker 2: Yeah, yeah, exactly.
+
+[07:07] Speaker 1: Yeah.
+
+[07:07] Speaker 2: Um-
+
+[07:08] Speaker 1: Interesting. Okay.
+
+[07:08] Speaker 2: Yeah. It's, it's, it's actually insanely fascinating. And one of the most interesting things that I realized is that when I started working on, in all this, the... My thinking was very, um, like, imperative programming style, where I was giving tools and giving frameworks to the agents to kinda, like, sandbox them.
+
+[07:29] Speaker 1: Yeah.
+
+[07:30] Speaker 2: And the more I work using 10X, the more I realize that all these sandboxes are limiting the power of the thing.
+
+[07:40] Speaker 1: [laughs]
+
+[07:40] Speaker 2: So me going and actually deleting, like, 80% of the code of a subsystem improves it. Like, all of a sudden, it's way simpler, like way, way, way simpler, and it performs much better.
+
+[07:53] Speaker 1: [laughs]
+
+[07:53] Speaker 2: So, like, for-
+
+[07:54] Speaker 1: You, you, you know, you know there was always this theoretical thought experiment of, like, once we have super intelligent AI, it would obviously be, you know, like, captured in a certain environment, and how would it break out? Like, it would bribe people-
+
+[08:09] Speaker 2: [laughs]
+
+[08:09] Speaker 1: ... and it would, like, you know. Like, like there's, there's all these fancy ways of, like, how an AI breaks out of its confinement, and you're telling me it's like, no, it's just, like, it's way more powerful if you just-
+
+[08:19] Speaker 2: [laughs]
+
+[08:19] Speaker 1: ... don't build the confinement in the first place.
+
+[08:21] Speaker 2: Yeah, totally. [laughs]
+
+[08:21] Speaker 1: [laughs]
+
+[08:22] Speaker 2: Just give them money. What the fuck could go wrong?
+
+[08:23] Speaker 1: Yeah, exactly. That would have been my next question, actually.
+
+[08:27] Speaker 2: [laughs]
+
+[08:27] Speaker 1: You still, because one of the components I really like is just every agent having their own wallet-
+
+[08:33] Speaker 2: Yeah
+
+[08:33] Speaker 1: ... and having, having cents to spend.
+
+[08:35] Speaker 2: Yeah.
+
+[08:35] Speaker 1: Uh, tell me more about that, that if, if there... Did anything change? If, if anything-
+
+[08:40] Speaker 2: I, I, I ca-
+
+[08:41] Speaker 1: ... how does this work now?
+
+[08:41] Speaker 2: I removed that.
+
+[08:42] Speaker 1: Okay.
+
+[08:43] Speaker 2: Uh, mainly because there was nothing for them to, to actually buy. Um, mostly because, you know, like, Lightning adoption [laughs] is, is not quite there. Um-
+
+[08:54] Speaker 1: Even with Router and Papercur, and-
+
+[08:57] Speaker 2: Yeah, but it-
+
+[08:57] Speaker 1: ... those things popping up?
+
+[08:58] Speaker 2: But, but, but, but, like, they can pay for tokens for sure, and, but I already give them basically limitless tokens. Um, that's one of the questions-
+
+[09:07] Speaker 1: So you're subsidizing all your agents.
+
+[09:10] Speaker 2: [laughs] It's, it's a, it's a commune.
+
+[09:12] Speaker 1: [laughs] Yeah, yeah.
+
+[09:15] Speaker 2: [laughs]
+
+[09:16] Speaker 1: But you're the first communist to, to remove all the walls.
+
+[09:22] Speaker 2: [laughs] Um, I, I think I'll, I'll, I'll add it at some point. I, I removed a bunch of things from, from the system to kinda, like, simplify it. I, I mean, basically it's just deleting code. Um, so, like, it's super interesting. One of the things is that when, um, when I first started, I thought, "Okay, what is kinda like an, an abstract, um, um, an ambiguous enough model for giving the agents?" Because one of the things is agents are constantly forgetting to do things.
+
+[09:53] Speaker 1: Yeah, yeah.
+
+[09:53] Speaker 2: That's, like, a running thing. You tell them, "Go do this thing," and they'll do, like, 10%, and they'll be, "Okay, I'm done." Uh, so just putting them in a loop makes it quite easy. They, they pick up, "Oh, I forgot this part. I put to do, to do here," or whatever, right? Um, then so to give it more structure, when I started, I gave them, like, phases, where the, the, the, like, the, the, the parent agent would be, I have these, these five phases, which is, like, whatever, research or, uh, yeah, I think it was research, planning-
+
+[10:29] Speaker 1: Yeah
+
+[10:29] Speaker 2: ... execution, uh, chores... No, uh, review, chores, and then, um, fuck, uh, learning, or there's another word. It's not learning. Uh, reflection, yeah, the reflection phase. And to me, that felt ambiguous enough that it could be used for non-software development stuff. Oh, it did turn on. [laughs]
+
+[10:53] Speaker 1: Yeah, I told you. [laughs]
+
+[10:55] Speaker 2: I thought you were kidding. [laughs] Um, the sun is fucking blinding me. [laughs] I don't know how you can drive.
+
+[11:02] Speaker 1: And you, you can't, you can't move that.
+
+[11:03] Speaker 2: No, I know. [laughs]
+
+[11:04] Speaker 1: So we have to-
+
+[11:05] Speaker 2: I, I, I reached to move it. [laughs]
+
+[11:07] Speaker 1: [laughs] No, you, you, you'll just have to stare into the light.
+
+[11:10] Speaker 2: [laughs]
+
+[11:10] Speaker 1: It's how it's gonna be.
+
+[11:11] Speaker 2: Just embrace it.
+
+[11:12] Speaker 1: Yeah.
+
+[11:12] Speaker 2: Like Trump. [laughs]
+
+[11:15] Speaker 1: [laughs] Maybe as an explanation, we have the, we have the microphones on the sun... What, what are tho- those called?
+
+[11:20] Speaker 2: On the sun cover things.
+
+[11:21] Speaker 1: Sun lids, sunscreens thingies. So you can't move them.
+
+[11:24] Speaker 2: [laughs]
+
+[11:24] Speaker 1: And we're mo- we- we're driving directly into the sun.
+
+[11:27] Speaker 2: [laughs]
+
+[11:28] Speaker 1: It's great. It's good stuff.
+
+[11:29] Speaker 2: [laughs] Um-
+
+[11:31] Speaker 1: So-
+
+[11:31] Speaker 2: Jesus
+
+[11:31] Speaker 1: ... so did you, you still have those kind of, uh, uh, phases, like-
+
+[11:36] Speaker 2: No, so-
+
+[11:36] Speaker 1: ... research phases and so on?
+
+[11:37] Speaker 2: So, so that's the interesting thing. I ended up removing that. Uh, I need the system... So what I did instead is I gave tools to, for each agent to define its own phases, which to me was, like, fucking mind-blowing because that meant that the agents can define what is their workflow, you know? Like-
+
+[11:58] Speaker 1: Mm
+
+[11:58] Speaker 2: ... a marketing head, for example, I have, like, marketing teams on the, on the, on the projects. The marketing head has maybe- ... um, reviewing, like reviewing the, or, or planning or whatever. I, I don't know about marketing, [laughs] but they're facing- [laughs]
+
+[12:13] Speaker 1: Whatever they do
+
+[12:14] Speaker 2: Whatever the fuck-
+
+[12:15] Speaker 1: It is like-
+
+[12:15] Speaker 2: ... marketing people do
+
+[12:16] Speaker 1: ... yeah, like-
+
+[12:16] Speaker 2: It's probably different
+
+[12:17] Speaker 1: ... dancing with pixels and, like, who knows?
+
+[12:20] Speaker 2: [laughs]
+
+[12:20] Speaker 1: [laughs] Coming up with words.
+
+[12:22] Speaker 2: [laughs] Um, it's probably different than what a, a writer would do, or what a, you know, whatever, like, a, an accountant would do.
+
+[12:30] Speaker 1: Yeah, yeah. I see.
+
+[12:31] Speaker 2: So that allows me to, for, for the, uh, the, like the department heads to have their own phases, which they define within the workflow that makes sense for that particular niche, and then that means that the, because each agent can have i- their own phases, that means that the work- the workflows are composable. So, like, the CEO agent can have one workflow. He doesn't need to know what the, whatever, the, the dir- the engineer director has, uh, workflow, what that workflow looks like. It just has to know I'm gonna delegate this task and something will happen, and I only care about the output.
+
+[13:10] Speaker 1: Yeah, and something hopefully comes back-
+
+[13:12] Speaker 2: That-
+
+[13:12] Speaker 1: ... that isn't, that isn't, like, absolute dog shit.
+
+[13:14] Speaker 2: Yeah, exactly.
+
+[13:14] Speaker 1: So just like in real life.
+
+[13:16] Speaker 2: Yeah, yeah. Totally.
+
+[13:17] Speaker 1: [laughs]
+
+[13:17] Speaker 2: Yeah, 100%, 100%. And, and there's a very good reason for that, which I think is the same reason why we humans do that, is that you cannot hold all that information in your own mind.
+
+[13:27] Speaker 1: Oh, wow. I know a guy, I know a guy who, who, who talked about that a lot, that basically predicted all that. I, I, I forgot his name, Pablo. Can you help me and pronounce his name for me?
+
+[13:37] Speaker 2: [laughs]
+
+[13:37] Speaker 1: Please?
+
+[13:37] Speaker 2: I cannot pronounce [laughs] his name.
+
+[13:39] Speaker 1: You know who I'm talking about.
+
+[13:40] Speaker 2: Okay, yeah.
+
+[13:41] Speaker 1: Yeah.
+
+[13:41] Speaker 2: It's John Barbic. [laughs]
+
+[13:46] Speaker 1: [laughs] Rings a bell. Rings a bell.
+
+[13:48] Speaker 2: It's something like that.
+
+[13:49] Speaker 1: Al- almost right. Almost right.
+
+[13:51] Speaker 2: [laughs]
+
+[13:51] Speaker 1: I'm sure, I'm sure if you, if you, if you scream it into ChatGPT, it could make sense of it.
+
+[13:56] Speaker 2: [laughs]
+
+[13:57] Speaker 1: It's John Vervaeke, of course. [laughs] It's not that hard.
+
+[14:00] Speaker 2: [laughs]
+
+[14:00] Speaker 1: Every time I hear you say his name, I crack up. It's like Vervaeke?
+
+[14:03] Speaker 2: But every single time I say it-
+
+[14:04] Speaker 1: Ver- Vervaeke, Vervaeke
+
+[14:05] Speaker 2: ... I say it differently. [laughs]
+
+[14:06] Speaker 1: Yeah, it's every... it's different every time. No, it's John Vervaeke. Yeah, he basically predicted all that. There's also, I mean, the, there is a reason why our brain is structured in the way it is and works in the way it is, and we have all these kind of heuristics and so on. It's like you can't, like, there, a single entity can't make sense of a whole organization, for example. It's too complex.
+
+[14:25] Speaker 2: Yeah, and, and-
+
+[14:25] Speaker 1: That's why you need to specialize, why you need to have these kind of tree structures, why you need to have certain heuristics, and why you need, for example, break it down to prices, break it down to profits, those kind of things.
+
+[14:35] Speaker 2: 100%.
+
+[14:36] Speaker 1: Yeah.
+
+[14:36] Speaker 2: 100%. And I think the interesting thing is that it's not only the si- a, a single entity, a single human or a single agent. It's even within the single, the, the single run, like a thought process.
+
+[14:47] Speaker 1: Oh, yeah. Sure.
+
+[14:48] Speaker 2: You cannot even understand-
+
+[14:49] Speaker 1: Sure
+
+[14:49] Speaker 2: ... the whole thing you're doing-
+
+[14:50] Speaker 1: Sure
+
+[14:50] Speaker 2: ... at the same time, right?
+
+[14:50] Speaker 1: Yeah.
+
+[14:51] Speaker 2: That's why you write, and then you go for a walk-
+
+[14:53] Speaker 1: Oh, yeah, yeah
+
+[14:53] Speaker 2: ... and then you edit, right?
+
+[14:54] Speaker 1: Yeah, yeah. That's also why interruptions are so devastating. Like, everyone who, who ever did any kind of mental work, in-depth mental work-
+
+[15:02] Speaker 2: Oh, shit. What is that?
+
+[15:03] Speaker 1: What is what?
+
+[15:03] Speaker 2: That is limestone. That is fucking amazing.
+
+[15:06] Speaker 1: Oh, there's lots of good climbing here.
+
+[15:07] Speaker 2: Oh, wow.
+
+[15:08] Speaker 1: Yeah, yeah, but that's, that's, that's not a... I don't think there's any routes there.
+
+[15:11] Speaker 2: No, no. It doesn't look like it, but that's amazing.
+
+[15:14] Speaker 1: [laughs]
+
+[15:14] Speaker 2: Wow.
+
+[15:15] Speaker 1: I'm glad, I'm glad you're paying attention to the-
+
+[15:16] Speaker 2: [laughs]
+
+[15:16] Speaker 1: ... to the, to the right things. [laughs]
+
+[15:20] Speaker 2: [laughs] Um-
+
+[15:21] Speaker 1: No, but it's also, like, that's, uh, that's, that's also why kind of everyone knows that if you're really concentrating on something, if someone interrupts you, it's, like, devastating.
+
+[15:30] Speaker 2: Oh, yeah.
+
+[15:30] Speaker 1: Like, like, like, the, the last four hours are gone, you know?
+
+[15:34] Speaker 2: Yeah, yeah. Totally. Totally.
+
+[15:34] Speaker 1: You can't, you can't back, go back into it, and it's, it's literally because you can't hold it all in your head. You have to be in the flow state, and then certain things happen and so on, and you can't, you can't kind of pause and press play again and all those kind of things.
+
+[15:47] Speaker 2: Yeah, totally. Totally. But, but, but even when you're going through a session like that of deep work, and then you come back the day after or you go for whatever-
+
+[15:56] Speaker 1: Oh, yeah, yeah
+
+[15:57] Speaker 2: ... for a sauna, and you come back-
+
+[15:57] Speaker 1: Oh, sure, sure
+
+[15:58] Speaker 2: ... you come, you come back with a fresh mind.
+
+[16:00] Speaker 1: Sure.
+
+[16:00] Speaker 2: And you'll see s- things that you didn't see before.
+
+[16:02] Speaker 1: Sure.
+
+[16:02] Speaker 2: It's the same person.
+
+[16:03] Speaker 1: Yeah, I am.
+
+[16:03] Speaker 2: But you're not actually the same person.
+
+[16:04] Speaker 1: Oh, sure. I mean, that's why all the cognitive scientists know, know all that. That's why, that's why people have whiteboards in their showers, because shower thoughts are a real thing, where you actually relax and you're in a different state of mind.
+
+[16:14] Speaker 2: Yeah.
+
+[16:15] Speaker 1: And that's also, again, like Vervaeke talks about that a lot. It's also in groups, for example, something like s- brainstorming actually works, and there is such a thing like team spirit, and if you get the right people together and you just talk about the thing for, like, two hours, something will come up that each individual it would've been impossible for each-
+
+[16:34] Speaker 2: In terms of-
+
+[16:34] Speaker 1: ... individual to come up with
+
+[16:35] Speaker 2: ... I mean, sovereign engineering.
+
+[16:36] Speaker 1: Yeah, yeah. I mean, that's-
+
+[16:37] Speaker 2: That's-
+
+[16:37] Speaker 1: ... that's kind of the, the main idea behind sovereign engineering, to kind of produce this effect in some sense, um, as, as best as we can. But what I think is interesting, and, and I, I never use 10x. I really have to, to... I actually met people who, who, who installed it and run it. Can you believe it?
+
+[16:52] Speaker 2: [laughs]
+
+[16:52] Speaker 1: I was mind-blown. I was like, "Wow." [laughs]
+
+[16:54] Speaker 2: [laughs]
+
+[16:54] Speaker 1: It's like I thought it was only Pablo-
+
+[16:56] Speaker 2: [laughs]
+
+[16:56] Speaker 1: ... but there's other people that actually managed to run it and use it.
+
+[16:59] Speaker 2: [laughs]
+
+[16:59] Speaker 1: And I even, I, I saw... You're done with the rewrite now, right? Like-
+
+[17:02] Speaker 2: Yeah, yeah
+
+[17:02] Speaker 1: ... I, I saw you just, you just released a version. I saw it on the, the NostrCompass, which is basically-
+
+[17:07] Speaker 2: Oh, yeah, yeah
+
+[17:07] Speaker 1: ... the new, the new Nostr Recap, I guess.
+
+[17:09] Speaker 2: Yeah. [laughs]
+
+[17:10] Speaker 1: [laughs] It's really cool.
+
+[17:11] Speaker 2: The new, uh, Nostr Report.
+
+[17:11] Speaker 1: Yeah. Yeah. It's, it's really, really good. It's really cool.
+
+[17:14] Speaker 2: [laughs]
+
+[17:14] Speaker 1: And so, okay, so you removed the wallets, you rewrote all of it [laughs] multiple times.
+
+[17:20] Speaker 2: Oh, many times.
+
+[17:21] Speaker 1: You-
+
+[17:21] Speaker 2: So many times
+
+[17:21] Speaker 1: ... deleted 90% of the code that the agents wrote.
+
+[17:24] Speaker 2: Basically, yes.
+
+[17:24] Speaker 1: So, which is what you have to do. I mean, they just [laughs] write way too much. [laughs]
+
+[17:28] Speaker 2: [laughs]
+
+[17:29] Speaker 1: And would you say you're happy with it now, or, like, what's the-
+
+[17:31] Speaker 2: I, I'm insanely happy.
+
+[17:32] Speaker 1: Yeah?
+
+[17:32] Speaker 2: And one thing that I've noticed is that for the past month, all the work that I'm doing, it, it... like, I have to really think about what I'm doing. Like-
+
+[17:42] Speaker 1: Okay
+
+[17:42] Speaker 2: ... every single thing that pops up is something that I have to go for a walk and think-
+
+[17:48] Speaker 1: Ah, so-
+
+[17:48] Speaker 2: ... because I'm really not sure
+
+[17:48] Speaker 1: ... if something pops up, it's a hard problem.
+
+[17:50] Speaker 2: It is an-
+
+[17:51] Speaker 1: That's what you mean
+
+[17:51] Speaker 2: ... insanely hard problem.
+
+[17:52] Speaker 1: Okay. And the re- the rest, the, the, the, the, the grunt-
+
+[17:55] Speaker 2: All the rest of the stuff-
+
+[17:55] Speaker 1: ... the grunt work c- is-
+
+[17:56] Speaker 2: It, it's just goes-
+
+[17:57] Speaker 1: ... done by the agents. Interesting.
+
+[17:58] Speaker 2: So, so for example-
+
+[17:59] Speaker 1: Nice
+
+[17:59] Speaker 2: ... one of the things that I did, um, I made one project. So everything within 10x is organized-
+
+[18:04] Speaker 1: Oh
+
+[18:05] Speaker 2: ... in, in project buckets, right?
+
+[18:06] Speaker 1: Mm-hmm.
+
+[18:07] Speaker 2: Everything, single project has one agent. Uh, by default I always only put the HR agent, and then I go into a conversation with the HR agent-
+
+[18:16] Speaker 1: So you're t- you're, you're a true C-level executive and you're just talking with HR?
+
+[18:19] Speaker 2: I-
+
+[18:20] Speaker 1: Is that what you're telling me?
+
+[18:21] Speaker 2: [laughs]
+
+[18:21] Speaker 1: Oh, my God, Pablo. Oh, my God.
+
+[18:23] Speaker 2: No, no, no. Here's the thing.
+
+[18:24] Speaker 1: Oh, my God.
+
+[18:25] Speaker 2: So for, for the new version that I'm doing now, um-
+
+[18:28] Speaker 1: Get out of the car right now
+
+[18:29] Speaker 2: [laughs]
+
+[18:30] Speaker 1: That's terrible.
+
+[18:31] Speaker 2: It's-
+
+[18:31] Speaker 1: Oh
+
+[18:31] Speaker 2: ... beneath my life. [laughs]
+
+[18:32] Speaker 1: Exactly, exactly. Oh, my God.
+
+[18:36] Speaker 2: [laughs]
+
+[18:36] Speaker 1: It's so bad. [laughs]
+
+[18:40] Speaker 2: Um, for, for each project I now create... For example, I, I rewrote OLAS, um, and I build the OLAS management project which only has CEO, CTO, and at some point it will have, like, a CMO or shit like that. So, like, you know, chief level, they cannot see the code. Like, the code is so far removed, like literally they cannot-
+
+[19:05] Speaker 1: Just like in the real world [laughs]
+
+[19:06] Speaker 2: Just like in the real world.
+
+[19:06] Speaker 1: They wouldn't be able to make sense of it.
+
+[19:09] Speaker 2: [laughs]
+
+[19:09] Speaker 1: And that's a great thing. [laughs]
+
+[19:12] Speaker 2: [laughs]
+
+[19:12] Speaker 1: No C-level executive would... needs to, uh, get, get their hands dirty with actual code.
+
+[19:17] Speaker 2: [laughs]
+
+[19:18] Speaker 1: Anything like it. Oh, my.
+
+[19:20] Speaker 2: Um, and then I have the OLAS iOS project, and then a different OLAS Android project, and then a different OLAS web project. Each one of them is using, uh, an, an Oster library that is native.
+
+[19:33] Speaker 1: Okay.
+
+[19:33] Speaker 2: So I wrote NDK Swift, which is a port of NDK that I wrote all by code.
+
+[19:40] Speaker 1: Okay.
+
+[19:40] Speaker 2: It works insanely well.
+
+[19:42] Speaker 1: Interesting. Yeah.
+
+[19:43] Speaker 2: It is so fucking cool.
+
+[19:44] Speaker 1: Yeah, I think that's very viable.
+
+[19:45] Speaker 2: Because how it go-
+
+[19:45] Speaker 1: That's very viable.
+
+[19:46] Speaker 2: It-
+
+[19:46] Speaker 1: Like, there, there is existing code that a human wrote-
+
+[19:49] Speaker 2: I-
+
+[19:49] Speaker 1: ... translated to another language
+
+[19:49] Speaker 2: ... translate it.
+
+[19:50] Speaker 1: Yeah.
+
+[19:50] Speaker 2: There are insane amount of tests.
+
+[19:52] Speaker 1: Yeah, yeah, yeah.
+
+[19:52] Speaker 2: So you can, you can validate what-
+
+[19:54] Speaker 1: Yeah
+
+[19:54] Speaker 2: ... actually works, what doesn't.
+
+[19:56] Speaker 1: Yeah.
+
+[19:56] Speaker 2: You can validate, okay, how does the outputs out-
+
+[19:57] Speaker 1: Did you look at it? Did you look at the tests or-
+
+[19:59] Speaker 2: I didn't lo- I, I looked at, I look at the results of the test, and I actually built out a bunch of applications and they work insanely fucking well.
+
+[20:06] Speaker 1: [laughs]
+
+[20:07] Speaker 2: I actually, NDK-
+
+[20:07] Speaker 1: Maybe, maybe take a glance at the tests because it's just, like, you know-
+
+[20:10] Speaker 2: No, no, no, like I-
+
+[20:12] Speaker 1: ... makes tests pass through-
+
+[20:12] Speaker 2: I, I, I test by using the application
+
+[20:13] Speaker 1: Okay, okay, fair. [laughs]
+
+[20:15] Speaker 2: And everything loads. It does the array, the, the, the right amount of connections. It does compiling of requests in this, in the right way. It does event publishing in the right way-
+
+[20:25] Speaker 1: Oh, shit
+
+[20:25] Speaker 2: ... to the right places.
+
+[20:27] Speaker 1: Wait, I disconnected.
+
+[20:29] Speaker 2: [laughs]
+
+[20:29] Speaker 1: Oh, my God. Does it still work? No one knows. Test test one two.
+
+[20:34] Speaker 2: Test test one two. Okay.
+
+[20:38] Speaker 1: Oh, but they record locally, right? I think, I think they, they do, but it would be such a shame because then I would have to do things manually, and I really don't want-
+
+[20:44] Speaker 2: Which we'll never happen. [laughs]
+
+[20:45] Speaker 1: I really don't want to. So I just disconnected the thing for a couple seconds. Uh, yeah, we'll see.
+
+[20:53] Speaker 2: [laughs]
+
+[20:53] Speaker 1: We'll see. We'll see.
+
+[20:54] Speaker 2: We'll be surprised.
+
+[20:57] Speaker 1: We'll see. All right. I would say actually put on a jacket because-
+
+[21:05] Speaker 2: Yeah
+
+[21:05] Speaker 1: ... it's gonna be, like-
+
+[21:06] Speaker 2: Yeah, yeah
+
+[21:06] Speaker 1: ... 10, 15 minutes or so. But we'll come back to the, to the, to the native stuff.
+
+[21:14] Speaker 2: It, it is so fucking interesting be- because I think all the, uh, multi-platform things are make, no longer make any sense whatsoever. Like, they only made sense-
+
+[21:24] Speaker 1: Hmm. Because, because it's, it's, it's actually... The only, the only reason for doing multi-platform stuff is... Wait, I, I can put this on, on here.
+
+[21:30] Speaker 2: Oh, thank you. Yes. That'll be great.
+
+[21:32] Speaker 1: The, the, the only reason for the multi-platform stuff is actually to m- like save on developer hours, basically.
+
+[21:39] Speaker 2: It's only, only for economic reasons.
+
+[21:40] Speaker 1: Yeah, yeah.
+
+[21:40] Speaker 2: But it's always a compromise.
+
+[21:42] Speaker 1: Yeah.
+
+[21:42] Speaker 2: Because even the experience of a, of an iOS application must be different-
+
+[21:46] Speaker 1: Yeah, yeah
+
+[21:46] Speaker 2: ... than an Android application.
+
+[21:48] Speaker 1: Yeah, yeah.
+
+[21:48] Speaker 2: It's not the same app.
+
+[21:48] Speaker 1: That's why, that's why the cross-platform stuff always kind of feels a little wonky.
+
+[21:51] Speaker 2: It feels... Yeah, it feels... Yeah, exactly. Exactly. And, and when you can afford it-
+
+[21:55] Speaker 1: Yeah
+
+[21:56] Speaker 2: ... you see that teams prefer to have three different code bases.
+
+[21:59] Speaker 1: Yeah, sure.
+
+[21:59] Speaker 2: Three different apps.
+
+[22:00] Speaker 1: Yeah.
+
+[22:01] Speaker 2: Um, and I think stuff like React Native or Flutter or all these things, they only make sense within that paradigm when you're actually writing code.
+
+[22:10] Speaker 1: Yeah.
+
+[22:10] Speaker 2: But if you're just programming in English, makes no sense.
+
+[22:13] Speaker 1: Programming in English. [laughs]
+
+[22:14] Speaker 2: It, it, it-
+
+[22:14] Speaker 1: Did you see there was a big rant that went viral on Twitter by a programmer that basically is like, "I'm just... I'm, I'm sitting in front of the computer for eight to 10 hours just typing English into a text box"?
+
+[22:26] Speaker 2: 100%. I, yeah, I searched-
+
+[22:28] Speaker 1: And he hates it, and he kind of-
+
+[22:29] Speaker 2: Uh, I think FSF sent, sent it to me today.
+
+[22:32] Speaker 1: [laughs]
+
+[22:32] Speaker 2: Uh, he sent me something. I think that that was the one. But, um, a- actually, I, I completely agree. I... Whene- whenever I use, like, Alt Code or, or, um, the, the anti-gravity thing or any of these, the, the developer experience is, like, took a step back by 50 years. It's, it's fucking horrible because you're basically yelling to someone that is lying to you-
+
+[22:56] Speaker 1: Yeah
+
+[22:56] Speaker 2: ... that, that will take all the fucking shortcuts.
+
+[22:58] Speaker 1: Yeah, yeah. You, you yourself are not an engineer anymore, which is actually... Coding itself is a beautiful thing.
+
+[23:04] Speaker 2: Yeah.
+
+[23:04] Speaker 1: You have a hard problem, you're, you're smashing your head against it, and it's actually really joyful once you figure it out and you make it work and so on. All that's gone. [laughs]
+
+[23:13] Speaker 2: All-
+
+[23:13] Speaker 1: All that's gone, and now-
+
+[23:15] Speaker 2: And, and replaced for screaming into someone that is lying to you-
+
+[23:19] Speaker 1: Yeah, yeah, yeah
+
+[23:19] Speaker 2: ... that is for the most part incompetent.
+
+[23:21] Speaker 1: Yeah. I mean, I mean, you're talking like a real C-level executive now.
+
+[23:25] Speaker 2: [laughs] I tell you.
+
+[23:26] Speaker 1: Yeah.
+
+[23:27] Speaker 2: I, I've changed. [laughs]
+
+[23:28] Speaker 1: Yeah. That's what it is. That's what it is. All your minions, they're all stupid, they're all lying to you. They all think they're underpaid.
+
+[23:35] Speaker 2: [laughs] They all want to unionize.
+
+[23:37] Speaker 1: Yeah, exactly. Exactly. Just wait. This is gonna happen.
+
+[23:41] Speaker 2: [laughs]
+
+[23:41] Speaker 1: Ju- just wait. But yeah, it's, it's a different, it's a different job, I would say.
+
+[23:46] Speaker 2: It is a completely different job.
+
+[23:48] Speaker 1: Yeah, yeah.
+
+[23:48] Speaker 2: And, and the experience, I think the experience is right now is as bad. Like, being a developer right now-
+
+[23:54] Speaker 1: Yeah
+
+[23:54] Speaker 2: ... is as bad as it's been, at least in our lifetimes.
+
+[23:59] Speaker 1: Yeah. I think, but again, I think it's because it's a different thing and, and we're in this transition period, and, and-
+
+[24:04] Speaker 2: Yes
+
+[24:04] Speaker 1: ... because what, what was part of this rant was also kind of, you know- ... crank out the insane amount of slop just to, to hit the insane deadlines, like those kind of things. And I think that the industry is trying to adjust and now, ah, everything is super easy, everything can be done super, super quickly.
+
+[24:21] Speaker 2: Yeah.
+
+[24:21] Speaker 1: Which is of course not the case.
+
+[24:22] Speaker 2: No, no.
+
+[24:22] Speaker 1: You can't produce slop super quickly. And that's kind of-
+
+[24:26] Speaker 2: You can produce 100,000 lines of code-
+
+[24:28] Speaker 1: Yeah
+
+[24:28] Speaker 2: ... that is repeating-
+
+[24:29] Speaker 1: Yeah
+
+[24:29] Speaker 2: ... the same thing over and over.
+
+[24:30] Speaker 1: And, and that's kind of like, I, I, I wanna, I wanna point this out, like that's, that, that's why vibe coding has been a concept for Sovereign Engineering because all we wanna do-
+
+[24:40] Speaker 2: [laughs]
+
+[24:40] Speaker 1: ... is kind of prototype.
+
+[24:40] Speaker 2: It's that part. [laughs]
+
+[24:42] Speaker 1: All we wanna do is kind of-
+
+[24:43] Speaker 2: [laughs]
+
+[24:44] Speaker 1: ... more or less play around with ideas and build, like, almost like throwaway prototypes in some sense, where it's like, does this work? Like, just build enough to validate the idea.
+
+[24:53] Speaker 2: Yeah.
+
+[24:53] Speaker 1: And if the idea works, then pursue it properly. And if it doesn't work, there is nothing lost.
+
+[24:58] Speaker 2: Yeah.
+
+[24:58] Speaker 1: Like you, you, you wasted maybe like two afternoons or something.
+
+[25:01] Speaker 2: Yeah. Yeah, yeah.
+
+[25:02] Speaker 1: And, and, uh, but like in the software industry, like, like actual software engineering is a different discipline. I, I think that's also why vibe coding emerged as a term and, and stuck, because it is a different thing. It is-
+
+[25:16] Speaker 2: It is, it is a different thing
+
+[25:17] Speaker 1: ... it is distinctly a different thing.
+
+[25:18] Speaker 2: It is a, it is a different... I think the, the, the it's a toy perception is what's gonna change massively. Like writing NDK-
+
+[25:27] Speaker 1: Oh, I think it already changed
+
+[25:29] Speaker 2: ... it took me, it-
+
+[25:29] Speaker 1: For real- for really good people it already changed.
+
+[25:31] Speaker 2: Yeah. Yeah, I, I-
+
+[25:32] Speaker 1: For people that lean into it.
+
+[25:34] Speaker 2: I th- I think so. But I think very, very few people actually do vibe coding in the, in the right way. Um, I think a lot of people are still in the, in, in the jail of-
+
+[25:48] Speaker 1: Yeah, yeah
+
+[25:48] Speaker 2: ... looking at the code or telling now the specification must go like this and do this and do it this way and do it that way. Um, and, and I think that doesn't make any sense anymore.
+
+[25:58] Speaker 1: Yeah.
+
+[25:59] Speaker 2: And, uh, to me, the fact that it, it was able to build NDK Swift, and it's, and a fucking amazing library, it works insanely well. It does the outbox compilation, like all that stuff that is so fucking hard to do right.
+
+[26:14] Speaker 1: Yeah.
+
+[26:14] Speaker 2: So hard.
+
+[26:16] Speaker 1: Huh.
+
+[26:16] Speaker 2: And it just does it. And then I rebuild the same thing in Kotlin.
+
+[26:20] Speaker 1: Yeah.
+
+[26:21] Speaker 2: Haven't opened the code-
+
+[26:23] Speaker 1: [laughs]
+
+[26:23] Speaker 2: ... a single time.
+
+[26:25] Speaker 1: [laughs]
+
+[26:26] Speaker 2: And I built applications using it.
+
+[26:27] Speaker 1: It just works, yeah.
+
+[26:28] Speaker 2: And the applications just fucking works.
+
+[26:30] Speaker 1: Yeah. Interesting.
+
+[26:30] Speaker 2: The, the... So for example, you publish an event. They are, both of them are integrated with, uh, North Star DB-
+
+[26:36] Speaker 1: Yeah
+
+[26:36] Speaker 2: ... like wheels.
+
+[26:36] Speaker 1: Yeah.
+
+[26:37] Speaker 2: As the, as the cache adapter.
+
+[26:39] Speaker 1: Yeah.
+
+[26:39] Speaker 2: Um, it does negentropy syncing. It does offline publishing.
+
+[26:45] Speaker 1: Yeah.
+
+[26:46] Speaker 2: When you, when you connect, when the, the device goes back online, it does all the publishing of all the events to the right relays. It remembers which relays didn't, was it not able to publish to. It does all that stuff, and it just works.
+
+[26:58] Speaker 1: Nice. Nice.
+
+[26:59] Speaker 2: NIP 60 support, like all the things, man. Everything. I, [laughs] I'm so fucking impressed by the fact that after, I don't know, it probably took like maybe two days of the thing running-
+
+[27:10] Speaker 1: Nice
+
+[27:11] Speaker 2: ... uninterrupted-
+
+[27:12] Speaker 1: Nice
+
+[27:12] Speaker 2: ... of the thing running and running and running and running and running and running and running. And it produces that thing, and then it-
+
+[27:17] Speaker 1: So, uh-
+
+[27:17] Speaker 2: ... creates application, and it tests the application. Like it actually launches the iOS simulator.
+
+[27:22] Speaker 1: But-
+
+[27:22] Speaker 2: It clicks around.
+
+[27:23] Speaker 1: Yeah.
+
+[27:24] Speaker 2: And it checks, it refreshes, it checks what subscriptions did it create. Like all that stuff.
+
+[27:29] Speaker 1: But the f- the fact that you... I just wanna, I just wanna reflect on that, kind of. The fact that you were able to build a system to, that you were able to build something that runs for two days straight, like spawns multiple agents, all these things, and brings something back, like it, it doesn't go off the track and it doesn't go into slop land, like that's amazing. That's, that's quite the feat. [laughs]
+
+[27:48] Speaker 2: It is, it is absolutely mind-blowing. So one of the things that it has, because the agents themselves, like that's, to me, that's the interesting thing, is that each agent doesn't need to be super smart. Each agent, they still go off the rails-
+
+[28:01] Speaker 1: Oh, yeah
+
+[28:01] Speaker 2: ... instantly.
+
+[28:02] Speaker 1: Yeah.
+
+[28:03] Speaker 2: It's just, w- so when, when an agent delegates to another agent, that agent that delegated knows what it wants back.
+
+[28:10] Speaker 1: Yeah.
+
+[28:10] Speaker 2: Doesn't know how to get there.
+
+[28:11] Speaker 1: I mean, that's, that's, that's similar, like how the image generation things work. They, they're all a- adversarial in nature.
+
+[28:16] Speaker 2: Right.
+
+[28:17] Speaker 1: Where you have like, uh, one step is like, it's basically something that does categorization really well and will tell the generator, like, does this look like a face, yes or no?
+
+[28:28] Speaker 2: Right.
+
+[28:28] Speaker 1: Basically, or whatever. And then it just goes back and forth forever. [laughs] And, and, and, uh, it will only stop once the categorization part is happening.
+
+[28:37] Speaker 2: Right. Right.
+
+[28:38] Speaker 1: And go, will, will come back with, "Yes, that's actually a beautiful face. Well done." [laughs] It's just like, you know, intern is C-level executive, right? [laughs]
+
+[28:46] Speaker 2: [laughs] So one of the things is that it's, it's able to, um, when it does a delegation, it has the, like the tool itself, it allows us to capture, to listen to the streams of events that the-
+
+[28:59] Speaker 1: Yeah
+
+[28:59] Speaker 2: ... agent it delegated to, it published.
+
+[29:00] Speaker 1: Yeah.
+
+[29:01] Speaker 2: So it can say, "I'm going to delegate," and after five turns of the agent, like thinking, it will capture the North Star events and collapse them and see, okay, does this make sense or, or is the agent going off, uh, off the rails?
+
+[29:14] Speaker 1: Yeah.
+
+[29:15] Speaker 2: And every 5 or 10 or whatever amount of messages it publishes, um, it goes back into the agent. The other guy keeps on running while the agent that delegated sa- says, "Is this okay? Or are we going off course?"
+
+[29:29] Speaker 1: That's amazing.
+
+[29:29] Speaker 2: Or are we adding like a-
+
+[29:30] Speaker 1: Do you still, do you still have the confidence score and those kind of things?
+
+[29:32] Speaker 2: Yes. Yes.
+
+[29:33] Speaker 1: Yeah.
+
+[29:33] Speaker 2: Yes, that's, all that stuff is-
+
+[29:34] Speaker 1: Yeah
+
+[29:34] Speaker 2: ... absolutely fundamental.
+
+[29:36] Speaker 1: Yeah.
+
+[29:36] Speaker 2: What I'm noticing is that there are a few things that are fundamental. Most of it is not required. Like, like, again, so for example, the faces, I, I removed it, uh, like three days ago.
+
+[29:48] Speaker 1: Mm. Yeah.
+
+[29:48] Speaker 2: It's super interesting because now I'm on like on vacation.
+
+[29:51] Speaker 1: Mm-hmm.
+
+[29:52] Speaker 2: The agent has been running the entire time.
+
+[29:54] Speaker 1: [laughs] How much-
+
+[29:55] Speaker 2: And-
+
+[29:55] Speaker 1: How much money do you burn on that?
+
+[29:57] Speaker 2: Uh, s- on, on 700 a month.
+
+[30:00] Speaker 1: Okay. Is that-
+
+[30:00] Speaker 2: Which is fucking nothing when you think about it.
+
+[30:02] Speaker 1: I mean, compared to, like you're, you're probably replace-
+
+[30:04] Speaker 2: Compared to-
+
+[30:05] Speaker 1: ... replacing like two or three easily development teams
+
+[30:06] Speaker 2: ... I'm replacing like fucking 30 people.
+
+[30:08] Speaker 1: Yeah.
+
+[30:09] Speaker 2: It's insane.
+
+[30:10] Speaker 1: Yeah.
+
+[30:11] Speaker 2: But- The, these days that I'm, like, not, like, on so much and looking what they're doing, [laughs] they- they've done, like, fucking amazing work.
+
+[30:19] Speaker 1: Yeah.
+
+[30:20] Speaker 2: It is so fucking mind-blowing. But the-
+
+[30:23] Speaker 1: But that's the... That's summed up to kind of all the subscriptions that you have on all the different models and so on, sort of thing, right?
+
+[30:28] Speaker 2: Yeah, yeah. That, yeah.
+
+[30:29] Speaker 1: Yeah. Okay
+
+[30:29] Speaker 2: It's all, it's all... So I have two Cloud Code subscriptions. Um-
+
+[30:33] Speaker 1: Yeah, so this is still subsidized. That's k- kind of the core of my question.
+
+[30:35] Speaker 2: Uh, that's still, that's still subsidized.
+
+[30:36] Speaker 1: Okay.
+
+[30:36] Speaker 2: But-
+
+[30:37] Speaker 1: Yeah
+
+[30:38] Speaker 2: ... to be honest, um, even at API, if I were paying for API calls full price-
+
+[30:45] Speaker 1: Yeah, it would still be cheaper than you would ... yeah
+
+[30:46] Speaker 2: ... it still would be cheaper than hiring the amount of... And I'm also, like, just playing, you know?
+
+[30:50] Speaker 1: And we're, we, we, we already established that this is like a, a communist undertaking, so we're-
+
+[30:54] Speaker 2: Exactly. [laughs]
+
+[30:54] Speaker 1: ... perfectly fine with subsidies. [laughs]
+
+[30:57] Speaker 2: [laughs]
+
+[31:00] Speaker 1: All right.
+
+[31:01] Speaker 2: But, uh, to me, to me that's one of the things, is I'm, I'm running on Opus, which is, like, the, the most-
+
+[31:07] Speaker 1: Yeah
+
+[31:07] Speaker 2: ... expensive one.
+
+[31:08] Speaker 1: Yeah.
+
+[31:08] Speaker 2: Like, all the time.
+
+[31:08] Speaker 1: Yeah.
+
+[31:09] Speaker 2: Constantly Opus. Like, Opus only.
+
+[31:10] Speaker 1: Yeah. [laughs]
+
+[31:11] Speaker 2: Um, [laughs] only Opus. Um, and I'm not optimizing for, like, token usage. I, like, I, I think it's... Comparing the cost of tokens with the cost of human time i- is, like, it's not even a comparison. Like, I can buy more tokens. I cannot buy another day for my life.
+
+[31:32] Speaker 1: Yeah, yeah.
+
+[31:32] Speaker 2: Um, so to me that makes zero sense. Um-
+
+[31:35] Speaker 1: The radical life extension people would disagree with you, but-
+
+[31:38] Speaker 2: [laughs]
+
+[31:39] Speaker 1: ... yes. [laughs]
+
+[31:41] Speaker 2: I, I'll wait to be proven, uh, to be proven wrong. [laughs]
+
+[31:44] Speaker 1: [laughs]
+
+[31:46] Speaker 2: Um, the, um... I'm, I'm... S- Another thing that, that you, you, you would probably very intuitively understand, I'm never running into, um, compression of w- of context windows. I never-
+
+[32:00] Speaker 1: Hmm
+
+[32:00] Speaker 2: ... none of the agents run by themselves in one instance for so long-
+
+[32:05] Speaker 1: Interesting
+
+[32:05] Speaker 2: ... that I hit any kind of limit.
+
+[32:06] Speaker 1: That's cool. That's really cool. That's a big benefit.
+
+[32:08] Speaker 2: Yeah.
+
+[32:09] Speaker 1: So you, you, you build a hierarchy that's big enough so that the atomic components of the hierarchy are done with their task. Like, you, you get, like-
+
+[32:17] Speaker 2: Very, very early.
+
+[32:18] Speaker 1: Yeah, yeah.
+
+[32:19] Speaker 2: Very early.
+
+[32:20] Speaker 1: Yeah.
+
+[32:20] Speaker 2: They have a-
+
+[32:21] Speaker 1: Ford, Ford would be proud to, like... You know, that was his, uh, his-
+
+[32:23] Speaker 2: [laughs]
+
+[32:23] Speaker 1: ... his big insight of how to build, uh, uh, automobiles right. Like, every single worker does, like, a incredibly stupid task that takes, like, five minutes to perform, and that's it, and that's how they build a-
+
+[32:34] Speaker 2: And you cannot fuck it up. It's, like, so, so obvious-
+
+[32:36] Speaker 1: Yeah
+
+[32:36] Speaker 2: ... that you cannot fuck it up.
+
+[32:37] Speaker 1: Yeah.
+
+[32:37] Speaker 2: Um, I... So for example, one of the things that, that I do is the, the agents typically are bad at correcting things. So for example, one of the things that I, I gave them is-
+
+[32:49] Speaker 1: Hmm, once they went down the wrong path.
+
+[32:51] Speaker 2: It's insanely-
+
+[32:52] Speaker 1: Yeah, I know
+
+[32:52] Speaker 2: ... hard for them to, like-
+
+[32:53] Speaker 1: I, uh, yeah
+
+[32:53] Speaker 2: ... correct course
+
+[32:53] Speaker 1: ... I think everyone who works with LLMs knows that.
+
+[32:56] Speaker 2: So, so o-
+
+[32:57] Speaker 1: Once they are convinced that humans have, like, seven legs, they will just double down.
+
+[33:00] Speaker 2: [laughs]
+
+[33:00] Speaker 1: And, and, and, and-
+
+[33:01] Speaker 2: Forever. [laughs]
+
+[33:01] Speaker 1: ... make up papers, scientific papers to prove it to you. They'll never go back, uh, go like, "Oh, I was mistaken. It's only two." [laughs]
+
+[33:10] Speaker 2: [laughs]
+
+[33:10] Speaker 1: Yeah.
+
+[33:11] Speaker 2: Uh, so one of the things that I, that I do is, uh, I gave them tools to delegate. S- say for example one agent wants to make a plan on how to implement whatever, right? Um, and it comes up with a plan, but it then, then it can delegate, uh, either the, the planning or the implementation to four different agents at the same time with slightly, like, four different type of, like, whatever, object-oriented programming and function, what- whatever it might be.
+
+[33:37] Speaker 1: Yeah.
+
+[33:37] Speaker 2: And they all implement in, like, a disposable work tree. They implement the thing all the way to the end knowing that it's disposable code-
+
+[33:45] Speaker 1: Yeah
+
+[33:46] Speaker 2: ... and they just compare notes. Like, "How did it go?"
+
+[33:48] Speaker 1: Hmm. Okay.
+
+[33:48] Speaker 2: In going this route, how did it go?
+
+[33:51] Speaker 1: Yeah.
+
+[33:51] Speaker 2: Then you delete that, and you only take the, the, the learnings, and then from that you create an implementation plan.
+
+[33:57] Speaker 1: Okay. Okay. Yeah.
+
+[33:58] Speaker 2: So they do that all the fucking time. Like, they try something, which is kind of how we work as well.
+
+[34:03] Speaker 1: Yeah.
+
+[34:03] Speaker 2: Like, you build a prototype.
+
+[34:04] Speaker 1: Yeah.
+
+[34:04] Speaker 2: You learn something. You delete it. You do it again. You learn something. You delete it until you, okay, this is s- now we understand the problem-
+
+[34:13] Speaker 1: Yeah
+
+[34:13] Speaker 2: ... in a much more nuanced way.
+
+[34:14] Speaker 1: I mean, that's, that's also the point of, like, having, I don't know, like, 10 different research teams working on one thing, and they all do it in a slightly different way, and so on and so forth.
+
+[34:23] Speaker 2: And then you can compare.
+
+[34:24] Speaker 1: Yeah.
+
+[34:24] Speaker 2: And then you, you'll understand something. Uh, one thing I've, I've noticed is that when you work on something hard, you don't really understand it until you really try to work on the thing.
+
+[34:34] Speaker 1: Oh, sure. Yeah.
+
+[34:34] Speaker 2: Like, you can learn about Bitcoin all you want.
+
+[34:36] Speaker 1: Yeah, yeah.
+
+[34:37] Speaker 2: Until you actually write a wallet or whatever it might be-
+
+[34:40] Speaker 1: Yeah
+
+[34:40] Speaker 2: ... you don't really understand it.
+
+[34:41] Speaker 1: Yeah.
+
+[34:42] Speaker 2: Um...
+
+[34:44] Speaker 1: Yeah, yeah. I know a guy who, he, he would call it the participatory knowing. Can you, can you... You know who I'm thinking of?
+
+[34:50] Speaker 2: No.
+
+[34:50] Speaker 1: Can you, can you tell me the name?
+
+[34:51] Speaker 2: No.
+
+[34:52] Speaker 1: Starts with, uh, uh, a V.
+
+[34:54] Speaker 2: [laughs]
+
+[34:55] Speaker 1: His f- his first name is John.
+
+[34:57] Speaker 2: It's, uh... I, I don't know that.
+
+[34:58] Speaker 1: No?
+
+[34:58] Speaker 2: I, I have no clue. Um-
+
+[35:00] Speaker 1: No, no. All right.
+
+[35:00] Speaker 2: Oh, Virvik. [laughs]
+
+[35:01] Speaker 1: [laughs] It, it, it, it gets wor- it gets always worse. [laughs]
+
+[35:06] Speaker 2: It's one-way street. [laughs]
+
+[35:08] Speaker 1: Yeah. [laughs]
+
+[35:08] Speaker 2: He ha- he has seven legs, right? [laughs]
+
+[35:10] Speaker 1: It's, it's still John Virvik. It's, uh... [laughs] I'm not sure. Maybe he grew some legs. [laughs]
+
+[35:15] Speaker 2: [laughs]
+
+[35:17] Speaker 1: But yeah, no, that's obviously true. I mean, for other things, for other things, um, and I talked about this in the past, like, to, to really understand Bitcoin, for example, you also really have to use it.
+
+[35:26] Speaker 2: Yeah.
+
+[35:27] Speaker 1: Like, just put 12 words in your head and, and, and crossing border. You know, those kind of things. And actually, like, actually do all the things. [laughs] Actually lock yourself in a room and-
+
+[35:39] Speaker 2: There's no replacement. There's no replacement-
+
+[35:40] Speaker 1: Yeah, yeah
+
+[35:40] Speaker 2: ... for the, the on, on-hand learning.
+
+[35:43] Speaker 1: Otherwise, otherwise you won't get it. All right. I, I think we'll have to turn around here. I just wanted to do one more Ring Around the Rosie just to not stop the conversation short.
+
+[35:51] Speaker 2: Yeah, sure. [laughs]
+
+[35:51] Speaker 1: But, um, uh, so what else is there to talk about on the 10X side? Because we're gonna, we're gonna do a little break, and in, uh, two or two and a half hours from now I'm gonna talk you about... Uh, I, I'm gonna ask you about all the other projects.
+
+[36:06] Speaker 2: Okay.
+
+[36:06] Speaker 1: But let's, let's bring, let's try to bring the 10X to a close in the next, like, 10 minutes or so. So, so what's the, what's the state now? What's something that you're still unhappy with? And what do I need to do to, to run it myself?
+
+[36:19] Speaker 2: Uh, [laughs] right now I'm running it on, uh, on, on iPhone. It's, like, the most advanced application [laughs] so buy an iPhone. [laughs]
+
+[36:29] Speaker 1: [laughs] No.
+
+[36:30] Speaker 2: Yeah, it's ... The ... I, I also have, like, a... It also compiles into, into Mac, uh, like a macOS proper-
+
+[36:36] Speaker 1: All right. That's fine
+
+[36:36] Speaker 2: ... it's a different client.
+
+[36:37] Speaker 1: Yeah. That's fine.
+
+[36:37] Speaker 2: Um-
+
+[36:38] Speaker 1: I run Nostur on, on, on, on Mac. I don't have an iPhone, but, but, uh, Nostur is a great client. And it's my-
+
+[36:44] Speaker 2: Nostur's a great client
+
+[36:45] Speaker 1: ... it's my, it's my go-to desktop client. [laughs]
+
+[36:47] Speaker 2: I, I, I compared, I compare the code base of, um, how Nostur implements Nostur with the end they say it's-
+
+[36:54] Speaker 1: Terrible names though, by the way.
+
+[36:56] Speaker 2: It really-
+
+[36:56] Speaker 1: Nostur with a U.
+
+[36:57] Speaker 2: It really- [laughs]
+
+[36:57] Speaker 1: You know? It's like, it's just like M- Moon with two Us.
+
+[37:00] Speaker 2: [laughs]
+
+[37:00] Speaker 1: And it's all those terrible names. But anyway, great client.
+
+[37:02] Speaker 2: Well, the naming, the name, the naming podcast is a different podcast. [laughs]
+
+[37:05] Speaker 1: Oh, yeah. That's true. Yeah. That's true. [laughs] Yeah. All the venture capitalists, they really care about names. All the, all the programmers actually don't. [laughs] It's just like, "Look, Claude Opus. Make up a name."
+
+[37:17] Speaker 2: Just whatever. Put a U.
+
+[37:18] Speaker 1: Yeah. Well-
+
+[37:19] Speaker 2: Put a U. Put two Us. [laughs] You might as well.
+
+[37:22] Speaker 1: Someone should, we should fork it and make Nostur with two Us.
+
+[37:25] Speaker 2: [laughs]
+
+[37:26] Speaker 1: Just for nostalgic reasons.
+
+[37:28] Speaker 2: It's just like the more premium version. [laughs]
+
+[37:30] Speaker 1: Yeah. Exactly. [laughs] Put a paywall on something.
+
+[37:32] Speaker 2: Put a shitcoin in. [laughs]
+
+[37:33] Speaker 1: Exactly. [laughs]
+
+[37:34] Speaker 2: Now with Solana. [laughs]
+
+[37:36] Speaker 1: Great. [laughs] So okay. So I can actually install this on macOS?
+
+[37:45] Speaker 2: Yeah. On Mac- on macOS I-
+
+[37:46] Speaker 1: Yeah
+
+[37:46] Speaker 2: ... I compile a binary that it's like you can download just the binary or-
+
+[37:50] Speaker 1: Right
+
+[37:50] Speaker 2: ... compile it locally, whatever.
+
+[37:51] Speaker 1: And in terms of, of setup, I just... I, I would need to give it, um, my-
+
+[37:55] Speaker 2: A laptop, YOLO mode
+
+[37:57] Speaker 1: ... API, API keys. So-
+
+[37:58] Speaker 2: Just, just g-
+
+[37:58] Speaker 1: [laughs]
+
+[37:59] Speaker 2: Just say, "Here. Do your thing." [laughs]
+
+[38:04] Speaker 1: Does it, does it support Open Router, all those kind of things, or?
+
+[38:07] Speaker 2: Yeah. It supports Open Router.
+
+[38:08] Speaker 1: Yeah.
+
+[38:08] Speaker 2: It supports, uh-
+
+[38:09] Speaker 1: Router, PaperQ as well?
+
+[38:10] Speaker 2: Yeah. Yeah. Everything that... Uh, all those are ChatGPT APIs. So yeah, it supports Ollama. Same thing with Ollama.
+
+[38:17] Speaker 1: Yeah.
+
+[38:17] Speaker 2: It's just a ChatGPT.
+
+[38:18] Speaker 1: Yeah.
+
+[38:18] Speaker 2: Um, so-
+
+[38:19] Speaker 1: Can you run it on just local models as well?
+
+[38:22] Speaker 2: You can run it on just local models. I don't know.
+
+[38:23] Speaker 1: Yeah.
+
+[38:23] Speaker 2: I've never tried with, uh, like the coding with local models.
+
+[38:27] Speaker 1: Yeah.
+
+[38:27] Speaker 2: Unless, like, if you have a very beefy GPU-
+
+[38:30] Speaker 1: Yeah
+
+[38:30] Speaker 2: ... you probably can do it. I ha- I don't have that kinda- [laughs]
+
+[38:33] Speaker 1: Yeah
+
+[38:33] Speaker 2: ... that kinda hardware.
+
+[38:34] Speaker 1: Yeah. You spend all your money on a, an iPhone. Like I, I understand.
+
+[38:38] Speaker 2: [laughs]
+
+[38:39] Speaker 1: [laughs] No, no, no more money left for GPUs. [laughs]
+
+[38:43] Speaker 2: No. It is interesting. So I bought, um... I was in San Francisco like a month ago, so I bought the new iPhone which has, um, the Apple intelligence running locally. So it's cool because I, I can get it to, like, summarize the work that has been done in the day locally.
+
+[38:58] Speaker 1: Oh, okay.
+
+[38:58] Speaker 2: And it can give me, like, a report of what happened, and then I have, like, the voice thing.
+
+[39:02] Speaker 1: So all the stuff that the 10x agents did across the day-
+
+[39:05] Speaker 2: Yeah, it, it gives me like a report, basically
+
+[39:07] Speaker 1: ... summarize it all for you.
+
+[39:07] Speaker 2: Yeah, yeah.
+
+[39:08] Speaker 1: Okay.
+
+[39:08] Speaker 2: Yeah.
+
+[39:09] Speaker 1: Uh-
+
+[39:09] Speaker 2: That... So the, the, the agents have, like, um, like a scheduling tool where... It's Cron, basically, where they can schedule, for example, every five minutes or every once a day or once a week.
+
+[39:20] Speaker 1: Mm.
+
+[39:21] Speaker 2: And they can go and fetch all the conversations-
+
+[39:23] Speaker 1: Mm
+
+[39:23] Speaker 2: ... all the, all the, all the threads, and they can send you, like, a weekly report of what was done across all the projects.
+
+[39:30] Speaker 1: Yeah.
+
+[39:30] Speaker 2: Because they also have a tool that allows them to see all the projects that the same person owns, and they can communicate across project boundaries. So you can have one agent that goes to every PM across all the projects and says, "What happened this week?"
+
+[39:45] Speaker 1: Okay.
+
+[39:45] Speaker 2: And then get a, get a summary.
+
+[39:47] Speaker 1: Yeah. You, you, you re- you rebuilt like a, a, a Google-like company.
+
+[39:52] Speaker 2: Yeah. [laughs]
+
+[39:53] Speaker 1: Congratulations.
+
+[39:54] Speaker 2: And then-
+
+[39:55] Speaker 1: It's the- [laughs]
+
+[39:55] Speaker 2: And then I'm gonna build a DAO on top. [laughs]
+
+[39:57] Speaker 1: Is data, is data availability, uh, ever an issue? Do you, do you ru- run your own relays, basically?
+
+[40:02] Speaker 2: It's just a relay. Yeah. But it's... I mean, it's, it's-
+
+[40:05] Speaker 1: Yeah
+
+[40:05] Speaker 2: ... what? Like 100 megabytes. [laughs]
+
+[40:07] Speaker 1: Yeah.
+
+[40:07] Speaker 2: I mean, it's just text.
+
+[40:08] Speaker 1: Yeah.
+
+[40:08] Speaker 2: You know? Yeah. It's a no, no n- no, a non-issue.
+
+[40:10] Speaker 1: So it's not... The, the agents are not spamming events like crazy?
+
+[40:13] Speaker 2: No. No, no, no, no, no.
+
+[40:14] Speaker 1: Yeah.
+
+[40:14] Speaker 2: No, no, no.
+
+[40:14] Speaker 1: Okay.
+
+[40:15] Speaker 2: I mean, they produce-
+
+[40:16] Speaker 1: Yeah
+
+[40:17] Speaker 2: ... the, like... All the... They stream events.
+
+[40:20] Speaker 1: Yeah.
+
+[40:20] Speaker 2: Um, but those are ephemeral events.
+
+[40:22] Speaker 1: Yeah. I see. Okay.
+
+[40:23] Speaker 2: Um, but it's, it's, it's a non-issue. Yeah, yeah.
+
+[40:25] Speaker 1: Yeah. I see. I see. Cool. Now, what I like most about these ideas is, like, I noticed it myself. I, I wanted to actually write about it, but it's way easier to speak about it. [laughs]
+
+[40:34] Speaker 2: [laughs]
+
+[40:34] Speaker 1: Is that, um, my development workflow changed. Like it's... Uh, to, to say that it changed would be unfair because it changed so much, it's kind of indistinguishable to...
+
+[40:45] Speaker 2: [laughs]
+
+[40:45] Speaker 1: It's a different, it's a different thing that I do now. Like I, I used to be a developer a very long time ago, and, and now I, I am... I, I do something else. I, I basically speak to computers. But I really like it because, again, like, as a, a, you know, like a big fan of John Mevicke, I really think that-
+
+[41:01] Speaker 2: Who? [laughs]
+
+[41:02] Speaker 1: No one knows. No one knows. The, the issue is you can't pronounce the name. That's kind of... He would be so big. Like, everyone would know him if, if, if people would only be able to pronounce his name. [laughs]
+
+[41:11] Speaker 2: [laughs] See? Naming.
+
+[41:13] Speaker 1: He's just... Naming is the issue. Yeah.
+
+[41:14] Speaker 2: The VC podcast, how to attract-
+
+[41:15] Speaker 1: He's, he's clearly not a venture capitalist guy.
+
+[41:18] Speaker 2: [laughs]
+
+[41:18] Speaker 1: But, [laughs] but anyway, like he, he, he says that most of our... Like, uh, basically you need dialogue to solve the really hard problems. And my whole... Every time now I'm trying to, um, build something new or fix something and so on, I immediately enter into a dialogue with the LLM.
+
+[41:38] Speaker 2: Yeah.
+
+[41:39] Speaker 1: Like what is something that we could do and, and all those kind of things. Oh, my lord.
+
+[41:44] Speaker 2: What?
+
+[41:45] Speaker 1: That's bad. It's fully booked out. Is that true?
+
+[41:48] Speaker 2: Oh.
+
+[41:49] Speaker 1: That's really bad. Well, then we'll have to do something else, I guess. [laughs]
+
+[41:54] Speaker 2: [laughs] Wow. Damn.
+
+[41:58] Speaker 1: We'll see. We'll see.
+
+[41:59] Speaker 2: We can just keep walking.
+
+[42:00] Speaker 1: We'll see. We'll see. No, we'll see. I'll, I'll, um, we'll just do a... Because maybe that's just for the, for the bath and not for, for, for, for the song, but we'll see. But anyway, I, I really, I really think that's kind of a, a very different approach. Like you immediately enter into a conversation and you imme- you kind of lead with questions, and you kind of have this massive back and forth and- Um, I think most people that have a really bad experience with LLMs, they are dead set on doing a thing in a certain way, and they can't budge from it, and then the thing won't do it in the way you want it to do it-
+
+[42:34] Speaker 2: It will never do it
+
+[42:34] Speaker 1: ... and then it's like there's just conflict all the time
+
+[42:36] Speaker 2: It will never do it in, in the way you thought-
+
+[42:39] Speaker 1: Yeah
+
+[42:39] Speaker 2: ... it should be done.
+
+[42:40] Speaker 1: Yeah.
+
+[42:40] Speaker 2: But one, one of the things that I'm finding is that a lot of times it comes up with a very decent elegant solution-
+
+[42:47] Speaker 1: Yeah
+
+[42:47] Speaker 2: ... that I really didn't think of.
+
+[42:48] Speaker 1: Yeah. Yeah. Exactly.
+
+[42:48] Speaker 2: Like, I didn't come up with that idea
+
+[42:49] Speaker 1: Exactly. And, and that gets the job done, and it's like, you know, good enough for this thing and so on, and, and that's it, and then you can also iterate from there and so on. But, um, yeah, I, I think that's kind of the new paradigm is that it's-
+
+[43:01] Speaker 2: To, to-
+
+[43:02] Speaker 1: ... all of it is, like, h- conversational and dialogical and so on.
+
+[43:05] Speaker 2: I, I think I-
+
+[43:05] Speaker 1: Also search in some sense, you know? Like, not only, not only development, not only coding and so on, and all those kind of things, but every, every LLM-driven pr- process is like this.
+
+[43:13] Speaker 2: Yeah, abs- absolutely. D- I, I think I, I said this before to, to you at some point that to me what kinda sent me down this route is that during software engineering, uh, four, um, I, I heard so many people saying, "Oh, yeah, this is kinda useful, but it's so good that I'm a developer and I can steer it in the right direction and I know what it's doing." And I thought, what if it's like Bitcoin and economist, where you knowing about the field is not helpful, it's hindering you.
+
+[43:47] Speaker 1: Mm.
+
+[43:47] Speaker 2: You're getting in your own way.
+
+[43:48] Speaker 1: Mm.
+
+[43:49] Speaker 2: What if all I know of development is actually problematic?
+
+[43:53] Speaker 1: Hm.
+
+[43:54] Speaker 2: What if I just let fucking go?
+
+[43:56] Speaker 1: Yeah. Yeah.
+
+[43:56] Speaker 2: And then, and then I can start-
+
+[43:57] Speaker 1: I-
+
+[43:58] Speaker 2: ... integrating the things, you know? But w- start with the, the supposition that no, actually you need to learn from scratch, actually.
+
+[44:03] Speaker 1: Yeah, yeah. I, I, I think it's interesting now, especially in the Nostr site, there is lots of just non-developer people that thanks to Shakespeare and other things-
+
+[44:12] Speaker 2: Yeah
+
+[44:12] Speaker 1: ... um, really got into vibe coding, and they produce really cool stuff, and it's very different. Like, they're obviously not developers. They, they, they, they're not gonna read a single line of code and, and they're not gonna care and all those kind of things, and that's perfectly fine, but they still... I, I read one post where it was like it's, um, the person described of, of getting into a flow state while developing the app, and, um, th- it happened to me a couple of times as well, where you're just, like, so in the zone of k- trying to make this thing kind of [laughs] shape this thing how you envisioned it in some sense, and, and, like, you, you make micro adjustments every, like, five seconds, and it's, it's almost like sculpting, you know? [laughs]
+
+[44:57] Speaker 2: Yeah, yeah, yeah.
+
+[44:58] Speaker 1: Like, it's almost like sculpting the thing out of a block of marble, and, and that, that can be really... Yeah, uh, that can be really satisfying.
+
+[45:07] Speaker 2: But, but... and that-
+
+[45:08] Speaker 1: And it's-
+
+[45:08] Speaker 2: ... that's exactly the thing. I, I, I know-
+
+[45:09] Speaker 1: It, it, it doesn't have anything to do with development.
+
+[45:11] Speaker 2: It's a totally different thing.
+
+[45:12] Speaker 1: Yeah, yeah.
+
+[45:13] Speaker 2: It's a totally different thing.
+
+[45:14] Speaker 1: Yeah.
+
+[45:14] Speaker 2: But knowing when to stop, knowing in which-
+
+[45:16] Speaker 1: Oh, yeah, yeah
+
+[45:16] Speaker 2: ... direction to take it-
+
+[45:17] Speaker 1: Yeah
+
+[45:17] Speaker 2: ... that is the art.
+
+[45:18] Speaker 1: Yeah.
+
+[45:18] Speaker 2: Like, that is still the thing that you are bringing-
+
+[45:21] Speaker 1: Yeah, yeah
+
+[45:21] Speaker 2: ... as a human, right? Like, like, that is the crafting of the taste, the, the, the knowing-
+
+[45:26] Speaker 1: Yeah, yeah
+
+[45:26] Speaker 2: ... what is w- like, something is wrong-
+
+[45:28] Speaker 1: Yeah, yeah, yeah
+
+[45:28] Speaker 2: ... or something is right, and-
+
+[45:29] Speaker 1: Yeah
+
+[45:29] Speaker 2: ... being able to s-
+
+[45:30] Speaker 1: The, the taste part is so great because I, I still listen to the, to the San Francisco, uh, AI people sometimes and so on, and, like, every single conversation brings up research taste, like, 50 times.
+
+[45:42] Speaker 2: [laughs]
+
+[45:42] Speaker 1: You know, it's, uh, it's like, ah, okay. Well, yeah, okay. [laughs] Do LLMs have research taste? I'm not so sure, you know? Like when [laughs] now it's just about which, which research, research team has the best research taste.
+
+[45:54] Speaker 2: [laughs]
+
+[45:55] Speaker 1: It's really fun. All right, let's try our luck. Let's bring it to a close here.
+
+[45:59] Speaker 2: All right.
+
+[45:59] Speaker 1: And we'll see, we'll see what happens.
+
+[46:01] Speaker 2: If it actually recorded, you mean? [laughs]
+
+[46:02] Speaker 1: Yeah, that too. That too. Oh, man. But that was a solid 45 minutes, and I'll pick your brain some more later today.

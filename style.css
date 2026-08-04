@@ -621,20 +621,49 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
   margin: 3rem 0 1.2rem;
 }
 
-/* featured section breaks out of the .page column width */
+/* featured section is full-bleed: the grid runs edge to edge with no
+   outer frame — only interior hairlines. Cells draw a top + left rule and
+   the grid is nudged -1px up/left so those turn into interior-only lines,
+   clipped here by overflow:hidden (no top/left outer edge; no right/bottom
+   border is ever drawn). */
 
 .featured-wrap {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: clamp(2rem, 5vw, 3.5rem) var(--pad-x) 0;
+  max-width: none;
+  margin: 0;
+  padding: 0 0 clamp(3rem, 8vw, 5rem);
+  overflow: hidden;
 }
 
-.featured-wrap .stuff-section-label { margin-top: 0; }
-
+/* everything-else cells continue the same frameless grid directly under the
+   featured cells at higher density (4 columns). Same interior-hairline
+   technique: every cell draws a top + left rule; -1px margin-left clips the
+   left column's outer line. The first full-width label keeps its top rule,
+   which becomes the divider between the featured band and this one. */
 .stuff-more {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-left: -1px;
+}
+
+@media (min-width: 44em) { .stuff-more { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 68em) { .stuff-more { grid-template-columns: repeat(4, 1fr); } }
+
+.stuff-more > .stuff-section-label,
+.stuff-more > .legacy-heading {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 2.2rem 3rem 1.6rem;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+
+.stuff-more > .stuff-card.entry {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+  border-radius: 0;
+  padding: 1.85rem 2rem;
 }
 
 .stuff-card.entry {
@@ -651,39 +680,141 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 
 .stuff-more .entry-title { font-size: 1rem; }
 
-.stuff-more .entry-sub { font-size: 0.85rem; }
+.stuff-more .entry-sub {
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 
-/* featured: portrait cards with icon + richer copy.
-   auto-fit + a fixed portrait aspect-ratio means the column count is
-   purely a function of available width, not a hand-picked breakpoint. */
+/* featured: a 5-column bento. STUFF. spans 3 tracks (3/5); the long cards
+   (.featured, not compact) span 2 (2/5); the portrait cards (.compact)
+   span 1 (1/5). grid-auto-flow:dense packs them, and two portrait cards
+   (.feat-lead) are ordered up next to the masthead so the first row reads
+   STUFF (3/5) + portrait (1/5) + portrait (1/5). Frameless: every cell
+   draws a top + left hairline, the grid is nudged -1px up/left and clipped
+   by .featured-wrap's overflow, so only interior lines show. Below 64em it
+   collapses to a single stacked column. */
 
 .stuff-featured {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
-  gap: 1.1rem;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: -1px 0 0 -1px;
 }
 
-.stuff-featured .stuff-card.entry {
+@media (min-width: 64em) {
+  .stuff-featured {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: row dense;
+  }
+  .stuff-featured > .masthead-cell { grid-column: span 3; }               /* STUFF: 3/5, one row */
+  .stuff-featured > .stuff-card.featured { grid-column: span 2; }         /* long items: 2/5 */
+  .stuff-featured > .stuff-card.featured.compact { grid-column: span 1; } /* portrait items: 1/5 */
+
+  /* Placement order (with dense packing) lays out a brick-shifted bento:
+       row 1   STUFF (3/5) | portrait | portrait
+       row 2   long (2/5)  | portrait | portrait | portrait
+       row 3   portrait    | long (2/5) | long (2/5)
+     The 2/5 blocks shift right from row 2 to row 3. Ordered by DOM index:
+     1 masthead, 2 Trellis, 3 Highlighter, 4 NMP, 5 tenex-edge,
+     6 proactive, 7 SovEng, 8 Rocking, 9 Pod0, 10 Wikifreedia. */
+  .stuff-featured > :nth-child(1) { order: -3; }  /* STUFF */
+  .stuff-featured > :nth-child(6),                /* proactive  -> row 1 right */
+  .stuff-featured > :nth-child(7) { order: -2; }  /* SovEng     -> row 1 right */
+  .stuff-featured > :nth-child(2) { order: -1; }  /* Trellis    -> row 2, leading 2/5 */
+  .stuff-featured > :nth-child(3),                /* Highlighter -> row 3 2/5 */
+  .stuff-featured > :nth-child(4) { order: 1; }   /* NMP         -> row 3 2/5 */
+  /* tenex-edge(5), Rocking(8), Pod0(9), Wikifreedia(10) stay at order 0 */
+}
+
+.stuff-featured > .stuff-card.entry,
+.stuff-featured > .masthead-cell {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  aspect-ratio: 3 / 4;
-  padding: 1.7rem 1.6rem 1.5rem;
-  overflow: hidden;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+  border-radius: 0;
+  padding: clamp(2rem, 2.2vw, 3rem);
+}
+
+/* masthead: the page title living as the first, widest cell. It spans a
+   single grid row (3/5 wide) and centers its content vertically within the
+   cell, which is as tall as that row's tallest neighbour. */
+.masthead-cell { justify-content: center; }
+@media (min-width: 64em) {
+  .stuff-featured > .masthead-cell .page-title { font-size: clamp(3.5rem, 6vw, 6rem); }
+}
+.masthead-cell .kicker { margin: 0 0 0.9rem; }
+.masthead-cell .page-title { margin: 0; }
+.masthead-cell .page-note { margin: 1rem 0 0; max-width: 66ch; }
+.masthead-cell .masthead-tag {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-top: 1.6rem;
+}
+
+/* portrait cards (1/5 wide): same content — icon, title, slogan,
+   description — at a smaller scale and tighter padding to sit at 1/5. */
+@media (min-width: 64em) {
+  .stuff-featured > .stuff-card.featured.compact { padding: clamp(1.5rem, 1.5vw, 1.9rem); }
+  .stuff-featured > .stuff-card.featured.compact .card-head { gap: 0.6rem; margin-bottom: 1rem; }
+  .stuff-featured > .stuff-card.featured.compact .card-icon { width: 1.85rem; height: 1.85rem; }
+  .stuff-featured > .stuff-card.featured.compact .entry-title { font-size: 1.15rem; }
+  .stuff-featured > .stuff-card.featured.compact .card-slogan { font-size: 0.95rem; }
+  .stuff-featured > .stuff-card.featured.compact .entry-sub { font-size: 0.85rem; }
+}
+
+/* featured cards can carry a dark, cinematic background image. These flip
+   to light text on a darkening scrim regardless of page theme, so they read
+   as dark tiles among the cream cards. STUFF and the everything-else cells
+   never get one. Set the art per-card with --card-img. */
+.stuff-card.has-image {
+  position: relative;
+  isolation: isolate;
+  background-image: var(--card-img);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #f3f1ea;
+}
+.stuff-card.has-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(8,7,6,0.52), rgba(8,7,6,0.38) 45%, rgba(8,7,6,0.62));
+}
+.stuff-card.has-image > * { position: relative; z-index: 1; }
+.stuff-card.has-image .card-icon { color: #f3f1ea; opacity: 0.92; }
+.stuff-card.has-image .entry-sub { color: #f3f1ea; opacity: 0.6; }
+.stuff-card.has-image .card-slogan { color: #f3f1ea; }
+.stuff-card.has-image .card-cta {
+  color: #f3f1ea;
+  opacity: 0.7;
+  border-top-color: rgba(243, 241, 234, 0.28);
 }
 
 .card-head {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  margin-bottom: 1.1rem;
+  gap: 0.95rem;
+  margin-bottom: 1.35rem;
   flex-shrink: 0;
 }
 
 .card-icon {
   display: block;
-  width: 1.85rem;
-  height: 1.85rem;
+  width: 2.7rem;
+  height: 2.7rem;
   color: var(--ink);
   opacity: 0.88;
   flex-shrink: 0;
@@ -692,14 +823,14 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 .card-icon svg { width: 100%; height: 100%; display: block; }
 
 .stuff-featured .entry-title {
-  font-size: 1.25rem;
+  font-size: 1.7rem;
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
 .card-slogan {
   display: block;
-  font-size: 1.02rem;
+  font-size: 1.12rem;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0.01em;
@@ -707,15 +838,10 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 }
 
 .stuff-featured .entry-sub {
-  font-size: 0.86rem;
-  line-height: 1.55;
-  margin-top: 0.7rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin-top: 0.95rem;
   opacity: var(--muted-op);
-  flex: 1;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
 }
 
 .card-cta {
@@ -725,8 +851,8 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   opacity: 0.45;
-  margin-top: 1.5rem;
-  padding-top: 1rem;
+  margin-top: auto;
+  padding-top: 1.4rem;
   width: 100%;
   border-top: 1px solid var(--rule);
   flex-shrink: 0;
@@ -745,8 +871,7 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 }
 
 @media (max-width: 26em) {
-  .stuff-featured .stuff-card.entry { aspect-ratio: auto; }
-  .stuff-featured .entry-sub { -webkit-line-clamp: 8; }
+  .stuff-featured .stuff-card.entry { padding: 1.9rem 1.6rem; }
 }
 
 .legacy-heading,
@@ -936,77 +1061,100 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 }
 
 /* ---------- /podcast ---------- */
+/* bleed-edge tile grid, same frameless-hairline technique as .stuff-more:
+   every cell draws a top + left rule, the grid nudges -1px, only interior
+   lines show — no outer frame. Each tile is plain (page background, no
+   photo backdrop); the artwork sits as a small artifact thumbnail next to
+   the title, and the quote + show/date description stay always visible.
+   .podcast-tile-wrap escapes .page's max-width the same way .featured-wrap
+   does on /stuff, so the grid actually reaches the viewport edges. */
 
-.podcast-grid {
+.podcast-tile-wrap {
+  max-width: none;
+  margin: 0;
+  padding: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(3rem, 8vw, 5rem);
+  overflow: hidden;
+}
+
+.podcast-tile-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem;
+  margin: -1px 0 0 -1px;
 }
 
-.podcast-card {
-  display: grid;
-  grid-template-columns: 6rem 1fr;
-  gap: 1.1rem;
-  border: 1px solid var(--rule);
-  padding: 1.1rem 1.3rem;
-  transition: border-color 0.15s ease;
+@media (min-width: 44em) { .podcast-tile-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 68em) { .podcast-tile-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.podcast-tile {
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.podcast-card:hover { border-color: var(--accent); }
-
-.podcast-art {
-  width: 6rem;
-  height: 6rem;
-  object-fit: cover;
-  filter: grayscale(1) contrast(1.05);
-  align-self: start;
+.podcast-tile:hover,
+.podcast-tile:focus-within {
+  border-color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 6%, transparent);
 }
 
-.podcast-body { min-width: 0; }
-
-.podcast-title {
-  display: block;
-  font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.15rem;
+.podcast-tile-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: none;
 }
 
-.podcast-meta {
-  display: block;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  opacity: 0.5;
+.podcast-tile-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
   margin-bottom: 0.6rem;
 }
 
-.podcast-quote {
-  font-size: 0.94rem;
-  line-height: 1.6;
-  margin: 0 0 0.6rem;
-  opacity: var(--muted-op);
+.podcast-tile-art {
+  flex: none;
+  width: 3.4rem;
+  height: 3.4rem;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  box-shadow: 0.12rem 0.16rem 0 rgba(19, 18, 17, 0.08);
 }
 
-.podcast-quote + .podcast-quote { margin-top: -0.3rem; }
+.podcast-tile-title {
+  font-weight: 800;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
 
-.podcast-listen {
+.podcast-tile:hover .podcast-tile-title,
+.podcast-tile:focus-within .podcast-tile-title { color: var(--accent); }
+
+.podcast-tile-show {
+  display: block;
   font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  border-bottom: none;
-  opacity: 0.6;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 0.55rem;
 }
 
-.podcast-listen:hover { opacity: 1; color: var(--accent); }
+.podcast-tile-show .sep { opacity: 0.5; margin: 0 0.35em; }
 
-@media (max-width: 34em) {
-  .podcast-card { grid-template-columns: 1fr; }
-  .podcast-art { width: 100%; height: 10rem; }
+.podcast-tile-quote {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  font-style: italic;
+  opacity: var(--muted-op);
+  margin-top: auto;
+  padding-top: 0.6rem;
 }
 
 /* ---------- /nownownow changelog ---------- */
@@ -1324,8 +1472,9 @@ footer .colophon a { text-decoration: none; }
   .stack .tag { flex: none; }
 }
 
-/* ── essay popup modal: stuff cards with data-essay (Trellis → Receipts) open ── */
-/* their <template> as a centered, essay-styled popup instead of the side sheet.  */
+/* ── essay reading modal: stuff cards with data-essay (Trellis → Receipts) open ── */
+/* the ACTUAL essay page inside a near-fullscreen <iframe> — the same renderer as   */
+/* navigating there directly, so the modal reads identically to the standalone page. */
 .essay-backdrop {
   position: fixed;
   inset: 0;
@@ -1342,32 +1491,41 @@ footer .colophon a { text-decoration: none; }
 .essay-modal {
   position: fixed;
   z-index: 210;
-  top: 50%;
+  top: 3vh;
   left: 50%;
-  transform: translate(-50%, -47%);
-  width: min(44em, 94vw);
-  max-height: 88vh;
+  width: min(72em, 96vw);
+  height: 94vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   background: var(--bg);
   border: 1px solid var(--rule);
   border-radius: 14px;
   box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.6);
   opacity: 0;
   visibility: hidden;
+  transform: translateX(-50%) translateY(10px);
   transition: opacity 0.22s ease, transform 0.24s cubic-bezier(.16, .8, .24, 1), visibility 0.22s ease;
 }
 .essay-modal.open {
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%) translateY(0);
 }
 
-.essay-modal-doc {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: clamp(1.6rem, 4vw, 2.8rem) clamp(1.3rem, 4vw, 3rem) clamp(2rem, 5vw, 3rem);
+.essay-frame {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 14px;
+  background: var(--bg);
+  opacity: 1;
+  transition: opacity 0.18s ease;
 }
+/* hidden until the load handler injects the chrome-hiding style, so the page's */
+/* masthead never flashes in before it's removed */
+.essay-frame.loading { opacity: 0; }
 
 .essay-close {
   position: absolute;
@@ -1395,71 +1553,24 @@ footer .colophon a { text-decoration: none; }
 
 body.essay-open { overflow: hidden; }
 
-/* essay typography inside the modal (mirrors the /attention/ essay pages) */
-.essay-doc-eyebrow {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  opacity: var(--muted-op);
-  margin-bottom: 0.9rem;
-}
-.essay-doc-title {
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  font-size: clamp(1.9rem, 1.2rem + 3vw, 2.7rem);
-  line-height: 1.02;
-  margin: 0 0 0.6rem;
-}
-.essay-doc-title .dot { color: var(--accent); }
-.essay-doc-dek {
-  font-size: 1.05rem;
-  line-height: 1.5;
-  opacity: 0.82;
-  margin: 0 0 1.6rem;
-  padding-bottom: 1.2rem;
-  border-bottom: 1px solid var(--rule);
-}
-.essay-modal-doc p {
-  font-size: 1rem;
-  line-height: 1.72;
-  margin: 0 0 1.2rem;
-}
-.essay-modal-doc .hi {
-  background: linear-gradient(transparent 62%, color-mix(in srgb, var(--accent) 26%, transparent) 0);
-  padding: 0 0.04em;
-}
-.essay-modal-doc .punch {
-  font-family: var(--mono);
-  font-size: 0.92rem;
-  line-height: 1.7;
-  margin-top: 1.8rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--rule);
-}
-.essay-doc-more {
-  font-family: var(--mono);
-  font-size: 0.82rem;
-  opacity: var(--muted-op);
-  margin-top: 1.6rem !important;
-}
-.essay-modal-doc a { border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; }
-.essay-modal-doc a:hover { border-bottom-color: var(--accent); color: var(--accent); }
-
 @media (max-width: 46em) {
   .essay-modal {
-    width: 100vw;
-    max-height: 92vh;
-    top: auto;
-    bottom: 0;
+    top: 0;
     left: 0;
-    transform: translateY(8%);
-    border-radius: 14px 14px 0 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    border: 0;
+    transform: translateX(0) translateY(16px);
   }
-  .essay-modal.open { transform: translateY(0); }
+  .essay-modal.open { transform: translateX(0) translateY(0); }
+  .essay-frame { border-radius: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .essay-modal { transition: opacity 0.2s ease, visibility 0.2s ease; transform: translate(-50%, -50%); }
-  .essay-modal.open { transform: translate(-50%, -50%); }
+  .essay-modal { transition: opacity 0.2s ease, visibility 0.2s ease; transform: translateX(-50%); }
+  .essay-modal.open { transform: translateX(-50%); }
+  @media (max-width: 46em) {
+    .essay-modal, .essay-modal.open { transform: translateX(0); }
+  }
 }
