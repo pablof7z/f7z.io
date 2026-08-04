@@ -196,6 +196,8 @@ hr {
 
 /* ---------- poster (homepage) ---------- */
 
+.home-stage { min-width: 0; }
+
 .poster { padding: 0 var(--pad-x); }
 
 .fragment {
@@ -617,6 +619,38 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
 
 .where a { text-decoration: none; border-bottom: 1px solid var(--rule); }
 .where a:hover { border-bottom-color: var(--accent); }
+
+/* On large screens the essay sequence remains the scrolling, cinematic
+   surface while the biography occupies a stable right-hand reading rail. */
+@media (min-width: 72rem) {
+  .home-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(24rem, 1fr);
+    align-items: start;
+  }
+
+  .home-stage .poster {
+    min-width: 0;
+    padding-inline: clamp(2rem, 3vw, 3.5rem);
+  }
+
+  .home-stage .frag-word {
+    font-size: clamp(3.5rem, 8vw, 8rem);
+  }
+
+  .home-stage .quiet {
+    position: sticky;
+    top: 3.45rem;
+    align-self: start;
+    max-width: none;
+    max-height: calc(100vh - 3.45rem);
+    margin: 0;
+    padding: clamp(2.25rem, 3.4vw, 4rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border-left: 1px solid var(--rule);
+  }
+}
 
 /* ---------- /stuff ---------- */
 
