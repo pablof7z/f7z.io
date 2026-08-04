@@ -31,63 +31,14 @@
 
 <main class="page essay">
 
-<p>Structure makes the wrong thing impossible. I've written that before and I still mean it.
-But <em>impossible</em> is a promise to whoever writes the code. There's a second person no
-one designs for: whoever stands in front of the thing while it runs and asks the only
-question that matters at three in the morning &mdash; <span class="hi">why did it just do
-that?</span></p>
-
-<p>To them, most software is a sealed box. You can read the source and you can dump the
-state, but the two never touch. Logs are the usual answer, and a log is a confession written
-by the guilty party: it records that things happened and never why. Every diagnosis from a
-log is a guess you then spend an afternoon paying to confirm.</p>
-
-<p>The bug that made me care lives in exactly that gap. A long-lived client opens a
-subscription because some state justified it. The state goes away. Nothing closes the
-subscription, because nothing ever tied the two together &mdash; a callback fired, a handle
-got saved, and the handle outlived its reason. You can't test it away; it isn't in any state
-you can diff, it's in an effect you performed three states ago and can no longer see.
-Discipline doesn't reach that far down. Only structure does.</p>
-
-<p>So the move is to make effects into data. State lives in a graph that is forbidden to
-touch the world. When it changes it doesn't act &mdash; it hands back the exact commands the
-change implies, and a receipt: what changed, what recomputed, which commands came out, and
-the path from cause to each one. The subscription that should close, closes, because the
-graph can see its last owner is gone. And <span class="hi">"why is this open?" stops being an
-investigation and becomes a lookup.</span> That isn't better logging. It's a different
-category &mdash; the system hands you its reasons instead of making you reconstruct them.</p>
-
-<p>Then I noticed the receipt had a mirror, hiding in the one part of the design I'd been
-apologizing for. Every transaction clones the graph before it runs &mdash; the honest,
-slightly wasteful cost of doing things atomically. Which means a transaction you never commit
-is a free simulation. Stage the change, run the whole machine, read the plan it <em>would</em>
-produce, throw the copy away. Terraform has <span class="hi">plan</span>. Kubernetes has
-dry-run. Application logic never had it, and here it was, already paid for.</p>
-
-<p>Two directions of one property. Receipts kill guessing about the past; a dry run kills
-gambling about the future. <span class="hi">A system that can hand you its reasons and its
-consequences as plain data is legible in both directions of time</span> &mdash; and almost
-nothing we build is.</p>
-
-<p>I keep writing "you," but I mean the agents. An agent debugging today works like a
-programmer in 1975: read the source, add a print, guess, reproduce &mdash; not because it's
-dim, but because runtime behavior is as illegible to it as it is to me. Give it receipts and
-diagnosis becomes lookup. Give it a dry run and it never has to gamble. Stated as something
-you could prove false: <span class="hi">an agent operating the system never guesses what it
-did, and never gambles on what it will do.</span></p>
-
-<p>I don't trust that as a slogan, so I pointed it at my own things first. tenex-edge &mdash;
-the fabric my agents actually live on &mdash; runs its live surfaces on this now. The leaked
-subscription isn't discouraged, it's gone: it closes when its last owner leaves, and you can
-watch the close commands come out in order. Status goes on the wire only when something truly
-changed. You can take any event it published and ask why, and read back the exact prompt that
-produced it. And the check that proves the engine honest ships inside the engine, not the
-tests &mdash; so I can point it at the running system, not a fixture. Don't-trust-verify,
-aimed at my own code first.</p>
-
-<p class="punch">Guessing is a tax the past charges; gambling is a tax the future charges. A
-receipt settles one, a dry run the other &mdash; and a system that issues both is one you can
-operate instead of trust.</p>
+<ul>
+  <li>Correct structure should make runtime behavior legible, not just prevent invalid states.</li>
+  <li>Effects must remain tied to the state that created and owns them.</li>
+  <li>Represent effects as commands plus receipts that record what changed and why each command exists.</li>
+  <li>Use uncommitted transactions as dry runs that show consequences before applying them.</li>
+  <li>Receipts explain the past; dry runs preview the future.</li>
+  <li>Legible cause and effect lets people and agents diagnose or operate a system without guessing.</li>
+</ul>
 
 <nav class="essay-nav">
   <a href="/structure/">&larr; structure</a>

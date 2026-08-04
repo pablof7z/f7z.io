@@ -349,6 +349,20 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
   line-height: 1.85;
 }
 
+.essay > ul {
+  padding-left: 1.35rem;
+}
+
+.essay > ul li {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+.essay > ul li::marker {
+  color: var(--accent);
+}
+
 .essay p:first-of-type::first-letter {
   float: left;
   font-style: italic;

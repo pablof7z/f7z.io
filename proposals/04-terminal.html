@@ -176,7 +176,7 @@
     <h1>pablof7z</h1>
     <p>Full-time on freedom tech since falling down the nostr rabbit hole in January 2023. Wrote NDK, the dev kit behind a big chunk of the nostr ecosystem, plus a couple dozen apps, relays, and NIPs.</p>
     <p>Now building TENEX (AI agents as first-class nostr citizens — their own keys, money, reputation) and NMP (one Rust core, shipped native to iOS, Android, and web).</p>
-    <p>Before nostr: years of Bitcoin and Lightning tooling — until a centralized exchange rugged me for 2 BTC. Not-your-keys-not-your-coins, learned the expensive way.</p>
+    <p>Before nostr: years of Bitcoin and Lightning tooling.</p>
     <p>Thesis: identity, money, and data should belong to whoever's using them, not whoever runs the server.</p>
     <p><a href="https://github.com/pablof7z">github.com/pablof7z</a> · nostr: _@f7z.io</p>
     <nav>
@@ -278,7 +278,7 @@
       appendLine(row('whoami', "who's writing this"));
       appendLine(row('ls projects', "what I'm building"));
       appendLine(row('cat now.txt', "what I'm doing right now"));
-      appendLine(row('cat story.txt', 'the origin story (2 BTC lesson included)'));
+      appendLine(row('cat story.txt', 'the origin story'));
       appendLine(row('cd stuff', '→ /stuff/'));
       appendLine(row('cd now', '→ /nownownow/'));
       appendLine(row('cd podcast', '→ /podcast/'));
@@ -296,8 +296,6 @@
     },
     'cat story.txt': function(){
       appendLine('years deep in bitcoin and lightning tooling before nostr existed.');
-      appendLine('then a centralized exchange rugged me for 2 BTC. "not your keys, not your coins"');
-      appendLine('stopped being a bumper sticker and became a rule I learned the expensive way.');
       appendLine('nostr applies the same idea to identity and data. been building on it since —');
       appendLine('NDK, then TENEX, then NMP. same thesis, different layer of the stack each time.');
     },

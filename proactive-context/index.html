@@ -24,29 +24,14 @@
 
 <main class="page essay">
 
-<p>I noticed it first with my coding assistant. I’d spend a real chunk of a morning arguing it out of a bad design — explaining why a shortcut it wanted to take would rot six months from now, what I actually valued, where my instinct came from. Good work. The kind you can’t redo from scratch. And then the session would end, the context would roll over, and what carried forward was a tidy paragraph the assistant had written about itself: <span class="hi">“the user prefers a modular approach.”</span> Anyone could have said that. The machine already knew anyone could have said that.</p>
-
-<p>So here is the thing I keep coming back to.</p>
-
-<p>A large language model is, very roughly, the average of everything people have written. Ask it a question cold and it hands you the middle of the distribution — the sensible, expected, already-said answer. That’s not a flaw. It’s what an average is for.</p>
-
-<p>But an average, left to itself, never goes anywhere new. The only reason a model ever does something specific, something pointed, something that wasn’t already the consensus, is that a person leaned on it. A correction. A conviction. A hunch you couldn’t fully justify but turned out to be right about. <span class="hi">You are the deviation the system doesn’t contain</span> — the one input that isn’t already folded into the weights.</p>
-
-<p>Which makes what you actually said the most valuable thing in the entire loop. Not the model’s output. Yours.</p>
-
-<p>And yet the standard way we carry knowledge between sessions is to summarize. Compress the conversation, keep the gist, move on. Look closely at who’s doing the compressing, though: it’s the same machine that produces the average. When it distills your morning of arguing into a sentence, the part it smooths away — as noise, as verbosity, as detail it judged unimportant — is precisely the part that came from you. The point of view drains out of the gist. What’s left is <span class="hi">the shape of a thought with the person removed</span>.</p>
-
-<p><code>pc</code> is my answer to that. It’s a small tool that runs on your own machine and hooks into your coding assistant. It doesn’t paraphrase you. It keeps the literal words you typed — the correction as you phrased it, the aside, the typo, the sentence you rewrote twice — and holds onto them.</p>
-
-<p>Then, later, when the work circles back to ground you’ve already covered, it feeds those exact words back into the assistant’s context on its own, at the moment they bear on what you’re doing. Not a report about what you decided. The decision, in your voice, said again.</p>
-
-<p>I built it to preserve the human’s output as something close to sacred. Intact. Not diluted into a briefing.</p>
-
-<p>The stakes get sharper the further out you look. Agents are going to write more and more of the software — plausibly, before long, nearly all of it. When that happens, the code stops being the scarce thing. The scarce thing is direction: a person who knows why one path is worth taking and another isn’t, and can say so. The machine can generate around that judgment forever. <span class="hi">It cannot generate the judgment.</span></p>
-
-<p>I’d rather not watch the one irreplaceable input get quietly averaged out to save a few tokens.</p>
-
-<p class="punch">This message I’ve been writing is a small case of the same idea. An assistant, asked to open this essay, offered me “You correct your coding assistant on Monday.” Serviceable. Empty. It couldn’t have written the rest, because the rest is mine — right or wrong, it’s a point of view the average doesn’t have. That’s the whole thing <code>pc</code> is trying to protect.</p>
+<ul>
+  <li>Generic model output tends toward an average answer.</li>
+  <li>Human corrections, convictions, and judgment are the scarce signal in the loop.</li>
+  <li>Generated summaries can erase the nuance and voice that made that signal useful.</li>
+  <li><code>pc</code> stores the human&rsquo;s literal words locally instead of paraphrasing them.</li>
+  <li>It returns those exact words to the assistant when later work makes them relevant.</li>
+  <li>The goal is to preserve human direction as agents generate more of the implementation.</li>
+</ul>
 
 <nav class="essay-nav">
   <a href="/stuff/">&larr; the work</a>
