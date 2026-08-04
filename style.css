@@ -639,12 +639,14 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
   }
 
   .home-stage .fragment {
-    min-height: 31.2vh;
+    min-height: 40vh;
   }
 
   .home-stage .quiet {
     position: sticky;
     top: 3.45rem;
+    display: flex;
+    flex-direction: column;
     align-self: start;
     max-width: none;
     height: calc(100vh - 3.45rem);
@@ -653,6 +655,11 @@ a.fragment:focus-visible .frag-index { opacity: 1; color: var(--accent); }
     overflow-y: auto;
     overscroll-behavior: contain;
     border-left: 1px solid var(--rule);
+  }
+
+  .home-stage .quiet-inner {
+    width: 100%;
+    margin-block: auto;
   }
 }
 
